@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: phd_thesis_johann_brehmer.aux
+The style file: jthesis.bst
+Database file #1: tex/references.bib
+Warning--empty journal in deFlorian:2016spz
+Warning--empty journal in Brehmer:2016nyr
+Warning--empty journal in Brehmer:2015dan
+Warning--empty journal in Brooijmans:2016vro
+Warning--empty journal in Cranmer:2015bka
+Warning--empty journal in Kaplan:2005es
+Warning--empty journal in Henning:2014wua
+You've used 40 entries,
+            2624 wiz_defined-function locations,
+            834 strings with 11034 characters,
+and the built_in function-call counts, 27958 in all, are:
+= -- 3180
+> -- 460
+< -- 29
++ -- 370
+- -- 108
+* -- 1135
+:= -- 2182
+add.period$ -- 98
+call.type$ -- 40
+change.case$ -- 1
+chr.to.int$ -- 0
+cite$ -- 47
+duplicate$ -- 3392
+empty$ -- 1845
+format.name$ -- 136
+if$ -- 6153
+int.to.chr$ -- 0
+int.to.str$ -- 40
+missing$ -- 444
+newline$ -- 186
+num.names$ -- 40
+pop$ -- 1288
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1955
+stack$ -- 0
+substring$ -- 1294
+swap$ -- 2896
+text.length$ -- 29
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 7
+while$ -- 127
+width$ -- 42
+write$ -- 433
+(There were 7 warnings)

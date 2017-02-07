@@ -1,0 +1,82 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Header
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{tex/header.tex}
+\input{tex/definitions.tex}
+
+\title{New Ideas for Effective Higgs Measurements}
+\subtitle{PhD Thesis in Progress}
+\author{Johann Brehmer}
+\date{Version from \today}
+
+\begin{document}
+
+\begin{fmffile}{diagrams}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Front matter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{roman}
+\pagestyle{plain}
+
+\input{tex/title.tex}
+\KOMAoptions{open=left}
+\input{tex/abstract.tex}
+\KOMAoptions{open=left}
+\microtypesetup{protrusion=false} % disables protrusion for ToC
+\tableofcontents 
+\microtypesetup{protrusion=true} % enables protrusion again
+\KOMAoptions{open=right}
+\input{tex/preface.tex}
+%\input{tex/acknowledgements}
+\thispagestyle{plain}
+
+\cleardoublepage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{arabic}
+\pagestyle{headings}
+\KOMAoptions{cleardoublepage=plain}
+
+\input{tex/introduction.tex}
+\input{tex/foundations.tex}
+
+%\input{tex/eft_limits.tex}
+%\input{tex/information_geometry.tex}
+\input{tex/dummy.tex}
+
+\input{tex/conclusions.tex}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Back matter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix 
+\KOMAoptions{cleardoublepage=empty}
+
+\input{tex/appendix}
+\bibliography{tex/references}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% That's it.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{fmffile}
+
+\end{document}

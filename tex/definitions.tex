@@ -1,0 +1,117 @@
+
+% General typesetting
+\newcommand{\toolfont}[1]{\texttt{#1}}
+\newcommand{\newparagraph}{\par\bigskip\noindent}
+\newcommand{\arxivlink}[1]{\href{http://arxiv.org/abs/#1}{\texttt{arXiv:#1}}}
+\newcommand{\comment}[1]{\marginpar{\sffamily\footnotesize\textcolor{dark-red}{#1}}}
+
+% General symbols 
+\newcommand{\im}{\mathrm{i}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\eg}{{e.\,g.}~}
+\newcommand{\ie}{{i.\,e.}~}
+\newcommand{\qqquad}{\qquad \qquad}
+\newcommand{\qqqquad}{\qquad \qquad \qquad}
+\newcommand{\largex}{\ensuremath{\large \boldsymbol{\times}}}
+\newcommand{\brlargex}{\ensuremath{\large (\boldsymbol{\times})}}
+
+% Physics symbols
+\newcommand{\mat}{\mathcal{M}}
+\newcommand{\lgr}[1]{\mathcal{L}_\text{#1}}
+\newcommand{\ord}[1]{\mathcal{O}\!\left(#1\right)}
+\newcommand{\ope}[1]{\mathcal{O}_{#1}}
+\newcommand{\br}{\mathrm{BR}}
+\newcommand{\met}{\ensuremath{\slashed{E}_T}}
+\newcommand{\phisq}{\phi^\dagger \phi}
+
+% Units
+%\newcommand{\ifb}{\ensuremath \mathrm{fb}^{-1}}
+%\newcommand{\gev}{{\ensuremath \mathrm{GeV}}}
+%\newcommand{\tev}{{\ensuremath \mathrm{TeV}}}
+\newcommand{\ifb}{\si{fb^{-1}}}
+\newcommand{\gev}{\si{GeV}}
+\newcommand{\tev}{\si{TeV}}
+\newcommand{\fb}{\si{fb}}
+\newcommand{\pb}{\si{pb}}
+
+% Derivatives and commutators
+\newcommand{\pder}[2]{\frac {\partial #1} {\partial #2}}
+\newcommand{\tder}[2]{\frac {\mathrm{d} #1} {\mathrm{d} #2}}
+\newcommand{\cmt}[2]{\left[ #1 , #2 \right]}
+\newcommand{\acmt}[2]{\left\{ #1 , #2 \right\}}
+
+% Integrals
+\newcommand{\intx}{\int \!\! \mathrm{d} x\;}
+\newcommand{\intxprime}{\int \!\! \mathrm{d} x'\;}
+\newcommand{\intxi}{\int \!\! \mathrm{d} x_i\;}
+\newcommand{\intxk}{\int \!\! \mathrm{d} x_k\;}
+\newcommand{\intfatx}{\int \!\! \mathrm{d} \mathbf{x}\;}
+\newcommand{\intthreex}{\int \!\! \mathrm{d}^3 x\;}
+\newcommand{\intfourx}{\int \!\! \mathrm{d}^4 x\;}
+\newcommand{\intthreek}{\int \!\! \frac {\mathrm{d}^3 k} {(2\pi)^3}\;}
+\newcommand{\intfourk}{\int \!\! \frac {\mathrm{d}^4 k} {(2\pi)^4}\;}
+\newcommand{\intthreep}{\int \!\! \frac {\mathrm{d}^3 p} {(2\pi)^3}\;}
+\newcommand{\intfourp}{\int \!\! \frac {\mathrm{d}^4 p} {(2\pi)^4}\;}
+
+% Vectors and matrices
+\newcommand{\twovec}[2]{\begin{pmatrix*}[r] #1 \\ #2 \end{pmatrix*}}
+\newcommand{\threevec}[3]{\begin{pmatrix*}[r] #1 \\ #2 \\ #3\end{pmatrix*}}
+\newcommand{\fourvec}[4]{\begin{pmatrix*}[r] #1 \\ #2 \\ #3 \\ #4 \end{pmatrix*}}
+\newcommand{\fourvecc}[4]{\begin{pmatrix*}[c] #1 \\ #2 \\ #3 \\ #4 \end{pmatrix*}}
+\newcommand{\fivevec}[5]{\begin{pmatrix*}[r] #1 \\ #2 \\ #3 \\ #4 \\ #5 \end{pmatrix*}}
+\newcommand{\fivevecc}[5]{\begin{pmatrix*}[c] #1 \\ #2 \\ #3 \\ #4 \\ #5 \end{pmatrix*}}
+\newcommand{\sixvec}[6]{\begin{pmatrix*}[r] #1 \\ #2 \\ #3 \\ #4 \\ #5 \\ #6 \end{pmatrix*}}
+\newcommand{\eightvec}[8]{\begin{pmatrix*}[r] #1 \\ #2 \\ #3 \\ #4 \\ #5 \\ #6 \\ #7 \\ #8 \end{pmatrix*}}
+\newcommand{\twomat}[4]{\begin{pmatrix*}[r] #1 & #2\\ #3 & #4 \end{pmatrix*}}
+\newcommand{\twomatc}[4]{\begin{pmatrix*}[c] #1 & #2\\ #3 & #4 \end{pmatrix*}}
+\newcommand{\threemat}[9]{\begin{pmatrix*}[r] #1 & #2 & #3\\ #4 & #5 & #6 \\ #7 & #8 & #9\end{pmatrix*}}
+
+% Statistics symbols
+\newcommand{\boldtheta}{\ensuremath \boldsymbol{\theta}}
+\newcommand{\boldx}{\ensuremath \mathbf{x}}
+\newcommand{\boldzero}{\ensuremath \mathbf{0}}
+
+% Column types
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+
+% feynmp momentum arrows:
+% \marrow{name}{arrow_pos}{text_pos}{text}{nodes}
+% name: no numbers
+% arrow_pos: up, down, left, right
+% text_pos: top, bot, lft, rt
+\newcommand{\marrow}[5]{%
+    \fmfcmd{style_def marrow#1
+    expr p = drawarrow subpath (1/4, 3/4) of p shifted 6 #2 withpen pencircle scaled 0.4;
+    label.#3(btex #4 etex, point 0.5 of p shifted 6 #2);
+    enddef;}
+    \fmf{marrow#1,tension=0}{#5}}
+
+% longer \bar
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+% includegraphics with default dummy
+\newcommand{\includegraphicsdummy}[2][{}]{\IfFileExists{#2}{\includegraphics[#1]{#2}}{\includegraphics[#1]{fig/general/dummy.pdf}}}
+
+% Math operators
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator{\Pois}{Pois}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\var}{var}
+
+% Title page
+\newcommand{\tptitle}[1]{{\huge \bfseries #1}}
+\newcommand{\tpauthor}[1]{{\Large \bfseries #1}}
+\newcommand{\tplarge}[1]{{\Large #1}}
+\newcommand{\tpsmall}[1]{{\large #1}}
+\newcommand{\tpskip}{\vspace{0.2cm}}
+\newcommand{\tpbigskip}{\vspace{1.2cm}}
+
+% feynmf
+\newcommand{\feynmansetup}{%
+      \fmfpen{0.8pt}%
+      \fmfset{arrow_len}{2mm}%
+}

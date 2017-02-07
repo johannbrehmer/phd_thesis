@@ -1,0 +1,227 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,
+	twoside,
+	captions=nooneline, %captions of floats are not centered if only one line
+	fleqn, %equations to the left, not centered
+	%parskip=half, %some vertical space between paragraphs
+	%appendixprefix, %call appendices "appendix A" and so on, not just "A"
+	%BCOR=5mm, %binding correction - only for printing
+	headsepline, %line below heading
+	bibliography=totoc,
+	abstracton,
+        openright,
+	cleardoublepage=cleardoublepage,
+        numbers=noenddot,
+	11pt]{scrreprt}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fonts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,british]{babel}
+
+% % Option 1: Minion Pro + Myriad Pro
+% \usepackage[mathlf,mathtabular]{MinionPro}
+% \usepackage[mathlf,mathtabular,sansmath]{MyriadPro}
+
+% Option 2: Only Minion Pro
+% \usepackage[textosf,mathlf,mathtabular,minionint]{MinionPro} % 2A: text figures in text modes, lining tabular figures in math mode
+\usepackage[lf,mathtabular,minionint]{MinionPro} % 2B: lining figures everywhere
+\usepackage[toc,eqno,enum,bib]{tabfigures} % tabular figures in certain environments
+\usepackage[mathlf,mathtabular,sansmath]{MyriadPro}
+\addtokomafont{disposition}{\rmfamily}
+\linespread{1.05}
+
+% % Option 3: EB Garamond
+% \usepackage[cmintegrals,cmbraces]{newtxmath}
+% \usepackage{ebgaramond-maths}
+% \addtokomafont{disposition}{\rmfamily \mdseries}
+% \makeatletter
+%   \DeclareSymbolFont{ntxletters}{OML}{ntxmi}{m}{it}
+%   \SetSymbolFont{ntxletters}{bold}{OML}{ntxmi}{b}{it}
+%   \re@DeclareMathSymbol{\leftharpoonup}{\mathrel}{ntxletters}{"28}
+%   \re@DeclareMathSymbol{\leftharpoondown}{\mathrel}{ntxletters}{"29}
+%   \re@DeclareMathSymbol{\rightharpoonup}{\mathrel}{ntxletters}{"2A}
+%   \re@DeclareMathSymbol{\rightharpoondown}{\mathrel}{ntxletters}{"2B}
+%   \re@DeclareMathSymbol{\triangleleft}{\mathbin}{ntxletters}{"2F}
+%   \re@DeclareMathSymbol{\triangleright}{\mathbin}{ntxletters}{"2E}
+%   \re@DeclareMathSymbol{\partial}{\mathord}{ntxletters}{"40}
+%   \re@DeclareMathSymbol{\flat}{\mathord}{ntxletters}{"5B}
+%   \re@DeclareMathSymbol{\natural}{\mathord}{ntxletters}{"5C}
+%   \re@DeclareMathSymbol{\star}{\mathbin}{ntxletters}{"3F}
+%   \re@DeclareMathSymbol{\smile}{\mathrel}{ntxletters}{"5E}
+%   \re@DeclareMathSymbol{\frown}{\mathrel}{ntxletters}{"5F}
+%   \re@DeclareMathSymbol{\sharp}{\mathord}{ntxletters}{"5D}
+%   \re@DeclareMathAccent{\vec}{\mathord}{ntxletters}{"7E}
+% \makeatother 
+
+% % Option 4: Libertine
+%\usepackage{libertine}
+%\usepackage[libertine]{newtxmath}
+%\addtokomafont{disposition}{\rmfamily}
+
+% % Option 5: Palatino
+% \usepackage{mathpazo} % add possibly `sc` and `osf` options
+% \usepackage{eulervm}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Other packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{color,xcolor}
+\definecolor{dark-grey}{rgb}{0.5,0.5,0.5}
+\definecolor{dark-red}{rgb}{0.8,0.0,0.0}
+\definecolor{dark-blue}{rgb}{0.0,0.0,0.8}
+\definecolor{dark-green}{rgb}{0.,0.65,0.}
+
+\usepackage{amsmath,dsfont,mathtools}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{multirow,booktabs,tabularx,float}
+\usepackage[font=normalsize]{subfig}
+\usepackage{slashed,braket}
+\usepackage{feynmp-auto}
+\usepackage[sort&compress]{natbib}
+%\usepackage[pdftex,colorlinks,linkcolor={dark-blue}, citecolor={dark-green}, urlcolor={dark-red},bookmarksopen,linktoc=all]{hyperref}
+\PassOptionsToPackage{hyphens}{url}\usepackage[pdftex,hidelinks,linkcolor={dark-blue}, citecolor={dark-green}, urlcolor={dark-red},bookmarksopen,linktoc=all]{hyperref}
+\usepackage{enumitem} % for user-defined bullets 
+\usepackage{microtype}
+\usepackage{calc} % arithmetic expressions for lengths
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter titles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% % Formatting chapter titles with lines, red
+% \renewcommand*{\chapterformat}{%
+%   \enskip\mbox{\scalebox{5}{\thechapter\autodot}}}
+% \renewcommand\chapterlinesformat[3]{%
+%   {\color{dark-red}
+%   \parbox[b]{\textwidth}{\hrulefill#2}\par%
+%   {\color{black}#3}\par\bigskip
+%   \hrule}}
+% \RedeclareSectionCommand[beforeskip=2\baselineskip,
+% afterskip=3\baselineskip]{chapter}
+
+% % Formatting chapter titles without lines, red
+% \renewcommand*{\chapterformat}{%
+%   \enskip\mbox{\scalebox{5}{\thechapter\autodot}}}
+% \renewcommand\chapterlinesformat[3]{%
+%   {\color{dark-red}
+%   \parbox[b]{\textwidth}{\hfill#2}\par%
+%   {\color{black}#3}\par\bigskip
+%   }}
+% \RedeclareSectionCommand[beforeskip=2\baselineskip,
+% afterskip=3\baselineskip]{chapter}
+
+%Formatting chapter titles with "chapter"
+\newlength{\numberheight}
+\newlength{\chapterheight}
+\newlength{\effectiveheight}
+\renewcommand*{\chapterformat}{%
+  \settoheight{\numberheight}{\thechapter\autodot}%
+  \settoheight{\chapterheight}{Chapter}%
+  \setlength{\effectiveheight}{4\numberheight-\chapterheight}%
+  \enskip\mbox{\raisebox{\effectiveheight}{Chapter}~~\scalebox{4}{\thechapter\autodot}}}
+\renewcommand\chapterlinesformat[3]{%
+  {\color{dark-red}
+    \parbox[b]{\textwidth}{\hfill#2}\par%
+  {\color{black}#3}\par\bigskip
+  }}
+\RedeclareSectionCommand[beforeskip=2\baselineskip,
+afterskip=3\baselineskip]{chapter}
+
+% % Formatting chapter titles centred
+% \renewcommand*{\chapterformat}{%
+%   \centering \color{dark-red}%
+%   \enskip\mbox{\scalebox{3}{\thechapter\autodot}}}
+% \renewcommand\chapterlinesformat[3]{%
+%   {#2\par\vspace{0.2cm}%
+%    #3\par
+%   }}
+% \RedeclareSectionCommand[beforeskip=1.5cm,
+% afterskip=1.5cm]{chapter}
+
+% customize dictum format, option A
+% \setkomafont{dictumtext}{\itshape\small}
+% \setkomafont{dictumauthor}{\normalfont}
+% \renewcommand*\dictumwidth{\linewidth}
+% \renewcommand*\dictumauthorformat[1]{--- #1}
+% \renewcommand*\dictumrule{}
+
+% customize dictum format, tuned:
+\setkomafont{dictumtext}{\itshape \rmfamily}
+\setkomafont{dictumauthor}{\rmfamily\normalfont}
+\renewcommand*\dictumwidth{0.5 \linewidth}
+\renewcommand*\dictumauthorformat[1]{--- #1}
+\renewcommand*\dictumrule{}
+
+% wider dictum
+\newcommand{\widedictum}[2][1]{{\renewcommand*\dictumwidth{0.7 \linewidth}\dictum[#1]{#2}}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Other formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \emph for bold instead of italic
+\makeatletter
+\DeclareRobustCommand{\em}{%
+  \@nomath\em \if b\expandafter\@car\f@series\@nil
+  \normalfont \else \bfseries \fi}
+\makeatother
+
+% Itemize with smaller bullets
+\setlist[itemize,1]{label=\raisebox{0.1ex}{\scriptsize$\bullet$}}
+
+% less space around items
+% \setlist{noitemsep} % no space at all
+% \setlist{itemsep=4.5pt plus 2.0pt minus 1.0pt,
+% parsep=4.5pt plus 2.0pt minus 1.0pt,
+% partopsep=3.0pt plus 1.0pt minus 1.0pt,
+% topsep=9.0pt plus 3.0pt minus 5.0pt} % defaults
+\setlist{itemsep=1.5pt plus 1.0pt minus 0.5pt,
+parsep=1.5pt plus 1.0pt minus 0.5pt,
+partopsep=3.0pt plus 1.0pt minus 1.0pt,
+topsep=3.0pt plus 1.5pt minus 2.5pt} % mine
+
+% always center floats
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Technical stuff
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% feynmf stuff
+\DeclareGraphicsRule{*}{mps}{*}{}
+\unitlength = 1pt 
+
+% pdf file info
+\makeatletter
+\hypersetup{pdftitle=\@title, pdfauthor=\@author}
+\makeatother
+
+%\bibliographystyle{johannstyle}
+\bibliographystyle{jthesis}
+\bibpunct{[}{]}{,}{n}{,}{,}
+
+\renewcommand\bibname{References}
+\addto\captionsbritish{\renewcommand{\bibname}{References}}
