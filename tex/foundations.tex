@@ -803,16 +803,25 @@ worry about the far ultraviolet.
 % validity range of all effective theories.
 
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{EFT construction and the bottom-up approach}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+EFTs are especially useful in the framework of quantum field theory
+(QFT). Before showing how to construct the effective operators of such
+a theory in a bottom-up approach, let us recapitulate how QFTs are
+organised.
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection*{Reminder: operators and power counting}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-EFTs are especially useful in the framework of quantum field theory
-(QFT). Before going into details, let us recapitulate how QFTs are
-organised. We will stick to local theories in $d = 4$ flat space-time
-dimensions.
-
-The basic object describing such a QFT is the action
+The basic object describing perturbative QFTs in $d=4$ flat space-time
+dimensions is the action
 %
 \begin{equation}
   S = \intfourx \lgr{}(x) \,.
@@ -888,18 +897,16 @@ hidden in a renormalisation of the parameters.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{EFT operators}
+\subsubsection*{Effective operators}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 From now on we will only consider EFTs realised as a local QFT in 4
 space-time dimensions, an approach that has proven very successful in
-high-energy physics so far.
-
-EFTs are then defined as a sum of operators $\ope{i}$, each with a
-specific mass dimension $D_i$. We can split the coupling in front of
-each operator into a dimensionless constant, the \emph{Wilson
-  coefficient} $c_i$, and some powers of a mass scale, for which we
-use the scale of heavy physics $\Lambda$:
+high-energy physics so far. EFTs are then defined as a sum of
+operators $\ope{i}$, each with a specific mass dimension $D_i$. We can
+split the coupling in front of each operator into a dimensionless
+constant, the \emph{Wilson coefficient} $c_i$, and some powers of a
+mass scale, for which we use the scale of heavy physics $\Lambda$:
 %
 \begin{equation}
   \lgr{} = (\text{kinetic and mass terms}) + \sum_i \frac {c_i} {\Lambda^{D_i - d}} \, \ope{i} \,.
@@ -950,255 +957,6 @@ $\Lambda^2 = m_W^2$.
 %   interaction in the full model is approximated as a local contact
 %   interaction in the EFT.
 % \end{itemize}
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Top-down approach}
-\label{sec:foundations_matching}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-In the top-down approach to effective field theories, we start from a
-known model of UV physics and calculate the effects of the heavy
-degrees of freedom as effective operators in a procedure known as
-``matching''. We will first sketch the conceptual foundation,
-before arriving at a simple diagrammatic method.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{The effective action}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-For simplicity, let us assume that our theory $S[\phi, \Phi]$ consists
-of light particles $\phi$ and a heavy scalar $\Phi$ that should not be
-part of the effective theory as dynamical degree of freedom. The
-central object that allows us to systematically analyse the low-energy
-effects of $\Phi$ is the effective action $\seff[\phi]$. Following
-Ref.~\cite{Henning:2014wua}, we only sketch its calculation; for a
-more rigorous approach see the quantum field theory textbook of your
-choice. The effective action is calculated by \emph{integrating out}
-the heavy particles from the partition function,
-%
-\begin{equation}
-  e^{\im \seff [\phi]} = \int \! \mathcal{D} \Phi \,  e^{\im S[\phi, \Phi]} \,.
-  \label{eq:effective_action_definition}
-\end{equation}
-%
-So while the path integral over the heavy fields is calculated, the
-light fields are kept fixed.
-
-The effective action can be calculated with a saddle-point
-approximation. For this we expand $\Phi$ around its classical value
-$\Phi_c$:
-%
-\begin{equation}
-  \Phi(x) = \Phi_c + \eta(x) \,.
-\end{equation}
-%
-$\Phi_c$ is defined by
-%
-\begin{equation}
-  \left. \frac {\delta S[\phi,\Phi]} {\delta \Phi} \right|_{\Phi = \Phi_c} = 0 \,,
-\end{equation}
-%
-so expanding the action around this extremum leads to
-%
-\begin{equation}
-  S[\phi, \Phi_c + \eta] = S[\Phi_c] + \frac 1 2 \left. \frac {\delta^2 S} {\delta \Phi^2} \right|_{\Phi = \Phi_c} \eta^2 + \ord{\eta^3} \,.
-\end{equation}
-%
-Plugging this into Eq.~\eqref{eq:effective_action_definition}, we find
-%
-\begin{equation}
-  e^{\im \seff [\phi]} \approx e^{\im S[\Phi_c]} \, \int \! \mathcal{D} \eta \,  \exp \left( \frac 1 2 \left. \frac {\delta^2 S} {\delta \Phi^2} \right|_{\Phi = \Phi_c} \eta^2 \right) \,.
-\end{equation}
-%
-The last term is a Gaussian integral with a known solution,
-%
-\begin{equation}
-  e^{\im \seff [\phi]} \approx e^{\im S[\Phi_c]} \, \left[ \det \left( \left. \frac {\delta^2 S} {\delta \Phi^2} \right|_{\Phi = \Phi_c} \right) \right]^{-1/2} 
-\end{equation}
-%
-and finally
-%
-\begin{equation}
-  \seff [\phi] \approx S[\Phi_c] + \frac \im 2 \tr \log \left. \frac {\delta^2 S} {\delta \Phi^2} \right|_{\Phi = \Phi_c} \,.
-\end{equation}
-%
-\comment{To here.}
-  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Diagrammatic matching}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-The final missing puzzle piece is now the link between a full model
-and its EFT: if we know an underlying model, how do we map it to the
-Wilson coefficients of an EFT? This procedure is known as
-\emph{matching} and plays an important role in a top-down approach to
-EFTs. Note that it cannot be reversed into a bottom-up
-matching\,---\,one cannot uniquely reconstruct a full theory only
-based on the EFT.
-
-The details of the matching procedure will be a crucial aspect of
-Chapter~\ref{chapter:validity}. In this introduction we will stick
-to a schematic introduction of the basic idea. This main point of the
-matching procedure is that at some matching scale the predictions of the
-underlying model and the EFT agree up to corrections suppressed by
-some power of $1/\Lambda$.
-
-There are different techniques for this procedure. Here we will sketch
-a simple diagrammatic recipe. For a derivation and detailed
-discussion, see the QFT textbook of your choice or
-Ref.~\cite{Henning:2014wua}.
-%
-\begin{enumerate}
-\item Start with the particle content of the full model. Choose
-  $\Lambda$ and divide the particles of the full model into light and
-  heavy fields. Light fields, which should include at least those with
-  masses below $\Lambda$, will make up the particle content of the
-  effective theory. Heavy fields will be \emph{integrated out}, that
-  is, removed as dynamical degrees of freedom in the EFT.
-%
-\item Based on the particles and interactions of the full model, draw
-  all connected Feynman diagrams in which
-%
-  \begin{itemize}
-    \item all external legs are light fields, and
-    \item all internal lines are heavy fields.
-      % \item that cannot be disconnected by cutting a single internal
-      %   light field line. For tree-level diagrams this is equivalent
-      %   to requiring that only heavy fields appear as internal
-      %   lines.
-  \end{itemize}
-%
-  Using the Feynman rules of the full model, calculate the expressions
-  for these diagrams. Do not treat the external legs as incoming or
-  outgoing particles, but keep the field operator expressions.
-%
-\item Express quantities of the full model in terms of
-  $\Lambda$. Truncate this infinite series of diagrams at some order
-  in $1/\Lambda$, depending on the dimension of the operators that you
-  want to keep. Together with kinetic and mass terms for the light
-  fields, these form the Lagrangian of the EFT.
-\end{enumerate}
-
-
-
-  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Fermi theory again}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Let us apply this top-down procedure to our standard example of Fermi
-theory. For simplicity, we do not take the full SM, but just the
-interactions between massive $W$ bosons and fermions as the underlying
-theory. The Lagrangian of these interactions is similar to that given
-in Eq.~\eqref{eq:foundations_action_V_fermions}.
-%
-\begin{enumerate}
-\item Our full model consists of the quarks and leptons and the $W$
-  boson. We want to analyse weak interactions below the $W$ mass, so
-  we set $\Lambda = m_W$. So all quarks and leptons except for the top
-  are the light particles of the EFT, while the $W$ boson and the top
-  quark are heavy and have to be integrated out.
-    %
-\item The only diagram with the requested features that has only one
-  heavy propagator has the form
-  %
-    \begin{equation}
-      \raisebox{-0.5\height}{
-       %\fbox{
-        \fmfframe(0,10)(0,10){ %(L,T) (R,B)
-          \begin{fmfgraph*}(70,50)
-            \fmfleft{i2,i1}
-            \fmfright{o2,o1}
-            \fmflabel{\small $\psi_j$}{i1}
-            \fmflabel{\small $\bar{\psi}_i$}{i2}
-            \fmflabel{\small $\psi_l$}{o1}
-            \fmflabel{\small $\bar{\psi}_k$}{o2}
-            \fmf{fermion}{i1,v1,i2}
-            \fmf{fermion}{o1,v2,o2}
-            \fmf{dbl_wiggly,tension=1,label=$W$}{v1,v2}
-            \marrow{m}{up}{top}{$p$}{v1,v2}
-          \end{fmfgraph*}
-        }
-       %}
-      }
-    \end{equation}
-    % 
-    Double lines denote a heavy field. There are additional diagrams
-    with $W$ self-interactions or $W$ loops, but they involve at least
-    two $W$ propagators, which means that all contributions from them
-    will be of order $\ord{1/\Lambda^4}$, which we will neglect.
-  
-    This diagram evaluates to
-    % 
-    \begin{align}
-       &\quad  \left( \bar{\psi}_i \frac{\im g} {\sqrt{2}}  \frac {1 - \gamma_5} 2 \gamma^\mu \psi_j \right)  \frac {- g_{\mu \nu}} {p^2 - m_W^2}  \left( \bar{\psi}_k \frac{\im g} {\sqrt{2}} \frac {1 - \gamma_5} 2  \gamma^\nu \psi_l \right) \notag \\
-      {} &= \frac { g^2 \left( \bar{\psi}_i (1 - \gamma_5) \gamma^\mu \psi_j \right)  \left( \bar{\psi}_k (1 - \gamma_5)  \gamma_\mu \psi_l \right) }  {8 (p^2 - m_W^2)}
-    \end{align}
-    %
-  \item The only dimensionful parameter is $m_W = \Lambda$, and for
-    the EFT to be valid we assume $p^2 \ll \Lambda^2$. We can then
-    expand this expression as
-    %
-    \begin{equation}
-       \frac { g^2 } {8 m_W^2}  \left( \bar{\psi}_i (1 - \gamma_5) \gamma^\mu \psi_j \right)  \left( \bar{\psi}_k (1 - \gamma_5)  \gamma_\mu \psi_l \right) + \ord{1 / \Lambda^4} \,.
-    \end{equation}
-    %
-    With this, we again rediscover the dimension-6 EFT matched to the
-    weak interactions of the SM:
-    %
-   \begin{equation}
-     \lgr{} =  \im  \bar{\psi}_i \gamma^\mu \partial_\mu \psi_i - m_i \bar{\psi}_i \psi_i 
-     + \frac {c } {\Lambda^2}  \left( \bar{\psi}_i  (1 - \gamma_5) \gamma_\mu \psi_j \right) \left( \bar{\psi}_k (1 - \gamma_5) \gamma^\mu \psi_l \right) \,.
-   \end{equation}
-   %
-   with heavy scale $\Lambda = m_W$ and Wilson coefficient
-   $c = g^2 / 8$. Replacing $c / \Lambda^2$ by
-   $G_F / \sqrt{2} = g^2 / (8 m_W^2)$ restores the historic form of
-   Fermi theory.
-\end{enumerate}
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Operator mixing}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-So far we have neglected that like all parameters in a QFT, the Wilson
-coefficients of an EFT depend on the energy scale. Running the model
-from one energy to a different one leads to \emph{operator mixing}:
-loop effects from one operator will affect the coefficients of other
-operators. If the Wilson coefficients are given at the matching scale
-$\Lambda$ (we use this symbol since the matching scale is usually
-chosen only slightly below the EFT cutoff), at the scale of interest
-$E$ they will take on values of the form
-%
-\begin{equation}
-  c_i (E) \sim c_i(\Lambda) \pm \sum_j \frac {g^2} {16 \pi^2} \, \log \frac {\Lambda^2} {E^2} \,c_j(\Lambda) \,,
-\end{equation}
-%
-where $g$ are the typical couplings in the loops.
-
-If the matching scale is not too far away from the energy scale of
-interest and if all Wilson coefficients are already sizeable at the
-matching scale, this is often negligible. There is an important
-consequence, though: even if an operator is zero at the matching
-scale, operator mixing will give it a small but non-zero value at
-lower energies. So regardless of what the underlying model is, it can
-be expected that eventually all effective operators allowed by the
-symmetries will receive contributions from it.
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Bottom-up approach}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1351,12 +1109,9 @@ issues.
 
 
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection*{Why is the sky blue?}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 Following Ref.~\cite{Kaplan:2005es}, we will demonstrate this
 bottom-up approach with a simple question: why is the sky blue?
@@ -1465,6 +1220,282 @@ which is equivalent to wavelengths above $\ord{ 100 \ \text{nm}}$. Our
 approximation is probably safe for visible light! In the near
 ultraviolet we expect deviations from the $E_\gamma^4$ proportionality
 and our EFT to break down.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Top-down approach and matching}
+\label{sec:foundations_matching}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In the top-down approach to effective field theories, we start from a
+known model of UV physics and calculate the corresponding effective
+operators and Wilson coefficients in the EFT. The defining criterion
+of this \emph{matching procedure} is that at low energies the
+effective and underlying descriptions agree, at least up to a given
+order in the loop expansion (e.\,g.\ in $\alpha_s$) and up to a given
+order in the EFT expansion in $1/\Lambda$.
+
+This can be achieved either by functional methods or with Feynman
+diagrams. Here we will sketch the conceptual foundation involving
+functional methods, before arriving at a simple diagrammatic
+method. Note that the matching cannot be reversed: one cannot uniquely
+reconstruct a full theory only based on the EFT. Details of the
+matching procedure will play a crucial role in
+Chapter~\ref{chapter:validity}.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{The effective action}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The central object that allows us to systematically analyse the
+low-energy effects of heavy physics is the effective action
+$\seff$. Following Ref.~\cite{Gaillard:1986dz, Henning:2014wua}, we
+now sketch its calculation at the one-loop level, omitting
+higher-order terms irrelevant for this thesis as well as certain cases
+of mixed loops with light and heavy
+particles~\cite{Henning:2016lyp}. For a more rigorous approach see the
+quantum field theory textbook of your choice.
+
+For simplicity, let us assume that our theory $S[\phi, \Phi]$ consists
+of light particles $\phi$ and a heavy scalar $\Phi$ that should not be
+part of the effective theory as dynamical degree of freedom.  The
+effective action is calculated by \emph{integrating out} the heavy
+particles from the partition function,
+%
+\begin{equation}
+  e^{\im \seff [\phi]} = \int \! \mathcal{D} \Phi \,  e^{\im S[\phi, \Phi]} \,.
+  \label{eq:effective_action_definition}
+\end{equation}
+%
+While the path integral over the heavy fields is computed, the light
+fields are kept fixed as ``background fields''.
+
+The effective action can be calculated with a saddle-point
+approximation. For this we expand $\Phi$ around its classical value
+$\Phi_c$:
+%
+\begin{equation}
+  \Phi(x) = \Phi_c(x) + \eta(x) \,.
+\end{equation}
+%
+$\Phi_c$ is defined by
+%
+\begin{equation}
+  \left. \frac {\delta S[\phi,\Phi]} {\delta \Phi} \right|_{\Phi = \Phi_c} = 0 \,,
+  \label{eq:classical_eom}
+\end{equation}
+%
+so expanding the action around this extremum leads to
+%
+\begin{equation}
+  S[\phi, \Phi_c + \eta] = S[\phi,\Phi_c] + \frac 1 2 \left. \frac {\delta^2 S[\phi,\Phi]} {\delta \Phi^2} \right|_{\Phi = \Phi_c} \eta^2 + \ord{\eta^3} \,.
+\end{equation}
+%
+Plugging this into Eq.~\eqref{eq:effective_action_definition}, we find
+%
+\begin{equation}
+  e^{\im \seff [\phi]} \approx e^{\im S[\phi,\Phi_c]} \, \int \! \mathcal{D} \eta \,  \exp \left( \frac 1 2 \left. \frac {\delta^2 S[\phi,\Phi]} {\delta \Phi^2} \right|_{\Phi = \Phi_c} \eta^2 \right) \,.
+\end{equation}
+%
+The last term is a Gaussian integral with a known solution,
+%
+\begin{equation}
+  e^{\im \seff [\phi]} \approx e^{\im S[\phi,\Phi_c]} \, \left[ \det \left( - \left. \frac {\delta^2 S} {\delta \Phi^2} \right|_{\Phi = \Phi_c} \right) \right]^{-1/2} 
+\end{equation}
+%
+and finally
+%
+\begin{equation}
+  \seff [\phi] \approx S[\phi,\Phi_c] + \frac \im 2 \tr \log \left( - \left. \frac {\delta^2 S} {\delta \Phi^2} \right|_{\Phi = \Phi_c} \right) \,,
+  \label{eq:effective_action_result}
+\end{equation}
+%
+where the functional trace goes over all states involving the light
+fields.\footnote{If we would have considered fermions instead, there
+  would be a minus sign in front of the second term.}  This result is the correct effective field theory.\footnote{If derivatives appear
+  in the denominator of $\seff$, the effective action is
+  non-local. After an expansion of the form
+  $1 / (D^2 - M^2) \approx 1 / M^2 (1 - D^2 / M^2 + \dots )$ only a
+  rest term of higher order in $1/M^2$ (and therefore irrelevant for
+  the matching) remains non-local~\cite{Henning:2016lyp}.}
+
+This result can be directly evaluated with functional methods. The
+first term in Eq.~\eqref{eq:effective_action_result} can be easily
+calculated by solving the classical equations of motions in
+Eq.~\eqref{eq:classical_eom}. Computing the functional trace is more
+involved, but can be simplified with a procedure called
+\emph{covariant derivative expansion}~\cite{Gaillard:1985uh,
+  Gaillard:1986dz}. Universal results that can be adapted to many
+scenarios are available in the literature~\cite{Henning:2014wua,
+  Drozd:2015rsp, Henning:2016lyp}.
+
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Diagrammatic matching}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Alternatively, the effective action in
+Eq.~\eqref{eq:effective_action_result} provides us with an intuitive
+diagrammatic interpretation.  Since the light fields are kept fixed in
+Eq.~\eqref{eq:effective_action_definition}, the effective action is
+given by all connected Feynman diagrams with only $\phi$ as external
+legs and only $\Phi$ fields as internal propagators. A more rigorous
+derivation in fact reveals that also certain connected loop diagrams
+with only $\phi$ as external legs and both $\Phi$ and $\phi$ fields as
+internal propagators contribute if they cannot be disconnected by
+cutting a single internal $\phi$ line~\cite{Henning:2016lyp}. The
+first term in Eq.~\eqref{eq:effective_action_result} corresponds to
+all such tree-level diagrams, the second term describes one-loop
+pieces. Higher-loop corrections will play no role in this thesis and
+were left out.
+
+In practice, the effective operators and their Wilson coefficients can
+be calculated without the need for any functional methods as follows:
+%
+\begin{enumerate}
+\item Start with the particle content of the full model. Choose
+  $\Lambda$ and divide the particles of the full model into light and
+  heavy fields. Light fields, which should include at least those with
+  masses below $\Lambda$, will make up the particle content of the
+  effective theory. Heavy fields will be integrated out, that
+  is, removed as dynamical degrees of freedom in the EFT.
+%
+\item Based on the particles and interactions of the full model, draw
+  all connected Feynman diagrams in which
+%
+  \begin{itemize}
+    \item all external legs are light fields, and
+    \item that cannot be disconnected by cutting a single internal
+      light field line. For tree-level diagrams this is equivalent to
+      requiring that only heavy fields appear as internal lines.
+  \end{itemize}
+%
+  Using the Feynman rules of the full model, calculate the expressions
+  for these diagrams. Do not treat the external legs as incoming or
+  outgoing particles, but keep the field operator expressions.
+%
+\item Express quantities of the full model in terms of
+  $\Lambda$. Truncate this infinite series of diagrams at some order
+  in $1/\Lambda$, depending on the dimension of the operators that you
+  want to keep. Together with kinetic and mass terms for the light
+  fields, these form the Lagrangian of the EFT.
+\end{enumerate}
+
+
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Fermi theory again}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Let us apply this top-down procedure to our standard example of Fermi
+theory. For simplicity, we do not take the full SM, but just the
+interactions between massive $W$ bosons and fermions as the underlying
+theory. The Lagrangian of these interactions is similar to that given
+in Eq.~\eqref{eq:foundations_action_V_fermions}.
+%
+\begin{enumerate}
+\item Our full model consists of the quarks and leptons and the $W$
+  boson. We want to analyse weak interactions below the $W$ mass, so
+  we set $\Lambda = m_W$. So all quarks and leptons except for the top
+  are the light particles of the EFT, while the $W$ boson and the top
+  quark are heavy and have to be integrated out.
+    %
+\item The only diagram with the requested features that has only one
+  heavy propagator has the form
+  %
+    \begin{equation}
+      \raisebox{-0.5\height}{
+       %\fbox{
+        \fmfframe(0,10)(0,10){ %(L,T) (R,B)
+          \begin{fmfgraph*}(70,50)
+            \fmfleft{i2,i1}
+            \fmfright{o2,o1}
+            \fmflabel{\small $\psi_j$}{i1}
+            \fmflabel{\small $\bar{\psi}_i$}{i2}
+            \fmflabel{\small $\psi_l$}{o1}
+            \fmflabel{\small $\bar{\psi}_k$}{o2}
+            \fmf{fermion}{i1,v1,i2}
+            \fmf{fermion}{o1,v2,o2}
+            \fmf{dbl_wiggly,tension=1,label=$W$}{v1,v2}
+            \marrow{m}{up}{top}{$p$}{v1,v2}
+          \end{fmfgraph*}
+        }
+       %}
+      }
+    \end{equation}
+    % 
+    Double lines denote a heavy field. There are additional diagrams
+    with $W$ self-interactions or $W$ loops, but they involve at least
+    two $W$ propagators, which means that all contributions from them
+    will be of order $\ord{1/\Lambda^4}$, which we will neglect.
+  
+    This diagram evaluates to
+    % 
+    \begin{align}
+       &\quad  \left( \bar{\psi}_i \frac{\im g} {\sqrt{2}}  \frac {1 - \gamma_5} 2 \gamma^\mu \psi_j \right)  \frac {- g_{\mu \nu}} {p^2 - m_W^2}  \left( \bar{\psi}_k \frac{\im g} {\sqrt{2}} \frac {1 - \gamma_5} 2  \gamma^\nu \psi_l \right) \notag \\
+      {} &= \frac { g^2 \left( \bar{\psi}_i (1 - \gamma_5) \gamma^\mu \psi_j \right)  \left( \bar{\psi}_k (1 - \gamma_5)  \gamma_\mu \psi_l \right) }  {8 (p^2 - m_W^2)}
+    \end{align}
+    %
+  \item The only dimensionful parameter is $m_W = \Lambda$, and for
+    the EFT to be valid we assume $p^2 \ll \Lambda^2$. We can then
+    expand this expression as
+    %
+    \begin{equation}
+       \frac { g^2 } {8 m_W^2}  \left( \bar{\psi}_i (1 - \gamma_5) \gamma^\mu \psi_j \right)  \left( \bar{\psi}_k (1 - \gamma_5)  \gamma_\mu \psi_l \right) + \ord{1 / \Lambda^4} \,.
+    \end{equation}
+    %
+    With this, we again rediscover the dimension-6 EFT matched to the
+    weak interactions of the SM:
+    %
+   \begin{equation}
+     \lgr{} =  \im  \bar{\psi}_i \gamma^\mu \partial_\mu \psi_i - m_i \bar{\psi}_i \psi_i 
+     + \frac {c } {\Lambda^2}  \left( \bar{\psi}_i  (1 - \gamma_5) \gamma_\mu \psi_j \right) \left( \bar{\psi}_k (1 - \gamma_5) \gamma^\mu \psi_l \right) \,.
+   \end{equation}
+   %
+   with heavy scale $\Lambda = m_W$ and Wilson coefficient
+   $c = g^2 / 8$. Replacing $c / \Lambda^2$ by
+   $G_F / \sqrt{2} = g^2 / (8 m_W^2)$ restores the historic form of
+   Fermi theory.
+\end{enumerate}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Operator mixing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+So far we have neglected that like all parameters in a QFT, the Wilson
+coefficients of an EFT depend on the energy scale. Running the model
+from one energy to a different one leads to \emph{operator mixing}:
+loop effects from one operator will affect the coefficients of other
+operators. If the Wilson coefficients are given at the matching scale
+$\Lambda$ (we use this symbol since the matching scale is usually
+chosen only slightly below the EFT cutoff), at the scale of interest
+$E$ they will take on values of the form
+%
+\begin{equation}
+  c_i (E) \sim c_i(\Lambda) \pm \sum_j \frac {g^2} {16 \pi^2} \, \log \frac {\Lambda^2} {E^2} \,c_j(\Lambda) \,,
+\end{equation}
+%
+where $g$ are the typical couplings in the loops.
+
+If the matching scale is not too far away from the energy scale of
+interest and if all Wilson coefficients are already sizeable at the
+matching scale, this is often negligible. There is an important
+consequence, though: even if an operator is zero at the matching
+scale, operator mixing will give it a small but non-zero value at
+lower energies. So regardless of what the underlying model is, it can
+be expected that eventually all effective operators allowed by the
+symmetries will receive contributions from it. 
+%
+\comment{In principle to here, but better read through last section once more.}
 
 
 
