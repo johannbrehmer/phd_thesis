@@ -1041,8 +1041,10 @@ $S$-matrix elements~\cite{Politzer:1980me, Georgi:1991ch, Arzt:1993gz,
   Simma:1993ky}, so we can equivalently use the new action instead of
 the original one. In this way, each equation of motion provides us
 with a degree of freedom to swap operators for a combination of other
-operators and reduces the number of operators and coefficients
-necessary in an EFT basis.
+operators. Similarly, Fierz identities and integration by parts can be
+used to manipulate the form of operators. Together these tools reduces
+the number of operators and coefficients necessary in an EFT basis,
+and lead to some freedom to choose which operators to work with.
 
 
 
@@ -1287,15 +1289,16 @@ Chapter~\ref{chapter:validity}.
 The central object that allows us to systematically analyse the
 low-energy effects of heavy physics is the effective action
 $\seff$. Following Ref.~\cite{Gaillard:1986dz, Henning:2014wua}, we
-now sketch its calculation at the one-loop level, omitting
-higher-order terms irrelevant for this thesis as well as certain cases
-of mixed loops with light and heavy
-particles~\cite{Henning:2016lyp}. For a more rigorous approach see the
-quantum field theory textbook of your choice.
+now outline its calculation at the one-loop level. Note that this is
+just a conceptual sketch and not mathematically rigorous, and that we
+omit higher-order terms irrelevant for this thesis as well as certain
+cases of mixed loops with light and heavy
+particles~\cite{Henning:2016lyp}. For a more thorough derivation see
+the quantum field theory textbook of your choice.
 
 For simplicity, let us assume that our theory $S[\phi, \Phi]$ consists
 of light particles $\phi$ and a heavy scalar $\Phi$ that should not be
-part of the effective theory as dynamical degree of freedom.  The
+part of the effective theory as dynamical degree of freedom. The
 effective action is calculated by \emph{integrating out} the heavy
 particles from the partition function,
 %
@@ -1315,7 +1318,7 @@ $\Phi_c$:
   \Phi(x) = \Phi_c(x) + \eta(x) \,.
 \end{equation}
 %
-$\Phi_c$ is defined by
+$\Phi_c$ is defined by the classical equation of motion
 %
 \begin{equation}
   \left. \frac {\delta S[\phi,\Phi]} {\delta \Phi} \right|_{\Phi = \Phi_c} = 0 \,,
@@ -1347,14 +1350,17 @@ and finally
   \label{eq:effective_action_result}
 \end{equation}
 %
-where the functional trace goes over all states involving the light
-fields.\footnote{If we would have considered fermions instead, there
-  would be a minus sign in front of the second term.}  This result is the correct effective field theory.\footnote{If derivatives appear
-  in the denominator of $\seff$, the effective action is
-  non-local. After an expansion of the form
-  $1 / (D^2 - M^2) \approx 1 / M^2 (1 - D^2 / M^2 + \dots )$ only a
-  rest term of higher order in $1/M^2$ (and therefore irrelevant for
-  the matching) remains non-local~\cite{Henning:2016lyp}.}
+where the functional trace is defined as an integral over momentum
+space $k$ together with a sum over internal states $i$ such as spin or
+flavour,
+%
+\begin{equation}
+  \tr x \equiv \sum_{i} \intfourk \braket {k, i | x | k, i} \,.
+  \label{eq:functional_trace}
+\end{equation}
+%
+% \footnote{If we would have considered fermions instead, there would
+% be a minus sign in front of the second term.}
 
 This result can be directly evaluated with functional methods. The
 first term in Eq.~\eqref{eq:effective_action_result} can be easily
@@ -1366,24 +1372,138 @@ involved, but can be simplified with a procedure called
 scenarios are available in the literature~\cite{Henning:2014wua,
   Drozd:2015rsp, Henning:2016lyp}.
 
+The effective action is in general non-local, visible as (covariant)
+derivatives $D$ appearing in the denominator (formally defined as
+Green's functions). We expand these terms schematically as
+%
+\begin{equation}
+    \phi^\dagger \frac 1 {D^2 - M^2} \phi = - \phi^\dagger \frac 1 {M^2}  \left[ 1 + \frac {D^2} {M^2} \right] \phi + \ord{1 / M^6}\,,
+\end{equation}
+%
+so that only a rest term of higher order in $1/\Lambda = 1/M$ remains
+non-local~\cite{Henning:2016lyp}. In a last step, we truncate the
+resulting tower of operators at some order in our counting scheme, in
+our case in the expansion in $1/\Lambda$. The resulting effective
+theory consists of a finite set of local operators up to some order in
+a counting scheme, compatible with our definition of effective
+theories in the previous section. Unlike in the bottom-up approach,
+not all operators have to appear, and we can calculate the Wilson
+coefficients based on the underlying theory. 
+
 
   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Scalar example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+As a simple example consider a theory of two real scalar fields. The
+light field $\phi$ has mass $m$, the heavy field $\Phi$ with mass $M$
+will be integrated out. The underlying theory is given by
+%
+\begin{multline}
+  S[\phi,\Phi] = \intfourx \Biggl[
+    \frac 1 2 \partial_\mu \phi \partial^\mu \phi
+    - \frac {m^2} 2 \phi^2
+    + \frac 1 2 \partial_\mu \Phi \partial^\mu \Phi
+    - \frac {M^2} 2 \Phi^2 \\
+    - \frac {\lambda_0} {4!} \phi^4
+    - \frac {\lambda_2} {4} \phi^2 \Phi^2
+    - \frac {\lambda_4} {4!} \Phi^4
+    \Biggr] \,.
+\end{multline}
+%
+Odd interactions and a mixing term $\phi\Phi$  are forbidden with suitable $\mathbb{Z}_2$
+symmetries.
+
+The classical equation of motion for $\Phi$ is
+%
+\begin{equation}
+  \left( \partial^2 + M^2 + \frac {\lambda_2} 2 \phi^2 + \frac {\lambda_4} {3!} \Phi_c^2 \right) \Phi_c = 0
+\end{equation}
+%
+with the trivial solution $\Phi_c = 0$.
+
+The first term in the effective action then just gives back $\phi^4$
+theory for the light field, without any new effective interactions:
+%
+\begin{equation}
+  S[\phi,\Phi_c] = \intfourx \left[\frac 1 2 \partial_\mu \phi \partial^\mu \phi - \frac {m^2} 2 \phi^2 - \frac {\lambda_0} {4!} \phi^4 \right] \,.
+\end{equation}
+%
+The second term is
+%
+\begin{align}
+  \frac \im 2 \tr \log \left( - \left. \frac {\delta^2 S} {\delta \Phi^2} \right|_{\Phi = \Phi_c} \right) 
+  &=  \frac \im 2  \tr \log \left( \partial^2 + M^2 + \frac {\lambda_2} 2 \phi^2 \right) \notag \\
+  &=  \frac \im 2  \tr \log \left( \partial^2 + M^2 \right) + \frac \im 2  \tr \log \left( 1 + \frac {\lambda_2} 2 \frac {1} {\partial^2 + M^2} \phi^2 \right) \,,
+  % &=  \frac \im 2  \intfourk \braket {k| \log \left( \partial^2 + M^2 \right) | k} \notag \\
+  % &\phantom{=} \quad + \frac \im 2  \intfourk \braket {k| \log \left( 1 + \frac {\lambda_2} 2 \frac {1} {\partial^2 + M^2} \phi^2 \right) | k} \,.
+\end{align}
+%
+where derivatives in the denominator are defined as Green's functions.
+Expanding the logarithm in the second term, we find
+%
+\begin{equation}
+  \seff \supset \frac {\im \lambda_2} 4  \tr \frac {1} {\partial^2 + M^2} \phi^2
+  - \frac {\im \lambda_2^2} 8  \tr \left( \frac {1} {\partial^2 + M^2} \phi^2 \right)^2
+  + \frac {\im \lambda_2^3} {12}  \tr \left( \frac {1} {\partial^2 + M^2} \phi^2\right)^3 
+  + \ord{\lambda_2^4} \,.
+\end{equation}
+%
+The first of these terms will renormalise the $\phi$ mass term, and
+the second will contribute to the $\phi^4$ interaction. This is
+important for RG running, but will not create the kind of new
+effective interactions we are interested in here. We instead focus on
+the last term and evaluate the functional trace:
+%
+\begin{align}
+  \seff &\supset - \frac {\im \lambda_2^3} {12} \intfourk \braket {k| \left( \frac {1} {\partial^2 + M^2} \phi^2 \right)^3 |k} \notag \\
+  &\supset - \frac {\im \lambda_2^3} {12} \intfourk \!\! \intfourp \!\! \intfourq \!\! \intfourx \!\! \intfoury \!\! \intfourz \notag \\
+  &\phantom{\supset} \quad \quad
+    \braket {k| \frac {1} {\partial^2 + M^2} |x} \braket{x| \phi^2 |p}
+    \braket {p| \frac {1} {\partial^2 + M^2} |y} \braket{y| \phi^2 |q} 
+    \braket {q| \frac {1} {\partial^2 + M^2} |z} \braket{z| \phi^2 |k} \,.
+\end{align}
+%
+Here we have used the definition of the functional trace in
+Eq.~\eqref{eq:functional_trace} and inserted unity,
+$1 = \intfourx \ket{x} \bra{x} = \intfourp \ket{p} \bra{p}$.
+$\ket{k}$, $\ket{p}$, and $\ket{q}$ are eigenstates of the derivative
+operator $\partial$,
+i.\,e.~$\bra{k} \im \partial_\mu = \bra{k} k_\mu$, while $\ket{x}$,
+$\ket{y}$, and $\ket{z}$ denote the eigenstates of local operators,
+$\bra{x} \phi^2= \bra{x} \phi^2(x)$. Their inner product is
+$\braket {x|k} = e^{-\im k x}$. Using these properties, we get
+%
+\begin{align}
+  \seff &\supset - \frac {\im \lambda_2^3} {12} \intfourk \!\! \intfourp \!\! \intfourq \!\! \intfourx \!\! \intfoury \!\! \intfourz \notag \\
+  &\phantom{\supset} \quad \quad
+    \frac {1} {-k^2 + M^2} e^{\im k x}  \phi(x)^2 e^{-\im p x} 
+    \frac {1} {-p^2 + M^2} e^{\im p y}  \phi(y)^2 e^{-\im q y} 
+    \frac {1} {-q^2 + M^2} e^{\im q z}  \phi(z)^2 e^{-\im k z}
+\end{align}
+%
+\comment{Help! I'm lost!}
+  
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Diagrammatic matching}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Alternatively, the effective action in
-Eq.~\eqref{eq:effective_action_result} provides us with an intuitive
-diagrammatic interpretation.  Since the light fields are kept fixed in
+As an alternative to this functional approach, the effective action in
+Eq.~\eqref{eq:effective_action_result} can be calculated in an
+intuitive diagrammatic way.  Since the light fields are kept fixed in
 Eq.~\eqref{eq:effective_action_definition}, the effective action is
 given by all connected Feynman diagrams with only $\phi$ as external
 legs and only $\Phi$ fields as internal propagators. A more rigorous
-derivation in fact reveals that also certain connected loop diagrams
-with only $\phi$ as external legs and both $\Phi$ and $\phi$ fields as
-internal propagators contribute if they cannot be disconnected by
-cutting a single internal $\phi$ line~\cite{Henning:2016lyp}. The
-first term in Eq.~\eqref{eq:effective_action_result} corresponds to
-all such tree-level diagrams, the second term describes one-loop
+derivation than the one in the precious section in fact reveals that
+also certain connected loop diagrams with only $\phi$ as external legs
+and both $\Phi$ and $\phi$ fields as internal propagators contribute
+if they cannot be disconnected by cutting a single internal $\phi$
+line~\cite{Henning:2016lyp}. The first term in
+Eq.~\eqref{eq:effective_action_result} corresponds to all such
+tree-level diagrams, the second term describes one-loop
 pieces. Higher-loop corrections will play no role in this thesis and
 were left out.
 
@@ -1586,33 +1706,31 @@ feature of an effective field theory.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Since we do not know what physics lays beyond the SM, we have to
-construct Higgs EFT from a bottom-up perspective. As discussed above,
+construct our EFT from a bottom-up perspective. As discussed above,
 this means we have to write down all operators based on a set of
 particles that are compatible with certain symmetries and are
 important according to some counting scheme. Let us go through these
 one by one:
 %
 \begin{enumerate}
-\item Our EFT will contain all SM fields. There is one subtlety: in
-  the SM, the physical Higgs particle $h$ and the Goldstone bosons
-  $w_i$ that become part of the $W$ and $Z$ bosons during electroweak
-  symmetry breaking are combined in a $SU(2)_L$ doublet $\phi$ as
-  given in Eq.~\eqref{eq:foundations_sm_phi}. We choose to use $\phi$
-  as the fundamental building block of our EFT, which is motivated by
-  the fact that the SM is in great agreement with all observations so
-  far. We will discuss an alternative EFT based on the physical scalar
-  $h$ as the fundamental building block in
+\item As degrees of freedoms we use the SM fields. In particular, we
+  assume the Higgs boson $h$ and the Goldstone bosons $w_i$ are
+  combined in a $SU(2)_L$ doublet $\phi$ as in the SM, see
+  Eq.~\eqref{eq:foundations_sm_phi}. This is the correct choice if new
+  physics decouples, i.\,e.\ resides at scales $\Lambda \gg v$. We
+  will discuss an alternative construction based on the physical
+  scalar $h$ instead of $\phi$ as the fundamental building block in
   Section~\ref{sec:foundations_heft_alternatives}.
   %
 \item All operators have to be invariant under Lorentz transformations
-  and under the SM gauge group $SU(3)_C \times SU(2)_L \times
-  U(1)_Y$. They also should conserve lepton and baryon number.
+  and under the SM gauge group $SU(3)_C \times SU(2)_L \times U(1)_Y$,
+  and conserve lepton and baryon number.
   %
-\item We again assume that higher-dimensional operators will be
-  suppressed by more powers of the cutoff scale $\Lambda$. We will
-  keep those up to mass dimension 6.
+\item We order the operators by their mass dimension and thus their
+  suppression in powers of $1/\Lambda$. We will keep those up to mass
+  dimension 6, i.\,e.~$\ord{1/\Lambda^2}$.
 \end{enumerate}
-%
+
 Simple dimensional analysis of the kinetic terms of the SM fields
 tells us the mass dimensions of all building blocks:
 %
@@ -1623,14 +1741,44 @@ tells us the mass dimensions of all building blocks:
 There are no dimension-5 operators,\footnote{After adding right-handed
   neutrinos to the SM, one can construct the dimension-5 ``Weinberg
   operator''. It generates a Majorana mass term for the neutrinos, but
-  is entirely irrelevant for the physics we will discuss.} so our EFT
-will have the form
+  is entirely irrelevant for the physics we will discuss.} so the
+leading effects in our EFT are expected to come from dimension-6
+operators:
 %
 \begin{equation}
-  \lgr{EFT} = \lgr{SM} + \sum_i \frac {f_i} {\Lambda^2} \ope{i}
+  \lgr{EFT} = \lgr{SM} + \sum_i \frac {f_i} {\Lambda^2} \ope{i} + \ord{1/\Lambda^4}
+  \label{eq:sm_eft}
 \end{equation}
 %
-with unknown cutoff scale $\Lambda$ and Wilson coefficients $f_i$. 
+with unknown cutoff scale $\Lambda$ and Wilson coefficients $f_i$. For
+convenience, we will from now on drop the higher-order terms.
+
+At this order, there are 59 independent types of operators, not
+counting flavour structures and Hermitian
+conjugation~\cite{Grzadkowski:2010es}. Counting all possible flavour
+structures, there are 2499 distinct operators. Fortunately, in
+practice only a small subset of these are relevant: first, the strong
+constraints on flavour-changing neutral currents motivates the
+assumption of flavour-diagonal or even flavour-universal Wilson
+coefficients. Second, only a small number of these operators directly
+affects Higgs physics. At higher orders in the EFT expansion, the
+number of operators increases rapidly, explaining why we stick to the
+leading effects at dimension 6: not counting flavour structures, there
+are $\ord{1000}$ operators at dimension 8 and $\ord{10\,000}$
+dimension-10 operators~\cite{Henning:2015alf}.
+
+As discussed in Section~\ref{sec:foundations_eft_bottom_up}, field
+redefinitions (or, relatedly, equations of motions), Fierz identities
+and integration by parts provide equivalence relations between certain
+operators and give us some freedom to define a basis of
+operators. Three different conventions have become popular: in
+addition to the ``Warsaw'' basis~\cite{Grzadkowski:2010es}, there is
+the SILH convention~\cite{Giudice:2007fh} and the HISZ
+basis~\cite{Hagiwara:1993ck}. For a comparison of and conversion
+between these bases see Ref.~\cite{Falkowski:2015wza}\comment{More
+  references?}. Throughout this thesis we stick to the HISZ basis.
+%
+\comment{To here}
 
 On the one hand, note that the object $\phi^\dagger \phi$ is a scalar
 gauge singlet. We can simply attach it to any dimension-4 operator of
@@ -1660,31 +1808,11 @@ derivatives:
   \label{eq:foundations_OW_def}
 \end{align}
 
-There are many more operators one can write down, and we will not list
-all of them. The first complete set of 80 operators (not counting
-flavour structure and Hermitian conjugation) was published in
-1985~\cite{Buchmuller:1985jz}. It was soon noticed that not all of
-these operators are actually independent: they can be linked through
-equations of motions of the SM fields, integration by parts, or field
-redefinitions. Taking these effects into account, a (complete and not
-redundant) basis for dimension-6 operators consists of 59 operators
-(again up to flavour and Hermitian conjugation). It took until 2010
-for someone to write down such a
-basis~\cite{Grzadkowski:2010es}. Three different conventions have
-become popular: in addition to the ``Warsaw''
-basis~\cite{Grzadkowski:2010es}, there is the SILH
-convention~\cite{Giudice:2007fh} and the HISZ
-basis~\cite{Hagiwara:1993ck}. Here we stick to the latter.
+For a complete list of operators, see\dots
 
-If we count all possible flavour structures for three fermion
-generations, there are 2499 operators in the dimension-6 basis, so in
-practice we will always assume flavour-diagonal or even
-flavour-universal Wilson coefficients. And just in case you are
-wondering why we are stopping at dimension 6: using the counting that
-gave 59 independent dimension-6 operators, there are $\ord{1000}$ ones
-at dimension 8 and $\ord{10\,000}$ dimension-10 operators~\cite{Henning:2015alf}.
-%
-\comment{To here.}
+Operator mixing
+
+
 
 
 
