@@ -456,11 +456,12 @@ against quantum corrections.\footnote{An entirely different and
   a sampling mechanism (the ``multiverse''). Second, there has to be a
   reason why larger (and thus more abundant) values of the weak scale
   would not allow any type of intelligent life to form and make
-  observations~\cite{Agrawal:1997gf}. This question is very difficult
-  to answer, and the jury is still out~\cite{Giudice:2008bi}. Given
-  the speculative nature of the two questions, anthropic reasoning is
-  being criticised as unverifiable or as based on arguments from lack
-  of imagination. Some other models such as the
+  observations. This question is difficult to answer, and the jury is
+  still out~\cite{Agrawal:1997gf, Harnik:2006vj, Clavelli:2006di,
+    Giudice:2008bi, Donoghue:2009me, Gedalia:2010iy,
+    Adams:2015hvd}. Given the speculative nature of the two questions,
+  anthropic reasoning is being criticised as unverifiable or as based
+  on arguments from lack of imagination. Some other models such as the
   relaxion~\cite{Graham:2015cka} or
   Nnaturalness~\cite{Arkani-Hamed:2016rle} modify the cosmological
   evolution such that a small Higgs mass is generated dynamically
@@ -1434,19 +1435,26 @@ The second term is
 %
 \begin{align}
   \frac \im 2 \tr \log \left( - \left. \frac {\delta^2 S} {\delta \Phi^2} \right|_{\Phi = \Phi_c} \right) 
+  %
   &=  \frac \im 2  \tr \log \left( \partial^2 + M^2 + \frac {\lambda_2} 2 \phi^2 \right) \notag \\
-  &=  \frac \im 2  \tr \log \left( \partial^2 + M^2 \right) + \frac \im 2  \tr \log \left( 1 + \frac {\lambda_2} 2 \frac {1} {\partial^2 + M^2} \phi^2 \right) \,,
+  %
+  &=  \frac \im 2  \tr \log \left( \partial^2 + M^2 \right) + \frac \im 2  \tr \log \left( 1 + \frac {\lambda_2} 2 \frac {1} {\partial^2 + M^2 + \im \varepsilon} \phi^2 \right) \,,
+  %
   % &=  \frac \im 2  \intfourk \braket {k| \log \left( \partial^2 + M^2 \right) | k} \notag \\
-  % &\phantom{=} \quad + \frac \im 2  \intfourk \braket {k| \log \left( 1 + \frac {\lambda_2} 2 \frac {1} {\partial^2 + M^2} \phi^2 \right) | k} \,.
+  % &\phantom{=} \quad + \frac \im 2  \intfourk \braket {k| \log \left( 1 + \frac {\lambda_2} 2 \frac {1} {\partial^2 + M^2 + \im \varepsilon} \phi^2 \right) | k} \,.
 \end{align}
 %
-where derivatives in the denominator are defined as Green's functions.
-Expanding the logarithm in the second term, we find
+where derivatives in the denominator are defined as Green's
+functions. Since $\tr \log \left( \partial^2 + M^2 \right) $ is just a
+constant that can be calculated for instance in dimensional
+regularization, the first part does not give us any higher-dimensional
+operators of the light fields $\phi$. Expanding the logarithm in the
+second term, we find
 %
 \begin{equation}
-  \seff \supset \frac {\im \lambda_2} 4  \tr \frac {1} {\partial^2 + M^2} \phi^2
-  - \frac {\im \lambda_2^2} 8  \tr \left( \frac {1} {\partial^2 + M^2} \phi^2 \right)^2
-  + \frac {\im \lambda_2^3} {12}  \tr \left( \frac {1} {\partial^2 + M^2} \phi^2\right)^3 
+  \seff \supset \frac {\im \lambda_2} 4  \tr \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2
+  - \frac {\im \lambda_2^2} 8  \tr \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2 \right)^2
+  + \frac {\im \lambda_2^3} {12}  \tr \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2\right)^3 
   + \ord{\lambda_2^4} \,.
 \end{equation}
 %
@@ -1457,12 +1465,15 @@ effective interactions we are interested in here. We instead focus on
 the last term and evaluate the functional trace:
 %
 \begin{align}
-  \seff &\supset - \frac {\im \lambda_2^3} {12} \intfourk \braket {k| \left( \frac {1} {\partial^2 + M^2} \phi^2 \right)^3 |k} \notag \\
-  &\supset - \frac {\im \lambda_2^3} {12} \intfourk \!\! \intfourp \!\! \intfourq \!\! \intfourx \!\! \intfoury \!\! \intfourz \notag \\
+  \seff &\supset - \frac {\im \lambda_2^3} {12} \intfourk \braket {k| \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2 \right)^3 |k} \notag \\
+  %
+  &\supset - \frac {\im \lambda_2^3} {12} \;
+    \intfourx \!\! \intfoury \!\! \intfourz \!\!
+    \intfourk \!\! \intfourp \!\! \intfourq 
+    \braket {k| \frac {1} {\partial^2 + M^2 - \im \varepsilon} |x} \braket{x| \phi^2 |p}\notag \\
   &\phantom{\supset} \quad \quad
-    \braket {k| \frac {1} {\partial^2 + M^2} |x} \braket{x| \phi^2 |p}
-    \braket {p| \frac {1} {\partial^2 + M^2} |y} \braket{y| \phi^2 |q} 
-    \braket {q| \frac {1} {\partial^2 + M^2} |z} \braket{z| \phi^2 |k} \,.
+    \times \braket {p| \frac {1} {\partial^2 + M^2 - \im \varepsilon} |y} \braket{y| \phi^2 |q} 
+    \braket {q| \frac {1} {\partial^2 + M^2 - \im \varepsilon} |z} \braket{z| \phi^2 |k} \,.
 \end{align}
 %
 Here we have used the definition of the functional trace in
@@ -1473,17 +1484,96 @@ operator $\partial$,
 i.\,e.~$\bra{k} \im \partial_\mu = \bra{k} k_\mu$, while $\ket{x}$,
 $\ket{y}$, and $\ket{z}$ denote the eigenstates of local operators,
 $\bra{x} \phi^2= \bra{x} \phi^2(x)$. Their inner product is
-$\braket {x|k} = e^{-\im k x}$. Using these properties, we get
+$\braket {x|k} = e^{-\im k x}$. Using these properties and shifting
+the integration variables, we get
 %
 \begin{align}
-  \seff &\supset - \frac {\im \lambda_2^3} {12} \intfourk \!\! \intfourp \!\! \intfourq \!\! \intfourx \!\! \intfoury \!\! \intfourz \notag \\
-  &\phantom{\supset} \quad \quad
-    \frac {1} {-k^2 + M^2} e^{\im k x}  \phi(x)^2 e^{-\im p x} 
-    \frac {1} {-p^2 + M^2} e^{\im p y}  \phi(y)^2 e^{-\im q y} 
-    \frac {1} {-q^2 + M^2} e^{\im q z}  \phi(z)^2 e^{-\im k z}
+  \seff &\supset - \frac {\im \lambda_2^3} {12} \;
+          \intfourx \!\! \intfoury \!\! \intfourz \!\!
+          \intfourk \!\! \intfourp \!\! \intfourq
+          \frac {1} {-k^2 + M^2 - \im \varepsilon} e^{\im k x}  \phi(x)^2 e^{-\im p x} \notag \\
+  &\phantom{\supset} \qquad
+    \times \frac {1} {-p^2 + M^2 - \im \varepsilon} e^{\im p y}  \phi(y)^2 e^{-\im (p+Q) y}  \;
+    \frac {1} {-q^2 + M^2 - \im \varepsilon} e^{\im q z}  \phi(z)^2 e^{-\im k z} \notag \\
+  %
+  &\supset \frac {\im \lambda_2^3} {12} \;
+    \intfourx \!\! \intfoury \!\! \intfourz \!\!
+    \intfourk \!\! \intfourp \!\! \intfourq
+    \phi(x)^2 \phi(y)^2 \phi(z)^2 \notag \\
+  &\phantom{\supset} \qqquad 
+    \times \frac {e^{\im p (z-x)} \, e^{\im q (z-y)}}
+    { (k^2 - M^2 + \im \varepsilon) \, ((k+p)^2 - M^2 + \im \varepsilon) \,  ((k+p+q)^2 - M^2 + \im \varepsilon)} \,.
+\end{align}
+
+We can now perform the integral over the loop momentum $k$ with
+Feynman parameters:
+%
+\begin{align}
+  T_3(p,q)  &\equiv \intfourk \frac {1}
+              { (k^2 - M^2 + \im \varepsilon) \,
+              ((k+p)^2 - M^2 + \im \varepsilon) \,
+              ((k+p+q)^2 - M^2 + \im \varepsilon)} \notag \\
+  %
+   &= 2 \int_0^1 \!\! \diff x \int_0^{1-x} \!\! \diff y \intfourk
+     \Bigl[  x  (k^2 - M^2 + \im \varepsilon)
+     + y ((k+p)^2 - M^2 + \im \varepsilon) \notag \\
+  &\phantom{=} \qqqquad \qqquad
+    + (1-x -y)  ((k+p+q)^2 - M^2 + \im \varepsilon)  \Bigr]^{-3} \notag \\
+  %
+   &= 2 \int_0^1 \!\! \diff x \int_0^{1-x} \!\! \diff y \intfourk
+     \frac 1 { \left[ (k + a)^2 - B  + \im \varepsilon \right]^3 }
 \end{align}
 %
-\comment{Help! I'm lost!}
+with $a = (1 - x) p  + (1 - x - y) q $ and
+$B = M^2 - (1 - x - y) (p+q)^2 - y p^2 + a^2$.
+Shifting the loop momentum as $k \to k + a$, we finally arrive at
+%
+\begin{equation}
+  T_3(p,q)  
+   = 2 \int_0^1 \!\! \diff x \int_0^{1-x} \!\! \diff y \intfourk
+     \frac 1 { \left[ k^2 - B + \im \varepsilon \right]^3 } \,.
+  \label{eq:foundations_scalar_example_loop_function}
+\end{equation}
+
+To evaluate this, we first Wick-rotate $k^0 = \im k_E^0$. Formally,
+this means shifting the integration path in the complex plane of $k^0$
+from along the real axis to along the imaginary axis. The Cauchy
+theorem assures that this does not change the value of the integral as
+long as we chose the contour such that the poles are not caught
+between the two contours. Defining
+$k_E^2 = (k^0_E)^2 + \boldsymbol{k}^2 = - k^2$, we find\footnote{This
+  step requires $B>0$. In our case, $p$ and $q$ correspond to momenta
+  of the light fields, and in the validity regime of the EFT we should
+  always have $M^2 \gg p^2, q^2$ and therefore $B > 0$.}
+%
+\begin{equation}
+  I_{0,3} 
+   \equiv \intfourk \frac 1 { \left[ k^2 - B + \im \varepsilon \right]^3 } 
+   = \im \intfourke \frac 1 { \left[ - k_E^2 - B \right]^3 } \,,
+\end{equation}
+%
+where the $+ \im \varepsilon$ is no longer necessary. With
+$\overbar{k} = |k_E |$ we can finally calculate the integral:
+%
+\begin{align}
+  I_{0,3} = \frac {2 \pi^2} {(2 \pi)^4} \,
+            \int \!\! \diff \overbar{k} {\overbar{k}}^3 \;
+    \frac 1 { \left[ {\overbar{k}}^2 + B \right]^3 }
+            = \frac {- \im } {32 \pi^2 B} \,.
+\end{align}
+
+Collecting all the pieces, we now have
+%
+\begin{align}
+  T_3(p,q) &= \frac {-2\im} {32 \pi^2} \, \int_0^1 \!\! \diff x \int_0^{1-x} \!\! \diff y \;
+   \Bigl[ M^2 - (1 - x - y) (p+q)^2 - y p^2 \notag \\
+  &\phantom{=} \qqqquad \qqquad+ ((1-x) p  + (1 - x - y) q )^2 \Bigr] \,.
+\end{align}
+%
+There is a solution for this integral in the
+literature~\cite{tHooft:1978jhc, Denner:1991kt}, but the result is
+extremely ugly\comment{Just like the dear proof reader\dots}.
+
   
 
 
