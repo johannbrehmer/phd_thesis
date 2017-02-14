@@ -1429,6 +1429,7 @@ theory for the light field, without any new effective interactions:
 %
 \begin{equation}
   S[\phi,\Phi_c] = \intfourx \left[\frac 1 2 \partial_\mu \phi \partial^\mu \phi - \frac {m^2} 2 \phi^2 - \frac {\lambda_0} {4!} \phi^4 \right] \,.
+  \label{eq:foundations_scalar_example_effective_action_tree_part}
 \end{equation}
 %
 The second term is
@@ -1456,6 +1457,7 @@ second term, we find
   - \frac {\im \lambda_2^2} 8  \tr \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2 \right)^2
   + \frac {\im \lambda_2^3} {12}  \tr \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2\right)^3 
   + \ord{\lambda_2^4} \,.
+  \label{eq:foundations_scalar_example_effective_action_powers}
 \end{equation}
 %
 The first of these terms will renormalise the $\phi$ mass term, and
@@ -1565,17 +1567,76 @@ $\overbar{k} = |k_E |$ we can finally calculate the integral:
 Collecting all the pieces, we now have
 %
 \begin{align}
-  T_3(p,q) &= \frac {-2\im} {32 \pi^2} \, \int_0^1 \!\! \diff x \int_0^{1-x} \!\! \diff y \;
+  T_3(p,q) &= \frac {-\im} {16 \pi^2} \, \int_0^1 \!\! \diff x \int_0^{1-x} \!\! \diff y \;
    \Bigl[ M^2 - (1 - x - y) (p+q)^2 - y p^2 \notag \\
   &\phantom{=} \qqqquad \qqquad+ ((1-x) p  + (1 - x - y) q )^2 \Bigr] \,.
 \end{align}
 %
-There is a solution for this integral in the
+There is a full solution for this integral in the
 literature~\cite{tHooft:1978jhc, Denner:1991kt}, but the result is
 extremely ugly\comment{Just like the dear proof reader\dots}.
 
-  
+Instead, we recognize that $p$ and $q$ correspond to momenta of the
+light fields, and just evaluate the leading term in an expansion in
+$1/M^2$.\comment{Need to sharpen this argument, ideally without
+  identifying the momenta! Maybe along these lines: we know that the
+  full integral is finite from the literature, we now show that the
+  leading term in $1/M$ is finite, so the rest term is also
+  finite. Still have to argue that the rest term does not develop
+  powers of $M$ in the nominator\dots} We find
+%
+\begin{equation}
+  T_3(p,q) = \frac {-\im} {16 \pi^2 \,M^2} + \ord{1/M^4} \,,
+\end{equation}
+%
+and therefore
+%
+\begin{align}
+  \seff &\supset \frac {\lambda_2^3} {192 \pi^2 \,M^2 } \;
+    \intfourx \!\! \intfoury \!\! \intfourz \!\!
+    \intfourp \!\! \intfourq
+    \phi(x)^2 \phi(y)^2 \phi(z)^2
+    e^{\im p (z-x)} e^{\im q (y-z)} \notag \\
+  %
+  &\supset \frac {\lambda_2^3} {192 \pi^2 M^2 } \;
+    \intfourx \!\! \intfoury \!\! \intfourz
+    \phi(x)^2 \phi(y)^2 \phi(z)^2
+    \delta (z-x) 
+    \delta (y-z) \notag \\
+  %
+  &\supset \frac {\lambda_2^3} {192 \pi^2 M^2 } \;
+    \intfourx
+    \phi(x)^6 \,.
+    \label{eq:foundations_scalar_example_effective_action_loop_part}
+\end{align}
+%
+After the expansion in $1/M$, we have finally arrived at a local
+theory!
 
+What about the higher terns in
+Eq.~\eqref{eq:foundations_scalar_example_effective_action_powers}?
+Their calculation is analogous to the one presented here and will lead
+to operators like $\phi^8$ and higher. They will be suppressed at
+least with $ 1 / M^4$ and are thus irrelevant for our dimension-six
+effective theory.
+
+Collecting the pieces in
+Eq.~\eqref{eq:foundations_scalar_example_effective_action_tree_part}
+and
+Eq.~\eqref{eq:foundations_scalar_example_effective_action_loop_part},
+up to one loop and $\ord{1/M^2}$ the full effective action is given by
+%
+\begin{equation}
+  \seff[\phi] = \intfourx \left[\frac 1 2 \partial_\mu \phi \partial^\mu \phi
+    - \frac {m^2} 2 \phi^2 - \frac {\lambda_0} {4!} \phi^4
+    + \frac {\lambda_2^3} {192 \pi^2 M^2 } \, \phi^6\right] \,.
+\end{equation}
+%
+As expected, the dimension-6 operator is suppressed by two powers of
+the heavy scale $\Lambda \equiv M$, and the Wilson coefficient
+consists of the couplings $\lambda_2^3$ times a loop factor.
+
+  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Diagrammatic matching}
