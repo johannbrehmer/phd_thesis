@@ -24,18 +24,27 @@
 \pagenumbering{roman}
 \pagestyle{plain}
 
+% Title and dedication
 \input{tex/title.tex}
+
+% Abstracts
 \KOMAoptions{open=left}
 \input{tex/abstract.tex}
+
+% ToC, LoT, LoF
 \KOMAoptions{open=left}
 \microtypesetup{protrusion=false} % disables protrusion for ToC
 \tableofcontents 
-\microtypesetup{protrusion=true} % enables protrusion again
+\listoftables 
 \KOMAoptions{open=right}
+\listoffigures
+
+% Preface and acknowledgements
+\microtypesetup{protrusion=true} % enables protrusion again
 \input{tex/preface.tex}
 \input{tex/acknowledgements}
-\thispagestyle{plain}
 
+\thispagestyle{plain}
 \cleardoublepage
 
 

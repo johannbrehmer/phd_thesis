@@ -59,7 +59,7 @@ In the Standard Model, the Higgs field appears as an $SU(2)$ doublet $\phi$ as
   \lgr{SM} \supset (D^\mu \phi)^\dagger (D_\mu \phi) - \mu^2 \phisq - \lambda (\phisq)^2 \\
             - \sum_{\text{generations}} \left(    y_u {\twovec {\overbar u} {\overbar d}}_L \tilde \phi \, u_{R} 
                                                            + y_d {\twovec {\overbar u} {\overbar d}}_L \phi \, d_{R}
-                                                           + y_\ell {\twovec {\overbar \nu_e} {\overbar e^-}}_L \phi \, e_{R}   \right )
+                                                           + y_\ell {\twovec {\overbar \nu} {\overbar \ell^-}}_L \phi \, \ell_{R}   \right )
   \label{eq:foundations_sm_lagrangian}
 \end{multline}
 %
@@ -156,9 +156,10 @@ and all couplings are fixed.
       \fmf{photon}{v2,o2}
     \end{fmfgraph*}
   }
-  \caption{Feynman diagrams for the most important Higgs production
-    modes considered in this thesis. Left: gluon fusion. Middle: weak
-    boson fusion. Right: Higgs-strahlung.}
+  \caption[Feynman diagrams for main Higgs production modes]{Feynman diagrams for
+    the most important Higgs production modes considered in this
+    thesis. Left: gluon fusion. Middle: weak boson fusion. Right:
+    Higgs-strahlung.}
   \label{fig:foundations_production_diag}
 \end{figure}
 
@@ -269,7 +270,7 @@ the virtual intermediate vector boson.
       \fmf{dashes,tension=0.5}{v3,o2}
     \end{fmfgraph*}
   }
-  \caption{Feynman diagrams for Higgs production with a single top quark.}
+  \caption[Feynman diagrams for Higgs plus single top production]{Feynman diagrams for Higgs production with a single top quark.}
   \label{fig:foundations_th_diag}
 \end{figure}
 
@@ -329,7 +330,8 @@ can be influenced by many effects such as new particles in the loop).
       \fmf{dashes,tension=2}{o2,v4,o1}
     \end{fmfgraph*}
   }
-  \caption{Feynman diagrams for Higgs pair production.}
+  \caption[Feynman diagrams for Higgs pair production]{Feynman
+    diagrams for Higgs pair production.}
   \label{fig:foundations_hh_diag}
 \end{figure}
 
@@ -1543,10 +1545,12 @@ from along the real axis to along the imaginary axis. The Cauchy
 theorem assures that this does not change the value of the integral as
 long as we chose the contour such that the poles are not caught
 between the two contours. Defining
-$k_E^2 = (k^0_E)^2 + \boldsymbol{k}^2 = - k^2$, we find\footnote{This
-  step requires $B>0$. In our case, $p$ and $q$ correspond to momenta
-  of the light fields, and in the validity regime of the EFT we should
-  always have $M^2 \gg p^2, q^2$ and therefore $B > 0$.}
+$k_E^2 = (k^0_E)^2 + \boldsymbol{k}^2 = - k^2$, we find
+%
+%\footnote{This
+%  step requires $B>0$. In our case, $p$ and $q$ correspond to momenta
+%  of the light fields, and in the validity regime of the EFT we should
+%  always have $M^2 \gg p^2, q^2$ and therefore $B > 0$.}
 %
 \begin{equation}
   I_{0,3} 
@@ -1564,47 +1568,50 @@ $\overbar{k} = |k_E |$ we can finally calculate the integral:
             = \frac {- \im } {32 \pi^2 B} \,.
 \end{align}
 
-Collecting all the pieces, we now have
+Collecting all the pieces, we have
+%
+\begin{multline}
+  \seff \supset \frac {\lambda_2^3} {192 \pi^2} \,
+    \intfourx \!\! \intfoury \!\! \intfourz \phi(x)^2 \phi(y)^2 \phi(z)^2 
+    \intfourp \!\! \intfourq e^{\im p (z-x)} \, e^{\im q (y-z)} \\
+    \times \int_0^1 \!\! \diff x \int_0^{1-x} \!\! \diff y \;
+    \left[ M^2 - (1 - x - y) (p+q)^2 - y p^2 + ((1-x) p  + (1 - x - y) q )^2 \right]^{-1} \,.
+\end{multline}
+%
+At first glance, this is disappointing: this effective action looks
+non-local and involves highly non-trivial integrals. It turns out that
+these can in fact be calculated and give a finite
+result~\cite{tHooft:1978jhc, Denner:1991kt}. The full expression is
+extremly ugly. \comment{Just like the dear proof
+  reader\dots} Fortunately, we do not need it. Instead, we expand the
+integrand in powers of $1/M^2$. We will only calculate the leading
+term at $\ord{1/M^2}$. We will show that it produces a finite result
+as well, so the rest term at $\ord{1/M^4}$ also has to be finite. Even
+more, we can argue that the rest term at $\ord{1/M^4}$ has to vanish:
+the coefficient at a given order $1/M^k$ in this expansion is an
+integral without any mass scales, and has to lead to a result of mass
+dimension $k-2$. Only $k = 2$ can give a non-zero and finite result,
+all higher orders therefore have to vanish.
+% Physically, this corresponds to approximating the loop momenta
+% as lighter then the heavy mass scale, which makes sense in the
+% validity region of the EFT.
+\comment{Check this argument!} In this way, we find the much simpler
+result
 %
 \begin{align}
-  T_3(p,q) &= \frac {-\im} {16 \pi^2} \, \int_0^1 \!\! \diff x \int_0^{1-x} \!\! \diff y \;
-   \Bigl[ M^2 - (1 - x - y) (p+q)^2 - y p^2 \notag \\
-  &\phantom{=} \qqqquad \qqquad+ ((1-x) p  + (1 - x - y) q )^2 \Bigr] \,.
-\end{align}
-%
-There is a full solution for this integral in the
-literature~\cite{tHooft:1978jhc, Denner:1991kt}, but the result is
-extremely ugly\comment{Just like the dear proof reader\dots}.
-
-Instead, we recognize that $p$ and $q$ correspond to momenta of the
-light fields, and just evaluate the leading term in an expansion in
-$1/M^2$.\comment{Need to sharpen this argument, ideally without
-  identifying the momenta! Maybe along these lines: we know that the
-  full integral is finite from the literature, we now show that the
-  leading term in $1/M$ is finite, so the rest term is also
-  finite. Still have to argue that the rest term does not develop
-  powers of $M$ in the nominator\dots} We find
-%
-\begin{equation}
-  T_3(p,q) = \frac {-\im} {16 \pi^2 \,M^2} + \ord{1/M^4} \,,
-\end{equation}
-%
-and therefore
-%
-\begin{align}
-  \seff &\supset \frac {\lambda_2^3} {192 \pi^2 \,M^2 } \;
-    \intfourx \!\! \intfoury \!\! \intfourz \!\!
-    \intfourp \!\! \intfourq
+  \seff &\supset \frac {\lambda_2^3} {192 \pi^2 \,M^2 } 
+    \intfourx \!\! \intfoury \!\! \intfourz 
     \phi(x)^2 \phi(y)^2 \phi(z)^2
-    e^{\im p (z-x)} e^{\im q (y-z)} \notag \\
+    \intfourp \!\! \intfourq  e^{\im p (z-x)} e^{\im q (y-z)}  \notag\\
+        &\phantom{\supset} \qqqquad \qqqquad \qqqquad + \ord{1/M^4} \notag \\
   %
-  &\supset \frac {\lambda_2^3} {192 \pi^2 M^2 } \;
+  &\supset \frac {\lambda_2^3} {192 \pi^2 M^2 } 
     \intfourx \!\! \intfoury \!\! \intfourz
-    \phi(x)^2 \phi(y)^2 \phi(z)^2
+    \phi(x)^2 \phi(y)^2 \phi(z)^2 \,
     \delta (z-x) 
     \delta (y-z) \notag \\
   %
-  &\supset \frac {\lambda_2^3} {192 \pi^2 M^2 } \;
+  &\supset \frac {\lambda_2^3} {192 \pi^2 M^2 } 
     \intfourx
     \phi(x)^6 \,.
     \label{eq:foundations_scalar_example_effective_action_loop_part}
@@ -1856,6 +1863,13 @@ feature of an effective field theory.
 \label{sec:foundations_heft_operators}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Building blocks}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 Since we do not know what physics lays beyond the SM, we have to
 construct our EFT from a bottom-up perspective. As discussed above,
 this means we have to write down all operators based on a set of
@@ -1867,10 +1881,12 @@ one by one:
 \item As degrees of freedoms we use the SM fields. In particular, we
   assume the Higgs boson $h$ and the Goldstone bosons $w_i$ are
   combined in a $SU(2)_L$ doublet $\phi$ as in the SM, see
-  Eq.~\eqref{eq:foundations_sm_phi}. This is the correct choice if new
-  physics decouples, i.\,e.\ resides at scales $\Lambda \gg v$. We
-  will discuss an alternative construction based on the physical
-  scalar $h$ instead of $\phi$ as the fundamental building block in
+  Eq.~\eqref{eq:foundations_sm_phi}. This is consistent with correct
+  data and the correct choice if new physics decouples, that is, if in
+  the limit $\Lambda \to \infty$ the SM is
+  recovered~\cite{Krause:2016uhw}. We will discuss an alternative
+  construction based on the physical scalar $h$ instead of $\phi$ as
+  the fundamental building block in
   Section~\ref{sec:foundations_heft_alternatives}.
   %
 \item All operators have to be invariant under Lorentz transformations
@@ -1927,41 +1943,141 @@ addition to the ``Warsaw'' basis~\cite{Grzadkowski:2010es}, there is
 the SILH convention~\cite{Giudice:2007fh} and the HISZ
 basis~\cite{Hagiwara:1993ck}. For a comparison of and conversion
 between these bases see Ref.~\cite{Falkowski:2015wza}\comment{More
-  references?}. Throughout this thesis we stick to the HISZ basis.
+  references?}. Throughout this thesis we stick to the HISZ basis. 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{$CP$-even operators}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}
+  \renewcommand{\arraystretch}{1.8}
+  \begin{tabular}{r @{${} = {}$} l @{\hspace*{2cm}} r @{${} = {}$} l} 
+    \toprule 
+    %
+    $\ope{\phi1}$ & $(D_\mu\phi)^\dagger \, (\phi\,\phi^\dagger) \, (D^\mu\phi)$  &
+    $\ope{GG}$ & $(\phisq)\,G^a_{\mu\nu}\,G^{\mu\nu\, a}$ \\
+    %
+    $\ope{\phi2}$ & $\dfrac{1}{2}\partial^\mu(\phisq)\,\partial_\mu(\phisq)$ &
+    $\ope{BB}$ & $-\dfrac{g'^2}{4}(\phisq)\,B_{\mu\nu}\,B^{\mu\nu}$ \\
+    %
+    $\ope{\phi3}$ & $\dfrac{1}{3}(\phisq)^3$ &
+    $\ope{WW}$ & $-\dfrac{g^2}{4}(\phisq)\,W^k_{\mu\nu}\,W^{\mu\nu\, k}$ \\
+    %
+    $\ope{\phi4}$  & $(\phisq) \, (D_\mu \phi)^\dagger (D^\mu \phi)$ &
+    $\ope{BW}$ & $-\dfrac{g\,g'}{4}(\phi^\dagger\sigma^k\phi)\,B_{\mu\nu}\,W^{\mu\nu\, k}$ \\
+    %
+    \multicolumn{2}{c}{\quad} &
+    $\ope{B} $ & $\dfrac{\im g}{2}(D^\mu\phi^\dagger)(D^\nu\phi)\,B_{\mu\nu}$ \\
+    %
+    \multicolumn{2}{c}{\quad} &
+    $\ope{W}$ & $\dfrac{\im g}{2}(D^\mu\phi^\dagger)\sigma^k( D^\nu\phi)\,W_{\mu\nu}^k$ \\
+    %
+    \bottomrule
+  \end{tabular}
+  \caption[Bosonic $CP$-even dimension-6 operators.]{Bosonic $CP$-conserving
+    dimension-6 operators relevant for Higgs physics.}
+  \label{tbl:foundations_operators_bosonic_CPeven}
+\end{table}
+
+\begin{table}
+  \renewcommand{\arraystretch}{1.8}
+  \begin{tabular*}{\textwidth}{r @{${} = {}$} l @{\hspace{0.8cm}} r @{${} = {}$} l @{\hspace{0.8cm}} r @{${} = {}$} l} 
+    \toprule 
+    %
+    $\ope{\ell}$ & $(\phisq) \, L_L \phi \, \ell_{R} $ &
+    $\ope{\phi L}^{(1)}$ & $\im (\phi^\dagger \overleftrightarrow{D}_\mu \phi) (\overbar{L}_L \gamma^\mu L_L)$ &
+    $\ope{\phi L}^{(3)}$ & $\im (\phi^\dagger \overleftrightarrow{D}_\mu^a \phi) (\overbar{L}_L \gamma^\mu \sigma_a L_L)$ \\
+    %
+    $\ope{u}$ & $(\phisq) \, Q_L \tilde \phi \, u_{R} $ &
+    $\ope{\phi Q}^{(1)}$ & $\im (\phi^\dagger \overleftrightarrow{D}_\mu \phi) (\overbar{Q}_L \gamma^\mu Q_L)$ &
+    $\ope{\phi Q}^{(3)}$ & $\im (\phi^\dagger \overleftrightarrow{D}_\mu^a \phi) (\overbar{Q}_L \gamma^\mu \sigma_a Q_L)$ \\
+    %
+    $\ope{d}$ & $(\phisq) \,  Q_L \phi \, d_{R} $ &
+    $\ope{\phi \ell}^{(1)}$ & $\im (\phi^\dagger \overleftrightarrow{D}_\mu \phi) (\overbar{\ell}_R \gamma^\mu \ell_R)$ \\
+    %
+    \multicolumn{2}{c}{\quad} &
+    $\ope{\phi u}^{(1)}$ & $\im (\phi^\dagger \overleftrightarrow{D}_\mu \phi) (\overbar{u}_R \gamma^\mu u_R)$ \\
+    %
+    \multicolumn{2}{c}{\quad} &
+    $\ope{\phi d}^{(1)}$ & $\im (\phi^\dagger \overleftrightarrow{D}_\mu \phi) (\overbar{d}_R \gamma^\mu d_R)$ \\
+    %
+    \multicolumn{2}{c}{\quad} &
+    $\ope{\phi ud}^{(1)}$ & $\im (\phi^\dagger \overleftrightarrow{D}_\mu \phi) (\overbar{u}_R \gamma^\mu d_R)$ \\
+    %
+    \bottomrule
+  \end{tabular*}
+  \caption[$CP$-even dimension-6 operators affecting the Higgs-fermion couplings.]
+  {$CP$-conserving dimension-6 operators relevant for the Higgs-fermion
+    couplings. For readability, flavour indices and Hermitian conjugation are omitted.}
+  \label{tbl:foundations_operators_fermionic_CPeven}
+\end{table}
+
+In Table~\ref{tbl:foundations_operators_bosonic_CPeven} we list
+bosonic $CP$-conserving dimension-6 operators that affect Higgs
+physics.  The dimension-six operators modifying the Higgs-fermion
+interactions are given in
+Table~\ref{tbl:foundations_operators_fermionic_CPeven}~\cite{Corbett:2012ja,
+  Corbett_thesis}.  Here we use the conventions
 %
-\comment{To here}
-
-On the one hand, note that the object $\phi^\dagger \phi$ is a scalar
-gauge singlet. We can simply attach it to any dimension-4 operator of
-the SM to get a dimension-6 operator of our EFT:\footnote{$\ope{f}$
-  looks slightly different for up-type quarks, just as in the SM
-  Yukawa couplings.}
+\begin{equation}
+  \phi^\dagger \overleftrightarrow{D}_\mu \phi \equiv \phi^\dagger D_\mu \phi - (D_\mu \phi)^\dagger \phi
+ \quad \text{and} \quad 
+  \phi^\dagger \overleftrightarrow{D}_\mu^a \phi \equiv \phi^\dagger \sigma^a D_\mu \phi - (D_\mu \phi)^\dagger \sigma^a \phi \,.
+\end{equation}
 %
-\begin{align}
-  \label{eq:foundations_Ophi3_def}
-  \ope{\phi3}  &=  \frac{1}{3} (\phisq)^3 \,, \\
-  \ope{\phi4}  &= (\phisq) \, (D_\mu \phi)^\dagger (D^\mu \phi)\,, \\
-  \ope{GG}  &=  (\phisq) \, G^a_{\mu\nu} \, G^{\mu\nu\, a} \,, \\
-  \ope{BB}  &= -\frac{g'^2}{4}  \,  (\phisq) \, B_{\mu\nu} \, B^{\mu\nu} \,, \\
-  \ope{WW}  &= -\frac{g^2}{4} \, (\phisq) \, W^k_{\mu\nu} \, W^{\mu\nu\, k} \,, \\
-  \ope{f} &= (\phisq) \, \bar{F}_{L} \phi f_R  + \text{h.\,c.} \,.
-\end{align}
-
-Other operators have more complicated structures, often involving
-derivatives:
+Finally, in Table~\ref{tbl:foundations_operators_dipole} we
+list the ``dipole operators'' made of Higgs fields, gauge bosons, and
+fermions.
 %
-\begin{align}
-  \ope{\phi1}  &= (D_\mu\phi)^\dagger\phi \; \phi^\dagger (D^\mu\phi) \,, \\
-  \ope{\phi2}  &= \frac{1}{2} \, \partial^\mu(\phi^\dagger\phi) \, \partial_\mu(\phi^\dagger\phi) \,, \\ 
-  \ope{BW}  &= -\frac{g\,g'}{4}  \, (\phi^\dagger\sigma^k\phi)\, B_{\mu\nu}\,W^{\mu\nu\, k} \,, \\
-  \ope{B}  &= \im \frac{g}{2} \, (D^\mu\phi^\dagger) (D^\nu\phi) \, B_{\mu\nu} \,, \\
-  \ope{W}  &= \im \frac{g}{2} \, (D^\mu\phi)^\dagger \sigma^k ( D^\nu\phi) \, W_{\mu\nu}^k \,.
-  \label{eq:foundations_OW_def}
-\end{align}
+\comment{To here.}
 
-For a complete list of operators, see\dots
+\begin{table}
+  \renewcommand{\arraystretch}{1.8}
+  \begin{tabular*}{\textwidth}{r @{${} = {}$} l @{\hspace{0.8cm}} r @{${} = {}$} l @{\hspace{0.8cm}} r @{${} = {}$} l} 
+    \toprule 
+    %
+    $\ope{u W}$ & $(\overbar{Q}_L \sigma^{\mu \nu} u_R ) \sigma^a \tilde{\phi} W^a_{\mu\nu}$ &
+    $\ope{u B}$ & $(\overbar{Q}_L \sigma^{\mu \nu} u_R ) \tilde{\phi} B_{\mu\nu}$ &
+    $\ope{u G}$ & $(\overbar{Q}_L \sigma^{\mu \nu} T^a u_R ) \tilde{\phi} G^a_{\mu\nu}$ \\
+    % 
+    $\ope{d W}$ & $(\overbar{Q}_L \sigma^{\mu \nu} d_R ) \sigma^a \phi W^a_{\mu\nu}$ &
+    $\ope{d B}$ & $(\overbar{Q}_L \sigma^{\mu \nu} d_R ) \phi B_{\mu\nu}$ &
+    $\ope{d G}$ & $(\overbar{Q}_L \sigma^{\mu \nu} T^a d_R ) \phi G^a_{\mu\nu}$ \\
+    % 
+    $\ope{\ell W}$ & $(\overbar{L}_L \sigma^{\mu \nu} \ell_R ) \sigma^a \phi W^a_{\mu\nu}$ &
+    $\ope{\ell B}$ & $(\overbar{L}_L \sigma^{\mu \nu} \ell_R ) \phi B_{\mu\nu}$ \\
+    %
+    \bottomrule
+  \end{tabular*}
+  \caption[Dipole operators.]
+  {Dipole operators affecting the Higgs-gauge-fermion
+    couplings. For readability, flavour indices are omitted.}
+  \label{tbl:foundations_operators_dipole}
+\end{table}
 
-Operator mixing
+These operators can be separated into two groups: first, since
+$\phi^\dagger \phi$ is a scalar gauge singlet, it can be attached it
+to any dimension-4 operator of the SM to form a dimension-6
+operator. Second, additional (covariant) derivatives allow for new
+structures very different from the SM vertices.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{$CP$-odd operators}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Operator mixing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -2147,7 +2263,8 @@ global fit.
   \centering
   \includegraphicsdummy[width=0.49\textwidth]{fig/general/dim6demo1.pdf}
   \includegraphicsdummy[width=0.49\textwidth]{fig/general/dim6demo2.pdf}
-  \caption{Distribution of the $Zh$ invariant mass in the
+  \caption[Momentum dependence from dimension-6 operator on $Zh$
+  production]{Distribution of the $Zh$ invariant mass in the
     Higgs-strahlung process $pp \to Zh$ at LHC conditions. The
     contribution from the dimension-6 operator $\ope{W}$ is enhanced
     at larger momentum transfer compared to the SM amplitudes. The
@@ -2155,7 +2272,7 @@ global fit.
     destructive (right).  Note that this plot is based on a different
     operator basis, which is why the operator $\ope{W}$ used in this
     plot is closely related, but not identical to that defined in
-    Eq.~\eqref{eq:foundations_OW_def}.}
+    Table~\ref{tbl:foundations_operators_bosonic_CPeven}.}
   \label{fig:OW_Zh_demo}
 \end{figure}
 %-----------------------------------------------------------
