@@ -64,8 +64,13 @@ In the Standard Model, the Higgs field appears as an $SU(2)$ doublet $\phi$ as
 \end{multline}
 %
 with
-$D_\mu \phi = \left( \partial_\mu + \im g \frac {\tau^i} 2 W^i_\mu +
-  \im \frac {g'} 2 B_\mu \right) \phi $
+%
+\begin{equation}
+  D_\mu \phi = \left( \partial_\mu - \im g \frac {\sigma^a} 2 W^a_\mu
+    - \im \frac {g'} 2 B_\mu \right) \phi
+  \label{eq:foundations_covariant_derivative}
+\end{equation}
+%
 and $\tilde{\phi} = \im \tau_2 \phi^*$. For $\mu^2 < 0$, the Higgs
 doublet develops a non-zero vacuum expectation value (vev)
 %
@@ -437,7 +442,7 @@ corrections of the order of the largest scale in the theory. If the SM
 is valid all the way to the Planck scale, severe fine-tuning between
 the bare parameter and these quantum corrections is necessary to keep
 the electroweak mass scale at the observed value. Note that this
-argument interchangably applies to the mass parameter of the Higgs
+argument interchangeably applies to the mass parameter of the Higgs
 doublet $\mu^2$, the physical Higgs mass $m_h$, or the electroweak vev
 $v$. Since the strength of the weak force is suppressed by powers of
 $m_W \sim v$, and the gravitational force by the Planck scale, the
@@ -490,7 +495,7 @@ the quartic coupling $\lambda$ to higher energies. Current
 results~\cite{Degrassi:2012ry} indicate that indeed the quartic
 coupling becomes negative at large energies, leading to a second
 vacuum with lower energy at much larger values of $\phi$. Fortunately
-for us, the tunneling probability is very small, and in the SM ``our''
+for us, the tunnelling probability is very small, and in the SM ``our''
 vacuum with $v \approx 246~\gev$ seems to be metastable with a
 lifetime longer than the age of the universe. While this indicates
 there is no pressing need for physics below the Planck scale to save
@@ -1450,7 +1455,7 @@ The second term is
 where derivatives in the denominator are defined as Green's
 functions. Since $\tr \log \left( \partial^2 + M^2 \right) $ is just a
 constant that can be calculated for instance in dimensional
-regularization, the first part does not give us any higher-dimensional
+regularisation, the first part does not give us any higher-dimensional
 operators of the light fields $\phi$. Expanding the logarithm in the
 second term, we find
 %
@@ -1582,7 +1587,7 @@ At first glance, this is disappointing: this effective action looks
 non-local and involves highly non-trivial integrals. It turns out that
 these can in fact be calculated and give a finite
 result~\cite{tHooft:1978jhc, Denner:1991kt}. The full expression is
-extremly ugly. \comment{Just like the dear proof
+extremely ugly. \comment{Just like the dear proof
   reader\dots} Fortunately, we do not need it. Instead, we expand the
 integrand in powers of $1/M^2$. We will only calculate the leading
 term at $\ord{1/M^2}$. We will show that it produces a finite result
@@ -1599,19 +1604,19 @@ all higher orders therefore have to vanish.
 result
 %
 \begin{align}
-  \seff &\supset \frac {\lambda_2^3} {192 \pi^2 \,M^2 } 
+  \seff &\supset \frac {\lambda_2^3} {384 \pi^2 \,M^2 } 
     \intfourx \!\! \intfoury \!\! \intfourz 
     \phi(x)^2 \phi(y)^2 \phi(z)^2
     \intfourp \!\! \intfourq  e^{\im p (z-x)} e^{\im q (y-z)}  \notag\\
         &\phantom{\supset} \qqqquad \qqqquad \qqqquad + \ord{1/M^4} \notag \\
   %
-  &\supset \frac {\lambda_2^3} {192 \pi^2 M^2 } 
+  &\supset \frac {\lambda_2^3} {384 \pi^2 M^2 } 
     \intfourx \!\! \intfoury \!\! \intfourz
     \phi(x)^2 \phi(y)^2 \phi(z)^2 \,
     \delta (z-x) 
     \delta (y-z) \notag \\
   %
-  &\supset \frac {\lambda_2^3} {192 \pi^2 M^2 } 
+  &\supset \frac {\lambda_2^3} {384 \pi^2 M^2 } 
     \intfourx
     \phi(x)^6 \,.
     \label{eq:foundations_scalar_example_effective_action_loop_part}
@@ -1636,7 +1641,7 @@ up to one loop and $\ord{1/M^2}$ the full effective action is given by
 \begin{equation}
   \seff[\phi] = \intfourx \left[\frac 1 2 \partial_\mu \phi \partial^\mu \phi
     - \frac {m^2} 2 \phi^2 - \frac {\lambda_0} {4!} \phi^4
-    + \frac {\lambda_2^3} {192 \pi^2 M^2 } \, \phi^6\right] \,.
+    + \frac {\lambda_2^3} {384 \pi^2 M^2 } \, \phi^6\right] \,.
 \end{equation}
 %
 As expected, the dimension-6 operator is suppressed by two powers of
@@ -1822,7 +1827,7 @@ thesis. We will first argue why such an effective theory is very
 useful, and then construct its effective operators following the
 recipe laid out in
 Section~\ref{sec:foundations_eft_bottom_up}. Section~\ref{sec:foundations_heft_pheno}
-will take a clsoer look at the phenomenology of these
+will take a closer look at the phenomenology of these
 operators. Finally, in Section~\ref{sec:foundations_heft_alternatives}
 we briefly discuss a few alternative frameworks.
 
@@ -1943,8 +1948,20 @@ addition to the ``Warsaw'' basis~\cite{Grzadkowski:2010es}, there is
 the SILH convention~\cite{Giudice:2007fh} and the HISZ
 basis~\cite{Hagiwara:1993ck}. For a comparison of and conversion
 between these bases see Ref.~\cite{Falkowski:2015wza}\comment{More
-  references?}. Throughout this thesis we stick to the HISZ basis. 
+  references?}. Throughout this thesis we use the basis developed
+in~Refs.~\cite{Corbett:2012ja, Corbett_thesis}, which is strongly based
+on the HISZ basis and now widely used in global
+fits~\cite{Corbett:2015ksa, Butter:2016cvz}.
 
+$CP$ transformations, the combination of charge conjugation and parity
+inversion, are an approximate symmetry of the SM that is only violated
+by the complex phase of the CKM matrix. In addition, there are rather
+tight bounds on $CP$ violation in many processes. This motivates many
+analyses to restrict their set of operators to the $CP$-conserving
+ones. On the other hand, new sources of $CP$ violation are needed to
+explain the matter-antimatter asymmetry in the universe, and their
+effects at low energies would be visible as $CP$-violating effective
+operators. Both types of operators will be analysed in this thesis.
 
 
 
@@ -1954,7 +1971,7 @@ between these bases see Ref.~\cite{Falkowski:2015wza}\comment{More
 
 \begin{table}
   \renewcommand{\arraystretch}{1.8}
-  \begin{tabular}{r @{${} = {}$} l @{\hspace*{2cm}} r @{${} = {}$} l} 
+  \begin{tabular}{r @{${} = {}$} l @{\hspace*{0.8cm}} r @{${} = {}$} l } 
     \toprule 
     %
     $\ope{\phi1}$ & $(D_\mu\phi)^\dagger \, (\phi\,\phi^\dagger) \, (D^\mu\phi)$  &
@@ -1977,9 +1994,9 @@ between these bases see Ref.~\cite{Falkowski:2015wza}\comment{More
     %
     \bottomrule
   \end{tabular}
-  \caption[Bosonic $CP$-even dimension-6 operators.]{Bosonic $CP$-conserving
+  \caption[$CP$-even bosonic operators]{Bosonic $CP$-conserving
     dimension-6 operators relevant for Higgs physics.}
-  \label{tbl:foundations_operators_bosonic_CPeven}
+  \label{tbl:foundations_operators_bosonic_even}
 \end{table}
 
 \begin{table}
@@ -2009,30 +2026,11 @@ between these bases see Ref.~\cite{Falkowski:2015wza}\comment{More
     %
     \bottomrule
   \end{tabular*}
-  \caption[$CP$-even dimension-6 operators affecting the Higgs-fermion couplings.]
+  \caption[$CP$-even Higgs-fermion operators]
   {$CP$-conserving dimension-6 operators relevant for the Higgs-fermion
     couplings. For readability, flavour indices and Hermitian conjugation are omitted.}
-  \label{tbl:foundations_operators_fermionic_CPeven}
+  \label{tbl:foundations_operators_fermionic_even}
 \end{table}
-
-In Table~\ref{tbl:foundations_operators_bosonic_CPeven} we list
-bosonic $CP$-conserving dimension-6 operators that affect Higgs
-physics.  The dimension-six operators modifying the Higgs-fermion
-interactions are given in
-Table~\ref{tbl:foundations_operators_fermionic_CPeven}~\cite{Corbett:2012ja,
-  Corbett_thesis}.  Here we use the conventions
-%
-\begin{equation}
-  \phi^\dagger \overleftrightarrow{D}_\mu \phi \equiv \phi^\dagger D_\mu \phi - (D_\mu \phi)^\dagger \phi
- \quad \text{and} \quad 
-  \phi^\dagger \overleftrightarrow{D}_\mu^a \phi \equiv \phi^\dagger \sigma^a D_\mu \phi - (D_\mu \phi)^\dagger \sigma^a \phi \,.
-\end{equation}
-%
-Finally, in Table~\ref{tbl:foundations_operators_dipole} we
-list the ``dipole operators'' made of Higgs fields, gauge bosons, and
-fermions.
-%
-\comment{To here.}
 
 \begin{table}
   \renewcommand{\arraystretch}{1.8}
@@ -2052,17 +2050,34 @@ fermions.
     %
     \bottomrule
   \end{tabular*}
-  \caption[Dipole operators.]
+  \caption[Dipole operators]
   {Dipole operators affecting the Higgs-gauge-fermion
-    couplings. For readability, flavour indices are omitted.}
+    couplings. For readability, flavour indices and Hermitian conjugation are omitted.}
   \label{tbl:foundations_operators_dipole}
 \end{table}
 
-These operators can be separated into two groups: first, since
-$\phi^\dagger \phi$ is a scalar gauge singlet, it can be attached it
-to any dimension-4 operator of the SM to form a dimension-6
-operator. Second, additional (covariant) derivatives allow for new
-structures very different from the SM vertices.
+We begin with the $CP$-conserving dimension-six operators relevant for
+Higgs physics, following~\cite{Corbett:2012ja, Corbett_thesis}.  In
+Table~\ref{tbl:foundations_operators_bosonic_even} we list the bosonic
+ones, Table~\ref{tbl:foundations_operators_fermionic_even} gives the
+Higgs-fermion operators, and the ``dipole operators'' made of Higgs
+fields, gauge bosons, and fermions are listed in
+Table~\ref{tbl:foundations_operators_dipole}. We use the convention
+for the sign in the covariant derivative given in
+Eq.~\eqref{eq:foundations_covariant_derivative}, $T^a$ are the $SU(3)$
+generators, and
+%
+\begin{equation}
+  \phi^\dagger \overleftrightarrow{D}_\mu \phi \equiv \phi^\dagger D_\mu \phi - (D_\mu \phi)^\dagger \phi
+ \quad \text{and} \quad 
+  \phi^\dagger \overleftrightarrow{D}_\mu^a \phi \equiv \phi^\dagger \sigma^a D_\mu \phi - (D_\mu \phi)^\dagger \sigma^a \phi \,.
+\end{equation}
+
+% These operators can be separated into two groups: first, since
+% $\phi^\dagger \phi$ is a scalar gauge singlet, it can be attached it
+% to any dimension-4 operator of the SM to form a dimension-6
+% operator. Second, additional (covariant) derivatives allow for new
+% structures very different from the SM vertices.
 
 
 
@@ -2071,7 +2086,45 @@ structures very different from the SM vertices.
 \subsubsection{$CP$-odd operators}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{table}
+  \renewcommand{\arraystretch}{1.8}
+  \begin{tabular}{r @{${} = {}$} l @{\hspace*{0.8cm}} r @{${} = {}$} l} 
+    \toprule 
+    %
+    $\ope{G\widetilde{G}}$ & $(\phisq)\,G^a_{\mu\nu}\,\widetilde{G}^{\mu\nu\, a}$ &
+    $\ope{\widetilde{B}} $ & $\dfrac{\im g}{2}(D^\mu\phi^\dagger)(D^\nu\phi)\,\widetilde{B}_{\mu\nu}$ \\
+    %
+    $\ope{B\widetilde{B}}$ & $-\dfrac{g'^2}{4}(\phisq)\,B_{\mu\nu}\,\widetilde{B}^{\mu\nu}$ &
+    $\ope{\text{need a name}} $ & $(\phi^\dagger \overleftrightarrow{D^2} \phi ) (\phisq)$ \\
+    %
+    $\ope{W\widetilde{W}}$ & $-\dfrac{g^2}{4}(\phisq)\,W^k_{\mu\nu}\,\widetilde{W}^{\mu\nu\, k}$ &
+    $\ope{\text{another name}} $ & $g' \widetilde{B}_{\mu\nu} \left[ (\phi^\dagger \overleftrightarrow{D^2} \phi ) + 2 (D_\rho \phi )^\dagger D_\sigma \phi \right] $ \\
+    %
+    $\ope{B\widetilde{W}}$ & $-\dfrac{g\,g'}{4}(\phi^\dagger\sigma^k\phi)\,B_{\mu\nu}\,\widetilde{W}^{\mu\nu\, k}$ &
+    $\ope{\text{and one more}} $ & $g \widetilde{W}_{\mu\nu} \left[ (\phi^\dagger \sigma_a \overleftrightarrow{D^2} \phi ) + 2 (D_\rho \phi )^\dagger \sigma_a D_\sigma \phi \right] $ \\
+    %
+    \bottomrule
+  \end{tabular}
+  \caption[$CP$-odd bosonic operators]{Bosonic $CP$-violating
+    dimension-6 operators relevant for Higgs physics. The dual field strengths are defined in Eq.~\eqref{eq:foundations_dual_field_strengths}.}
+  \label{tbl:foundations_operators_bosonic_odd}
+\end{table}
 
+In addition to these $CP$-conserving structures, there are a number of
+$CP$-violating operators. We only list the bosonic operators relevant
+for Higgs physics~\cite{Gavela:2014vra, Hankele:2006ma}, see
+Table~\ref{tbl:foundations_operators_bosonic_odd}. They involve the
+dual field strength tensors 
+%
+\comment{Why is
+  $(\phi^\dagger \overleftrightarrow{D^2} \phi ) (\phisq)$ $CP$-odd?
+  The Warsaw paper seems to disagree\dots} \comment{To here}
+%
+\begin{equation}
+  \widetilde{V}_{\mu \nu} = \frac 1 2 \varepsilon_{\mu \nu \rho \sigma} V^{\mu\nu} \,, \quad
+  V = B,W,G \,.
+  \label{eq:foundations_dual_field_strengths}
+\end{equation}
 
 
 
@@ -2272,7 +2325,7 @@ global fit.
     destructive (right).  Note that this plot is based on a different
     operator basis, which is why the operator $\ope{W}$ used in this
     plot is closely related, but not identical to that defined in
-    Table~\ref{tbl:foundations_operators_bosonic_CPeven}.}
+    Table~\ref{tbl:foundations_operators_bosonic_even}.}
   \label{fig:OW_Zh_demo}
 \end{figure}
 %-----------------------------------------------------------
@@ -2345,13 +2398,13 @@ electroweak expansion.
   \url{http://indico.cern.ch/event/477407/contributions/2200060/attachments/1369793/2076900/AM_HiggsCouplings2016.pdf}}
 
 \begin{itemize}
-\item describe; name $\Delta$ and $\kappa$ conventions. Subleties with
+\item describe; name $\Delta$ and $\kappa$ conventions. Subtleties with
   loop effects.
 %
-\item theoretical issues: not gauge invariant, not renormalizable, not
-  unitary; so proabbly should not calculate electroweak loop
+\item theoretical issues: not gauge invariant, not renormalisable, not
+  unitary; so probably should not calculate electroweak loop
   corrections (QCD is fine). However, can be linked to UV-complete
-  models such as 2HDM, cite David and Tilman
+  models such as 2HDMI, cite David and Til man
 %
 \item practical perspective: can describe changed SM-like couplings,
   but not new structures. Often, but not always translates to rate vs
@@ -2372,7 +2425,7 @@ electroweak expansion.
 %
 \item can describe distributions
 %
-\item conceptionally, closer to experiment and farther away from theory than EFT
+\item conceptually, closer to experiment and farther away from theory than EFT
 %
 \item lacks theoretical foundation of EFT, and something else why it's terrible
 \end{itemize}
