@@ -1586,17 +1586,18 @@ Collecting all the pieces, we have
 At first glance, this is disappointing: this effective action looks
 non-local and involves highly non-trivial integrals. It turns out that
 these can in fact be calculated and give a finite
-result~\cite{tHooft:1978jhc, Denner:1991kt}. The full expression is
-extremely ugly. \comment{Just like the dear proof
-  reader\dots} Fortunately, we do not need it. Instead, we expand the
-integrand in powers of $1/M^2$. We will only calculate the leading
-term at $\ord{1/M^2}$. We will show that it produces a finite result
-as well, so the rest term at $\ord{1/M^4}$ also has to be finite. Even
-more, we can argue that the rest term at $\ord{1/M^4}$ has to vanish:
-the coefficient at a given order $1/M^k$ in this expansion is an
-integral without any mass scales, and has to lead to a result of mass
-dimension $k-2$. Only $k = 2$ can give a non-zero and finite result,
-all higher orders therefore have to vanish.
+result~\cite{tHooft:1978jhc, Denner:1991kt}. \comment{Check
+  discrepancy with Denner's habil!} The full expression is extremely
+ugly. \comment{Just like the dear proof reader\dots} Fortunately, we
+do not need it. Instead, we expand the integrand in powers of
+$1/M^2$. We will only calculate the leading term at $\ord{1/M^2}$. We
+will show that it produces a finite result as well, so the rest term
+at $\ord{1/M^4}$ also has to be finite. Even more, we can argue that
+the rest term at $\ord{1/M^4}$ has to vanish: the coefficient at a
+given order $1/M^k$ in this expansion is an integral without any mass
+scales, and has to lead to a result of mass dimension $k-2$. Only
+$k = 2$ can give a non-zero and finite result, all higher orders
+therefore have to vanish.
 % Physically, this corresponds to approximating the loop momenta
 % as lighter then the heavy mass scale, which makes sense in the
 % validity region of the EFT.
@@ -1910,12 +1911,12 @@ tells us the mass dimensions of all building blocks:
   [f] = \frac 3 2\,, \quad [V_\mu] = 1 \,, \quad [V_{\mu \nu}] = 2 \,, \quad [\phi] = 1 \,, \quad [\partial_\mu] = 1 \quad \text{and} \quad [D_\mu] = 1 \,.
 \end{equation}
 
-There are no dimension-5 operators,\footnote{After adding right-handed
-  neutrinos to the SM, one can construct the dimension-5 ``Weinberg
-  operator''. It generates a Majorana mass term for the neutrinos, but
-  is entirely irrelevant for the physics we will discuss.} so the
-leading effects in our EFT are expected to come from dimension-6
-operators:
+The only dimension-five operator that can be built from the SM fields
+is the Weinberg operator
+$(\overbar{L}_L \tilde{\phi}* )(\tilde{\phi}^\dagger L_L)$. It
+generates a Majorana mass term for the neutrinos and violates lepton
+number, and is entirely irrelevant for Higgs physics. The leading
+effects in our EFT are expected to come from dimension-6 operators:
 %
 \begin{equation}
   \lgr{EFT} = \lgr{SM} + \sum_i \frac {f_i} {\Lambda^2} \ope{i} + \ord{1/\Lambda^4}
@@ -1925,10 +1926,14 @@ operators:
 with unknown cutoff scale $\Lambda$ and Wilson coefficients $f_i$. For
 convenience, we will from now on drop the higher-order terms.
 
-At this order, there are 59 independent types of operators, not
-counting flavour structures and Hermitian
-conjugation~\cite{Grzadkowski:2010es}. Counting all possible flavour
-structures, there are 2499 distinct operators. Fortunately, in
+As discussed in Section~\ref{sec:foundations_eft_bottom_up}, field
+redefinitions (or, relatedly, equations of motions), Fierz identities
+and integration by parts provide equivalence relations between certain
+operators and give us some freedom to define a basis of
+operators. Taking these into account, there are 59 independent types
+of dimension-six operators, not counting flavour structures and
+Hermitian conjugation~\cite{Grzadkowski:2010es}. Counting all possible
+flavour structures, there are 2499 distinct operators. Fortunately, in
 practice only a small subset of these are relevant: first, the strong
 constraints on flavour-changing neutral currents motivates the
 assumption of flavour-diagonal or even flavour-universal Wilson
@@ -1939,19 +1944,17 @@ leading effects at dimension 6: not counting flavour structures, there
 are $\ord{1000}$ operators at dimension 8 and $\ord{10\,000}$
 dimension-10 operators~\cite{Henning:2015alf}.
 
-As discussed in Section~\ref{sec:foundations_eft_bottom_up}, field
-redefinitions (or, relatedly, equations of motions), Fierz identities
-and integration by parts provide equivalence relations between certain
-operators and give us some freedom to define a basis of
-operators. Three different conventions have become popular: in
-addition to the ``Warsaw'' basis~\cite{Grzadkowski:2010es}, there is
-the SILH convention~\cite{Giudice:2007fh} and the HISZ
+Three different conventions have become popular: in addition to the
+``Warsaw'' basis~\cite{Grzadkowski:2010es}, there is the SILH
+convention~\cite{Giudice:2007fh} and the HISZ
 basis~\cite{Hagiwara:1993ck}. For a comparison of and conversion
 between these bases see Ref.~\cite{Falkowski:2015wza}\comment{More
   references?}. Throughout this thesis we use the basis developed
-in~Refs.~\cite{Corbett:2012ja, Corbett_thesis}, which is strongly based
-on the HISZ basis and now widely used in global
-fits~\cite{Corbett:2015ksa, Butter:2016cvz}.
+in~Refs.~\cite{Corbett:2012ja, Corbett_thesis}, which is strongly
+based on the HISZ basis and now widely used in global
+fits~\cite{Corbett:2015ksa, Butter:2016cvz}. We will begin with a
+slightly redundant list of operators and then discuss which of them
+can be eliminated by field redefinitions.
 
 $CP$ transformations, the combination of charge conjugation and parity
 inversion, are an approximate symmetry of the SM that is only violated
@@ -1966,7 +1969,7 @@ operators. Both types of operators will be analysed in this thesis.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{$CP$-even operators}
+\subsubsection{$CP$-even Higgs operators}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}
@@ -1994,7 +1997,7 @@ operators. Both types of operators will be analysed in this thesis.
     %
     \bottomrule
   \end{tabular}
-  \caption[$CP$-even bosonic operators]{Bosonic $CP$-conserving
+  \caption[$CP$-even Higgs and Higgs-gauge operators]{Bosonic $CP$-conserving
     dimension-6 operators relevant for Higgs physics.}
   \label{tbl:foundations_operators_bosonic_even}
 \end{table}
@@ -2057,7 +2060,7 @@ operators. Both types of operators will be analysed in this thesis.
 \end{table}
 
 We begin with the $CP$-conserving dimension-six operators relevant for
-Higgs physics, following~\cite{Corbett:2012ja, Corbett_thesis}.  In
+Higgs physics, following Refs.~\cite{Corbett:2012ja, Corbett_thesis}.  In
 Table~\ref{tbl:foundations_operators_bosonic_even} we list the bosonic
 ones, Table~\ref{tbl:foundations_operators_fermionic_even} gives the
 Higgs-fermion operators, and the ``dipole operators'' made of Higgs
@@ -2083,7 +2086,7 @@ generators, and
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{$CP$-odd operators}
+\subsubsection{$CP$-odd Higgs operators}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}
@@ -2105,7 +2108,7 @@ generators, and
     %
     \bottomrule
   \end{tabular}
-  \caption[$CP$-odd bosonic operators]{Bosonic $CP$-violating
+  \caption[$CP$-odd Higgs and Higgs-gauge operators]{Bosonic $CP$-violating
     dimension-6 operators relevant for Higgs physics. The dual field strengths are defined in Eq.~\eqref{eq:foundations_dual_field_strengths}.}
   \label{tbl:foundations_operators_bosonic_odd}
 \end{table}
@@ -2116,8 +2119,7 @@ for Higgs physics~\cite{Gavela:2014vra, Hankele:2006ma}, see
 Table~\ref{tbl:foundations_operators_bosonic_odd}. They involve the
 dual field strength tensors 
 %
-\comment{Why is
-  $(\phi^\dagger \overleftrightarrow{D^2} \phi ) (\phisq)$ $CP$-odd?
+\comment{Pick CPV operators following Warsaw paper?
   The Warsaw paper seems to disagree\dots} \comment{To here}
 %
 \begin{equation}
@@ -2125,6 +2127,74 @@ dual field strength tensors
   V = B,W,G \,.
   \label{eq:foundations_dual_field_strengths}
 \end{equation}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Other operators}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}
+  \renewcommand{\arraystretch}{1.8}
+  \begin{tabular}{r @{${} = {}$} l @{\hspace*{0.8cm}} r @{${} = {}$} l} 
+    \toprule 
+    %
+    $\ope{WWW}$ & $\im \varepsilon^{abc} W_{\,\mu}^{a\, \nu} W_{\,\nu}^{b\, \rho} W_{\,\rho}^{c\, \mu}$ &
+    $\ope{WW\widetilde{W}}$ & $\im \varepsilon^{abc} W_{\,\mu}^{a\, \nu} W_{\,\nu}^{b\, \rho} \widetilde{W}_{\,\rho}^{c\, \mu}$ \\
+    %
+    $\ope{GGG}$ & $\im f^{abc} G_{\,\mu}^{a\, \nu} G_{\,\nu}^{b\, \rho} G_{\,\rho}^{c\, \mu}$ &
+    $\ope{GG\widetilde{G}}$ & $\im f^{abc} G_{\,\mu}^{a\, \nu} G_{\,\nu}^{b\, \rho} \widetilde{G}_{\,\rho}^{c\, \mu}$ \\
+    % 
+    %$\ope{DB}$ & $(\partial^\mu B_{\mu\nu}) (\partial_\rho B^{\rho \nu})$\\
+    %$\ope{DW}$ & $(D^\mu W_{\mu\nu})^i (D_\rho W^{\rho \nu})^i$\\
+    %$\ope{DG}$ & $(D^\mu G_{\mu\nu})^i (D_\rho G^{\rho \nu})^i$\\
+    % 
+    \bottomrule
+  \end{tabular}
+  \caption[Pure gauge operators]{Dimension-6 operators made only of gauge fields.}
+  \label{tbl:foundations_operators_pure_gauge}
+\end{table}
+
+\begin{table}
+  \renewcommand{\arraystretch}{1.8}
+  \begin{tabular}{r @{${} = {}$} l @{\hspace*{0.8cm}} r @{${} = {}$} l} 
+    \toprule 
+    %
+    $\ope{}$ & $\dots$ \\
+    %
+    \bottomrule
+  \end{tabular}
+  \caption[Four-fermion operators]{Dimension-6 four-fermion operators, omitting flavour indices.}
+  \label{tbl:foundations_operators_four_fermion}
+\end{table}
+
+For the sake of completeness, we finally list the operators not
+containing Higgs fields as well, following Refs.~\ref{Corbett_thesis,
+  Grzadkowski:2010es}. Table~\ref{tbl:foundations_operators_pure_gauge}
+shows the operators made from gauge fields and covariant derivatives, where
+%
+\begin{equation}
+  (D^\mu W_{\mu\nu})^a \equiv \partial^\mu W^a_{\mu\nu} - g \varepsilon^{abc} W^b_\mu W^c_\nu \,, \quad
+  (D^\mu G_{\mu\nu})^a \equiv \partial^\mu G^a_{\mu\nu} - g_s f^{abc} G^b_\mu G^c_\nu \,.
+\end{equation}
+%
+Finally, Table~\ref{tbl:foundations_operators_four_fermion} offers a
+glimpse into the vast world of four-fermion operators. 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Basis choices}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\dots
+
+Tables~\ref{tbl:foundations_operators_bosonic_even} to
+\ref{tbl:foundations_operators_four_fermion} list \dots different
+operators. After $n$ of them are removed with Eqs.~{} to {}, 59
+independent operators remain~\ref{Grzadkowski:2010es}.
 
 
 
