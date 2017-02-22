@@ -1,0 +1,71 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,
+	oneside,
+	%BCOR=5mm, %binding correction - only for printing
+        openright,
+	cleardoublepage=plain,
+	11pt,
+        DIV=16]{scrreprt}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,british]{babel}
+\usepackage{color,xcolor,graphicx}
+\definecolor{dark-bordeaux}{rgb}{0.35,0.0,0.15}
+\definecolor{dark-grey}{rgb}{0.5,0.5,0.5}
+\definecolor{dark-red}{rgb}{0.8,0.0,0.0}
+\definecolor{dark-blue}{rgb}{0.0,0.0,0.8}
+\definecolor{dark-green}{rgb}{0.,0.65,0.}
+
+% Font
+\usepackage[lf,mathtabular,minionint]{MinionPro} % 2B: lining figures everywhere
+\usepackage[toc,eqno,enum,bib]{tabfigures} % tabular figures in certain environments
+\usepackage[mathlf,mathtabular,sansmath]{MyriadPro}
+\addtokomafont{disposition}{\rmfamily}
+\linespread{1.05}
+
+\usepackage{microtype}
+
+% Title page definitions
+\newcommand{\tptitle}[1]{{\Huge \bfseries \color{white} #1}}
+\newcommand{\tpauthor}[1]{{\LARGE \color{white} #1}}
+\newcommand{\tpsmall}[1]{{\Large \color{white} #1}}
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+  \pagestyle{empty}
+  \pagecolor{dark-bordeaux}
+  \begin{center}
+
+    \vspace*{4cm}
+
+    \tptitle{New Ideas for \\[0.5cm] Effective Higgs Measurements}
+
+    \vspace*{3.5cm}
+
+    \includegraphics[width=0.6\textwidth]{cover_image.png}
+
+    \vspace*{2cm}
+
+    \tpauthor{Dissertation}
+
+    \vspace*{0.5cm}
+
+    \tpauthor{Johann Brehmer}
+
+  \end{center}
+\end{titlepage}
+
+
+
+\end{document}

@@ -1042,6 +1042,7 @@ field is then (after integration by parts)
   \intfourx \lgr{}[\phi] \to \intfourx \lgr{}[\phi']
   % &= \intfourx \left( \lgr{}[\phi] + \varepsilon \fder {\lgr{}} {\phi} f + \varepsilon \fder {\lgr{}} {\partial_\mu \phi} \partial_\mu f + \ord{\varepsilon^2} \right) \notag \\
   = \intfourx \left( \lgr{}[\phi] + \varepsilon \left[ \fder {\lgr{}} {\phi} - \partial_\mu \fder {\lgr{}} {\partial_\mu \phi} \right] f + \ord{\varepsilon^2} \right) \,.
+  \label{eq:foundations_field_redefinitions}
 \end{equation}
 %
 Such a transformation does not change the physics, i.\,e.\ the
@@ -1773,6 +1774,7 @@ in Eq.~\eqref{eq:foundations_action_V_fermions}.
    \begin{equation}
      \lgr{} =  \im  \bar{\psi}_i \gamma^\mu \partial_\mu \psi_i - m_i \bar{\psi}_i \psi_i 
      + \frac {c } {\Lambda^2}  \left( \bar{\psi}_i  (1 - \gamma_5) \gamma_\mu \psi_j \right) \left( \bar{\psi}_k (1 - \gamma_5) \gamma^\mu \psi_l \right) \,.
+     \label{eq:foundations_fermi_theory}
    \end{equation}
    %
    with heavy scale $\Lambda = m_W$ and Wilson coefficient
@@ -1908,7 +1910,8 @@ Simple dimensional analysis of the kinetic terms of the SM fields
 tells us the mass dimensions of all building blocks:
 %
 \begin{equation}
-  [f] = \frac 3 2\,, \quad [V_\mu] = 1 \,, \quad [V_{\mu \nu}] = 2 \,, \quad [\phi] = 1 \,, \quad [\partial_\mu] = 1 \quad \text{and} \quad [D_\mu] = 1 \,.
+  [f] = \frac 3 2\,, \quad [V_\mu] = 1 \,, \quad [V_{\mu \nu}] = 2 \,, \quad
+  [\phi] = 1 \,, \quad [\partial_\mu] = 1 \quad \text{and} \quad [D_\mu] = 1 \,.
 \end{equation}
 
 The only dimension-five operator that can be built from the SM fields
@@ -1945,31 +1948,31 @@ are $\ord{1000}$ operators at dimension 8 and $\ord{10\,000}$
 dimension-10 operators~\cite{Henning:2015alf}.
 
 Three different conventions have become popular: in addition to the
-``Warsaw'' basis~\cite{Grzadkowski:2010es}, there is the SILH
+complete ``Warsaw'' basis~\cite{Grzadkowski:2010es}, there is the SILH
 convention~\cite{Giudice:2007fh} and the HISZ
 basis~\cite{Hagiwara:1993ck}. For a comparison of and conversion
 between these bases see Ref.~\cite{Falkowski:2015wza}\comment{More
   references?}. Throughout this thesis we use the basis developed
 in~Refs.~\cite{Corbett:2012ja, Corbett_thesis}, which is strongly
 based on the HISZ basis and now widely used in global
-fits~\cite{Corbett:2015ksa, Butter:2016cvz}. We will begin with a
-slightly redundant list of operators and then discuss which of them
-can be eliminated by field redefinitions.
+fits~\cite{Corbett:2015ksa, Butter:2016cvz}.
 
-$CP$ transformations, the combination of charge conjugation and parity
-inversion, are an approximate symmetry of the SM that is only violated
-by the complex phase of the CKM matrix. In addition, there are rather
-tight bounds on $CP$ violation in many processes. This motivates many
-analyses to restrict their set of operators to the $CP$-conserving
-ones. On the other hand, new sources of $CP$ violation are needed to
-explain the matter-antimatter asymmetry in the universe, and their
-effects at low energies would be visible as $CP$-violating effective
-operators. Both types of operators will be analysed in this thesis.
+We classify the operators based on their field content and on their
+behaviour under $CP$ transformations. This combined charge conjugation
+and parity inversion is an approximate symmetry of the SM that is only
+violated by the complex phase of the CKM matrix. In addition, there
+are rather tight bounds on $CP$ violation in many processes. This
+motivates many analyses to restrict their set of operators to the
+$CP$-conserving ones. On the other hand, new sources of $CP$ violation
+are needed to explain the matter-antimatter asymmetry in the universe,
+and their effects at low energies could be visible as $CP$-violating
+effective operators. Both types of operators will be analysed in this
+thesis.
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{$CP$-even Higgs operators}
+\subsubsection{Operator basis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}
@@ -2060,11 +2063,11 @@ operators. Both types of operators will be analysed in this thesis.
 \end{table}
 
 We begin with the $CP$-conserving dimension-six operators relevant for
-Higgs physics, following Refs.~\cite{Corbett:2012ja, Corbett_thesis}.  In
-Table~\ref{tbl:foundations_operators_bosonic_even} we list the bosonic
-ones, Table~\ref{tbl:foundations_operators_fermionic_even} gives the
-Higgs-fermion operators, and the ``dipole operators'' made of Higgs
-fields, gauge bosons, and fermions are listed in
+Higgs physics, following Refs.~\cite{Corbett:2012ja, Corbett_thesis}.
+In Table~\ref{tbl:foundations_operators_bosonic_even} we list the
+bosonic ones, Table~\ref{tbl:foundations_operators_fermionic_even}
+gives the Higgs-fermion operators, and the ``dipole operators'' made
+of Higgs fields, gauge bosons, and fermions are listed in
 Table~\ref{tbl:foundations_operators_dipole}. We use the convention
 for the sign in the covariant derivative given in
 Eq.~\eqref{eq:foundations_covariant_derivative}, $T^a$ are the $SU(3)$
@@ -2082,13 +2085,6 @@ generators, and
 % operator. Second, additional (covariant) derivatives allow for new
 % structures very different from the SM vertices.
 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{$CP$-odd Higgs operators}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{table}
   \renewcommand{\arraystretch}{1.8}
   \begin{tabular}{r @{${} = {}$} l @{\hspace*{0.8cm}} r @{${} = {}$} l} 
@@ -2098,13 +2094,13 @@ generators, and
     $\ope{\widetilde{B}} $ & $\dfrac{\im g}{2}(D^\mu\phi^\dagger)(D^\nu\phi)\,\widetilde{B}_{\mu\nu}$ \\
     %
     $\ope{B\widetilde{B}}$ & $-\dfrac{g'^2}{4}(\phisq)\,B_{\mu\nu}\,\widetilde{B}^{\mu\nu}$ &
-    $\ope{\text{need a name}} $ & $(\phi^\dagger \overleftrightarrow{D^2} \phi ) (\phisq)$ \\
+    $\ope{B\widetilde{W}}$ & $-\dfrac{g\,g'}{4}(\phi^\dagger\sigma^k\phi)\,B_{\mu\nu}\,\widetilde{W}^{\mu\nu\, k}$ \\
     %
-    $\ope{W\widetilde{W}}$ & $-\dfrac{g^2}{4}(\phisq)\,W^k_{\mu\nu}\,\widetilde{W}^{\mu\nu\, k}$ &
-    $\ope{\text{another name}} $ & $g' \widetilde{B}_{\mu\nu} \left[ (\phi^\dagger \overleftrightarrow{D^2} \phi ) + 2 (D_\rho \phi )^\dagger D_\sigma \phi \right] $ \\
+    $\ope{W\widetilde{W}}$ & $-\dfrac{g^2}{4}(\phisq)\,W^k_{\mu\nu}\,\widetilde{W}^{\mu\nu\, k}$ \\
     %
-    $\ope{B\widetilde{W}}$ & $-\dfrac{g\,g'}{4}(\phi^\dagger\sigma^k\phi)\,B_{\mu\nu}\,\widetilde{W}^{\mu\nu\, k}$ &
-    $\ope{\text{and one more}} $ & $g \widetilde{W}_{\mu\nu} \left[ (\phi^\dagger \sigma_a \overleftrightarrow{D^2} \phi ) + 2 (D_\rho \phi )^\dagger \sigma_a D_\sigma \phi \right] $ \\
+    % $\ope{\text{need a name}} $ & $(\phi^\dagger \overleftrightarrow{D^2} \phi ) (\phisq)$ \\
+    % $\ope{\text{another name}} $ & $g' \widetilde{B}_{\mu\nu} \left[ (\phi^\dagger \overleftrightarrow{D^2} \phi ) + 2 (D_\rho \phi )^\dagger D_\sigma \phi \right] $ \\
+    % $\ope{\text{and one more}} $ & $g \widetilde{W}_{\mu\nu} \left[ (\phi^\dagger \sigma_a \overleftrightarrow{D^2} \phi ) + 2 (D_\rho \phi )^\dagger \sigma_a D_\sigma \phi \right] $ \\
     %
     \bottomrule
   \end{tabular}
@@ -2114,13 +2110,10 @@ generators, and
 \end{table}
 
 In addition to these $CP$-conserving structures, there are a number of
-$CP$-violating operators. We only list the bosonic operators relevant
-for Higgs physics~\cite{Gavela:2014vra, Hankele:2006ma}, see
+$CP$-violating operators. Those relevant for Higgs physics are
+bosonic~\cite{Gavela:2014vra, Hankele:2006ma}, see
 Table~\ref{tbl:foundations_operators_bosonic_odd}. They involve the
-dual field strength tensors 
-%
-\comment{Pick CPV operators following Warsaw paper?
-  The Warsaw paper seems to disagree\dots} \comment{To here}
+dual field strength tensors
 %
 \begin{equation}
   \widetilde{V}_{\mu \nu} = \frac 1 2 \varepsilon_{\mu \nu \rho \sigma} V^{\mu\nu} \,, \quad
@@ -2128,73 +2121,142 @@ dual field strength tensors
   \label{eq:foundations_dual_field_strengths}
 \end{equation}
 
+Finally, there are a few pure $CP$-even and $CP$-odd pure gauge
+operators made from field strength tensors and (covariant)
+derivatives, and a large number of four-fermion operators similar to
+the one in Eq.~\eqref{eq:foundations_fermi_theory}, which will not be
+important in this thesis.
 
+% \begin{table}
+%   \renewcommand{\arraystretch}{1.8}
+%   \begin{tabular}{r @{${} = {}$} l @{\hspace*{0.8cm}} r @{${} = {}$} l} 
+%     \toprule 
+%     %
+%     $\ope{WWW}$ & $\im \varepsilon^{abc} W_{\,\mu}^{a\, \nu} W_{\,\nu}^{b\, \rho} W_{\,\rho}^{c\, \mu}$ &
+%     $\ope{WW\widetilde{W}}$ & $\im \varepsilon^{abc} W_{\,\mu}^{a\, \nu} W_{\,\nu}^{b\, \rho} \widetilde{W}_{\,\rho}^{c\, \mu}$ \\
+%     %
+%     $\ope{GGG}$ & $\im f^{abc} G_{\,\mu}^{a\, \nu} G_{\,\nu}^{b\, \rho} G_{\,\rho}^{c\, \mu}$ &
+%     $\ope{GG\widetilde{G}}$ & $\im f^{abc} G_{\,\mu}^{a\, \nu} G_{\,\nu}^{b\, \rho} \widetilde{G}_{\,\rho}^{c\, \mu}$ \\
+%     % 
+%     %$\ope{DB}$ & $(\partial^\mu B_{\mu\nu}) (\partial_\rho B^{\rho \nu})$\\
+%     %$\ope{DW}$ & $(D^\mu W_{\mu\nu})^i (D_\rho W^{\rho \nu})^i$\\
+%     %$\ope{DG}$ & $(D^\mu G_{\mu\nu})^i (D_\rho G^{\rho \nu})^i$\\
+%     % 
+%     \bottomrule
+%   \end{tabular}
+%   \caption[Pure gauge operators]{Dimension-6 operators made only of gauge fields.}
+%   \label{tbl:foundations_operators_pure_gauge}
+% \end{table}
 
+% \begin{table}
+%   \renewcommand{\arraystretch}{1.8}
+%   \begin{tabular}{r @{${} = {}$} l @{\hspace*{0.8cm}} r @{${} = {}$} l} 
+%     \toprule 
+%     %
+%     $\ope{}$ & $\dots$ \\
+%     %
+%     \bottomrule
+%   \end{tabular}
+%   \caption[Four-fermion operators]{Dimension-6 four-fermion operators, omitting flavour indices.}
+%   \label{tbl:foundations_operators_four_fermion}
+% \end{table}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Other operators}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For the sake of completeness, we finally list the operators not
+% containing Higgs fields as well, following Refs.~\ref{Corbett_thesis,
+%   Grzadkowski:2010es}. Table~\ref{tbl:foundations_operators_pure_gauge}
+% shows the operators made from gauge fields and covariant derivatives, where
+% %
+% \begin{equation}
+%   (D^\mu W_{\mu\nu})^a \equiv \partial^\mu W^a_{\mu\nu} - g \varepsilon^{abc} W^b_\mu W^c_\nu \,, \quad
+%   (D^\mu G_{\mu\nu})^a \equiv \partial^\mu G^a_{\mu\nu} - g_s f^{abc} G^b_\mu G^c_\nu \,.
+% \end{equation}
+% %
+% Finally, Table~\ref{tbl:foundations_operators_four_fermion} offers a
+% glimpse into the vast world of four-fermion operators. 
 
-\begin{table}
-  \renewcommand{\arraystretch}{1.8}
-  \begin{tabular}{r @{${} = {}$} l @{\hspace*{0.8cm}} r @{${} = {}$} l} 
-    \toprule 
-    %
-    $\ope{WWW}$ & $\im \varepsilon^{abc} W_{\,\mu}^{a\, \nu} W_{\,\nu}^{b\, \rho} W_{\,\rho}^{c\, \mu}$ &
-    $\ope{WW\widetilde{W}}$ & $\im \varepsilon^{abc} W_{\,\mu}^{a\, \nu} W_{\,\nu}^{b\, \rho} \widetilde{W}_{\,\rho}^{c\, \mu}$ \\
-    %
-    $\ope{GGG}$ & $\im f^{abc} G_{\,\mu}^{a\, \nu} G_{\,\nu}^{b\, \rho} G_{\,\rho}^{c\, \mu}$ &
-    $\ope{GG\widetilde{G}}$ & $\im f^{abc} G_{\,\mu}^{a\, \nu} G_{\,\nu}^{b\, \rho} \widetilde{G}_{\,\rho}^{c\, \mu}$ \\
-    % 
-    %$\ope{DB}$ & $(\partial^\mu B_{\mu\nu}) (\partial_\rho B^{\rho \nu})$\\
-    %$\ope{DW}$ & $(D^\mu W_{\mu\nu})^i (D_\rho W^{\rho \nu})^i$\\
-    %$\ope{DG}$ & $(D^\mu G_{\mu\nu})^i (D_\rho G^{\rho \nu})^i$\\
-    % 
-    \bottomrule
-  \end{tabular}
-  \caption[Pure gauge operators]{Dimension-6 operators made only of gauge fields.}
-  \label{tbl:foundations_operators_pure_gauge}
-\end{table}
+As argued above, not all of these operators are independent.  The
+equations of motions for the Higgs field and the electroweak gauge
+bosons read~\cite{Grzadkowski:2010es}
+%
+\begin{align}
+  D^2 \phi &= - \mu^2 \phi - \frac \lambda 2 (\phisq) \phi - \sum_f y_f \overbar{f}_R f_L + \ord{1/\Lambda^2} \,, \\
+  % (D^\rho G_{\rho \mu})^a &= g_s \left( \overbar{q}_L \gamma_\mu T^a q_L + \overbar{u}_R \gamma_\mu T^a u_R + \overbar{d}_R \gamma_\mu T^a d_R  + \ord{1/\Lambda^2} \,,   \\
+  \partial^\rho B_{\rho \mu} &= - \frac {g'} 2 \left( \im  \phi^\dagger \overleftrightarrow{D}_\mu \phi + \sum_f Y_f \overbar{f} \gamma_\mu f \right) + \ord{1/\Lambda^2} \,, \\
+  (D^\rho W_{\rho \mu})^a &= \frac g 2 \left( \im \phi^\dagger \overleftrightarrow{D}_\mu^a \phi + \overbar{q}_L \gamma_\mu \sigma^a q_L + \overbar{\ell}_L \gamma_\mu \sigma^a \ell_L  \right) + \ord{1/\Lambda^2} \,, 
+\end{align}
+%
+where $Y_f$ are the weak hypercharges of the fermions.  Following
+Eq.~\eqref{eq:foundations_field_redefinitions}, this provides us with
+three equivalence relations between dimension-six
+operators~\cite{Corbett:2012ja, Corbett_thesis}:
+%
+\comment{Check first line.}
+%
+\begin{align}
+  2 \ope{\phi,2} + 2 \ope{\phi,4} + 2 \mu^2 (\phisq)^2 + 3 \lambda \ope{6} &= 2 \sum_f y_f \ope{f} + \ord{1/\Lambda^4}\\
+  2 \ope{B} + \ope{BW} + \ope{BB} + g'^2 \left( \ope{\phi,1} - \frac 1 2 \ope{\phi,2} \right) &= - \frac {g'^2} 2 \sum_f Y_f \ope{\phi f}^{(1)} + \ord{1/\Lambda^4}\\
+  2 \ope{W} + \ope{BW} + \ope{WW} + g^2 \left( \ope{\phi,4} - \frac 1 2 \ope{\phi,2} \right) &= - \frac {g^2} 4 \left( \ope{\phi L}^{(3)} +  \ope{\phi Q}^{(3)} \right) + \ord{1/\Lambda^4}\,.
+\end{align}
+%
+This lets us eliminate three of the operators listed in
+Tables~\ref{tbl:foundations_operators_bosonic_even} to
+\ref{tbl:foundations_operators_bosonic_odd}.
 
-\begin{table}
-  \renewcommand{\arraystretch}{1.8}
-  \begin{tabular}{r @{${} = {}$} l @{\hspace*{0.8cm}} r @{${} = {}$} l} 
-    \toprule 
-    %
-    $\ope{}$ & $\dots$ \\
-    %
-    \bottomrule
-  \end{tabular}
-  \caption[Four-fermion operators]{Dimension-6 four-fermion operators, omitting flavour indices.}
-  \label{tbl:foundations_operators_four_fermion}
-\end{table}
+There are different strategies for picking the operators to keep. In a
+top-down approach, one could choose operators based on the underlying
+physics. In a bottom-up approach, calculations can be simplified if
+the operators are chosen based on their contributions to physical
+observables, for instance to avoid blind directions. Applied to Higgs
+physics, this logic suggests to discard $\ope{\phi L}^{(1)}$,
+$\ope{(3)}$, and $\ope{\phi,4}$~\cite{Corbett:2012ja}.
 
-For the sake of completeness, we finally list the operators not
-containing Higgs fields as well, following Refs.~\ref{Corbett_thesis,
-  Grzadkowski:2010es}. Table~\ref{tbl:foundations_operators_pure_gauge}
-shows the operators made from gauge fields and covariant derivatives, where
+\newparagraph
+%
+Of the remaining operators, some are tightly constrained experimental
+data. Electroweak precision measurements limit the Wilson coefficients
+of $\ope{\phi,1}$, $\ope{BW}$, $\ope{\phi f}^{(1)}$,
+$\ope{\phi f}^{(3)}$, $\ope{B\widetilde{W}}$, and
+$\ope{\widetilde{B}}$ to a level where they are irrelevant for Higgs
+physics. Measurements of electric diple moments put tight constrains
+on the dipole operators. We will ignore all these operators.
+
+Limits on flavour-changing neutral currents tightly constrain
+off-diagonal fermion-Higgs couplings. Also, flavour-diagonal $\ope{f}$
+involving fermions of the first and second generation will be
+irrelevant for many signatures considered in this thesis. We therefore
+only keep the Higgs-fermion operators $\ope{f}$ that couple
+flavour-diagonally to the third generation.
+
+This leaves us with a list of thirteen operators relevant for LHC
+Higgs physics: ten $CP$-even operators,
 %
 \begin{equation}
-  (D^\mu W_{\mu\nu})^a \equiv \partial^\mu W^a_{\mu\nu} - g \varepsilon^{abc} W^b_\mu W^c_\nu \,, \quad
-  (D^\mu G_{\mu\nu})^a \equiv \partial^\mu G^a_{\mu\nu} - g_s f^{abc} G^b_\mu G^c_\nu \,.
+  \ope{\phi,2} \,, \quad 
+  \ope{\phi,3} \,, \quad 
+  \ope{GG} \,, \quad 
+  \ope{BB} \,, \quad 
+  \ope{WW} \,, \quad 
+  \ope{B} \,, \quad 
+  \ope{W} \,, \quad 
+  \ope{\tau} \,, \quad
+  \ope{t} \,, \quad  \text{and} \quad
+  \ope{b} \,;
 \end{equation}
 %
-Finally, Table~\ref{tbl:foundations_operators_four_fermion} offers a
-glimpse into the vast world of four-fermion operators. 
+and three $CP$-odd ones,
+%
+\begin{equation}
+  \ope{G\widetilde{G}} \,, \quad 
+  \ope{B\widetilde{B}} \,, \quad  \text{and} \quad
+  \ope{W\widetilde{W}} \,.
+\end{equation}
+%
+\comment{To here.}
 
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Basis choices}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\dots
-
-Tables~\ref{tbl:foundations_operators_bosonic_even} to
-\ref{tbl:foundations_operators_four_fermion} list \dots different
-operators. After $n$ of them are removed with Eqs.~{} to {}, 59
-independent operators remain~\ref{Grzadkowski:2010es}.
 
 
 

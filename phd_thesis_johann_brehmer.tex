@@ -21,6 +21,12 @@
 %  Front matter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+{
+\renewcommand*{\thepage}{cover.\arabic{page}}
+\includepdf{cover/cover.pdf}
+\cleardoubleemptypage
+}
+
 \pagenumbering{roman}
 \pagestyle{plain}
 
