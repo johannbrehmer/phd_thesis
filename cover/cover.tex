@@ -8,20 +8,23 @@
 	%BCOR=5mm, %binding correction - only for printing
         openright,
 	cleardoublepage=plain,
-	11pt,
+	12pt,
         DIV=16]{scrreprt}
 
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman,british]{babel}
 \usepackage{color,xcolor,graphicx}
-\definecolor{dark-bordeaux}{rgb}{0.35,0.0,0.15}
-\definecolor{dark-grey}{rgb}{0.5,0.5,0.5}
-\definecolor{dark-red}{rgb}{0.8,0.0,0.0}
-\definecolor{dark-blue}{rgb}{0.0,0.0,0.8}
-\definecolor{dark-green}{rgb}{0.,0.65,0.}
+
+% % Color option 1: white on black
+% \definecolor{cover-background}{rgb}{0.,0.,0.}
+% \definecolor{cover-foreground}{rgb}{1.,1.,1.}
+
+% Color option 2: white on dark red
+\definecolor{cover-background}{rgb}{0.3,0.,0.}
+\definecolor{cover-foreground}{rgb}{1.,1.,1.}
 
 % Font
-\usepackage[lf,mathtabular,minionint]{MinionPro} % 2B: lining figures everywhere
+\usepackage[lf,mathtabular,minionint,medfamily]{MinionPro} % 2B: lining figures everywhere
 \usepackage[toc,eqno,enum,bib]{tabfigures} % tabular figures in certain environments
 \usepackage[mathlf,mathtabular,sansmath]{MyriadPro}
 \addtokomafont{disposition}{\rmfamily}
@@ -30,38 +33,38 @@
 \usepackage{microtype}
 
 % Title page definitions
-\newcommand{\tptitle}[1]{{\Huge \bfseries \color{white} #1}}
-\newcommand{\tpauthor}[1]{{\LARGE \color{white} #1}}
-\newcommand{\tpsmall}[1]{{\Large \color{white} #1}}
+\newcommand{\tptitle}[1]{{\Huge \bfseries \color{cover-foreground} #1}}
+\newcommand{\tpauthor}[1]{{\Large \color{cover-foreground} #1}}
+\newcommand{\tpsmall}[1]{{\color{cover-foreground} #1}}
 
 \begin{document}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Title page
+% Cover page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{titlepage}
   \pagestyle{empty}
-  \pagecolor{dark-bordeaux}
+  \pagecolor{cover-background}
   \begin{center}
 
-    \vspace*{4cm}
+    \vspace*{5cm}
 
-    \tptitle{New Ideas for \\[0.5cm] Effective Higgs Measurements}
+    \tptitle{New Ideas\\[0.7cm]
+     {\mdseries \textit{for}} Effective Higgs Measurements}
 
-    \vspace*{3.5cm}
+    % \vspace*{3.5cm}
+    %\includegraphics[width=0.6\textwidth]{cover_image.png}
+    %\vspace*{2cm}
 
-    \includegraphics[width=0.6\textwidth]{cover_image.png}
+    \vfill
+
+    \tpauthor{Dissertation\\[0.7cm]
+    Johann Brehmer}
 
     \vspace*{2cm}
-
-    \tpauthor{Dissertation}
-
-    \vspace*{0.5cm}
-
-    \tpauthor{Johann Brehmer}
 
   \end{center}
 \end{titlepage}

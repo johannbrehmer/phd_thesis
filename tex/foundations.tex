@@ -88,18 +88,23 @@ Using some of the gauge freedom, we can rotate the Higgs field such that
 where $w_i$ are the would-be Goldstone bosons that give mass to the
 $W$ and $Z$ bosons, and $h$ is the physical Higgs boson.
 
-Plugging Eq.~\eqref{eq:foundations_sm_phi} into Eq.~\eqref{eq:foundations_sm_lagrangian}, we
-find the Higgs mass $m_h^2 = {-2\mu^2} = {2\lambda} v^2$.  The
-fermions and the massive vector bosons $W^\pm$ and $Z$ get mass terms
-proportional to $v$, as well as couplings to the Higgs boson
+Plugging Eq.~\eqref{eq:foundations_sm_phi} into
+Eq.~\eqref{eq:foundations_sm_lagrangian}, we find the Higgs mass
+%
+\begin{equation}
+  m_h^2 = {-2\mu^2} = {2\lambda} v^2 \,.
+  \label{eq:foundations_higgs_mass_sm}
+\end{equation}
+
+The fermions and the massive vector bosons $W^\pm$ and $Z$ get mass
+terms proportional to $v$, as well as couplings to the Higgs boson
 $h$. Since both terms stem from the same coupling to
 $\phi \sim v + h$, the Higgs couplings to other particles are always
 proportional to $g_{hxx} \sim m_x / v$. Finally, there are $h^3$ and
-$h^4$ self-couplings. The SM Higgs sector is very
-predictive: With the measurement of the Higgs mass
-$m_h = 125~\gev$~\cite{Aad:2012tfa, Chatrchyan:2012xdj,
-  Khachatryan:2016vau}, there are no more free parameters in the SM
-and all couplings are fixed.
+$h^4$ self-couplings. The SM Higgs sector is very predictive: With the
+measurement of the Higgs mass $m_h = 125~\gev$~\cite{Aad:2012tfa,
+  Chatrchyan:2012xdj, Khachatryan:2016vau}, there are no more free
+parameters in the SM and all couplings are fixed.
 
 
 
@@ -490,19 +495,19 @@ couplings of the Higgs doublet, models that explain the fermion masses
 will usually also shift the Higgs-fermion coupling patterns.
 
 The question of \emph{vacuum stability} is still being discussed. The
-renormalisation group allows us to link this question to the running
-the quartic coupling $\lambda$ to higher energies. Current
-results~\cite{Degrassi:2012ry} indicate that indeed the quartic
-coupling becomes negative at large energies, leading to a second
-vacuum with lower energy at much larger values of $\phi$. Fortunately
-for us, the tunnelling probability is very small, and in the SM ``our''
-vacuum with $v \approx 246~\gev$ seems to be metastable with a
-lifetime longer than the age of the universe. While this indicates
-there is no pressing need for physics below the Planck scale to save
-the electroweak vacuum from a horrible fate, this result crucially
-depends on the measured top and Higgs masses, higher-order corrections
-to the beta functions, and higher-dimensional operators stemming from
-UV physics~\cite{Eichhorn:2015kea}.
+renormalisation group (RG) allows us to link this question
+to the running the quartic coupling $\lambda$ to higher
+energies. Current results~\cite{Degrassi:2012ry} indicate that indeed
+the quartic coupling becomes negative at large energies, leading to a
+second vacuum with lower energy at much larger values of
+$\phi$. Fortunately for us, the tunnelling probability is very small,
+and in the SM ``our'' vacuum with $v \approx 246~\gev$ seems to be
+metastable with a lifetime longer than the age of the universe. While
+this indicates there is no pressing need for physics below the Planck
+scale to save the electroweak vacuum from a horrible fate, this result
+crucially depends on the measured top and Higgs masses, higher-order
+corrections to the beta functions, and higher-dimensional operators
+stemming from UV physics~\cite{Eichhorn:2015kea}.
 
 In addition to these theoretical and to some degree aesthetic
 arguments, there is solid experimental evidence for physics beyond the
@@ -919,8 +924,8 @@ constant, the \emph{Wilson coefficient} $c_i$, and some powers of a
 mass scale, for which we use the scale of heavy physics $\Lambda$:
 %
 \begin{equation}
-  \lgr{} = (\text{kinetic and mass terms}) + \sum_i \frac {c_i} {\Lambda^{D_i - d}} \, \ope{i} \,.
-  \label{eq:foundations_EFT_operators}
+  \lgr{EFT} = (\text{kinetic and mass terms}) + \sum_i \frac {c_i} {\Lambda^{D_i - d}} \, \ope{i} \,.
+  \label{eq:foundations_EFT_lagrangian}
 \end{equation}
 %
 Why do we force $\Lambda$ to appear in front of the operators like
@@ -930,7 +935,7 @@ on the renormalisation group flow) is that it consists of
 dimensionless couplings $g \sim \ord{1}$ and mass scales
 $M \sim \ord{\Lambda}$. Indirect effects mediated by this high-energy
 physics should therefore be proportional to a combination of these
-factors, as given in Eq.~\eqref{eq:foundations_EFT_operators} with
+factors, as given in Eq.~\eqref{eq:foundations_EFT_lagrangian} with
 couplings $c_i \sim \ord{1}$. This is certainly true in Fermi theory,
 where the effective coupling $G_F$ is suppressed by
 $\Lambda^2 = m_W^2$.
@@ -1802,6 +1807,7 @@ $E$ they will take on values of the form
 %
 \begin{equation}
   c_i (E) \sim c_i(\Lambda) \pm \sum_j \frac {g^2} {16 \pi^2} \, \log \frac {\Lambda^2} {E^2} \,c_j(\Lambda) \,,
+  \label{eq:foundations_EFT_running}
 \end{equation}
 %
 where $g$ are the typical couplings in the loops.
@@ -2210,22 +2216,33 @@ observables, for instance to avoid blind directions. Applied to Higgs
 physics, this logic suggests to discard $\ope{\phi L}^{(1)}$,
 $\ope{(3)}$, and $\ope{\phi,4}$~\cite{Corbett:2012ja}.
 
-\newparagraph
-%
-Of the remaining operators, some are tightly constrained experimental
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Constraints}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Some of the remaining operators are tightly constrained experimental
 data. Electroweak precision measurements limit the Wilson coefficients
 of $\ope{\phi,1}$, $\ope{BW}$, $\ope{\phi f}^{(1)}$,
 $\ope{\phi f}^{(3)}$, $\ope{B\widetilde{W}}$, and
-$\ope{\widetilde{B}}$ to a level where they are irrelevant for Higgs
-physics. Measurements of electric diple moments put tight constrains
-on the dipole operators. We will ignore all these operators.
+$\ope{\widetilde{B}}$ to a level where their effects in Higgs physics
+are small. Measurements of electric diple moments put tight constrains
+on the dipole operators. We will ignore all these
+operators.\footnote{This simple argument is suitable for our rather
+  conceptual work. In a thorough global fit, however, it should be
+  checked carefully whether these constraints are actually strong
+  enough to make all these operator irrelevant for Higgs physics in
+  all cases. In particular, the increasing precision in Higgs
+  observables means that many of these operators will become relevant
+  again in the future.}
 
-Limits on flavour-changing neutral currents tightly constrain
+Limits on flavour-changing neutral currents constrain
 off-diagonal fermion-Higgs couplings. Also, flavour-diagonal $\ope{f}$
 involving fermions of the first and second generation will be
 irrelevant for many signatures considered in this thesis. We therefore
-only keep the Higgs-fermion operators $\ope{f}$ that couple
-flavour-diagonally to the third generation.
+only keep the Higgs-fermion operators $\ope{f}$ of the third
+generation.
 
 This leaves us with a list of thirteen operators relevant for LHC
 Higgs physics: ten $CP$-even operators,
@@ -2241,6 +2258,7 @@ Higgs physics: ten $CP$-even operators,
   \ope{\tau} \,, \quad
   \ope{t} \,, \quad  \text{and} \quad
   \ope{b} \,;
+  \label{eq:foundations_operators_even}
 \end{equation}
 %
 and three $CP$-odd ones,
@@ -2248,28 +2266,35 @@ and three $CP$-odd ones,
 \begin{equation}
   \ope{G\widetilde{G}} \,, \quad 
   \ope{B\widetilde{B}} \,, \quad  \text{and} \quad
-  \ope{W\widetilde{W}} \,.
+  \ope{W\widetilde{W}} \,. 
+  \label{eq:foundations_operators_odd}
 \end{equation}
-%
-\comment{To here.}
-
-
-
-
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Operator mixing}
+\subsubsection{Renormalisation group evolution}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+The Wilson coefficients of these operators depend on the energy scale.
+In the last years, the contributions of all dimension-six operators on
+the running of the SM parameters, as well as the whole $59\times 59$
+anomalous dimension matrix of dimension-six operators, have been
+calculated at one-loop level~\cite{Jenkins:2013zja, Jenkins:2013wua,
+  Alonso:2013hga}. This provides all necessary tools to run the EFT
+parameters from the matching scale $\Lambda$ to the experimental scale
+$E$. Following Eq.~\eqref{eq:foundations_EFT_running}, this shifts the
+Wilson coefficients by a term proportional to a loop factor and
+$\log \Lambda^2 / E^2$.
 
-
-
-
-
-
+As we will discuss in some length in Chapter~\ref{chapter:validity},
+the LHC Higgs measurements are only sensitive to new physics scales
+between the electroweak scale and the TeV scale. The corresponding
+logarithm typically cannot compensate for the loop factor, and the RGE
+effects on Wilson coefficients that are already non-zero at the
+matching scale are small. We will therefore neglect operator running
+for our analyses.
 
 
 
@@ -2278,127 +2303,100 @@ and three $CP$-odd ones,
 \label{sec:foundations_heft_pheno}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-As discussed above, we need to think about Higgs EFT from two
-perspectives, linking it to observables and complete theories of new
-physics. Let us start with the first connection and discuss the
-phenomenology of two example operators. For a more complete treatment,
-see e.\,g.\ Ref.~\cite{Corbett:2012ja}.
+After picking a set of operators, the next question is how they affect
+Higgs observables. We will first discuss two examples, $\ope{\phi,2}$
+and $\ope{W}$, in detail, before listing the effects of all operators
+in Eqs.~\eqref{eq:foundations_operators_even} and
+\eqref{eq:foundations_operators_even}.
 
-% \subsubsection{$\ope{t}$: $\phisq$ physics}
 
-% Many Operators that consist of an SM dimension-4 operator $\ope{\text{dim-4}}$ multiplied with $\phisq$ have a straightforward phenomenology. Ignoring the Goldstones, we have
-% \begin{align}
-%   \lgr{EFT} &\supset c_{\text{dim-4}} \ope{\text{dim-4}} + \frac {f} {\Lambda^2} \, (\phisq) \, \ope{\text{dim-4}} \notag \\ 
-%   {} &= c_{\text{dim-4}} \ope{\text{dim-4}} +   \frac {f} {\Lambda^2} \,  \frac {v^2 + 2 v h + h^2} {2} \ope{\text{dim-4}} \notag \\
-%   {} &= \left(c_{\text{dim-4}} + \frac {v^2} 2 \right) \ope{\text{dim-4}} + \frac {f v} {2 \Lambda^2} \,  h \ope{\text{dim-4}} + \ord{h^2} \,.
-% \end{align}
-% The first term is a rescaling of $c_{\text{dim-4}}$, which is a free coupling of the SM. Such a rescaling will only be observable once we compare this coupling between different scales, i.\,e.\ in the RG flow of the theory. The second term will rescale the interactions of Higgs bosons with the other SM particles. The $h^2$ terms are for now less important as Higgs pair production will not be experimentally accessible too soon.
 
-% For example, $\ope{\tau}$ will lead to a rescaling of the tau Yukawa couplings:
-% \begin{align}
-%   \lgr{EFT} &\supset \frac {f_{\tau} v} {2 \Lambda^2} \,  h \, \bar{F}_{L} \phi f_R  \notag \\
-%   {} &= \dots
-% \end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{$\ope{\phi2}$: rescaled Higgs couplings}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\subsubsection{$\ope{\phi2}$: rescaled Higgs couplings}
-
-Ignoring the Goldstones,
-% 
-\begin{equation}
-  \phisq = \frac {v^2 + 2 v \tilde{h} + \tilde{h}^2} 2
-\end{equation}
-%
-where we use a tilde on the Higgs boson field for reasons that will
-become clear soon.
-
-The operator $\ope{\phi2}$ then becomes
+Our first example is the operator $\ope{\phi,2}$. Ignoring the
+Goldstones, it consists only of derivatives and Higgs fields
+$\phisq = (v^2 + 2 v \tilde{h} + \tilde{h}^2) / 2$, where we use a
+tilde on $h$ for reasons that will become clear soon. Its contribution
+to the Lagrangian reads
 %
 \begin{align}
-  \lgr{EFT} &\supset \frac {f_{\phi2}} {2\Lambda^2} \, \partial^\mu(\phi^\dagger\phi) \, \partial_\mu(\phi^\dagger\phi) \notag \\
-  {} &= \frac {f_{\phi2}} {2\Lambda^2} \, \frac {( 2 v \partial_\mu \tilde{h} + 2 \tilde{h} \partial_\mu \tilde{h} )^2} 4  \notag \\
-  {} &= \frac {f_{\phi2} v^2} {2\Lambda^2} \, \partial_\mu \tilde{h} \partial^\mu \tilde{h} + \ord{h^3} \,.
+  \lgr{EFT} &\supset \frac {f_{\phi, 2}} {2\Lambda^2} \, \partial^\mu(\phi^\dagger\phi) \, \partial_\mu(\phi^\dagger\phi) \notag \\
+  %{} &= \frac {f_{\phi, 2}} {2\Lambda^2} \, \frac {( 2 v \partial_\mu \tilde{h} + 2 \tilde{h} \partial_\mu \tilde{h} )^2} 4  \notag \\
+  {} &= \frac {f_{\phi, 2} v^2} {2\Lambda^2} \, \partial_\mu \tilde{h} \partial^\mu \tilde{h} + \frac {f_{\phi, 2} \, v} {\Lambda^2} \, \tilde{h} \partial_\mu \tilde{h} \partial^\mu \tilde{h} + \frac {f_{\phi, 2} \, v} {2 \Lambda^2} \, \tilde{h}^2 \partial_\mu \tilde{h} \partial^\mu \tilde{h} \,.
+  \label{eq:foundations_ophi2_terms}
 \end{align}
-
-The $h^3$ (and higher) interactions are only important for Higgs pair
-production. The first term, on the other hand, presents a rescaling of
-the kinetic term of the Higgs boson:
+%
+The first term rescales the kinetic term of the Higgs boson:
 %
 \begin{equation}
   \lgr{EFT} \supset \left( 1 + \frac {f_{\phi 2} v^2} {\Lambda^2} \right) \, \frac 1 2 \, \partial_\mu \tilde{h} \partial^\mu \tilde{h} \,.
 \end{equation}
-%
-The usual Feynman rules (and all Monte-Carlo software) assume a
-canonical normalisation of this term, so we have to renormalise
-$\tilde{h}$ as
+
+To restore the canonical form of the kinetic term, we have to rescale
+the Higgs boson $\tilde{h}$ to
 %
 \begin{equation}
   h = \sqrt{1 + \frac {f_{\phi 2} v^2} {\Lambda^2} } \, \tilde{h} \,.
+  \label{eq:foundations_ophi2_rescaling}
 \end{equation}
 %
-This restores the canonical form of the kinetic term, but also
-rescales all other instances of the Higgs field in the Lagrangian, for
-instance the Higgs couplings to all other particles
+On the one hand, this universally shifts all Higgs couplings to other
+particles as
 %
 \begin{equation}
-  g_{hxx} = \frac 1 {\sqrt{1 + \frac {f_{\phi 2} v^2} {\Lambda^2} } }  \, g_{hxx}^{\text{SM}} =  \left(1 - \frac {f_{\phi 2} v^2} {2 \Lambda^2} \right) \, g_{hxx}^{\text{SM}}  + \ord{v^4/\Lambda^4} \,. 
+  g_{hxx} = \frac 1 {\sqrt{1 + \frac {f_{\phi 2} v^2} {\Lambda^2} } }  \, g_{hxx}^{\text{SM}}\,. 
 \end{equation}
 
-A non-zero Wilson coefficients $f_{\phi 2}$ will thus universally
-rescale all couplings of the Higgs boson and lead to some more
-complicated effects in the Higgs self-coupling. The first effect would
-lead to shifts in the measured signal strengths in all Higgs
-measurements, while the distributions stay the same as in the SM
-(neglecting interference effects). The latter will be visible in Higgs
-pair production, both in the total rate and in distributions.
-
-
-
-\newparagraph
-%
-As a second example, consider $\ope{W}$. The covariant derivative
-acting on the Higgs doublet is defined as
+The effect on the Higgs self-coupling is more involved. First, the
+rescaling in Eq.~\eqref{eq:foundations_ophi2_rescaling} also affects
+the Higgs mass term given in Eq.~\eqref{eq:foundations_higgs_mass_sm}. For fixed $v$ and $m_h$, this amounts to shifting the Higgs
+self-coupling $\lambda$ to
 %
 \begin{equation}
-  D_\mu \phi = \partial_\mu \phi - \im g \frac {\sigma^k} 2 W^k_\mu \phi - \im \frac {g'} 2 B_\mu \phi \,,
+  \lambda = \frac {m_h^2} {2 v^2} \, \left( 1 + \frac {f_{\phi 2} v^2} {\Lambda^2} \right) \,.
 \end{equation}
 %
-and the field strength tensor reads
-\begin{equation}
-%
-  W_{\mu\nu}^k = \partial_\mu W^k_\nu  - \partial_\nu W^k_\mu + g \varepsilon^{kmn} W^m_\mu W^n_\nu \,.
-\end{equation}
-%
+In addition, the second term in Eq.~\eqref{eq:foundations_ophi2_terms}
+introduces a new Lorentz structure into the Higgs self-interaction
+that depends on the Higgs momenta. A non-zero Wilson coefficients
+$f_{\phi 2}$ will therefore have a strong impact on Higgs pair
+production, not only on the total rate, but also on kinematic
+distributions.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{$\ope{W}$: new Higgs-gauge structures}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Our second example is $\ope{W}$, which contracts covariant derivatives
+acting on Higgs doublets, defined in
+Eq.~\eqref{eq:foundations_covariant_derivative}, with a field strength
+tensor
+$W_{\mu\nu}^k = \partial_\mu W^k_\nu - \partial_\nu W^k_\mu + g
+\varepsilon^{kmn} W^m_\mu W^n_\nu$.
 Expanding $\ope{W}$ and only keeping the pieces that will affect the
 $hWW$ coupling, we find
 %
 \begin{align}
-  \lgr{EFT} &\supset \frac {f_{W}} {\Lambda^2} \, \im \frac{g}{2} \, (D^\mu\phi)^\dagger \sigma^k ( D^\nu\phi) \, W_{\mu\nu}^k \notag \\
-  {} &= \frac {f_{W}} {\Lambda^2} \, \im \frac{g}{2}
-       \left(\partial^\mu \phi^\dagger + \im \frac g 2 W^{m\,\mu} \phi^\dagger \sigma^m + \im \frac {g'} 2 B^\mu \phi^\dagger \right) \sigma^k \notag \\
-    &\phantom{=} \quad  \quad \quad \quad \cdot \left(\partial^\nu \phi - \im g \frac {\sigma^n} 2 W^{n\,\nu} \phi - \im \frac {g'} 2 B^\nu \phi\right) \, W_{\mu\nu}^k \notag \\
-  {} &\supset \frac {f_{W}} {\Lambda^2} \, \im \frac{g}{2} \, \Biggl\{
+  \lgr{EFT} &\supset \frac {f_{W}} {\Lambda^2} \, \frac{\im g}{2} \, (D^\mu\phi)^\dagger \sigma^k ( D^\nu\phi) \, W_{\mu\nu}^k \notag \\
+  {} &= \frac {\im g f_{W}} {2 \Lambda^2} 
+       \left(\partial^\mu \phi^\dagger + \frac {\im  g} 2 W^{m\,\mu} \phi^\dagger \sigma^m + \frac {\im  g'} 2 B^\mu \phi^\dagger \right) \sigma^k \left(\partial^\nu \phi - \frac {\im g} 2 \sigma^n  W^{n\,\nu} \phi - \frac {\im  g'} 2 B^\nu \phi\right) W_{\mu\nu}^k \notag \\
+  {} &\supset \frac {\im g f_{W}} {2 \Lambda^2}  \, \Biggl\{
        \frac {\partial^\mu h} {\sqrt 2} \, \left[ \sigma^k  \sigma^n \right]_{22} \, \frac {-\im g} 2 \, W^{n \,\nu} \, \frac v {\sqrt{2}} %\notag \\
    % &\phantom{=} \quad  \quad \quad \quad 
 + \frac {\im g} 2 \, W^{m \,\nu} \, \frac v {\sqrt{2}}  \, \left[ \sigma^m  \sigma^k \right]_{22} \, \frac {\partial^\mu h} {\sqrt 2}
        \Biggr\} \, W_{\mu\nu}^k \notag \\
   {} &= \frac {f_{W}} {\Lambda^2} \, \frac{g^2 v}{8} \,  \left[ \sigma^k,  \sigma^n \right]_{22} \, (\partial^\mu h)  \, W^{n \,\nu}  \, W_{\mu\nu}^k \notag \\
-  {} &= \frac {f_{W}} {\Lambda^2} \, \frac{g^2 v}{8} \,  2 \im \varepsilon^{knm} \, \sigma^m_{22} \, (\partial^\mu h)  \, W^{n \,\nu}  \, W_{\mu\nu}^k\notag \\
+  %{} &= \frac {f_{W}} {\Lambda^2} \, \frac{g^2 v}{8} \,  2 \im \varepsilon^{knm} \, \sigma^m_{22} \, (\partial^\mu h)  \, W^{n \,\nu}  \, W_{\mu\nu}^k\notag \\
   {} &= \frac {f_{W}} {\Lambda^2} \, \frac{\im g^2 v}{4} \, \varepsilon^{nk3} \, (\partial^\mu h)  \,  W^{n \,\nu}  \, W_{\mu\nu}^k  \,.
 \end{align}
 %
-With
-%
-\begin{equation}
-  m_W = \frac {gv} 2
-\end{equation}
-%
-and
-%
-\begin{equation}
-  W^\pm_\mu = \frac 1 {\sqrt{2}} (W^1_\mu \mp \im W^2_\mu ) \,,
-\end{equation}
-%
-this finally gives
+With $m_W = gv / 2$ and
+$W^\pm_\mu = (W^1_\mu \mp \im W^2_\mu ) / \sqrt{2}$ this finally
+fields
 %
 \begin{equation}
   \lgr{EFT} \supset \frac {f_{W}} {\Lambda^2} \, \frac{\im gm_W}{2} \, (\partial^\mu h) \left( W^{+ \,\nu} \, W^-_{\mu\nu} + W^{- \,\nu} \, W^+_{\mu\nu} \right) \,.
@@ -2435,66 +2433,80 @@ interaction gains a momentum dependence:
 \end{equation}
 %
 where $p^\pm_\mu$ and $p^H_\mu$ are the incoming momenta of the
-$W^\pm$ and the $H$, respectively.
-
-Two features of the EFT approach stand out. First, $\ope{W}$ does not
-only affect the $hWW$ vertex, but also $hZZ$ interactions and
-triple-gauge couplings such as $WWZ$. This means that the dimension-6
-operator language allows us to combine different measurements in a
-global fit.
+$W^\pm$ and the $H$, respectively. 
 
 %-----------------------------------------------------------
-\begin{figure}[t]
+\begin{figure}
   \centering
   \includegraphicsdummy[width=0.49\textwidth]{fig/general/dim6demo1.pdf}
   \includegraphicsdummy[width=0.49\textwidth]{fig/general/dim6demo2.pdf}
-  \caption[Momentum dependence from dimension-6 operator on $Zh$
+  \caption[Momentum dependence from $\ope{W}$ in $Zh$
   production]{Distribution of the $Zh$ invariant mass in the
-    Higgs-strahlung process $pp \to Zh$ at LHC conditions. The
-    contribution from the dimension-6 operator $\ope{W}$ is enhanced
-    at larger momentum transfer compared to the SM amplitudes. The
-    interference between them can be constructive (left) or
-    destructive (right).  Note that this plot is based on a different
-    operator basis, which is why the operator $\ope{W}$ used in this
-    plot is closely related, but not identical to that defined in
-    Table~\ref{tbl:foundations_operators_bosonic_even}.}
-  \label{fig:OW_Zh_demo}
+    Higgs-strahlung process $pp \to Zh$ at LHC conditions. We compare
+    the contributions from the SM, the operator $\ope{W}$ squared, and
+    their interference, which can be constructive (left) or
+    destructive (right).}
+    % Note that this plot is based on a different
+    % operator basis, which is why the operator $\ope{W}$ used in this
+    % plot is closely related, but not identical to that defined in
+    % Table~\ref{tbl:foundations_operators_bosonic_even}.
+  \label{fig:foundations_OW_Zh_demo}
 \end{figure}
 %-----------------------------------------------------------
 
-Second, $\ope{W}$ changes the shape of distributions. One example is
-the Higgs-strahlung process at the LHC,
+This operator illustrates two key features of the EFT approach. First,
+$\ope{W}$ does not only affect the $hWW$ vertex, but also $hZZ$
+interactions and triple-gauge couplings such as $WWZ$. This means that
+the dimension-6 operator language allows us to combine different
+measurements in a global fit.
+
+Second, $\ope{W}$ changes the shape of distributions, for instance in
+Higgs-strahlung at the LHC,
 %
 \begin{equation}
   p p \to Z h \,.
 \end{equation}
 %
-Here a $Z$ boson is produced off-shell and radiates off a Higgs. The
-intermediate $Z$ can carry arbitrary large energy and momentum, which
-we can measure for instance as the invariant mass of the final $Zh$
-system. From Eq.~\eqref{eq:foundations_OW_HWW_Feynman_rule} we expect that the
-effects from $\ope{W}$ will grow with $m_{Zh}$.
-
-In Fig.~\ref{fig:OW_Zh_demo} we demonstrate this by comparing the
+In this process, the intermediate $Z$ can carry arbitrary large energy
+and momentum, which we can measure for instance as the invariant mass
+of the final $Zh$ system. From
+Eq.~\eqref{eq:foundations_OW_HWW_Feynman_rule} we expect that the
+effects from $\ope{W}$ will grow with $m_{Zh}$. In
+Fig.~\ref{fig:OW_Zh_demo} we demonstrate this by comparing the
 distribution of $m_{Zh}$ based on only the SM couplings, on the
 dimension-6 operator $\ope{W}$ only, and on the interference between
 the two components. Indeed we see that $\ope{W}$ contributes mostly in
-the high-energy tail of the distribution. This and a few other
-operators thus allow us to describe new physics effects in
-distributions, not only in total rates. Or from the opposite
-perspective, we will have to analyse kinematic distributions to
-disentangle different operators.
+the high-energy tail of the distribution. 
 
-On a side note, the interference terms contribute at order
-$\ord{1/\Lambda^2}$ to the cross section, while the squared operators
-only contribute at $\ord{1/\Lambda^4}$. So the latter appear at the
-same order as the leading (neglected) dimension-8 operator
-effects. Some people argue that for this reason one should not include
-the square of dimension-6 operators in calculations. But the
-interference between the SM amplitudes and the dimension-6 operators
-can be destructive, as shown in the right panel of
-Fig.~\ref{fig:OW_Zh_demo}, and push the differential cross section to
-negative values when the squared operators are neglected.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{All those couplings}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+After these two worked-out examples, we now give the complete list of
+Higgs couplings induced by the dimension-six operators of
+Eqs.~\eqref{eq:foundations_operators_even} and
+\eqref{eq:foundations_operators_odd}, some of which were calculated in
+Refs.~\cite{Corbett:2012ja, Corbett_thesis} and cross-checked by
+us. Here we expand non-linear effects from the field redefinition in
+Eq.~\eqref{eq:foundations_ophi2_rescaling} to $\ord{1/\Lambda^2}$.
+
+First, the Higgs-gauge interactions read
+%
+\begin{align}
+  \lgr{EFT} &\supset
+  \frac {f_{GG} v} {\Lambda^2} \, h G_{\mu \nu}^a G^{\mu \nu \, a}
+  - \frac {g^2 v s^2 (f_{WW} + f_{BB}) } {4 \Lambda^2}  \, h A_{\mu \nu} A^{\mu \nu}
+  + \dots
+\end{align}
+%
+\comment{To here. Continue translating Eqs.~(15) and (16) of Power to
+  the Data to here, and check with the EFT to its Limits appendix.}
+
+
+
 
 
 

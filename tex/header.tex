@@ -16,7 +16,8 @@
         openright,
 	cleardoublepage=cleardoublepage,
         numbers=noenddot,
-	11pt]{scrreprt}
+        DIV=10,
+	11pt]{scrbook}
 
 
 
@@ -28,17 +29,24 @@
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman,british]{babel}
 
-% % Option 1: Minion Pro + Myriad Pro
-% \usepackage[mathlf,mathtabular]{MinionPro}
-% \usepackage[mathlf,mathtabular,sansmath]{MyriadPro}
+% Option 1: Minion Pro + Myriad Pro 
+% % 1A: text figures in text modes, lining tabular figures in math mode
+% \usepackage[textosf,mathlf,mathtabular,minionint]{MinionPro} 
+% \usepackage[mathlf,mathtabular,onlytext]{MyriadPro}
+% 1B: lining figures everywhere
+\usepackage[lf,mathtabular,minionint]{MinionPro} 
+\usepackage[lf,mathtabular,onlytext]{MyriadPro}
+\usepackage[toc,eqno,enum,bib]{tabfigures} % tabular figures in certain environments 
+\linespread{1.06}
 
-% Option 2: Only Minion Pro
-% \usepackage[textosf,mathlf,mathtabular,minionint]{MinionPro} % 2A: text figures in text modes, lining tabular figures in math mode
-\usepackage[lf,mathtabular,minionint]{MinionPro} % 2B: lining figures everywhere
-\usepackage[toc,eqno,enum,bib]{tabfigures} % tabular figures in certain environments
-\usepackage[mathlf,mathtabular,sansmath]{MyriadPro}
-\addtokomafont{disposition}{\rmfamily}
-\linespread{1.05}
+% % Option 2: Only Minion Pro
+% % maybe using semibold instead of bold with the [medfamily] option?
+% % \usepackage[textosf,mathlf,mathtabular,minionint]{MinionPro} % 2A: text figures in text modes, lining tabular figures in math mode
+% \usepackage[lf,mathtabular,minionint]{MinionPro} % 2B: lining figures everywhere
+% \usepackage[toc,eqno,enum,bib]{tabfigures} % tabular figures in certain environments
+% \usepackage[mathlf,mathtabular,onlytext]{MyriadPro}
+% \addtokomafont{disposition}{\rmfamily}
+% \linespread{1.06}
 
 % % Option 3: EB Garamond
 % \usepackage[cmintegrals,cmbraces]{newtxmath}
@@ -64,9 +72,9 @@
 % \makeatother 
 
 % % Option 4: Libertine
-%\usepackage{libertine}
-%\usepackage[libertine]{newtxmath}
-%\addtokomafont{disposition}{\rmfamily}
+% \usepackage{libertine}
+% \usepackage[libertine]{newtxmath}
+% \addtokomafont{disposition}{\rmfamily}
 
 % % Option 5: Palatino
 % \usepackage{mathpazo} % add possibly `sc` and `osf` options

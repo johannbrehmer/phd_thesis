@@ -27,8 +27,9 @@
 \cleardoubleemptypage
 }
 
-\pagenumbering{roman}
+\frontmatter 
 \pagestyle{plain}
+\KOMAoptions{cleardoublepage=plain}
 
 % Title and dedication
 \input{tex/title.tex}
@@ -53,7 +54,7 @@
 \input{tex/acknowledgements}
 
 \thispagestyle{plain}
-\cleardoublepage
+\cleardoubleemptypage
 
 
 
@@ -61,7 +62,7 @@
 % Content
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagenumbering{arabic}
+\mainmatter 
 \pagestyle{headings}
 \KOMAoptions{cleardoublepage=plain}
 
@@ -80,8 +81,8 @@
 % Back matter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\appendix 
-\KOMAoptions{cleardoublepage=empty}
+\backmatter 
+%\KOMAoptions{cleardoublepage=empty}
 
 \input{tex/appendix}
 \bibliography{tex/references}
