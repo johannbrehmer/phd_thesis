@@ -30,12 +30,13 @@
 \usepackage[ngerman,british]{babel}
 
 % Option 1: Minion Pro + Myriad Pro 
-% % 1A: text figures in text modes, lining tabular figures in math mode
-% \usepackage[textosf,mathlf,mathtabular,minionint]{MinionPro} 
-% \usepackage[mathlf,mathtabular,onlytext]{MyriadPro}
-% 1B: lining figures everywhere
-\usepackage[lf,mathtabular,minionint]{MinionPro} 
-\usepackage[lf,mathtabular,onlytext]{MyriadPro}
+% % maybe using semibold instead of bold with the [medfamily] option
+% 1A: text figures in text modes, lining tabular figures in math mode
+\usepackage[textosf,mathlf,mathtabular,minionint]{MinionPro} 
+\usepackage[mathlf,mathtabular,onlytext,medfamily]{MyriadPro}
+% % 1B: lining figures everywhere
+% \usepackage[lf,mathtabular,minionint]{MinionPro} 
+% \usepackage[lf,mathtabular,onlytext,medfamily]{MyriadPro}
 \usepackage[toc,eqno,enum,bib]{tabfigures} % tabular figures in certain environments 
 \linespread{1.06}
 
@@ -91,6 +92,7 @@
 \definecolor{dark-red}{rgb}{0.8,0.0,0.0}
 \definecolor{dark-blue}{rgb}{0.0,0.0,0.8}
 \definecolor{dark-green}{rgb}{0.,0.65,0.}
+\definecolor{highlight-color}{rgb}{0.8,0.0,0.0}
 
 \usepackage{amsmath,dsfont,mathtools}
 \usepackage{siunitx}
@@ -107,6 +109,7 @@
 \usepackage{microtype}
 \usepackage{calc} % arithmetic expressions for lengths
 \usepackage{mparhack} % avoids marginpars appearing on the wrong side, remove for final version
+\usepackage{lettrine} % Initials 
 
 
 
@@ -114,48 +117,48 @@
 % Chapter titles
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% % Formatting chapter titles with lines, red
+% % Option 1: Formatting chapter titles with lines, red
 % \renewcommand*{\chapterformat}{%
 %   \enskip\mbox{\scalebox{5}{\thechapter\autodot}}}
 % \renewcommand\chapterlinesformat[3]{%
-%   {\color{dark-red}
+%   {\color{highlight-color}
 %   \parbox[b]{\textwidth}{\hrulefill#2}\par%
 %   {\color{black}#3}\par\bigskip
 %   \hrule}}
 % \RedeclareSectionCommand[beforeskip=2\baselineskip,
 % afterskip=3\baselineskip]{chapter}
 
-% % Formatting chapter titles without lines, red
+% % Option 2: Formatting chapter titles without lines, red
 % \renewcommand*{\chapterformat}{%
 %   \enskip\mbox{\scalebox{5}{\thechapter\autodot}}}
 % \renewcommand\chapterlinesformat[3]{%
-%   {\color{dark-red}
+%   {\color{highlight-color}
 %   \parbox[b]{\textwidth}{\hfill#2}\par%
 %   {\color{black}#3}\par\bigskip
 %   }}
 % \RedeclareSectionCommand[beforeskip=2\baselineskip,
 % afterskip=3\baselineskip]{chapter}
 
-%Formatting chapter titles with "chapter"
+% Option 3: Formatting chapter titles with "chapter"
 \newlength{\numberheight}
 \newlength{\chapterheight}
 \newlength{\effectiveheight}
 \renewcommand*{\chapterformat}{%
-  \settoheight{\numberheight}{\thechapter\autodot}%
+  \settoheight{\numberheight}{{\figureversion{lf}\thechapter\autodot}}%
   \settoheight{\chapterheight}{Chapter}%
   \setlength{\effectiveheight}{4\numberheight-\chapterheight}%
-  \enskip\mbox{\raisebox{\effectiveheight}{Chapter}~~\scalebox{4}{\thechapter\autodot}}}
+  \enskip\mbox{\raisebox{\effectiveheight}{Chapter}~~\scalebox{4}{{\figureversion{lf}\thechapter\autodot}}}}
 \renewcommand\chapterlinesformat[3]{%
-  {\color{dark-red}
+  {\color{highlight-color}
     \parbox[b]{\textwidth}{\hfill#2}\par%
   {\color{black}#3}\par\bigskip
   }}
 \RedeclareSectionCommand[beforeskip=2\baselineskip,
 afterskip=3\baselineskip]{chapter}
 
-% % Formatting chapter titles centred
+% % Option 4: Formatting chapter titles centred
 % \renewcommand*{\chapterformat}{%
-%   \centering \color{dark-red}%
+%   \centering \color{highlight-color}%
 %   \enskip\mbox{\scalebox{3}{\thechapter\autodot}}}
 % \renewcommand\chapterlinesformat[3]{%
 %   {#2\par\vspace{0.2cm}%
@@ -164,14 +167,20 @@ afterskip=3\baselineskip]{chapter}
 % \RedeclareSectionCommand[beforeskip=1.5cm,
 % afterskip=1.5cm]{chapter}
 
-% customize dictum format, option A
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dictum
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% % customize dictum format, option A
 % \setkomafont{dictumtext}{\itshape\small}
 % \setkomafont{dictumauthor}{\normalfont}
 % \renewcommand*\dictumwidth{\linewidth}
 % \renewcommand*\dictumauthorformat[1]{--- #1}
 % \renewcommand*\dictumrule{}
 
-% customize dictum format, tuned:
+% customize dictum format, option B
 \setkomafont{dictumtext}{\itshape \rmfamily}
 \setkomafont{dictumauthor}{\rmfamily\normalfont}
 \renewcommand*\dictumwidth{0.5 \linewidth}
@@ -181,6 +190,17 @@ afterskip=3\baselineskip]{chapter}
 % wider dictum
 \newcommand{\widedictum}[2][1]{{\renewcommand*\dictumwidth{0.7 \linewidth}\dictum[#1]{#2}}}
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Larger section etc titles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Here: everything one size larger than Koma-Script default
+\setkomafont{chapter}{\Huge}
+% \setkomafont{section}{\LARGE}
+% \setkomafont{subsection}{\Large}
+% \setkomafont{subsubsection}{\large}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -10,10 +10,13 @@
 \newcommand{\diff}{\mathrm{d}}
 \newcommand{\eg}{{e.\,g.}~}
 \newcommand{\ie}{{i.\,e.}~}
-\newcommand{\qqquad}{\qquad \qquad}
-\newcommand{\qqqquad}{\qqquad \qqquad}
 \newcommand{\largex}{\ensuremath{\large \boldsymbol{\times}}}
 \newcommand{\brlargex}{\ensuremath{\large (\boldsymbol{\times})}}
+
+% spaces
+\newcommand{\qqquad}{\qquad \qquad}
+\newcommand{\qqqquad}{\qqquad \qqquad}
+\newcommand{\qqqqquad}{\qqqquad \qqqquad}
 
 % Physics symbols
 \newcommand{\mat}{\mathcal{M}}
@@ -107,6 +110,7 @@
 \DeclareMathOperator{\Pois}{Pois}
 \DeclareMathOperator{\cov}{cov}
 \DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\hc}{h.\,c.}
 
 % Title page
 \newcommand{\tptitle}[1]{{\Huge \bfseries #1}}
@@ -114,6 +118,9 @@
 \newcommand{\tpsmall}[1]{{#1}}
 \newcommand{\tpskip}{\vspace{0.2cm}}
 \newcommand{\tpbigskip}{\vspace{1.2cm}}
+
+% Capitals at beginning of chapter
+\newcommand{\firstword}[2]{\lettrine[lines=3]{\color{highlight-color}#1}{#2}~}
 
 % feynmf
 \newcommand{\feynmansetup}{%

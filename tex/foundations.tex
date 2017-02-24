@@ -21,14 +21,15 @@
 \label{chapter:foundations}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-This chapter reviews some of the essential concepts that underlie the
-research presented in the next chapters. First, we briefly summarise
-the role of the Higgs boson in the Standard Model (SM) and its
-phenomenology at the LHC.  Section~\ref{sec:foundations_eft} then
-presents a pedagogical introduction to the effective field theory
-(EFT) idea. In Section~\ref{sec:foundations_higgs_eft} we combine
-these ideas and introduce Standard Model effective field theory as a
-universal language for Higgs physics.
+\firstword{I}{n this chapter} we review some of the essential concepts
+that underlie the research presented in the next chapters. First, we
+briefly summarise the role of the Higgs boson in the Standard Model
+(SM) and its phenomenology at the LHC.
+Section~\ref{sec:foundations_eft} then presents a pedagogical
+introduction to the effective field theory (EFT) idea. In
+Section~\ref{sec:foundations_higgs_eft} we combine these ideas and
+introduce Standard Model effective field theory as a universal
+language for Higgs physics.
 
 Our introduction to Higgs physics will be superficial, and the EFT
 part eschews mathematical rigour for a broad picture of the central
@@ -920,11 +921,11 @@ space-time dimensions, an approach that has proven very successful in
 high-energy physics so far. EFTs are then defined as a sum of
 operators $\ope{i}$, each with a specific mass dimension $D_i$. We can
 split the coupling in front of each operator into a dimensionless
-constant, the \emph{Wilson coefficient} $c_i$, and some powers of a
+constant, the \emph{Wilson coefficient} $f_i$, and some powers of a
 mass scale, for which we use the scale of heavy physics $\Lambda$:
 %
 \begin{equation}
-  \lgr{EFT} = (\text{kinetic and mass terms}) + \sum_i \frac {c_i} {\Lambda^{D_i - d}} \, \ope{i} \,.
+  \lgr{EFT} = (\text{kinetic and mass terms}) + \sum_i \frac {f_i} {\Lambda^{D_i - d}} \, \ope{i} \,.
   \label{eq:foundations_EFT_lagrangian}
 \end{equation}
 %
@@ -936,7 +937,7 @@ dimensionless couplings $g \sim \ord{1}$ and mass scales
 $M \sim \ord{\Lambda}$. Indirect effects mediated by this high-energy
 physics should therefore be proportional to a combination of these
 factors, as given in Eq.~\eqref{eq:foundations_EFT_lagrangian} with
-couplings $c_i \sim \ord{1}$. This is certainly true in Fermi theory,
+couplings $f_i \sim \ord{1}$. This is certainly true in Fermi theory,
 where the effective coupling $G_F$ is suppressed by
 $\Lambda^2 = m_W^2$.
 
@@ -1112,16 +1113,16 @@ and lead to some freedom to choose which operators to work with.
 % include four fermion fields and no derivatives:
 % %
 % \begin{align}
-%   \lgr{} &\supset \frac {c_{1 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i \psi_j \right) \left( \bar{\psi}_k \psi_l \right)
-%                      + \frac {c_{2 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_5 \psi_j \right) \left( \bar{\psi}_k \psi_l \right) \notag \\
-%            &\quad + \frac {c_{3 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_5 \psi_j \right) \left( \bar{\psi}_k \gamma_5 \psi_l \right)
-%                      + \frac {c_{4 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_\mu \psi_j \right) \left( \bar{\psi}_k \gamma^\mu \psi_l \right) \notag \\
-%           &\quad  + \frac {c_{5 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_5 \gamma_\mu \psi_j \right) \left( \bar{\psi}_k \gamma^\mu \psi_l \right)
-%                      + \frac {c_{6 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_5 \gamma_\mu \psi_j \right) \left( \bar{\psi}_k \gamma_5 \gamma^\mu \psi_l \right) \notag \\
-%          &\quad  + \frac {c_{7 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_\mu \gamma_\nu \psi_j \right) \left( \bar{\psi}_k \gamma^\mu \gamma^\nu \psi_l \right) \,,
+%   \lgr{} &\supset \frac {f_{1 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i \psi_j \right) \left( \bar{\psi}_k \psi_l \right)
+%                      + \frac {f_{2 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_5 \psi_j \right) \left( \bar{\psi}_k \psi_l \right) \notag \\
+%            &\quad + \frac {f_{3 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_5 \psi_j \right) \left( \bar{\psi}_k \gamma_5 \psi_l \right)
+%                      + \frac {f_{4 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_\mu \psi_j \right) \left( \bar{\psi}_k \gamma^\mu \psi_l \right) \notag \\
+%           &\quad  + \frac {f_{5 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_5 \gamma_\mu \psi_j \right) \left( \bar{\psi}_k \gamma^\mu \psi_l \right)
+%                      + \frac {f_{6 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_5 \gamma_\mu \psi_j \right) \left( \bar{\psi}_k \gamma_5 \gamma^\mu \psi_l \right) \notag \\
+%          &\quad  + \frac {f_{7 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_\mu \gamma_\nu \psi_j \right) \left( \bar{\psi}_k \gamma^\mu \gamma^\nu \psi_l \right) \,,
 % \end{align}
 % %
-% Here some entries of the Wilson coefficient matrices $c_1$ to $c_7$
+% Here some entries of the Wilson coefficient matrices $f_1$ to $f_7$
 % have to be zero to conserve lepton and baryon number. We will drop
 % these flavour indices from now on.
 
@@ -1131,7 +1132,7 @@ and lead to some freedom to choose which operators to work with.
 % % should be significantly separated from the light quark and lepton
 % % masses for our EFT to make sense.
 % With the measurement of the muon lifetime, beta decay, and parity
-% violation it turns out that the $c_5$ and $c_6$ coefficients are equal
+% violation it turns out that the $f_5$ and $f_6$ coefficients are equal
 % and of opposite sign, while the others are zero (ignoring $Z$ and $H$
 % interactions):
 % %
@@ -1234,9 +1235,9 @@ possible at these energies. The first such operators appear at mass
 dimension 7,
 %
 \begin{equation}
-  \lgr{int} = \frac {c_1} {\Lambda^3} \phi_v^\dagger \phi_v F_{\mu \nu} F^{\mu \nu} 
-  + \frac {c_2} {\Lambda^3} \phi_v^\dagger \phi_v v^\alpha F_{\alpha \mu} v_{\beta} F^{\beta \mu} 
-  % + \frac {c_3} {\Lambda^3} \phi_v^\dagger \phi_v v^\alpha \partial_\alpha (F_{\mu \nu} F^{\mu \nu})
+  \lgr{int} = \frac {f_1} {\Lambda^3} \phi_v^\dagger \phi_v F_{\mu \nu} F^{\mu \nu} 
+  + \frac {f_2} {\Lambda^3} \phi_v^\dagger \phi_v v^\alpha F_{\alpha \mu} v_{\beta} F^{\beta \mu} 
+  % + \frac {f_3} {\Lambda^3} \phi_v^\dagger \phi_v v^\alpha \partial_\alpha (F_{\mu \nu} F^{\mu \nu})
   + \ord{1/\Lambda^4} \,,
 \end{equation}
 %
@@ -1806,7 +1807,7 @@ chosen only slightly below the EFT cutoff), at the scale of interest
 $E$ they will take on values of the form
 %
 \begin{equation}
-  c_i (E) \sim c_i(\Lambda) \pm \sum_j \frac {g^2} {16 \pi^2} \, \log \frac {\Lambda^2} {E^2} \,c_j(\Lambda) \,,
+  f_i (E) \sim f_i(\Lambda) \pm \sum_j \frac {g^2} {16 \pi^2} \, \log \frac {\Lambda^2} {E^2} \,f_j(\Lambda) \,,
   \label{eq:foundations_EFT_running}
 \end{equation}
 %
@@ -2116,8 +2117,8 @@ generators, and
 \end{table}
 
 In addition to these $CP$-conserving structures, there are a number of
-$CP$-violating operators. Those relevant for Higgs physics are
-bosonic~\cite{Gavela:2014vra, Hankele:2006ma}, see
+$CP$-violating operators. We only list the bosonic ones relevant for
+Higgs physics~\cite{Gavela:2014vra, Hankele:2006ma} in
 Table~\ref{tbl:foundations_operators_bosonic_odd}. They involve the
 dual field strength tensors
 %
@@ -2185,7 +2186,7 @@ equations of motions for the Higgs field and the electroweak gauge
 bosons read~\cite{Grzadkowski:2010es}
 %
 \begin{align}
-  D^2 \phi &= - \mu^2 \phi - \frac \lambda 2 (\phisq) \phi - \sum_f y_f \overbar{f}_R f_L + \ord{1/\Lambda^2} \,, \\
+  D^2 \phi &= - \mu^2 \phi - 2 \lambda (\phisq) \phi - \sum_f y_f \overbar{f}_R f_L + \ord{1/\Lambda^2} \,, \\
   % (D^\rho G_{\rho \mu})^a &= g_s \left( \overbar{q}_L \gamma_\mu T^a q_L + \overbar{u}_R \gamma_\mu T^a u_R + \overbar{d}_R \gamma_\mu T^a d_R  + \ord{1/\Lambda^2} \,,   \\
   \partial^\rho B_{\rho \mu} &= - \frac {g'} 2 \left( \im  \phi^\dagger \overleftrightarrow{D}_\mu \phi + \sum_f Y_f \overbar{f} \gamma_\mu f \right) + \ord{1/\Lambda^2} \,, \\
   (D^\rho W_{\rho \mu})^a &= \frac g 2 \left( \im \phi^\dagger \overleftrightarrow{D}_\mu^a \phi + \overbar{q}_L \gamma_\mu \sigma^a q_L + \overbar{\ell}_L \gamma_\mu \sigma^a \ell_L  \right) + \ord{1/\Lambda^2} \,, 
@@ -2196,10 +2197,8 @@ Eq.~\eqref{eq:foundations_field_redefinitions}, this provides us with
 three equivalence relations between dimension-six
 operators~\cite{Corbett:2012ja, Corbett_thesis}:
 %
-\comment{Check first line.}
-%
 \begin{align}
-  2 \ope{\phi,2} + 2 \ope{\phi,4} + 2 \mu^2 (\phisq)^2 + 3 \lambda \ope{6} &= 2 \sum_f y_f \ope{f} + \ord{1/\Lambda^4}\\
+  \ope{\phi,2} + \ope{\phi,4} - \mu^2 (\phisq)^2 - 6 \lambda \ope{6} &= \sum_f y_f \ope{f} + \ord{1/\Lambda^4}\\
   2 \ope{B} + \ope{BW} + \ope{BB} + g'^2 \left( \ope{\phi,1} - \frac 1 2 \ope{\phi,2} \right) &= - \frac {g'^2} 2 \sum_f Y_f \ope{\phi f}^{(1)} + \ord{1/\Lambda^4}\\
   2 \ope{W} + \ope{BW} + \ope{WW} + g^2 \left( \ope{\phi,4} - \frac 1 2 \ope{\phi,2} \right) &= - \frac {g^2} 4 \left( \ope{\phi L}^{(3)} +  \ope{\phi Q}^{(3)} \right) + \ord{1/\Lambda^4}\,.
 \end{align}
@@ -2486,27 +2485,78 @@ the high-energy tail of the distribution.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 After these two worked-out examples, we now give the complete list of
-Higgs couplings induced by the dimension-six operators of
+single-Higgs couplings induced by the dimension-six operators of
 Eqs.~\eqref{eq:foundations_operators_even} and
 \eqref{eq:foundations_operators_odd}, some of which were calculated in
-Refs.~\cite{Corbett:2012ja, Corbett_thesis} and cross-checked by
-us. Here we expand non-linear effects from the field redefinition in
-Eq.~\eqref{eq:foundations_ophi2_rescaling} to $\ord{1/\Lambda^2}$.
+Refs.~\cite{Corbett:2012ja, Corbett_thesis} and cross-checked by us.
+%
+\comment{Add Higgs self-interactions?}
 
-First, the Higgs-gauge interactions read
+These interactions read
 %
 \begin{align}
   \lgr{EFT} &\supset
-  \frac {f_{GG} v} {\Lambda^2} \, h G_{\mu \nu}^a G^{\mu \nu \, a}
-  - \frac {g^2 v s^2 (f_{WW} + f_{BB}) } {4 \Lambda^2}  \, h A_{\mu \nu} A^{\mu \nu}
-  + \dots
+              g_{hgg} \; h G^a_{\mu\nu} G^{a \, \mu\nu}
+              + g_{h\gamma\gamma} \; h A_{\mu \nu} A^{\mu \nu} \notag \\
+            &\phantom{=} \quad
+              + g^{(1)}_{hZ\gamma} \; A_{\mu \nu} Z^{\mu} \partial^{\nu} h
+              + g^{(2)}_{hZ\gamma} \; h A_{\mu \nu} Z^{\mu \nu} \notag \\
+            &\phantom{=} \quad
+              + g^{(1)}_{hZZ}  \; Z_{\mu \nu} Z^{\mu} \partial^{\nu} h
+              + g^{(2)}_{hZZ}  \; h Z_{\mu \nu} Z^{\mu \nu}
+              + g^{(3)}_{hZZ}  \; h Z_\mu Z^\mu 
+              + g^{(4)}_{hZZ}  \; h \varepsilon_{\mu \nu \rho \sigma}  Z^{\mu \nu} Z^{\rho \sigma} \notag \\
+            &\phantom{=} \quad
+              + g^{(1)}_{hWW}  \; \left (W^+_{\mu \nu} W^{- \, \mu} \partial^{\nu} h + \hc \right)
+              + g^{(2)}_{hWW}  \; h W^+_{\mu \nu} W^{- \, \mu \nu}
+              + g^{(3)}_{hWW}  \; h W^+_{\mu} W^{- \, \mu} \notag \\
+            &\phantom{=} \qqqqquad
+              + g^{(4)}_{hWW}  \; h \varepsilon_{\mu \nu \rho \sigma} W^{+ \, \mu \nu} W^{- \, \rho \sigma} \notag \\
+            &\phantom{=} \quad
+              + \sum_{f=\tau,t,b} \left( g_{hff} h \overbar{f}_L f_R + \hc \right) 
+  \label{eq:foundations_higgs_interactions}
 \end{align}
 %
-\comment{To here. Continue translating Eqs.~(15) and (16) of Power to
-  the Data to here, and check with the EFT to its Limits appendix.}
+with couplings
+%
+\begin{alignat}{2}
+  g_{hgg} &= \frac {f_{GG} v} {\Lambda^2} \,, \quad & \quad 
+  g^{(1)}_{hZ\gamma}  &= \frac {g^2 v s (f_{W} - f_{B}) } {4 c \Lambda^2} \,, \notag \\
+  %
+  g_{h\gamma\gamma} &= - \frac {g^2 v s^2 (f_{WW} + f_{BB}) } {4 \Lambda^2} \,, \quad & \quad 
+  g^{(2)}_{hZ\gamma} &= \frac {g^2 v s (2 s^2 f_{BB} - 2 c^2 f_{WW}) } {4 c \Lambda^2} \,, \notag \\
+  %
+  g^{(1)}_{hZZ} &= \frac {g^2 v (c^2 f_{W} + s^2 f_{B}) } {4 c^2 \Lambda^2} \,, \quad & \quad 
+  g^{(1)}_{hWW} &= \frac {g^2 v f_W } {4 \Lambda^2} \,, \notag \\
+  %
+  g^{(2)}_{hZZ} &= - \frac {g^2 v (s^4 f_{BB} + c^4 f_{WW}) } {4 c^2 \Lambda^2} \,, \quad & \quad 
+  g^{(2)}_{hWW} &= - \frac {g^2 v f_{WW}} {2 \Lambda^2} \,, \notag \\
+  %
+  g^{(3)}_{hZZ} &= \frac {g^2 v} {4 c^2} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2} \,, \quad & \quad 
+  g^{(3)}_{hWW} &= \frac {g^2 v} {2} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2}  \,, \notag \\
+  %
+  g^{(4)}_{hZZ} &= - \frac {g^2 v (s^4 f_{B\widetilde{B}} + c^4 f_{W\widetilde{W}}) } {8 c^2 \Lambda^2} \,, \quad & \quad 
+  g^{(4)}_{hWW} &= - \frac {g^2 v f_{W\widetilde{W}}} {4 \Lambda^2}  \notag \\
+  %
+  g_{hff} &= - \frac {m_f} {v} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2}
+  + \frac {v^2 f_f} {\sqrt{2} \Lambda^2} \,.
+  \label{eq:foundations_higgs_couplings}
+\end{alignat}
+%
+\comment{Check $CP$-odd ones.}
+%
+Here $s \equiv g' / \sqrt{g^2 + g'^2}$ and $c = \sqrt{1 - s^2}$ are
+the sine and cosine of the weak mixing angle, and
+$V_{\mu\nu} = \partial_\mu V_\nu - \partial_\nu V_\mu$ for
+$V = A, W^\pm, Z$.
 
-
-
+Note that the clear majority of the couplings in
+Eq.~\eqref{eq:foundations_higgs_interactions} does not exist in the SM
+and contains derivatives. Dimension-six operators predict a variety of
+novel kinematic features in Higgs interactions, making their
+measurement at the LHC both exciting and challenging.
+%
+\comment{To here.}
 
 
 
@@ -2589,7 +2639,7 @@ by the way refer to the behaviour under custodial transformations.
 %
 \item operators
 %
-\item similarity to chiral perturbation theory, cite Astrid if at all possible
+\item similarity to chiral perturbation theory, cite Astrid~\cite{HillerBlin:2016jpb} if at all possible
 %
 \item stress that same physics is described (with examples?), explain different c (see Claudius Krause's thesis)
 \end{itemize}

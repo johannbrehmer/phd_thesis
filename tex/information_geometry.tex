@@ -453,10 +453,10 @@ with Monte-Carlo methods. With
 we find
 %
 \begin{equation}
-  I_{ij} (\boldg)
-  = \sum_{\text{events } k} \frac{L}{\Delta \sigma_k (\boldg)}
-  \pder { \Delta \sigma_k (\boldg)} {g_i} \,
-  \pder { \Delta \sigma_k (\boldg)} {g_j} \,,
+  I_{ij} (\boldtheta)
+  = \sum_{\text{events } k} \frac{L}{\Delta \sigma_k (\boldtheta)}
+  \pder { \Delta \sigma_k (\boldtheta)} {g_i} \,
+  \pder { \Delta \sigma_k (\boldtheta)} {g_j} \,,
   \label{eq:information_from_events}
 \end{equation}
 %
@@ -1563,20 +1563,20 @@ term with width $\sigma_k$, the additional term in the Fisher
 information reads
 %
 \begin{align}
-  I_{ij} (\boldg,\boldsymbol{\nu}) = \dots + \frac {\delta_{ik} \delta_{jk}} {\sigma_k^2} \,.
+  I_{ij} (\boldtheta,\boldsymbol{\nu}) = \dots + \frac {\delta_{ik} \delta_{jk}} {\sigma_k^2} \,.
 \end{align} 
 %
 This also applies to a log-normal constraint through reparametrization
 of $\nu$.  Local and global distances now refer to combined theory and
-nuisance parameters $(\boldg,\boldsymbol{\nu})$.
+nuisance parameters $(\boldtheta,\boldsymbol{\nu})$.
 
-We define a profiled local distance between two points $\boldg_b$ and
-$\boldg_a$
+We define a profiled local distance between two points $\boldtheta_b$ and
+$\boldtheta_a$
 %
 \begin{align}
-  d_{\text{profiled}} (\boldg_b, \boldg_a)
-  = \min_{\boldsymbol{\nu}}   \; d_{\text{local}}( (\boldg_b,\boldsymbol{\nu}) ;
-  (\boldg_a , \mathbf{0} ) ) \,.
+  d_{\text{profiled}} (\boldtheta_b, \boldtheta_a)
+  = \min_{\boldsymbol{\nu}}   \; d_{\text{local}}( (\boldtheta_b,\boldsymbol{\nu}) ;
+  (\boldtheta_a , \mathbf{0} ) ) \,.
 \end{align}
 %
 Equivalently, we can define a profiled Fisher information
@@ -1602,9 +1602,9 @@ by
 %--------------------------------------------------------
 \begin{figure}
   \centering
-  \includegraphics[height=0.45 \textwidth]{figures/wbf_tautau_systematics_nuisance}
+  \includegraphics[height=0.45 \textwidth]{fig/information/wbf_tautau_systematics_nuisance.pdf}
   \hspace*{0.05\textwidth}
-  \includegraphics[height=0.45 \textwidth]{figures/wbf_tautau_systematics_profiled}
+  \includegraphics[height=0.45 \textwidth]{fig/information/wbf_tautau_systematics_profiled.pdf}
   \caption{Effects of Gaussian uncertainties of $5\%$ and $10\%$ on
     the total signal rate. In the left panel we show the expected
     error ellipse $d_{\text{local}}( (g,\nu) ; \boldzero) = 1$ in
@@ -1619,7 +1619,7 @@ by
 %--------------------------------------------------------
 \begin{figure}
   \centering
-  \includegraphics[height=0.6 \textwidth]{figures/wbf_tautau_histos_comparison_systematics}
+  \includegraphics[height=0.6 \textwidth]{fig/information/wbf_tautau_histos_comparison_systematics.pdf}
   \caption{Fisher information for the WBF $H \to \tau \tau$ channel
     profiled over a $10\%$ signal rate uncertainty. We compare the
     information for the full phase space, after the cuts in
@@ -1660,25 +1660,25 @@ reduced by 800~GeV.
 
 There is some subtlety in the relationship between 
 standard likelihood ratio tests and the Fisher distance.
-We anticipate that the confidence intervals in $\boldg$ will continue 
+We anticipate that the confidence intervals in $\boldtheta$ will continue 
 to be based on likelihood ratio tests.
-While both are invariant to reparametrization of $\boldg$, 
- non-linear terms in $\boldg$ that lead to curvature in the information
+While both are invariant to reparametrization of $\boldtheta$, 
+ non-linear terms in $\boldtheta$ that lead to curvature in the information
 geometry can break the one-to-one relationship between the 
 expected value of the log-likelihood ratio and the Fisher information distance.
 
 In Fig.~\ref{fig:wbf_tautau_llr} we compare the two tools. As an
 example, we study WBF Higgs production in the $\tau \tau$ mode and
-sample parameter points $\boldg$ in the $\ope{W}$-$\ope{WW}$
+sample parameter points $\boldtheta$ in the $\ope{W}$-$\ope{WW}$
 plane. For each of these points we calculate the local and global
 distance from the SM defined by the Fisher information, as well as the
 expected log-likelihood ratio 
 %
 \begin{align}
-  q(\boldg_b , \boldg_a )
+  q(\boldtheta_b , \boldtheta_a )
   \equiv -2 \, E \left[
-  \log \frac { f(\mathbf{x}|\boldg_b) }   { f(\mathbf{x} |\boldg_a) }
-  \middle | \boldg_a \right] \,.
+  \log \frac { f(\mathbf{x}|\boldtheta_b) }   { f(\mathbf{x} |\boldtheta_a) }
+  \middle | \boldtheta_a \right] \,.
 \end{align}
 %
 For small significance deviations, the local and especially the global distances are 
@@ -1690,9 +1690,9 @@ convenience.
 
 %--------------------------------------------------------
 \begin{figure}
-  \includegraphics[height=0.45 \textwidth]{figures/wbf_tautau_local_distance_vs_llr}
+  \includegraphics[height=0.45 \textwidth]{fig/information/wbf_tautau_local_distance_vs_llr}
   \hspace*{0.05\textwidth}
-  \includegraphics[height=0.45 \textwidth]{figures/wbf_tautau_distance_vs_llr}
+  \includegraphics[height=0.45 \textwidth]{fig/information/wbf_tautau_distance_vs_llr}
   \caption{Comparison of the local (left) and global (right) distances
     defined by the Fisher information with the expected local
     likelihood ratio. We use WBF Higgs production in the $\tau \tau$
