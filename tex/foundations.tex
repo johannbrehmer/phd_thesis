@@ -576,6 +576,10 @@ but the first sign of what lies beyond.
 \label{sec:foundations_eft}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\comment{Check that all arguments of
+  \url{http://indico.cern.ch/event/477407/contributions/2200060/attachments/1369793/2076900/AM_HiggsCouplings2016.pdf}
+  are in this section. In particular slide 5.}
+
 This plethora of possible BSM models means that a model-independent
 universal theory framework is invaluable for TeV signatures of new
 physics. We will consider such a model based on the effective field
@@ -973,6 +977,7 @@ $\Lambda^2 = m_W^2$.
 %   interaction in the full model is approximated as a local contact
 %   interaction in the EFT.
 % \end{itemize}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1831,11 +1836,11 @@ symmetries will receive contributions from it.
 
 We now apply these general ideas to electroweak and in particular
 Higgs physics at the TeV scale and construct the Standard Model
-effective field theory or linear Higgs effective field theory up to
-dimension six. This is the framework we will use throughout this
-thesis. We will first argue why such an effective theory is very
-useful, and then construct its effective operators following the
-recipe laid out in
+effective field theory (interchangeably called linear Higgs effective
+field theory) up to dimension six. This is the framework we will use
+throughout this thesis. We will first argue why such an effective
+theory is very useful, and then construct its effective operators
+following the recipe laid out in
 Section~\ref{sec:foundations_eft_bottom_up}. Section~\ref{sec:foundations_heft_pheno}
 will take a closer look at the phenomenology of these
 operators. Finally, in Section~\ref{sec:foundations_heft_alternatives}
@@ -1958,11 +1963,11 @@ Three different conventions have become popular: in addition to the
 complete ``Warsaw'' basis~\cite{Grzadkowski:2010es}, there is the SILH
 convention~\cite{Giudice:2007fh} and the HISZ
 basis~\cite{Hagiwara:1993ck}. For a comparison of and conversion
-between these bases see Ref.~\cite{Falkowski:2015wza}\comment{More
-  references?}. Throughout this thesis we use the basis developed
-in~Refs.~\cite{Corbett:2012ja, Corbett_thesis}, which is strongly
-based on the HISZ basis and now widely used in global
-fits~\cite{Corbett:2015ksa, Butter:2016cvz}.
+between these bases see Refs.~\cite{Falkowski:2015wza,
+  Brehmer:2015rna}\comment{More references?}. Throughout this thesis
+we use the basis developed in~Refs.~\cite{Corbett:2012ja,
+  Corbett_thesis}, which is strongly based on the HISZ basis and now
+widely used in global fits~\cite{Corbett:2015ksa, Butter:2016cvz}.
 
 We classify the operators based on their field content and on their
 behaviour under $CP$ transformations. This combined charge conjugation
@@ -2226,13 +2231,14 @@ data. Electroweak precision measurements limit the Wilson coefficients
 of $\ope{\phi,1}$, $\ope{BW}$, $\ope{\phi f}^{(1)}$,
 $\ope{\phi f}^{(3)}$, $\ope{B\widetilde{W}}$, and
 $\ope{\widetilde{B}}$ to a level where their effects in Higgs physics
-are small. Measurements of electric diple moments put tight constrains
+are small. Measurements of electric dipole moments put tight constrains
 on the dipole operators. We will ignore all these
 operators.\footnote{This simple argument is suitable for our rather
   conceptual work. In a thorough global fit, however, it should be
   checked carefully whether these constraints are actually strong
   enough to make all these operator irrelevant for Higgs physics in
-  all cases. In particular, the increasing precision in Higgs
+  all cases. Such a check should include RGE effects when comparing
+  constraints from different scales. The increasing precision in Higgs
   observables means that many of these operators will become relevant
   again in the future.}
 
@@ -2471,7 +2477,7 @@ and momentum, which we can measure for instance as the invariant mass
 of the final $Zh$ system. From
 Eq.~\eqref{eq:foundations_OW_HWW_Feynman_rule} we expect that the
 effects from $\ope{W}$ will grow with $m_{Zh}$. In
-Fig.~\ref{fig:OW_Zh_demo} we demonstrate this by comparing the
+Fig.~\ref{fig:foundations_OW_Zh_demo} we demonstrate this by comparing the
 distribution of $m_{Zh}$ based on only the SM couplings, on the
 dimension-6 operator $\ope{W}$ only, and on the interference between
 the two components. Indeed we see that $\ope{W}$ contributes mostly in
@@ -2496,7 +2502,8 @@ These interactions read
 %
 \begin{align}
   \lgr{EFT} &\supset
-              g_{hgg} \; h G^a_{\mu\nu} G^{a \, \mu\nu}
+              g^{(1)}_{hgg} \; h G^a_{\mu\nu} G^{a \, \mu\nu}
+              + g^{(2)}_{hgg} \; \varepsilon_{\mu \nu \rho \sigma} h G^{a\, \mu\nu} G^{a \, \rho\sigma}
               + g_{h\gamma\gamma} \; h A_{\mu \nu} A^{\mu \nu} \notag \\
             &\phantom{=} \quad
               + g^{(1)}_{hZ\gamma} \; A_{\mu \nu} Z^{\mu} \partial^{\nu} h
@@ -2520,11 +2527,15 @@ These interactions read
 with couplings
 %
 \begin{alignat}{2}
-  g_{hgg} &= \frac {f_{GG} v} {\Lambda^2} \,, \quad & \quad 
+  g^{(1)}_{hgg} &= \frac {f_{GG} v} {\Lambda^2} \,, \quad & \quad 
   g^{(1)}_{hZ\gamma}  &= \frac {g^2 v s (f_{W} - f_{B}) } {4 c \Lambda^2} \,, \notag \\
   %
-  g_{h\gamma\gamma} &= - \frac {g^2 v s^2 (f_{WW} + f_{BB}) } {4 \Lambda^2} \,, \quad & \quad 
+  g^{(2)}_{hgg} &= \frac {f_{G\widetilde{G}} v} {2 \Lambda^2} \,, \quad & \quad 
   g^{(2)}_{hZ\gamma} &= \frac {g^2 v s (2 s^2 f_{BB} - 2 c^2 f_{WW}) } {4 c \Lambda^2} \,, \notag \\
+  %
+  g_{h\gamma\gamma} &= - \frac {g^2 v s^2 (f_{WW} + f_{BB}) } {4 \Lambda^2} \,, \quad & \quad 
+  g_{hff} &= - \frac {m_f} {v} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2}
+  + \frac {v^2 f_f} {\sqrt{2} \Lambda^2} \,, \notag \\
   %
   g^{(1)}_{hZZ} &= \frac {g^2 v (c^2 f_{W} + s^2 f_{B}) } {4 c^2 \Lambda^2} \,, \quad & \quad 
   g^{(1)}_{hWW} &= \frac {g^2 v f_W } {4 \Lambda^2} \,, \notag \\
@@ -2536,10 +2547,7 @@ with couplings
   g^{(3)}_{hWW} &= \frac {g^2 v} {2} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2}  \,, \notag \\
   %
   g^{(4)}_{hZZ} &= - \frac {g^2 v (s^4 f_{B\widetilde{B}} + c^4 f_{W\widetilde{W}}) } {8 c^2 \Lambda^2} \,, \quad & \quad 
-  g^{(4)}_{hWW} &= - \frac {g^2 v f_{W\widetilde{W}}} {4 \Lambda^2}  \notag \\
-  %
-  g_{hff} &= - \frac {m_f} {v} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2}
-  + \frac {v^2 f_f} {\sqrt{2} \Lambda^2} \,.
+  g^{(4)}_{hWW} &= - \frac {g^2 v f_{W\widetilde{W}}} {4 \Lambda^2}  \,.
   \label{eq:foundations_higgs_couplings}
 \end{alignat}
 %
@@ -2555,10 +2563,6 @@ Eq.~\eqref{eq:foundations_higgs_interactions} does not exist in the SM
 and contains derivatives. Dimension-six operators predict a variety of
 novel kinematic features in Higgs interactions, making their
 measurement at the LHC both exciting and challenging.
-%
-\comment{To here.}
-
-
 
 
 
@@ -2568,43 +2572,60 @@ measurement at the LHC both exciting and challenging.
 \label{sec:foundations_heft_alternatives}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+The linear Higgs EFT discussed above is not the only useful
+parametrisation of Higgs properties. We will briefly go through some
+of the alternative frameworks and explain their main properties,
+before finishing this chapter with a comparison of the different
+approaches.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{$\kappa$ framework}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-One alternative is to dress the SM Lagrangian with form factors, as
-done for instance in the $\kappa$ framework (sometimes called $\Delta$
-framework) of Higgs physics. Such an approach is well suited to
-parametrise shifts in total rates, but unable to account for new
-structures that are not present in the SM, visible as changes in
-distributions. For better or worse, this framework is also agnostic
-about correlations between different couplings: there is no clear way
-how to combine the results from triple gauge vertices and Higgs
-properties, for instance. Finally, the $\kappa$ framework is not
-gauge-invariant, which means it does not present a consistent quantum
-field theory and does not work reliably beyond tree level in the
-electroweak expansion.
-
-\comment{See
-  \url{http://indico.cern.ch/event/477407/contributions/2200060/attachments/1369793/2076900/AM_HiggsCouplings2016.pdf}}
-
-\begin{itemize}
-\item describe; name $\Delta$ and $\kappa$ conventions. Subtleties with
-  loop effects.
+During run~1 of the LHC, the most widely used parametrisation of the
+Higgs properties was the $\kappa$
+framework~\cite{LHCHiggsCrossSectionWorkingGroup:2012nn} or the
+closely related $\Delta$ framework~\cite{Lafaye:2009vr}. Its
+construction is remarkably simple: starting from the SM Higgs sector,
+all Higgs couplings are dressed with form factors,
 %
-\item theoretical issues: not gauge invariant, not renormalisable, not
-  unitary; so probably should not calculate electroweak loop
-  corrections (QCD is fine). However, can be linked to UV-complete
-  models such as 2HDMI, cite David and Til man
+\begin{equation}
+  g_{hxx} = \kappa_x g_{hxx}^{\text{SM}} \,.
+\end{equation}
 %
-\item practical perspective: can describe changed SM-like couplings,
-  but not new structures. Often, but not always translates to rate vs
-  distributions. As argued above the kinematic information will be
-  important for general new physics models, so $\kappa$ model is out.
-\end{itemize}
+Some care has to be taken to treat the Higgs-gluon and Higgs-photon
+couplings consistently, where indirect effects of shifted Higgs-top or
+Higgs-$W$ couplings compete with direct effects from new
+physics~\cite{Lafaye:2009vr}.
+
+From a theoretical point of view, the $\kappa$ framework is not
+gauge-invariant and does not present a consistent quantum field
+theory. In practice, this means that electroweak loop effects may
+introduce divergences that cannot be renormalised.~\comment{Citation?}
+This problem can be solved by embedding the $\kappa$ framework in a UV
+completion~\cite{Lopez-Val:2013yba}.
+
+From a more phenomenological point of view, this approach is well
+suited to parametrise measurements of total rates. Simple shifts of
+SM-like Higgs coupling structures are expected in some scenarios of
+new physics, for instance in many scalar extensions of the Higgs
+sector~\cite{Lopez-Val:2013yba}. But many other models predict new
+kinematic features, visible as changed kinematic shapes, and the
+$\kappa$ framework is unable to describe these. For better or worse,
+it is also agnostic about correlations between different Higgs
+couplings, and about correlations between Higgs observables and triple
+gauge vertices or electroweak precision measurements.
+
+The strength of the $\kappa$ framework is clearly not its theoretical
+foundation. Its allure comes from its simplicity and the fact that it
+is designed around the simple question of measuring the couplings of
+the (SM-like) Higgs boson. This parametrisation made sense as a
+common denominator for the first Higgs measurements with limited
+statistics of run~1 of the LHC. But the increased amount of data and
+crucial kinematic information collected during run~2 require a
+different, more sophisticated language.
 
 
 
@@ -2612,39 +2633,93 @@ electroweak expansion.
 \subsubsection{Pseudo-Observables}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{itemize}
-\item form factor approach
-%
-\item same theory issues as $\kappa$ framework
-%
-\item can describe distributions
-%
-\item conceptually, closer to experiment and farther away from theory than EFT
-%
-\item lacks theoretical foundation of EFT, and something else why it's terrible
-\end{itemize}
+Higgs pseudo-observables (POs)~\cite{Isidori:2013cga, Bordone:2015nqa,
+  Greljo:2015sla} are designed as a generalisation of the $\kappa$
+framework to include BSM kinematic features. In a very broad sense,
+this term encompasses any number that is field theoretically defined
+and can be experimentally accessed~\cite{Krause:2016uhw}. Signal
+strengths, cross sections, partial widths, total widths, and
+individual form factors or couplings all fall under this umbrella
+term. Here we follow the more narrow definition of effective-coupling
+PO~\cite{deFlorian:2016spz}. Pseudo-observables are then constructed
+process by process by writing down all contributing amplitudes under
+some broad assumptions on new physics. These expressions are then
+decomposed in a pole expansion, and the resulting residues are
+identified as pseudo-observables. This procedure also requires an
+expansion in the inverse of the new physics scale $\Lambda$. This
+means that just as the EFT approach, pseudo-observables rely on new
+physics being heavy, $E \ll \Lambda$. So far, this framework has been
+developed for Higgs production in WBF or Higgs-strahlung, as well as
+for all phenomenologically relevant Higgs decays.
+
+Phenomenologically, pseudo-observables can describe shifts in SM
+couplings as well as kinematic shapes. Like the EFT approach, their
+construction requires certain minimal assumptions on the symmetries of
+new physics as well as an expansion in $1/\Lambda$. In fact, at tree
+level pseudo-observables can be mapped linearly to an EFT constructed
+with the same ingredients (which is the non-linear Higgs EFT discussed
+below).
+
+The main difference between pseudo-observables and the EFT approach is
+a conceptual one. Pseudo-observables are designed from the perspective
+of a given process: they describe the coefficients of the different
+contributing amplitudes. They are not parameters of a Lagrangian and
+do not define a consistent quantum field theory. In particular, the
+values of POs measured in one process have no meaning for other
+processes. Effective operators on the other hand are a proper,
+gauge-invariant quantum field theory that universally describes any
+physics below the cutoff scale, and the same Wilson coefficients
+predict the behaviour of very different processes.
+
+Proponents of the PO approach favour a multi-layer interpretation of
+LHC data, where the data is first presented in terms
+pseudo-observables, which can then be interpreted in terms of EFTs or
+specific models of UV physics. They argue that this approach provides
+a clear separation between measurement and
+interpretation~\cite{deFlorian:2016spz}. On the other hand, proponents
+of the ``direct EFT approach'' argue that there is no need for such an
+intermediate layer, and suggest to directly fit effective
+operators. The debate about which approach is better is still
+ongoing~\cite{deFlorian:2016spz}. Ultimately, both effective operators
+and POs are well-defined frameworks that can describe all relevant
+kinematic effects, and thus present a suitable interface between
+experiment and theory.
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Nonlinear Higgs effective field theory}
+\subsubsection{Non-linear Higgs effective field theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-As an alternative, it is also possible to use $h$ as the fundamental
-building block and to not assume the SM doublet structure of
-Eq.~\eqref{eq:foundations_sm_phi}. This is called the
-\emph{non-linear} Higgs EFT. The terms ``linear'' and ``non-linear''
-by the way refer to the behaviour under custodial transformations.
+The SM EFT (or linear Higgs EFT) constructed in
+Section~\ref{sec:foundations_heft_operators} is not the only effective
+field theory that can describe Higgs physics. It is based on the
+choice to construct operators from the scalar doublet $\phi$ that
+combines the physical Higgs boson and the Goldstones. Alternatively,
+we can separate the physical scalar $h$ from the Goldstones $w_a$ and
+include both independently. Together with new power-counting rules
+which we will discuss later, this defines the non-linear Higgs EFT.  It
+is alternatively simply called ``Higgs EFT'' or ``chiral Higgs EFT''.
 
-\begin{itemize}
-\item building blocks
+As this last name hints, this theory has a structure similar to that
+of chiral perturbation theory, for an introduction see for instance
+Ref.~\cite{HillerBlin:2016jpb}. The Goldstone bosons $w_a$, no longer
+a part of a Higgs doublet, can be organised in the exponential form
 %
-\item operators
+\begin{equation}
+  U = e^{\im \sigma_a w_a} \,.
+\end{equation}
 %
-\item similarity to chiral perturbation theory, cite Astrid~\cite{HillerBlin:2016jpb} if at all possible
+The Goldstones transform non-linearly under the (approximate) global
+custodial symmetry $SU(2)_L \times SU(2)_R$, giving the EFT its name.
+
+The leading-order Lagrangian is then given by
 %
-\item stress that same physics is described (with examples?), explain different counting; cite Claudius Krause's thesis~\cite{Krause:2016uhw}
-\end{itemize}
+\comment{To here}
+
+\comment{stress that same physics is described (with examples?),
+  explain different counting; cite Claudius Krause's
+  thesis~\cite{Krause:2016uhw}}
 
 
 
@@ -2670,7 +2745,7 @@ by the way refer to the behaviour under custodial transformations.
 
 \begin{table}
   \renewcommand{\arraystretch}{1.8}
-  \scriptsize
+  \footnotesize
   \begin{tabularx}{\textwidth}{LLLLLL} 
     \toprule 
     %
@@ -2678,34 +2753,32 @@ by the way refer to the behaviour under custodial transformations.
     \midrule
     %
     Motivation & 
-    experiment: \newline simplest Higgs parameterisation &
-    experiment: \newline Higgs signatures expected in wide range of NP models &
+    experiment: \newline simplest Higgs parametrisation &
+    experiment: \newline amplitude decomposition for given process &
     theory: \newline complete low-energy effects of non-decoupling NP & 
     theory: \newline complete low-energy effects of decoupling NP &
     exp.\,/\,theory:\newline new light particles \\
     %
     Input & 
     SM Higgs couplings &
-    SM particles ($h$), \newline observables, \newline pole expansion ($1/\Lambda$) &
+    process amplitudes, \newline pole expansion,  \newline NP expansion ($1/\Lambda $)&
     SM particles ($h$), \newline symmetries, \newline counting scheme (loops) & 
-    SM particles ($\phi$), \newline symmetries, \newline counting scheme (dimension) & 
+    SM particles ($\phi$), \newline symmetries, \newline counting scheme ($1/\Lambda $) & 
     new particles (masses, charges, interactions) \\
     %
-    QFT consistency & 
-    not gauge-invariant, \newline
-    NLO inconsistencies &
-    not gauge-invariant, \newline
-    NLO inconsistencies &
-    consistent gauge theory & 
-    consistent gauge theory &
+    Parameters & 
+    coefficients of SM amplitude &
+    coefficients of amplitudes &
+    Lagrangian parameters of consistent QFT & 
+    Lagrangian parameters of consistent QFT &
     depends \\
     %
     Validity conditions & 
     SM-like &
-    NP heavy &
-    NP heavy & 
-    NP heavy &
-    single light new particles \\
+    NP heavy, symmetries &
+    NP heavy, symmetries & 
+    NP heavy, symmetries &
+    single light new particles, other NP decouples \\
     \midrule 
     %
     Shifted SM couplings & 
@@ -2729,14 +2802,7 @@ by the way refer to the behaviour under custodial transformations.
     no &
     yes \\
     %
-    Correlations: \newline different Higgs obs.& 
-    no &
-    no &
-    no & 
-    yes &
-    depends \\
-    %
-    Correlations: \newline non-Higgs physics & 
+    Correlations & 
     no &
     no &
     no & 
@@ -2747,22 +2813,23 @@ by the way refer to the behaviour under custodial transformations.
     WBF parameters &
     $\kappa_W$
     &
+    $\kappa_{WW}$, $\varepsilon_{WW}$, $\varepsilon_{WW}^{CP}$, $\varepsilon_{Wu_L}$ &
     &
-    &
-    $\dfrac {f_{\phi,2}} {\Lambda^2}$, $\dfrac {f_{W}} {\Lambda^2}$, $\dfrac {f_{WW}} {\Lambda^2}$ & 
+    $\dfrac {f_{\phi,2}} {\Lambda^2}$, $\dfrac {f_{W}} {\Lambda^2}$, $\dfrac {f_{WW}} {\Lambda^2}$, $\dfrac {f_{W\widetilde{W}}} {\Lambda^2}$ & 
     depends \\
     %                                                                                                
     \bottomrule
   \end{tabularx}
-  \caption[Comparison of different parameterisations of Higgs properties]{Comparison
-    of different parameterisations of Higgs properties.
-    The upper part focusses on the theoretical foundation, the middle part the
-    phenomenology. Finally, we show the parameterisation of new physics in WBF Higgs production
+  \caption[Comparison of different parametrisations of Higgs properties]{Comparison
+    of different parametrisations of Higgs properties. See text for details.}
+  \label{tbl:foundations_framework_comparison}
+\end{table}
+
+The upper part focuses on the theoretical foundation, the middle part the
+    phenomenology. Finally, we list some parameters relevant for WBF Higgs production
     in the different approaches, restricting this example to the dominant $W$-mediated amplitude.
     Since ``simplified models'' describe a rather general idea, many
-    details depend on the specific realisation.}
-  \label{tbl:foundations_operators_bosonic_even}
-\end{table}
+    details depend on the specific realisation.
 
 
 
