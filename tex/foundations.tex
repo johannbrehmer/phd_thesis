@@ -22,11 +22,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \firstword{I}{n this chapter} we review some of the essential concepts
-that underlie the research presented in the next chapters. First, we
+that underlie the research presented in the rest of this thesis. First, we
 briefly summarise the role of the Higgs boson in the Standard Model
 (SM) and its phenomenology at the LHC.
 Section~\ref{sec:foundations_eft} then presents a pedagogical
-introduction to the effective field theory (EFT) idea. In
+introduction to the effective field theory (EFT) concept. In
 Section~\ref{sec:foundations_higgs_eft} we combine these ideas and
 introduce Standard Model effective field theory as a universal
 language for Higgs physics.
@@ -36,7 +36,7 @@ part eschews mathematical rigour for a broad picture of the central
 ideas. For a more thorough introduction to Higgs physics, see for
 instance Ref.~\cite{Plehn:2009nd}. For an extensive introduction to
 EFTs, see Refs.~\cite{Georgi:1994qn,Kaplan:2005es}. Note that the EFT
-section is almost identical to a lecture given in
+section is based on a lecture given in
 Heidelberg~\cite{Brehmer:EFTlecture} and many arguments and examples
 are taken from Refs.~\cite{Georgi:1994qn,Kaplan:2005es}.
 
@@ -584,11 +584,10 @@ This plethora of possible BSM models means that a model-independent
 universal theory framework is invaluable for TeV signatures of new
 physics. We will consider such a model based on the effective field
 theory (EFT) paradigm. Before discussing the specific realisation for
-Higgs physics in the next section, here we give a general introduction
-to the EFT idea.
+Higgs physics in the next section, here we introduce the general EFT idea.
 
-The EFT idea is a very general tool that plays a role in many, if not
-all, areas of physics. Whenever phenomena are spread out over
+Effective field theories are a powerful tool that play a role in many,
+if not all, areas of physics. Whenever phenomena are spread out over
 different energy or length scales, an effective description can be
 valuable, either to simplify calculations, or to actually allow
 model-independent statements that would be impossible without such a
@@ -868,21 +867,21 @@ $g$.\footnote{Massive vector bosons have issues with renormalisability
   mechanism at a higher scale, but this irrelevant for the discussion
   here.}
 
-A key property of each coupling or operator is its \emph{mass
-  dimension}. In simple terms this can be formulated as the following
-question: if you assign a value to a quantity, which power of a mass
-unit such as GeV would this value carry? Since we work in units with
-$\hbar = c = 1$, length and distance dimensions are just the inverse
-of mass dimensions. We will denote the mass dimension of any object
-with squared brackets, where $[\ope{}] = D$ means that $\ope{}$ is of
-dimension mass$^D$, or mass dimension $D$.
+A key property of each coupling or operator is its \emph{canonical
+  dimension} or mass dimension. In simple terms this can be formulated
+as the following question: if you assign a value to a quantity, which
+power of a mass unit such as GeV would this value carry? Since we work
+in units with $\hbar = c = 1$, length and distance dimensions are just
+the inverse of mass dimensions. We will denote the mass dimension of
+any object with squared brackets, where $[\ope{}] = D$ means that
+$\ope{}$ is of dimension mass$^D$, or mass dimension $D$.
 
 In QFT, the action can appear in exponentials such as $e^{\im S}$, so
 it must be dimensionless: $[S] = 0$. The space-time integral in
 Eq.~\eqref{eq:foundations_action} then implies $[\lgr{}] = d = 4$, so every term
 in the Lagrangian has to be of mass dimension 4. Applying this to the
 kinetic terms, we can calculate the mass dimension of all fields. This
-then allows us to calculate the mass dimension of operators and
+then allows us to calculate the mass dimension or canonical dimension of operators and
 couplings in the theory.
 
 In the example in Eq.~\eqref{eq:foundations_action_V_fermions}, the kinetic term
@@ -894,7 +893,7 @@ contains a derivative, so we end up with $[V_\mu] = 1$. With these
 numbers we can check the other operators. In addition to the expected
 $[m] = [m_V] = 1$, we find $[\bar{\psi} \psi V^\mu] = 4$ or $[g] = 0$.
 
-The mass dimension of an operator has two important
+The canonical dimension of an operator has two important
 consequences. First, the renormalisation group flow of a theory,
 i.\,e.\ the running of the couplings between different energy scales,
 largely depends on the mass dimensions of the operators. Operators
@@ -923,7 +922,7 @@ hidden in a renormalisation of the parameters.
 From now on we will only consider EFTs realised as a local QFT in 4
 space-time dimensions, an approach that has proven very successful in
 high-energy physics so far. EFTs are then defined as a sum of
-operators $\ope{i}$, each with a specific mass dimension $D_i$. We can
+operators $\ope{i}$, each with a specific canonical dimension $D_i$. We can
 split the coupling in front of each operator into a dimensionless
 constant, the \emph{Wilson coefficient} $f_i$, and some powers of a
 mass scale, for which we use the scale of heavy physics $\Lambda$:
@@ -1016,7 +1015,7 @@ relevant at the scale of interest. We will go through them one by one.
   different operators. We therefore need some rule to decide which of
   the operators we can neglect. Here the dimensionality of the
   operators becomes important. As argued above, we expect an operator
-  with mass dimension $D > d$ to be suppressed by a factor of roughly
+  with canonical dimension $D > d$ to be suppressed by a factor of roughly
   $1 / \Lambda^{D-d}$. Operators of higher mass dimension are
   therefore more strongly suppressed. Setting a maximal operator
   dimension is thus a way of limiting the EFT to a finite number of
@@ -1598,23 +1597,22 @@ Collecting all the pieces, we have
 At first glance, this is disappointing: this effective action looks
 non-local and involves highly non-trivial integrals. It turns out that
 these can in fact be calculated and give a finite
-result~\cite{tHooft:1978jhc, Denner:1991kt}. \comment{Check
-  discrepancy with Denner's habil!} The full expression is extremely
-ugly. \comment{Just like the dear proof reader\dots} Fortunately, we
-do not need it. Instead, we expand the integrand in powers of
-$1/M^2$. We will only calculate the leading term at $\ord{1/M^2}$. We
-will show that it produces a finite result as well, so the rest term
-at $\ord{1/M^4}$ also has to be finite. Even more, we can argue that
-the rest term at $\ord{1/M^4}$ has to vanish: the coefficient at a
-given order $1/M^k$ in this expansion is an integral without any mass
-scales, and has to lead to a result of mass dimension $k-2$. Only
-$k = 2$ can give a non-zero and finite result, all higher orders
-therefore have to vanish.
+result~\cite{tHooft:1978jhc, Denner:1991kt}. The full expression is
+extremely ugly. \comment{Just like the dear proof reader\dots}
+Fortunately, we do not need it. Instead, we expand the integrand in
+powers of $1/M^2$. We will only calculate the leading term at
+$\ord{1/M^2}$. We will show that it produces a finite result as well,
+so the rest term at $\ord{1/M^4}$ also has to be finite. Even more, we
+can argue that the rest term at $\ord{1/M^4}$ has to vanish: the
+coefficient at a given order $1/M^k$ in this expansion is an integral
+without any mass scales, and has to lead to a result of mass dimension
+$k-2$. Only $k = 2$ can give a non-zero and finite result, all higher
+orders therefore have to vanish.\comment{Something is fishy. Check
+  this argument, and check discrepancy with Denner's habil!}
 % Physically, this corresponds to approximating the loop momenta
 % as lighter then the heavy mass scale, which makes sense in the
 % validity region of the EFT.
-\comment{Check this argument!} In this way, we find the much simpler
-result
+In this way, we find the much simpler result
 %
 \begin{align}
   \seff &\supset \frac {\lambda_2^3} {384 \pi^2 \,M^2 } 
@@ -1846,8 +1844,14 @@ will take a closer look at the phenomenology of these
 operators. Finally, in Section~\ref{sec:foundations_heft_alternatives}
 we briefly discuss a few alternative frameworks.
 
-\newparagraph
-%
+
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Motivation}
+\label{sec:foundations_heft_motivation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 As argued in Section~\ref{sec:foundations_relevance}, there are many
 reasons to suspect new physics in the Higgs sector. Some of these
 arguments, such as the hierarchy problem or the WIMP miracle of dark
@@ -1859,7 +1863,9 @@ how exactly such physics should look like.
 This leaves us with a question highly relevant for upcoming ATLAS and
 CMS analyses: what is the best language to discuss indirect signs of
 new physics at the electroweak scale, in particular in the Higgs
-sector?
+sector? Which parameterisation of Higgs properties provides a good
+interface between different experiments, and between experiment and
+theory?
 
 Directly interpreting measurements in complete models of new physics
 is impractical: for $n_y \gg 1$ signatures and $m_a \gg 1$ models this
@@ -2580,12 +2586,213 @@ approaches.
 
 
 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Non-linear Higgs effective field theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In the SM EFT (or linear Higgs EFT) constructed in
+Section~\ref{sec:foundations_heft_operators} the Higgs boson $h$ and
+the Goldstone bosons $w_a$ form an $SU(2)$ doublet $\phi$ as given in
+Eq.~\eqref{eq:foundations_sm_phi}. But in some models of new physics
+the Higgs is not part of an elementary $SU(2)$ doublet. Typical
+examples are composite Higgs models in which the Higgs boson is a
+pseudo-Goldstone from some strongly interacting
+dynamics~\cite{Kaplan:1983fs, Kaplan:1983sm, Banks:1984gj,
+  Agashe:2004rs, Gripaios:2009pe}. Non-linear Higgs EFT, sometimes
+simply called ``Higgs EFT'', is an effective theory designed for these
+scenarios~\cite{Appelquist:1980vg, Longhitano:1980iz,
+  Appelquist:1984rr, Alonso:2012px, Buchalla:2013rka,
+  Buchalla:2013eza, Brivio:2013pma, Gavela:2014vra, Buchalla:2015wfa,
+  Brivio:2016fzo}. This model is also often referred to as ``chiral
+Lagrangian'', and indeed its structure is similar to that of chiral
+perturbation theory, for an introduction see for instance
+Refs.~\cite{Scherer:2002tk, HillerBlin:2016jpb}.  Again, we begin by
+going through the ingredients to the effective theory before
+constructing the Lagrangian.
+
+The \emph{particle content} of the non-linear Higgs EFT constitutes
+the main difference to the linear Lagrangian: the physical scalar $h$
+is separated from the Goldstones $w_a$, both are included as
+independent degrees of freedom rather than as part of the doublet
+$\phi$. The Higgs boson $h$ is now a singlet under the SM gauge
+symmetry.  The Goldstone bosons $w_a$, no longer a part of a Higgs
+doublet, are organised in the exponential form
+% 
+\begin{equation}
+  U = e^{\im \sigma_a w_a} \,.
+\end{equation}
+% 
+The Goldstones transform non-linearly under the (approximate) global
+custodial symmetry $SU(2)_L \times SU(2)_R$, giving the EFT its name.
+
+The \emph{symmetries} are the same as in the linear case. We require
+invariance under Lorentz transformations as well as under the SM gauge
+group $SU(3)_C \times SU(2)_L \times U(1)_Y$ and baryon and lepton
+number conservation. For simplicity, we will also restrict our brief
+discussion to $CP$-even operators that conserve lepton flavour.
+
+Choosing the \emph{counting scheme} is a little more involved. To
+account for strongly interacting scenarios, we now have to distinguish
+three different scales~\cite{Buchalla:2013eza}:
+% 
+\begin{itemize}
+\item The electroweak scale $v = 246~\gev$, which defines the $W$ and
+  $Z$ mass, but is not necessarily the Higgs vev.
+  % 
+\item The scale $f$ associated to the Goldstone bosons $w_a$ and the
+  Higgs boson $h$ due to some breaking of the underlying dynamics, in
+  analogy to the pion decay constant $f_\pi$.\footnote{In general, the
+    scales associated with $w_a$ and $h$, $f_w$ and $f_h$, can be
+    different, making the power-counting even more complicated.}
+  % 
+\item The cut-off $\Lambda$ of the theory. For weakly coupled physics
+  this can be arbitrary. But one can calculate that the low-energy
+  effective theories from spontaneously broken strongly coupled
+  dynamics break down around
+  $\Lambda \approx 4 \pi f$~\cite{Scherer:2002tk}. A cut-off of this
+  size guarantees for the EFT to be renormalisable order by order.
+\end{itemize}
+
+The existence of three scales means there are two dimensionless
+parameters, so in general the EFT terms are organised in a double
+expansion~\cite{Buchalla:2013eza}. The first is
+% 
+\begin{equation}
+  \xi \equiv \frac {v^2} {f^2} \,.
+\end{equation}
+% 
+The value of $\xi$ defines the non-linearity of the model: the limit
+$\xi \to 0$ restores the linear Lagrangian. An expansion in $\xi$
+exactly corresponds to the power-counting scheme of linear EFT,
+i.\,e.\ ordering operators by their canonical dimension.
+
+The second dimensionless parameter is
+% 
+\begin{equation}
+  \frac {f^2} {\Lambda^2} \approx \frac 1 {16 \pi^2}
+\end{equation}
+% 
+for strongly coupled scenarios. Expanding in $f^2/\Lambda^2$
+corresponds to a loop expansion similar to that in chiral perturbation
+theory. Equivalently, one can define a \emph{chiral dimension}
+$\chi = [\ope{}]_c$ for each operator $\ope{}$ with the
+assignments~\cite{Buchalla:2013eza}
+% 
+\begin{alignat}{5}
+  [f]_c &= 1 \,, \quad &
+  [V_{\mu}]_c &= 0 \,, \quad & 
+  [V_{\mu\nu}]_c &= 1 \,, \quad &
+  [U]_c &= 0 \,, \quad &
+  [h]_c &= 0 \,, \quad \notag \\
+  [\partial_\mu]_c &= 1 \,, \quad  &
+  [D_\mu]_c &= 1 \,, \quad &
+  [g]_c &= 1 \,, \quad &
+  [y_f]_c &= 1 \,.
+\end{alignat}
+%
+The loop order $L$ of an operator is equivalent to chiral dimension
+$\chi = 2L + 2$.
+
+The correct expansion scheme depends on the value of $\xi$. For
+$\xi \gg 1 / 16 \pi^2$ or $f \ll 3~\tev$, the chiral expansion is more
+appropriate. For $xi \ll 1 / 16 \pi^2$ or $f \gg 3~\tev$, the
+canonical expansion is correct. In the intermediate region, a combined
+expansion gives the best results. Since LHC Higgs physics is mostly
+sensitive to NP scenarios with $f \ll 3~\tev$, the chiral expansion is
+phenomenologically more relevant and we will stick to it. For a more
+thorough discussion of power counting in this framework, see
+Ref.~\cite{Krause:2016uhw}.
+
+\newparagraph
+%
+At the leading chiral order $\chi = 2$ or $L = 0$, the Higgs sector of
+the Lagrangian is given by~\cite{Alonso:2012px}\footnote{Two comments
+  on this Lagrangian are in order. First, in principle there could be
+  further functions of $h$ coupling to the kinetic terms of the gauge
+  bosons. Such interactions arise in typical strongly coupled theories
+  at one-loop level with a coefficient $\sim 1 / (16 \pi^2)$ and are
+  therefore usually classified as NLO operators~\cite{Alonso:2012px,
+    Buchalla:2013rka}. Second, the function $\mathcal{F}_C(h)$ (and a
+  corresponding one to the fermion kinetic terms) can be removed with
+  field redefinitions, shifting its physics into the other
+  couplings~\cite{Buchalla:2013rka, Brivio:2016fzo}.}
+%
+\begin{align}
+  \lgr{non-linear EFT}
+  &\supset \frac 1 2 \partial_\mu h \partial^\mu h \left( 1 + c_H \xi \mathcal{F}_H(h) \right)
+    - V(h) \notag \\
+  &\phantom{=} \qquad - \frac {v^2} 4 \tr [ V_\mu V^\mu]  \mathcal{F}_C(h) 
+    + c_T \xi \frac {v^2} 4 \tr [T V^\mu] \tr [T V_\mu] \mathcal{F}_T{h} \notag \\
+  &\phantom{=} \qquad - \frac v {\sqrt{2}} \left[ \sum_f \bar{f}_L U y_f \mathcal{F}_Y^{f}{h} P_f f_R + \hc \right]
+  \label{eq:foundations_nonlinear_EFT_LO}
+\end{align}
+%
+with $V_\mu \equiv (D_\mu U) U^\dagger$,
+$T \equiv U \sigma_3 U^\dagger$ and projectors
+$P_u = (\mathds{1} + \sigma_3) / 2$,
+$P_d = P_\ell = (\mathds{1} - \sigma_3)/2$.  The functions
+$\mathcal{F}_C(h)$, $V(h)$, $\mathcal{F}_T(h)$, $\mathcal{F}_T(h)$,
+$\mathcal{F}_Y^{u}{h}$, $\mathcal{F}_Y^{d}{h}$, and
+$\mathcal{F}_Y^{\ell}{h}$ encode the coupling of the Higgs $h$ and are
+arbitrary functions. They can be expanded as a power series in $h/v$,
+for instance
+%
+\begin{equation}
+  \mathcal{F}_C(h) = 1 + 2a_C \frac h v + b_C \left(\frac h v \right)^2 + \dots \,.
+\end{equation}
+
+At next-to-leading order in the chiral expansion many more terms
+relevant for Higgs physics appear. We do not list them here and refer
+the interested reader for instance to Ref.~\cite{Brivio:2013pma}.
+
+\newparagraph
+%
+Finally, the relationship between the linear and non-linear effective
+theories deserves some discussion. The two approaches in principle
+provide different parameterisations of the same physics, as can be
+seen by expanding the non-linear Lagrangian in $\xi$ rather then
+$\chi$. The difference is the ordering of the operators in the EFT
+expansion and, equivalently, the expected size of different
+effects. Operators that appear at one order in the $1/\Lambda$
+expansion of the linear EFT may appear at a very different order in
+the chiral expansion of the non-linear EFT.
+
+Since the symmetry requirements on the non-linear setup are smaller,
+we expect it to be more general than the linear Lagrangian at a
+comparable order in the expansions. This is exactly what is found when
+comparing the linear dimension-six operators to the NLO chiral
+Lagrangian: the dimension-six operators predict certain correlations,
+while the non-linear description has more operators that can break
+these correlations~\cite{Brivio:2013pma}. A straightforward example is
+the relation between $hxx$ and $hhxx$ couplings. For dimension-six
+operators, it is fixed doe to the appearance of
+$\phisq \sim (v^2 + 2vh + h^2) / 2$, while these couplings are always
+independent in the chiral approach, as can be seen in
+Eq.~\eqref{eq:foundations_nonlinear_EFT_LO}.
+
+The current experimental limits leave room for both strongly or weakly
+coupled new physics, for $\xi$ smaller or larger than
+$1 / (16 \pi^2)$, for scenarios in which the linear or non-linear
+effective theories work better. Only a precise measurement of the
+Higgs properties and a global analysis of correlations will tell us
+which approach is correct. As a general rule, more SM-like results
+favour the linear approach that we follow throughout this thesis. On
+the other hand, certain deviations that do not follow the correlations
+predicted by dimension-six operators point towards non-linear physics.
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{$\kappa$ framework}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-During run~1 of the LHC, the most widely used parametrisation of the
-Higgs properties was the $\kappa$
+Effective field theories are of course not the only way to describe
+the Higgs sector. During run~1 of the LHC, the most widely used
+parametrisation was the $\kappa$
 framework~\cite{LHCHiggsCrossSectionWorkingGroup:2012nn} or the
 closely related $\Delta$ framework~\cite{Lafaye:2009vr}. Its
 construction is remarkably simple: starting from the SM Higgs sector,
@@ -2688,54 +2895,37 @@ experiment and theory.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Non-linear Higgs effective field theory}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-The SM EFT (or linear Higgs EFT) constructed in
-Section~\ref{sec:foundations_heft_operators} is not the only effective
-field theory that can describe Higgs physics. It is based on the
-choice to construct operators from the scalar doublet $\phi$ that
-combines the physical Higgs boson and the Goldstones. Alternatively,
-we can separate the physical scalar $h$ from the Goldstones $w_a$ and
-include both independently. Together with new power-counting rules
-which we will discuss later, this defines the non-linear Higgs EFT.  It
-is alternatively simply called ``Higgs EFT'' or ``chiral Higgs EFT''.
-
-As this last name hints, this theory has a structure similar to that
-of chiral perturbation theory, for an introduction see for instance
-Ref.~\cite{HillerBlin:2016jpb}. The Goldstone bosons $w_a$, no longer
-a part of a Higgs doublet, can be organised in the exponential form
-%
-\begin{equation}
-  U = e^{\im \sigma_a w_a} \,.
-\end{equation}
-%
-The Goldstones transform non-linearly under the (approximate) global
-custodial symmetry $SU(2)_L \times SU(2)_R$, giving the EFT its name.
-
-The leading-order Lagrangian is then given by
-%
-\comment{To here}
-
-\comment{stress that same physics is described (with examples?),
-  explain different counting; cite Claudius Krause's
-  thesis~\cite{Krause:2016uhw}}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Simplified models}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{itemize}
-\item common concept: new light resonances 
-%
-\item simplest possibility: ad-hoc coupling structures, not gauge-invariant, and not consistent beyond LO; usually to demonstrate a kinematic point
-%
-\item more evolved option: consistent QFT following EFT construction principle
-%
-\item cite Anke's first paper, Anke's second paper~\cite{Biekotter:2016ecg}, and Anja's ambulance chase
-\end{itemize}
+All these approach have in common that they assume the absence of new
+light particles. Simplified models are designed to close this gap and
+to describe kinematic effects from new resonances or threshold effects
+in loops. They also allow to combine information from direct searches
+with indirect measurements. Except for the key element of adding new
+light propagating degrees of freedom to the SM, the term is not
+particularly well-defined, and there is a lot of freedom to construct
+such models.
+
+The simplest version of a simplified model consists of the SM
+supplemented with another particle, with ad-hoc coupling structures
+based on phenomenological requirements. Such a setup might even be not
+gauge-invariant and thus inconsistent beyond tree level. We will
+discuss one example introduced in Ref.~\cite{Biekotter:2016ecg} in
+Chapter~\ref{chapter:validity}. At the other end of the spectrum,
+simplified models can be consistently defined quantum field theories,
+potentially involving higher-dimensional operators. The only
+difference to the linear and non-linear EFT approaches discussed above
+is the extended particle content. The additional flexibility of course
+comes at the price of an increased number of parameters.
+
+Examples of such models for Higgs physics include an extended Higgs
+sector with an additional singlet and a doublet, which offers great
+flexibility to tune the Higgs couplings~\cite{Lopez-Val:2013yba}. The
+authors of Ref.~\cite{Dolan:2016eki} develop a model with an
+additional singlet and vector-like quarks. Finally,
+Refs.~\cite{Gripaios:2016xuo, Bauer:2016hcu} discuss additional scalar
+singlets supplemented with higher-dimensional operators.
 
 
 
@@ -2755,8 +2945,8 @@ The leading-order Lagrangian is then given by
     Motivation & 
     experiment: \newline simplest Higgs parametrisation &
     experiment: \newline amplitude decomposition for given process &
-    theory: \newline complete low-energy effects of non-decoupling NP & 
-    theory: \newline complete low-energy effects of decoupling NP &
+    theory: \newline complete low-energy effects of NP with singlet $h$& 
+    theory: \newline complete low-energy effects of NP with doublet $\phi$ &
     exp.\,/\,theory:\newline new light particles \\
     %
     Input & 
@@ -2784,8 +2974,8 @@ The leading-order Lagrangian is then given by
     Shifted SM couplings & 
     yes &
     yes &
-    yes \newline (some only at higher orders in EFT expansion) & 
-    yes \newline (some only at higher orders in EFT expansion) &
+    yes & 
+    yes &
     depends \\
     %
     Kinematic effects & 
@@ -2805,34 +2995,66 @@ The leading-order Lagrangian is then given by
     Correlations & 
     no &
     no &
-    no & 
-    yes &
+    some & 
+    many &
     depends \\
-    \midrule
-    %
-    WBF parameters &
-    $\kappa_W$
-    &
-    $\kappa_{WW}$, $\varepsilon_{WW}$, $\varepsilon_{WW}^{CP}$, $\varepsilon_{Wu_L}$ &
-    &
-    $\dfrac {f_{\phi,2}} {\Lambda^2}$, $\dfrac {f_{W}} {\Lambda^2}$, $\dfrac {f_{WW}} {\Lambda^2}$, $\dfrac {f_{W\widetilde{W}}} {\Lambda^2}$ & 
-    depends \\
+    % \midrule
+    % %
+    % WBF parameters &
+    % $\kappa_W$
+    % &
+    % $\kappa_{WW}$, $\varepsilon_{WW}$, $\varepsilon_{WW}^{CP}$, $\varepsilon_{Wu_L}$ &
+    % &
+    % $\dfrac {f_{\phi,2}} {\Lambda^2}$, $\dfrac {f_{W}} {\Lambda^2}$, $\dfrac {f_{WW}} {\Lambda^2}$, $\dfrac {f_{W\widetilde{W}}} {\Lambda^2}$ & 
+    % depends \\
     %                                                                                                
     \bottomrule
   \end{tabularx}
   \caption[Comparison of different parametrisations of Higgs properties]{Comparison
-    of different parametrisations of Higgs properties. See text for details.}
+    of different parametrisations of Higgs properties. The upper part of the table
+    focuses on the theoretical foundation, the lower the phenomenology.
+% Finally, we list some parameters relevant for WBF Higgs
+% production in the different approaches, restricting this example to
+% the dominant $W$-mediated amplitude.
+    Since ``simplified models'' describe a rather general idea, many
+    details depend on the specific realisation.}
   \label{tbl:foundations_framework_comparison}
 \end{table}
 
-The upper part focuses on the theoretical foundation, the middle part the
-    phenomenology. Finally, we list some parameters relevant for WBF Higgs production
-    in the different approaches, restricting this example to the dominant $W$-mediated amplitude.
-    Since ``simplified models'' describe a rather general idea, many
-    details depend on the specific realisation.
+All these approaches define parametrisations of the Higgs properties
+that can be used as interfaces between different measurements and
+between experiment and theory. In
+Table~\ref{tbl:foundations_framework_comparison} we summarise and
+compare their different properties.
 
+The different frameworks can be classified into consistent quantum
+field theories, which includes the EFTs, and process-based
+parameterisations of amplitudes through form factors. The $\kappa$
+framework and pseudo-observables belong to the latter
+category. Simplified models can fall into either category. The QFT
+formalism allows to link different processes and to incorporate any
+loop effects.
 
+More important for practical purposes is the range of phenomena that
+can be described. The $\kappa$ framework is limited to rescalings of
+the SM Higgs couplings and is not able to incorporate kinematic
+information. Pseudo-observables and the two EFT approaches are much
+more flexible and can describe a large number of kinematic
+features. However, they rely on new physics being substantially
+heavier than the experimentally probed energies around the weak
+scale. Features from light new particles, for instance resonances or
+loop thresholds, are only covered by appropriate simplified
+models. The dimension-six operators of linear Higgs EFT and to a
+lesser extend the leading operators of the chiral EFT also predict
+certain correlation between different couplings and measurements,
+while by definition the pseudo-observables are only valid for a given
+process.
 
+To summarise, in the absence of new light particles, Higgs properties
+can be adequately parameterised by pseudo-observables, non-linear
+Higgs EFT, and linear Higgs EFT. The linear EFT approach is
+theoretically well-motivated, predictive, and flexible enough, and we
+will focus on this framework during this thesis.
 
 
 
@@ -2874,9 +3096,6 @@ The upper part focuses on the theoretical foundation, the middle part the
 % \end{align}
 
 % The first term is an unobservable renormalisation of an SM operator, but the second one is just $\ope{\phi2}$ with Wilson coefficient $f_{\phi 2} = 2\lambda_s^2$. At tree level, this is the only operator generated by this model.
-
-
-
 
 
 
