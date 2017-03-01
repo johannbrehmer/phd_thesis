@@ -1852,6 +1852,64 @@ we briefly discuss a few alternative frameworks.
 \label{sec:foundations_heft_motivation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+% The Higgs boson~\cite{Higgs:1964ia, Higgs:1964pj, Englert:1964et}
+% discovery announced on July 4th 2012~\cite{Aad:2012tfa,
+% Chatrchyan:2012xdj} is a historical milestone in the physics of the
+% 21st century.  The thorough scrutiny of the LHC Run I data has so
+% far confirmed that the narrow resonance observed at a mass around
+% 125~GeV is compatible with the minimal Standard Model (SM) agent of
+% electroweak symmetry breaking~\cite{Plehn:2009nd}. To date, this
+% agreement is limited to around $20\%$ precision in the Higgs
+% couplings~\cite{Lafaye:2009vr, Corbett:2012ja, Klute:2012pu,
+% Dobrescu:2012td, Cheung:2013kla, Giardino:2013bma, Chang:2013cia,
+% Djouadi:2013qya, Corbett:2015ksa}, which is not sensitive to the
+% deviations that one would expect from typical perturbatively
+% extended Higgs sectors.  This accuracy, based on a large set of
+% on-shell and most recently off-shell Higgs
+% measurements~\cite{Corbett:2015ksa}, will soon improve with data
+% from Run~II.  Odds are high that the upcoming runs will shed light
+% on a possible UV completion of the Standard
+% Model~\cite{Englert:2014uua, Morrissey:2009tf}.
+
+% Based on everything we know, such an underlying theory should be
+% described by a gauge field theory. While the measurement of Higgs
+% couplings from inclusive rates has been extremely successful at
+% Run~I, it needs to be extended, for example to include kinematic
+% distributions. For this purpose, Higgs effective field theories
+% (EFT)~\cite{Weinberg:1980wa, Coleman:1969sm, Callan:1969sn,
+% Burges:1983zg, Leung:1984ni, Buchmuller:1985jz} have become the
+% \emph{koin\'e} for discussing the phenomenology of extended Higgs
+% sectors.  In the effective field theory language, beyond the
+% Standard Model (BSM) effects are described in terms of a Lagrangian
+% with local operators of increasing mass dimension $d > 4$. Each of
+% them includes a suppression by inverse powers of a new physics
+% scale, which should be well separated from the experimentally
+% accessible scale, in our case the electroweak scale,
+% $\Lambda \gg v$.
+
+% After the discovery of a light Higgs boson~\cite{higgs,discovery}, one
+% of the key tasks of the LHC is to test if the observed particle indeed
+% corresponds to the minimalist setup of the Higgs sector in the
+% Standard Model. Because of the many intricacies of the electroweak
+% sector of the Standard Model, it is not straightforward to define a
+% theoretical framework which describes possible deviations in the Higgs
+% sector. If we want to remain more general than testing specific
+% models~\cite{bsmreview}, we can use an effective field theory ansatz.
+% Here the Lagrangian is organized by the field or particle content, the
+% symmetry structure, and the mass
+% dimension~\cite{eftfoundations,eftorig,higgsreview}.
+
+% Extensions of the SM Higgs sector involve new degrees of freedom with
+% electroweak charges and\,/\,or color charges, coupled to or mixing
+% with the SM-like Higgs boson. Hidden sectors coupled to the Higgs
+% potential without any SM charge lead to non-standard Higgs
+% decays. Since the Higgs potential is closely linked to the electroweak
+% sector, any model that affects the SM gauge bosons will also affect
+% Higgs physics. This way, a wide range of new physics models can be
+% probed in Higgs signatures at the LHC, both in total rates and
+% kinematic distributions. 
+
 As argued in Section~\ref{sec:foundations_relevance}, there are many
 reasons to suspect new physics in the Higgs sector. Some of these
 arguments, such as the hierarchy problem or the WIMP miracle of dark
@@ -1968,7 +2026,9 @@ dimension-10 operators~\cite{Henning:2015alf}.
 Three different conventions have become popular: in addition to the
 complete ``Warsaw'' basis~\cite{Grzadkowski:2010es}, there is the SILH
 convention~\cite{Giudice:2007fh} and the HISZ
-basis~\cite{Hagiwara:1993ck}. For a comparison of and conversion
+basis~\cite{Hagiwara:1993ck}. All three
+maximize the use of bosonic operators to describe Higgs and
+electroweak observables. For a comparison of and conversion
 between these bases see Refs.~\cite{Falkowski:2015wza,
   Brehmer:2015rna}\comment{More references?}. Throughout this thesis
 we use the basis developed in~Refs.~\cite{Corbett:2012ja,
@@ -2726,8 +2786,8 @@ the Lagrangian is given by~\cite{Alonso:2012px}\footnote{Two comments
   &\supset \frac 1 2 \partial_\mu h \partial^\mu h \left( 1 + c_H \xi \mathcal{F}_H(h) \right)
     - V(h) \notag \\
   &\phantom{=} \qquad - \frac {v^2} 4 \tr [ V_\mu V^\mu]  \mathcal{F}_C(h) 
-    + c_T \xi \frac {v^2} 4 \tr [T V^\mu] \tr [T V_\mu] \mathcal{F}_T{h} \notag \\
-  &\phantom{=} \qquad - \frac v {\sqrt{2}} \left[ \sum_f \bar{f}_L U y_f \mathcal{F}_Y^{f}{h} P_f f_R + \hc \right]
+    + c_T \xi \frac {v^2} 4 \tr [T V^\mu] \tr [T V_\mu] \mathcal{F}_T(h) \notag \\
+  &\phantom{=} \qquad - \frac v {\sqrt{2}} \left[ \sum_f \bar{f}_L U y_f \mathcal{F}_Y^{f}(h) P_f f_R + \hc \right]
   \label{eq:foundations_nonlinear_EFT_LO}
 \end{align}
 %
@@ -2736,10 +2796,10 @@ $T \equiv U \sigma_3 U^\dagger$ and projectors
 $P_u = (\mathds{1} + \sigma_3) / 2$,
 $P_d = P_\ell = (\mathds{1} - \sigma_3)/2$.  The functions
 $\mathcal{F}_C(h)$, $V(h)$, $\mathcal{F}_T(h)$, $\mathcal{F}_T(h)$,
-$\mathcal{F}_Y^{u}{h}$, $\mathcal{F}_Y^{d}{h}$, and
-$\mathcal{F}_Y^{\ell}{h}$ encode the coupling of the Higgs $h$ and are
-arbitrary functions. They can be expanded as a power series in $h/v$,
-for instance
+$\mathcal{F}_Y^{u}(h)$, $\mathcal{F}_Y^{d}(h)$, and
+$\mathcal{F}_Y^{\ell}(h)$ encode the coupling of the Higgs $h$ and are
+arbitrary functions. They can be expanded as a power series in $h/f$,
+or to simplify the expressions in $h/v$, for instance
 %
 \begin{equation}
   \mathcal{F}_C(h) = 1 + 2a_C \frac h v + b_C \left(\frac h v \right)^2 + \dots \,.
@@ -2900,12 +2960,13 @@ experiment and theory.
 
 All these approach have in common that they assume the absence of new
 light particles. Simplified models are designed to close this gap and
-to describe kinematic effects from new resonances or threshold effects
-in loops. They also allow to combine information from direct searches
-with indirect measurements. Except for the key element of adding new
-light propagating degrees of freedom to the SM, the term is not
-particularly well-defined, and there is a lot of freedom to construct
-such models.
+to describe kinematic effects from new light resonances. In addition
+to resonance peaks these include threshold effects in loops and Higgs
+decays into (invisible) new light degrees of freedom. Simplified
+models also allow to combine information from direct searches with
+indirect measurements. Except for the key element of adding new light
+propagating degrees of freedom to the SM, the term is not particularly
+well-defined, and there is a lot of freedom to construct such models.
 
 The simplest version of a simplified model consists of the SM
 supplemented with another particle, with ad-hoc coupling structures
@@ -2985,7 +3046,7 @@ singlets supplemented with higher-dimensional operators.
     yes &
     depends \\
     %
-    New resonances, \newline loop thresholds & 
+    New resonances, \newline loop thresholds, \newline invisible decays & 
     no &
     no &
     no & 
@@ -3045,7 +3106,7 @@ heavier than the experimentally probed energies around the weak
 scale. Features from light new particles, for instance resonances or
 loop thresholds, are only covered by appropriate simplified
 models. The dimension-six operators of linear Higgs EFT and to a
-lesser extend the leading operators of the chiral EFT also predict
+lesser extent the leading operators of the chiral EFT also predict
 certain correlation between different couplings and measurements,
 while by definition the pseudo-observables are only valid for a given
 process.

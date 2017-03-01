@@ -35,21 +35,24 @@
 \input{tex/title.tex}
 
 % Abstracts
-\KOMAoptions{open=left}
 \input{tex/abstract.tex}
 
 % ToC, LoT, LoF
+\microtypesetup{protrusion=false} % disables protrusion for ToC 
+
 \KOMAoptions{open=left}
-\microtypesetup{protrusion=false} % disables protrusion for ToC
 \tableofcontents 
-\listoftables 
-\addcontentsline{toc}{chapter}{List of Tables}
 \KOMAoptions{open=right}
-\listoffigures
-\addcontentsline{toc}{chapter}{List of Figures}
+
+%\listoffigures
+%\addcontentsline{toc}{chapter}{List of Figures}
+
+%\listoftables 
+%\addcontentsline{toc}{chapter}{List of Tables}
+
+\microtypesetup{protrusion=true} % enables protrusion again
 
 % Preface and acknowledgements
-\microtypesetup{protrusion=true} % enables protrusion again
 \input{tex/preface.tex}
 \input{tex/acknowledgements}
 
@@ -69,7 +72,7 @@
 \input{tex/introduction.tex}
 \input{tex/foundations.tex}
 
-%\input{tex/eft_limits.tex}
+\input{tex/eft_limits.tex}
 %\input{tex/information_geometry.tex}
 \input{tex/dummy.tex}
 
