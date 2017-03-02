@@ -151,10 +151,10 @@
 \renewcommand\chapterlinesformat[3]{%
   {\color{highlight-color}
     \parbox[b]{\textwidth}{\hfill#2}\par%
-  {\color{black}#3}\par\bigskip
+  {\color{black}#3}\par
   }}
-\RedeclareSectionCommand[beforeskip=2\baselineskip,
-afterskip=3\baselineskip]{chapter}
+\RedeclareSectionCommand[beforeskip=1cm,
+afterskip=2cm]{chapter}
 
 % % Option 4: Formatting chapter titles centred
 % \renewcommand*{\chapterformat}{%
@@ -165,7 +165,7 @@ afterskip=3\baselineskip]{chapter}
 %    #3\par
 %   }}
 % \RedeclareSectionCommand[beforeskip=1.5cm,
-% afterskip=1.5cm]{chapter}
+% afterskip=1.5cm plus 0.5cm minus 0cm]{chapter}
 
 
 
