@@ -1,8 +1,3 @@
- 
-% \setchapterpreamble[ur]{%
-% \dictum[L.~Carroll~\cite{carroll1898alice}]{%
-% ``Begin at the beginning,'' the King said, very gravely, ``and go on till you come to the end: then stop.'' }%
-% \vspace*{2cm}}
 
 % \setchapterpreamble[ur]{%
 % \dictum[I.~Berlin~\cite{berlin_blueskies}]{%
@@ -1847,7 +1842,8 @@ symmetries will receive contributions from it.
 We now apply these general ideas to electroweak and in particular
 Higgs physics at the TeV scale and construct the Standard Model
 effective field theory (interchangeably called linear Higgs effective
-field theory) up to dimension six. This is the framework we will use
+field theory) up to dimension six~\cite{Burges:1983zg, Leung:1984ni,
+  Buchmuller:1985jz, Arzt:1994gp}. This is the framework we will use
 throughout this thesis. We will first argue why such an effective
 theory is very useful, and then construct its effective operators
 following the recipe laid out in
@@ -2050,15 +2046,15 @@ dimension-10 operators~\cite{Henning:2015alf}.
 
 Three different conventions have become popular: in addition to the
 complete ``Warsaw'' basis~\cite{Grzadkowski:2010es}, there is the SILH
-convention~\cite{Giudice:2007fh} and the HISZ
-basis~\cite{Hagiwara:1993ck}. All three
-maximize the use of bosonic operators to describe Higgs and
-electroweak observables. For a comparison of and conversion
-between these bases see Refs.~\cite{Falkowski:2015wza,
-  Brehmer:2015rna}\comment{More references?}. Throughout this thesis
-we use the basis developed in~Refs.~\cite{Corbett:2012ja,
-  Corbett_thesis}, which is strongly based on the HISZ basis and now
-widely used in global fits~\cite{Corbett:2015ksa, Butter:2016cvz}.
+convention~\cite{Giudice:2007fh, Contino:2013kra} and the HISZ
+basis~\cite{Hagiwara:1993ck}. All three maximize the use of bosonic
+operators to describe Higgs and electroweak observables. For a
+comparison of and conversion between these bases see
+Refs.~\cite{Falkowski:2015wza, Brehmer:2015rna}\comment{More
+  references?}. Throughout this thesis we use the basis developed
+in~Refs.~\cite{Corbett:2012ja, Corbett_thesis}, which is strongly
+based on the HISZ basis and now widely used in global
+fits~\cite{Corbett:2015ksa, Butter:2016cvz}.
 
 We classify the operators based on their field content and on their
 behaviour under $CP$ transformations. This combined charge conjugation
@@ -2617,7 +2613,7 @@ These interactions read
 %
 with couplings
 %
-\begin{alignat}{2}
+\begin{align}
   g^{(1)}_{hgg} &= \frac {f_{GG} v} {\Lambda^2} \,, \quad & \quad 
   g^{(1)}_{hZ\gamma}  &= \frac {g^2 v s (f_{W} - f_{B}) } {4 c \Lambda^2} \,, \notag \\
   %
@@ -2640,7 +2636,7 @@ with couplings
   g^{(4)}_{hZZ} &= - \frac {g^2 v (s^4 f_{B\widetilde{B}} + c^4 f_{W\widetilde{W}}) } {8 c^2 \Lambda^2} \,, \quad & \quad 
   g^{(4)}_{hWW} &= - \frac {g^2 v f_{W\widetilde{W}}} {4 \Lambda^2}  \,.
   \label{eq:foundations_higgs_couplings}
-\end{alignat}
+\end{align}
 %
 \comment{Check $CP$-odd ones.}
 %
@@ -2685,13 +2681,13 @@ dynamics~\cite{Kaplan:1983fs, Kaplan:1983sm, Banks:1984gj,
   Agashe:2004rs, Gripaios:2009pe}. Non-linear Higgs EFT, sometimes
 simply called ``Higgs EFT'', is an effective theory designed for these
 scenarios~\cite{Appelquist:1980vg, Longhitano:1980iz,
-  Appelquist:1984rr, Alonso:2012px, Buchalla:2013rka,
-  Buchalla:2013eza, Brivio:2013pma, Gavela:2014vra, Buchalla:2015wfa,
-  Brivio:2016fzo}. This model is also often referred to as ``chiral
-Lagrangian'', and indeed its structure is similar to that of chiral
-perturbation theory, for an introduction see for instance
-Refs.~\cite{Scherer:2002tk, HillerBlin:2016jpb}.  Again, we begin by
-going through the ingredients to the effective theory before
+  Appelquist:1984rr, Grinstein:2007iv, Alonso:2012px,
+  Buchalla:2013rka, Buchalla:2013eza, Brivio:2013pma, Gavela:2014vra,
+  Buchalla:2015wfa, Brivio:2016fzo}. This model is also often referred
+to as ``chiral Lagrangian'', and indeed its structure is similar to
+that of chiral perturbation theory, for an introduction see for
+instance Refs.~\cite{Scherer:2002tk, HillerBlin:2016jpb}.  Again, we
+begin by going through the ingredients to the effective theory before
 constructing the Lagrangian.
 
 The \emph{particle content} of the non-linear Higgs EFT constitutes
@@ -2762,7 +2758,7 @@ theory. Equivalently, one can define a \emph{chiral dimension}
 $\chi = [\ope{}]_c$ for each operator $\ope{}$ with the
 assignments~\cite{Buchalla:2013eza}
 % 
-\begin{alignat}{5}
+\begin{align}
   [f]_c &= 1 \,, \quad &
   [V_{\mu}]_c &= 0 \,, \quad & 
   [V_{\mu\nu}]_c &= 1 \,, \quad &
@@ -2772,14 +2768,15 @@ assignments~\cite{Buchalla:2013eza}
   [D_\mu]_c &= 1 \,, \quad &
   [g]_c &= 1 \,, \quad &
   [y_f]_c &= 1 \,.
-\end{alignat}
+\end{align}
 %
 The loop order $L$ of an operator is equivalent to chiral dimension
-$\chi = 2L + 2$.
+$\chi = 2L + 2$. This chiral counting can also be linked to an
+expansion in $\hbar$~\cite{Gavela:2016bzc}.
 
 The correct expansion scheme depends on the value of $\xi$. For
 $\xi \gg 1 / 16 \pi^2$ or $f \ll 3~\tev$, the chiral expansion is more
-appropriate. For $xi \ll 1 / 16 \pi^2$ or $f \gg 3~\tev$, the
+appropriate. For $\xi \ll 1 / 16 \pi^2$ or $f \gg 3~\tev$, the
 canonical expansion is correct. In the intermediate region, a combined
 expansion gives the best results. Since LHC Higgs physics is mostly
 sensitive to NP scenarios with $f \ll 3~\tev$, the chiral expansion is
@@ -2879,7 +2876,8 @@ construction is remarkably simple: starting from the SM Higgs sector,
 all Higgs couplings are dressed with form factors,
 %
 \begin{equation}
-  g_{hxx} = \kappa_x g_{hxx}^{\text{SM}} \,.
+  g_{hxx} = \kappa_x g_{hxx}^{\text{SM}} = (1 + \Delta_x) g_{hxx}^{\text{SM}} \,.
+  \label{eq:foundations_kappa_delta}
 \end{equation}
 %
 Some care has to be taken to treat the Higgs-gluon and Higgs-photon
