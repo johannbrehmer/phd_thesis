@@ -11,6 +11,7 @@
 \label{chapter:appendix_bases}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\comment{This entire section still has to be re-written}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -218,7 +219,7 @@ coefficients and distorted Higgs couplings.
 Note that the Wilson coefficients of the operators $\ope{T}$ and $\ope{B}+\ope{W}$
 are strongly constrained by electroweak precision data~\cite{silh}. In
 this work, we allow ourselves, on occasion, to ignore these bounds to
-more distinctly illustrate the effects in the Higgs sector.\medskip
+more distinctly illustrate the effects in the Higgs sector.
 
 Translations between effective operator bases can be performed with
 the help of equations of motion, field redefinitions, integration by
@@ -489,9 +490,10 @@ we find
 \label{sec:appendix_models_singlet}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Our singlet model is defined in
+The singlet model is defined in
 Equations~\eqref{eq:validity_singlet_lagrangian} and
-\eqref{eq:validity_singlet_potential}. Ignoring the Goldstones, the
+\eqref{eq:validity_singlet_potential} in
+Section~\ref{sec:validity_singlet}. Ignoring the Goldstones, the
 scalar doublet and singlets fields can be expanded into components as
 %
 \begin{align}
@@ -515,7 +517,7 @@ mass eigenstate,
 where
 %
 \begin{equation}
-  \tan(2\alpha) = \cfrac{\lambda_3vv_s}{\lambda_2 v_s^2 - \lambda_1v^2}\,.
+  \tan(2\alpha) = \frac{\lambda_3vv_s}{\lambda_2 v_s^2 - \lambda_1v^2}\,.
 \end{equation}
 % 
 Their masses are
@@ -524,7 +526,7 @@ Their masses are
   m^2_{h,H} =
   \lambda_1\,v^2
   + \lambda_2\,v_s^2
-  \mp |\lambda_1\,v^2 - \lambda_2\,v_s^2|\,\sqrt{1+\tan^2(2\alpha)}
+  \mp |\lambda_1\,v^2 - \lambda_2\,v_s^2| \, \sqrt{1+\tan^2(2\alpha)}
 \end{equation}
 %
 with $m_{H}^2 \approx 2 \lambda_2 v_s^2 \gg m_{h}^2$ in the limit
@@ -560,7 +562,7 @@ $v^2 \ll v_s^2$.
 % \begin{align}
 %   \bar{c}_H = \dfrac{\lambda_3^2}{2\lambda_2} \, \left(\dfrac {v} {\Lambda}\right)^2 + \ord {\frac{v^4}{\Lambda^4} } \,.
 % \end{align}
-% \medskip
+% 
 
 % The light Higgs couplings to fermions and gauge bosons in the singlet model 
 % are universally suppressed relative to the SM. In the full model and the
@@ -596,7 +598,7 @@ $v^2 \ll v_s^2$.
 % via a dimension-8 operator, which is
 % neglected in our dimension-6
 % analysis. Therefore, the sole Wilson coefficient $\bar{c}_H = \sin^2 \alpha$ defines
-% the singlet model EFT up to dimension 6.\medskip
+% the singlet model EFT up to dimension 6.
 
 % On the other
 % hand, let us emphasize a key structural difference between the
@@ -634,311 +636,146 @@ $v^2 \ll v_s^2$.
 \subsection{Two-Higgs-doublet model}
 \label{sec:appendix_models_2hdm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
-The most general gauge invariant, CP-conserving potential with two
-scalar fields reads
-%
-\begin{alignat}{5}
- V(\phi_1,\phi_2) 
-&= m^2_{11}\,\phi_1^\dagger\phi_1
- + m^2_{22}\,\phi_2^\dagger\phi_2
- - \left[ m^2_{12}\,\phi_1^\dagger\phi_2 + \text{h.c.} \right] \notag \\
-&+ \dfrac{\lambda_1}{2} \, (\phi_1^\dagger\phi_1)^2
- + \dfrac{\lambda_2}{2} \, (\phi_2^\dagger\phi_2)^2
- + \lambda_3 \, (\phi_1^\dagger\phi_1)\,(\phi_2^\dagger\phi_2) 
- + \lambda_4 \, |\phi_1^\dagger\,\phi_2|^2 \notag \\
-&+ \left[ \dfrac{\lambda_5}{2} \, (\phi_1^\dagger\phi_2)^2 
-        + \lambda_6 \, (\phi_1^\dagger\phi_1) \, (\phi_1^\dagger\phi_2)
-        + \lambda_7 \, (\phi_2^\dagger\phi_2)\,(\phi_1^\dagger\phi_2) + \text{h.c.} 
-   \right] \, ,
-\label{eq:2hdmpotential-app}
-\end{alignat}
-%
-where the mass terms $m^2_{ij}$ and the dimensionless self-couplings
-$\lambda_i$ are real parameters and $v_j = \sqrt{2}
-\langle \phi_j^0 \rangle$.  The ratio of VEVs is denoted as $\tan\beta =
-v_2/v_1$, whereas $v_1^2 + v_2^2 = v^2 = (246~\gev)^2$ to reproduce
-the known gauge boson masses.  For the Yukawa couplings, there are
-four possible scenarios that satisfy the SM flavor symmetry and
-preclude tree-level flavor-changing neutral
-currents~\cite{Glashow:1976nt}:
-%
-\begin{itemize}
-\item type-I, where all fermions couple to just one Higgs doublet
-  $\phi_2$;
-\item type-II, where up-type (down-type) fermions couple
-  exclusively to $\phi_2$ ($\phi_1$);
-\item lepton-specific, with a type-I quark sector and a type-II
-  lepton sector; and
-\item flipped, with a type-II quark sector and a type-I lepton
-  sector.
-\end{itemize}
-%
-In all four cases, the absence of tree-level FCNCs is protected by a
-global $\mathbb{Z}_2$ discrete symmetry $\phi_i \to (-1)^{i}\,\phi_i$ (for $i=1,2$). The
-symmetry demands that $\lambda_{6,7}=0$ in
-Eq.~\eqref{eq:2hdmpotential-app}, but it can be softly broken by
-dimension-two terms in the Lagrangian, viz.\ $\lgr{soft}
-\supset m^2_{12}\,\phi_1^\dagger\,\phi_2 + \text{h.c.}$\medskip
 
-The Higgs mass-eigenstates follow from the set of rotations
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Model setup}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+We analyse the most general gauge invariant, $CP$-even theory for two
+scalar fields with an additional $\mathbb{Z}_2$ symmetry, as defined
+in Equation~\eqref{eq:validity_2hdm_potential} in
+Section~\ref{sec:validity_2hdm}.  The Higgs mass-eigenstates follow
+from the set of rotations
 %
-\begin{align}
-\begin{pmatrix} H^0 \\ h^0 \end{pmatrix} = R(\alpha)\,\begin{pmatrix} h^0_1 \\ h^0_2 \end{pmatrix},
-\qquad
-\begin{pmatrix} G^0 \\ A^0 \end{pmatrix} = R(\beta)\,\begin{pmatrix} a^0_1 \\ a^0_2 \end{pmatrix},
-\qquad
-\begin{pmatrix} G^\pm \\ H^\pm \end{pmatrix} = R(\beta)\,\begin{pmatrix} h^\pm_1 \\ h^\pm_2 \end{pmatrix} ,
-\end{align}
+\begin{equation}
+  \twovec {H^0} {h^0} = R(\alpha) \, \twovec {h^0_1} {h^0_2} \, ,
+  \qqquad
+  \twovec {w^0 }{ A^0 } = R(\beta)\,\twovec {a^0_1 }{ a^0_2 } \,,
+  \qqquad
+  \twovec {w^\pm }{ H^\pm } = R(\beta)\,\twovec {h^\pm_1 }{ h^\pm_2 } \,,
+\end{equation}
 %
-where
-\begin{align}
-\phi_k &= \begin{pmatrix} h_k^+ \\[1mm] \dfrac{1}{\sqrt{2}} (v_k + h_k^0 + i a_k)
-         \end{pmatrix}, &
-R(\theta) = \begin{pmatrix} \cos\theta & \sin\theta \\
-			-\sin\theta & \cos\theta \end{pmatrix}.
-\end{align}
+with
 %
+\begin{equation}
+\phi_k = \twovec {h_k^+} {\dfrac{1}{\sqrt{2}} (v_k + h_k^0 + \im a_k) }
+\quad \text{and} \quad
+R(\theta) = \twomat {\cos\theta} {\sin\theta } {-\sin\theta} {\cos\theta} \,.
+\end{equation}
+
 Since the two doublets contribute to giving masses to the weak gauge
 bosons, custodial symmetry will impose tight constraints on the viable
-mass spectrum of the model~\cite{Veltman:1976rt,oblique-2hdm}.
-Analytic relations linking the different Higgs masses and mixing
-angles with the Lagrangian parameters in Eq.~\eqref{eq:2hdmpotential-app}
-can be found \eg in Appendix A of~\cite{Lopez-Val:2013yba}.
-The conventions $0 <\beta < \pi/2 $ 
-and $0 \leq \beta-\alpha
-< \pi$ guarantee that the Higgs coupling to
-vector bosons has the same sign in the 2HDM and in the SM.
-As we will next show, 
-the decoupling limit implies that the light Higgs
-interactions approach the alignment limit, where $\cos\beta \sim
-|\sin\alpha|$ and the couplings become SM-like~\cite{Gunion:2002zf}.
-\medskip
+mass spectrum of the model~\cite{Veltman:1976rt, Toussaint:1978zm,
+  Frere:1982ma, Grimus:2007if, Hollik:1986gg, Beenakker:1988pv,
+  Froggatt:1991qw, He:2001tp, Grimus:2008nb}.  Analytic relations
+linking the different Higgs masses and mixing angles with the
+Lagrangian parameters in Eq.~\eqref{eq:validity_2hdm_potential} can be found
+\eg in Appendix A of~\cite{Lopez-Val:2013yba}.  The conventions
+%
+\begin{equation}
+  0 <\beta < \pi/2
+  \quad \text{and} \quad
+  0 \leq \beta-\alpha < \pi
+\end{equation}
+%
+guarantee that the Higgs coupling to vector bosons has the same sign
+in the 2HDM and in the SM.  As we will next show, the decoupling limit
+implies that the light Higgs interactions approach the alignment
+limit, where $\cos\beta \sim |\sin\alpha|$ and the couplings become
+SM-like~\cite{Gunion:2002zf}.
 
-A 2HDM with large mass hierarchy between the light Higgs $m_{h^0} =
-\ord{v}$ and its heavier companions $m_{H^0,H^{\pm},A^0} \gg
-m_{h^0}$ can be readily mapped onto an
-EFT~\cite{Gunion:2002zf,eft2hdm,heft_limitations2}. In the unbroken phase, we
-match by first rotating $\phi_1$ and $\phi_2$ into
-the so-called Higgs basis, where only one Higgs doublet obtains a vacuum
-expectation value, $\langle \phi_l \rangle = v/\sqrt{2}$, $\langle \phi_h
-\rangle = 0$~\cite{heft_limitations2,Davidson:2005cw}. This doublet $\phi_l$ is then identified
-with the SM-like Higgs doublet, while the other doublet $\phi_h$ is integrated out.
-Its decoupling is described by the mass scale
-%
-\begin{align}
-\Lambda^2 = M^2 = m^2_{11}\sin^2\beta + m^2_{22}\cos^2\beta + m^2_{12}
-\sin (2\beta) \label{eq:2hdm-lambda}
-\end{align}
-%
-and the expansion parameter
-%
-\begin{alignat}{5}
-x \equiv \dfrac{v^2\sin 2\beta}{2M^2}
-\left[\frac {\lambda_1} 2-\frac {\lambda_2} 2+\left(\frac {\lambda_1} 2+\frac
-{\lambda_2} 2-\lambda_3-\lambda_4-\lambda_5 \right)\cos 2\beta \right] + {\cal
-O}\left( \dfrac{v^4}{M^4} \right) \ll 1 \; 
-\label{eq:2hdm-xi-unbroken}
-\end{alignat}
-%
-where we assume perturbative couplings, $\lambda_i \lesssim
-\ord{1}$.
 
-As discussed in Section~\ref{sec:2hdm}, the dimension-6 EFT
-defined this way does not provide a good approximation for scenarios where the
-LHC will have sensitivity to discover new physics. A more appropriate
-effective theory is obtained by matching at a physical mass instead
-of $M$. Specifically, this $v$-improved EFT is given by replacing
-$M \to m_{A^0}$ in Eqs.~\eqref{eq:2hdm-lambda} and \eqref{eq:2hdm-xi-unbroken}.
 
-Similar to the singlet extension, see Eq.~\eqref{eq:singlet-matching},
-mixing between the two CP-even Higgs boson at tree-level causes the
-$h^0$ kinetic term to be rescaled, leading to
-%
-\begin{align}
-\bar{c}_H = x^2 = {\cal O}(\Lambda^{-4}).
-\end{align}
-%
-This corresponds to a dimension-8 term, which we neglect here.
-However, there exists a dimension-6 contribution to the triple light Higgs scalar
-interaction,
-%
-\begin{alignat}{5}
-g^{(1)}_{h^0h^0h^0} &= 1 + x^2\left[\dfrac{3}{2} - 
-\frac{4m_{12}^2}{m^2_{h^0}\sin 2\beta} \right] + \ord{x^3}
-=  1 - x^2 \frac{M^2}{\lambda v^2} + \ord{M^{-3}}
-\, .
- \label{eq:2hdm-hhh}
-\end{alignat}
-%
-Non-trivial contributions to dimension-6 operators also arise in the
-Yukawa sector.  For definiteness, we concentrate on 2HDM type I and
-II.  At tree-level and up to $\ord {\Lambda^{-2}}$, we find for the
-Wilson coefficients
-%
-\begin{align}
-\text{type I\phantom{I}:} && \bar{c}_u &= x\cot\beta\,, &
-                  \bar{c}_d &= x\cot\beta\,, &
-                  \bar{c}_\ell &= x\cot\beta\,, \\
-\text{type II:}&& \bar{c}_u &= x\cot\beta\,, &
-                  \bar{c}_d &= -x\tan\beta\,, &
-                  \bar{c}_\ell &= -x\tan\beta\,. 
-\end{align}
-%
-The above expressions hold both in the standard EFT and the
-$v$-improved EFT, with the obvious replacement $M \to m_{A^0}$ for the
-latter.
-The operators $\ope{HB}$, $\ope{HW}$, $\ope{W}$, $\ope{B}$, $\ope{T}$ and $\ope{\gamma}$ receive
-contributions only at loop-level, while $\ope{g}=0$ since there are no new
-colored particles in the 2HDM. 
-The operator $\ope{\gamma}$ receives a
-correction from the charged Higgs loop.  Expanding this contribution,
-and using $m_{h^0}^2 / m_{H^\pm}^2 = \ord{x}$, we find
-%
-\begin{align}
-  \Delta_\gamma 
- = \dfrac 1 {g_{H \gamma \gamma}^\text{SM}} \;  \dfrac {e^2} {720 \, \pi^2 \, v } 
- \Bigg[& 30 \left(1 - [\cot \beta + \tan \beta] \dfrac {m_{12}^2} {m_{H^\pm}^2}  \right) 
-        + \left( 19 - 4  [\cot \beta + \tan \beta] \dfrac {m_{12}^2} {m_{H^\pm}^2} \right) \dfrac {m_{h^0}^2} {m_{H^\pm}^2} \notag \\
-&       - 30 \cot (2 \beta)   [\cot \beta + \tan \beta]  \dfrac {m_{12}^2} {m_{H^\pm}^2} \; x 
- \Bigg] + \ord {x^2}\,,
-\end{align}
-%
-where in the first row we identify characteristic non-decoupling terms
-contributing to $\ord {x^0}$.  On the other hand, the operator
-%
-\begin{align}
-  \lgr{EFT}\supset \dfrac{g'^2 \bar{c}_\gamma } {m_W^2}  (\phi^\dagger \phi )  B_{\mu \nu} B^{\mu\nu}
-\end{align}
-%
-leads to
-%
-\begin{align}
-  \Delta^\text{EFT}_\gamma = \dfrac 1 {g_{H \gamma \gamma}^\text{SM}} \; \dfrac{16 \; s_w^2 \; \bar{c}_\gamma}{v} \,. 
-\end{align}
-%
-Identifying these expressions, we find within the $v$-improved EFT framework
-%
-\begin{align}
-  \bar{c}_\gamma = \frac {g^2} {11\,520 \, \pi^2  } \Bigg[ 
-& 30 \left(1 - [\cot \beta + \tan \beta] \frac {m_{12}^2} {m_{H^{\pm}}^2}  \right) \notag \\
- &\!+  \left(19 - 4  [\cot \beta + \tan \beta] \frac {m_{12}^2} {m_{H^{\pm}}^2} \right) \frac {m_{h^0}^2} {m_{H^{\pm}}^2} - 30 \cot (2 \beta)   [\cot \beta + \tan \beta]  \frac {m_{12}^2} {m_{H^{\pm}}^2} \; x 
-   \Bigg] \,.
-   \label{eq:THDM_cgamma}
-\end{align}
-%
-\medskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Couplings}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In the full type-I 2HDM, the  tree-level couplings shifts $g^\text{2HDM}_{h^0 xx}/g^\text{SM}_{hxx} = 1+\Delta_x$  of the light Higgs are given by
-\begin{align}
-  1+\Delta_V &= \sin(\beta - \alpha)\,, \quad
-  1+\Delta_t = \dfrac {\cos \alpha} {\sin \beta}\,, \quad
-  1+\Delta_b = \dfrac {\cos \alpha} {\sin \beta}\,, \quad
-  1+\Delta_\tau = \dfrac {\cos \alpha} {\sin \beta}\,,
-\end{align}
-while in the type-II 2HDM they read
-\begin{align}
-  1+\Delta_V &= \sin(\beta - \alpha)\,, \quad
-  1+\Delta_t = \dfrac {\cos \alpha} {\sin \beta}\,, \quad
-  1+\Delta_b = - \dfrac {\sin \alpha} {\cos \beta}\,, \quad
-  1+\Delta_\tau = - \dfrac {\sin \alpha} {\cos \beta}\,, 
-\end{align}
-%
-The light Higgs coupling to a charged Higgs pair is given in all cases
-by 
+The tree-level coupling shifts of the light Higgs follow from these
+rotations and are given in
+Eqs.~\eqref{eq:validity_2hdm_higgs_vector_coupling} to
+\eqref{eq:validity_2hdm_last_coupling}. The light Higgs
+coupling to a charged Higgs pair reads
 %
 \begin{align}
-   \frac {g_{h^0{H^+}{H^{-}}}}{g^\text{SM}_{hhh}} &= \dfrac{1}{3 m_{h^0}^2} \left[ 
-    \sin (\beta - \alpha) \left( 2 m_{H^\pm}^2 - m_{h^0}^2 \right) + \dfrac
-    {\cos (\alpha + \beta)} {\sin (2\beta)} \left(2m_{h^0}^2 - \dfrac {2
-    m_{12}^2}{\sin \beta \cos \beta} \right) \right] \, ,
+   \frac {g_{h^0{H^+}{H^{-}}}}{g^\text{SM}_{hhh}}
+  = \frac{1}{3 m_{h^0}^2}
+  \left[ 
+  \sin (\beta - \alpha) \left( 2 m_{H^\pm}^2 - m_{h^0}^2 \right)
+  + \frac {\cos (\alpha + \beta)} {\sin (2\beta)}
+  \left(2m_{h^0}^2 - \frac {2 m_{12}^2}{\sin \beta \cos \beta} \right)
+  \right] \, ,
 \end{align}
 %
 with $g^\text{SM}_{hhh} = -3 m_h^2/v$.
-Note that at tree level custodial symmetry ensures that both couplings
-to the weak gauge bosons $V=W,Z$ scale with the same factor $\sin
-(\beta - \alpha)$, a degeneracy that can be mildly broken by quantum
-effects~\cite{Lopez-Val:2013yba}.  \medskip
 
-In the effective model, we have\footnote{Note that the operator $\ope{\gamma}$ introduces a new Lorentz
-  structure for the $h^0 VV$ interaction, representing a charged Higgs
-  loop.  The results in Section~\ref{sec:2hdm} reveal how large this
-  effect turns out to be in practice.}
-%
-\begin{align}
-  \Delta^\text{EFT}_V &= 0 \,, &
-  \Delta^\text{EFT}_t &= \bar{c}_u \,, &
-  \Delta^\text{EFT}_b &= \bar{c}_d \,, &
-  \Delta^\text{EFT}_\tau &= \bar{c}_\ell \,.
-\end{align}
-%
 The loop-induced couplings are more involved, giving
 %
 \begin{align}
-1+\Delta_g &= \dfrac{1}{A_{gg}^\text{SM}} 
-  \Bigg[\sum_{f = t,b}\,(1+\Delta_f)\,A_f(\tau_f)
-  \Bigg]\,, \\
-1+\Delta_\gamma &= \dfrac{1}{A_{\gamma \gamma}^\text{SM}} 
-  \Bigg[ \sum_{f = t,b}\, N_C\,Q_f^2\,(1+\Delta_f)\,A_f(\tau_f) + Q^2_{\tau}\,(1+\Delta_\tau)\,A_{f}(\tau_\tau) + (1+\Delta_W)\, A_v(\tau_W)   \notag \\
- &\quad \quad \quad \quad \qquad \qquad - {g}_{h^0 {H^+} {H^{-}}} \; \dfrac {m_W s_w} {e m_{H^\pm}^2} \; A_s(\tau_{H^{\pm}}) \Bigg] \,,
+  1+\Delta_g
+  &=
+    \frac{1}{A_{gg}^\text{SM}} 
+    \Bigg[\sum_{f = t,b}\,(1+\Delta_f)\,A_f(\tau_f) \Bigg] \,, \\
+  %
+  1+\Delta_\gamma
+  &=
+    \frac{1}{A_{\gamma \gamma}^\text{SM}} 
+    \Biggl[ \sum_{f = t,b}\, N_C\,Q_f^2\,(1+\Delta_f)\,A_f(\tau_f)
+    + Q^2_{\tau}\,(1+\Delta_\tau)\,A_{f}(\tau_\tau)
+    + (1+\Delta_W)\, A_v(\tau_W) \notag \\
+  %
+ &\qqqqquad - {g}_{h^0 {H^+} {H^{-}}} \; \frac {m_W s_w} {e m_{H^\pm}^2} \; A_s(\tau_{H^{\pm}}) \Biggr] \,,
+   \label{eq:appendix_models_2hdm_haa}
 \end{align}
 %
-where $A_{xx}^\text{SM}$ are the corresponding contributions in the SM.
-The conventional loop form factors read 
-%
-\begin{alignat}{5}
- A_s(\tau) & = -\frac{\tau}{2}\,\left[1-\tau f(\tau) \right] = 1/6 + \mathcal{O}(\tau^{-1}), \notag \\
- A_{f}(\tau) &= \tau\left[1+(1-\tau)\,f(\tau) \right] = 2/3 + \mathcal{O}(\tau^{-1}), \notag \\
- A_v(\tau) &= -\frac{1}{2}\,\left[2+3\tau+3(2\tau-\tau^2)\,f(\tau) \right] = -7/2 + \mathcal{O}(\tau^{-1}) 
- \label{eq:loopfunctions},
-\end{alignat}
+where $A_{xx}^\text{SM}$ are the corresponding contributions in the
+SM. The conventional loop form factors read
 %
 \begin{align}
+ A_s(\tau) &= -\frac{\tau}{2}\,\left[1-\tau f(\tau) \right] &&= 1/6 + \mathcal{O}(\tau^{-1}) \,, \notag \\
+ A_f(\tau) &= \tau\left[1+(1-\tau)\,f(\tau) \right] &&= 2/3 + \mathcal{O}(\tau^{-1}) \,, \notag \\
+ A_V(\tau) &= -\frac{1}{2}\,\left[2+3\tau+3(2\tau-\tau^2)\,f(\tau) \right] &&= -7/2 + \mathcal{O}(\tau^{-1}) \,,
+\end{align}
+%
+where
+%
+\begin{equation}
  f(\tau) =
 \begin{cases}
-  - \dfrac 1 4 \left[ \log \dfrac{1 + \sqrt{1- \tau}} {1 - \sqrt{1 - \tau}} - i \pi \right]^2 & \text{for } \tau < 1 \\
-  \left[ \arcsin \dfrac 1 {\sqrt{\tau}} \right]^2 & \text{for } \tau \geq 1 \,,
+  - \frac 1 4 \left[ \log \frac{1 + \sqrt{1- \tau}} {1 - \sqrt{1 - \tau}} - i \pi \right]^2 & \quad \text{for } \tau < 1 \\
+  \left[ \arcsin \frac 1 {\sqrt{\tau}} \right]^2 & \quad \text{for } \tau \geq 1 \,,
 \end{cases}
-\label{eq:ftau}
-\end{align}
+\end{equation}
 %
-and $\tau_x = 4 m_x^2 / m_{h^0}^2$. In the effective model, we find
-%
-\begin{align}
-  1+\Delta_g^{\text{EFT}} &= \dfrac 1 {A_{gg}^\text{SM}} \Bigg[  \sum_{f = t,b}\,(1+\bar{c}_f)\,A_f(\tau_f)\Bigg],  \\
- 1+\Delta_\gamma^{\text{EFT}} &= \dfrac 1 {A_{\gamma \gamma}^\text{SM}} \Bigg[  \sum_{f = t,b}\, N_C\,Q_f^2(1+\bar{c}_f)\, A_f(\tau_f) + Q^2_{\tau}\,(1+\bar{c}_\ell)\,A_{f}(\tau_\tau) + A_v(\tau_W) + \dfrac { 64 \, \pi^2 \bar{c}_\gamma} {g^2}\Bigg] \,.
-\end{align}
-%
-The comparison of couplings in the full 2HDM and the EFT is summarized in Tab.~\ref{tab:2hdm-matching}.
+and $\tau_x = 4 m_x^2 / m_{h^0}^2$.
 
-%-----------------------------------------------------------
-\begin{table}[tb!]
-  \renewcommand{\arraystretch}{1.3}
-  \centering
-  \begin{tabular}{c c lll} 
-    \toprule
-    Coupling &\hspace*{1em}& & 2HDM & EFT \\
-    \midrule
-    \multirow{2}{*}{$1+\Delta_t$} && type I: & $x\,\cot\beta - \frac{x^2}{2} + \ord{x^3}$ &   $\bar{c}_u = x\cot\beta$ \\
-    && type II: &  $x\,\cot\beta - \frac{x^2}{2} + \ord{x^3}$ &   $\bar{c}_u = x\cot\beta$ \\
-    \midrule
-    \multirow{2}{*}{$1+\Delta_b$} && type I: & $x\,\cot\beta + \ord{x^3}$ &   $\bar{c}_d = x\cot\beta$ \\
-    && type II: &  $-x\,\tan\beta + \ord{x^3} $ &   $\bar{c}_d = -x\tan\beta$ \\
-    \midrule
-    \multirow{2}{*}{$1+\Delta_\tau$} && type I: & $x\,\cot\beta + \ord{x^3}$ &   $\bar{c}_\ell = x\cot\beta$ \\
-    && type II: &  $-x\,\tan\beta + \ord{x^3}$ &   $\bar{c}_\ell = -x\tan\beta$ \\
-    \midrule
-    $1 + \Delta_V$ && & $1-\frac{x^2}{2} + \ord{x^3}$ & $\ope{}^{d8}$ \\
-    \midrule
-    $1 + \Delta_{h^0}$ && &  $1- x^2  \Bigl(\frac{3}{2}-\frac{4m_{12}^2}{m^2_{h^0}\sin 2\beta}\Bigr) + \ord{x^3}$ & $\bar{c}_6 = -x^2\frac{M^2}{\lambda v^2}$ \\
-    \bottomrule
-  \end{tabular}
-  \caption{Tree--level Higgs coupling shifts $\Delta_x$ as a function of the 2HDM parameters. In the last column,
-    the Wilson coefficients for the relevant dimension-6 operators in Tab.~\ref{tab:operators} are matched to the
-    2HDM in the limit of decoupling heavy scalars $x \simeq v^2/M^2 \ll 1$ (cf. Eq.~\eqref{eq:2hdm-xi-unbroken}).}
-  \label{tab:2hdm-matching}
-\end{table}
-%-----------------------------------------------------------
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Matching}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The effect of the second doublet on the phenomenology of the light
+Higgs consists purely of shifted couplings $\Delta_x$. This allows us
+to match the dimension-six model by setting equal the coupling shifts
+from the full model, given by
+Eqs.~\eqref{eq:validity_2hdm_higgs_vector_coupling} to
+\eqref{eq:validity_2hdm_last_coupling} and
+\eqref{eq:appendix_models_2hdm_haa}, to the corresponding couplings in
+the dimension-six Lagrangian,
+Eq.~\eqref{eq:foundations_higgs_couplings}.
+
+In a second step we then expand in $1/\Lambda$ and keep terms up to
+$\ord{1/\Lambda^2}$, where $\Lambda$ is defined in the unbroken phase
+for the default matching or as the physical mass $m_{A^0}$ in the
+$v$-improved matching, as described in
+Section~\ref{sec:validity_2hdm}.
+
+This defines the effective model in a straightforward way. For more
+details see Appendix A.2 of Ref.~\cite{Brehmer:2015rna}.
+%
+\comment{To here}
 
 
 
@@ -975,7 +812,7 @@ $\lgr{mixing}$ is responsible for the mixing between the gauge
 eigenstates, as a counterpart of the MSSM $A$-terms.
 In the absence of an underlying
 supersymmetry, the Lagrangian in Eq.~\eqref{eq:lag-partners} features
-no equivalent of the D-term contributions.\medskip
+no equivalent of the D-term contributions.
 
 Collecting all bilinear terms from Eq.~\eqref{eq:lag-partners} we get
 %
@@ -1020,7 +857,7 @@ m_{\tilde{t}_2}^2 &= M_{LL}^2\,\sin^2\theta_{\tilde{t}} + M_{RR}^2\,\cos^2\theta
 %
 As we assume the right-handed partner $\tilde{b}_R$ to be heavy and thus decoupled, the
 sbottom-like scalar eigenstate $\tilde{b}_L$ undergoes no mixing and can be
-readily identified with the physical eigenstate.\medskip
+readily identified with the physical eigenstate.
 
 To derive the effective theory, we compute the effective action at one
 loop with the help of the covariant derivative
@@ -1061,7 +898,7 @@ We also consider a $v$-improved matching. The only difference
 to the default matching is the choice of the matching scale $\Lambda = m_{\tilde{t}_1}$,
 which manifests itself as a rescaling of the Wilson coefficients in~Eq.\,\eqref{eq:triplet_coefficients_ap}
 by a factor of $M^2 / m_{\tilde{t}_1}^2$.
-\medskip
+
 
 The scalar partner couplings to the Higgs boson can be written as
 %
