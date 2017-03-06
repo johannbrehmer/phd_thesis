@@ -479,7 +479,7 @@ we find
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Models and matching}
+\section{Model fineprint}
 \label{chapter:appendix_models}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -489,156 +489,144 @@ we find
 \label{sec:appendix_models_singlet}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-For the sake of simplicity we consider a minimal version of the
-singlet model, in which a discrete $\mathbb{Z}_2$ parity precludes
-additional (\eg cubic) terms in the potential. The SM is then extended
-by including a real scalar singlet with the Lagrangian
+Our singlet model is defined in
+Equations~\eqref{eq:validity_singlet_lagrangian} and
+\eqref{eq:validity_singlet_potential}. Ignoring the Goldstones, the
+scalar doublet and singlets fields can be expanded into components as
 %
 \begin{align}
-\lgr{} &= (D_\mu\phi)^\dagger\,(D^\mu\,\phi) + (\partial_\mu\,S)^2 - V(\phi,S) \,,\notag \\
-V(\phi,S) &= 
-  \mu^2_1\,(\phi^\dagger\,\phi) 
-+ \lambda_1\,|\phi^{\dagger}\phi|^2 
-+ \mu^2_2\,S^2
-+ \lambda_2\,S^4 
-+ \lambda_3\,|\phi^{\dagger}\,\phi|S^2 \, .
-\label{eq:singlet-potential-app}
-\end{align}
-%
-The scalar doublet and singlets fields are expanded into components as
-%
-\begin{align}
-\phi = \begin{pmatrix} G^+ \\[1mm] \dfrac{1}{\sqrt{2}} (v + l^0 + i G^0)
-         \end{pmatrix} 
-\qquad \text{and} \qquad S = \cfrac{1}{\sqrt{2}} (v_s + s^0) \, ,
-\label{eq:fields-def}
+  \phi &= \frac{1}{\sqrt{2}} \twovec {1} {v + \phi^0} \,, \notag \\
+  S &= \frac{1} {\sqrt{2}} (v_s + s^0) \,,
 \end{align}
 %
 where $v \equiv \sqrt{2}\langle \phi \rangle = 246$~GeV and
 $v_s \equiv \sqrt{2}\langle S \rangle$ denote their respective
-VEVs. The minimization condition for the potential of
-Eq.~\eqref{eq:singlet-potential-app} can be used to eliminate the
-parameters $\mu_{1,2}$ in favor of $v$ and $v_s$. The CP-even
-components $l^0$ and $s^0$ mix to form a light ($h$) and a heavy
-($H$) mass eigenstate,
+VEVs. The minimisation condition for this potential can be used to
+eliminate the parameters $\mu_{1,2}$ in favor of $v$ and
+$v_s$. $\phi^0$ and $s^0$ mix to form a light ($h$) and a heavy ($H$)
+mass eigenstate,
 %
 \begin{align}
-h &=l^0  \cos\alpha  -s^0 \sin\alpha\,, \nonumber \\[-2ex]
- %
- H &= l^0 \sin\alpha  +s^0 \cos\alpha\,, \qquad \text{where} \quad 
- \tan(2\alpha) = \cfrac{\lambda_3vv_s}{\lambda_2 v_s^2 - \lambda_1v^2}\,.
-\label{eq:masseigen-repeat}
+  h &=\phi^0  \cos\alpha - s^0 \sin\alpha\,, \notag \\
+  % 
+  H &= \phi^0 \sin\alpha + s^0 \cos\alpha\,,
 \end{align}
+%
+where
+%
+\begin{equation}
+  \tan(2\alpha) = \cfrac{\lambda_3vv_s}{\lambda_2 v_s^2 - \lambda_1v^2}\,.
+\end{equation}
 % 
 Their masses are
 %
-\begin{alignat}{5}
- m^2_{h,H} &= \lambda_1\,v^2 + 
- \lambda_2\,v_s^2 \mp |\lambda_1\,v^2 - 
- \lambda_2\,v_s^2|\,\sqrt{1+\tan^2(2\alpha)}
-\label{eq:masseigen}
-\end{alignat}
+\begin{equation}
+  m^2_{h,H} =
+  \lambda_1\,v^2
+  + \lambda_2\,v_s^2
+  \mp |\lambda_1\,v^2 - \lambda_2\,v_s^2|\,\sqrt{1+\tan^2(2\alpha)}
+\end{equation}
 %
-with $m_{H}^2 \approx 2\lambda_2 v_s^2 \gg m_{h}^2$ in the
-limit $v^2 \ll v_s^2$.\medskip
+with $m_{H}^2 \approx 2 \lambda_2 v_s^2 \gg m_{h}^2$ in the limit
+$v^2 \ll v_s^2$.
 
-To perform the matching to the EFT,
-we identify the UV scale $\Lambda \equiv \sqrt{2 \lambda_2} v_s \approx m_H$ for $v_s \gg v$. From the
-singlet-doublet mixing one then finds a universal coupling shift of
-the SM-like light Higgs to all other SM particles in
-Eq.~\eqref{eq:shift2}, given by
-%
-\begin{alignat}{5}
- \Delta \approx -\frac{\sin^2 \alpha}{2} \approx
-  -\dfrac{g_\text{eff}^2}{2} \,\biggl(\cfrac{v}{\Lambda} \biggr)^2 \,, \qquad
-  g_\text{eff} = \dfrac{\lambda_3}{\sqrt{2\lambda_2}} \, .
- \label{eq:singlet-delta4}
-\end{alignat}
-%
-Integrating out the heavy Higgs boson we find
-%
-\begin{align}
-  \lgr{EFT}\supset \dfrac {\sin^2 \alpha} {2v^2} \; 
-   \partial^\mu (\phi^\dagger \phi) \partial_\mu (\phi^\dagger \phi) +
-   \ord{\Lambda^{-4}} \,.
-\label{eq:singlet-matching}
-\end{align}
-%
-We thus see that, up to dimension-6 operators the
-heavy-singlet--induced BSM effects in Higgs production and decay are
-completely captured by the operator $\ope{H}$
-(cf.\ Tab.~\ref{tab:operators}) with coefficient
-%
-\begin{align}
-  \bar{c}_H = \dfrac{\lambda_3^2}{2\lambda_2} \, \left(\dfrac {v} {\Lambda}\right)^2 + \ord {\frac{v^4}{\Lambda^4} } \,.
-\end{align}
-\medskip
+% To perform the matching to the EFT,
+% we identify the UV scale $\Lambda \equiv \sqrt{2 \lambda_2} v_s \approx m_H$ for $v_s \gg v$. From the
+% singlet-doublet mixing one then finds a universal coupling shift of
+% the SM-like light Higgs to all other SM particles in
+% Eq.~\eqref{eq:shift2}, given by
+% %
+% \begin{alignat}{5}
+%  \Delta \approx -\frac{\sin^2 \alpha}{2} \approx
+%   -\dfrac{g_\text{eff}^2}{2} \,\biggl(\cfrac{v}{\Lambda} \biggr)^2 \,, \qquad
+%   g_\text{eff} = \dfrac{\lambda_3}{\sqrt{2\lambda_2}} \, .
+%  \label{eq:singlet-delta4}
+% \end{alignat}
+% %
+% Integrating out the heavy Higgs boson we find
+% %
+% \begin{align}
+%   \lgr{EFT}\supset \dfrac {\sin^2 \alpha} {2v^2} \; 
+%    \partial^\mu (\phi^\dagger \phi) \partial_\mu (\phi^\dagger \phi) +
+%    \ord{\Lambda^{-4}} \,.
+% \label{eq:singlet-matching}
+% \end{align}
+% %
+% We thus see that, up to dimension-6 operators the
+% heavy-singlet--induced BSM effects in Higgs production and decay are
+% completely captured by the operator $\ope{H}$
+% (cf.\ Tab.~\ref{tab:operators}) with coefficient
+% %
+% \begin{align}
+%   \bar{c}_H = \dfrac{\lambda_3^2}{2\lambda_2} \, \left(\dfrac {v} {\Lambda}\right)^2 + \ord {\frac{v^4}{\Lambda^4} } \,.
+% \end{align}
+% \medskip
 
-The light Higgs couplings to fermions and gauge bosons in the singlet model 
-are universally suppressed relative to the SM. In the full model and the
-EFT, respectively, they are given by
-%
-\begin{align}
-  1 + \Delta_x =  \cos \alpha \,,
-\qqquad
-  1 + \Delta_x^\text{EFT} = 1-\dfrac{1}{2}\bar{c}_H \,.
-\end{align}
+% The light Higgs couplings to fermions and gauge bosons in the singlet model 
+% are universally suppressed relative to the SM. In the full model and the
+% EFT, respectively, they are given by
+% %
+% \begin{align}
+%   1 + \Delta_x =  \cos \alpha \,,
+% \qqquad
+%   1 + \Delta_x^\text{EFT} = 1-\dfrac{1}{2}\bar{c}_H \,.
+% \end{align}
 
-A more complex pattern emerges for the
-self-interactions involving at least one heavy Higgs field.  We find
-%
-\begin{alignat}{5}
-g_{hhH}
-&= - \cfrac{g_\text{eff} \,(2m^2_{h} + m^2_{H})}{v_s}\,
-      \left[ 1+ g_\text{eff}\,\cfrac{v^2}{v_s^2} + \ord {
-  \frac{v^3}{v_s^3}} \right] 
-\sim \lambda_3 v_s + \ord{v} \,,
-\notag \\ 
-g_{hHH} 
-&=  \cfrac{g_\text{eff} v \,(m^2_{h} + 2 m^2_{H})}{v_s^2}\, 
-   \left[ 1- g_\text{eff} + \ord { \frac{v}{v_s}} \right] 
-\sim 2\lambda_3v \left( 1- \dfrac{\lambda_3}{2\lambda_2} \right) +
-\ord{\dfrac{v^2}{v_s}} \, ,
- \label{eq:singlet-tripleheavy}
-\end{alignat}
-%
-in which we observe a characteristic non-decoupling behavior which
-manifests itself as a linear growth of $g_{hhH}$ with the heavy
-Higgs mass.  In the EFT, the leading self-interaction contribution enters
-via a dimension-8 operator, which is
-neglected in our dimension-6
-analysis. Therefore, the sole Wilson coefficient $\bar{c}_H = \sin^2 \alpha$ defines
-the singlet model EFT up to dimension 6.\medskip
+% A more complex pattern emerges for the
+% self-interactions involving at least one heavy Higgs field.  We find
+% %
+% \begin{alignat}{5}
+% g_{hhH}
+% &= - \cfrac{g_\text{eff} \,(2m^2_{h} + m^2_{H})}{v_s}\,
+%       \left[ 1+ g_\text{eff}\,\cfrac{v^2}{v_s^2} + \ord {
+%   \frac{v^3}{v_s^3}} \right] 
+% \sim \lambda_3 v_s + \ord{v} \,,
+% \notag \\ 
+% g_{hHH} 
+% &=  \cfrac{g_\text{eff} v \,(m^2_{h} + 2 m^2_{H})}{v_s^2}\, 
+%    \left[ 1- g_\text{eff} + \ord { \frac{v}{v_s}} \right] 
+% \sim 2\lambda_3v \left( 1- \dfrac{\lambda_3}{2\lambda_2} \right) +
+% \ord{\dfrac{v^2}{v_s}} \, ,
+%  \label{eq:singlet-tripleheavy}
+% \end{alignat}
+% %
+% in which we observe a characteristic non-decoupling behavior which
+% manifests itself as a linear growth of $g_{hhH}$ with the heavy
+% Higgs mass.  In the EFT, the leading self-interaction contribution enters
+% via a dimension-8 operator, which is
+% neglected in our dimension-6
+% analysis. Therefore, the sole Wilson coefficient $\bar{c}_H = \sin^2 \alpha$ defines
+% the singlet model EFT up to dimension 6.\medskip
 
-On the other
-hand, let us emphasize a key structural difference between the
-$\ope{H}$-induced and the UV-complete singlet model contributions to the
-Higgs self-coupling $hhh$. At variance with the latter, the effective
-operators also induces a new momentum structure into the self
-coupling, namely adding derivatives in the Lagrangian or energy
-dependent terms in the Feynman rules
-%
-\begin{align}
- \lgr{} \supset
-&- \dfrac{m_{h}^2}{2v}\left[
-   \left(1-\dfrac{c_H v^2}{2\Lambda^2} \right) h^3
-   -\dfrac{2c_H v^2}{\Lambda^2 {m_{h}^2}} 
-    h \, \partial_\mu h \, \partial^\mu h \right] \notag \\
-&= - \dfrac{m_{h}^2} {2v} 
-    \left( 1 - \dfrac{1}{2} \bar{c}_H \right) 
-    h^3 
-   + \dfrac {g}{2 m_W} \bar{c}_H \; h \partial_\mu h \partial^\mu h 
-\label{eq:singlet-self},
-\end{align}
-%
-which means that the SM-like $h^3$ term is not only rescaled but
-also endowed with new Lorentz structures involving derivatives.  This
-kind of momentum dependence is encoded in the split into
-$g^{(1)}_{HHH}$ and $g^{(2)}_{HHH}$ in Eq.~\eqref{eq:masslag}.  This
-effect does not correspond to the Higgs singlet mixing, where such a
-momentum dependence can only be generated via loop-induced heavy
-particle exchange with momentum-dependent couplings like a heavy
-fermion triangle.
+% On the other
+% hand, let us emphasize a key structural difference between the
+% $\ope{H}$-induced and the UV-complete singlet model contributions to the
+% Higgs self-coupling $hhh$. At variance with the latter, the effective
+% operators also induces a new momentum structure into the self
+% coupling, namely adding derivatives in the Lagrangian or energy
+% dependent terms in the Feynman rules
+% %
+% \begin{align}
+%  \lgr{} \supset
+% &- \dfrac{m_{h}^2}{2v}\left[
+%    \left(1-\dfrac{c_H v^2}{2\Lambda^2} \right) h^3
+%    -\dfrac{2c_H v^2}{\Lambda^2 {m_{h}^2}} 
+%     h \, \partial_\mu h \, \partial^\mu h \right] \notag \\
+% &= - \dfrac{m_{h}^2} {2v} 
+%     \left( 1 - \dfrac{1}{2} \bar{c}_H \right) 
+%     h^3 
+%    + \dfrac {g}{2 m_W} \bar{c}_H \; h \partial_\mu h \partial^\mu h 
+% \label{eq:singlet-self},
+% \end{align}
+% %
+% which means that the SM-like $h^3$ term is not only rescaled but
+% also endowed with new Lorentz structures involving derivatives.  This
+% kind of momentum dependence is encoded in the split into
+% $g^{(1)}_{HHH}$ and $g^{(2)}_{HHH}$ in Eq.~\eqref{eq:masslag}.  This
+% effect does not correspond to the Higgs singlet mixing, where such a
+% momentum dependence can only be generated via loop-induced heavy
+% particle exchange with momentum-dependent couplings like a heavy
+% fermion triangle.
 
 
 
