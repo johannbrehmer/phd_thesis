@@ -394,11 +394,11 @@ INPUT /usr/local/texlive/texmf-local/fonts/vf/adobe/MinionPro/MinionPro-Regular-
 INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Regular-tosf-oml--base.tfm
 INPUT /usr/local/texlive/texmf-local/fonts/vf/adobe/MinionPro/MinionPro-Regular-tlf-l1-t1.vf
 INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Regular-tlf-l1-t1--base.tfm
+INPUT /usr/local/texlive/texmf-local/fonts/vf/adobe/MinionPro/MinionPro-Regular-tlf-t1.vf
+INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Regular-tlf-t1--base.tfm
 INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Bold-osf-ot1.tfm
 INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Regular-osf-l1-ot1.tfm
 OUTPUT phd_thesis_johann_brehmer.lof
-INPUT /usr/local/texlive/texmf-local/fonts/vf/adobe/MinionPro/MinionPro-Regular-tlf-t1.vf
-INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Regular-tlf-t1--base.tfm
 INPUT phd_thesis_johann_brehmer.lot
 INPUT phd_thesis_johann_brehmer.lot
 OUTPUT phd_thesis_johann_brehmer.lot
@@ -682,7 +682,6 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/mnsymbol/MnSymbolE10.t
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/mnsymbol/MnSymbolD10.tfm
 INPUT /usr/local/texlive/texmf-local/fonts/vf/adobe/MinionPro/MinionPro-It-tosf-oml.vf
 INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-It-tosf-oml--base.tfm
-INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Regular-tosf-ot1.tfm
 INPUT /usr/local/texlive/texmf-local/fonts/vf/adobe/MinionPro/MinionPro-Regular-tosf-l1-oml.vf
 INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Regular-tosf-l1-oml--base.tfm
 INPUT /usr/local/texlive/texmf-local/fonts/vf/adobe/MinionPro/MinionPro-Bold-tlf-t1.vf

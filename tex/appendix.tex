@@ -4,19 +4,37 @@
 \label{chapter:appendix}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Here we collect various technical details and intermediate results
+that are not too interesting on their own, but should be included for
+completeness and reproducibility. We begin with a definition of
+different EFT bases and provide a dictionary to translate between
+them. Appendix~\ref{sec:appendix_models} then contains some additional
+details on the models considered in
+\autoref{chapter:validity}. Finally, in
+Appendix~\ref{sec:appendix_information} we derive some of the key
+results of \autoref{chapter:information}.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{EFT bases}
-\label{chapter:appendix_bases}
+\label{sec:appendix_bases}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\comment{This entire section still has to be re-written}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{HISZ basis}
+\label{sec:appendix_bases_HISZ}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{SILH basis}
-\label{chapter:appendix_bases_SILH}
+\label{sec:appendix_bases_SILH}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The SILH Lagrangian reads
@@ -57,55 +75,52 @@ in Appendix~\ref{sec:validity_ap-eft}.
 
 
 As mentioned in Sec.~\ref{sec:theory_eff}, we here adopt the notation
-and conventions of Ref.~\cite{Alloul:2013naa}, which is based on the
+and conventions of Reference~\cite{Alloul:2013naa}, which is based on the
 SILH framework with the decomposition and
 normalization of the Wilson coefficients defined in
-Ref.~\cite{silh}. For our purposes, it is enough to single
+Reference~\cite{silh}. For our purposes, it is enough to single
 out the subset that encodes all possible new physics contributions to
 the Higgs sector compatible with CP conservation and the flavor
 structure of the SM. These are given in Tab.~\ref{tab:operators} and
-correspond to the Lagrangian in Eq.~\eqref{eq:EFT}.
+correspond to the Lagrangian in \autoref{eq:EFT}.
  
-%-----------------------------------------------------------
-\begin{table}[b!] 
-  \centering
-    \renewcommand{\arraystretch}{1.3}
-    \begin{tabular}[t]{r @{${}={}$}l} 
-      \toprule
-      \multicolumn{2}{c}{Higgs fields}  \\
-      \midrule
-      $\ope{H}$ & $\partial^\mu(\phi^\dagger\,\phi)\,\partial_\mu\,(\phi^\dagger\,\phi)$ \\ 
-      $\ope{6}$ & $(\phisq)^3$  \\
-      $\ope{T}$ & $(\phi^\dagger\,\overleftrightarrow{D}^\mu\,\phi)\,(\phi^\dagger\,\overleftrightarrow{D}_\mu\,\phi)$ \\
-      \bottomrule
-      \toprule
-      \multicolumn{2}{c}{Higgs and fermion fields} \\
-      \midrule
-      $\ope{u}$ & $(\phisq)\,(\phi^\dagger\cdot\,\overline{Q}_L)\,u_R$ \\
-      $\ope{d}$ & $(\phisq)\,(\phi\, \overline{Q}_L)\,d_R$ \\
-      $\ope{\ell}$ & $(\phisq)\,(\phi\, \overline{L}_L)\,l_R$ \\
-      \bottomrule 
-    \end{tabular}
-    \hspace*{1cm}
-    \begin{tabular}[t]{r @{${}={}$}l} 
-      \toprule
-      \multicolumn{2}{c}{Higgs and gauge boson fields} \\
-      \midrule
-      $\ope{HB}$ & $(D^\mu\phi^\dagger)\,(D^\nu\phi)\,B_{\mu\nu}$ \\
-      $\ope{HW}$ & $(D^\mu\phi^\dagger)\,\sigma^k\,(D^\nu\,\phi)\,W^k_{\mu\nu}$ \\ 
-      $\ope{g}$ & $(\phisq)\,G^A_{\mu\nu}\,G^{\mu\nu\, A}$ \\
-      $\ope{\gamma}$ & $(\phisq)\,B_{\mu\nu}\,B^{\mu\nu}$ \\
-      $\ope{B}$ & $(\phi^\dagger\,\overleftrightarrow{D}^\mu\,\phi)\,(\partial^\nu\,B_{\mu\nu})$ \\ 
-      $\ope{W}$ & $\left(\phi^\dagger\,\sigma^k\,\overleftrightarrow{D}^\mu\phi\right)\,(D^\nu\,W^k_{\mu\nu})$ \\
-      \bottomrule
-    \end{tabular}
-  \caption{Dimension-6 operators considered in our analysis. These
-    correspond to a subset of the most general effective operator basis
-    ~\cite{silh} describing new physics effects to the SM
-    Higgs sector with CP-invariance and SM-like fermion structures.}
-  \label{tab:operators}
-\end{table}
-%-----------------------------------------------------------
+% \begin{table}
+%     \renewcommand{\arraystretch}{1.3}
+%     \begin{tabular}[t]{r @{${}={}$}l} 
+%       \toprule
+%       \multicolumn{2}{c}{Higgs fields}  \\
+%       \midrule
+%       $\ope{H}$ & $\partial^\mu(\phi^\dagger\,\phi)\,\partial_\mu\,(\phi^\dagger\,\phi)$ \\ 
+%       $\ope{6}$ & $(\phisq)^3$  \\
+%       $\ope{T}$ & $(\phi^\dagger\,\overleftrightarrow{D}^\mu\,\phi)\,(\phi^\dagger\,\overleftrightarrow{D}_\mu\,\phi)$ \\
+%       \bottomrule
+%       \toprule
+%       \multicolumn{2}{c}{Higgs and fermion fields} \\
+%       \midrule
+%       $\ope{u}$ & $(\phisq)\,(\phi^\dagger\cdot\,\overline{Q}_L)\,u_R$ \\
+%       $\ope{d}$ & $(\phisq)\,(\phi\, \overline{Q}_L)\,d_R$ \\
+%       $\ope{\ell}$ & $(\phisq)\,(\phi\, \overline{L}_L)\,l_R$ \\
+%       \bottomrule 
+%     \end{tabular}
+%     \hspace*{1cm}
+%     \begin{tabular}[t]{r @{${}={}$}l} 
+%       \toprule
+%       \multicolumn{2}{c}{Higgs and gauge boson fields} \\
+%       \midrule
+%       $\ope{HB}$ & $(D^\mu\phi^\dagger)\,(D^\nu\phi)\,B_{\mu\nu}$ \\
+%       $\ope{HW}$ & $(D^\mu\phi^\dagger)\,\sigma^k\,(D^\nu\,\phi)\,W^k_{\mu\nu}$ \\ 
+%       $\ope{g}$ & $(\phisq)\,G^A_{\mu\nu}\,G^{\mu\nu\, A}$ \\
+%       $\ope{\gamma}$ & $(\phisq)\,B_{\mu\nu}\,B^{\mu\nu}$ \\
+%       $\ope{B}$ & $(\phi^\dagger\,\overleftrightarrow{D}^\mu\,\phi)\,(\partial^\nu\,B_{\mu\nu})$ \\ 
+%       $\ope{W}$ & $\left(\phi^\dagger\,\sigma^k\,\overleftrightarrow{D}^\mu\phi\right)\,(D^\nu\,W^k_{\mu\nu})$ \\
+%       \bottomrule
+%     \end{tabular}
+%   \caption{Dimension-6 operators considered in our analysis. These
+%     correspond to a subset of the most general effective operator basis
+%     ~\cite{silh} describing new physics effects to the SM
+%     Higgs sector with CP-invariance and SM-like fermion structures.}
+%   \label{tab:operators}
+% \end{table}
 
 The conventions for how covariant derivatives act on the Higgs,
 fermion and gauge vector fields are fixed as follows:
@@ -118,7 +133,7 @@ fermion and gauge vector fields are fixed as follows:
 \label{eq:covariant}
 \end{align}
 %
-While the effective Lagrangian in Eq.~\eqref{eq:EFT} is written in
+While the effective Lagrangian in \autoref{eq:EFT} is written in
 terms of the fundamental SM gauge fields, the connection to physics
 observables is more easily seen in the mass-eigenstate basis, which we
 can write as
@@ -137,12 +152,10 @@ can write as
 %
 with the different effective couplings $g_i$ quoted in
 Tab.~\ref{tab:coefficients}.  More details on the notation and
-conventions can be found in Ref.~\cite{Alloul:2013naa}.
+conventions can be found in Reference~\cite{Alloul:2013naa}.
 
-%-----------------------------------------------------------
-\begin{table}[t] 
-  \renewcommand{\arraystretch}{1.5}
-  \centering
+\begin{table}
+  \renewcommand{\arraystretch}{1.2}
   \begin{tabular}{r l l}
     \toprule
     Coupling & Operators & Expression \\
@@ -169,8 +182,8 @@ conventions can be found in Ref.~\cite{Alloul:2013naa}.
   \caption{Subset of the dimension-6 operators which enter the different
     leading-order Higgs couplings which are relevant for LHC
     phenomenology, in the notation and conventions of
-    Ref.~\cite{Alloul:2013naa} (see text).  The different superscripts
-    denote the various terms in the Lagrangian in Eq.~\eqref{eq:masslag} and
+    Reference~\cite{Alloul:2013naa} (see text).  The different superscripts
+    denote the various terms in the Lagrangian in \autoref{eq:masslag} and
     correspond to either a SM-like interaction with a rescaled coupling
     strength or to genuinely new Lorentz structures. The weak coupling
     constant is written as $g \equiv e/s_w$.  The SM contribution to the
@@ -178,7 +191,6 @@ conventions can be found in Ref.~\cite{Alloul:2013naa}.
     $g_H$ ($a_H$).}
   \label{tab:coefficients}
 \end{table}
-%-----------------------------------------------------------
 
 Note that the Higgs-fermion coupling shift is given by $g_f \propto
 y_f (1 - \bar{c}_H/2  +  3 \bar{c}_f/2)$, but $\ope{f}$ also
@@ -325,7 +337,7 @@ extensions, we make use of the covariant derivative
 expansion~\cite{Gaillard:1985uh,Cheyette:1987qz} to analytically carry out
 the matching between the different UV completions to
 their corresponding EFT description.  The method has been recently
-reappraised in Ref.~\cite{Henning:2014wua} and employed in a number of
+reappraised in Reference~\cite{Henning:2014wua} and employed in a number of
 studies~\cite{heft_limitations,heft_limitations2,Chiang:2015ura,Huo:2015exa}.
 By applying this method, the Wilson coefficients are readily obtained
 in a different operator basis (henceforth dubbed HLM),
@@ -341,8 +353,8 @@ the bosonic SILH operators, which must be rewritten with the help of
 equations of motion and field redefinitions, as we discuss below.
 
 %-----------------------------------------------------------
-\begin{table}[tb] 
-  \renewcommand{\arraystretch}{1.3}
+\begin{table}
+  \renewcommand{\arraystretch}{1.2}
   \setlength{\tabcolsep}{1ex}
   \centering
     \begin{tabular}[t]{r @{${}={}$}l} 
@@ -406,8 +418,8 @@ In addition, the HLM basis contains extra operators with no SILH counterpart,
   \label{eq:HLM_add_ops}
 \end{align}
 %
-which can be eliminated using Eq.~\eqref{eq:EFT_Or_replacement}
-and Eq.~\eqref{eq:EFT_OD_replacement}, respectively.  The Wilson
+which can be eliminated using \autoref{eq:EFT_Or_replacement}
+and \autoref{eq:EFT_OD_replacement}, respectively.  The Wilson
 coefficients $k_i$ of the HLM basis translate to the SILH coefficients
 $\bar{c}_i$ as follows:
 %
@@ -425,7 +437,7 @@ $\bar{c}_i$ as follows:
 \end{align}
 %
 where for the sake of completeness we have included the coefficients
-of the redundant operators given in Eq.~\eqref{eq:HLM_add_ops}.
+of the redundant operators given in \autoref{eq:HLM_add_ops}.
 
 
 
@@ -435,8 +447,8 @@ of the redundant operators given in Eq.~\eqref{eq:HLM_add_ops}.
 
 We also give the conversion to the popular HISZ
 basis~\cite{Hagiwara:1993ck} (see also
-Refs.~\cite{Corbett:2012ja,sfitter_last} for recent studies in this
-framework)
+References~\cite{Corbett:2012ja,sfitter_last} for recent studies in
+this framework)
 %
 \begin{align}
   \lgr{HISZ} = \sum_i \dfrac{f_i} {\Lambda^2} \ope{i}' \, ,
@@ -461,7 +473,7 @@ then be translated via the relations
 %
 The HISZ basis also includes the redundant operator $\ope{\phi4}' =
 (D_\mu\phi)^\dagger(D^\mu\phi)\,\phi^\dagger\phi$, which can be
-removed using Eq.~\eqref{eq:EFT_Or_replacement}.  For the coefficients,
+removed using \autoref{eq:EFT_Or_replacement}.  For the coefficients,
 we find
 %
 \begin{align}
@@ -481,7 +493,7 @@ we find
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Model fineprint}
-\label{chapter:appendix_models}
+\label{sec:appendix_models}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -493,7 +505,7 @@ we find
 The singlet model is defined in
 Equations~\eqref{eq:validity_singlet_lagrangian} and
 \eqref{eq:validity_singlet_potential} in
-Section~\ref{sec:validity_singlet}. Ignoring the Goldstones, the
+\autoref{sec:validity_singlet}. Ignoring the Goldstones, the
 scalar doublet and singlets fields can be expanded into components as
 %
 \begin{align}
@@ -536,7 +548,7 @@ $v^2 \ll v_s^2$.
 % we identify the UV scale $\Lambda \equiv \sqrt{2 \lambda_2} v_s \approx m_H$ for $v_s \gg v$. From the
 % singlet-doublet mixing one then finds a universal coupling shift of
 % the SM-like light Higgs to all other SM particles in
-% Eq.~\eqref{eq:shift2}, given by
+% \autoref{eq:shift2}, given by
 % %
 % \begin{alignat}{5}
 %  \Delta \approx -\frac{\sin^2 \alpha}{2} \approx
@@ -624,7 +636,7 @@ $v^2 \ll v_s^2$.
 % which means that the SM-like $h^3$ term is not only rescaled but
 % also endowed with new Lorentz structures involving derivatives.  This
 % kind of momentum dependence is encoded in the split into
-% $g^{(1)}_{HHH}$ and $g^{(2)}_{HHH}$ in Eq.~\eqref{eq:masslag}.  This
+% $g^{(1)}_{HHH}$ and $g^{(2)}_{HHH}$ in \autoref{eq:masslag}.  This
 % effect does not correspond to the Higgs singlet mixing, where such a
 % momentum dependence can only be generated via loop-induced heavy
 % particle exchange with momentum-dependent couplings like a heavy
@@ -637,8 +649,6 @@ $v^2 \ll v_s^2$.
 \label{sec:appendix_models_2hdm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Model setup}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -646,7 +656,7 @@ $v^2 \ll v_s^2$.
 We analyse the most general gauge invariant, $CP$-even theory for two
 scalar fields with an additional $\mathbb{Z}_2$ symmetry, as defined
 in Equation~\eqref{eq:validity_2hdm_potential} in
-Section~\ref{sec:validity_2hdm}.  The Higgs mass-eigenstates follow
+\autoref{sec:validity_2hdm}.  The Higgs mass-eigenstates follow
 from the set of rotations
 %
 \begin{equation}
@@ -660,9 +670,14 @@ from the set of rotations
 with
 %
 \begin{equation}
-\phi_k = \twovec {h_k^+} {\dfrac{1}{\sqrt{2}} (v_k + h_k^0 + \im a_k) }
-\quad \text{and} \quad
-R(\theta) = \twomat {\cos\theta} {\sin\theta } {-\sin\theta} {\cos\theta} \,.
+  \phi_k = \twovec {h_k^+} {\dfrac{1}{\sqrt{2}} (v_k + h_k^0 + \im a_k) }
+\end{equation}
+%
+and
+%
+\begin{equation}
+  R(\theta) = \twomat {\cos\theta} {\sin\theta } {-\sin\theta} {\cos\theta} \,.
+  \label{eq:appendix_models_2hdm_rotation}
 \end{equation}
 
 Since the two doublets contribute to giving masses to the weak gauge
@@ -671,7 +686,7 @@ mass spectrum of the model~\cite{Veltman:1976rt, Toussaint:1978zm,
   Frere:1982ma, Grimus:2007if, Hollik:1986gg, Beenakker:1988pv,
   Froggatt:1991qw, He:2001tp, Grimus:2008nb}.  Analytic relations
 linking the different Higgs masses and mixing angles with the
-Lagrangian parameters in Eq.~\eqref{eq:validity_2hdm_potential} can be found
+Lagrangian parameters in \autoref{eq:validity_2hdm_potential} can be found
 \eg in Appendix A of~\cite{Lopez-Val:2013yba}.  The conventions
 %
 \begin{equation}
@@ -764,150 +779,142 @@ Eqs.~\eqref{eq:validity_2hdm_higgs_vector_coupling} to
 \eqref{eq:validity_2hdm_last_coupling} and
 \eqref{eq:appendix_models_2hdm_haa}, to the corresponding couplings in
 the dimension-six Lagrangian,
-Eq.~\eqref{eq:foundations_higgs_couplings}.
+\autoref{eq:foundations_higgs_couplings}.
 
 In a second step we then expand in $1/\Lambda$ and keep terms up to
 $\ord{1/\Lambda^2}$, where $\Lambda$ is defined in the unbroken phase
 for the default matching or as the physical mass $m_{A^0}$ in the
 $v$-improved matching, as described in
-Section~\ref{sec:validity_2hdm}.
+\autoref{sec:validity_2hdm}.
 
 This defines the effective model in a straightforward way. For more
-details see Appendix A.2 of Ref.~\cite{Brehmer:2015rna}.
-%
-\comment{To here}
+details see Appendix~A.3 of Reference~\cite{Brehmer:2015rna}.
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Scalar top partners}
-\label{sec:appendix_models_partners}
+\label{sec:appendix_models_stops}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The simplified scalar top-partner generation sector is described by the Lagrangian
-%
-\begin{alignat}{5}
- \lgr{} &\supset  (D_{\mu}\,\tilde{Q})^\dagger\,(D^\mu\tilde{Q}) + (D_\mu\,\tilde{t}_R)^*\,(D^\mu\,\tilde{t}_R)
- - \underbrace{\tilde{Q}^\dagger\,M^2\,\tilde{Q}\,
- - M^2\,\tilde{t}_R^*\,\tilde{t}_R}_{\lgr{mass}}
- \notag \\
-& \qquad\quad  -\underbrace{\kappa_{LL}\,(\phi\cdot\tilde{Q})^\dagger(\phi\cdot\tilde{Q})
- -\kappa_{RR}\,(\tilde{t}_R^*\tilde{t}_R)\,(\phi^\dagger\,\phi) }_{\lgr{Higgs}} 
- -\underbrace{\left[ \kappa_{LR} \, M \, \tilde{t}_R^*\,(\phi \cdot \tilde{Q}) + \text{h.c.} \right]}_{\lgr{mixing}} \,.
-\label{eq:lag-partners}
- \end{alignat}
-%
-We use the customary notation for the $SU(2)_L$
-invariant product $\phi^a\cdot \tilde{Q}^b \equiv
-\epsilon_{ab}\,\phi^a\,\tilde{Q}^b$, with the help of the antisymmetric
-pseudo-tensor $\epsilon^{ab} \equiv (i\sigma^2)^{ab}$, so that
-$\epsilon^{12} = -\epsilon^{21} = 1$. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Model setup}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Notice that the term $\lgr{Higgs}$ gives rise to scalar
-partner masses proportional to the Higgs VEV, mirroring the
-supersymmetric F-term contribution to the squark masses.  By a
-similar token, the explicit mass terms $\lgr{mass}$ are
-analogous to the squark soft-SUSY breaking mass terms; while
-$\lgr{mixing}$ is responsible for the mixing between the gauge
-eigenstates, as a counterpart of the MSSM $A$-terms.
-In the absence of an underlying
-supersymmetry, the Lagrangian in Eq.~\eqref{eq:lag-partners} features
-no equivalent of the D-term contributions.
+The potential for the simplified scalar top-partner model consists of
+three parts,
+%
+\begin{multline}
+  \lgr{top partners} \supset
+  %
+  (D_{\mu} \tilde{Q})^\dagger  D^\mu \tilde{Q}
+  + (D_\mu \tilde{t}_R )^* D^\mu \tilde{t}_R
+  - \underbrace{M^2 \, \tilde{Q}^\dagger \tilde{Q}
+  - M^2\, {\tilde{t}_R}^* \tilde{t}_R }_{\lgr{mass}} \\
+  %
+  - \underbrace{\kappa_{LL} \, (\phi \cdot \tilde{Q})^\dagger \, (\phi \cdot\tilde{Q})
+  - \kappa_{RR} \, ({\tilde{t}_R}^*{\tilde{t}_R}) \, (\phi^\dagger\,\phi) }_{\lgr{Higgs}} 
+  - \underbrace{\left[ \kappa_{LR} \, M \, {\tilde{t}_R}^*\,(\phi \cdot \tilde{Q}) + \hc \right]}_{\lgr{mixing}} \,.
+  \label{eq:appendix_models_stops_lagrangian}
+\end{multline}
+%
+We use the customary notation for the $SU(2)_L$ invariant product
+$\phi \cdot \tilde{Q} \equiv \epsilon_{ab}\,\phi^a\,\tilde{Q}^b$, with
+the help of the antisymmetric pseudo-tensor
+$\epsilon^{ab} \equiv (i\sigma^2)^{ab}$ such that
+$\epsilon^{12} = -\epsilon^{21} = 1$.
 
-Collecting all bilinear terms from Eq.~\eqref{eq:lag-partners} we get
+The term $\lgr{Higgs}$ gives rise to scalar partner masses
+proportional to the Higgs vev, mirroring the supersymmetric $F$-term
+contribution to the squark masses. By a similar token, the explicit
+mass terms $\lgr{mass}$ are analogous to the squark soft-SUSY breaking
+mass terms. $\lgr{mixing}$ is responsible for the mixing between the
+gauge eigenstates, reminiscent of the MSSM $A$-terms.  In the absence
+of an underlying supersymmetry, the Lagrangian features no equivalent
+of the $D$-term contributions.
+
+Collecting all bilinear terms from
+\autoref{eq:appendix_models_stops_lagrangian}, we get
 %
-\begin{alignat}{5}
- \lgr{} &\supset (\tilde{t}_L^*\; \tilde{t}_R^*)
- \,\begin{pmatrix} M_{LL}^2 & M_{LR}^2 \\ M_{RL}^2  & M_{RR}^2 \end{pmatrix}\begin{pmatrix} \tilde{t}_L \\ \tilde{t}_R \end{pmatrix}
-  \label{eq:masses1}
-\end{alignat}
+\begin{equation}
+  \lgr{top partners} \supset
+  \left(\tilde{t}_L^* \ \tilde{t}_R^* \right)
+  \mathcal{M}_{\tilde{t}}
+  \twovec {\tilde{t}_L} {\tilde{t}_R} \,,
+\end{equation}
 %
-where
-%
-\begin{alignat}{5}
- M_{LL}^2 &= \kappa_{LL}\cfrac{v^2}{2} + M^2 \,, \qqquad 
- M_{LR}^2=M_{RL}^2 = \kappa_{LR} \, M\cfrac{v}{\sqrt{2}} \,, \qqquad 
- M_{RR}^2 = \kappa_{RR}\,\dfrac{v^2}{2}\, + M^2 \,.
- \label{eq:masses2}
-\end{alignat}
-%
-Assuming all parameters in Eq.~\eqref{eq:lag-partners} to be real,
-the above mass matrix can be diagonalized through the usual
-orthogonal transformation $R(\theta_{\tilde{t}})$ which rotates the gauge
-eigenstates $(\tilde{t}_L, \tilde{t}_R)$ onto the mass basis $(\tilde{t}_1,\tilde{t}_2)$,
+with the mass matrix $\mathcal{M}_{\tilde{t}}$ given in
+\autoref{eq:validity_stops_mass}.  Assuming all parameters in
+\autoref{eq:appendix_models_stops_lagrangian} to be real, $m_{ij}$ can
+be diagonalized through the usual orthogonal transformation
+$R(\theta_{\tilde{t}})$ given in
+\autoref{eq:appendix_models_2hdm_rotation}.  This rotates the gauge
+eigenstates $(\tilde{t}_L, \tilde{t}_R)$ into the mass basis
+$(\tilde{t}_1,\tilde{t}_2)$,
 % 
-\begin{alignat}{5}
-R(\theta_{\tilde{t}})\,\mathcal{M}_{\tilde{t}}^2\,R^\dagger(\theta_{\tilde{t}}) = \text{diag}(m^2_{\tilde{t}_1}, m^2_{\tilde{t}_2})\,,
-\qquad \begin{pmatrix} \tilde{t}_1 \\ \tilde{t}_2 \end{pmatrix} = R(\theta_{\tilde{t}}) \begin{pmatrix} \tilde{t}_L \\ \tilde{t}_R \end{pmatrix} =
-\begin{pmatrix} \cos\theta_{\tilde{t}} & \sin\theta_{\tilde{t}} \\ -\sin\theta_{\tilde{t}}  & \cos\theta_{\tilde{t}}\end{pmatrix}
- \begin{pmatrix} \tilde{t}_L \\ \tilde{t}_R \end{pmatrix}.
-\label{eq:rotation}
-\end{alignat}
+\begin{equation}
+  % R(\theta_{\tilde{t}}) \, \mathcal{M}_{\tilde{t}}^2 \, R^\dagger(\theta_{\tilde{t}})
+  % = \diag (m^2_{\tilde{t}_1}, m^2_{\tilde{t}_2})\,,
+  % \qquad
+  \twovec {\tilde{t}_1} {\tilde{t}_2}
+  = R(\theta_{\tilde{t}}) \twovec {\tilde{t}_L} {\tilde{t}_R } \,.
+\end{equation}
 % 
-The physical scalar partner masses and the mixing angle are then given by
+The physical scalar partner masses and the mixing angle are then given
+by
 % 
 \begin{align}
-m_{\tilde{t}_1}^2 &= M_{LL}^2\cos^2\theta_{\tilde{t}} + M_{RR}^2\,\sin^2\theta_{\tilde{t}} + 2M_{LR}^2\,\sin\theta_{\tilde{t}}\cos\theta_{\tilde{t}} \,,\notag \\
-%
-m_{\tilde{t}_2}^2 &= M_{LL}^2\,\sin^2\theta_{\tilde{t}} + M_{RR}^2\,\cos^2\theta_{\tilde{t}} - 2M_{LR}^2\,\sin\theta_{\tilde{t}}\,\cos\theta_{\tilde{t}} \, ,
-\label{eq:masses3} \\
-\tan(2\theta_{\tilde{t}}) &= \frac{2M_{LR}^2}{M_{LL}^2-M_{RR}^2} \, .
-\label{eq:mixing}
+  m_{\tilde{t}_1}^2
+  &= M_{LL}^2\cos^2\theta_{\tilde{t}}
+    + M_{RR}^2\,\sin^2\theta_{\tilde{t}}
+    + 2M_{LR}^2\,\sin\theta_{\tilde{t}}\cos\theta_{\tilde{t}} \,,\notag \\
+  % 
+  m_{\tilde{t}_2}^2
+  &= M_{LL}^2\,\sin^2\theta_{\tilde{t}}
+    + M_{RR}^2\,\cos^2\theta_{\tilde{t}}
+    - 2M_{LR}^2\,\sin\theta_{\tilde{t}}\,\cos\theta_{\tilde{t}} \,,  \\
+  %
+  \tan(2\theta_{\tilde{t}})
+  &= \frac{2M_{LR}^2}{M_{LL}^2-M_{RR}^2} \,.
 \end{align}
 %
-As we assume the right-handed partner $\tilde{b}_R$ to be heavy and thus decoupled, the
-sbottom-like scalar eigenstate $\tilde{b}_L$ undergoes no mixing and can be
-readily identified with the physical eigenstate.
+As we assume the right-handed bottom partner $\tilde{b}_R$ to be heavy
+and thus decoupled, the sbottom-like scalar eigenstate $\tilde{b}_L$
+undergoes no mixing and can be readily identified with the physical
+eigenstate. 
 
-To derive the effective theory, we compute the effective action at one
-loop with the help of the covariant derivative
-expansion~\cite{Gaillard:1985uh,Cheyette:1987qz,Henning:2014wua},
-which is fully consistent with our mass degeneracy setup.  Notice
-that, since the Lagrangian Eq.~\eqref{eq:lag-partners} lacks any linear
-terms in the heavy scalar fields $\Psi \equiv (\tilde{Q}, \tilde{t}_R^*)$, the
-tree-level exchange of such heavy partners cannot generate any
-effective interaction at dimension 6. 
 
-Following our default matching prescription, we set the matching scale as
-$\Lambda = M$. The relevant Wilson coefficients in the SILH basis
-then read:
-% 
-\begin{alignat}{5}
-& \bar{c}_{g} =  
- \cfrac{m_W^2}{24\,(4\pi)^2\,M^2}\,\left[(\kappa_{LL} + \kappa_{RR}) - {\kappa_{LR}^2}\right] \notag \\
-& \bar{c}_{\gamma} =  
- \cfrac{m_W^2}{9\,(4\pi)^2\,M^2}\,\left[(\kappa_{LL} + \kappa_{RR}) - {\kappa_{LR}^2}\right] \notag \\
-& \bar{c}_{B} =  
- -\cfrac{5m_W^2}{12\,(4\pi)^2\,M^2}\,\left[\kappa_{LL} - \cfrac{31}{50}{\kappa_{LR}^2}\right] \notag \\
-& \bar{c}_{W} =  
- \cfrac{m_W^2}{4\,(4\pi)^2\,M^2}\,\left[\kappa_{LL} - \cfrac{3}{10}{\kappa_{LR}^2}\right] \notag \\
-& \bar{c}_{HB} =  
- \cfrac{5m_W^2}{12\,(4\pi)^2\,M^2}\,\left[\kappa_{LL} - \cfrac{14}{25}{\kappa_{LR}^2}\right] \notag \\
-& \bar{c}_{HW} =  -
- \cfrac{m_W^2}{4\,(4\pi)^2\,M^2}\,\left[\kappa_{LL} - \cfrac{2}{5}{\kappa_{LR}^2}\right] \notag \\
- &  \bar{c}_{{H}} = 
- \cfrac{v^2}{4(4\pi)^2\,M^2}\,\left[(2\kappa_{RR}^2-\kappa_{LL}^2) - 
- {\Bigl( \kappa_{RR} - \frac{1}{2}\kappa_{LL} \Bigr) \kappa_{LR}^2 + \cfrac{\kappa_{LR}^4}{10}}\right]
- \notag \\
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsubsection{Couplings}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The scalar partner couplings to the Higgs boson can be written as
+% %
+% \begin{align}
+%   g_{h\tilde{t}_1\tilde{t}_1}/v &= \kappa_{LL}\,\cos^2\theta_{\tilde{t}} + \kappa_{RR}\,\sin^2\theta_{\tilde{t}} + \sin(2\theta_{\tilde{t}})\,\kappa_{LR} \,, \notag \\
+%   g_{h\tilde{t}_2\tilde{t}_2}/v &= \kappa_{LL}\,\sin^2\theta_{\tilde{t}} + \kappa_{RR}\,\cos^2\theta_{\tilde{t}} - \sin(2\theta_{\tilde{t}})\,\kappa_{LR} \,, \notag \\
+%   g_{h\tilde{b}_L\tilde{b}_L}/v & = \kappa_{LL} \,.
+% \end{align}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Matching}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We compute the effective action at one loop with the help of the
+covariant derivative expansion~\cite{Gaillard:1985uh,
+  Henning:2014wua}, which is fully consistent with our mass degeneracy
+setup. Since the Lagrangian
+\autoref{eq:appendix_models_stops_lagrangian} lacks any linear terms
+in the heavy scalar fields $\Psi \equiv (\tilde{Q}, \tilde{t}_R^*)$,
+the tree-level exchange of such heavy partners cannot generate any
+effective interaction at dimension six. Our results are in agreement
+with References~\cite{Henning:2014wua, Drozd:2015kva, Drozd:2015rsp}
+and given in \autoref{eq:validity_stops_wilson_coefficients}.
 %
- & \bar{c}_{{T}}  = \cfrac{v^2}{4(4\pi)^2\,M^2}\,\left[\kappa_{LL}^2 - \cfrac{\kappa_{LL}\,\kappa_{LR}^2}{{2}} + \cfrac{\kappa_{LR}^4}{{10}}\right].
-\label{eq:triplet_coefficients_ap}
-\end{alignat}
-
-We also consider a $v$-improved matching. The only difference
-to the default matching is the choice of the matching scale $\Lambda = m_{\tilde{t}_1}$,
-which manifests itself as a rescaling of the Wilson coefficients in~Eq.\,\eqref{eq:triplet_coefficients_ap}
-by a factor of $M^2 / m_{\tilde{t}_1}^2$.
-
-
-The scalar partner couplings to the Higgs boson can be written as
-%
-\begin{alignat}{5}
- g_{h\tilde{t}_1\tilde{t}_1}/v &= \kappa_{LL}\,\cos^2\theta_{\tilde{t}} + \kappa_{RR}\,\sin^2\theta_{\tilde{t}} + \sin(2\theta_{\tilde{t}})\,\kappa_{LR} \,, \notag \\
- g_{h\tilde{t}_2\tilde{t}_2}/v &= \kappa_{LL}\,\sin^2\theta_{\tilde{t}} + \kappa_{RR}\,\cos^2\theta_{\tilde{t}} - \sin(2\theta_{\tilde{t}})\,\kappa_{LR} \,, \notag \\
- g_{h\tilde{b}_L\tilde{b}_L}/v & = \kappa_{LL} \,.
- \label{eq:higgscouplings}
-\end{alignat}
+\comment{To here}
 
 
 
@@ -952,7 +959,7 @@ exception is made for the couplings to fermions, where an extra
 weighting factor $g_W^2/g_V^2$ is introduced for a convenient power
 counting in certain UV embeddings~\cite{Pappadopulo:2014qza}.  For
 simplicity, it is assumed that the fermion current in
-Eq.~\eqref{eq:lag-vectortriplet-app} is universal.
+\autoref{eq:lag-vectortriplet-app} is universal.
 
 Equation~\eqref{eq:lag-vectortriplet-app} is the most general Lagrangian
 compatible with the SM gauge group and CP invariance, provided that
@@ -997,8 +1004,8 @@ J_\mu^{H, a} &= \cfrac{i}{2}\,\left[\phi^\dagger\,\sigma^a\,\overleftrightarrow{
 An appropriate field redefinition absorbs the kinetic mixing term
 $V^{\mu a} \left(D^\nu W_{\mu \nu} \right)^a$ ~\cite{delAguila:2010mx}
 and connects the parameters in the \emph{tilded} basis of
-Eq.~\eqref{eq:lag-vectortriplet-tilded} and \emph{untilded} basis of
-Eq.~\eqref{eq:lag-vectortriplet-app} through the relations
+\autoref{eq:lag-vectortriplet-tilded} and \emph{untilded} basis of
+\autoref{eq:lag-vectortriplet-app} through the relations
 %
 \begin{align}
   M_V^2 &= \dfrac {g_V^2} {g_V^2 - \tilde{c}_{WV}^2 g_W^2} \tilde{M}_V^2 \,,\notag \\
@@ -1094,7 +1101,7 @@ Notice that the $V$-$W$ mixing also affects the weak current interactions, which
   \label{eq:VectorTriplet_gratio}
 \end{align}
 %
-The relation between $\hat{v}$ and $v$ can be read off from Eq.~\eqref{eq:VectorTriplet_mWxi}, giving approximately
+The relation between $\hat{v}$ and $v$ can be read off from \autoref{eq:VectorTriplet_mWxi}, giving approximately
 %
 \begin{align}
   \dfrac{\hat{v}} v = 1 + \dfrac {c_H^2 \, g_V^2} 8 \, \dfrac {v^2} {M_V^2}  -
@@ -1111,8 +1118,8 @@ scenarios.  In practice, we set up our model in the $m_W$-$g$ scheme,
 \ie taking as input parameters $g$, $m_W$, $\alpha$, $m_{h^0}$,
 $\alpha_s$; the model-specific parameters $c_i$; as well as the
 physical masses $m_{\xi^\pm}$.  The mass spectrum and mixing angles we
-obtain by solving Eq.~\eqref{eq:VectorTriplet_mZxi} and
-Eq.~\eqref{eq:VectorTriplet_mWxi} iteratively.
+obtain by solving \autoref{eq:VectorTriplet_mZxi} and
+\autoref{eq:VectorTriplet_mWxi} iteratively.
 
 
 
@@ -1122,7 +1129,7 @@ Eq.~\eqref{eq:VectorTriplet_mWxi} iteratively.
 
 To construct the vector triplet EFT following the default matching, we identify 
 the new physics scale $\Lambda = M_V$.  Starting from the heavy
-triplet Lagrangian defined by Eq.~\eqref{eq:lag-vectortriplet-tilded},
+triplet Lagrangian defined by \autoref{eq:lag-vectortriplet-tilded},
 we first integrate by parts the kinetic mixing term,
 %
 \begin{alignat}{5}
@@ -1133,7 +1140,7 @@ we first integrate by parts the kinetic mixing term,
 \end{alignat}
 %
 such that we can rewrite it in terms of the gauge current from
-Eq.~\eqref{eq:currents}.  Integrating out the heavy vector field
+\autoref{eq:currents}.  Integrating out the heavy vector field
 $V^a_\mu$ one obtains the effective Lagrangian
 %
 \begin{alignat}{5}
@@ -1162,7 +1169,7 @@ V^{\mu,a} =
  \label{eq:eom-v}.
 \end{align}
 
-Plugging Eq.~\eqref{eq:eom-v} into Eq.~\eqref{eq:lageff1}, $\lgr{EFT}$ can
+Plugging \autoref{eq:eom-v} into \autoref{eq:lageff1}, $\lgr{EFT}$ can
 be expressed in terms of current products as
 %
 \begin{alignat}{5}
@@ -1176,8 +1183,8 @@ be expressed in terms of current products as
 %
 In the following, we disregard 4-fermion operators since they are
 irrelevant for our analysis. The remaining five current products in
-Eq.~\eqref{eq:lageff2} can be expressed in terms of two independent
-ones by using Eq.~\eqref{eq:eom-w} (with the replacement $g \to g_W$),
+\autoref{eq:lageff2} can be expressed in terms of two independent
+ones by using \autoref{eq:eom-w} (with the replacement $g \to g_W$),
 which corresponds to $J_W^{\mu,a} = g_WJ_H^{\mu,a}+ g_WJ_F^{\mu,a}/2$:
 %
 \begin{alignat}{5}
@@ -1206,7 +1213,7 @@ J_H^{\mu,a}\,J_\mu^{H\,a} &= -\cfrac{1}{4}\,(\ope{H} - 4\,\ope{r}) =
 \end{alignat}
 %
 where $y_f$ denotes the bare Yukawa coupling $y_f \equiv
-\sqrt{2}m_f/v$.  Plugging the above into Eq.~\eqref{eq:lageffeom}, one
+\sqrt{2}m_f/v$.  Plugging the above into \autoref{eq:lageffeom}, one
 can easily read off the relevant Wilson coefficients of the EFT:
 %
 \begin{alignat}{5}
@@ -1242,9 +1249,9 @@ On the EFT side, it is illustrative to discuss the origin of the Higgs
 coupling shifts within two different approaches. First we consider the
 EFT that keeps the fermionic operator $\ope{HF}'$ (\ie instead of
 using the conventional replacement in
-Eq.~\eqref{eq:EFT_OHf_replacement} that maximizes the use of bosonic
+\autoref{eq:EFT_OHf_replacement} that maximizes the use of bosonic
 operators). In this case, similar to
-Eq.~\eqref{eq:VectorTriplet_gratio}, a renormalization effect of the
+\autoref{eq:VectorTriplet_gratio}, a renormalization effect of the
 weak coupling occurs from $V$-$W$ mixing,
 %
 \begin{alignat}{5}
@@ -1263,9 +1270,9 @@ Wilson coefficients are
 %
 Instead, if we now consider the EFT with the bosonic operator
 $\ope{W}$, \ie after applying the replacement in
-Eq.~\eqref{eq:EFT_OHf_replacement}, there is no additional
+\autoref{eq:EFT_OHf_replacement}, there is no additional
 renormalization of the weak coupling, so that $g=g_W$.  The relevant
-Wilson coefficient are given in Eq.~\eqref{eq:VectorTriplet_EFT2}.
+Wilson coefficient are given in \autoref{eq:VectorTriplet_EFT2}.
 
 
 Now we are in a position to determine the Higgs coupling shifts in
@@ -1304,5 +1311,5 @@ Similarly for the Higgs coupling to on-shell $W$ bosons we get
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fisher information derivations}
-\label{chapter:appendix_information}
+\label{sec:appendix_information}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
