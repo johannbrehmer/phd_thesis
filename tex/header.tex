@@ -5,11 +5,11 @@
 
 \documentclass[a4paper,
 	twoside,
-	captions=nooneline, %captions of floats are not centered if only one line
-	fleqn, %equations to the left, not centered
+	captions=nooneline, % captions of floats are not centered if only one line
+	fleqn, % equations to the left, not centered
 	%parskip=half, %some vertical space between paragraphs
 	%appendixprefix, %call appendices "appendix A" and so on, not just "A"
-	%BCOR=5mm, %binding correction - only for printing
+	BCOR=1mm, %binding correction
 	headsepline, %line below heading
 	bibliography=totoc,
 	abstracton,
@@ -203,8 +203,9 @@ afterskip=2cm]{chapter}
 % \setkomafont{subsubsection}{\large}
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Other formatting
+% Emphasis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \emph for bold instead of italic
@@ -212,7 +213,13 @@ afterskip=2cm]{chapter}
 \DeclareRobustCommand{\em}{%
   \@nomath\em \if b\expandafter\@car\f@series\@nil
   \normalfont \else \bfseries \fi}
-\makeatother
+\makeatother 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Itemize and enumerate
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Itemize with smaller bullets
 \setlist[itemize,1]{label=\raisebox{0.1ex}{\scriptsize$\bullet$}}
@@ -226,16 +233,21 @@ afterskip=2cm]{chapter}
 \setlist{itemsep=1.5pt plus 1.0pt minus 0.5pt,
 parsep=1.5pt plus 1.0pt minus 0.5pt,
 partopsep=3.0pt plus 1.0pt minus 1.0pt,
-topsep=3.0pt plus 1.5pt minus 2.5pt} % mine
+topsep=3.0pt plus 1.5pt minus 2.5pt} % mine 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Other design elements
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % always center floats, also smaller font for tables
 \makeatletter
 \g@addto@macro\@floatboxreset\centering\small
 \makeatother
 
-% Formatting of header
+% Running header
 \setkomafont{pageheadfoot}{\sffamily \upshape \small}
-
 
 
 
@@ -262,7 +274,6 @@ topsep=3.0pt plus 1.5pt minus 2.5pt} % mine
 % don't number subsubsections, but potentially include in toc
 \setcounter{secnumdepth}{2}
 \setcounter{tocdepth}{2}
-
 
 
 

@@ -37,31 +37,18 @@
 % Abstracts
 \input{tex/abstract.tex}
 
-% ToC, LoT, LoF
+% Table of Contents
 \microtypesetup{protrusion=false} % disables protrusion for ToC 
-
 %\KOMAoptions{open=left}
 \tableofcontents 
 %\KOMAoptions{open=right}
-
-\listoffigures
-\addcontentsline{toc}{chapter}{List of Figures}
-
-\listoftables 
-\addcontentsline{toc}{chapter}{List of Tables}
-
 \microtypesetup{protrusion=true} % enables protrusion again
 
-% Preface and acknowledgements
+% Preface
 \input{tex/preface.tex}
-\input{tex/acknowledgements}
 
 \thispagestyle{plain}
 \cleardoubleemptypage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Higgs theory
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -90,8 +77,20 @@
 \backmatter 
 %\KOMAoptions{cleardoublepage=empty}
 
+% Acknowledgements
+\input{tex/acknowledgements}
+
 \input{tex/appendix}
 \bibliography{bib/own_work,bib/experiment,bib/theory,bib/eft,bib/pheno,bib/statistics,bib/tools,bib/quotes}
+
+% List of figures and tables?
+% \listoffigures
+% \addcontentsline{toc}{chapter}{List of Figures}
+% \listoftables 
+% \addcontentsline{toc}{chapter}{List of Tables}
+
+% Glossary
+\input{tex/glossary.tex}
 
 
 
