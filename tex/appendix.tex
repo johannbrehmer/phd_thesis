@@ -950,389 +950,295 @@ and given in \autoref{eq:validity_stops_wilson_coefficients}.
 \label{sec:appendix_models_triplet}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We consider a real vector triplet field $V_\mu^{a=1,2,3}$ transforming
-under the SM gauge group as $(r_c,r_L,r_Y) =
-(\textbf{1},\textbf{3},0)$.  Its dynamics can be effectively described
-by means of the Lagrangian~\cite{Pappadopulo:2014qza}
+Our final example is the heavy vector triplet defined in
+\autoref{eq:validity_lag-vectortriplet}. This Lagrangian includes
+conventional factors of coupling constants, introduced for a
+convenient power counting in certain UV
+embeddings~\cite{Pappadopulo:2014qza}: insertions of $V$ and $\phi$
+are weighted by one factor of $g_V$, while SM gauge bosons come with a
+factor of $g_w$. In addition, the coupling to fermions is weighted
+with an additional factor of $g_W^2/g_V^2$. For simplicity, it is
+assumed that the fermion current in \autoref{eq:lag-vectortriplet-app}
+is universal.
+
+We can add an explicit kinetic $V$-$W$ mixing term
 %
-\begin{alignat}{5}
- \lgr{} \supset& -\cfrac{1}{4}\,V_{\mu\nu}^a\,V^{\mu\nu\, a}\, + \cfrac{M_V^2}{2}\,V_{\mu}^a\,V^{\mu\,a}
- + i\,g_V\,c_H\,V_{\mu}^a\,\left[\phi^\dagger\tau^a\,\overleftrightarrow{D}^\mu\,\phi\,\right]
-  +\cfrac{g_W^2}{g_V}\,V_{\mu}^a\,c_F\sum_F\, \overline{F}_L\,\gamma^\mu\,\tau^a\,F_L
- \notag \\
- %
- &+
- \cfrac{g_V}{2}\,c_{VVV}\,\epsilon_{abc}\,V_{\mu}^a\,V_{\nu}^b\,D^{[\mu}V^{\nu]c}\, + g_V^2\,c_{VVHH}\,V_{\mu}^a\,V^{\mu a}\,\phisq\,
- - \cfrac{g_W}{2}\,c_{VVW}\,\epsilon_{abc}\,W^{\mu\nu}\,V_\mu^b\,V_\nu^c \,,
- \label{eq:lag-vectortriplet-app}
-\end{alignat}
+\begin{equation}
+  \lgr{} \supset c_{WV}\,\frac{g_W}{2g_V} \, D_{[\mu}\,V_{\nu]}^a\,W^{\mu\nu\, a}
+\end{equation}
 %
-where the vector triplet field-strength tensor is $V_{\mu\nu}^a \equiv
-D_{\mu}V_{\nu}^a - D_{\nu}\,V_{\mu}^a$ and $\tau^a\equiv \sigma^a/2$ are the
-$SU(2)_L$ generators in the fundamental representation.  The covariant
-derivative acts on the vector triplet field as $D_\mu\,V_\nu^a =
-\partial_\mu\,V_\nu^a+g\epsilon^{abc}\,V^b_{\mu}V_{\nu}^c$.
+to the Lagrangian in
+\autoref{eq:validity_vector_triplet_lagrangian}. As it turns out, this
+term is redundant and can be removed with field redefinitions,
+shifting its effects into the other model
+parameters~\cite{delAguila:2010mx, Pappadopulo:2014qza}. For more
+details, see Appendix A.5 of Reference~\cite{Brehmer:2015rna}.
 
-The coupling constant $g_V$ stands for the characteristic strength of
-the heavy vector-mediated interactions, while $g_W$ denotes the
-$SU(2)_L$ weak gauge coupling (which differs from the coupling
-strength $g$ of the observable $W$ boson due to $W$-$V$ mixing, see
-below).  The different
-dimensionless coefficients $c_i$ quantify the relative strengths of
-the individual couplings.  This parametrization weights the extra $V$
-and $\phi$ field insertions by one factor of $g_V$ each, while gauge
-boson insertions are weighted by one power of the weak coupling.  An
-exception is made for the couplings to fermions, where an extra
-weighting factor $g_W^2/g_V^2$ is introduced for a convenient power
-counting in certain UV embeddings~\cite{Pappadopulo:2014qza}.  For
-simplicity, it is assumed that the fermion current in
-\autoref{eq:lag-vectortriplet-app} is universal.
-
-Equation~\eqref{eq:lag-vectortriplet-app} is the most general Lagrangian
-compatible with the SM gauge group and CP invariance, provided that
-$V_\mu^a$ transforms as $V_\mu^a(\vec{x},t)
-\sin\theta_{\tilde{t}}ackrel{\text{CP}}{\longrightarrow}
--(-1)^{\delta_{a2}}\,V_\mu^a(-\vec{x},t)$ as the SM vectors. 
-Moreover, the Lagrangian obeys a
-global $SO(4) = SU(2)_L \times SU(2)_R$ symmetry, which is typical of
-strongly interacting dynamics.
-
-Since $V_\mu^a$ is not manifestly gauged, this simplified vector
-triplet model in itself is not renormalizable.  However, it can be
-easily linked to a gauge-invariant theory \eg via the Higgs or the
-St\"uckelberg mechanisms~\cite{Pappadopulo:2014qza}.
-
-An alternative model setup, which is particularly useful to construct
-the effective theory,
-introduces an explicit kinetic $V$-$W$ mixing via the Lagrangian
-% 
-\begin{alignat}{5}
- \lgr{} \supset &-\cfrac{1}{4}\,V_{\mu\nu}^a\,V^{\mu\nu\, a}\, + \cfrac{\tilde{M}_V^2}{2}\,V_{\mu}^a\,V^{\mu\,a}
- + \,g_V\,\tilde{c}_H\,V_{\mu}^a\,J_H^{\mu,a}
-  +\cfrac{g_W^2}{2g_V}\,V_{\mu}^a\,\tilde{c}_F\sum_F\,J_F^{\mu,a} + \tilde{c}_{WV}\,\cfrac{g_W}{2g_V}\,D_{[\mu}\,V_{\nu]}^a\,W^{\mu\nu\, a}
- \notag \\
- &+
- \cfrac{g_V}{2}\,\tilde{c}_{VVV}\,\epsilon_{abc}\,V_{\mu}^a\,V_{\nu}^b\,D^{[\mu}V^{\nu]c}\, 
- + g_V^2\,\tilde{c}_{VVHH}\,V_{\mu}^a\,V^{\mu a}\,\phisq\,
- - \cfrac{g_W}{2}\,\tilde{c}_{VVW}\,\epsilon_{abc}\,W^{\mu\nu}\,V_\mu^b\,V_\nu^c \,
- \label{eq:lag-vectortriplet-tilded},
-\end{alignat}
+In this model, seven gauge eigenstates $W^a$, $B$, $V^a$ mix into mass
+eigenstates $A$, $W^\pm$, $Z$, $\xi^\pm$, and $\xi^0$. The photon is
+as usual defined as the component that remains massless during EWSB,
+$A_\mu = c_w\,B_\mu + s_w\,W_\mu^3$, where the Weinberg angle is
+linked to the gauge couplings $e = g_W\,s_w = g'\,c_w$.  For the
+remaining fields we have to diagonalize the neutral and charged mass
+matrices, giving the mass eigenstates
 %
-where for convenience we have introduced the Higgs, fermion and vector
-current bilinears
+\begingroup%
+\allowdisplaybreaks%
+\begin{align}
+  Z_\mu
+  &= \cos \theta_N \left(-s_w B_\mu + c_w W_\mu^3 \right)
+    + \sin \theta_N \, V^3_\mu \,,\notag \\
+  %
+  \xi^0_\mu
+  &= - \sin \theta_N \left(-s_w B_\mu + c_w W_\mu^3 \right)
+    + \cos \theta_N  \, V^3_\mu \,,\notag \\
+  %
+  W^\pm_\mu
+  &= \cos \theta_C \, \dfrac{W^1_\mu \mp W^2_\mu} {\sqrt{2}}
+    + \sin \theta_C \, \dfrac{V^1_\mu \mp V^2_\mu} {\sqrt{2}} \,,\notag \\
+  %
+  \xi^\pm_\mu
+  &= - \sin \theta_C \, \dfrac{W^1_\mu \mp W^2_\mu} {\sqrt{2}}
+    + \cos \theta_C \, \dfrac{V^1_\mu \mp V^2_\mu} {\sqrt{2}} \,.
+\end{align}%
+\endgroup
+%
+The corresponding mass eigenvalues read
 %
 \begin{align}
-J_\mu^{H, a} &= \cfrac{i}{2}\,\left[\phi^\dagger\,\sigma^a\,\overleftrightarrow{D}_\mu
-\,\phi \right],
- & J_\mu^{F, a} &= \overline{F}_L\gamma_\mu\,\sigma^a\,F_L\,,
- & J_\mu^{W,a} &= D^\nu\,W_{\mu\nu}^a\, \label{eq:currents}. 
-\end{align}
-%
-An appropriate field redefinition absorbs the kinetic mixing term
-$V^{\mu a} \left(D^\nu W_{\mu \nu} \right)^a$ ~\cite{delAguila:2010mx}
-and connects the parameters in the \emph{tilded} basis of
-\autoref{eq:lag-vectortriplet-tilded} and \emph{untilded} basis of
-\autoref{eq:lag-vectortriplet-app} through the relations
-%
-\begin{align}
-  M_V^2 &= \dfrac {g_V^2} {g_V^2 - \tilde{c}_{WV}^2 g_W^2} \tilde{M}_V^2 \,,\notag \\
-  c_H &= \dfrac {g_V} {\sqrt{g_V^2 - \tilde{c}_{WV}^2 g_W^2}} \left[ \tilde{c}_H + \dfrac {g_W^2}{g_V^2} \tilde{c}_{WV} \right] ,\notag \\
-  c_F &= \dfrac{g_V} {\sqrt{g_V^2 - \tilde{c}_{WV}^2 g_W^2}} \left[ \tilde{c}_F + \tilde{c}_{WV} \right] ,\notag \\
-  c_{VVHH} &= \dfrac {g_V^2} {g_V^2 - \tilde{c}_{WV}^2 g_W^2} \left[ \tilde{c}_{VVHH} + \dfrac {g_W^2} {2 g_V^2} \tilde{c}_{WV} \tilde{c}_H + \dfrac {g_W^4} {4g_V^4} \tilde{c}_{WV}^2 \right] ,\notag \\
-  c_{VVW} &= \dfrac {g_V^2} {g_V^2 - \tilde{c}_{WV}^2 g_W^2} \left[ \tilde{c}_{VVW} - \dfrac{g_W^2}{g_V^2} \tilde{c}_{WV}^2 \right] ,\notag \\
-  c_{VVV} &= \dfrac {g_V^2} {\left(g_V^2 - \tilde{c}_{WV}^2 g_W^2\right)^{3/2}} \left[
-    \tilde{c}_{VVV} - \dfrac{g_W^2}{g_V^2} \tilde{c}_{WV} (\tilde{c}_{VVW} + 2) + 2 \dfrac {g_W^2} {g_V^4} \tilde{c}_{WV}^3 \right]  \,.
-  \label{eq:VectorTriplet_tilded_to_untilded}
-\end{align}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Spectrum}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-The heavy vector sector in the gauge basis contains one neutral state
-$V_\mu^{0}\equiv V_\mu^3$ and two charged states $V_\mu^{\pm} \equiv
-(V_\mu^1\mp V_\mu^2)/\sqrt{2}$.  Upon EWSB only one vector state
-remains massless, which we readily identify with the standard photon
-field $A_\mu = c_w\,B_\mu + s_w\,W_\mu^3$.  Here, the Weinberg angle
-is linked as usual to the electroweak gauge couplings $e = g_W\,s_w =
-g'\,c_w$, although at this stage we cannot yet relate it to
-electroweak observables before the mixing with the heavy vectors is
-included.  The latter involves, for the neutral fields, the heavy
-vector component $V^0$ and the linear combination of $B,W^3$
-orthogonal to the photon field. A similar mixing pattern appears in
-the charged sector, involving the field components $V^{1,2}_\mu,
-W^{1,2}_\mu$.  The physical mass eigenstates can be written as
-%
-\begin{align}
-  Z_\mu &= \cos \theta_N \left(-s_w B_\mu + c_w W_\mu^3 \right) + \sin \theta_N \, V^3_\mu \,,\notag \\
-  \xi^0_\mu &= - \sin \theta_N \left(-s_w B_\mu + c_w W_\mu^3 \right) + \cos \theta_N  \, V^3_\mu \,,\notag \\
-  W^\pm_\mu &= \cos \theta_C \, \dfrac{W^1_\mu \mp W^2_\mu} {\sqrt{2}} + \sin \theta_C \, \dfrac{V^1_\mu \mp V^2_\mu} {\sqrt{2}} \,,\notag \\
-  \xi^\pm_\mu &= - \sin \theta_C \, \dfrac{W^1_\mu \mp W^2_\mu} {\sqrt{2}} + \cos \theta_C \, \dfrac{V^1_\mu \mp V^2_\mu} {\sqrt{2}} \,.
-\end{align}  
-%
-The mass eigenvalues are given by
-%
-\begin{align}
-  m_{Z/\xi^0}^2 &= \dfrac 1 2 \left[ \hat{m}_V^2 + \hat{m}_Z^2 \mp \sqrt{ \left( \hat{m}_Z^2 - \hat{m}_V^2 \right)^2 + c_H^2 \, g_V^2 \, \hat{m}_Z^2 \, \hat{v}^2} \, \right] \notag \\
-    &=
+  m_{Z/\xi^0}^2
+  &= \frac 1 2 \left[ \hat{m}_V^2
+    + \hat{m}_Z^2
+    \mp \sqrt{ \left( \hat{m}_Z^2 - \hat{m}_V^2 \right)^2
+    + c_H^2 \, g_V^2 \, \hat{m}_Z^2 \, \hat{v}^2} \, \right] \notag \\
+  %
+  &=
   \begin{cases}
-    \hat{m}_Z^2 \left(1 - \dfrac {c_H^2 g_V^2} {4} \, \dfrac {\hat{v}^2} {\hat{m}_V^2} + \ord{\hat{v}^4/ \hat{m}_V^4}  \right)  \\
-    \hat{m}_V^2 \left(1 + \dfrac {c_H^2 g_V^2} {4} \, \dfrac {\hat{v}^2} {\hat{m}_V^2} + \ord{\hat{v}^4/ \hat{m}_V^4}  \right) \,,
+    \hat{m}_Z^2 \left(1
+      - \dfrac {c_H^2 g_V^2} {4} \, \dfrac {\hat{v}^2} {\hat{m}_V^2}
+      + \ord{\hat{v}^4/ \hat{m}_V^4}  \right)  \\
+    \hat{m}_V^2 \left(1
+      + \dfrac {c_H^2 g_V^2} {4} \, \dfrac {\hat{v}^2} {\hat{m}_V^2}
+      + \ord{\hat{v}^4/ \hat{m}_V^4}  \right) \,,
   \end{cases}
-  \label{eq:VectorTriplet_mZxi}
+  \label{eq:appendix_vector_triplet_neutral_masses}
 \end{align}
+%
+and
+%
 \begin{align}
-  m_{W^\pm/\xi^\pm}^2 &= \dfrac 1 2 \left[ \hat{m}_V^2 + \hat{m}_W^2 \mp \sqrt{ \left( \hat{m}_W^2 - \hat{m}_V^2 \right)^2 + c_H^2 \, g_V^2 \, \hat{m}_W^2 \, \hat{v}^2} \, \right] \notag \\
-    &=
-  \begin{cases}
-    \hat{m}_W^2 \left(1 - \dfrac {c_H^2 g_V^2} {4} \, \dfrac {\hat{v}^2} {\hat{m}_V^2} + \ord{\hat{v}^4/ \hat{m}_V^4}  \right) \\
-    \hat{m}_V^2 \left(1 + \dfrac {c_H^2 g_V^2} {4} \, \dfrac {\hat{v}^2} {\hat{m}_V^2} + \ord{\hat{v}^4/ \hat{m}_V^4}  \right) \,.
+  m_{W^\pm/\xi^\pm}^2
+  &= \frac 1 2 \left[ \hat{m}_V^2
+    + \hat{m}_W^2 \mp \sqrt{ \left( \hat{m}_W^2 - \hat{m}_V^2 \right)^2
+    + c_H^2 \, g_V^2 \, \hat{m}_W^2 \, \hat{v}^2} \, \right] \notag \\
+  %
+  &=
+    \begin{cases}
+      \hat{m}_W^2 \left(1
+        - \dfrac {c_H^2 g_V^2} {4} \, \dfrac {\hat{v}^2} {\hat{m}_V^2}
+        + \ord{\hat{v}^4/ \hat{m}_V^4}  \right) \\
+    \hat{m}_V^2 \left(1
+      + \dfrac {c_H^2 g_V^2} {4} \, \dfrac {\hat{v}^2} {\hat{m}_V^2}
+      + \ord{\hat{v}^4/ \hat{m}_V^4}  \right) \,.
   \end{cases} 
-  \label{eq:VectorTriplet_mWxi}
+  \label{eq:appendix_vector_triplet_charged_masses}
 \end{align}
 %
 For the mixing angles, we find
 %
 \begin{align}
-  \tan (2 \theta_N) &= \dfrac {c_H \, g_V \, \hat{v} \, \hat{m}_Z } {\hat{m}_V^2 - \hat{m}_Z^2}  
-  = \dfrac{c_H \, g \, g_V} {2 \, c_w} \, \dfrac {\hat{v}^2} {\hat{m}_V^2}  +  \ord {\hat{v}^4/ \hat{m}_V^4} \,,\notag \\
-  \tan (2 \theta_C) &= \dfrac {c_H \, g_V \, \hat{v} \, \hat{m}_W } {\hat{m}_V^2 - \hat{m}_W^2} 
-  = \dfrac{c_H \, g \, g_V} 2 \, \dfrac {\hat{v}^2} {\hat{m}_V^2}  + \ord {\hat{v}^4/ \hat{m}_V^4} \,,
-  \label{eq:VectorTriplet_mixingangles}
+  \tan (2 \theta_N)
+  &= \frac {c_H \, g_V \, \hat{v} \, \hat{m}_Z } {\hat{m}_V^2 - \hat{m}_Z^2}  
+    = \frac{c_H \, g \, g_V} {2 \, c_w} \, \frac {\hat{v}^2} {\hat{m}_V^2} 
+    +  \ord {\hat{v}^4/ \hat{m}_V^4} \,,\notag \\
+  %
+  \tan (2 \theta_C)
+  &= \frac {c_H \, g_V \, \hat{v} \, \hat{m}_W } {\hat{m}_V^2 - \hat{m}_W^2} 
+    = \frac{c_H \, g \, g_V} 2 \, \frac {\hat{v}^2} {\hat{m}_V^2} 
+    + \ord {\hat{v}^4/ \hat{m}_V^4} \,,
 \end{align}
 %
 or
 %
-\begin{align}
-  \sin \theta_C = \dfrac {c_H \, g \, g_V} {4} \, \dfrac {v^2} {M_V^2}  + \ord{\hat{v}^4/ \hat{m}_V^4}\,.
-\end{align}
+\begin{equation}
+  \sin \theta_C = \frac {c_H \, g \, g_V} {4} \, \dfrac {v^2} {M_V^2}
+  + \ord{\hat{v}^4/ \hat{m}_V^4}\,.
+\end{equation}
 %
-Here we define
+Here we use the definitions
 %
-\begin{align}
-  \hat{m}_Z  = \dfrac{g_W \, \hat{v} } {2 \, c_w} \qquad
-  \hat{m}_W  = \dfrac{g_W \, \hat{v} } {2} \qquad 
-  \hat{m}_V^2  = M_V^2 + g_V^2 \, c_{VVHH} \, \hat{v}^2
-  \label{eq:VectorTriplet_mVhat}
-\end{align}
+\begin{equation}
+  \hat{m}_Z  = \frac{g_W \, \hat{v} } {2 \, c_w} \,, \qquad
+  \hat{m}_W  = \frac{g_W \, \hat{v} } {2} \,, \qquad
+  \hat{m}_V^2  = M_V^2 + g_V^2 \, c_{VVHH} \, \hat{v}^2 \,,
+\end{equation}
 %
-where $\hat{v}$ is the actual vev of $\phi$, which does not necessarily have the SM value of $v = 2m_W/g \approx 246 \ \gev$. 
+where $\hat{v}$ is the actual vev of $\phi$, which does not
+necessarily have the SM value of $v = 2m_W/g \approx 246 \ \gev$.
 
-Notice that the $V$-$W$ mixing also affects the weak current interactions, which are no longer governed by $g_W$. Instead, the physical $Wff'$ coupling reads
+This mixing affects the weak current interactions: instead of being
+simply governed by the $SU(2)_L$ coupling constant $g_W$, the physical
+$Wff'$ couplings are now determined by
 %
 \begin{align}
   g  = \cos \theta_C \, g_W - \sin \theta_C \, c_F \, \dfrac {g_W^2} {g_V} 
      = g_W \, \left(1 - \dfrac{c_F \, c_H \, g_W^2} 4  \, \dfrac {v^2}{M_V^2} \right)+ \ord{v^4 / M_V^4 } \,.
-  \label{eq:VectorTriplet_gratio}
 \end{align}
 %
-The relation between $\hat{v}$ and $v$ can be read off from \autoref{eq:VectorTriplet_mWxi}, giving approximately
+The relation between $\hat{v}$ and $v$ can be read off from
+\autoref{eq:appendix_vector_triplet_charged_masses}:
 %
 \begin{align}
-  \dfrac{\hat{v}} v = 1 + \dfrac {c_H^2 \, g_V^2} 8 \, \dfrac {v^2} {M_V^2}  -
-  \dfrac {c_F \, c_H \, g_W^2} 4 \, \dfrac {v^2} {M_V^2}  + \ord{v^4 / M_V^4 } \,.
-  \label{eq:VectorTriplet_vevratio}
+  \frac{\hat{v}} v
+  =
+  1 + \frac {c_H^2 \, g_V^2} 8 \, \frac {v^2} {M_V^2}
+  - \frac {c_F \, c_H \, g_W^2} 4 \, \frac {v^2} {M_V^2}
+  + \ord{v^4 / M_V^4 } \,.
 \end{align}
 
-The global $SU(2)_V$ custodial symmetry connects the charged and
-neutral current strengths through $m_W^2\,m^2_{\xi^{\pm}} =
-c^2_w\,m_Z^2\,m^2_{\xi^0}$, which generalizes the SM relation $m_W^2 =
-c^2_w\,m_Z^2$.  Compatibility with EWPO enforces nearly mass-degenerate
-states $m_{\xi^0} \simeq m_{\xi^{\pm}}$ for phenomenologically viable
-scenarios.  In practice, we set up our model in the $m_W$-$g$ scheme,
-\ie taking as input parameters $g$, $m_W$, $\alpha$, $m_{h^0}$,
-$\alpha_s$; the model-specific parameters $c_i$; as well as the
-physical masses $m_{\xi^\pm}$.  The mass spectrum and mixing angles we
-obtain by solving \autoref{eq:VectorTriplet_mZxi} and
-\autoref{eq:VectorTriplet_mWxi} iteratively.
+Finally, note that to ensure compatibility with electroweak precision
+measurements, the neutral and charged states $\xi^0$ and $\xi^\pm$
+have to be nearly mass-degenerate,
+%
+\begin{equation}
+  m_{\xi^0} \approx m_{\xi^{\pm}} \equiv m_{\xi} \,.
+\end{equation}
+
+In practice, we set up our model in the $m_W$-$g$ scheme, \ie based on
+the input parameters $g$, $m_W$, $\alpha$, $m_{h^0}$, $\alpha_s$, the
+vector triplet couplings $g_V$ and $c_i$, as well as the physical mass
+$m_{\xi^\pm}$. The remaining Lagrangian parameters, mixing angles, and
+couplings are calculated by solving
+Equations~\eqref{eq:appendix_vector_triplet_neutral_masses} and
+\eqref{eq:appendix_vector_triplet_charged_masses} iteratively. 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Effective theory}
+\subsubsection*{Couplings}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-To construct the vector triplet EFT following the default matching, we identify 
-the new physics scale $\Lambda = M_V$.  Starting from the heavy
-triplet Lagrangian defined by \autoref{eq:lag-vectortriplet-tilded},
-we first integrate by parts the kinetic mixing term,
-%
-\begin{alignat}{5}
-\tilde{c}_{WV}{\dfrac{g_W}{2g_V}}\,D_{[\mu}\,V_{\nu]}^a\,W^{\mu\nu\, a} =
-\tilde{c}_{WV}\,\cfrac{g_W}{g_V}\,V^{\mu, a}\,(D^\nu\,W^a_{\mu\nu}) = 
- \tilde{c}_{WV}\,\cfrac{g_W}{g_V}\,V^{\mu, a}\,J_\mu^{W\,a} \,  
-\label{eq:kinmix}, 
-\end{alignat}
-%
-such that we can rewrite it in terms of the gauge current from
-\autoref{eq:currents}.  Integrating out the heavy vector field
-$V^a_\mu$ one obtains the effective Lagrangian
-%
-\begin{alignat}{5}
- \lgr{EFT}&\supset \cfrac{\tilde{M}_V^2}{2}V^{\mu,a}\,V_\mu^a + V_{\mu}^a\left[g_V\,\tilde{c}_H\,J_H^{\mu,a}
-  +\cfrac{g_W^2}{2g_V}\,\tilde{c}_F\,\sum_F\,J_F^{\mu,a} +
-  \tilde{c}_{WV}\,\cfrac{g_W}{g_V}\,J_\mu^{W\,a} \right] +  \ord{V^3}\,,
- \label{eq:lageff1}
-\end{alignat}
-%
-where we neglect those contributions involving higher powers in the
-heavy field, as they play no role in our analysis.
-
-The Euler-Lagrange equation for $V_{\mu}^a$,
-%
-\begin{alignat}{5}
-& [\partial^\mu\partial^\nu - g^{\mu\nu}\,\partial^2 - \tilde{M}_V^2] \,V^{a}_{\nu}
-= g_V\,\tilde{c}_H\,J_H^{\mu,a}+\cfrac{g_W^2}{2g_V}\,\tilde{c}_F\sum_FJ_F^{\mu,a}\,+\tilde{c}_{WV}\,\cfrac{g_W}{g_V}\,J_W^{\mu,a} + 
- \,\text{h.o.\ terms in}\; V_{\mu}^a\,, \notag
-\end{alignat}
-%
-leads to
+The mismatch between $g$ and $g_w$ as well as between $v$ and $\hat{v}$ leads to a shift of the Higgs couplings to fermions,
 %
 \begin{align}
-V^{\mu,a} = 
--\cfrac{1}{\tilde{M}_V^2}\,\left[\tilde{c}_{WV}\,\cfrac{g_W}{g_V}\,J_W^{\mu,a} +g_V\,\tilde{c}_H\,J_H^{\mu,a}+\cfrac{g_W^2}{2g_V}\,\tilde{c}_F\,\sum_F\,J_F^{\mu,a}\,\right] {+ {\cal O}(p_V^2/\tilde{M}_V^4) + {\cal O}(V^2)}  
- \label{eq:eom-v}.
+ \Delta_f
+ &= \frac{g_W}{g} \,\frac{v}{\hat{v}} - 1
+ %
+ = \frac{1}{\cos \theta_C - c_F \, \frac {g_W} {g_V} \, \sin \theta_C}\, \frac{v}{\hat{v}}
+   - 1 \notag \\
+ %
+ &=  c_H^2 \, \frac {g_V^2 v^2} {8M_V^2}
+ + c_F c_H \, \frac{g^2 v^2} {4M_V^2} + \ord{M_V^{-4}} \,,
 \end{align}
-
-Plugging \autoref{eq:eom-v} into \autoref{eq:lageff1}, $\lgr{EFT}$ can
-be expressed in terms of current products as
 %
-\begin{alignat}{5}
- \lgr{EFT}&\supset {-}\cfrac{g_W^{{4}}\,\tilde{c}_F^2}{8g_V^2\,\tilde{M}_V^2}\,J_F^{\mu,a}\,J_\mu^{F\,a} - 
- \cfrac{g_V^2\,\tilde{c}_H^2}{2\,\tilde{M}_V^2}\,J_H^{\mu,a}\,J_\mu^{H\,a}
- - \cfrac{g_W^2\,\tilde{c}_F\,\tilde{c}_H}{2\,\tilde{M}_V^2}\,J_H^{\mu,a}\,J_\mu^{F\,a} {-}  \cfrac{g_W\,\tilde{c}_H\,\tilde{c}_{WV}}{\tilde{M}_V^2}\,J_H^{\mu,a}\,J_\mu^{W\,a}
- \notag \\
-& \qquad - \cfrac{g_W^2\,\tilde{c}_{WV}^2}{{2}\,g_V^2\,\tilde{M}_V^2}\,J_W^{\mu,a}\,J_\mu^{W\,a} {-} \cfrac{g_W^3\,\tilde{c}_F\,\tilde{c}_{WV}}{{ 2}\,g_V^2\,\tilde{M}_V^2}\,J_W^{\mu,a}\,J_\mu^{F\,a}
- \label{eq:lageff2}. 
-\end{alignat}
+and to (on-shell) $W$ bosons,
 %
-In the following, we disregard 4-fermion operators since they are
-irrelevant for our analysis. The remaining five current products in
-\autoref{eq:lageff2} can be expressed in terms of two independent
-ones by using \autoref{eq:eom-w} (with the replacement $g \to g_W$),
-which corresponds to $J_W^{\mu,a} = g_WJ_H^{\mu,a}+ g_WJ_F^{\mu,a}/2$:
-%
-\begin{alignat}{5}
- \lgr{EFT}&\supset - 
- \cfrac{(g_V^2\tilde{c}_H+g_W^2\tilde{c}_{WV})^2}{2\,g_V^2\,\tilde{M}_V^2}\,J_H^{\mu,a}\,J_\mu^{H\,a}
- - \cfrac{g_W^2\,(\tilde{c}_F+\tilde{c}_{WV})\,(g_V^2\tilde{c}_H+g_W^2\tilde{c}_{WV})}{2\,g_V^2\,\tilde{M}_V^2}\,J_H^{\mu,a}\,J_\mu^{F\,a} + \text{4-fermion}
- \label{eq:lageffeom}.
-\end{alignat}
-%
-Using Eq.(A.4) in~\cite{Pappadopulo:2014qza}, it can be checked that
-this equation is invariant when changing between the tilded and
-untilded bases.  With the help of Eqs.~\eqref{eq:EFT_JHJH_replacement},
-\eqref{eq:EFT_OHf_replacement}, and \eqref{eq:EFT_Or_replacement}
-(and again relabeling $g \to g_W$ in these relations) the two
-independent current products can be expressed in terms of dimension-6
-operators as follows:
-%
-\begin{alignat}{5}
-J_H^{\mu,a}\,J_\mu^{H\,a} &= -\cfrac{1}{4}\,(\ope{H} - 4\,\ope{r}) = 
--\cfrac{1}{4}\,\left[ 3\ope{H} -8\lambda\ope{6} - 2\sum_f\left[y_f\ope{f} + \text{h.c.} \right] \right]
-\notag \\
-  J_F^{\mu,a}\,J_\mu^{H\,a} &= 
-  \cfrac{i}{2}\,\ope{HF}' 
-  = \cfrac{i\ope{W}}{g_W} + \cfrac{1}{2}\,\left[ 3\ope{H} - 8\lambda\ope{6} - 2\sum_f\left[y_f\ope{f} + \text{h.c.}\right]\right]
-\label{eq:current-summary1} 
-\end{alignat}
-%
-where $y_f$ denotes the bare Yukawa coupling $y_f \equiv
-\sqrt{2}m_f/v$.  Plugging the above into \autoref{eq:lageffeom}, one
-can easily read off the relevant Wilson coefficients of the EFT:
-%
-\begin{alignat}{5}
- \bar{c}_H &= \cfrac{3\,g_W^2\,v^2}{4\,\tilde{M}_V^2}\,\left[\tilde{c}_H^2\cfrac{g_V^2}{g_W^2} -2 \tilde{c}_F\,\tilde{c}_{WV}\,\cfrac{g^2}{g_V^2} - 2\,\tilde{c}_F\,\tilde{c}_H { -\tilde{c}_{WV}^2\,\cfrac{g^2}{g_V^2}}\right] ,\notag \\
- \bar{c}_6 &= \cfrac{g_W^2\,v^2}{\tilde{M}_V^2}\,\left[\tilde{c}_H^2\cfrac{g_V^2}{g_W^2} -2 \tilde{c}_F\,\tilde{c}_{WV}\,\cfrac{g^2}{g_V^2} - 2\,\tilde{c}_F\,\tilde{c}_H {-\tilde{c}_{WV}^2\,\cfrac{g^2}{g_V^2}}\right] ,\notag \\
- \bar{c}_f &= \cfrac{g_W^2\,v^2}{4\,\tilde{M}_V^2}\,\left[\tilde{c}_H^2\cfrac{g_V^2}{g_W^2} -2 \tilde{c}_F\,\tilde{c}_{WV}\,\cfrac{g^2}{g_V^2} - 2\,\tilde{c}_F\,\tilde{c}_H { -\tilde{c}_{WV}^2\,\cfrac{g^2}{g_V^2}}\right] ,\notag \\
- \bar{c}_W &= \cfrac{m_W^2}{\tilde{M}_V^2}\,\left[-\tilde{c}_F\tilde{c}_H -\tilde{c}_H\,\tilde{c}_{WV} - \tilde{c}_F\,\tilde{c}_{WV}\,\cfrac{g_W^2}{g_V^2}  -\tilde{c}_{WV}^2\,\cfrac{g^2}{g_V^2}\right] \, .
- \label{eq:wilsonmatched}
-\end{alignat}
-%
-In the untilded basis, these correspond to
 \begin{align}
- \bar{c}_{H} &= \dfrac{3\,g_W^2\,v^2}{4\,M_V^2}\,\left[c_H^2\dfrac{g_V^2}{g_W^2}  - 2\,c_F\,c_H\right] , \notag \\
- \bar{c}_{6} &= \dfrac{g_W^2\,v^2}{M_V^2}\,\left[c_H^2\dfrac{g_V^2}{g_W^2} - 2\,c_F\,c_H \right] , \notag \\
- \bar{c}_{f} &= \dfrac{g_W^2\,v^2}{4\,M_V^2}\,\left[c_H^2\dfrac{g_V^2}{g_W^2}  - 2\,c_F\,c_H \right] , \notag \\
- \bar{c}_{W} &= - \dfrac{m_W^2}{M_V^2}\, c_Fc_H \,.
-  \label{eq:VectorTriplet_EFT2}
+  \Delta_W
+  &= \frac 1 {g m_W}
+  \Biggl( \frac{\cos^2 \theta_C \, g^2 \, \hat{v}}
+    {2(\cos \theta_C- c_F \frac {g_W} {g_V} \sin \theta_C)^2}
+    - c_H \frac {\sin \theta_C \, \cos \theta_C \, g \, g_V \, \hat{v}} 
+    {\cos \theta_C - c_F \, \frac{g_W}{g_V} \, \sin \theta_C} \notag \\
+  %
+  &\phantom{=} \qqqqquad \qquad
+    + 2 \, c_{ VVHH} \, \sin^2 \theta_C \, g_V^2 \, \hat{v} \Biggr) - 1 \notag \\
+  % 
+  &= c_H^2 \, \frac{3g_V^2 v^2}{8M_V^2}
+  + c_F c_H \, \frac{g^2 v^2}{4M_V^2}
+  + \ord{M_V^{-4}} \,.
 \end{align}
-with $f = u, d, \ell$. Other than that, only four-fermion interactions
-are generated at tree level and at $\ord{v^2/M_V^2}$; these are not
-relevant for our analysis and are not considered here.
 
-As in the 2HDM and scalar partner models, we define an additional
-$v$-improved EFT by $\Lambda = m_{\xi^0}$, leading the same Wilson
-coefficients as above except that $M_V$ is replaced by $m_{\xi^0}$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Higgs couplings}
+\subsubsection*{Matching}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-On the EFT side, it is illustrative to discuss the origin of the Higgs
-coupling shifts within two different approaches. First we consider the
-EFT that keeps the fermionic operator $\ope{HF}'$ (\ie instead of
-using the conventional replacement in
-\autoref{eq:EFT_OHf_replacement} that maximizes the use of bosonic
-operators). In this case, similar to
-\autoref{eq:VectorTriplet_gratio}, a renormalization effect of the
-weak coupling occurs from $V$-$W$ mixing,
+Since we are only interested in tree-level effects, we can construct
+the effective theory in our default matching procedure with the
+classical equation of motion for $V^a_\mu$, corresponding to the first
+term in \autoref{eq:effective_action_result}. To simplify the notation, we define currents
 %
-\begin{alignat}{5}
-g &= g_W(1-i\bar{c}'_{HF})
-\end{alignat}
+\begin{equation}
+  J_F^{\mu,a}  \equiv \bar{f}_L \gamma^\mu \sigma^a f_L  \,, \qquad
+  J_H^{\mu,a} \equiv \phi^\dagger \sigma^a \overleftrightarrow{D}^\mu \phi \,.
+\end{equation}
 %
-where $g$ is the observable coupling between the $W$ boson and SM
-fermions. In this EFT and using the untilded basis, the relevant
-Wilson coefficients are
+This Euler-Lagrange equation then reads
 %
-\begin{alignat}{5}
-\bar{c}_H &= c_H^2 \dfrac{3g_V^2v^2}{4M_V^2}, \qquad
-\bar{c}_f &= \dfrac{1}{3}\bar{c}_{H}, \qquad
-\bar{c}'_{HF}= -ic_Fc_H\dfrac{g_W^2v^2}{4M_V^2}\, .
-\end{alignat}
+\begin{equation}
+  [\partial^\mu\partial^\nu - g^{\mu\nu} \, \partial^2 - M_V^2] \,V^{a}_{\nu}
+  = g_V \, c_H \, J_H^{\mu,a} + \frac {g_W^2} {2g_V} \, c_F \sum_F J_F^{\mu,a} + 
+ \ord{V^2}
+\end{equation}
 %
-Instead, if we now consider the EFT with the bosonic operator
-$\ope{W}$, \ie after applying the replacement in
-\autoref{eq:EFT_OHf_replacement}, there is no additional
-renormalization of the weak coupling, so that $g=g_W$.  The relevant
-Wilson coefficient are given in \autoref{eq:VectorTriplet_EFT2}.
+or
+%
+\begin{equation}
+  V^{\mu,a} = 
+  - \frac 1 {M_V^2}
+  \left[ g_V \, c_H \, J_H^{\mu,a}
+    +\frac {g_W^2} {2g_V} \, c_F \, \sum_F \, J_F^{\mu,a} \right]
+  + \ord{p_V^2/\tilde{M}_V^4} + \ord{V^2}  \,,
+\end{equation}
+%
+where we neglect higher powers of $V$ that are irrelevant for our
+analysis.
 
-
-Now we are in a position to determine the Higgs coupling shifts in
-the three models. For the Yukawa couplings we find
+Inserting this into the Lagrangian in
+\autoref{eq:validity_vector_triplet_lagrangian}, we find the effective
+theory
+%
+\begin{equation}
+ \lgr{EFT}
+ \supset
+ - \frac {g_W^{4}\,c_F^2} {8g_V^2\,M_V^2} \, J_F^{\mu,a} \, J_\mu^{F\,a}
+ - \frac {g_V^2\,c_H^2} {2\,M_V^2} \, J_H^{\mu,a} \, J_\mu^{H\,a}
+ - \frac {g_W^2\,c_F\,c_H} {2\,M_V^2} \, J_H^{\mu,a} \, J_\mu^{F\,a} \,.
+\end{equation}
+%
+$J_F^{\mu,a} \, J_\mu^{F\,a}$ only contains four-fermion operators
+irrelevant for our analysis. The remaining current products can be
+expressed in terms of dimension-six operators as
 %
 \begin{align}
-&\text{Full model:} & \Delta_f^\text{full} &= \frac{g_W}{g} \,\frac{v}{\hat{v}} -1 =
-                           \frac{1}{c_{\theta_C}^{}-c_F\frac{g_W}{g_V}s_{\theta_C}^{}}\, \frac{v}{\hat{v}} -1 \notag \\
-&&&=  c_H^2\frac{g_V^2 v^2}{8M_V^2} + c_Fc_H\frac{g^2 v^2}{4M_V^2} + {\cal O}(M_V^{-4}) \notag \\[2ex]
-&\text{EFT with $\ope{HF}'$:} &
-\Delta_f^{\ope{HF}'} &= \frac{\bar{c}_{H}}{2}+ \bar{c}_{f} =  \frac{\bar{c}_{H}}{2}+ \bar{c}_{f} + i\bar{c}'_{HF}  \notag \\
-&&&= c_H^2\frac{g_V^2 v^2}{8M_V^2} + c_Fc_H\frac{g^2 v^2}{4M_V^2} \notag \\[2ex]
-&\text{EFT with $\ope{W}$:} &
-\Delta_f^{\ope{W}} &= \frac{\bar{c}_{H}}{2}+ \bar{c}_{f}  \notag \\
-  &&&=  c_H^2\frac{g_V^2 v^2}{8M_V^2} + c_Fc_H\frac{g^2 v^2}{4M_V^2}
+  J_H^{\mu,a}\,J_\mu^{H\,a}
+  &= -\frac{1}{2}\,(\ope{\phi,2} - 2 \, \phisq\, (D_\mu \phi)^2) \notag \\
+  %
+  &= - \frac{1}{2} \,
+    \left[
+    3\ope{\phi,2} - 12\lambda\ope{\phi,3} - \sum_f y_f\ope{f} 
+    \right] \,, \\
+  %
+  J_F^{\mu,a}\,J_\mu^{H\,a}
+  &= \frac{\im}{2} \,
+    \left( \bar{f}_L \, \gamma^\mu \, \sigma^a \, f_L \right)
+    \left( \phi^\dagger \, \sigma^a \, \overleftrightarrow{D}_\mu \, \phi \right) \notag \\
+  %
+  &= \frac{-2 }{g_W^2} \, \left[ \ope{WW} + \ope{BW} - 2 \ope{W} \right] 
+    + 3\ope{\phi,2} - 12\lambda\ope{\phi,3} - \sum_f y_f\ope{f} \,.
 \end{align}
-
-Similarly for the Higgs coupling to on-shell $W$ bosons we get
 %
-\begin{align}
-&\text{Full model:} &
-\Delta_W^\text{full} &= \frac 1 {g m_W} \left( \frac{c_{\theta_C}^2 g^2 \hat{v}}{2(c_{\theta_C}^{}-c_F\frac{g_W}{g_V}s_{\theta_C}^{})^2}
--c_H\frac{s_{\theta_C}^{}c_{\theta_C}^{} g g_V \hat{v}}{c_{\theta_C}^{}-c_F\frac{g_W}{g_V}s_{\theta_C}^{}}+
-2c_{ VVHH} s_{\theta_C}^2 g_V^2 \hat{v} \right) - 1 \notag \\
-&&&= c_H^2\frac{3g_V^2 v^2}{8M_V^2} + c_Fc_H\frac{g^2 v^2}{4M_V^2} + {\cal O}(M_V^{-4}) \notag \,, \\[2ex]
-&\text{EFT with $\ope{HF}'$:} &
-\Delta_W^{\ope{HF}'} &= \frac {g_W} {g}  \left( 1-\frac{\bar{c}_{H}}{2} \right) - 1 = \frac{\bar{c}_{H}}{2}+ i\bar{c}'_{HF}  \notag \\
-&&&= c_H^2\frac{3g_V^2 v^2}{8M_V^2} + c_Fc_H\frac{g^2 v^2}{4M_V^2} \,, \notag \\[2ex]
-&\text{EFT with $\ope{W}$:} &
-\Delta_W^{\ope{W}} &=  \frac{\bar{c}_{H}}{2}+ 2\bar{c}_{W} \notag \\
-  &&&= c_H^2\frac{3g_V^2 v^2}{8M_V^2} + c_Fc_H\frac{g^2 v^2}{4M_V^2}  \,.
-\end{align}
+Here we have used the equations of motions in
+Equations~\eqref{eq:foundations_sm_eom1} to
+\eqref{eq:foundations_sm_eom2} to bring the operators to our HISZ
+basis.
 
+Combining the pieces, we finally arrive at
+%
+\begin{equation}
+ \lgr{EFT}
+ \supset
+ \left( \frac {g_V^2\,c_H^2} {4\,M_V^2} - \frac {g_W^2\,c_F\,c_H} {2\,M_V^2}  \right)
+ \left[ 3\ope{\phi,2} - 12\lambda\ope{\phi,3} - \sum_f y_f\ope{f} \right]
+ + \frac {c_F\,c_H} {M_V^2} \, \left[ \ope{WW} + \ope{BW} - 2 \ope{W} \right] \,,
+\end{equation}
+%
+corresponding to the Wilson coefficients given in
+\autoref{eq:validity_vector_triplet_coefficients}.
+%
+\comment{To here}
 
 
 
