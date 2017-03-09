@@ -14,6 +14,14 @@ details on the models considered in
 Appendix~\ref{sec:appendix_information} we derive some of the key
 results of \autoref{chapter:information}.
 
+Large parts of this appendix has been published previously, as part of
+the same articles that contained much of the main body of this
+thesis. In particular, Appendices~\ref{sec:appendix_bases} and
+\ref{sec:appendix_models} was published in
+References~\cite{Brehmer:2015rna, Biekotter:2016ecg}, while
+Appendix~\ref{sec:appendix_information} contains material published in
+Reference~\cite{Brehmer:2016nyr}.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -21,16 +29,31 @@ results of \autoref{chapter:information}.
 \label{sec:appendix_bases}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Standard Model conventions}
 \label{sec:appendix_bases_sm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Bla
-
+We begin with our conventions for the Standard Model, which also apply to all models of new physics. We parametrise the SM Lagrangian as
+%
+\begin{multline}
+  \lgr{SM}
+  \supset
+    - \frac 1 4 G^a_{\mu\nu} G^{a\,\mu\nu} - \frac 1 4 W^a_{\mu\nu} W^{a\,\mu \nu} - \frac 1 4 B_{\mu\nu} B^{\mu \nu}
+    + \sum_f \overbar f \im \slashed D f
+    + (D^\mu \phi)^\dagger (D_\mu \phi) \\
+  %
+  \phantom{=} \quad - \mu^2 \phisq - \lambda (\phisq)^2
+            - \sum_{\text{generations}} \left(    y_u {\twovec {\overbar u} {\overbar d}}_L \tilde \phi \, u_{R} 
+                                                           + y_d {\twovec {\overbar u} {\overbar d}}_L \phi \, d_{R}
+                                                           + y_\ell {\twovec {\overbar \nu} {\overbar \ell^-}}_L \phi \, \ell_{R}  + \hc  \right )
+\end{multline}
+%
+with covariant derivatives
+%
+\begin{align}
+  D_\mu \phi &= \left( \partial_\mu - \im g \frac {\sigma^a} 2 W^a_\mu - \im \frac {g'} 2 B_\mu \right) \phi
+\end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{HISZ basis}

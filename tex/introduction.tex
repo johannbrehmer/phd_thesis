@@ -57,14 +57,14 @@ the effects of any interesting new physics scenario without strong model
 assumptions. On the other hand, too large a number of parameters makes
 combinations of different experiments and global fits impractical.
 
-A simple example for such a universal parametrisation is the $\kappa$
-framework, which was widely used during run~1 of the LHC. It is based
-on the SM Lagrangian, but promotes all Higgs couplings to free
-parameters. There are several issues with this approach: it is not
-gauge-invariant, and it can only describe structures that are already
-present in the SM. So while a measurement based on the $\kappa$
-framework can be useful for total rates, it will not be able to
-utilise information in kinematic distributions.
+A simple example for such a universal parametrisation that was widely
+used during run~1 of the LHC is the $\kappa$ framework. It is based on
+the SM Lagrangian, but promotes all Higgs couplings to free
+parameters. The main limitation of this approach is that it can only
+describe structures that are already present in the SM. So while a
+measurement based on the $\kappa$ framework can be useful for total
+rates, it will not be able to utilise information in kinematic
+distributions.
 
 Instead, we work in an approach based on effective field theory
 (EFT)~\cite{Coleman:1969sm, Callan:1969sn, Weinberg:1980wa}. Based
@@ -102,16 +102,16 @@ physics breaks down, and how it can be improved.
 As it turns out, the agreement between the approaches crucially
 depends on the matching procedure that links the coefficients of the
 dimension-six model to the full theory. We introduce $v$-improved
-matching, a procedure that improves the performance of the dimension-six
-model by resumming certain terms that arise during electroweak
-symmetry breaking. While formally of higher order in the EFT
-expansion, these effects can be large under LHC conditions. With such
-a matching, the effective model provides a good description even in
-many scenarios where the EFT validity is not obvious. We then discuss
-a number of practical questions on the role of squared dimension-six
-terms in the differential cross sections, effects on fits, and the
-correlation between different observables and the momentum
-transfer~\cite{Biekotter:2016ecg}.
+matching, a procedure that improves the performance of the
+dimension-six model by resumming certain terms that arise during
+electroweak symmetry breaking. While formally of subleading order in
+the EFT expansion, these effects can be large under LHC
+conditions. With such a matching, the effective model provides a good
+description even in many scenarios where the EFT validity is not
+obvious. We then discuss a number of practical questions on the role
+of squared dimension-six terms in the differential cross sections,
+effects on fits, and the correlation between different observables and
+the momentum transfer~\cite{Biekotter:2016ecg}.
 
 \newparagraph
 %
@@ -119,24 +119,25 @@ Having established that Higgs EFT works well as a largely
 model-independent language for Higgs physics at the LHC, the
 next question is how its parameters can be measured optimally. Higgs
 measurements are affected by many different operators, and each of
-them affects different couplings, often introducing non-trivial
+them affects different couplings, typically introducing non-trivial
 kinematic structures. This leads to a complicated relation between the
 high-dimensional model parameter space and often also high-dimensional
 phase spaces.
 
 Traditional analyses based on selection cuts and histograms of
-kinematic observables are often not sensitive to such subtle signatures.
-At the other end of the spectrum, experiments resort more and more to
-high-level statistical tools, including machine learning techniques or
-the matrix element method~\cite{Kondo:1988yd, Atwood:1991ka,
-  Gao:2010qx, Bolognesi:2012mm, Cranmer:2015nia}. Many of these tools
-are designed for the comparison between two discrete hypotheses, and
-applying them to high-dimensional parameter spaces such as Higgs EFT
-is computationally expensive. Extending machine learning techniques to
-such high-dimensional spaces is a current area of
-research~\cite{Cranmer:2015bka}. These multivariate techniques are
-powerful, but can be non-transparent. It is therefore increasingly
-important to be able to characterise the information contained in LHC
+kinematic observables are in many cases not sensitive to such subtle
+signatures.  At the other end of the spectrum, experiments resort more
+and more to high-level statistical tools, including machine learning
+techniques or the matrix element method~\cite{Kondo:1988yd,
+  Atwood:1991ka, Gao:2010qx, Bolognesi:2012mm, Cranmer:2015nia}. Many
+of these tools are designed for the comparison between two discrete
+hypotheses, and applying them to high-dimensional parameter spaces
+such as Higgs EFT is computationally expensive. Extending machine
+learning techniques to such high-dimensional spaces is a current area
+of research~\cite{Cranmer:2015bka}. Also, while these multivariate
+techniques are powerful, it is often not transparent which physical
+properties exactly they probe. It is therefore increasingly important
+to be able to characterise the information contained in LHC
 signatures.
 
 We use information geometry to understand and optimise Higgs
