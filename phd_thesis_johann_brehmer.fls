@@ -802,7 +802,6 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/mnsymbol/MnSymbolA-Bol
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/mnsymbol/MnSymbolB-Bold12.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/mnsymbol/MnSymbolC-Bold12.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/mnsymbol/MnSymbolD-Bold12.tfm
-INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Bold-osf-ot1.tfm
 INPUT tex/dummy.tex
 INPUT tex/dummy.tex
 INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Regular-tlf-t1.tfm
@@ -846,9 +845,9 @@ INPUT ./diagrams.mp
 INPUT phd_thesis_johann_brehmer.aux
 INPUT ./phd_thesis_johann_brehmer.out
 INPUT ./phd_thesis_johann_brehmer.out
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolS.enc
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc
+INPUT /usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolS.enc
 INPUT /usr/local/texlive/texmf-local/fonts/enc/dvips/MinionPro/a_yu5zig.enc
 INPUT /usr/local/texlive/texmf-local/fonts/enc/dvips/MinionPro/a_jidws5.enc
 INPUT /usr/local/texlive/texmf-local/fonts/enc/dvips/MinionPro/a_so5ulq.enc
