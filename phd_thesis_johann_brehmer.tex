@@ -63,8 +63,7 @@
 \input{tex/foundations.tex}
 
 \input{tex/eft_limits.tex}
-%\input{tex/information_geometry.tex}
-\input{tex/dummy.tex}
+\input{tex/information_geometry.tex}
 
 \input{tex/conclusions.tex}
 
@@ -74,13 +73,26 @@
 % Back matter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Appendix formatting
 \backmatter 
 %\KOMAoptions{cleardoublepage=empty}
+
+\let\oldsection\thesection
+\renewcommand{\thesection}{A.\oldsection}
+\let\oldequation\theequation
+\renewcommand{\theequation}{A.\oldequation}
+\let\oldfigure\thefigure
+\renewcommand{\thefigure}{A.\oldfigure}
+\let\oldtable\thetable
+\renewcommand{\thetable}{A.\oldtable}
 
 % Acknowledgements
 \input{tex/acknowledgements}
 
+% \appendix
 \input{tex/appendix}
+
+% References
 \bibliography{bib/own_work,bib/experiment,bib/theory,bib/eft,bib/pheno,bib/statistics,bib/tools,bib/quotes}
 
 % List of figures and tables?

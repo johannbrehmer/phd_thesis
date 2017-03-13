@@ -32,7 +32,7 @@
 % Option 1: Minion Pro + Myriad Pro 
 % % maybe using semibold instead of bold with the [medfamily] option
 % 1A: text figures in text modes, lining tabular figures in math mode
-\usepackage[textosf,mathlf,mathtabular,minionint]{MinionPro} 
+\usepackage[textosf,mathlf,mathtabular,minionint,roundv]{MinionPro} 
 \usepackage[mathlf,mathtabular,onlytext,medfamily]{MyriadPro}
 % % 1B: lining figures everywhere
 % \usepackage[lf,mathtabular,minionint]{MinionPro} 
@@ -110,6 +110,7 @@
 \usepackage{calc} % arithmetic expressions for lengths
 \usepackage{mparhack} % avoids marginpars appearing on the wrong side, remove for final version
 \usepackage{lettrine} % Initials 
+\usepackage{tabto}
 
 
 
@@ -139,20 +140,53 @@
 % \RedeclareSectionCommand[beforeskip=2\baselineskip,
 % afterskip=3\baselineskip]{chapter}
 
-% Option 3: Formatting chapter titles with "chapter"
+% % Option 3: Formatting chapter titles with "chapter"
+% \newlength{\numberheight}
+% \newlength{\chapterheight}
+% \newlength{\effectiveheight}
+% \renewcommand*{\chapterformat}{%
+%   \settoheight{\numberheight}{{\figureversion{lf}\thechapter\autodot}}%
+%   \settoheight{\chapterheight}{Chapter}%
+%   \setlength{\effectiveheight}{4\numberheight-\chapterheight}%
+%   \enskip\mbox{\raisebox{\effectiveheight}{Chapter}~~\scalebox{4}{{\figureversion{lf}\thechapter\autodot}}}}
+% \renewcommand\chapterlinesformat[3]{%
+%   {\color{highlight-color}
+%     \parbox[b]{\textwidth}{\hfill#2}\par%
+%   {\color{black}#3}\par
+%   }}
+% \RedeclareSectionCommand[beforeskip=1cm,
+% afterskip=2cm]{chapter}
+
+% Option 3b: Formatting chapter titles with "chapter", except appendix
 \newlength{\numberheight}
 \newlength{\chapterheight}
 \newlength{\effectiveheight}
+
+% Requires new toggle to check whether we're in the appendix
+\newif\ifinappendix% Default is \inappendixfalse
+\let\oldappendix\appendix% Store \appendix
+\renewcommand{\appendix}{% Update \appendix
+  \oldappendix% Default \appendix
+  \inappendixtrue% Set switch to true
+}
+
 \renewcommand*{\chapterformat}{%
+  \makeatletter
+  \ifinappendix
+  \else
   \settoheight{\numberheight}{{\figureversion{lf}\thechapter\autodot}}%
   \settoheight{\chapterheight}{Chapter}%
   \setlength{\effectiveheight}{4\numberheight-\chapterheight}%
-  \enskip\mbox{\raisebox{\effectiveheight}{Chapter}~~\scalebox{4}{{\figureversion{lf}\thechapter\autodot}}}}
+  \enskip\mbox{\raisebox{\effectiveheight}{Chapter}~~\scalebox{4}{{\figureversion{lf}\thechapter\autodot}}}
+  \fi
+  \makeatother}
+
 \renewcommand\chapterlinesformat[3]{%
   {\color{highlight-color}
     \parbox[b]{\textwidth}{\hfill#2}\par%
   {\color{black}#3}\par
   }}
+
 \RedeclareSectionCommand[beforeskip=1cm,
 afterskip=2cm]{chapter}
 
