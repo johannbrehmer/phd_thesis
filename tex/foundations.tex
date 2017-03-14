@@ -369,7 +369,7 @@ can be influenced by many effects such as new particles in the loop).
   \label{fig:foundations_hh_diag}
 \end{figure}
 
-Our final channel is \emph{Higgs pair production}, showin in
+Our final channel is \emph{Higgs pair production}, showing in
 \autoref{fig:foundations_hh_diag}, which allows to measure the Higgs
 self-coupling~\cite{Plehn:1996wb, Baur:2002rb}. It is another example
 of destructive interference between different amplitudes: diagrams in
@@ -894,7 +894,7 @@ instance, the Lagrangian
 \end{equation}
 %
 with implicit sum over $i$ describes fermions $\psi_i$, a vector boson
-$V_\mu$ of mass $m_V$, and an interaction between them gouverned by a
+$V_\mu$ of mass $m_V$, and an interaction between them governed by a
 coupling $g$.\footnote{Massive vector bosons have issues with
   renormalisability and unitarity, which can be solved by generating
   the mass in a Higgs mechanism at a higher scale, but this is irrelevant
@@ -1971,7 +1971,7 @@ how exactly such physics should look like.
 This leaves us with a question highly relevant for upcoming ATLAS and
 CMS analyses: what is the best language to discuss indirect signs of
 new physics at the electroweak scale, in particular in the Higgs
-sector? Which parameterisation of Higgs properties provides a good
+sector? Which parametrisation of Higgs properties provides a good
 interface between different experiments, and between experiment and
 theory?
 
@@ -2074,13 +2074,13 @@ Three different conventions have become popular: the complete
 ``Warsaw'' basis~\cite{Grzadkowski:2010es}, the ``Strongly Interacting
 Light Higgs'' convention (SILH)~\cite{Giudice:2007fh, Contino:2013kra}
 and the Hagiwara-Ishihara-Szalapski-Zeppenfeld
-basis~\cite{Hagiwara:1993ck}. All three maximize the use of bosonic
+basis (HISZ)~\cite{Hagiwara:1993ck}. All three maximise the use of bosonic
 operators to describe Higgs and electroweak observables. For a
 comparison of and conversion between these bases see
 Appendix~\ref{sec:appendix_bases} and
 References~\cite{Falkowski:2015wza, Brehmer:2015rna}\comment{More
   references?}. Throughout this thesis we use the basis developed
-in~References~\cite{Corbett:2012ja, Juan_thesis, Tyler_thesis}, which is strongly
+in References~\cite{Corbett:2012ja, Juan_thesis, Tyler_thesis}, which is strongly
 based on the HISZ basis and now widely used in global
 fits~\cite{Corbett:2015ksa, Butter:2016cvz}.
 
@@ -2316,11 +2316,26 @@ bosons read~\cite{Grzadkowski:2010es}
 \begingroup%
 \allowdisplaybreaks%
 \begin{align}
-  D^2 \phi &= - \mu^2 \phi - 2 \lambda (\phisq) \phi - \sum_f y_f \overbar{f}_R f_L + \ord{1/\Lambda^2} \,,
-  \label{eq:foundations_sm_eom1}\\
-  % (D^\rho G_{\rho \mu})^a &= g_s \left( \overbar{q}_L \gamma_\mu T^a q_L + \overbar{u}_R \gamma_\mu T^a u_R + \overbar{d}_R \gamma_\mu T^a d_R  + \ord{1/\Lambda^2} \,,   \\
-  \partial^\rho B_{\rho \mu} &= - \frac {g'} 2 \left( \im  \phi^\dagger \overleftrightarrow{D}_\mu \phi + \sum_f Y_f \overbar{f} \gamma_\mu f \right) + \ord{1/\Lambda^2} \,, \\
-  (D^\rho W_{\rho \mu})^a &= \frac g 2 \left( \im \phi^\dagger \overleftrightarrow{D}_\mu^a \phi + \overbar{q}_L \gamma_\mu \sigma^a q_L + \overbar{\ell}_L \gamma_\mu \sigma^a \ell_L  \right) + \ord{1/\Lambda^2} \,,
+  %
+  D^2 \phi
+  &=
+    - \mu^2 \phi
+    - 2 \lambda (\phisq) \phi
+    - \sum_f y_f \overbar{f}_R f_L
+    + \ord{1/\Lambda^2} \,, 
+  \label{eq:foundations_sm_eom1} \\
+  %
+  \partial^\rho B_{\rho \mu}
+  &=
+    - \frac {\im g'} 2  \phi^\dagger \overleftrightarrow{D}_\mu \phi
+    - \sum_f g' Y_f \overbar{f} \gamma_\mu f + \ord{1/\Lambda^2} \,, \\
+  %
+  (D^\rho W_{\rho \mu})^a
+  &=
+    - \frac {\im g} 2 \, \phi^\dagger \overleftrightarrow{D}_\mu^a \phi
+    - \frac g 2  \, \sum_f \overbar{f}_L \gamma_\mu \sigma^a f_L
+    + \ord{1/\Lambda^2} \,,
+    %
   \label{eq:foundations_sm_eom2}
 \end{align}%
 \endgroup
@@ -2335,11 +2350,11 @@ operators~\cite{Corbett:2012ja, Juan_thesis, Tyler_thesis}:
 \begin{align}
   % \ope{\phi,2} + \ope{\phi,4} - \mu^2 (\phisq)^2 - 6 \lambda \ope{6} &= \sum_f y_f \ope{f} + \ord{1/\Lambda^4}\\ % My version
   %
-  2 \ope{\phi,2} + 2 \ope{\phi,4}  + 2 \mu^2 (\phisq)^2 + 12 \lambda \ope{6}&= \sum_f y_f \ope{f} + \ord{1/\Lambda^4}\\ % Tyler's version, and Juan believes it's true
+  2 \ope{\phi,2} + 2 \ope{\phi,4}  + 2 \mu^2 (\phisq)^2 + 12 \lambda \ope{6} &= \sum_f y_f \ope{f} + \ord{1/\Lambda^4}\\ % Tyler's version, and Juan believes it's true
   %
-  2 \ope{B} + \ope{BW} + \ope{BB} + g'^2 \left( \ope{\phi,1} - \frac 1 2 \ope{\phi,2} \right) &= - \frac {g'^2} 2 \sum_f Y_f \ope{\phi f}^{(1)} + \ord{1/\Lambda^4}\\
+  \ope{BB}  + \ope{BW} - 2 \ope{B} + g'^2 \left( \ope{\phi,1} - \frac 1 2 \ope{\phi,2} \right) &= - \frac {g'^2} 2 \, \sum_f Y_f \ope{\phi f}^{(1)} + \ord{1/\Lambda^4}\\
   %
-  2 \ope{W} + \ope{BW} + \ope{WW} + g^2 \left( \ope{\phi,4} - \frac 1 2 \ope{\phi,2} \right) &= - \frac {g^2} 4 \left( \ope{\phi L}^{(3)} +  \ope{\phi Q}^{(3)} \right) + \ord{1/\Lambda^4}\,.
+  \ope{WW}  + \ope{BW} - 2 \ope{W} + g^2 \left( \ope{\phi,4} - \frac 1 2 \ope{\phi,2} \right) &= - \frac {g^2} 4 \, \sum_{F=L,Q} \ope{\phi F}^{(3)} + \ord{1/\Lambda^4}\,.
 \end{align}%
 \endgroup
 %
@@ -2353,7 +2368,7 @@ physics. In a bottom-up approach, calculations can be simplified if
 the operators are chosen based on their contributions to physical
 observables, for instance to avoid non-trivial blind
 directions. Following Reference~\cite{Corbett:2012ja}, we choose
-todiscard $\ope{\phi L}^{(1)}$, $\ope{(3)}$, and $\ope{\phi,4}$.
+to discard $\smash{\ope{\phi L}^{(1)}}$, $\smash{\ope{\phi L}^{(3)}}$, and $\ope{\phi,4}$.
 
 
 
@@ -2361,28 +2376,27 @@ todiscard $\ope{\phi L}^{(1)}$, $\ope{(3)}$, and $\ope{\phi,4}$.
 \subsubsection{Constraints}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Some of the remaining operators are tightly constrained experimental
-data. Electroweak precision measurements limit the Wilson coefficients
-of $\ope{\phi,1}$, $\ope{BW}$, $\ope{\phi f}^{(1)}$,
-$\ope{\phi f}^{(3)}$, $\ope{B\widetilde{W}}$, and
-$\ope{\widetilde{B}}$ to a level where their effects in Higgs physics
-are small. Measurements of electric dipole moments put tight constrains
-on the dipole operators. We ignore all these
-operators.\footnote{This simple argument is suitable for our rather
-  conceptual work. In a thorough global fit, however, it should be
-  checked carefully whether these constraints are actually strong
-  enough to make all these operator irrelevant for Higgs physics in
-  all cases. Such a check should include RGE effects when comparing
-  constraints from different scales. The increasing precision in Higgs
-  observables means that many of these operators will become relevant
-  again in the future.}
+Some of the remaining operators are tightly constrained from
+experimental data. Electroweak precision measurements limit the Wilson
+coefficients of $\ope{\phi,1}$, $\ope{BW}$, $\ope{B\widetilde{W}}$,
+$\ope{\widetilde{B}}$, $\smash{\ope{\phi L}^{(3)}}$, and the remaining
+$\smash{\ope{\phi f}^{(1)}}$ to a level where their effects in Higgs
+physics are small. Measurements of electric dipole moments put tight
+constrains on the dipole operators. Therefore we mostly ignore these
+operators in this thesis.\footnote{This simple argument is suitable
+  for our rather conceptual work. In a thorough global fit, however,
+  it should be checked carefully whether these constraints are
+  actually strong enough to make all these operator irrelevant for
+  Higgs physics in all cases. Such a check should include RGE effects
+  when comparing constraints from different scales. The increasing
+  precision in Higgs observables means that many of these operators
+  will become relevant again in the future.}
 
-Limits on flavour-changing neutral currents constrain
-off-diagonal fermion-Higgs couplings. Also, flavour-diagonal $\ope{f}$
-involving fermions of the first and second generation are
-irrelevant for many signatures considered in this thesis. We therefore
-only keep the Higgs-fermion operators $\ope{f}$ of the third
-generation.
+Limits on flavour-changing neutral currents constrain off-diagonal
+fermion-Higgs couplings. Also, flavour-diagonal $\ope{f}$ involving
+fermions of the first and second generation are irrelevant for many
+signatures considered in this thesis. We therefore only keep the
+Higgs-fermion operators $\ope{f}$ of the third generation.
 
 This leaves us with a list of thirteen operators relevant for LHC
 Higgs physics: ten $CP$-even operators,
@@ -2666,32 +2680,32 @@ with couplings
 \allowdisplaybreaks%
 \begin{align}
   g^{(1)}_{hgg} &= \frac {f_{GG} v} {\Lambda^2} \,, \quad & \quad 
-  g^{(1)}_{hZ\gamma}  &= - \frac {g^2 v s (f_{W} - f_{B}) } {4 c \Lambda^2} \,, \notag \\
+  g^{(1)}_{hZ\gamma}  &= - \frac {g^2 v s_W (f_{W} - f_{B}) } {4 c_W \Lambda^2} \,, \notag \\
   %
   g^{(2)}_{hgg} &= \frac {f_{G\widetilde{G}} v} {2 \Lambda^2} \,, \quad & \quad 
-  g^{(2)}_{hZ\gamma} &= \frac {g^2 v s (2 s^2 f_{BB} - 2 c^2 f_{WW}) } {4 c \Lambda^2} \,, \notag \\
+  g^{(2)}_{hZ\gamma} &= \frac {g^2 v s_W (2 s_W^2 f_{BB} - 2 c_W^2 f_{WW}) } {4 c_W \Lambda^2} \,, \notag \\
   %
-  g_{h\gamma\gamma} &= - \frac {g^2 v s^2 (f_{WW} + f_{BB}) } {4 \Lambda^2} \,, \quad & \quad 
+  g_{h\gamma\gamma} &= - \frac {g^2 v s_W^2 (f_{WW} + f_{BB}) } {4 \Lambda^2} \,, \quad & \quad 
   g_{hff} &= - \frac {m_f} {v} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2}
   + \frac {v^2 f_f} {\sqrt{2} \Lambda^2} \,, \notag \\
   %
-  g^{(1)}_{hZZ} &= - \frac {g^2 v (c^2 f_{W} + s^2 f_{B}) } {4 c^2 \Lambda^2} \,, \quad & \quad 
+  g^{(1)}_{hZZ} &= - \frac {g^2 v (c_W^2 f_{W} + s_W^2 f_{B}) } {4 c_W^2 \Lambda^2} \,, \quad & \quad 
   g^{(1)}_{hWW} &= - \frac {g^2 v f_W } {4 \Lambda^2} \,, \notag \\
   %
-  g^{(2)}_{hZZ} &= - \frac {g^2 v (s^4 f_{BB} + c^4 f_{WW}) } {4 c^2 \Lambda^2} \,, \quad & \quad 
+  g^{(2)}_{hZZ} &= - \frac {g^2 v (s_W^4 f_{BB} + c_W^4 f_{WW}) } {4 c_W^2 \Lambda^2} \,, \quad & \quad 
   g^{(2)}_{hWW} &= - \frac {g^2 v f_{WW}} {2 \Lambda^2} \,, \notag \\
   %
-  g^{(3)}_{hZZ} &= \frac {g^2 v} {4 c^2} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2} \,, \quad & \quad 
+  g^{(3)}_{hZZ} &= \frac {g^2 v} {4 c_W^2} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2} \,, \quad & \quad 
   g^{(3)}_{hWW} &= \frac {g^2 v} {2} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2}  \,, \notag \\
   %
-  g^{(4)}_{hZZ} &= - \frac {g^2 v (s^4 f_{B\widetilde{B}} + c^4 f_{W\widetilde{W}}) } {8 c^2 \Lambda^2} \,, \quad & \quad 
+  g^{(4)}_{hZZ} &= - \frac {g^2 v (s_W^4 f_{B\widetilde{B}} + c_W^4 f_{W\widetilde{W}}) } {8 c_W^2 \Lambda^2} \,, \quad & \quad 
   g^{(4)}_{hWW} &= - \frac {g^2 v f_{W\widetilde{W}}} {4 \Lambda^2}  \,.
   \label{eq:foundations_higgs_couplings}
 \end{align}%
 \endgroup
 %
-Here $s \equiv g' / \sqrt{g^2 + g'^2}$ and $c = \sqrt{1 - s^2}$ are
-the sine and cosine of the weak mixing angle, and
+Here $s_W = g' / \sqrt{g^2 + g'^2}$ and $c_W = g / \sqrt{g^2 + g'^2}$
+are the sine and cosine of the weak mixing angle, and
 $V_{\mu\nu} = \partial_\mu V_\nu - \partial_\nu V_\mu$ for
 $V = A, W^\pm, Z$.
 
@@ -2881,7 +2895,7 @@ the interested reader for instance to Reference~\cite{Brivio:2013pma}.
 %
 Finally, the relationship between the linear and non-linear effective
 theories deserves some discussion. The two approaches in principle
-provide different parameterisations of the same physics, as can be
+provide different parametrisations of the same physics, as can be
 seen by expanding the non-linear Lagrangian in $\xi$ rather then
 $\chi$. The difference is the ordering of the operators in the EFT
 expansion and, equivalently, the expected size of different
@@ -3159,7 +3173,7 @@ compare their different properties.
 
 The different frameworks can be classified into consistent quantum
 field theories, which include the EFTs, and process-based
-parameterisations of amplitudes through form factors. The $\kappa$
+parametrisations of amplitudes through form factors. The $\kappa$
 framework and pseudo-observables belong to the latter
 category. Simplified models can fall into either category. The QFT
 formalism allows to link different processes and to incorporate any
@@ -3181,7 +3195,7 @@ while by definition the pseudo-observables are only valid for a given
 process.
 
 To summarise, in the absence of new light particles, Higgs properties
-can be adequately parameterised by pseudo-observables, non-linear
+can be adequately parametrised by pseudo-observables, non-linear
 Higgs EFT, and linear Higgs EFT. The linear EFT approach is
 theoretically well-motivated and phenomenologically powerful, and we
 focus on this framework during this thesis.

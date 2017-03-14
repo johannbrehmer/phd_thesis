@@ -924,8 +924,6 @@ INPUT phd_thesis_johann_brehmer.bbl
 INPUT phd_thesis_johann_brehmer.bbl
 INPUT babelbst.tex
 INPUT babelbst.tex
-INPUT tex/glossary.tex
-INPUT tex/glossary.tex
 INPUT diagrams.mp
 INPUT ./diagrams.mp
 INPUT phd_thesis_johann_brehmer.aux

@@ -4,15 +4,17 @@
 Did you know that in my PhD defence, I didn't answer a single question correctly?}%
 \vspace*{2cm}}
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Appendices}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Here we collect various technical details and intermediate results
-that are not too interesting on their own, but should be included for
-completeness and reproducibility. We begin with a definition of
-different EFT bases and provide a dictionary to translate between
-them. Appendix~\ref{sec:appendix_models} then contains some additional
+Here we collect technical details and intermediate results that are
+not too interesting on their own, but should be included for
+completeness and reproducibility. We begin with our conventions for
+the Standard Model and effective
+operators. Appendix~\ref{sec:appendix_models} contains some additional
 details on the models considered in
 \autoref{chapter:validity}. Finally, in
 Appendix~\ref{sec:appendix_information} we derive some of the key
@@ -38,26 +40,173 @@ Reference~\cite{Brehmer:2016nyr}.
 \label{sec:appendix_bases_sm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We begin with our conventions for the Standard Model, which also apply to all models of new physics. We parametrise the SM Lagrangian as
+\begin{table}
+  \begin{tabular}{l ccc ccc}
+    \toprule
+    %
+    \multirow{2}{*}{Fermions} & & & & \multicolumn{3}{c}{Representation} \\
+    %
+    & & & & $SU(3)_C$ & $SU(2)_L$ & $U(1)_Y$ \\
+    %
+    \midrule
+    %
+    LH quarks & ${\twovec u d}_L$ & ${\twovec c s}_L$ & ${\twovec t b}_L$ & $\mathbf{3}$ & $\mathbf{2}$ & $\phantom{-} \dfrac 1 6$\\[3mm]
+    RH up-type quarks & $u_R$ & $c_R$ & $t_R$ & $\mathbf{3}$ & $\mathbf{1}$ & $\phantom{-} \dfrac 2 3$ \\[3mm]
+    RH down-type quarks & $d_R$ & $s_R$ & $b_R$ & $\mathbf{3}$ & $\mathbf{1}$ & $- \dfrac 1 3$ \\[3mm]
+    LH leptons & ${\twovec {\nu_e} {e^-}}_L$ & ${\twovec {\nu_\mu} {\mu^-}}_L$ & ${\twovec {\nu_\tau} {\tau^-}}_L$ & $\mathbf{1}$ & $\mathbf{2}$ & $- \dfrac 1 2$ \\[3mm]
+    RH leptons & $e^-_R$ & $\mu^-_R$ & $\tau^-_R$ & $\mathbf{1}$ & $\mathbf{1}$ & $- 1$ \\
+    %
+    \bottomrule
+  \end{tabular}
+  \caption{SM fermions and their representation under the SM gauge group.}
+  \label{tbl:appendix_bases_fermions}
+\end{table}
+
+We begin with our conventions for the Standard Model, which also apply
+to all models of new physics. The SM Lagrangian, invariant under a
+$SU(3)_C \times SU(2)_L \times U(1)_Y$ gauge group, is given by
 %
 \begin{multline}
   \lgr{SM}
-  \supset
+  =
     - \frac 1 4 G^a_{\mu\nu} G^{a\,\mu\nu} - \frac 1 4 W^a_{\mu\nu} W^{a\,\mu \nu} - \frac 1 4 B_{\mu\nu} B^{\mu \nu}
     + \sum_f \overbar f \im \slashed D f
     + (D^\mu \phi)^\dagger (D_\mu \phi) \\
   %
-  \phantom{=} \quad - \mu^2 \phisq - \lambda (\phisq)^2
+    - \mu^2 \phisq - \lambda (\phisq)^2
             - \sum_{\text{generations}} \left(    y_u {\twovec {\overbar u} {\overbar d}}_L \tilde \phi \, u_{R} 
                                                            + y_d {\twovec {\overbar u} {\overbar d}}_L \phi \, d_{R}
-                                                           + y_\ell {\twovec {\overbar \nu} {\overbar \ell^-}}_L \phi \, \ell_{R}  + \hc  \right )
+                                                           + y_\ell {\twovec {\overbar \nu} {\overbar \ell^-}}_L \phi \, \ell_{R}  + \hc  \right ) \,.
+  \label{eq:appendix_bases_sm_lagrangian}
 \end{multline}
 %
-with covariant derivatives
+The fields in this Lagrangian are a scalar $\phi$ transforming as the
+$(\mathbf{1}, \mathbf{2}, 1/2)$ representation of the SM gauge group;
+the gauge bosons $G_\mu^a$, $W_\mu^a$, and $B_\mu$; and the fermions
+given in \autoref{tbl:appendix_bases_fermions}.  We usually leave out
+generation (flavour) indices and simply denote up-type quarks,
+down-type quarks, charged leptons, and neutrinos with $u$, $d$,
+$\ell$, $\nu$; and the left-handed doublets with $Q$ and $L$. The
+field strength tensors are defined as
 %
 \begin{align}
-  D_\mu \phi &= \left( \partial_\mu - \im g \frac {\sigma^a} 2 W^a_\mu - \im \frac {g'} 2 B_\mu \right) \phi
+  G_{\mu\nu}^a &= \partial_\mu G^a_\nu - \partial_\nu G^a_\mu + g_s f^{abc} G^b_\mu G^c_\nu \, , \\
+  W_{\mu\nu}^a &= \partial_\mu W^a_\nu - \partial_\nu W^a_\mu + g \varepsilon^{abc} W^b_\mu W^c_\nu \, , \\
+  B_{\mu\nu} &= \partial_\mu B_\nu - \partial_\nu B_\mu \,.
 \end{align}
+%
+The covariant derivatives are defined according to the gauge charges
+and with a conventional minus sign in front of the gauge term, for
+instance
+%
+\begin{align}
+  D_\mu \phi &= \left( \partial_\mu - \im g \frac {\sigma^a} 2 \, W^a_\mu - \im g' \frac {1} 2 \, B_\mu \right) \phi \,, \notag \\
+  %
+  D_\mu {\twovec u d}_L &= \left( \partial_\mu  - \im g_s \frac {\lambda^{a}} 2 G^a_\mu - \im g \frac {\sigma^a} 2 \, W^a_\mu - \im g' \frac {1} 6 \, B_\mu  \right) {\twovec u d}_L\,.
+\end{align}
+%
+These expressions include the coupling constants corresponding to the
+SM gauge group, $g_s$, $g$, and $g'$; the structure constants
+$f^{abc}$ and $\varepsilon^{abc}$ of $SU(3)$ and $SU(2)$, as well as
+the Pauli matrices $\sigma^a$ and the Gell-Mann matrices
+$\lambda^a$. Finally, the scalar Higgs potential contains two real
+parameters $\mu^2$ and $\lambda$, and the Yukawa couplings $y_f$ are
+complex-valued matrices in flavour space.
+
+For $\mu^2 < 0$, the potential for $\phi$ has a minimum at the
+non-zero vacuum expectation value (VEV)
+%
+\begin{equation}
+  v^2 \equiv 2 \left| \langle {\phi} \rangle \right|^2  = - \frac {\mu^2} \lambda \,.
+\end{equation}
+%
+Using some of the gauge freedom, we can choose that the vacuum
+expectation value of $\phi$ points into the lower component of the
+doublet. Expanding the four physical degrees of freedom $w_a$ and $h$
+around this minimum, we have
+%
+\begin{equation}
+  \phi = \frac 1 {\sqrt{2}} \twovec  {-w_2 - \im w_1} {v + h + \im w_3} \,.
+\end{equation}
+%
+Plugging this into \autoref{eq:appendix_bases_sm_lagrangian}, and
+diagonalising the mass matrices, one sees that the gauge bosons $W^a$
+and $B$ combine with the Goldstone bosons $w_a$ to the mass
+eigenstates
+%
+\begin{align}
+  W^\pm_\mu &= \frac 1 {\sqrt 2} \left ( (W_\mu^1 - \frac 1 {gv} \partial_\mu w^1)
+              \pm \im (W_\mu^2 - \frac 1 {gv} \partial_\mu w^2) \right) \,, \\
+  %
+  Z_\mu &= c_W  (W_\mu^3 - \frac 1 {gv} \partial_\mu w^3)  - s_W B_\mu \,, \\
+  %
+  A_\mu &= s_W  W_\mu^3  +    c_W B_\mu
+\end{align}
+%
+with weak mixing angle (or Weinberg angle)
+%
+\begin{equation}
+  c_W \equiv \cos \theta_W = \frac {g} {\sqrt{ g^2 + g'^2}} \,, \qqquad
+  %
+  s_W \equiv \sin \theta_W = \frac {g'} {\sqrt{ g^2 + g'^2}} 
+\end{equation}
+%
+and masses
+%
+\begin{equation}
+  m_W = \frac {gv} 2  \, ,  \quad  m_Z = \frac {gv} {2 c_W} \, .
+\end{equation}
+%
+The remaining degree of freedom from $\phi$ is the physical Higgs
+boson $h$ with a mass
+%
+\begin{equation}
+  m_h^2 = {-2\mu^2} = {2\lambda} v^2 \,.
+\end{equation}
+%
+Inserting \autoref{eq:foundations_sm_phi} into the Yukawa
+couplings also yields fermion masses
+%
+\begin{equation}
+  m_f = \frac {y_f v} {\sqrt{2}} \,.
+\end{equation}
+%
+Since the Yukawa couplings are not flavour-diagonal, one has to
+diagonalise these mass matrices in flavour space, ultimately leading
+to the CKM matrix. But this does not affect the Higgs couplings, and
+in this thesis we can safely assume flavour-diagonal Yukawa couplings.
+
+With respect to the remaining gauge group $U(1)_Q$ with the gauge
+boson $A_\mu$ and the gauge coupling
+%
+\begin{equation}
+  e = \frac {g g'} {\sqrt{g^2 + g'^2}} = g s_W = g' c_W \,,
+\end{equation}
+%
+the fermions carry the electromagnetic charge
+%
+\begin{equation}
+  q = y + \frac {\sigma_3} 2 \,,
+\end{equation}
+%
+where the second term is shorthand for its eigenvalue in the case of
+$SU(2)_L$ doublets and zero for the singlets. More important for this
+thesis, the terms that lead to mass terms for the weak gauge bosons
+and fermions also yield couplings between the Higgs boson and these
+particles. Expressed in terms of the masses, these couplings read
+%
+\begin{equation}
+  g_{hff} = - \frac {m_f} v
+\end{equation}
+%
+for the fermions and
+%
+\begin{equation}
+  g_{hW^+ W^-} = \frac {2m_W^2} v \,, \qqqquad
+  g_{hZZ} = \frac {m_Z^2} v 
+\end{equation}
+%
+for the vector bosons.
 
 
 
@@ -66,25 +215,18 @@ with covariant derivatives
 \label{sec:appendix_bases_hisz}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{table}
-\begin{tabular}{lll} 
-  \toprule
-  \multicolumn{3}{c}{HISZ basis} \\
-  \midrule
-  $\ope{\phi1} = (D_\mu\phi)^\dagger \, (\phi\,\phi^\dagger) \, (D^\mu\phi)$  &
-  $\ope{\phi2} = \dfrac{1}{2}\partial^\mu(\phi^\dagger\phi)\,\partial_\mu(\phi^\dagger\phi)$ &
-  $\ope{\phi3} = \dfrac{1}{3}(\phisq)^3$ \\[4mm]
-  $\ope{GG} = (\phisq)\,G^A_{\mu\nu}\,G^{\mu\nu\, A}$ \\[2mm]
-  $\ope{BB} = -\dfrac{g'^2}{4}(\phisq)\,B_{\mu\nu}\,B^{\mu\nu}$ &
-  $\ope{WW} = -\dfrac{g^2}{4}(\phisq)\,W^k_{\mu\nu}\,W^{\mu\nu\, k}$ &
-  $\ope{BW} = -\dfrac{g\,g'}{4}(\phi^\dagger\sigma^k\phi)\,B_{\mu\nu}\,W^{\mu\nu\, k}$ \\[4mm]
-  $\ope{B}  = \dfrac{ig}{2}(D^\mu\phi^\dagger)(D^\nu\phi)\,B_{\mu\nu}$ &
-  $\ope{W} = \dfrac{ig}{2}(D^\mu\phi^\dagger)\sigma^k( D^\nu\phi)\,W_{\mu\nu}^k$ \\[2mm]
-  \bottomrule
-\end{tabular}
-\caption{Bosonic CP-conserving Higgs operators in the HISZ basis.}
-\label{tab:validity_operators}
-\end{table}
+For the dimension-six operators of linear Higgs effective field
+theory, we nearly entirely follow the conventions of
+References~\cite{Corbett:2012ja, Juan_thesis, Tyler_thesis}, which is
+based on the Hagiwara-Ishihara-Szalapski-Zeppenfeld basis
+(HISZ)~\cite{Hagiwara:1993ck}. Our framework is defined in
+\autoref{sec:foundations_heft_operators}. The Lagrangian is given in
+\autoref{eq:sm_eft}, and the operators are listed in
+Tables~\ref{tbl:foundations_operators_bosonic_even} to
+\ref{tbl:foundations_operators_bosonic_odd}. We discuss the
+phenomenology of these operators in
+\autoref{sec:foundations_heft_pheno}.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,464 +234,336 @@ with covariant derivatives
 \label{sec:appendix_bases_silh}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The SILH Lagrangian reads
+Another common basis for dimension-six operators was developed in
+References~\cite{Giudice:2007fh, Contino:2013kra} and is usually names
+``Strongly Interacting Light Higgs'' or ``SILH'' after the first of
+these publications.  It is based on the Lagrangian
 %
 \begin{align}
-  \label{eq:EFT} \lgr{EFT} =& \lgr{SM} + \frac{\bar{c}_H}{2v^2}
-\, \partial^\mu (\phisq) \, \partial_\mu (\phisq) +
-\frac{\bar{c}_T}{2v^2} \, (\phi^\dagger \, \overleftrightarrow{D}^\mu
-\, \phi) \, (\phi^\dagger \, \overleftrightarrow{D}_\mu \, \phi)
--\frac{\bar{c}_6\lambda}{v^2} (\phisq)^3 \notag \\ &+
-\frac{ig\bar{c}_W}{2m^2_W} \, (\phi^\dagger \, \sigma^k
-\overleftrightarrow{D}^\mu\phi) \, D^\nu \, {W^k}_{\mu\nu} +
-\frac{ig'\bar{c}_B}{2m_W^2} \, (\phi^\dagger \,
-\overleftrightarrow{D}^\mu \, \phi) \, \partial^\nu \, B_{\mu\nu}
-\notag \\ &+ \frac{ig \, \bar{c}_{HW}}{m_W^2} \, (D^\mu \,
-\phi^\dagger) \, \sigma^k \, (D^\nu \, \phi) \, W^k_{\mu\nu} +
-\frac{ig'\bar{c}_{HB}}{m_W^2} (D^\mu\phi^\dagger) \, (D^\nu \, \phi)
-\, B_{\mu\nu}\notag \\ &+ \frac{g'^2 \bar{c}_\gamma}{m_W^2} \,
-(\phisq) \, B_{\mu\nu} \, B^{\mu\nu} + \frac{g_s^2 \bar{c}_g}{m_W^2}
-\, (\phisq) \, G^A_{\mu\nu} \, G^{\mu\nu\, A} \notag \\ &- \left[
-\frac{\bar{c}_u}{v^2} \, y_u \, (\phisq) (\phi^\dagger\cdot \,
-\overline{Q}_L) \, u_R + \frac{\bar{c}_d}{v^2} \, y_d \, (\phisq)
-(\phi \, \overline{Q}_L) \, d_R + \frac{\bar{c}_\ell}{v^2} \, y_\ell
-\, (\phisq) (\phi \, \overline{L}_L) \, \ell_R + \text{h.c.} \,
-\right] \,.
+  \lgr{SILH}
+  &=
+    %
+    \lgr{SM}
+    + \frac {c_H}{2v^2} \, \opesilh{H}
+    + \frac {c_T}{2v^2} \, \opesilh{T}
+    - \frac {c_6\lambda}{v^2} \opesilh{6} \notag \\
+  %
+  &+ \frac{\im gc_W}{2m^2_W} \, \opesilh{W}
+    + \frac{\im g'c_B}{2m_W^2} \, \opesilh{B} 
+    + \frac{\im g \, c_{HW}}{m_W^2} \, \opesilh{HW}
+    + \frac{\im g'c_{HB}}{m_W^2} \, \opesilh{HB} \notag \\
+  %
+  &+ \frac{g'^2 c_\gamma}{m_W^2} \, \opesilh{\gamma}
+    + \frac{g_s^2 c_g}{m_W^2} \, \opesilh{g} 
+    - \sum_f \frac{c_f}{v^2} \, y_f \, \opesilh{f}
 \end{align}
 %
-Here, $g = e/{s_w}, g' = e/{c_w}$, and $g_s$ stand for the SM gauge
-couplings and $\lambda$ denotes the usual Higgs quartic coupling. The
-normalization of the dimension-6 Wilson coefficients $\overline{c}_i$
-includes conventional prefactors which reflect a bias concerning their
-origin. We present further details on the EFT setup, the translation
-between the different bases, and the connection to Higgs observables
-in Appendix~\ref{sec:validity_ap-eft}.
+with the Wilson coefficients $c_i$ and the operators $\opesilh{i}$
+defined in \autoref{tbl:appendix_bases_silh}. Note that this
+Lagrangian is not of the form given in
+\autoref{eq:foundations_EFT_lagrangian}: the dimension-six operators
+are suppressed by powers of $m_W$ or $v$ instead of the cutoff scale
+$\Lambda$.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}
+    \renewcommand{\arraystretch}{1.8}
+    \begin{tabular}[t]{r @{${}={}$}l @{\hspace{0.8cm}} r @{${}={}$}l} 
+      \toprule
+      %
+      $\opesilh{H}$ & $\partial^\mu(\phisq)\,\partial_\mu(\phisq)$ & 
+      $\opesilh{HB}$ & $(D^\mu\phi^\dagger)\,(D^\nu\phi)\,B_{\mu\nu}$ \\
+      %
+      $\opesilh{T}$ & $(\phi^\dagger\,\overleftrightarrow{D}^\mu\,\phi)\,(\phi^\dagger\,\overleftrightarrow{D}_\mu\,\phi)$ &
+      $\opesilh{HW}$ & $(D^\mu\phi^\dagger)\,\sigma^k\,(D^\nu\,\phi)\,W^k_{\mu\nu}$ \\ 
+      %
+      $\opesilh{6}$ & $(\phisq)^3$  &
+      $\opesilh{B}$ & $(\phi^\dagger\,\overleftrightarrow{D}^\mu\,\phi)\,(\partial^\nu\,B_{\mu\nu})$ \\ 
+      %
+      $\opesilh{u}$ & $(\phisq)\,(\phi^\dagger\cdot\,\overbar{Q}_L)\,u_R + \hc$ &
+      $\opesilh{W}$ & $\left(\phi^\dagger\,\sigma^k\,\overleftrightarrow{D}^\mu\phi\right)\,(D^\nu\,W^k_{\mu\nu})$ \\
+      %
+      $\opesilh{d}$ & $(\phisq)\,(\phi\, \overbar{Q}_L)\,d_R  + \hc $&
+      $\opesilh{g}$ & $(\phisq)\,G^a_{\mu\nu}\,G^{\mu\nu\, a}$ \\
+      %
+      $\opesilh{\ell}$ & $(\phisq)\,(\phi\, \overbar{L}_L)\,l_R  + \hc $&
+      $\opesilh{\gamma}$ & $(\phisq)\,B_{\mu\nu}\,B^{\mu\nu}$ \\
+      %
+      \bottomrule
+    \end{tabular}
+  \caption{Dimension-six operators in the SILH basis relevant for Higgs physics.}
+  \label{tbl:appendix_bases_silh}
+\end{table}
+
+These operators can be translated to our conventions (the HISZ basis)
+with the following dictionary:
+%
+\begingroup%
+\allowdisplaybreaks%
+\begin{align}
+  \opesilh{H}  &= 2\ope{\phi2}\,,  &
+  \opesilh{HB}  &= -\frac{2 \im }{g'}\ope{B}\,, \notag \\ 
+  \opesilh{T}  &= 2\ope{\phi2}  -  4\ope{\phi1}\,,  &
+  \opesilh{HW} &= -\frac{2\im }{g} \ope{W}\,,  \notag \\ 
+  \opesilh{6} &= 3 \ope{\phi3} \,, & 
+  \opesilh{B}  &= \frac{2 \im}{g'}  \left( \ope{BB} +  \ope{BW} - 2\ope{B} \right)\,, \notag \\ 
+  \opesilh{u} &= \ope{u} \,, & 
+  \opesilh{g}  &= \ope{GG} \,,  \notag \\
+  \opesilh{d} &= \ope{d} \,, & 
+  \opesilh{W}  &= \frac{2 \im}{g}  \left( \ope{WW} +  \ope{BW} - 2\ope{W}   \right)\,,  \notag \\ 
+  \opesilh{\ell} &= \ope{\ell} \,, & 
+  \opesilh{\gamma} &= -\frac{4}{g'^2}  \ope{BB}  \,.
+\end{align}%
+\endgroup
+%
+For the Wilson coefficients, we find
+%
+\begingroup%
+\allowdisplaybreaks%
+\begin{align}
+  c_H &= \frac{v^2}{\Lambda^2}\,\left(\frac{1}{2}f_{\phi1}+f_{\phi2}\right)\,, &
+  c_{HB} &= \frac{v^2}{\Lambda^2}\,\frac{g^2}{8} (f_{B}+2f_{BW}-2f_{WW}) \,, \notag\\
+  c_T &= -\frac{v^2}{\Lambda^2}\,\frac{1}{2}f_{\phi1}\,, & 
+  c_{HW} &= \frac{v^2}{\Lambda^2}\,\frac{g^2}{8} (f_{W}+2f_{WW}) \,, \notag\\
+  c_6 &= -\frac{v^2}{\Lambda^2}\,\frac{1}{3\lambda}f_{\phi3}\,, &
+  c_B &= \frac{v^2}{\Lambda^2}\,\frac{g^2}{4} (f_{WW}-f_{BW}) \,, \notag\\
+  c_u &= = - \frac{v^2}{\Lambda^2}\,\frac{1}{y_u} \, f_u \,, &
+  c_W &= -\frac{v^2}{\Lambda^2}\,\frac{g^2}{4}f_{WW} \,, \notag\\
+  c_d &= = - \frac{v^2}{\Lambda^2}\,\frac{1}{y_d} \, f_d \,, &
+  c_g &= \frac{v^2}{\Lambda^2}\,\frac{g^2}{4g_s^2}f_{GG}\,, \notag\\
+  c_\ell &= = - \frac{v^2}{\Lambda^2}\,\frac{1}{y_\ell} \, f_\ell \,, &
+  c_\gamma &= \frac{v^2}{\Lambda^2}\,\frac{g^2}{16} (f_{BW}-f_{BB}-f_{WW}) \, .
+\end{align}%
+\endgroup
 
 
 
-As mentioned in Sec.~\ref{sec:theory_eff}, we here adopt the notation
-and conventions of Reference~\cite{Alloul:2013naa}, which is based on the
-SILH framework with the decomposition and
-normalization of the Wilson coefficients defined in
-Reference~\cite{silh}. For our purposes, it is enough to single
-out the subset that encodes all possible new physics contributions to
-the Higgs sector compatible with CP conservation and the flavor
-structure of the SM. These are given in Tab.~\ref{tab:operators} and
-correspond to the Lagrangian in \autoref{eq:EFT}.
- 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Other operators}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% As we discussed in \autoref{sec:foundations_heft_operators}, effective
+% operators can be manipulated and replaced by others without changing
+% the physics through field redefinitions, integration by parts, and a
+% numnber of identities. Here we demonstrate how these relations can be
+% used to translate the operators
+% %
+% \begin{align}
+%   \opeother{r} &= \phisq\, (D_\mu \phi)^2\,, &
+%   \opeother{HF} &= \left( \bar{f}_L \, \gamma^\mu \, \sigma^a \, f_L \right) \left( \phi^\dagger \, \sigma^a \, \overleftrightarrow{D}_\mu \, \phi \right)  \,,
+%   \notag \\
+%   \opeother{D} &= \left( D^2 \, \phi \right)^2\,, &
+%   \opeother{HH} &= \left( \phi^\dagger \, \sigma^a \, \overleftrightarrow{D}_\mu \, \phi \right)\left( \phi^\dagger \, \sigma^a \, \overleftrightarrow{D}_\mu \, \phi \right)\,.
+% \end{align}
+% %
+% into the HISZ or SILH form. Such non-standard operators can arise in
+% the matching procedure, see Appendix~\ref{sec:appendix_models_triplet}
+% for an example.
+
+% First, $\opeother{HH}$ can be replaced by using the completeness relation of the Pauli matrices, which for arbitrary SU(2) doublets $\xi,\,\chi,\,\eta,\,\psi$ leads to
+% %
+% \begin{align}
+%   (\xi^\dagger \sigma^a \chi)(\eta^\dagger \sigma^a \psi)
+%   &= \sum_{ijkl} \xi^*_i \sigma^a_{ij} \chi_j \, \eta^*_k \sigma^a_{kl} \psi_l \notag \\
+%   %
+%   &= \sum_{ijkl} (2\delta_{il}\delta_{jk}-\delta_{ij}\delta_{kl})\xi^*_i \chi_j \, \eta^*_k \psi_l \notag \\
+%   %
+%   &= 2(\xi^\dagger\psi)(\eta^\dagger\chi)-(\xi^\dagger \chi)(\eta^\dagger\psi)\,.
+% \end{align}
+% %
+% Thus we find
+% %
+% \begin{align}
+%   \opeother{HH}
+%   &=
+%     (\phi^\dagger\,\sigma^a\,D^\mu \phi)^2
+%     +((D^\mu\phi^\dagger)\,\sigma^a\,\phi)^2
+%     -2((D^\mu\phi^\dagger)\,\sigma^a\,\phi)(\phi^\dagger\,\sigma^a\,D_\mu \phi) \notag \\
+%     % 
+%   &= (\phi^\dagger\,D^\mu \phi)^2
+%     + ((D^\mu\phi^\dagger)\,\phi)^2
+%     -2\left[ 2((D^\mu\phi^\dagger)\,D^\mu \phi)(\phi^\dagger\phi)
+%     - ((D^\mu\phi^\dagger)\,\phi)(\phi^\dagger\,D^\mu \phi) \right] \notag \\
+%   % 
+%   &= \ope{H} - 4 \ope{r} \,.
+% \end{align}
+
+% The equation of motion for the $W$ fields,
+% %
+% \begin{align}
+% D^\nu W^a_{\mu \nu} 
+% = - i g \, \phi^\dagger \dfrac {\sigma^a} {2} \overleftrightarrow{D}_\mu \phi 
+%   - g \sum_f \bar{f}_L \dfrac {\sigma^a} {2} \gamma_\mu f_L  \,,
+%  \label{eq:eom-w}
+% \end{align}
+% %
+% gives rise to the identity
+% %
+% \begin{align}
+%   \sum_f \opeother{HF} = \dfrac {2} {g} \, \ope{W} - {i} \, \ope{H} + 4 i \, \ope{r}  \,.
+% \end{align}
+
+% Next, a global field redefinition $\phi \to \phi + \alpha \, (\phisq) \phi / v^2$ generates a shift in the Wilson coefficients
+% %
+% \begin{equation}
+%  c_H \to c_H + 2\alpha\,, \quad
+%  c_r \to c_r + 2\alpha\,, \quad
+%  c_6 \to c_6 + 4\alpha\,, \quad
+%  c_f \to c_f + \alpha\,,
+% \end{equation}
+% %
+% so with the choice
+% $\alpha=-c_r/2$ one can eliminate the operator
+% $\ope{r}$ in favour of other operators:
+% %
+% \begin{equation}
+%   \opeother{r} \leftrightarrow \biggl\{ - \dfrac 1 2 \, \ope{H} + 2 \, \lambda \, \ope{6} + \sum_f \left[ \dfrac 1 2 \, y_f \, \ope{f} + \text{h.c.}\right] \biggr\} \,.
+% \end{equation}
+
+% Finally, $\ope{D}$ can be exchanged for others using the equation of
+% motion for $\phi$,
+% %
+% \begin{equation}
+%   D^2 \phi = - \mu^2  \, \phi - 2\, \lambda \, \phisq \, \phi - \sum_\text{gen.} \left[y_u \, \bar{Q}^T_L \, u_R + y_d \, \bar{d}_R \, Q_L + y_\ell \, \bar{\ell}_R \, L_L \right] \,. 
+% \end{equation}
+% %
+% This leads to
+% %
+% \begin{equation}
+%   \opeother{D} = \mu^4 \, \phisq 
+%  + 4 \, \lambda \, \mu^2 \, (\phisq)^2 
+%  + \mu^2 \, \sum_f y_f \, \bar{f}_L \phi f_R  \
+%  + 4 \, \lambda^2 \, (\phisq)^3 + 2 \, \lambda \, \sum_f y_f \, \phisq \, \left( \bar{f}_L \phi f_R \right) \,.
+% \end{equation}
+% %
+% The first three terms lead to a renormalization of the SM parameters
+% $\mu$, $\lambda$, $y_f$, without any impact on physical
+% observables. The last two terms, however, means that $\ope{D}$ is
+% equivalent to the combination
+% %
+% \begin{equation}
+%   \opeother{D} \leftrightarrow 4 \, \lambda^2 \, \ope{6} + 2 \, \lambda \, \sum_f \left( y_f \, \ope{f} + \text{h.c.} \right)\,.
+% \end{equation}
+
+
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{HLM basis}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Aside from the relatively simple case of the multi-Higgs sector
+% extensions, we make use of the covariant derivative
+% expansion~\cite{Gaillard:1985uh,Cheyette:1987qz} to analytically carry out
+% the matching between the different UV completions to
+% their corresponding EFT description.  The method has been recently
+% reappraised in Reference~\cite{Henning:2014wua} and employed in a number of
+% studies~\cite{heft_limitations,heft_limitations2,Chiang:2015ura,Huo:2015exa}.
+% By applying this method, the Wilson coefficients are readily obtained
+% in a different operator basis (henceforth dubbed HLM),
+% %
+% \begin{align}
+%   \lgr{HLM} = \sum_i \dfrac{k_i} {\Lambda^2} \ope{i}''.
+% \end{align}
+% %
+% The HLM operators involving Higgs fields and their interaction with
+% gauge bosons are listed in Tab.~\ref{tab:ops2}.  In addition, the HLM
+% basis contains a subset of operators with no direct correspondence to
+% the bosonic SILH operators, which must be rewritten with the help of
+% equations of motion and field redefinitions, as we discuss below.
+
+% %-----------------------------------------------------------
 % \begin{table}
-%     \renewcommand{\arraystretch}{1.3}
+%   \renewcommand{\arraystretch}{1.2}
+%   \setlength{\tabcolsep}{1ex}
+%   \centering
 %     \begin{tabular}[t]{r @{${}={}$}l} 
-%       \toprule
-%       \multicolumn{2}{c}{Higgs fields}  \\
-%       \midrule
-%       $\ope{H}$ & $\partial^\mu(\phi^\dagger\,\phi)\,\partial_\mu\,(\phi^\dagger\,\phi)$ \\ 
-%       $\ope{6}$ & $(\phisq)^3$  \\
-%       $\ope{T}$ & $(\phi^\dagger\,\overleftrightarrow{D}^\mu\,\phi)\,(\phi^\dagger\,\overleftrightarrow{D}_\mu\,\phi)$ \\
-%       \bottomrule
-%       \toprule
-%       \multicolumn{2}{c}{Higgs and fermion fields} \\
-%       \midrule
-%       $\ope{u}$ & $(\phisq)\,(\phi^\dagger\cdot\,\overline{Q}_L)\,u_R$ \\
-%       $\ope{d}$ & $(\phisq)\,(\phi\, \overline{Q}_L)\,d_R$ \\
-%       $\ope{\ell}$ & $(\phisq)\,(\phi\, \overline{L}_L)\,l_R$ \\
-%       \bottomrule 
-%     \end{tabular}
-%     \hspace*{1cm}
-%     \begin{tabular}[t]{r @{${}={}$}l} 
-%       \toprule
-%       \multicolumn{2}{c}{Higgs and gauge boson fields} \\
-%       \midrule
-%       $\ope{HB}$ & $(D^\mu\phi^\dagger)\,(D^\nu\phi)\,B_{\mu\nu}$ \\
-%       $\ope{HW}$ & $(D^\mu\phi^\dagger)\,\sigma^k\,(D^\nu\,\phi)\,W^k_{\mu\nu}$ \\ 
-%       $\ope{g}$ & $(\phisq)\,G^A_{\mu\nu}\,G^{\mu\nu\, A}$ \\
-%       $\ope{\gamma}$ & $(\phisq)\,B_{\mu\nu}\,B^{\mu\nu}$ \\
-%       $\ope{B}$ & $(\phi^\dagger\,\overleftrightarrow{D}^\mu\,\phi)\,(\partial^\nu\,B_{\mu\nu})$ \\ 
-%       $\ope{W}$ & $\left(\phi^\dagger\,\sigma^k\,\overleftrightarrow{D}^\mu\phi\right)\,(D^\nu\,W^k_{\mu\nu})$ \\
-%       \bottomrule
-%     \end{tabular}
-%   \caption{Dimension-6 operators considered in our analysis. These
-%     correspond to a subset of the most general effective operator basis
-%     ~\cite{silh} describing new physics effects to the SM
-%     Higgs sector with CP-invariance and SM-like fermion structures.}
-%   \label{tab:operators}
+%     \toprule
+%     \multicolumn{2}{c}{HLM basis}  \\
+%     \midrule
+%     $\ope{H}''$ & $\frac{1}{2} \, \partial^\mu (\phisq) \,\partial_\mu (\phisq)$ \\ 
+%     $\ope{6}''$ & $(\phisq)^3$  \\
+%     $\ope{T}''$ & $\frac{1}{2} \left(\phi^\dagger \, \overleftrightarrow{D}^\mu \, \phi \right) \, \left(\phi^\dagger \, \overleftrightarrow{D}_\mu \, \phi \right)$ \\
+%     $\ope{B}''$ & $\frac{i g'}{2} \left( \phi^\dagger \, \overleftrightarrow{D}^\mu \, \phi \right) \, \partial^\nu \, B_{\mu\nu}$ \\
+%     $\ope{W}''$ & $\frac{i g}{2} \left(\phi^\dagger\,\sigma^k\,\overleftrightarrow{D}^\mu\phi\right)\,(D^\nu\,W^k_{\mu\nu})$ \\
+%     $\ope{GG}''$ & $g_s^2 (\phisq)\,G^A_{\mu\nu}\,G^{\mu\nu\, A}$ \\ 
+%     $\ope{BB}''$ & $g'^2(\phisq)\,B_{\mu\nu}\,B^{\mu\nu}$ \\
+%     $\ope{WW}''$ & $g^2 (\phisq)\,W^k_{\mu\nu}\,W^{\mu\nu\, k}$ \\
+%     $\ope{WB}''$ & $g g' \left(\phi^\dagger\sigma^k\phi \right)  \, B_{\mu\nu}\,W^{\mu\nu\, k}$ \\
+%     \bottomrule 
+%   \end{tabular}
+%   \hspace{1cm}
+%   \begin{tabular}[t]{r @{${}={}$}l} 
+%     \toprule
+%     \multicolumn{2}{c}{HISZ basis} \\
+%     \midrule
+%     $\ope{\phi1}'$  & $(D_\mu\phi)^\dagger\phi\,\phi^\dagger(D^\mu\phi)$ \\
+%     $\ope{\phi2}'$  & $\frac{1}{2}\partial^\mu(\phi^\dagger\phi)\,\partial_\mu(\phi^\dagger\phi)$ \\ 
+%     $\ope{\phi3}'$  &  $\frac{1}{3}(\phisq)^3$ \\
+%     $\ope{GG}'$  &  $(\phisq)\,G^A_{\mu\nu}\,G^{\mu\nu\, A}$ \\
+%     $\ope{BB}'$  &  $\phi^\dagger\,\hat{B}_{\mu\nu}\,\hat{B}^{\mu\nu}\,\phi  = -\frac{g'^2}{4}\phisq\,B_{\mu\nu}\,B^{\mu\nu}$ \\
+%     $\ope{WW}'$  &  $\phi^\dagger\,\hat{W}_{\mu\nu}\,\hat{W}^{\mu\nu}\,\phi  = -\frac{g^2}{4}\phisq\,W^k_{\mu\nu}\,W^{\mu\nu\, k}$ \\
+%     $\ope{BW}'$  &  $\phi^\dagger\,\hat{B}_{\mu\nu}\,\hat{W}^{\mu\nu}\,\phi  = -\frac{g\,g'}{4}(\phi^\dagger\sigma^k\phi)\,B_{\mu\nu}\,W^{\mu\nu\, k}$ \\
+%     $\ope{B}'$  &  $(D^\mu\phi)^\dagger \hat{B}_{\mu\nu} (D^\nu\phi)  = i \frac{g}{2}(D^\mu\phi^\dagger)(D^\nu\phi)\,B_{\mu\nu}$ \\
+%     $\ope{W}'$  &  $(D^\mu\phi)^\dagger \hat{W}_{\mu\nu} (D^\nu\phi)  = i \frac{g}{2}(D^\mu\phi^\dagger)\sigma^k( D^\nu\phi)\,W_{\mu\nu}^k$ \\
+%     \bottomrule
+%   \end{tabular}
+%   \caption{Bosonic CP-conserving Higgs operators in the HLM basis
+%     (left) and the HISZ basis (right). Here $\hat{B}_{\mu\nu}=i g'/2
+%     B_{\mu\nu}$ and $\hat{W}_{\mu\nu}=i g \sigma^k/2 W_{\mu\nu}^k$.}
+%   \label{tab:ops2}
 % \end{table}
+% %-----------------------------------------------------------
 
-The conventions for how covariant derivatives act on the Higgs,
-fermion and gauge vector fields are fixed as follows:
-%
-\begin{align}
-  D_\mu \phi &= \partial_\mu \phi - \dfrac {i g'} 2 B_\mu \phi - i g \dfrac {\sigma^a} 2 \, W^a_\mu \, \phi \,,\notag \\
-  D_\mu F_L &= \partial_\mu F_L - i g' \dfrac{Y_{F_L}} 2 B_\mu F_L - i g \dfrac {\sigma^a} 2 \, W^a_\mu \, F_L \,,\notag \\
-  D_\mu V_\nu^a &= \partial_\mu V_\nu^a + g \, \varepsilon^{abc} \, W_\mu^b \, V_\nu^c \,,\notag \\
-  D_\mu W^a_{\nu \rho} &= \partial_\mu W_{\nu \rho}^a + g \, \varepsilon^{abc} \,W_\mu^b \, W_{\nu\rho}^c \,. 
-\label{eq:covariant}
-\end{align}
-%
-While the effective Lagrangian in \autoref{eq:EFT} is written in
-terms of the fundamental SM gauge fields, the connection to physics
-observables is more easily seen in the mass-eigenstate basis, which we
-can write as
-%
-\begin{alignat}{5}
- \lgr{} \supset & -\dfrac{m^2_{H}}{2v}\,g^{(1)}_{HHH}\,HHH  + \dfrac{1}{2}\,g_{HHH}^{(2)}\,H(\partial_\mu H)\,(\partial^\mu H) \notag \\
-  & - \dfrac{1}{4}\,g_{ggH}\,G^{\mu\nu\,A}\,G_{\mu\nu}^A\,H - \dfrac{1}{4}\,g_{\gamma\gamma H}\,F^{\mu\nu}\,F_{\mu\nu}\,H \notag \\
-  & -\dfrac{1}{4}\,g_{Z}^{(1)}\,Z_{\mu\nu}\,Z^{\mu\nu}\,H -g_{Z}^{(2)}\,Z_{\nu}\,\partial_\mu \,Z^{\mu\nu}\,H + \dfrac{1}{2}\,g^{(3)}_{Z}\,Z_\mu Z^{\mu}\,H \notag 
-  \\
-  & - \dfrac{1}{2}\,g_{W}^{(1)}\,W^{\mu\nu}\,W^\dagger_{\mu\nu}\,H - 
-  \left[g_{W}^{(2)} W^\nu\,\partial^\mu W^\dagger_{\mu\nu} H + \text{h.c.} \right] + g_{W}^{(3)}\,m_W\,W^\dagger_\mu W^\mu\, H \notag \\ 
-  & -\left[g_{u}\dfrac{1}{\sqrt{2}}\left(\bar{u}P_R u\right)H + g_{d}\dfrac{1}{\sqrt{2}}\left(\bar{d}P_R d\right)H + g_{\ell}\dfrac{1}{\sqrt{2}}\left(\bar{\ell}P_R \ell\right)H + \text{h.c.}
-  \right]
- \label{eq:masslag},
-\end{alignat}
-%
-with the different effective couplings $g_i$ quoted in
-Tab.~\ref{tab:coefficients}.  More details on the notation and
-conventions can be found in Reference~\cite{Alloul:2013naa}.
-
-\begin{table}
-  \renewcommand{\arraystretch}{1.2}
-  \begin{tabular}{r l l}
-    \toprule
-    Coupling & Operators & Expression \\
-    \midrule
-    $g^{(1)}_{Z} $ & $\ope{HB}, \ope{HW}, \ope{H}gam$ & $\frac{2g}{m_Wc^2_w}\left[\bar{c}_{HB}s^2_w-4\bar{c}_{\gamma}s_w^4+c^2_w \,\bar{c}_{HW} \right] $ \\
-    $g^{(2)}_{Z} $ & $\ope{HW}, \ope{HB}, \ope{W}, \ope{B}$ & $ \frac{g}{m_Wc^2_w}\left[(\bar{c}_{HW} + \bar{c}_W)c^2_w + (\bar{c}_B + \bar{c}_{HB})s^2_w\right]$\\  
-    $g^{(3)}_{Z} $ & $\ope{H}, \ope{T}, \ope{\gamma}$ & $\frac{g m_W}{c_w^2}\left[1-\frac{1}{2}\bar{c}_H - 2\bar{c}_T + 8\bar{c}_\gamma\frac{s_w^4}{c^2_w} \right]$ \\
-    \midrule
-    $g^{(1)}_{W} 
-    $ & $\ope{HW}$ & $\frac{2g}{m_W}\,\bar{c}_{HW} $ \\
-    $g^{(2)}_{W}$ & $\ope{HW},\ope{W}$ & $\frac{g}{m_W}\,\left[\bar{c}_W + \bar{c}_{HW}\right]$ \\  
-    $g^{(3)}_{W}$ & $\ope{H}$ & $g(1-\frac{1}{2}\bar{c}_H)$\\
-    \midrule
-    $g_{f}$ & $\ope{H}, \ope{f} \quad (f = u,d,\ell)$ & $\frac{\sqrt{2}m_f}{v}\left[1-\frac{1}{2}\bar{c}_H + \bar{c}_f\right] $ \\
-    \midrule
-    $g_{g} $ & $\ope{H}, \ope{g}$ & $g_H - \frac{4 \bar{c}_g g_s^2 v}{m_W^2}$ \\
-    \midrule
-    $g_{\gamma}$ & $\ope{H}, \ope{\gamma}$ & $a_H - \frac{8 g \bar{c}_\gamma s^2_w}{m_W}$\\
-    \midrule
-    $g^{(1)}_{HHH}$  & $\ope{H}, \ope{6}$ & $1+\frac{5}{2} \bar{c}_6 - \frac{1}{2}\bar{c}_{H}$ \\ 
-    $g^{(2)}_{HHH} $  & $\ope{H}$ & $\frac{g}{m_W}\,\bar{c}_H$ \\
-    \bottomrule
-  \end{tabular} 
-  \caption{Subset of the dimension-6 operators which enter the different
-    leading-order Higgs couplings which are relevant for LHC
-    phenomenology, in the notation and conventions of
-    Reference~\cite{Alloul:2013naa} (see text).  The different superscripts
-    denote the various terms in the Lagrangian in \autoref{eq:masslag} and
-    correspond to either a SM-like interaction with a rescaled coupling
-    strength or to genuinely new Lorentz structures. The weak coupling
-    constant is written as $g \equiv e/s_w$.  The SM contribution to the
-    loop-induced Higgs coupling to the gluons (photons) is denoted by
-    $g_H$ ($a_H$).}
-  \label{tab:coefficients}
-\end{table}
-
-Note that the Higgs-fermion coupling shift is given by $g_f \propto
-y_f (1 - \bar{c}_H/2  +  3 \bar{c}_f/2)$, but $\ope{f}$ also
-shifts the fermion masses to $m_f = y_f v (1 + \bar{c}_f/2) /
-\sqrt{2}$, yielding the result given above. Similarly, $\ope{H}$ and
-$\ope{\gamma}$ generate additional contributions to the Higgs-boson and
-gauge-boson kinetic terms, which are restored to their canonical form
-by the field re-definitions
-%
-\begin{align}
-H &\to H \, \left(1-\dfrac{1}{2}c_H \right), & 
-Z_\mu &\to Z_\mu \, \left( 1+\dfrac{4s_w^4}{c_w^2}c_\gamma \right) \,,\notag \\
-&& 
-A_\mu &\to A_\mu \, \left( 1+4s_w^2 \, c_\gamma \right) -
-  Z_\mu \left( \dfrac{8s_w^3}{c_w} c_\gamma \right).
-\end{align}
-%
-None of the operators considered in this basis affects the relations
-between $g$, $m_W$, $v$ and $G_F$, so the SM relations
-%
-\begin{align}
-  m_W &= \dfrac {g\,v} 2 \,, &
-  G_F &=\dfrac {\sqrt{2} \, g^2} {8\, m_W^2} = \dfrac 1 {\sqrt{2} v^2} \,,
-\end{align}
-%
-can always be used to translate these coupling shifts from one scheme
-of input parameters to another.
-
-Dimension-6 operators result in a modified pattern of Higgs
-interactions, leading to coupling shifts $g_{xxH} \equiv
-g_{xxH}^\text{SM}(1+\Delta_x)$ and also genuinely novel Lorentz
-structures. Interestingly, in general more than one of the
-effective operators in Tab.~\ref{tab:operators} contributes to a
-given Higgs interaction in the mass basis, implying that it is in
-general not possible to establish a one-to-one mapping between Wilson
-coefficients and distorted Higgs couplings.
-
-Note that the Wilson coefficients of the operators $\ope{T}$ and $\ope{B}+\ope{W}$
-are strongly constrained by electroweak precision data~\cite{silh}. In
-this work, we allow ourselves, on occasion, to ignore these bounds to
-more distinctly illustrate the effects in the Higgs sector.
-
-Translations between effective operator bases can be performed with
-the help of equations of motion, field redefinitions, integration by
-parts and Fierz identities. Here we quote a number of such relations
-which turn out to be particularly useful for the practitioner. For
-example, in addition to the effective operators in the SILH basis,
-we often find the operators
-%
-\begin{align}
-  \ope{r} &= \phisq\, (D_\mu \phi)^2\,, &
-  \ope{HF}' &= \left( \bar{f}_L \, \gamma^\mu \, \sigma^a \, f_L \right) \left( \phi^\dagger \, \sigma^a \, \overleftrightarrow{D}_\mu \, \phi \right)  \,,
-  \notag \\
-  \ope{D} &= \left( D^2 \, \phi \right)^2\,, &
-  \hat{\ope{}}'_{HH} &= \left( \phi^\dagger \, \sigma^a \, \overleftrightarrow{D}_\mu \, \phi \right)\left( \phi^\dagger \, \sigma^a \, \overleftrightarrow{D}_\mu \, \phi \right)\,.
-  \label{eq:EFT_OHf}
-\end{align}
-%
-$\hat{\ope{}}'_{HH}$ can be replaced by using the completeness relation of the Pauli matrices, which for arbitrary SU(2) doublets $\xi,\,\chi,\,\eta,\,\psi$ leads to
-\begin{align}
-(\xi^\dagger \sigma^a \chi)(\eta^\dagger \sigma^a \psi) &=
-\sum_{ijkl} \xi^*_i \sigma^a_{ij} \chi_j \, \eta^*_k \sigma^a_{kl} \psi_l \notag \\
-&= \sum_{ijkl} (2\delta_{il}\delta_{jk}-\delta_{ij}\delta_{kl})\xi^*_i \chi_j \, \eta^*_k \psi_l = 2(\xi^\dagger\psi)(\eta^\dagger\chi)-(\xi^\dagger \chi)(\eta^\dagger\psi)\,.
-\end{align}
-Thus we find
-\begin{align}
-\hat{\ope{}}'_{HH} &= (\phi^\dagger\,\sigma^a\,D^\mu \phi)^2
-+((D^\mu\phi^\dagger)\,\sigma^a\,\phi)^2
--2((D^\mu\phi^\dagger)\,\sigma^a\,\phi)(\phi^\dagger\,\sigma^a\,D_\mu \phi) \notag \\
-&= (\phi^\dagger\,D^\mu \phi)^2
-+ ((D^\mu\phi^\dagger)\,\phi)^2
--2\left[ 2((D^\mu\phi^\dagger)\,D^\mu \phi)(\phi^\dagger\phi) - 
- ((D^\mu\phi^\dagger)\,\phi)(\phi^\dagger\,D^\mu \phi) \right]
-\notag \\
-&= \ope{H} - 4 \ope{r} \,.
-  \label{eq:EFT_JHJH_replacement}
-\end{align}
-%
-The equation of motion for the $W$ fields,
-%
-\begin{align}
-D^\nu W^a_{\mu \nu} 
-= - i g \, \phi^\dagger \dfrac {\sigma^a} {2} \overleftrightarrow{D}_\mu \phi 
-  - g \sum_f \bar{f}_L \dfrac {\sigma^a} {2} \gamma_\mu f_L  \,,
- \label{eq:eom-w}
-\end{align}
-gives rise to the identity
-\begin{align}
-  \sum_f \ope{HF}' = \dfrac {2} {g} \, \ope{W} - {i} \, \ope{H} + 4 i \, \ope{r}  \,.
-  \label{eq:EFT_OHf_replacement}
-\end{align}
-%
-A global redefinition $\phi \to \phi + \alpha \, (\phisq) \phi / v^2$ generates a shift in the Wilson coefficients
-\begin{alignat}{5}
- c_H \to c_H + 2\alpha\,, \quad
- c_r \to c_r + 2\alpha\,, \quad c_6 \to c_6 {+} 4\alpha\,, \quad c_f \to c_f {+} \alpha\,,
- \label{eq:wilson-shift}
-\end{alignat}
-so that
-with the choice $\alpha=-c_r/2$ one can eliminate the operator
-$\ope{r}$ in favor of other operators:
-%
-\begin{align}
-  \ope{r} \leftrightarrow \biggl\{ - \dfrac 1 2 \, \ope{H} + 2 \, \lambda \, \ope{6} + \sum_f \left[ \dfrac 1 2 \, y_f \, \ope{f} + \text{h.c.}\right] \biggr\} \,.
-  \label{eq:EFT_Or_replacement}
-\end{align}
-%
-Finally, $\ope{D}$ can be exchanged for others using the equation of motion for
-$\phi$,
-%
-\begin{align}
-  D^2 \phi &= - \mu^2  \, \phi - 2\, \lambda \, \phisq \, \phi - \sum_\text{gen.} \left[y_u \, \bar{Q}^T_L \, u_R + y_d \, \bar{d}_R \, Q_L + y_\ell \, \bar{\ell}_R \, L_L \right] \,. 
-\end{align}
-%
-This leads to
-%
-\begin{align}
-  \ope{D} = \mu^4 \, \phisq 
- + 4 \, \lambda \, \mu^2 \, (\phisq)^2 
- + \mu^2 \, \sum_f y_f \, \bar{f}_L \phi f_R  \
- + 4 \, \lambda^2 \, (\phisq)^3 + 2 \, \lambda \, \sum_f y_f \, \phisq \, \left( \bar{f}_L \phi f_R \right) \,.
-\end{align}
-%
-The first three terms lead to a renormalization of the SM parameters
-$\mu$, $\lambda$, $y_f$, without any impact on physical
-observables. The last two terms, however, means that $\ope{D}$ is
-equivalent to the combination
-%
-\begin{align}
-  \ope{D} \leftrightarrow 4 \, \lambda^2 \, \ope{6} + 2 \, \lambda \, \sum_f \left( y_f \, \ope{f} + \text{h.c.} \right)\,.
-  \label{eq:EFT_OD_replacement}
-\end{align}
-
+% The operators in Tab.~\ref{tab:ops2} translate to the SILH basis via
+% \begin{align}
+% \begin{aligned}
+%   \ope{H}'' &= \frac 1 2 \ope{H}\,, \quad &
+%   \ope{6}'' &= \ope{6}\,, \quad &
+%   \ope{T}'' &= \frac 1 2 \ope{T}\,, \quad &
+%   \ope{B}'' &= \frac {i g'} 2 \ope{B} \,, \quad &
+%   \ope{W}'' &= \frac {i g} 2 \ope{W}\,,  \\
+%   \ope{GG}'' &= g_s^2 \ope{g}\,, &
+%   \ope{BB}'' &= g'^2 \ope{\gamma}\,, \quad &
+%   \ope{WB}'' &= 2i g' \ope{B} - 4i g' \ope{HB} - g'^2 \ope{\gamma}\,, \hspace{-10em} \\
+%   \ope{WW}'' &= -2i g' \ope{B} + 2i g \ope{W} + 4i g' \ope{HB} - 4 i g \ope{HW}  + g'^2 \ope{\gamma}  \, . \hspace{-20em}
+% \end{aligned}
+% \end{align}
+% %
+% In addition, the HLM basis contains extra operators with no SILH counterpart, 
+% %
+% \begin{align}
+%   \ope{R}'' = \phisq \left(D_\mu \, \phi\right)^\dagger \left(D^\mu \, \phi \right)\,, \qqquad
+%   \ope{D}'' = \left( D^2 \phi \right)^2 \, ,
+%   \label{eq:HLM_add_ops}
+% \end{align}
+% %
+% which can be eliminated using \autoref{eq:EFT_Or_replacement}
+% and \autoref{eq:EFT_OD_replacement}, respectively.  The Wilson
+% coefficients $k_i$ of the HLM basis translate to the SILH coefficients
+% $\bar{c}_i$ as follows:
+% %
+% \begin{align}
+%   \bar{c}_H &= \dfrac {v^2} {\Lambda^2} \, \left( k_H - k_R \right) \,, &
+%   \bar{c}_B &= \dfrac {v^2} {\Lambda^2} \, \dfrac {g^2} 4 \, \left(k_B + 4 \, k_{WB} - 4 \, k_{WW} \right) \notag \,, \\
+%   \bar{c}_T &= \dfrac {v^2} {\Lambda^2} \, k_T \,, & 
+%   \bar{c}_W &= \dfrac {v^2} {\Lambda^2} \, \dfrac {g^2} 4 \, \left(k_W + 4  \, k_{WW} \right) \notag \,, \\
+%   \bar{c}_6 &= - \dfrac {v^2} {\Lambda^2} \, \left( \dfrac {k_6} {\lambda} + 2\, k_R + 4 \, \lambda \, k_D \right) \,, & 
+%   \bar{c}_{HB} &= \dfrac {v^2} {\Lambda^2} \, g^2 \, \left(  k_{WW} - k_{WB} \right) \notag \,, \\
+%   \bar{c}_g &= \dfrac {v^2} {\Lambda^2} \, \dfrac {g^2} 4 \, k_{GG} \,,  &   
+%   \bar{c}_{HW} &= - \dfrac {v^2} {\Lambda^2} \, g^2 \, k_{WW} \notag \,, \\
+%   \bar{c}_\gamma &= \dfrac {v^2} {\Lambda^2} \, \dfrac {g^2} 4 \, \left( k_{BB} - k_{WB} + k_{WW} \right) \,, &
+%   \bar{c}_f &= - \dfrac {v^2} {\Lambda^2} \, \left( \dfrac 1 2 \, k_R + 2 \, \lambda \, k_D \right) \,,
+% \end{align}
+% %
+% where for the sake of completeness we have included the coefficients
+% of the redundant operators given in \autoref{eq:HLM_add_ops}.
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{SILH to HISZ}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-We also give the conversion to the popular HISZ
-basis~\cite{Hagiwara:1993ck} (see also
-References~\cite{Corbett:2012ja,sfitter_last} for recent studies in
-this framework)
-%
-\begin{align}
-  \lgr{HISZ} = \sum_i \dfrac{f_i} {\Lambda^2} \ope{i}' \, ,
-\end{align}
-%
-with Higgs-gauge operators given in Tab.~\ref{tab:ops2}.  We use the
-same conventions for the covariant derivative as above (note that this
-is not the case in some of the cited literature). The operators can
-then be translated via the relations
-%
-\begin{align}
-\ope{H}  &= 2\ope{\phi2}'\,, \qquad &
-\ope{W}  &= \dfrac{2 i}{g}  \left( \ope{WW}' +  \ope{BW}' - 2\ope{W}'   \right)\,,  \quad & 
-\ope{HW} &= -\dfrac{2i }{g} \ope{W}'\,,  \notag \\ 
-\ope{T}  &= 2\ope{\phi2}'  -  4\ope{\phi1}'\,,  &
-\ope{B}  &= \dfrac{2 i}{g'}  \left( \ope{BB}' +  \ope{BW}' - 2\ope{B}' \right)\,, & 
-\ope{g}  &= \ope{GG}' \,,  \notag \\
-\ope{6} &= 3 \ope{\phi3}' \,, & 
-\ope{HB}  &= -\dfrac{2 i }{g'}\ope{B}'\,, & 
-\ope{\gamma} &= -\dfrac{4}{g'^2}  \ope{BB}'  \,.
-\end{align}
-%
-The HISZ basis also includes the redundant operator $\ope{\phi4}' =
-(D_\mu\phi)^\dagger(D^\mu\phi)\,\phi^\dagger\phi$, which can be
-removed using \autoref{eq:EFT_Or_replacement}.  For the coefficients,
-we find
-%
-\begin{align}
-  \bar{c}_H &= \dfrac{v^2}{\Lambda^2}\,\left(\dfrac{1}{2}f_{\phi1}+f_{\phi2}\right)\,, &
-  \bar{c}_W &= -\dfrac{v^2}{\Lambda^2}\,\dfrac{g^2}{4}f_{WW} \notag\,, \\
-  \bar{c}_T &= -\dfrac{v^2}{\Lambda^2}\,\dfrac{1}{2}f_{\phi1}\,, & 
-  \bar{c}_B &= \dfrac{v^2}{\Lambda^2}\,\dfrac{g^2}{4} (f_{WW}-f_{BW}) \notag\,, \\
-  \bar{c}_6 &= -\dfrac{v^2}{\Lambda^2}\,\dfrac{1}{3\lambda}f_{\phi3}\,, &
-  \bar{c}_{HW} &= \dfrac{v^2}{\Lambda^2}\,\dfrac{g^2}{8} (f_{W}+2f_{WW}) \notag\,, \\
-  \bar{c}_g &= \dfrac{v^2}{\Lambda^2}\,\dfrac{g^2}{4g_s^2}f_{GG}\,, &
-  \bar{c}_{HB} &= \dfrac{v^2}{\Lambda^2}\,\dfrac{g^2}{8} (f_{B}+2f_{BW}-2f_{WW}) \notag\,, \\
-  \bar{c}_\gamma &= \dfrac{v^2}{\Lambda^2}\,\dfrac{g^2}{16} (f_{BW}-f_{BB}-f_{WW}) \, .
-\end{align}
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{HLM basis}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Aside from the relatively simple case of the multi-Higgs sector
-extensions, we make use of the covariant derivative
-expansion~\cite{Gaillard:1985uh,Cheyette:1987qz} to analytically carry out
-the matching between the different UV completions to
-their corresponding EFT description.  The method has been recently
-reappraised in Reference~\cite{Henning:2014wua} and employed in a number of
-studies~\cite{heft_limitations,heft_limitations2,Chiang:2015ura,Huo:2015exa}.
-By applying this method, the Wilson coefficients are readily obtained
-in a different operator basis (henceforth dubbed HLM),
-%
-\begin{align}
-  \lgr{HLM} = \sum_i \dfrac{k_i} {\Lambda^2} \ope{i}''.
-\end{align}
-%
-The HLM operators involving Higgs fields and their interaction with
-gauge bosons are listed in Tab.~\ref{tab:ops2}.  In addition, the HLM
-basis contains a subset of operators with no direct correspondence to
-the bosonic SILH operators, which must be rewritten with the help of
-equations of motion and field redefinitions, as we discuss below.
-
-%-----------------------------------------------------------
-\begin{table}
-  \renewcommand{\arraystretch}{1.2}
-  \setlength{\tabcolsep}{1ex}
-  \centering
-    \begin{tabular}[t]{r @{${}={}$}l} 
-    \toprule
-    \multicolumn{2}{c}{HLM basis}  \\
-    \midrule
-    $\ope{H}''$ & $\frac{1}{2} \, \partial^\mu (\phisq) \,\partial_\mu (\phisq)$ \\ 
-    $\ope{6}''$ & $(\phisq)^3$  \\
-    $\ope{T}''$ & $\frac{1}{2} \left(\phi^\dagger \, \overleftrightarrow{D}^\mu \, \phi \right) \, \left(\phi^\dagger \, \overleftrightarrow{D}_\mu \, \phi \right)$ \\
-    $\ope{B}''$ & $\frac{i g'}{2} \left( \phi^\dagger \, \overleftrightarrow{D}^\mu \, \phi \right) \, \partial^\nu \, B_{\mu\nu}$ \\
-    $\ope{W}''$ & $\frac{i g}{2} \left(\phi^\dagger\,\sigma^k\,\overleftrightarrow{D}^\mu\phi\right)\,(D^\nu\,W^k_{\mu\nu})$ \\
-    $\ope{GG}''$ & $g_s^2 (\phisq)\,G^A_{\mu\nu}\,G^{\mu\nu\, A}$ \\ 
-    $\ope{BB}''$ & $g'^2(\phisq)\,B_{\mu\nu}\,B^{\mu\nu}$ \\
-    $\ope{WW}''$ & $g^2 (\phisq)\,W^k_{\mu\nu}\,W^{\mu\nu\, k}$ \\
-    $\ope{WB}''$ & $g g' \left(\phi^\dagger\sigma^k\phi \right)  \, B_{\mu\nu}\,W^{\mu\nu\, k}$ \\
-    \bottomrule 
-  \end{tabular}
-  \hspace{1cm}
-  \begin{tabular}[t]{r @{${}={}$}l} 
-    \toprule
-    \multicolumn{2}{c}{HISZ basis} \\
-    \midrule
-    $\ope{\phi1}'$  & $(D_\mu\phi)^\dagger\phi\,\phi^\dagger(D^\mu\phi)$ \\
-    $\ope{\phi2}'$  & $\frac{1}{2}\partial^\mu(\phi^\dagger\phi)\,\partial_\mu(\phi^\dagger\phi)$ \\ 
-    $\ope{\phi3}'$  &  $\frac{1}{3}(\phisq)^3$ \\
-    $\ope{GG}'$  &  $(\phisq)\,G^A_{\mu\nu}\,G^{\mu\nu\, A}$ \\
-    $\ope{BB}'$  &  $\phi^\dagger\,\hat{B}_{\mu\nu}\,\hat{B}^{\mu\nu}\,\phi  = -\frac{g'^2}{4}\phisq\,B_{\mu\nu}\,B^{\mu\nu}$ \\
-    $\ope{WW}'$  &  $\phi^\dagger\,\hat{W}_{\mu\nu}\,\hat{W}^{\mu\nu}\,\phi  = -\frac{g^2}{4}\phisq\,W^k_{\mu\nu}\,W^{\mu\nu\, k}$ \\
-    $\ope{BW}'$  &  $\phi^\dagger\,\hat{B}_{\mu\nu}\,\hat{W}^{\mu\nu}\,\phi  = -\frac{g\,g'}{4}(\phi^\dagger\sigma^k\phi)\,B_{\mu\nu}\,W^{\mu\nu\, k}$ \\
-    $\ope{B}'$  &  $(D^\mu\phi)^\dagger \hat{B}_{\mu\nu} (D^\nu\phi)  = i \frac{g}{2}(D^\mu\phi^\dagger)(D^\nu\phi)\,B_{\mu\nu}$ \\
-    $\ope{W}'$  &  $(D^\mu\phi)^\dagger \hat{W}_{\mu\nu} (D^\nu\phi)  = i \frac{g}{2}(D^\mu\phi^\dagger)\sigma^k( D^\nu\phi)\,W_{\mu\nu}^k$ \\
-    \bottomrule
-  \end{tabular}
-  \caption{Bosonic CP-conserving Higgs operators in the HLM basis
-    (left) and the HISZ basis (right). Here $\hat{B}_{\mu\nu}=i g'/2
-    B_{\mu\nu}$ and $\hat{W}_{\mu\nu}=i g \sigma^k/2 W_{\mu\nu}^k$.}
-  \label{tab:ops2}
-\end{table}
-%-----------------------------------------------------------
-
-The operators in Tab.~\ref{tab:ops2} translate to the SILH basis via
-\begin{align}
-\begin{aligned}
-  \ope{H}'' &= \frac 1 2 \ope{H}\,, \quad &
-  \ope{6}'' &= \ope{6}\,, \quad &
-  \ope{T}'' &= \frac 1 2 \ope{T}\,, \quad &
-  \ope{B}'' &= \frac {i g'} 2 \ope{B} \,, \quad &
-  \ope{W}'' &= \frac {i g} 2 \ope{W}\,,  \\
-  \ope{GG}'' &= g_s^2 \ope{g}\,, &
-  \ope{BB}'' &= g'^2 \ope{\gamma}\,, \quad &
-  \ope{WB}'' &= 2i g' \ope{B} - 4i g' \ope{HB} - g'^2 \ope{\gamma}\,, \hspace{-10em} \\
-  \ope{WW}'' &= -2i g' \ope{B} + 2i g \ope{W} + 4i g' \ope{HB} - 4 i g \ope{HW}  + g'^2 \ope{\gamma}  \, . \hspace{-20em}
-\end{aligned}
-\end{align}
-%
-In addition, the HLM basis contains extra operators with no SILH counterpart, 
-%
-\begin{align}
-  \ope{R}'' = \phisq \left(D_\mu \, \phi\right)^\dagger \left(D^\mu \, \phi \right)\,, \qqquad
-  \ope{D}'' = \left( D^2 \phi \right)^2 \, ,
-  \label{eq:HLM_add_ops}
-\end{align}
-%
-which can be eliminated using \autoref{eq:EFT_Or_replacement}
-and \autoref{eq:EFT_OD_replacement}, respectively.  The Wilson
-coefficients $k_i$ of the HLM basis translate to the SILH coefficients
-$\bar{c}_i$ as follows:
-%
-\begin{align}
-  \bar{c}_H &= \dfrac {v^2} {\Lambda^2} \, \left( k_H - k_R \right) \,, &
-  \bar{c}_B &= \dfrac {v^2} {\Lambda^2} \, \dfrac {g^2} 4 \, \left(k_B + 4 \, k_{WB} - 4 \, k_{WW} \right) \notag \,, \\
-  \bar{c}_T &= \dfrac {v^2} {\Lambda^2} \, k_T \,, & 
-  \bar{c}_W &= \dfrac {v^2} {\Lambda^2} \, \dfrac {g^2} 4 \, \left(k_W + 4  \, k_{WW} \right) \notag \,, \\
-  \bar{c}_6 &= - \dfrac {v^2} {\Lambda^2} \, \left( \dfrac {k_6} {\lambda} + 2\, k_R + 4 \, \lambda \, k_D \right) \,, & 
-  \bar{c}_{HB} &= \dfrac {v^2} {\Lambda^2} \, g^2 \, \left(  k_{WW} - k_{WB} \right) \notag \,, \\
-  \bar{c}_g &= \dfrac {v^2} {\Lambda^2} \, \dfrac {g^2} 4 \, k_{GG} \,,  &   
-  \bar{c}_{HW} &= - \dfrac {v^2} {\Lambda^2} \, g^2 \, k_{WW} \notag \,, \\
-  \bar{c}_\gamma &= \dfrac {v^2} {\Lambda^2} \, \dfrac {g^2} 4 \, \left( k_{BB} - k_{WB} + k_{WW} \right) \,, &
-  \bar{c}_f &= - \dfrac {v^2} {\Lambda^2} \, \left( \dfrac 1 2 \, k_R + 2 \, \lambda \, k_D \right) \,,
-\end{align}
-%
-where for the sake of completeness we have included the coefficients
-of the redundant operators given in \autoref{eq:HLM_add_ops}.
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Model fineprint}
+\section{Model fine print}
 \label{sec:appendix_models}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -573,7 +587,7 @@ scalar doublet and singlets fields can be expanded into components as
 where $v \equiv \sqrt{2}\langle \phi \rangle = 246$~GeV and
 $v_s \equiv \sqrt{2}\langle S \rangle$ denote their respective
 VEVs. The minimisation condition for this potential can be used to
-eliminate the parameters $\mu_{1,2}$ in favor of $v$ and
+eliminate the parameters $\mu_{1,2}$ in favour of $v$ and
 $v_s$. $\phi^0$ and $s^0$ mix to form a light ($h$) and a heavy ($H$)
 mass eigenstate,
 %
@@ -903,7 +917,7 @@ Collecting all bilinear terms from
 with the mass matrix $\mathcal{M}_{\tilde{t}}$ given in
 \autoref{eq:validity_stops_mass}.  Assuming all parameters in
 \autoref{eq:appendix_models_stops_lagrangian} to be real, $m_{ij}$ can
-be diagonalized through the usual orthogonal transformation
+be diagonalised through the usual orthogonal transformation
 $R(\theta_{\tilde{t}})$ given in
 \autoref{eq:appendix_models_2hdm_rotation}.  This rotates the gauge
 eigenstates $(\tilde{t}_L, \tilde{t}_R)$ into the mass basis
@@ -970,8 +984,6 @@ the tree-level exchange of such heavy partners cannot generate any
 effective interaction at dimension six. Our results are in agreement
 with References~\cite{Henning:2014wua, Drozd:2015kva, Drozd:2015rsp}
 and given in \autoref{eq:validity_stops_wilson_coefficients}.
-%
-\comment{To here}
 
 
 
@@ -1009,7 +1021,7 @@ eigenstates $A$, $W^\pm$, $Z$, $\xi^\pm$, and $\xi^0$. The photon is
 as usual defined as the component that remains massless during EWSB,
 $A_\mu = c_w\,B_\mu + s_w\,W_\mu^3$, where the Weinberg angle is
 linked to the gauge couplings $e = g_W\,s_w = g'\,c_w$.  For the
-remaining fields we have to diagonalize the neutral and charged mass
+remaining fields we have to diagonalise the neutral and charged mass
 matrices, giving the mass eigenstates
 %
 \begingroup%
@@ -1242,9 +1254,7 @@ expressed in terms of dimension-six operators as
     \right] \,, \\
   %
   J_F^{\mu,a}\,J_\mu^{H\,a}
-  &= \frac{\im}{2} \,
-    \left( \bar{f}_L \, \gamma^\mu \, \sigma^a \, f_L \right)
-    \left( \phi^\dagger \, \sigma^a \, \overleftrightarrow{D}_\mu \, \phi \right) \notag \\
+  &= \frac{1}{2} \ope{\phi F}^{(3)} \notag \\
   %
   &= \frac{-2 }{g_W^2} \, \left[ \ope{WW} + \ope{BW} - 2 \ope{W} \right] 
     + 3\ope{\phi,2} - 12\lambda\ope{\phi,3} - \sum_f y_f\ope{f} \,.
@@ -1267,8 +1277,6 @@ Combining the pieces, we finally arrive at
 %
 corresponding to the Wilson coefficients given in
 \autoref{eq:validity_vector_triplet_coefficients}.
-%
-\comment{To here}
 
 
 
