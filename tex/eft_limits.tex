@@ -11,26 +11,25 @@ All models are wrong, but some are useful.}%
 \label{chapter:validity}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\firstword{H}{iggs effective theories} can universally describe all
-signatures expected from new physics as long as its mass scale
-$\Lambda$ is sufficiently separated from the experimentally accessible
-scale. However, the limited precision of the LHC means that Higgs
-measurements are often only sensitive to models with scales not much
-higher than the electroweak scale. In this chapter we discuss if and
-when the EFT approach is nevertheless useful, and how its validity can
-be improved.
+\firstword{A}{ suitable effective field theory} can universally
+describe all signatures expected from new physics as long as the new
+physics scale $\Lambda$ is much larger than the experimental momentum
+transfer. However, the limited precision of the LHC means that Higgs
+measurements are often only sensitive to models characterised by mass
+scales just above the electroweak scale. In this chapter we discuss if
+and when the EFT approach is nevertheless useful, and how its validity
+can be improved.
 
-In \autoref{sec:validity_introduction} we discuss the LHC
-sensitivity and its implications for effective theories, and formulate
-our strategy to test the dimension-six approach. In
-\autoref{sec:validity_matching} we discuss some crucial details of
-the matching between full models and EFTs, and introduce the novel
-``$v$-improved'' matching
-procedure. \autoref{sec:validity_full_vs_effective} contains the
-bulk of our results, the comparison of full models to their EFT
-approximations for a variety of models and observables. We go into
-more detail and analyse some practical questions in a specific example
-case in \autoref{sec:validity_practical_questions}, and finally
+In \autoref{sec:validity_introduction} we estimate the new physics
+scales probed by LHC Higgs measurements, and formulate our strategy to
+test the dimension-six approach. The validity of the effective
+approach at the LHC depends on details of the matching procedure,
+which we discuss in
+\autoref{sec:validity_matching}. \autoref{sec:validity_full_vs_effective}
+contains the bulk of our results, the comparison of full models to
+their EFT approximations for a variety of models and observables. We
+go into more detail and analyse some practical questions in a specific
+example case in \autoref{sec:validity_practical_questions}, and
 present our conclusions in \autoref{sec:validity_conclusions}.
 
 Most of the work presented in this chapter was previously published in
@@ -57,11 +56,10 @@ to that in these three publications.
 There is no doubt that effective field theories work extraordinarily
 well as long as there is a scale hierarchy between the experimentally
 probed energy and the new physics scale, $E \ll \Lambda$. On the other
-hand, it is clear that the EFT expansion breaks down at
-$E \geq \Lambda$, where an infinite number of operators contributes at
-the same size and the model is neither predictive nor
-renormalisable. The validity of the effective theory in the
-intermediate region,
+hand, one expects the EFT expansion to break down at $E \geq \Lambda$,
+where an infinite number of operators contributes at the same size and
+the effective model is neither predictive nor renormalisable. The
+validity of the EFT in the intermediate region,
 %
 \begin{equation}
   E \lesssim \Lambda \,,
@@ -69,18 +67,18 @@ intermediate region,
 \end{equation}
 %
 is less obvious and will depend on the specific underlying model as
-well as on the observable studied. So in which of these categories do
-LHC Higgs measurements belong?
+well as on the observable studied.
 
-Higgs production at hadron colliders does not probe a single
-experimental energy scale over the full relevant phase space. The
-momentum transfer is bounded from below by the Higgs mass. Selection
-criteria necessary to separate a signal from the QCD backgrounds often
-require a higher momentum transfer $E > m_h$. More importantly, most
-of the information on operators with derivatives comes from
-high-energy tails, as demonstrated in
-\autoref{sec:foundations_heft_pheno}. During run~1, significant
-event numbers are recorded within the range
+In which of these categories do the LHC Higgs measurements belong?
+There is no immediately obvious answer, since Higgs production does
+not only probe a single experimental energy scale. While the momentum
+transfer is bounded from below by the Higgs mass, selection criteria
+necessary to separate a signal from the QCD backgrounds often require
+a higher momentum transfer $E > m_h$. More importantly, most of the
+information on operators with derivatives comes from high-energy
+tails, as demonstrated in \autoref{sec:foundations_heft_pheno}. During
+Run~1, significant event numbers have been recorded approximately
+within the range~\cite{Corbett:2015ksa}
 %
 \begin{equation}
   m_h \leq E \lesssim \ord{400~\gev} \,,
@@ -98,10 +96,10 @@ experimental reach of the LHC if
 %
 \begin{equation}
   \left| \frac{\sigma \times \text{BR}}{\left( \sigma \times \text{BR} \right)_\text{SM}} - 1 \right|
-  = \frac{g^2 m_h^2}{\Lambda^2}
+  \approx \frac{g^2 m_h^2}{\Lambda^2}
   \gtrsim 10\%
   \qquad \Leftrightarrow \qquad 
-  \Lambda < \frac{g \, m_h}{\sqrt{10\%} } \, \approx g \, 400~\gev \,.
+  \Lambda \lesssim \frac{g \, m_h}{\sqrt{10\%} } \, \approx g \cdot 400~\gev \,.
   \label{eq:validity_probed_scale_estimation}
 \end{equation}
 %
@@ -129,7 +127,7 @@ sense. For truly strongly coupled theories, $1 < g \lesssim 4 \pi$,
 new physics scenarios up to $\Lambda \lesssim 5~\tev$ are relevant,
 and the EFT expansion converges flawlessly. In fact, the EFT approach
 to Higgs observables has largely been motivated by the desire to
-describe models with strongly interacting electroweak symmetry
+describe models based on a strongly interacting electroweak symmetry
 breaking~\cite{Giudice:2007fh}. For moderately weakly to moderately
 strongly coupled theories, $1/2 \lesssim g^2 \lesssim 2$, the LHC
 Higgs programme is sensitive to scales
@@ -140,11 +138,9 @@ Higgs programme is sensitive to scales
 \end{equation}
 %
 This corresponds exactly to the intermediate region defined in
-\autoref{eq:validity_muddy_waters}.
-
-In this simple argument we ignored that new physics might also change
-distributions and especially affect the high-energy tails or off-shell
-regions.
+\autoref{eq:validity_muddy_waters}. In this simple argument we ignored
+that new physics might also change distributions and especially affect
+the high-energy tails or off-shell regions.
 %
 % In particular the increased statistics and Higgs production cross
 % sections at Run~II will enable us to add a wide range of
@@ -168,19 +164,14 @@ model now depends on the nature of the underlying physics as well as
 on the process and observable, and has to be carefully checked for
 each situation.
 
-From a practical perspective, in Reference~\cite{Corbett:2015ksa} is
-has been shown that a fit of dimension-six operators to the Higgs data
-at Run~I is a sensible and practicable extension of the usual Higgs
-couplings fit.  As discussed at length in the previous chapter,
-dimension-six operators including derivatives complement the Higgs
-coupling modifications and allow us to extract information from
-kinematic distributions. Even if the LHC constraints do not induce a
-hierarchy of scales, and the EFT approach is not formally well
-defined, there appears to be no problem in using the truncated
-dimension-six Lagrangian as a phenomenological model to describe the
-LHC Higgs data. This description induces theory uncertainties if we
-want to interpret the LHC results in terms of an effective field
-theory~\cite{Berthier:2015gja}.
+From a practical perspective, the dimension-six operators work
+flawlessly as a framework to fit Higgs data including kinematic
+distributions~\cite{Corbett:2015ksa}. Even if the LHC constraints do
+not induce a hierarchy of scales, and the EFT expansion does not
+converge, there appears to be no problem in using the truncated
+dimension-six Lagrangian as a phenomenological model. This description
+induces theory uncertainties if we want to interpret the LHC results
+in terms of an effective field theory~\cite{Berthier:2015gja}.
 
 
 
@@ -190,55 +181,46 @@ theory~\cite{Berthier:2015gja}.
 
 In this chapter we analyse the usefulness of the dimension-six
 description of the Higgs sector with a comprehensive comparison of
-full models and their dimension-six description. As argued above, the
-EFT validity has to be tested on a process-to-process as well as
-model-to-model basis.  We therefore select four representative models
-of new physics, map them onto dimension-six operators, and compare the
-predictions of the full and the effective model in various Higgs
-observables.
+full models to their dimension-six approximation. We select four
+specific models of new physics, map them onto dimension-six operators,
+and compare the predictions of the full and the effective model for a
+range of Higgs observables.
 
-We select moderately weakly interacting extensions of the Higgs sector
-of the Standard Model by
-%
-\begin{enumerate}
-\item a scalar singlet,
-\item a scalar doublet,
-\item a coloured top-partner scalar, and
-\item a massive vector triplet.
-\end{enumerate}
-%
-For each of these models we pick a number of parameter benchmark
-points, designed to highlight phenomenological features of the model,
-and to be within the experimental reach of the LHC Higgs programme.
+Our benchmark cases are moderately weakly extensions of the Higgs
+sector of the Standard Model by a scalar singlet, a scalar doublet,
+coloured scalar top partners, and a massive vector triplet.  For each
+of these models we define a number of parameter points designed to
+highlight phenomenological features of the model and to be within the
+experimental reach of the LHC Higgs programme.
 
 The corresponding EFT descriptions are constructed by integrating out
 the heavy fields and expanding the effective action to
 $\ord{1/\Lambda^2}$. In other words, we match the theories to the
 dimension-six operators of the linear Higgs EFT introduced in
-\autoref{sec:foundations_heft_operators}. The details of this
-matching procedure are a key element of our analysis and will be
-discussed in detail in the next section.
+\autoref{sec:foundations_heft_operators}. The details of this matching
+procedure are a key element of our analysis and will be discussed in
+detail in the next section.
 
 For all these scenarios, we calculate the Higgs couplings, and in a
 next step rates and distributions for selected Higgs production modes
 and decay channels. The key questions we aim to address are:
 %
 \begin{itemize}
-\item Which masses and coupling predict Higgs signatures relevant for
+\item Which masses and couplings predict Higgs signatures relevant for
   the LHC? Is the corresponding new physics scale sufficiently
-  separated from $v$?
+  separated from the experimental momentum transfer?
 %
-\item Which observables are correctly described by dimension-six
-  model?  Where does the EFT description break down, and why?
+\item Which observables are correctly described by the dimension-six
+  model?  Where does the EFT description break down?
 %
 \item Does this breakdown pose a problem for LHC analyses?
 \end{itemize}
 %
 In this way, we analyse what problems the lack of a clear hierarchy of
 scales leads to in practice, and discuss how these might affect global
-LHC-Higgs fits including kinematic distributions. Turning the argument
-around, we ask whether and when the analysis of a UV-complete model
-offers an advantage compared to the effective theory.
+fits. Turning the argument around, we ask whether and when the
+analysis of a UV-complete model offers an advantage compared to the
+effective theory.
 
 % It will turn out that two limitations of the EFT description will
 % guide us through the different models. First, we need to ensure that
@@ -252,16 +234,16 @@ offers an advantage compared to the effective theory.
 \newparagraph
 %
 After this broad survey of the applicability of dimension-six
-operators, we focus on the vector triplet scenario and WBF Higgs
-production and briefly discuss some practical aspects. First, we
-analyse which observables are particularly useful to characterise the
-validity of the EFT approach in WBF Higgs production. We then discuss
-whether the square of dimension-six operators should be included in
-calculations while neglecting dimension-eight operators interfering
-with the SM. Both contribute at the same order $\ord{1/\Lambda^4}$ to
-the squared amplitude.  Finally, we show how the EFT validity and its
-breakdown affect the limit setting procedure when the EFT is used as
-an intermediate parametrisation.
+operators, we focus on the vector triplet scenario and Higgs
+production in weak boson fusion to discuss some practical
+aspects. First, we analyse which kinematic observables are
+particularly useful to characterise the validity of the EFT approach
+in WBF Higgs production. We then discuss whether the square of
+dimension-six operators should be included in calculations while
+neglecting dimension-eight operators interfering with the SM. Both
+contribute to cross sections at $\ord{1/\Lambda^4}$. Finally, we show
+how the EFT validity and its breakdown affect the limit setting
+procedure when the EFT is used as an intermediate parametrisation.
 
 % Related to the work presented in this chapter,
 % Appendix~\ref{sec:appendix_simplified} briefly discusses whether the
@@ -294,14 +276,14 @@ Reference~\cite{Freitas:2016iwx}, these other studies generally do not
 discuss ambiguities in the matching procedure, a central aspect of the
 research presented here.
 
-The problem of a lack of scale hierarchy is not unique to the EFT
-approach. As discussed at the end of
+Validity issues from a lacking scale hierarchy are not unique to the
+EFT approach. As discussed at the end of
 \autoref{sec:foundations_heft_alternatives}, pseudo-observables rely
 on the same expansion in $1/\Lambda$, and the breakdown of this
 expansion has been studied in Reference~\cite{Greljo:2015sla}.
 
-As an aside, similar concerns have fuelled an intense investigation in
-the context of dark matter searches~\cite{Shoemaker:2011vi,
+Finally, similar concerns have fuelled an intense investigation in the
+context of dark matter searches~\cite{Shoemaker:2011vi,
   Busoni:2013lha, Buchmueller:2013dya, Busoni:2014sya, Racco:2015dxa,
   Bauer:2016pug}.  While in that field EFT-based predictions are
 usually robust for early-universe and late-time annihilation rates as
@@ -317,6 +299,7 @@ scales often breaks down for dark matter signals at colliders.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Ambiguities}
+\label{sec:validity_matching_ambiguities}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Before discussing the individual models and presenting our results, we
@@ -341,12 +324,10 @@ electroweak phase the only new physics scale is then
 %
 But after electroweak symmetry breaking, the electroweak VEV
 contributes through the mixing term to the actual physical masses $m$
-of the new particles. Even if there is only one dimensionful scale of
-new physics in the Lagrangian, this defines additional scales of the
-form
+of the new particles. This defines additional scales of the form
 %
 \begin{equation}
-  \Lambda_2^2 = m^2 = M^2 \pm g^2 v^2 \,,
+  \Lambda_2^2 = m^2 = M^2 \pm g v^2 \,,
 \end{equation}
 %
 where $g$ is a combination of couplings or mixing angles. Of course
@@ -354,42 +335,39 @@ there can be many such scales.
 
 Further ambiguities arise in the third step since we can choose which
 parameters to keep constant while expanding in $1/\Lambda$. For
-instance we can often choose to define Wilson coefficients in terms of
+instance we can choose to express the Wilson coefficients in terms of
 Lagrangian couplings or in terms of mixing angles. Again, the first
 choice corresponds to the natural choice in the unbroken phase of the
 electroweak symmetry, while the latter is often only defined in the
 broken phase.
 
-In both scenarios, switching from one choice to another corresponds to
-including additional contributions suppressed by $v^2/\Lambda^2$ to
-the Wilson coefficients of the dimension-six operators. In the first
+For both the cutoff scale and the Wilson coefficients, switching from
+one choice to another is equivalent to including additional
+contributions suppressed by more powers of $v^2/\Lambda^2$ to the
+Wilson coefficients of the dimension-six operators. In the first
 example,
 %
-\begin{align}
-  \frac {f_x} {\Lambda_2^2} \, \ope{x}
-  %
-  &= \frac  {f_x}  {M^2 \pm g^2 v^2}\, \ope{x}
-    %
-  = \frac  {f_x}  {M^2} \left (1 \mp \frac {g^2 v^2} {M^2} + \ord{1/M^4} \right) \ope{x} \notag \\
-  %
-  &= \left( \frac  {f_x}  {\Lambda_1^2} \mp \frac { f_x g^2 v^2}{\Lambda_1^4} \right) \ope{x}
-    + \ord{1/\Lambda_1^6} \,.
-\end{align}
+\begin{equation}
+  \frac {f_x} {m^2} \, \ope{x}
+  = \frac  {f_x}  {M^2 \pm g v^2}\, \ope{x}
+  = \left( \frac  {f_x}  {M^2} \mp \frac { f_x g v^2}{M^4} \right) \ope{x}
+  + \ord{1/M^6} \,.
+\end{equation}
 
-It should be stressed that these effects always contribute to
-observables at $\ord{1/\Lambda^4}$, the same order in the EFT
-expansion as the leading effects from dimension-eight operators, which
-we always neglect. From a purely theoretical point of view these terms
-are subleading, and indeed in the obvious validity regime of the EFT
-they are irrelevant. But this is not the situation we find at the
-LHC. In practice, these formally suppressed terms may be important
-even if the dimension-eight terms are small.
+It should be stressed that these choices affect observables at
+$\ord{1/\Lambda^4}$, the same order in the EFT expansion as the
+leading effects from dimension-eight operators, which we always
+neglect. From a purely theoretical point of view these terms are
+subleading, and indeed in the obvious validity regime of the EFT they
+are irrelevant. But this is not the situation we find at the LHC. In
+practice, these formally suppressed terms may be important even if the
+dimension-eight terms are small.
 
-These ambiguities in the matching procedure raise the question if we
-can improve the agreement between full model and dimension-six
-Lagrangian by incorporating effects of the non-zero electroweak VEV in
-the matching. To answer this question we now define two different
-matching prescriptions.
+These ambiguities in the matching procedure therefore raise the
+question if we can improve the agreement between full model and
+dimension-six Lagrangian by incorporating effects of the non-zero
+electroweak VEV in the matching. To answer this question we now define
+two different matching prescriptions.
 
 
 
@@ -398,13 +376,13 @@ matching prescriptions.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Our \emph{default matching} follows a purely theoretical motivation
-and represents the conventional approach to matching. The linear Higgs
-EFT is formulated in terms of the doublet $\phi$ and based on the
-assumption $\Lambda \gg v$. It should therefore be matched to the full
-theory in the unbroken phase of the electroweak symmetry. An obvious
-choice for the matching scale is then the mass scale of new particles
-in the limit of $v \to 0$, which as in our simple example above we
-denote
+and represents the conventional approach for the linear Higgs
+EFT. These operators are formulated in terms of the doublet $\phi$ and
+based on the assumption $\Lambda \gg v$, so the EFT should be matched
+to the full theory in the unbroken phase of the electroweak
+symmetry. An obvious choice for the matching scale is then the mass
+scale of new particles in the limit of $v \to 0$, which as in our
+simple example above we denote
 %
 \begin{equation}
   \Lambda_{\text{default}} = M \,.
@@ -426,19 +404,16 @@ the new particles in the broken phase including contributions from
 $v$,
 %
 \begin{equation}
-  \Lambda_{\text{$v$-improved}} = m \,,
+  \Lambda_{\text{$v$-improved}} = m \,.
 \end{equation}
 %
-rather than the mass scale in the unbroken phase. Again, multiple
-particles with substantial mass splittings will require a multi-step
-matching procedure, but there is no fundamental problem to describe
-them. The Wilson coefficients are expressed in terms of
-phenomenologically relevant quantities such as mixing angles and
-physical masses, again defined in the broken phase. This is a somewhat
-subjective criterion that depends on model and process: the
-$v$-improved matching procedure is not a unique definition, but rather
-a general guideline. We will demonstrate an example for a natural
-choice in the singlet scenario.
+Again, multiple particles with substantial mass splittings will
+require a multi-step matching procedure. The Wilson coefficients are
+expressed in terms of phenomenologically relevant quantities such as
+mixing angles and physical masses, again defined in the broken
+phase. This is a somewhat subjective criterion that depends on model
+and process\,---\,the $v$-improved matching procedure is not uniquely
+defined, but rather a general guideline.
 
 
 
@@ -446,19 +421,18 @@ choice in the singlet scenario.
 \subsection{Making sense of $v$-improvement}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We can interpret the two matching schemes from two different
-perspectives. First we analyse it from the unbroken electroweak
-phase. Some of the operators with dimension 8 or higher are of the
-form
+Let us try to understand the $v$-improved matching from a different
+perspective. Integrating out heavy particles generates an infinite
+number of operators with different mass dimensions. Some of the
+operators of dimension eight or higher are of the form
 %
 \begin{equation}
   \ope{i}^{(d=6 + 2n)} = ( \phisq)^n \ope{i}^{(6)} \,,
   \label{eq:validity_dim8_phisq_dim6}
 \end{equation}
 %
-where $\ope{i}^{(6)}$ is a dimension-six operator. The untruncated,
-infinite tower of higher-dimensional operators generated from the full
-theory can be re-organised as
+where $\ope{i}^{(6)}$ is a dimension-six operator. The tower of
+higher-dimensional operators can be re-organised as
 %
 \begin{align}
   \lgr{EFT}
@@ -475,18 +449,19 @@ where $\smash{\ope{k}^{(d)}}$ are the dimension-eight and higher
 operators of a different form than
 \autoref{eq:validity_dim8_phisq_dim6}.  A $v$-improved matching
 corresponds to replacing $\phisq \to v^2 / 2$ in (part of) the first
-sum:\footnote{The argument is slightly more complicated if additional
+sum \footnote{The argument is slightly more complicated if additional
   powers of $\phi$ appear in $\smash{\ope{i}^{(6)}}$. One can then
   also take into account terms where instances of $\phi$ in
   $\smash{\ope{i}^{(6)}}$ are replaced by the VEV and fields in the
   prefactor are left alone. This effectively adds a combinatorial
-  factor to \autoref{eq:validity_v-improvement_resummation}.}
+  factor to
+  \autoref{eq:validity_v-improvement_resummation}.}~\cite{Brehmer:2015rna,
+  Freitas:2016iwx}:
 %
 \begin{equation}
   \lgr{$v$-improved dim-6} = \lgr{SM}
   + \sum_i
-  \frac { \overbrace{\sum_{n=0}^\infty f_i^{(6+2n)}  \left( \frac {v^2} {2\Lambda^{2}} \right)^n}^{f_i^{(6), \text{$v$-improved}}} }
-  {\Lambda^2}
+  \underbrace{  \frac 1 {\Lambda^2} \left[  \sum_{n=0}^\infty f_i^{(6+2n)}  \left( \frac {v^2} {2\Lambda^{2}} \right)^n \right] }_{(f_i^{(6)} / \Lambda^2)_{\text{$v$-improved}}}
   \ope{i}^{(6)} \,.
   \label{eq:validity_v-improvement_resummation}
 \end{equation}
@@ -495,18 +470,183 @@ So from the perspective of the unbroken phase of the electroweak
 symmetry, $v$-improvement corresponds to a \emph{partial resummation
   of dimension-eight and higher operators} into the Wilson
 coefficients of the dimension-six operators.
- 
-From an experimental point of view, or in the broken electroweak
-phase, physical masses and mixing angles are simply the natural
-choices to describe a model. We then expect that the $v$-improved
-matching procedure can improve the validity of the dimension-six
-model. For a more precise statement we have to distinguish between an
-expansion in $v/\Lambda$ and $\mathbf{p}/\Lambda$. We expect the
-$v$-improved matching prescription can lead to a better agreement with
-the full models in situations where the expansion in $v/\Lambda$ is
-relevant, while it cannot help with the expansion in
-$\mathbf{p}/\Lambda$, corresponding to genuine new dimension-eight
-operators not of the form in
+
+Let us illustrate this with the example of
+\autoref{sec:validity_matching_ambiguities}, where a heavy particle
+with mass scale $M$ in the unbroken phase has a coupling $g$ to Higgs
+doublets. Matching the theory in the unbroken electroweak phase we
+find dimension-six operators of the form
+% 
+\begin{equation}
+  \raisebox{-22pt}{
+    %\fbox{
+    \fmfframe(0,-35)(0,-35){ %(L,T) (R,B)
+      \begin{fmfgraph*}(80,120)
+        \feynmansetup
+        \fmfleft{i4,i3,i2,i1}
+        \fmfright{o4,o3,o2,o1}
+        \fmf{plain}{i2,v1,i3}
+        \fmf{plain}{o3,v3,o2}
+        \fmf{dbl_dashes}{v1,v2,v3}
+        \fmf{phantom,tension=0.2}{v4,v2}
+        \fmf{phantom,tension=0.2}{v5,v2}
+        \fmf{phantom,tension=2}{i1,v4,v5,o1}
+        \fmf{phantom,tension=0.2}{v6,v2}
+        \fmf{phantom,tension=0.2}{v7,v2}
+        \fmf{phantom,tension=2}{i4,v6,v7,o4}
+        \fmfv{label=\small $M$,label.dist=2.5,label.angle=-90}{v2}
+      \end{fmfgraph*}
+    }} %}
+  \to
+  \raisebox{-22pt}{
+    %\fbox{
+    \fmfframe(0,5)(0,5){ %(L,T) (R,B)
+      \begin{fmfgraph*}(50,40)
+        \feynmansetup
+        \fmfleft{i2,i1}
+        \fmfright{o2,o1}
+        \fmf{plain}{i2,v1,i1}
+        \fmf{plain}{o1,v1,o2}
+        \fmfv{decoration.shape=circle,decoration.size=5}{v1}
+      \end{fmfgraph*}
+    }} %}
+  = \frac {f_i^{(6)}} {M^2} \; \ope{i}^{(6)} \,.
+\end{equation}
+%
+The effect of the coupling $g$ to the Higgs doublet only appears at
+dimension eight and higher, for instance as
+%
+\begin{equation}
+  \raisebox{-22pt}{
+    %\fbox{
+    \fmfframe(0,-5)(0,-35){ %(L,T) (R,B)
+      \begin{fmfgraph*}(80,120)
+        \feynmansetup
+        \fmfleft{i4,i3,i2,i1}
+        \fmfright{o4,o3,o2,o1}
+        \fmf{plain}{i2,v1,i3}
+        \fmf{plain}{o3,v3,o2}
+        \fmf{dbl_dashes}{v1,v2,v3}
+        \fmf{dashes,tension=0.4,label=\small $\phi$,label.side=right,label.dist=1.5}{v4,v2}
+        \fmf{dashes,tension=0.4,label=\small $\phi$,label.side=left,label.dist=1.5}{v5,v2}
+        \fmf{phantom,tension=2}{i1,v4,v5,o1}
+        \fmf{phantom,tension=0.4}{v6,v2}
+        \fmf{phantom,tension=0.4}{v7,v2}
+        \fmf{phantom,tension=2}{i4,v6,v7,o4}
+        %\fmfv{label=\small $g$,label.dist=2.5,label.angle=-90}{v2}
+      \end{fmfgraph*}
+    }} %}
+  \to 
+  \raisebox{-22pt} {
+    %\fbox{
+    \fmfframe(0,-10)(0,-40){ %(L,T) (R,B)
+      \begin{fmfgraph*}(50,130)
+        \feynmansetup
+        \fmfleft{i4,i3,i2,i1}
+        \fmfright{o4,o3,o2,o1}
+        \fmf{plain}{i2,v2,i3}
+        \fmf{plain}{o3,v2,o2}
+        \fmf{dashes,tension=0.4}{v4,v2}
+        \fmf{dashes,tension=0.4}{v5,v2}
+        \fmf{phantom,tension=1.2}{i1,v4}
+        \fmf{phantom,tension=0.3}{v4,v5}
+        \fmf{phantom,tension=1.2}{v5,o1}
+        \fmf{phantom,tension=0.4}{v6,v2}
+        \fmf{phantom,tension=0.4}{v7,v2}
+        \fmf{phantom,tension=1.2}{i4,v6}
+        \fmf{phantom,tension=0.3}{v6,v7}
+        \fmf{phantom,tension=1.2}{v7,o4}
+        \fmfv{decoration.shape=circle,decoration.size=5}{v2}
+      \end{fmfgraph*}
+    }} %}
+  = \frac {g\, f_i^{(6)}} {M^4} \; {\phisq } \; \ope{i}^{(6)} \,.
+\end{equation}
+%
+The $v$-improved matching replaces $M \to m$ as the suppression scale
+of the dimension-six operator,
+%
+\begin{alignat}{3}
+  \raisebox{-22pt}{
+    % \fbox{
+    \fmfframe(0,5)(0,5){ %(L,T) (R,B)
+      \begin{fmfgraph*}(50,40)
+        \feynmansetup
+        \fmfleft{i2,i1}
+        \fmfright{o2,o1}
+        \fmf{plain}{i2,v1,i1}
+        \fmf{plain}{o1,v1,o2}
+        \fmfv{decoration.shape=circle,decoration.size=5,decoration.filled=shaded}{v1}
+      \end{fmfgraph*}
+    }} %}
+  \;
+  &=
+  &\;
+  \raisebox{-22pt}{
+    %\fbox{
+    \fmfframe(0,5)(0,5){ %(L,T) (R,B)
+      \begin{fmfgraph*}(50,40)
+        \feynmansetup
+        \fmfleft{i2,i1}
+        \fmfright{o2,o1}
+        \fmf{plain}{i2,v1,i1}
+        \fmf{plain}{o1,v1,o2}
+        \fmfv{decoration.shape=circle,decoration.size=5}{v1}
+      \end{fmfgraph*}
+    }} %}
+  \;
+  &+ 
+  &\;
+  \raisebox{-22pt} {
+    %\fbox{
+    \fmfframe(0,-10)(0,-40){ %(L,T) (R,B)
+      \begin{fmfgraph*}(50,130)
+        \feynmansetup
+        \fmfleft{i4,i3,i2,i1}
+        \fmfright{o4,o3,o2,o1}
+        \fmf{plain}{i2,v2,i3}
+        \fmf{plain}{o3,v2,o2}
+        \fmf{dashes,tension=0.4}{v4,v2}
+        \fmf{dashes,tension=0.4}{v5,v2}
+        \fmf{phantom,tension=1.2}{i1,v4}
+        \fmf{phantom,tension=0.3}{v4,v5}
+        \fmf{phantom,tension=1.2}{v5,o1}
+        \fmf{phantom,tension=0.4}{v6,v2}
+        \fmf{phantom,tension=0.4}{v7,v2}
+        \fmf{phantom,tension=1.2}{i4,v6}
+        \fmf{phantom,tension=0.3}{v6,v7}
+        \fmf{phantom,tension=1.2}{v7,o4}
+        \fmfv{decoration.shape=circle,decoration.size=5}{v2}
+        \fmfv{decoration.shape=cross,decoration.size=6,label=\small $v$,label.angle=180,label.dist=4}{v4}
+        \fmfv{decoration.shape=cross,decoration.size=6,label=\small $v$,label.angle=0,label.dist=4}{v5}
+      \end{fmfgraph*}
+    }} %}
+  \; \hspace{7pt}
+  &+ \; \dots \notag \\
+%
+  \frac {f_i^{(6)}} {m^2} \; \ope{i}^{(6)} \; \hspace{5pt}
+  &= 
+  &\; \frac {f_i^{(6)}} {M^2} \; \ope{i}^{(6)} \; \hspace{5pt}
+  &+ 
+  &\; \; \frac {g \, f_i^{(6)}} {M^2} \; \frac {v^2} 2 \; \ope{i}^{(6)} \;
+  &+ \; \dots \,,
+\end{alignat}
+%
+equivalent to a partial absorption of the dimension-eight and higher
+operators with the replacement $\phisq \to v^2/2$.
+
+\newparagraph
+%
+But such musings are not required to apply a $v$-improved matching in
+practice. In fact, from an experimental point of view (or in the
+broken electroweak phase), physical masses and mixing angles are
+simply the natural choices to describe a model. We then expect that
+the $v$-improved matching procedure can improve the validity of the
+dimension-six model. To be precise, we have to distinguish between an
+expansion in $v/\Lambda$ and $E/\Lambda$. We expect the $v$-improved
+matching prescription to lead to a better agreement with the full
+models in situations where the expansion in $v/\Lambda$ is relevant,
+while it cannot help with the expansion in $E/\Lambda$, corresponding
+to genuine new dimension-eight operators not of the form in
 \autoref{eq:validity_dim8_phisq_dim6}. We will come back to this
 difference later and demonstrate it in the vector triplet scenario.
 
@@ -516,7 +656,7 @@ In this limit the dimension-eight operators as well as the
 $\Lambda$-suppressed terms in the Wilson coefficients are negligible;
 our two matching procedures then give identical results. In the
 absence of a large enough scale separation, our bottom-up approach
-allows us to treat them independently. This way we can use the
+allows us to treat them independently. In this way we can use the
 $v$-improved matching to enhance the validity of the dimension-six
 Lagrangian.
 
@@ -694,24 +834,26 @@ We test all these channels for the singlet and doublet Higgs sector
 extensions. For the top partner and vector triplet models we focus on
 the WBF and Higgs-strahlung modes.
 
-In the dimension-six simulations we always include the square of the
-dimension-six operator contributions. While these terms are
-technically of the same mass dimension as dimension-eight operators,
-which we neglect, we keep them to avoid negative values of the squared
-matrix element in extreme phase-space regions. Notice that these
-situations do not necessarily imply a breakdown of the EFT
-expansion. On the contrary, they may appear in scenarios where new
-physics contributions dominate over the SM part, while the EFT
-expansion is fully valid (with $E/\Lambda \ll 1$). In such cases, the
-bulk effects stem from the squared dimension-six terms instead of the
-interference with the SM, while the effects from dimension-eight
-operators are smaller and can be safely neglected. We will discuss
-this aspect in more detail in the next section.
-
-Most amplitudes are calculated at leading order in $\alpha_s$
-and $\alpha_{ew}$, which is sufficient given the size of new physics
+In the EFT simulations we always include the square of the
+dimension-six operator contributions, even though. We discuss and
+justify this choice in \autoref{sec:validity_squares}.
+%
+% While these terms are technically of the same mass dimension as
+% dimension-eight operators, which we neglect, we keep them to avoid
+% negative values of the squared matrix element in extreme phase-space
+% regions. Notice that these situations do not necessarily imply a
+% breakdown of the EFT expansion. On the contrary, they may appear in
+% scenarios where new physics contributions dominate over the SM part,
+% while the EFT expansion is fully valid (with $E/\Lambda \ll 1$). In
+% such cases, the bulk effects stem from the squared dimension-six terms
+% instead of the interference with the SM, while the effects from
+% dimension-eight operators are smaller and can be safely neglected. We
+% will discuss this aspect in more detail in the next section.
+%
+We restrict our analysis to the leading order in $\alpha_s$ and
+$\alpha_{ew}$, which is sufficient given the size of new physics
 effects that the LHC is sensitive to. We always take into account
-interference terms between Higgs and gauge amplitudes. 
+interference terms between Higgs and gauge amplitudes.
 
 For tree-level processes we generate event samples with
 \toolfont{MadGraph~5}~\cite{Alwall:2014hca}, using publicly available
@@ -722,10 +864,11 @@ predictions we resort to a modified version of the \toolfont{HEL}
 model file~\cite{Alloul:2013naa}.
 
 The Higgs-gluon and Higgs-photon couplings are evaluated with the full
-one-loop form fac\-tors~\cite{Djouadi:2005gi}, including top, bottom and
-$W$ loops as well as new particles present in the respective
+one-loop form fac\-tors~\cite{Djouadi:2005gi}, including top, bottom,
+and $W$ loops, as well as new particles present in the respective
 models. For Higgs pair production, we use a modified version of
-Reference~\cite{higgspaircode}, see also Reference~\cite{Hespel:2014sla}.
+Reference~\cite{higgspaircode}, see also
+Reference~\cite{Hespel:2014sla}.
 
 Other loop effects are analysed using reweighting: we generate event
 samples using appropriate general couplings. Next, we compute the
@@ -740,16 +883,15 @@ integrals. These are further reduced via Passarino-Veltman
 decomposition and evaluated with the help of
 \toolfont{LoopTools}~\cite{Hahn:1998yk}.
 
-Generally we create event samples of at least 100\,000 events per
+Generally we create event samples of at least $10^5$ events per
 benchmark point and process for $pp$ collisions at
 $\sqrt{s} = 13$~\tev. We use the \toolfont{CTEQ6L}
 pdf~\cite{Pumplin:2002vw} and the default dynamical choices of the
 factorisation and renormalisation scale implemented in
 \toolfont{MadGraph}. For this broad survey of EFT validity we limit
-ourselves to parton level and do not apply a detector simulation, a
-more realistic simulation will be discussed in the next section. The
+ourselves to parton level and do not apply a detector simulation. The
 mass of the SM-like Higgs is fixed to
-$m_h = 125$~\gev~\cite{Aad:2015zhl}. For the top mass we take
+$m_h = 125$~\gev~\cite{Aad:2015zhl}, for the top mass we take
 $m_t = 173.2$~\gev~\cite{Tevatron:2014cka, ATLAS:2014wva}. The Higgs
 width in each model is based on calculations with
 \toolfont{Hdecay}~\cite{Djouadi:1997yw}, which we rescale with the
@@ -772,8 +914,8 @@ Model is by a real scalar singlet $S$~\cite{Silveira:1985rk,
   Schabinger:2005ei, Patt:2006fw, Pruna:2013bma, Lopez-Val:2014jva,
   Robens:2015gla, Robens:2016xkb}. For the sake of simplicity we
 consider a minimal version of the singlet model, in which a discrete
-$\mathbb{Z}_2$ parity forbids additional (\eg cubic) terms in the
-potential. The theory is then given by
+$\mathbb{Z}_2$ parity forbids additional terms in the potential. The
+theory is then given by
 %
 \begin{equation}
   \lgr{singlet}
@@ -798,10 +940,10 @@ The new scalar $S$ can mix with the SM doublet $\phi$ provided
 the singlet develops a VEV,
 %
 \begin{equation}
-  \langle S\rangle = \frac {v_s} {\sqrt{2}} \,.
+  \langle S\rangle = \frac {v_s} {\sqrt{2}} \,,
 \end{equation}
 %
-The mixing angle is given by
+leading to a mixing angle of
 %
 \begin{equation}
   \tan(2\alpha) = \frac{\lambda_3vv_s}{\lambda_2 v_s^2 - \lambda_1v^2}\,.
@@ -861,10 +1003,10 @@ The Higgs couplings to SM particles approach their SM values, but
 there is no large mass scale associated with this limit. In the
 extreme case of $\lambda_2,\lambda_3 \ll \lambda_1$ we find small
 $\alpha \approx - \lambda_3/\lambda_1 \times v_s/(2v)$ even for
-$v_s \lesssim v$.  This situation is to some extent the singlet model
-counterpart of the ``alignment without decoupling'' scenario in the
-Two-Higgs-doublet model (2HDM)~\cite{Gunion:2002zf, Craig:2013hca} or
-the MSSM~\cite{Carena:2013ooa, Delgado:2013zfa}. It relies on a weak
+$v_s \lesssim v$.  This situation mirrors the ``alignment without
+decoupling'' scenario in the Two-Higgs-doublet model
+(2HDM)~\cite{Gunion:2002zf, Craig:2013hca} or the
+MSSM~\cite{Carena:2013ooa, Delgado:2013zfa}. It relies on a weak
 portal coupling and a small scale separation, which cannot be properly
 described by an effective field theory.
 
@@ -878,13 +1020,12 @@ mass scale $v_s \gg v$, giving us
 \end{equation}
 % 
 where $\lambda_3/(2\lambda_2)$ is an effective coupling of up to order
-one. In this limit the heavy Higgs mass, which we identify as the
-heavy mass scale, is given by
+one. In this limit the heavy Higgs mass is given by
 %
 \begin{equation}
   m_H \approx \sqrt{2\lambda_2} \, v_s \,.
 \end{equation}
-
+%
 In terms of $m_H$, the Higgs couplings scale like
 %
 \begin{equation}
@@ -893,13 +1034,15 @@ In terms of $m_H$, the Higgs couplings scale like
   \label{eq:validity_singlet_decoup}
 \end{equation}
 %
-This is a dimension-six effect. If we require $|\Delta_x| \gtrsim 10\%$
-to keep our discussion relevant for the LHC, this implies
+This shift is suppressed by two powers of a heavy mass scale,
+corresponding to the effect of a dimension-six operator. If we require
+$|\Delta_x| \gtrsim 10\%$ to keep our discussion relevant for the LHC,
+this implies
 %
 \begin{equation}
   m_H \approx \sqrt{2\lambda_2} \, v_s
   < \frac{\sqrt{5} \lambda_3}{\sqrt{2 \lambda_2}} \, v
-  = 390~\text{GeV} \times \frac{\lambda_3}{\sqrt{\lambda_2}} \,.
+  = \frac{\lambda_3}{\sqrt{\lambda_2}}  \cdot 390~\gev \,.
  \label{eq:validity_singlet_delta3}
 \end{equation}
 %
@@ -910,9 +1053,7 @@ Higgs masses below 200~GeV. For strongly coupled scenarios,
 $\lambda_3/\sqrt{\lambda_2} \lesssim 1 \dots \sqrt{4\pi}$, the heavy
 mass reach increases to $m_H \lesssim 0.4 \dots 1.5$ TeV.  This
 suggests that a weakly coupled Higgs portal will fail to produce a
-sizeable separation of scales when looking at realistic Higgs coupling
-analyses. The question becomes if and where this lack of scale
-separation hampers our LHC analyses.
+sizeable separation of scales.
 
 
 
@@ -940,7 +1081,7 @@ The corresponding Wilson coefficient, expressed in terms of Lagrangian
 parameters, is
 %
 \begin{equation}
-  \bar{f}_{\phi,2}^{\text{default}} = \frac{\lambda_3^2}{2\lambda_2} \,.
+  f_{\phi,2}^{\text{default}} = \frac{\lambda_3^2}{2\lambda_2} \,.
 \end{equation}
 
 For the $v$-improved matching, we instead use the actual physical mass
@@ -1007,7 +1148,7 @@ perturbative unitarity and vacuum stability~\cite{Pruna:2013bma,
   Lopez-Val:2014jva, Robens:2015gla}. Note that for S4 and S5 the
 combination of large heavy Higgs masses together with large mixing
 angles is incompatible with perturbative unitarity and electroweak
-precision constraints.  We nevertheless keep such benchmarks for
+precision constraints.  We nevertheless keep these benchmarks for
 illustration purposes.
 
 
@@ -1018,16 +1159,16 @@ illustration purposes.
 
 \autoref{tbl:validity_singlet_benchmarks} also shows the universal
 shift $\Delta_x$ of the light Higgs couplings, both for the full
-singlet model and its dimension-six EFT descriptions. For the default
+singlet model and its dimension-six approximations. For the default
 matching, we find reasonable agreement with the full model for the
 scenarios with a heavy additional Higgs, while large discrepancies
 appear when the new physics is lighter. In particular, note the
 difference between S3 and S4. Both describe the same coupling shift
 $\Delta_x = - 0.08$. But while S3 realises this with a weakly coupled
-light Higgs, which the default EFT cannot describe, S4 has a heavier,
-more strongly coupled Higgs, and the EFT description works.  In all
-cases, the $v$-improved EFT by construction predicts the Higgs
-couplings correctly.
+light scalar, which the default EFT cannot describe, S4 features a
+heavier and more strongly coupled new particle, and the EFT
+description works better.  In all cases, the $v$-improved EFT by
+construction predicts the Higgs couplings correctly.
 
 \begin{table}
   \begin{tabular}{c c rrr c rrr}
@@ -1141,25 +1282,25 @@ likely of no relevance for LHC physics.
 
 A more interesting channel to study in the singlet model is Higgs pair
 production. The Higgs self-coupling is the only Higgs coupling which
-gains a momentum dependence in the matched EFT. In addition, there
-exists an approximate cancellation between the two leading amplitudes
-in the SM at threshold~\cite{Plehn:1996wb, Li:2013rra}. This induces a
-second relevant scale and with it a sensitivity to small deviations in
-the Higgs couplings.
+gains a momentum dependence at tree level in the EFT. The approximate
+cancellation between the two leading SM amplitudes at
+threshold~\cite{Plehn:1996wb, Li:2013rra} induces a second relevant
+scale and with it a sensitivity to small deviations in the Higgs
+couplings.
 
 In the bottom right panel of
 \autoref{fig:validity_singlet_distributions} we give the $m_{hh}$
 distribution in the full and dimension-six models.  In addition, we
 show how the distributions would look in the full model without a $H$
 state, and in the EFT without the momentum-dependent (derivative)
-terms from $\ope{\phi,2}$.  Already at
-threshold and far away from the $H$ resonance, the interference of the
-SM-like terms with the $H$ diagrams makes up a significant part of the
-amplitude.  In the EFT, the derivative terms are similarly relevant
-already at low energies. Close to threshold, the ($v$-improved)
-dimension-six model approximates the full theory well. But this
-agreement becomes worse already at moderately larger energies, and
-clearly breaks down towards the $H$ pole.
+terms from $\ope{\phi,2}$.  Already at threshold and far away from the
+$H$ resonance, the interference of the SM-like terms with the $H$
+diagrams makes up a significant part of the amplitude.  In the EFT the
+derivative terms are similarly relevant already at low energies. Close
+to threshold, the ($v$-improved) dimension-six model approximates the
+full theory well. But this agreement becomes worse already at
+moderately larger energies, and clearly breaks down towards the $H$
+pole.
 
 
 
@@ -1203,9 +1344,8 @@ appears on-shell in the full theory.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The two-Higgs-doublet model (2HDM)~\cite{Gunion:1989we, Branco:2011iw}
-adds a second scalar $SU(2)_L$ doublet $\phi_2$ with hypercharge
-$\smash{Y_{\phi_2} = 1/2}$ to the SM Higgs sector. The combined
-potential reads
+adds a second scalar $SU(2)_L$ doublet $\phi_2$ to the SM Higgs
+sector. The combined potential reads
 %
 \begin{multline}
   V(\phi_1,\phi_2) =
@@ -1224,8 +1364,7 @@ The mass terms $m^2_{ij}$ and the dimensionless self-couplings
 $\lambda_i$ are real parameters. The doublet VEVs
 $\langle \phi_j^0 \rangle = v_j / \sqrt{2} $ are parametrised by their
 ratio $\tan \beta = v_2/v_1$.  For the Yukawa couplings, there are
-four possible scenarios that satisfy the SM flavour symmetry and
-preclude tree-level flavour-changing neutral
+four possible scenarios that avoid tree-level flavour-changing neutral
 currents (FCNCs)~\cite{Glashow:1976nt}:
 %
 \begin{itemize}
@@ -1238,11 +1377,11 @@ currents (FCNCs)~\cite{Glashow:1976nt}:
 \item flipped, with a type-II quark sector and a type-I lepton sector.
 \end{itemize}
 %
-For simplicity, we restrict our discussion to type I and type II. In
-all four cases, the absence of tree-level FCNCs is protected by a
+In all four cases, the absence of tree-level FCNCs is protected by a
 global $\mathbb{Z}_2$ discrete symmetry $\phi_i \to (-1)^{i}\,\phi_i$
 (for $i=1,2$). This symmetry is softly broken by the mixed mass term
-$m_{12}$.
+$m_{12}$. For simplicity, we restrict our discussion to type I and
+type II.
 
 The physical degrees of freedoms are two neutral $CP$-even scalars
 $h^0$, $H^0$, one neutral $CP$-odd scalar $A^0$, and a set of charged
@@ -1256,13 +1395,13 @@ see Appendix~\ref{sec:appendix_models_2hdm}.
 \subsubsection{Signatures and decoupling patterns}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Just as the singlet extension, the 2HDM predicts two types of LHC
-signatures: first, scalar and VEV mixing lead to modified light Higgs
-couplings. Unlike for the singlet extension, these coupling
-modifications are not universal and reflect the more flexible flavour
-structure as well as the multiple scales of the model. Second, there
-are three new heavy resonances $H^0$, $A^0$, and $H^\pm$, which should
-have near-degenerate masses to avoid custodial symmetry breaking.
+The 2HDM predicts two types of LHC signatures: first, scalar and VEV
+mixing lead to modified light Higgs couplings. Unlike for the singlet
+extension, these coupling modifications are not universal and reflect
+the more flexible flavour structure as well as the multiple scales of
+the model. Second, there are three new heavy resonances $H^0$, $A^0$,
+and $H^\pm$, which should have near-degenerate masses to avoid
+custodial symmetry breaking.
 
 The light Higgs coupling to weak bosons $V=W,Z$ always scales like
 %
@@ -1506,7 +1645,7 @@ between $1\,\sigma$ and $2\,\sigma$ in the Higgs couplings
 measurements.
 
 The key physics properties of the different 2HDM scenarios can be
-summarised as:
+summarised as follows:
 %
 \begin{enumerate}
 \item[D1] \emph{Moderate decoupling}: with Higgs couplings shifts of
@@ -1733,9 +1872,9 @@ deviations.
 \subsubsection{Distributions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-As for the singlet model, the phenomenology of the 2HDM is mostly
-reflected in the coupling patterns discussed above, with little new
-kinematic effects.  In the left panel of
+As for the singlet model, the indirect signatures from the 2HDM are mostly
+reflected in the coupling patterns discussed above, and new
+kinematic effects do not play a significant role.  In the left panel of
 \autoref{fig:validity_2hdm_distributions} we illustrate the coupling
 deviations in gluon-fusion Higgs production with a decay
 $h\to \tau^+ \tau^-$, showing how the full 2HDM and the ($v$-improved)
@@ -1794,10 +1933,8 @@ production.
 
 A naive construction of the EFT by matching the effective
 dimension-six Lagrangian to the 2HDM in the gauge symmetric phase
-fails to correctly describe the modified Higgs boson dynamics in
-typical 2HDM scenarios, since terms formally suppressed by powers of
-$v^2/\Lambda^2$ can be crucial for phenomenologically relevant
-scenarios.
+clearly fails to describe the modified Higgs boson dynamics in typical
+2HDM scenarios; a $v$-improved matching procedure is more suitable.
 
 
 
@@ -2929,17 +3066,17 @@ element. In our EFT approach, we have
 \begin{equation}
   |\mat{EFT}|^2
   =
-  \underbrace{ |\mat{$4$}|^2 }_{\ord{1}}
+  \underbrace{ |\mat{$4$}^{\vphantom{*}} |^2 }_{\ord{1}}
   + \underbrace{
-    2 \, \text{Re} \mat{$4$}^* \mat{$6$}
+    2 \, \text{Re} \mat{$4$}^* \mat{$6$}^{\vphantom{*}}
   }_{\ord{1/\Lambda^2}}
   + \underbrace{
-    |\mat{$6$}|^2 + 2 \, \text{Re} \mat{$4$}^* \mat{$8$}
+    |\mat{$6$}^{\vphantom{*}}|^2 + 2 \, \text{Re} \mat{$4$}^* \mat{$8$}^{\vphantom{*}}
 }_{\ord{1/\Lambda^4}}
 + \ord{1/\Lambda^6} \,,
 \end{equation}
 %
-where the subscripts in $\mat{$i$}$ denote the dimension of the
+where the subscripts in $\mat{$d$}$ denote the dimension of the
 operators in the amplitude, \ie $\mat{$4$}$ is the SM amplitude and
 $\mat{$6$}$ contains one dimension-six interaction.  The squared
 amplitudes from dimension-six operators contribute at the same order
@@ -2958,11 +3095,11 @@ contain two couplings $g$ of the heavy field, $f_i \sim g_{UV}^2$, and we
 have to compare the terms
 %
 \begin{equation}
-  |\mat{$d=6$}|^2 \sim \frac {g_{UV}^4} {\Lambda^4}
+  |\mat{$6$}|^2 \sim \frac {g_{UV}^4} {\Lambda^4}
   %
   \quad \text{vs.} \quad
   %
-  2 \, \text{Re} \mat{$d=4$}^* \mat{$d=8$} \sim \frac {g_{SM}^2 g_{UV}^2} {\Lambda^4} \,,
+  2 \, \text{Re} \mat{$4$}^* \mat{$8$}^{\vphantom{*}} \sim \frac {g_{SM}^2 g_{UV}^2} {\Lambda^4} \,,
   \label{eq:validity_square_uv}
 \end{equation}
 %
@@ -3268,3 +3405,5 @@ procedure, which takes into account subleading contributions from the
 Higgs VEV. This does not present a complication for an experimental
 fit of dimension-six operators to LHC Higgs data, it is a purely
 theoretical issue for the interpretation of the results.
+%
+\comment{To here}
