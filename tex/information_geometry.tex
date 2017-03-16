@@ -17,15 +17,37 @@ Anything invented after you're thirty-five is against the natural order of thing
 \label{chapter:information}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\firstword{Q}{ is a particular nice letter} to start a chapter
-with. Unfortunately, there is a distinct lack of suitable worts
-beginning with a Q. Also, for a pretty initial to impress, the opening
-paragraph needs to have a certain minimum length, otherwise it just
-looks sad. And now I am unfortunately already running out of things to
-write. So here is something stolen: ``You don't know about me without you
-have read a book by the name of `The Adventures of Tom Sawyer' but
-that ain't no matter. That book was made by a Mr Mark Twain, and he
-told the truth, mainly.''
+\firstword{W}{ith the results of the last chapter,} we rest assured
+that many potential signatures of new physics in Higgs observables can
+be parametrised by dimension-six operators. The next question is how
+the corresponding Wilson coefficients can be measured as precisely as
+possible. In this chapter we develop statistical tools based on
+information geometry that can help to optimise such measurements.
+
+After an introduction in \autoref{sec:information_intro}, in
+\autoref{sec:information_formalism} we summarize the statistics of the
+measurement process, define the Fisher information, and discuss what
+constitutes an optimal measurement. In
+\autoref{sec:information_madfisher} we apply these general ideas to
+LHC physics and develop an algorithm to calculate the Fisher
+information in particle physics processes. We also discuss some
+aspects of information geometry particular to effective field
+theories. In \autoref{sec:information_application_even} we use our
+formalism to understand how $CP$-even dimension-six operators can be
+measured in a range of Higgs channels.
+Section~\autoref{sec:information_application_odd} focusses on the
+measurement of $CP$ violation. We demonstrate how our approach can be
+extended to describe systematic uncertainties, and link it to other
+statistical tools, in \autoref{sec:information_extensions}, and
+finally give our conclusions in \autoref{sec:information_conclusions}.
+
+Most of the research presented in this chapter was previously
+published in Reference~\cite{Brehmer:2016nyr}. The results and their
+presentation, including nearly all plots and tables as well as part of
+the text, are identical to that in this article. The exception is
+\autoref{sec:information_application_odd}, which is based on ongoing
+and yet unpublished work~\cite{Brehmer:CPV_information}.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -33,6 +55,82 @@ told the truth, mainly.''
 \label{sec:information_intro}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Having established that the dimension-six operators of the linear
+Higgs effective theory capture the indirect signatures of many
+scenarios of new physics, we now analyse how its parameters, the
+Wilson coefficients $f_i/\Lambda^2$, can be measured most efficiently
+at the LHC. This is a highly non-trivial problem for two reasons:
+first, the Higgs properties form a high-dimensional parameter
+space. In \autoref{sec:foundations_heft_operators} we showed that even
+after removing redundant operators and generously neglecting those
+with tight limits from electroweak precision measurements or flavour
+constraints, we are left with thirteen dimension-six operators
+relevant for Higgs physics. The Higgs-gauge interactions, for
+instance, are affected by seven of these operators, equivalent to a
+range of different kinematic structures or forms of momentum
+dependence. The second complication comes from the Higgs production
+channels and decay modes, some of which have a high-dimensional phase
+space. For example, Higgs production in weak boson fusion with a decay
+$h \to W^+W^- \to (\ell^+ \nu) (\ell^- \overbar{\nu})$ is a $2 \to 6$
+process even at parton level, and only made more complicated by
+additional QCD radiation. This defines a large number of kinematic
+observables, and it is often not obvious which of them carry
+information on the theory parameters of interest. The relation between
+the high-dimensional parameter space and the potentially
+high-dimensional phase space is at parton level encoded in the
+amplitudes or Feynman diagrams, of which there can easily be hundreds
+for a given process.
+
+Traditional analysis methods typically begin with simple selection
+cuts on standard kinematic observables such as energies, momenta,
+angles, or invariant masses. This is often followed by the estimation
+of background contributions with a mixture of simulational and
+data-driven methods. The final statistical analysis typically relies
+on total event counts or on histograms of kinematic observables.
+These techniques are very intuitive and all steps are
+transparent. They they work well for simple signatures, such as a
+resonance peak on top of a smooth background, as in the discovery of
+the $gg \to h \to \gamma \gamma$
+signal~\cite{Aad:2012tfa,Chatrchyan:2012xdj}. But this approach faces
+challenges when the theory questions or the processes are more
+complicated.
+
+At the other end of the spectrum, measurement strategies based on
+high-level statistical tools are gaining gaining popularity among the
+LHC collaborations~\cite{cranmer:nips2016}.
+%
+\comment{To here}
+
+
+
+% Traditional analysis methods: require certain objects, cutting on kinematic observables, counting events or fitting histograms of standard observables. Work well to discover signal peak in clean channel, but not necessarily for Higgs property measurements.
+
+% Modern abnalysis methods, multivariate stuff, matrix element methods, optimal observables. Potentially better, but often opaque. Many tools designed for the comparison of two discrete hypotheses.
+
+% With these capabilities it is increasingly important to be able to characterise the information in observables, and to be have guidelines for the design of event selections and analysis strategies
+
+% We develop an approach based on information geometry. Intrinsically designed for continous parameter spaces of arbitrary dimensionality. Unlike many other statistical techniques, no need for discretization of hypothesis.
+
+% Fisher information and Cramer-Rao bound
+
+% Our algorithm
+
+% Questions we can answer for LHC processes
+
+% First application: CP-even operators in Higgs signatures for WBF Higgs production (4l, tau tau) and t + H
+
+% Second application: CP violation; disentangling genuine signatures from CP violation from signatures of CPV dim-six operators that can also be caused by CP-even new physics
+
+% Demonstrate how our approach allows us to treat systematic uncertainties; provide context by comparing it to log likelihood ratio and Hellinger distance (?)
+
+% commonly used in gravitational wave physics. but not in hep (exception: CMS study). Also mention 
+
+% While we demonstrate our approach for Higgs observables and dim-6 operators, our algorithm works fine for any process described by matrix elements and theories with continous parameters
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\newparagraph
+%
 After its experimental discovery~\cite{higgs,discovery} the Higgs
 boson and its properties have immediately become one of the most
 important and active fields of searches for physics beyond the
@@ -93,7 +191,6 @@ tackle questions of the kind:
   expansion play?
 \end{itemize}
 %
-
 
 We demonstrate our approach using three examples: Higgs production in
 weak boson fusion (WBF)~\cite{dave_thesis} with its tagging-jet
@@ -815,7 +912,7 @@ translated into a maximal new physics reach
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Higgs signatures from $CP$-even operators}
-\label{sec:information_application}
+\label{sec:information_application_even}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1572,7 +1669,7 @@ times more data under our simplifying assumptions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{$CP$ violation in the Higgs sector}
-\label{sec:information_CPV}
+\label{sec:information_application_odd}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 

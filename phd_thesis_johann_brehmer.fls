@@ -364,6 +364,10 @@ OUTPUT phd_thesis_johann_brehmer.toc
 INPUT tex/preface.tex
 INPUT tex/preface.tex
 INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Bold-osf-ot1.tfm
+INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MyriadPro/MyriadPro-Regular-osf-ot1.tfm
+INPUT /usr/local/texlive/texmf-local/fonts/vf/adobe/MyriadPro/MyriadPro-Regular-osf-ot1.vf
+INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MyriadPro/MyriadPro-Regular-osf-ot1--base.tfm
+INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MyriadPro/MyriadPro-Regular-osf-ot1--lcdfj.tfm
 INPUT tex/introduction.tex
 INPUT tex/introduction.tex
 INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MyriadPro/MyriadPro-Semibold-lf-ot1.tfm
@@ -540,10 +544,6 @@ INPUT /usr/local/texlive/texmf-local/fonts/vf/adobe/MinionPro/MinionPro-Regular-
 INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Regular-tlf-t1--base.tfm
 INPUT /usr/local/texlive/texmf-local/fonts/vf/adobe/MinionPro/MinionPro-Regular-tlf-l1-t1.vf
 INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Regular-tlf-l1-t1--base.tfm
-INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MyriadPro/MyriadPro-Regular-osf-ot1.tfm
-INPUT /usr/local/texlive/texmf-local/fonts/vf/adobe/MyriadPro/MyriadPro-Regular-osf-ot1.vf
-INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MyriadPro/MyriadPro-Regular-osf-ot1--base.tfm
-INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MyriadPro/MyriadPro-Regular-osf-ot1--lcdfj.tfm
 INPUT diagrams.8
 INPUT diagrams.8
 INPUT ./diagrams.8
@@ -997,9 +997,9 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc
 INPUT /usr/local/texlive/texmf-local/fonts/enc/dvips/MinionPro/a_uk4t3c.enc
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc
 INPUT /usr/local/texlive/texmf-local/fonts/enc/dvips/MinionPro/a_qnnq45.enc
-INPUT /usr/local/texlive/texmf-local/fonts/enc/dvips/MyriadPro/a_jv37ya.enc
 INPUT /usr/local/texlive/texmf-local/fonts/enc/dvips/MinionPro/a_5bv6gs.enc
 INPUT /usr/local/texlive/texmf-local/fonts/enc/dvips/MyriadPro/a_5lfcxp.enc
+INPUT /usr/local/texlive/texmf-local/fonts/enc/dvips/MyriadPro/a_jv37ya.enc
 INPUT /usr/local/texlive/texmf-local/fonts/enc/dvips/MinionPro/a_y7lfxm.enc
 INPUT /usr/local/texlive/texmf-local/fonts/enc/dvips/MinionPro/a_7yp7kt.enc
 INPUT /usr/local/texlive/texmf-local/fonts/enc/dvips/MyriadPro/a_3qxkao.enc
