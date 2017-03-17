@@ -36,7 +36,7 @@ Reference~\cite{Brehmer:2016nyr}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Standard Model setup}
+\subsection{The Standard Model}
 \label{sec:appendix_bases_sm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -63,41 +63,53 @@ Reference~\cite{Brehmer:2016nyr}.
 \end{table}
 
 We begin with our conventions for the Standard Model, which also apply
-to all models of new physics. The SM Lagrangian, invariant under a
-$SU(3)_C \times SU(2)_L \times U(1)_Y$ gauge group, is given by
+to all models of new physics. The Standard Model is a renormalisable
+and local quantum field theory. It is invariant under global proper
+orthochronous Poincar\'e transformations (which include translations,
+rotations, and boosts), and a local
+$SU(3)_C \times SU(2)_L \times U(1)_Y$ gauge group. Its Lagrangian is
+given by
 %
-\begin{multline}
+\begin{align}
   \lgr{SM}
-  =
-    - \frac 1 4 G^a_{\mu\nu} G^{a\,\mu\nu} - \frac 1 4 W^a_{\mu\nu} W^{a\,\mu \nu} - \frac 1 4 B_{\mu\nu} B^{\mu \nu}
-    + \sum_f \overbar f \im \slashed D f
-    + (D^\mu \phi)^\dagger (D_\mu \phi) \\
+  &= - \frac 1 4 G^a_{\mu\nu} G^{a\,\mu\nu} - \frac 1 4 W^a_{\mu\nu} W^{a\,\mu \nu} - \frac 1 4 B_{\mu\nu} B^{\mu \nu}
+    + \frac {\theta_{QCD}} {32 \pi^2} G^a_{\mu\nu} \widetilde{G}^{a\,\mu\nu}
+    + \sum_f \overbar f \im \slashed D f \notag \\
   %
-    - \mu^2 \phisq - \lambda (\phisq)^2
-            - \sum_{\text{generations}} \left(    y_u {\twovec {\overbar u} {\overbar d}}_L \tilde \phi \, u_{R} 
+  &\phantom{=} + (D^\mu \phi)^\dagger (D_\mu \phi) - \mu^2 \phisq - \lambda (\phisq)^2 \notag \\
+  %
+  &\phantom{=} - \sum_{\text{generations}} \left(    y_u {\twovec {\overbar u} {\overbar d}}_L \tilde \phi \, u_{R} 
                                                            + y_d {\twovec {\overbar u} {\overbar d}}_L \phi \, d_{R}
                                                            + y_\ell {\twovec {\overbar \nu} {\overbar \ell^-}}_L \phi \, \ell_{R}  + \hc  \right ) \,.
   \label{eq:appendix_bases_sm_lagrangian}
-\end{multline}
-%
+\end{align}
+
 The fields in this Lagrangian are a scalar $\phi$ transforming as the
 $(\mathbf{1}, \mathbf{2}, 1/2)$ representation of the SM gauge group;
 the gauge bosons $G_\mu^a$, $W_\mu^a$, and $B_\mu$; and the fermions
 given in \autoref{tbl:appendix_bases_fermions}.  We usually leave out
 generation (flavour) indices and simply denote up-type quarks,
 down-type quarks, charged leptons, and neutrinos with $u$, $d$,
-$\ell$, $\nu$; and the left-handed doublets with $Q$ and $L$. The
-field strength tensors are defined as
+$\ell$, $\nu$; and the left-handed doublets with $Q$ and $L$.
+\autoref{eq:appendix_bases_sm_lagrangian} includes the field strength
+tensors
 %
 \begin{align}
   G_{\mu\nu}^a &= \partial_\mu G^a_\nu - \partial_\nu G^a_\mu + g_s f^{abc} G^b_\mu G^c_\nu \, , \\
   W_{\mu\nu}^a &= \partial_\mu W^a_\nu - \partial_\nu W^a_\mu + g \varepsilon^{abc} W^b_\mu W^c_\nu \, , \\
-  B_{\mu\nu} &= \partial_\mu B_\nu - \partial_\nu B_\mu \,.
+  B_{\mu\nu} &= \partial_\mu B_\nu - \partial_\nu B_\mu
 \end{align}
 %
-The covariant derivatives are defined according to the gauge charges
-and with a conventional minus sign in front of the gauge term, for
-instance
+and the dual field strength tensor
+%
+\begin{equation}
+  \widetilde{G}^a_{\mu \nu} = \frac 1 2 \varepsilon_{\mu \nu \rho \sigma} G^{a\,\mu\nu}
+\end{equation}
+%
+with the totally antisymmetric tensor
+$\varepsilon_{\mu \nu \rho \sigma}$.  The covariant derivatives are
+defined according to the gauge charges and with a conventional minus
+sign in front of the gauge term, for instance
 %
 \begin{align}
   D_\mu \phi &= \left( \partial_\mu - \im g \frac {\sigma^a} 2 \, W^a_\mu - \im g' \frac {1} 2 \, B_\mu \right) \phi \,, \notag \\
@@ -105,13 +117,23 @@ instance
   D_\mu {\twovec u d}_L &= \left( \partial_\mu  - \im g_s \frac {\lambda^{a}} 2 G^a_\mu - \im g \frac {\sigma^a} 2 \, W^a_\mu - \im g' \frac {1} 6 \, B_\mu  \right) {\twovec u d}_L\,.
 \end{align}
 %
-These expressions include the coupling constants corresponding to the
-SM gauge group, $g_s$, $g$, and $g'$; the structure constants
-$f^{abc}$ and $\varepsilon^{abc}$ of $SU(3)$ and $SU(2)$, as well as
-the Pauli matrices $\sigma^a$ and the Gell-Mann matrices
-$\lambda^a$. Finally, the scalar Higgs potential contains two real
-parameters $\mu^2$ and $\lambda$, and the Yukawa couplings $y_f$ are
-complex-valued matrices in flavour space.
+These expressions contain the structure constants $f^{abc}$ and
+$\varepsilon^{abc}$ of $SU(3)$ and $SU(2)$, as well as the Pauli
+matrices $\sigma^a$ and the Gell-Mann matrices $\lambda^a$.
+
+The Standard Model has 19 free parameters. In the form of
+\autoref{eq:appendix_bases_sm_lagrangian}, they are:
+%
+\begin{itemize}
+\item the coupling constants corresponding to the three components of
+  its gauge group, $g_s$, $g$, and $g'$;
+\item the real parameter $\theta_{QCD}$;
+\item the two real parameters $\mu^2$ and $\lambda$ of the Higgs
+  potential; and
+\item the Yukawa couplings $y_f$. These are unitary, complex-valued
+  matrices in flavour space, and their components correspond to 13
+  physical parameters.
+\end{itemize}
 
 For $\mu^2 < 0$, the potential for $\phi$ has a minimum at the
 non-zero vacuum expectation value (VEV)

@@ -980,6 +980,8 @@ INPUT phd_thesis_johann_brehmer.bbl
 INPUT phd_thesis_johann_brehmer.bbl
 INPUT babelbst.tex
 INPUT babelbst.tex
+INPUT /usr/local/texlive/texmf-local/fonts/vf/adobe/MinionPro/MinionPro-Regular-osf-ts1.vf
+INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Regular-osf-ts1--base.tfm
 INPUT diagrams.mp
 INPUT ./diagrams.mp
 INPUT phd_thesis_johann_brehmer.aux
