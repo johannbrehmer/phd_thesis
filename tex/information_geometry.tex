@@ -60,16 +60,16 @@ Higgs effective theory capture the indirect signatures of many
 scenarios of new physics, we now analyse how its parameters, the
 Wilson coefficients $f_i/\Lambda^2$, can be measured most efficiently
 at the LHC. This is a highly non-trivial problem for two reasons:
-first, the Higgs properties form a \emph{high-dimensional parameter
-  space}. In \autoref{sec:foundations_heft_operators} we showed that
+first, the Higgs properties form a high-dimensional parameter
+  space. In \autoref{sec:foundations_heft_operators} we showed that
 even after removing redundant operators and generously neglecting
 those with tight limits from electroweak precision measurements or
 flavour constraints, we are left with thirteen dimension-six operators
 relevant for Higgs physics. The Higgs-gauge interactions, for
 instance, are affected by seven of these operators, equivalent to a
 range of different kinematic structures or forms of momentum
-dependence. The second challenge comes from the \emph{complicated
-  kinematics} of some of the Higgs production channels and decay
+dependence. The second challenge comes from the complicated
+  kinematics of some of the Higgs production channels and decay
 modes. For example, Higgs production in weak boson fusion with a decay
 $h \to W^+W^- \to (\ell^+ \nu) (\ell^- \overbar{\nu})$ is a $2 \to 6$
 process even at parton level, and only made more complicated by
@@ -159,14 +159,15 @@ With these wide range capabilities, it is increasingly important that
 we can understand and characterise the information contained in
 particle physics processes. The design of event selections and
 analysis strategies requires clearly defined guidelines. We present an
-approach based on information geometry~\cite{efron1975, amari1982}. It
-offers tools that are intrinsically designed for continous parameter
-spaces of arbitrary dimensionality, independent of basis choices and
-without the need for any discretization of the model hypothesis.
+approach to these problems based on information
+geometry~\cite{efron1975, amari1982}. It offers tools that are
+intrinsically designed for continous parameter spaces of arbitrary
+dimensionality, independent of basis choices and without the need for
+any discretization of the model hypothesis.
 
 The central object in our approach is the \emph{Fisher information}
 matrix. According to the Cram\'er-Rao bound~\cite{Rao:1945,
-  Cramer:1946, Rao:1994}, it quantifies the maximum knowledge on
+  Cramer:1946}, it quantifies the maximum knowledge on
 theory parameters that we can derive in a measurement, independent of
 the analysis strategy. This allows us to calculate the best possible
 precision with which theory parameters can be measured with any
@@ -234,9 +235,7 @@ gravitational wave detection~\cite{Jaranowski:1994xd}, but has
 received much less attention in particle physics~\cite{CMS:2016kgk,
   Ferreira:2017ymn}. To the best of our knowledge, most of the tools
 presented in Reference~\cite{Brehmer:2016nyr} and in this chapter are
-innovations at least in this field.
-%
-\comment{To here}
+innovative at least for this field.
 
 
 % After its experimental discovery~\cite{higgs,discovery} the Higgs
@@ -334,55 +333,57 @@ innovations at least in this field.
 \label{sec:information_formalism_information}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Before jumping into Higgs physics, we have to recapitulate how a
-measurement is described statistically, and what makes it
-``optimal''. The basic principle of a measurement is to use some
-observed data $\boldx$ to provide an estimate $\hat{\boldtheta}$ of
-the unknown true value of some parameters $\boldtheta$,
-% The simplest
-% example at the LHC is the measurement of a coupling $\theta = g$ by
-% counting events $x = n$ in some phase-space region. We assume that the
-% expected number of events is of the form
-% $n_{\text{exp}} (g) = g^2 n_0$, where the constant $n_0$ replaces a
-% tedious combination of integrated luminosity, cross section, branching
-% ratios, as well as acceptance and efficiency factors. Turning this
-% around, the simplest estimator given the number of observed events $n$
-% would be $\hat{g} = \sqrt{ n / n_0 }$.
-the outcome of which is described by a probability
-distribution $f( \hat{\boldtheta} | \boldtheta_0)$. The most
-important properties of this distribution are its expectation value
-and its variance. The former measures the bias of the measurement: the
-expectation value of an unbiased estimator is always equal to the true
-value,
+Any measurement uses experimental data $\boldx$ to calculate an
+estimator $\hat{\boldtheta}(\boldx)$ of the unknown true value of some
+parameters $\boldtheta$. The outcome of the experiment is described by
+the probability distribution $f(\boldx | \boldtheta_0)$ that depends
+on the true value $\boldtheta_0$, and thus the outcome of the
+estimator also follows a probability distribution
 %
 \begin{equation}
-  \bar{\boldtheta} \equiv E \left[ \hat{\boldtheta} \middle | \boldtheta_0 \right] = \boldtheta_0 \,.
+  f( \hat{\boldtheta} | \boldtheta_0) = \intfatx f( \boldx | \boldtheta_0)  \; \delta \left(\hat{\boldtheta} - \hat{\boldtheta}(\boldx) \right)\,.
 \end{equation}
 %
-On the other hand, the variance of the estimator, or for more than one
-parameter its covariance matrix
+Two key properties of this distribution characterize the
+measurement. First, the expectation value
+%
+\begin{equation}
+  \overbar{\boldtheta} \equiv E \left[ \hat{\boldtheta} \middle | \boldtheta_0 \right]
+  \equiv \intfatthetahat \hat{\boldtheta} \, f( \hat{\boldtheta} | \boldtheta_0)  
+\end{equation}
+%
+measures the bias. An estimator is unbiased if the expectation value
+is always equal to the true value,
+%
+\begin{equation}
+  \overbar{\boldtheta} = \boldtheta_0 \,.
+\end{equation}
+%
+Second, the variance
+%
+\begin{equation}
+  \var  \left [ \hat{\theta} \middle | \theta_0 \right]
+  \equiv E \left[ (\theta - \overbar{\theta} )^2\middle | \theta_0 \right] \,,
+\end{equation}
+%
+or for more than one parameter its covariance matrix
 %
 \begin{equation}
   \cov  \left [ \hat{\boldtheta} \middle | \boldtheta_0 \right]_{ij}
-  \equiv E \left[ (\theta_i - \bar{\theta}_i )  (\theta_j - \bar{\theta}_j ) \middle | \boldtheta_0 \right] \,,
+  \equiv E \left[ (\theta_i - \overbar{\theta}_i )  (\theta_j - \overbar{\theta}_j ) \middle | \boldtheta_0 \right] \,,
 \end{equation}
 %
-provides a measure of its precision. In practice there is often a
+provides a measure of the precision. In practice there is often a
 trade-off between minimizing the bias of an experiment and the
-variance.
-% In our example, the probability to observe a number of events follows
-% Poisson statistics, $f(n | g) = \Pois( n | g^2 n_0)$, and the
-% expectation value of the estimator is given by
-% $E [\hat{g} | g ] = \sum_n \Pois (n | g^2 n_0) \, \sqrt{ n / n_0
-% }$. \emph{Unfortunately this does not seem to have a closed form solution?}
+variance.~\comment{Example, or citation, from Kyle's TASI slides?}
 
 But how good can an estimator be? Clearly, any given experiment does
 not allow the measurement of parameters with arbitrary precision. We
-can make this statement more quantitatively. If the relation between
-parameters and data is given by a probability distribution function
-$f(\boldx | \boldtheta)$ that is twice differentiable in continous
-parameters $\theta_i$ and fulfills certain regularity conditions, we
-can calculate the \emph{Fisher information}
+can make this statement more quantitatively. If the parameters
+$\theta_i$ are continous, $f(\boldx | \boldtheta)$ is twice
+differentiable in them, and if we can exchange this differentiation
+with the integration over $\boldx$, we can calculate the \emph{Fisher
+  information}
 %
 \begin{equation}
   I_{ij} (\boldtheta)
@@ -396,89 +397,77 @@ can calculate the \emph{Fisher information}
     \label{eq:fisher_information}
 \end{equation}
 
-The Cram\'er-Rao bound~\cite{cramer-rao} then states that the
+The \emph{Cram\'er-Rao bound}~\cite{Rao:1945, Cramer:1946} then states that the
 covariance matrix of any estimator $\hat{\boldtheta}$ is bounded from
 below by the inverse Fisher information:
 %
 \begin{equation}
   \cov \left[ \hat{\boldtheta} \middle| \boldtheta_0 \right]_{ab}
-  \geq \pder {\overbar{\theta}_a} {\theta_i} \;
+  \geq \pder {\overbar{\theta}_a} {\theta_i} (\boldtheta_0) \;
   I^{\,-1}_{\ \ ij} (\boldtheta_0)  \;
-  \pder {\overbar{\theta}_b} {\theta_j} \,.
+  \pder {\overbar{\theta}_b} {\theta_j} (\boldtheta_0) \,,
+  \label{eq:cramer_rao_general}
 \end{equation}
 %
+where we implicitly sum over repeated indices $i$, $j$.
+%
 In particular, for an unbiased estimator
-$\overbar {\boldtheta} = \boldtheta$ and 
+$\overbar {\boldtheta} = \boldtheta_0$ and 
 %
 \begin{equation}
   \cov \left[ \hat{\boldtheta} \middle| \boldtheta_0 \right]_{ij}
-      \geq I^{\,-1}_{\ \ ij} (\boldtheta_0)  \,.
+      \geq I^{\,-1}_{\ \ ij} (\boldtheta_0)  \,. 
+  \label{eq:cramer_rao_unbiased}
 \end{equation}
 %
 In the one-dimensional case, this corresponds to a typical measurement
 error of
 %
 \begin{equation}
-  \Delta \theta = \sqrt{\var [ \hat{\theta} | \theta_0 ] } \geq 1 / \sqrt{ I (\theta_0) }\,.
+  \Delta \theta \equiv \sqrt{\var [ \hat{\theta} | \theta_0 ] } \geq 1 / \sqrt{ I (\theta_0) }\,.
   \label{eq:cramer_rao_precision}
 \end{equation}
 %
-The Fisher information thus encodes the maximal precision with which
-parameters can be measured at an experiment. Large entries in this
-matrix correspond to directions that can be measured particularly
-precisely. On the other hand, an eigenvector of the information matrix
-with corresponding eigenvalue zero is a blind direction that can never
-be probed by the experiment.
+In this way, the Fisher information matrix $I_{ij}$ encodes the
+maximal precision with which parameters can be measured at an
+experiment. Large entries in this matrix correspond to directions that
+can be measured particularly precisely. On the other hand, an
+eigenvector of the information matrix with corresponding eigenvalue
+zero is a blind direction that can never be probed by the experiment.
 
-$I_{ij}$ has several useful properties. Unlike many other statistical
-tools, it summarizes the sensitivity to \emph{all} directions in
-theory space in one matrix, making it particularly useful for
-high-dimensional parameter spaces. It is additive between different
-measurements or between different phase-space regions in the same
-experiment. This will later allow us to calculate the distribution of
-information over phase space. Furthermore, describing experiments in
-terms of the Fisher information is independent of arbitrary basis
-choices: it is invariant under the parameterization of the observables
-$\boldx$, and transforms covariantly under a reparameterization of the
-theory parameters $\theta \to \Theta (\theta)$,
+The Fisher information has several useful properties. Unlike many
+other statistical tools, it summarizes the sensitivity to \emph{all}
+directions in theory space in one matrix, making it particularly
+useful for high-dimensional parameter spaces. It is additive between
+different measurements or between different phase-space regions in the
+same experiment.
+% This allows us to calculate the
+% distribution of information over phase space.
+Furthermore, a description of experiments in terms of the Fisher
+information is independent of arbitrary basis choices: it is invariant
+under the parameterization of the observables $\boldx$, and transforms
+covariantly under a reparameterization of the theory parameters
+$\theta \to \Theta (\theta)$,
 %
 \begin{equation}
-  I_{ab} (\boldsymbol{\Theta}) = \pder {\theta_i} {\Theta_a} \, I_{ij} (\boldsymbol{\theta}) \, \pder {\theta_j} {\Theta_b}
+  I_{ab} (\boldsymbol{\Theta}) = \pder {\theta_i} {\Theta_a} \, I_{ij} (\boldsymbol{\theta}) \, \pder {\theta_j} {\Theta_b} \,.
   \label{eq:information_covariant_transformation}
 \end{equation}
-%
-with an implicit summation over repeated parameter indices $i,j$.
-
-% This is exactly what we need to calculate the Fisher information for
-% our coupling measurement example. We can first calculate the Fisher
-% information in terms of the expected number of events
-% $n_{\text{exp}}$, yielding the textbook result
-% $I(n_{\text{exp}}) = 1 / n_{\text{exp}}$.
-% \autoref{eq:information_covariant_transformation} then allows us to
-% express the Fisher information in terms of the coupling $g$:
-% $I (g) = 1 / n_{\text{exp}} \, (\partial n_{\text{exp}} / \partial
-% g)^2 = 4 n_0$.
-% According to the Cram\'er-Rao bound this corresponds to a maximal
-% precision $\Delta g \geq 1 / ( 2 \sqrt{n_0} )$: as expected the
-% expected error goes down with the square root of the number of events,
-% and the factor 2 shows the increased sensitivity from the square of
-% the coupling. 
 
 As a symmetric and positive definite rank-two tensor, the Fisher
-information defines a Riemannian metric on the theory
-space~\cite{information-geometry}.\footnote{This is only true in the
-  absence of blind directions, otherwise the information is only
-  positive semi-definite and defines a pseudo-metric.} This allows us
-to use methods from differential geometry and provides a distance
-measure between parameter points:. We can differentiate between local distance in the tangent
-space at some point $\boldtheta_a$,
+information defines a Riemannian metric\footnote{This is only strictly
+  true in the absence of blind directions, otherwise the information
+  matrix is only positive semi-definite and defines a pseudo-metric.}
+on the theory space, the foundation of the field of \emph{information
+  geometry}~\cite{efron1975, amari1982}. This allows us to use methods
+from differential geometry and provides a distance measure between
+parameter points. First, we can define local distance in the
+tangent space at some point $\boldtheta_a$,
 %
 \begin{equation}
-  d_{\text{local}}( \boldtheta_b; \boldtheta_a ) = \sqrt{I_{ij} (\boldtheta_a) (\theta_{b\,i} - \theta_{a\,i}) (\theta_{b\,j}  - \theta_{a\,j} )} \,,
+  d_{\text{local}}( \boldtheta_b; \boldtheta_a ) = \sqrt{I_{ij} (\boldtheta_a) (\theta_{b\,i} - \theta_{a\,i}) (\theta_{b\,j}  - \theta_{a\,j} )} \,.
   \label{eq:local_distances}
 \end{equation}
-%
-and global distances 
 %
 Contours of local distances translate the Fisher information in one
 point into the minimal error ellipsoids according to the Cram\'er-Rao
@@ -491,7 +480,8 @@ deviations or ``sigmas''. In other words, in this limit the distance
 measure is equivalent to the maximal expected significance with which
 $\boldtheta_a$ can be excluded if $\boldtheta_b$ is true.
 
-Goying beyond the tangent space, global distances can be defined along geodesics,
+Goying beyond the tangent space, global distances can be defined along
+geodesics,
 %
 \begin{equation}
   d(\boldtheta_a,\boldtheta_b)
@@ -504,11 +494,11 @@ providing a more general and symmetric notion of discrimination power
 between two points without having to pick the true value of the
 parameter.
 
-As an aside, the Fisher information also plays an important role in Bayesian
-inference. In Jeffrey's prior it is used to define an ``objective''
-prior that is invariant under reparameterization, and according to the
-Bernstein-von~Mises theorem it describes the posterior mode in the
-asymptotic limit. 
+% As an aside, the Fisher information also plays an important role in
+% Bayesian inference. In Jeffrey's prior it is used to define an
+% ``objective'' prior that is invariant under reparameterization, and
+% according to the Bernstein-von~Mises theorem it describes the
+% posterior mode in the asymptotic limit.
 
 
 
@@ -518,74 +508,96 @@ asymptotic limit.
 \label{sec:information_formalism_example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-As a simple example we study the Fisher information in a number of
-rates $n_c$ measured in various Higgs channels $c$. In the absence of
-systematic uncertainties they follow Poisson statistics,
+As a simple example, we calculate the Fisher information in a number
+of event counts $n_c$ in different channels $c$. We assume that the
+channels are independent and follow Poisson distributions with mean
+values $\bar{n_c} = \nu_c$:
 %
-\begin{align}
-  f (\mathbf{n} |\boldsymbol{\nu}) 
+\begin{align}%
+  f (\mathbf{n} |\boldnu) 
   = \prod_c \Pois (n_c | \nu_c) 
   = \prod_c \, \frac{\nu_c^{n_c} e^{-\nu_c}}{n_c!} \, .
 \end{align}
 %
-We can calculate the Fisher information in terms of the Poisson mean
-$\boldsymbol{\nu}$ as
+Following \autoref{eq:fisher_information}, we can calculate the Fisher
+information in terms of the Poisson means $\boldnu$. With
 %
-\begin{align}
+\begin{equation}
   \pder { \log f} {\nu_c} 
-%= \pder {} {\nu_c}  \left[- \nu_c + n_c \log \nu_c - \log (n_c!) \right]
-  = \frac {n_c} {\nu_c} - 1 \qqquad 
-  \frac { \partial^2 \log f} {\partial \nu_c \nu_{c'}} = - \frac {\delta_{c c'} \, n_c} {\nu_c^2} \qqquad
-  I_{c c'} \equiv - E \left[ \frac { \partial^2 \log f} {\partial \nu_c \nu_{c'}} \middle| \boldsymbol{\nu} \right] = \frac {\delta_{c c'} } {\nu_c} \,.
-\end{align}
+  = \pder {} {\nu_c}  \left[- \nu_c + n_c \log \nu_c - \log (n_c!) \right]
+  = \frac {n_c} {\nu_c} - 1
+\end{equation}
 %
-If we express the expected count rates in terms of model parameters
-$g_i$, the Fisher information becomes
+and
+%
+\begin{equation}
+  \frac { \partial^2 \log f} {\partial \nu_c \partial \nu_{c'}} = - \frac {\delta_{c c'} \, n_c} {\nu_c^2} 
+\end{equation}
+%
+we find
+%
+\begin{equation}
+  I_{c c'} (\boldnu) \equiv - E \left[ \frac { \partial^2 \log f} {\partial \nu_c \partial \nu_{c'}} \middle| \boldnu \right] = \frac {\delta_{c c'} } {\nu_c} \,.
+\end{equation}
+
+\autoref{eq:information_covariant_transformation} allows us calculate
+the Fisher information in terms of some theory parameters $\theta_i$
+rather than the Poisson means $\nu_c$:
 %
 \begin{align}
-  I_{ij}  = \sum_c \frac 1 {\nu_c} \, \pder {\nu_c} {g_i} \, \pder {\nu_{c}} {g_j} \,.
-  \label{eq:simple_example_information}
+  I_{ij}  = \sum_c \frac 1 {\nu_c} \, \pder {\nu_c} {\theta_i} \, \pder {\nu_{c}} {\theta_j} \,.
+  \label{eq:information_simple_example_information}
 \end{align}
-
-The matrix $\partial \nu_c / \partial g_i$ is determined by selection
-requirements, detector acceptance, and efficiencies.  In the $\kappa$
-framework that only scales cross sections and branching ratios, the
-matrix $\partial \nu_c / \partial g_i$ is trivial to calculate in
-closed form.  For each channel this matrix is singular, which means it
+%
+At the LHC, the matrix $\partial \nu_c / \partial \theta_i$ is
+determined by the luminosity, the relevant cross sections and
+branching ratios, as well as acceptance and efficiency factors. For
+instance, in the $\kappa$ framework for Higgs physics discussed in
+\autoref{sec:foundations_heft_alternatives} it is trivial to
+calculate the matrix $\partial \nu_c / \partial g_i$ in closed
+form. For each channel this matrix is singular, which means it
 measures one direction in parameter space and is blind to all
-others. At least as many channels as parameters are required to make
-the combined information in \autoref{eq:simple_example_information}
-non-singular and remove all blind directions (assuming the channels do
-not provide degenerate information, \ie the same eigenvectors in the
-Fisher information).
+orthogonal directions. At least as many channels as parameters are
+required to make the combined information in
+\autoref{eq:simple_example_information} non-singular and remove all
+blind directions (assuming the channels do not provide degenerate
+information, \ie linearly dependent eigenvectors in the Fisher
+information).
 
-For illustration, we consider the case where we want to
-measure one coupling $g$ in one channel with the expected number of
+For illustration, we consider the case where we want to measure one
+coupling $\theta = g$ in one channel with the expected number of
 events
 %
 \begin{align}
-\nu = L \left( \sigma_S + \sigma_B \right) 
-    = L g^2 \sigma_0 + L \sigma_B \; .
+  \nu = L \left( \sigma_S + \sigma_B \right) 
+        = L g^2 \sigma_0 + L \sigma_B \,,
 \end{align}
-%. 
-The Fisher information is then
+%
+where the constants $L$, $\sigma_S$, $\sigma_B$, and $\sigma_0$
+schematically stand for the luminosity and the signal and background
+cross sections.
+
+The Fisher information in terms of the coupling $g$ is then
 %
 \begin{align}
-I = 4 L \, \frac {g^2 \sigma_0^2 } {g^2 \sigma_0 + \sigma_B} 
-  = \frac{4 L}{g^2} \, \frac {\sigma_S^2 } {\sigma_S + \sigma_B} \, .
+  I(g) = 4 L \, \frac {g^2 \sigma_0^2 } {g^2 \sigma_0 + \sigma_B} 
+         = \frac{4 L}{g^2} \, \frac {\sigma_S^2 } {\sigma_S + \sigma_B} \, .
 \end{align}
 %
-According to the Cram\'er-Rao bound, the standard deviation of any
-unbiased estimator $\hat{g}$ is at least
+The Cram\'er-Rao bound in \autoref{eq:cramer_rao_unbiased} then states
+that, independent of the analysis strategy, any unbiased estimator has
+a standard deviation of at least
 %
 \begin{align}
 \frac{\Delta \hat{g}}{g} \geq \frac 1 {g \, \sqrt{I}} = 
-\frac{1}{2 \, \sqrt{L}} \, \frac {\sqrt{\sigma_S +\sigma_B}} {\sigma_S} \,.
+\frac{1}{2} \, \frac 1 {\sqrt{L}} \, \frac {\sqrt{\sigma_S +\sigma_B}} {\sigma_S} \,.
 \end{align}
 %
 The three terms show how the sensitivity to $g$ profits from the
 square in the cross section, the square-root dependence on the
 statistics, and the dependence on the signal-to-background ratio.
+%
+\comment{To here}
 
 
 
@@ -720,19 +732,19 @@ term with width $\sigma_k$, the additional term in the Fisher
 information reads
 %
 \begin{align}
-  I_{ij} (\boldtheta,\boldsymbol{\nu}) = \dots + \frac {\delta_{ik} \delta_{jk}} {\sigma_k^2} \,.
+  I_{ij} (\boldtheta,\boldnu) = \dots + \frac {\delta_{ik} \delta_{jk}} {\sigma_k^2} \,.
 \end{align} 
 %
 This also applies to a log-normal constraint through reparametrization
 of $\nu$.  Local and global distances now refer to combined theory and
-nuisance parameters $(\boldtheta,\boldsymbol{\nu})$.
+nuisance parameters $(\boldtheta,\boldnu)$.
 
 We define a profiled local distance between two points $\boldtheta_b$ and
 $\boldtheta_a$
 %
 \begin{align}
   d_{\text{profiled}} (\boldtheta_b, \boldtheta_a)
-  = \min_{\boldsymbol{\nu}}   \; d_{\text{local}}( (\boldtheta_b,\boldsymbol{\nu}) ;
+  = \min_{\boldnu}   \; d_{\text{local}}( (\boldtheta_b,\boldnu) ;
   (\boldtheta_a , \mathbf{0} ) ) \,.
 \end{align}
 %
