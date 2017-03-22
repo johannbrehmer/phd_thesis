@@ -549,25 +549,24 @@ rather than the Poisson means $\nu_c$:
 %
 \begin{align}
   I_{ij}  (\boldtheta) = \sum_c \pder {\nu_c} {\theta_i} \, \frac 1 {\nu_c} \, \pder {\nu_{c}} {\theta_j} \,.
-  \label{eq:information_information_simple_example_information}
+  \label{eq:information_simple_example_information}
 \end{align}
 %
 At the LHC, the matrix $\partial \nu_c / \partial \theta_i$ is
 determined by the luminosity, the relevant cross sections and
 branching ratios, as well as acceptance and efficiency factors. For
 instance, in the $\kappa$ framework for Higgs physics discussed in
-\autoref{sec:foundations_heft_alternatives} it is trivial to
-calculate the matrix $\partial \nu_c / \partial g_i$ in closed
-form. For each channel this matrix is singular, which means it
-measures one direction in parameter space and is blind to all
-orthogonal directions. At least as many channels as parameters are
-required to make the combined information in
-\autoref{eq:information_simple_example_information} non-singular and remove all
-blind directions (assuming the channels do not provide degenerate
-information, \ie linearly dependent eigenvectors in the Fisher
-information).
+\autoref{sec:foundations_heft_alternatives} it is trivial to calculate
+the matrix $\partial \nu_c / \partial g_i$ in closed form. For each
+channel this matrix is singular, which means it measures one direction
+in parameter space and is blind to all orthogonal directions. At least
+as many channels as parameters are required to make the combined
+information in \autoref{eq:information_simple_example_information}
+non-singular and remove all blind directions (assuming the channels do
+not provide degenerate information, \ie linearly dependent
+eigenvectors in the Fisher information).
 
-For illustration, we consider the case where we want to measure one
+For illustration, consider the case where we want to measure one
 coupling $\theta = g$ in one channel with the expected number of
 events
 %
@@ -587,9 +586,9 @@ The Fisher information in terms of the coupling $g$ is then
          = \frac{4 L}{g^2} \, \frac {\sigma_S^2 } {\sigma_S + \sigma_B} \, .
 \end{align}
 %
-The Cram\'er-Rao bound in \autoref{eq:information_cramer_rao_unbiased} then states
-that any unbiased estimator has
-a standard deviation of at least
+The Cram\'er-Rao bound in \autoref{eq:information_cramer_rao_unbiased}
+then states that any unbiased estimator has a standard deviation of at
+least
 %
 \begin{align}
 \frac{\Delta \hat{g}}{g} \geq \frac 1 {g \, \sqrt{I}} = 
@@ -661,10 +660,10 @@ some way. The Fisher information is hence given by
 \end{equation}
 %
 Each bin $b$ corresponds to a set of cuts
-$v_{\text{min}} \leq v < v_{\text{max}}$. In the
-limit of many small bins that span the entire kinematically allowed
-range for $v$, \autoref{eq:information_information_histo} gives the
-information in the distribution of $v$.
+$v_{\text{min}} \leq v < v_{\text{max}}$. In the limit of many small
+bins that span the entire kinematically allowed range for $v$, we call
+\autoref{eq:information_information_histo} the information in the
+distribution of $v$.
 
 This can be trivially extended from a one-dimensional histogram of a
 single observable $v$ to a multi-dimensional histogram of many
@@ -841,173 +840,271 @@ $(n-1) \times (n-1)$ matrix
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The MadFisher algorithm}
-\label{sec:information_algorithm}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-We calculate the quantities sketched in the previous sections with a
-combination of existing Monte-Carlo generators and our own algorithm,
-which we call \toolfont{MadFisher}. 
-%
-\comment{To here}
-
-\comment{First explain three basic ingredients to Fisher information
-  calculation: 1.~MC calculation of delta sigma for benchmark points;
-  2.~Morphing setup to get delta sigma and its derivatives at
-  arbitrary theta; 3.~calculate Fisher information from expressions
-  given above.}
-
-In a first step, we generate event samples for a number of benchmark
-parameters $\boldtheta_s$ with \toolfont{MadMax}~\cite{Plehn:2013paa,
-  Kling:2016lay}. This add-on to
-\toolfont{MadGraph~5}~\cite{Alwall:2014hca} allows us to
-simultaneously calculate the differential rates $\Delta \sigma$ for
-different parameter points $\boldtheta_s$ using the same phase-space
-grid.
-
-A morphing technique then allows us to calculate the differential
-cross sections and their derivatives at arbitrary positions in
-parameter space~\cite{morphing}. The effect of $\ope{\phi,2}$ and
-systematic rate uncertainties (see \autoref{sec:systematics}) is taken
-into account analytically. The contributions from the other operators
-are decomposed into a number of basis components and can be exactly
-reconstructed from a set of simulated benchmark points.
-
-The derivatives with respect to the theory parameters can
-easily be calculated numerically,
-%
-\begin{equation}
-  \pder {\Delta \sigma (\boldtheta)} {\theta_i} \approx \frac {\Delta \sigma (\boldtheta + \boldepsilon_i) - \Delta \sigma (\boldtheta - \boldepsilon_i)} {2 |\boldepsilon_i| }
-\end{equation}
-%
-with a small vector $\varepsilon_i$ in $i$-direction.
-
-We can then easily calculate the Fisher information according to
-Equations~\eqref{eq:information_information_rate},
-\eqref{eq:information_information_histo}, and
-\eqref{eq:information_information_from_events}.
-
-Finally, global distances as in \autoref{eq:information_distances} are
-calculated in analogy to free fall in general relativity: a starting
-point and a set of directions in parameter space define the initial
-conditions, from which we numerically calculate distances along curves
-defined by the geodesic equation.
-
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% % First, our setup builds on the fact that the information matrices in
-% % Equations~\eqref{eq:information_information_rate},
-% % \eqref{eq:information_information_histo}, and
-% % \eqref{eq:information_information_from_events} can all be calculated
-% % from a set of events, each defined by a phase-space point $\boldx$ and
-% % a differential cross section $\Delta \sigma (\boldtheta)$, where the
-% % parameters $\boldtheta$ now implicitly include potential nuisance
-% % parameters. 
-
-% We first generate event samples for a number of benchmark parameters
-% with \toolfont{MadMax}~\cite{madmax2}. This add-on to
-% \toolfont{MadGraph~5}~\cite{madgraph} allows us to simultaneously
-% calculate differential rates for different parameter points using the
-% same phase-space grid. Our \toolfont{FeynRules}~\cite{feynrules} model
-% file of the relevant dimension-6 operators does not truncate operator
-% effects at $\ord{1/\Lambda^2}$. \toolfont{MadMax} requires fixed
-% renormalization and factorization scales, which we set following
-% Reference~\cite{yr4}. To keep the calculation times manageable, we restrict
-% some processes to the dominant sub-processes, for instance to
-% initial-state $u$ and $d$ quarks in the WBF case.  We then normalize
-% the Higgs rates to the LHC HXS WG recommendations for the total cross
-% section~\cite{yr4}, calculating the effect of the different acceptance
-% regions with \toolfont{MadGraph~5}. Background processes are simply
-% rescaled to \toolfont{MadGraph} predictions.
-
-% A morphing technique allows us to calculate the differential cross
-% sections and their derivatives at arbitrary positions in parameter
-% space~\cite{morphing}. The effect of $\ope{\phi,2}$ and systematic
-% rate uncertainties (see \autoref{sec:systematics}) is taken into
-% account analytically. The contributions from the other operators are
-% decomposed into a number of basis components and can be exactly
-% reconstructed from a set of simulated benchmark points. Our example
-% processes require up to 70 such basis components (in the WBF
-% $H \to 4 \ell$ case).
-
-% We can then easily calculate the Fisher information according to
-% \autoref{eq:information_information_from_events}. Finally, global distances as in
-% \autoref{eq:information_distances} are calculated in analogy to free fall in
-% general relativity: a starting point and a set of directions in
-% parameter space define the initial conditions, from which we
-% numerically calculate distances along curves defined by the geodesic
-% equation.
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Geometry of effective field theories}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Motivated by the lack of any direct signs of new physics and by the
-similarity of the observed scalar with the SM agent of electroweak
-symmetry breaking, we parametrize the properties of the Higgs boson
-with dimension-6 operators of the SM effective field
-theory~\cite{eftfoundations,eftorig,eftreviews},
-% 
-\begin{equation}
-  \lgr{} = \lgr{SM} + \frac {f_i} {\Lambda^2} \ope{i} \,.
-\end{equation}
-%
-These operators model-independently describe the effects of new
-physics at energy scales far below the new physics scale,
-$E \ll \Lambda$. The LHC cannot guarantee such a scale separation, but
-the effective description still works for a wide range of new physics
-scenarios~\cite{eft-limits}.
-
-In the cross section, amplitudes from dimension-6 operators squared
-appear at $\ord{1/\Lambda^4}$, i.\,e.\ at the same order as the
-leading effects from dimension-8 operators, which we neglect. If the
-new physics couplings are of the same size as the relevant SM
-couplings, and if the dimension-4 amplitudes are not accidentally
-surpressed, the size of the dimension-6 squared term can therefore be
-used as an estimate for the error of the EFT approximation. In
-general, the dimension-6 squared terms can be larger than the
-dimension-8 effects, and are necessary from a technical point of view
-to guarantee positive cross sections~\cite{eft-edge}.
-
-In this paper we will calculate the information geometry of the
-dimension-6 model for various processes and operators. As theory
-parameters we pick a dimensionless rescaling of the Wilson
-coefficients,
+We calculate the Fisher information in terms of the dimension-six
+operators of linear Higgs effective field theory. As theory parameters
+we pick a dimensionless rescaling of the Wilson coefficients,
 %
 \begin{equation}
   \theta_i = \frac {f_i} {\Lambda^2} \, v^2  \,,
 \end{equation}
 %
-such that the SM corresponds to the origin $\boldtheta = \boldzero$.
-As can be seen from \autoref{eq:information_information_from_events}, the
-Fisher information at the SM $I_{ij} (\boldzero)$ only measures the
-$\ord{\theta}$ terms in the differential cross sections and is
-insensitive to higher orders. In other words, information distances in
-the tangent space at the SM only take into account the leading
-dimension-6 operator effects at $\ord{1/\Lambda^2}$. On the other
-hand, the dimension-6 squared contributions do appear in the Fisher
-information away from the SM and therefore in global distances as
-given in \autoref{eq:information_global_distances}. The difference between
-linearized distances based on the SM Fisher information metric and
-global distances measured along geodesics, or the curvature of the
-information geometry, therefore provides an intuitive measure of the
-role of $\ord{1/\Lambda^4}$ contributions.
+such that the SM corresponds to the origin $\boldtheta = \boldzero$. 
 
-Following \autoref{eq:information_cramer_rao_precision}, the Fisher information in a given direction
-$I$ defines a maximal precision
-$\Delta \theta_{\text{min}} = 1 / \sqrt{I}$, with which this direction
-in theory space can be measured. For an EFT this can directly be
-translated into a maximal new physics reach
+Through the Cram\'er-Rao bound in
+\autoref{eq:information_cramer_rao_precision}, the Fisher information
+in a given direction in theory space $I$ defines a maximal precision
+$\Delta \theta_{\text{min}} = 1 / \sqrt{I}$ with which this direction
+can be measured. For an EFT this can directly be translated into a
+maximal new physics reach
 %
 \begin{equation}
-  \frac {\Lambda_{\text{max}}} {\sqrt{f}} = \frac v {\sqrt{\Delta \theta_{\text{min}}}} =  v I^{1/4} \,.
+  \frac {\Lambda_{\text{max}}} {\sqrt{f}} = \frac v {\sqrt{\Delta \theta_{\text{min}}}} =  v \; I(\boldzero)^{1/4} \,.
 \end{equation}
+%
+The maximal probed energy scale $\Lambda_{\text{max}}$ depends on the
+size of the Wilson coefficients $f$ and thus the typical couplings of
+the underlying theory, in agreement with the discussion in
+\autoref{sec:validity_introduction_scales}.
+
+Local and global geometry have an interesting and useful
+interpretation when applied to EFTs. Recall that squared amplitudes
+from dimension-six operators squared contribute to the cross section
+at the same order as the leading effects from the neglected
+dimension-eight operators. In \autoref{sec:validity_squares} we argued
+that under the assumptions that the new physics couplings are of the
+same size as the relevant SM couplings and that the dimension-four
+amplitudes are not accidentally suppressed, the size of the
+dimension-six squared term can be used as an estimate for the error of
+the EFT approximation. In general, the dimension-six squared terms can
+be larger than the dimension-eight effects, and are necessary from a
+technical point of view to guarantee positive cross sections.
+
+As can be seen from \autoref{eq:information_information_from_events},
+the Fisher information at the SM $I_{ij} (\boldzero)$ only measures
+the $\ord{\boldtheta}$ terms in the differential cross sections and is
+insensitive to higher orders. In other words, information distances in
+the tangent space at the SM only take into account the leading
+dimension-six operator effects at $\ord{1/\Lambda^2}$. On the other
+hand, the dimension-six squared contributions do appear in the Fisher
+information away from the SM and therefore in global distances as
+given in \autoref{eq:information_global_distances}. The difference
+between linearized distances based on the SM Fisher information metric
+and global distances measured along geodesics, related to the
+curvature of the information geometry, therefore provides an intuitive
+measure of the role of $\ord{1/\Lambda^4}$ contributions.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The MadFisher algorithm}
+\label{sec:information_algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The Fisher information matrices discussed above are calculated with a
+combination of existing Monte-Carlo generators and our own algorithm,
+which we call \toolfont{MadFisher}. Our setup consists of three steps:
+%
+\begin{enumerate}
+\item Monte-Carlo tools are used to generate event samples, \ie sets
+  of phase-space points $\boldx$ with the corresponding differential
+  rates $\Delta\sigma (\boldx | \boldtheta_n)$, for a set of basis parameter
+  points $\boldtheta_n$.
+\item With a morphing technique~\cite{ATLAS:morphing} we calculate the
+  differential rates $\Delta \sigma (\boldtheta)$ for arbitrary
+  parameter points $\boldtheta$.
+\item We calculate the Fisher information matrices as derived in the
+  previous sections.
+\end{enumerate}
+
+For the event generation we use \toolfont{MadMax}~\cite{Plehn:2013paa,
+  Kling:2016lay}. This add-on to
+\toolfont{MadGraph~5}~\cite{Alwall:2014hca} allows us to
+simultaneously calculate the differential rates
+$\Delta\sigma (\boldx | \boldtheta_n)$ for different parameter points
+$\boldtheta_n$ using the same phase-space grid. An alternative option
+that supports a variety of transfer functions to describe the detector
+response is \toolfont{MadWeight}~\cite{Artoisenet:2008zz,
+  Mattelaer:2011ywa, Mertens:2014iya}.
+
+The second step is based on the fact that the differential cross
+section can be decomposed into a finite set of basis components,
+representing the different squared amplitudes and interference terms:
+%
+\begin{align}
+  \Delta\sigma (\boldx | \boldtheta)
+  &\propto \sum_p \left|\sum_i \tilde{w}_{p,i}(\boldtheta)  \mat{$p,i$} \right|^2 \notag \\
+  %
+  &= \sum_{i,j} \tilde{w}^*_{p,i}(\boldtheta) \tilde{w}^{\vphantom{*}}_{p,j}(\boldtheta)  \;
+    \left(\mat{$p,i$}^\dagger \mat{$p,j$}^{\vphantom{\dagger}} \right) (\boldx) \notag \\
+  %
+  &\propto \sum_{c} w_c(\boldtheta) \Delta \sigma_c (\boldx) \,.
+  \label{eq:information_morphing_deltasigma}
+\end{align}
+%
+Here $p$ labels different subprocesses (which do not interfere with
+each other), while $i$, $j$ denote the different contributing
+amplitudes to a subprocess. In the last step we collect the different
+terms into components $c$.
+
+If the theory parameters $\boldtheta$ correspond to couplings, as
+usually in the case of effective field theories, the functions $w_c$
+are polynomials in the different $\theta_i$. As a simple example,
+consider a process with just one vertex, with known coupling $g$ in
+the SM and new physics contribution $\theta$. The differential cross
+section is then proportional to
+%
+\begin{align}
+  \Delta\sigma (\boldx | \theta)
+  &\propto \left| g \mat{SM} + \theta \mat{NP} \right|^2 \notag \\
+  %
+  &= g^2 \; \left| \mat{SM} \right|^2
+  + 2 \, g \, \theta \; \Real \mat{SM}^\dagger \mat{NP}^{\vphantom{\dagger}} 
+  + \theta^2 \; \left| \mat{NP} \right|^2 \notag \\
+  %
+  &\propto \underbrace{g^2}_{w_1(\theta)} \;
+    \underbrace{\Delta \sigma_{\text{SM}} (\boldx)}_{\Delta \sigma_1 (\boldx)}
+    + \underbrace{2 \, g \, \theta}_{w_2(\theta)} \;
+    \underbrace{\Delta \sigma_{\text{interference}} (\boldx) }_{\Delta \sigma_2 (\boldx)}
+    + \underbrace{\theta^2}_{w_3(\theta)} \;
+    \underbrace{\Delta \sigma_{\text{NP}} (\boldx) }_{\Delta \sigma_3 (\boldx)} \,.
+\end{align}
+%
+In the EFT language, the different contribution correspond to
+different powers of the suppression factor $1/\Lambda^n$.  For more
+contributing couplings, or if a two vertices are affected by these
+couplings, the number of components increases as shown in
+\autoref{tbl:information_morphing_components}. One noteworthy
+exception to the polynomial form of $w_c$ is the dimension-six
+operator $\ope{\phi,2}$. As discussed in
+\autoref{sec:foundations_heft_pheno}, it rescales all Higgs
+interactions non-linearly with
+$1/ \sqrt{1 + f_{\phi 2} v^2 / \Lambda^2}$ and does not respect the
+counting in terms of $1/\Lambda$ given in
+\autoref{tbl:information_morphing_components}. In any case, the
+weights $w_c(\boldtheta)$ are known analytical functions of the model
+parameters.
+
+\begin{table}
+    \begin{tabular}{ c c c c ccccc }
+      \toprule
+      %
+      \multirow{2}{*}{Vertices}
+      &&
+      \multirow{2}{*}{Components}
+      && \multicolumn{5}{c}{Components at EFT orders}  \\
+      %
+      \cmidrule{5-9}
+      %
+      && && $\ord{\Lambda^0}$ & $\ord{\Lambda^{-2}}$ & $\ord{\Lambda^{-4}}$
+       & $\ord{\Lambda^{-6}}$ & $\ord{\Lambda^{-8}}$ \\
+      %
+      \midrule
+      %
+      $1$
+      && $\dfrac {(n+1)(n+2)} 2$
+      && $1$ & $n$ & $\dfrac {n(n+1)} 2$ & & \\[0.25cm]
+      %
+      $2$
+      && $\twovec {n+4} {4}$
+      && $1$ & $n$ & $\dfrac {n(n+1)} 2$ & $\twovec {n+2} {3}$
+       & $\twovec {n+3} {4}$ \\
+      %
+      \bottomrule
+    \end{tabular}
+    \caption{Number of components contributing to different processes, depending
+      on the number of model parameters $n$ and on the number of modified vertices.
+      Two affected vertices corresponds for instance to a Higgs process where
+      all $n$ model parameters affect both Higgs production and decay.
+      We also give the number of components for each order in $1/\Lambda$ in the EFT case.}
+  \label{tbl:information_morphing_components}
+\end{table}
+
+In \autoref{eq:information_morphing_deltasigma} the contributions from
+the different components $\Delta \sigma_c (\boldx)$ are still
+unknown. To calculate them, note that for a set of basis parameter
+points $\boldtheta_n$ one can read
+\autoref{eq:information_morphing_deltasigma} as a matrix
+multiplication:
+%
+\begin{equation}
+  \Delta \sigma_n (\boldx) = W_{nc} \; \Delta \sigma_c (\boldx)
+\end{equation}
+%
+with $\Delta \sigma_n (\boldx) \equiv \Delta\sigma (\boldx | \boldtheta_n)$ and the matrix
+%
+\begin{equation}
+  W_{nc} \equiv w_c(\boldtheta_n) \,.
+\end{equation}
+%
+For a suitable choice of basis parameters, we can invert this equation
+to
+%
+\begin{equation}
+  \Delta \sigma_c (\boldx) = W^{-1}_{\;\;cn} \; \Delta \sigma_n (\boldx)\,.
+\end{equation}
+%
+Plugging this into \autoref{eq:information_morphing_deltasigma}, we have
+%
+\begin{equation}
+  \Delta\sigma (\boldx | \boldtheta)
+  =
+  \sum_{c,n} w_c(\boldtheta) \, W^{-1}_{\;\;cn}\; \Delta \sigma_n (\boldx)\,.
+  \label{eq:information_morphing}
+\end{equation}
+%
+So with the precalculated matrix $W$ that depends on the basis
+parameter points, the analytically known weight functions
+$w_c(\boldtheta)$, and the event samples for the basis parameters
+$\Delta \sigma_n (\boldx)$ we can exactly calculate the differential
+rates $\Delta\sigma (\boldx | \boldtheta)$ for arbitrary values of
+$\boldtheta$. 
+
+The derivatives with respect to the theory parameters can easily be
+calculated numerically,
+%
+\begin{equation}
+  \pder {\Delta \sigma (\boldtheta)} {\theta_i} \approx \frac {\Delta \sigma (\boldtheta + \boldepsilon_i) - \Delta \sigma (\boldtheta - \boldepsilon_i)} {2 |\boldepsilon_i| }
+  \label{eq:information_numerical_derivatives}
+\end{equation}
+%
+with a small vector $\boldepsilon_i$ in $i$-direction.
+
+With Equations~\eqref{eq:information_morphing} and
+\eqref{eq:information_numerical_derivatives} it is straightforward to
+calculate the Fisher information matrices. For the total Fisher
+information, we calculate the information in each event with
+\autoref{eq:information_information_from_events} and then sum
+them. For the information in total rates and in individual
+distributions we first sum the weights to get the total cross sections
+and calculate the Fisher information with
+Equations~\eqref{eq:information_information_rate} and
+\eqref{eq:information_information_histo}.
+
+Finally, we calculate local and global distances in theory space as
+given in Equations~\eqref{eq:information_local_distances} and
+\eqref{eq:information_global_distances}. The latter are calculated in
+analogy to free fall in general relativity: a starting point and a set
+of directions in parameter space define the initial conditions, from
+which we numerically calculate distances along curves defined by the
+geodesic equation.
+
+\newparagraph
+%
+To summarize, based on a single run of a Monte-Carlo simulation with
+\toolfont{MadMax}, our \toolfont{MadFisher} algorithm can calculate
+the Fisher information matrices $I_{ij} (\boldtheta)$ for arbitrary
+values of the theory parameters $\boldtheta$. One can choose to
+determine the information in the total rate, in individual kinematic
+distributions, or in the full process kinematics of arbitrary
+dimensionality. Finally, it can be calculated based on the full phase
+space, after selection cuts, or differentially in kinematic variables.
 
 
 % At the LHC, we typically use a set of possibly correlated event rates
@@ -1169,6 +1266,29 @@ translated into a maximal new physics reach
 \section{Higgs signatures from $CP$-even operators}
 \label{sec:information_application_even}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We first apply these tools to calculate the information on $CP$-even
+dimension-six operators in three Higgs channels: weak boson fusion
+with a decay into tau pairs or four leptons, and Higgs production with
+a single top.
+
+The event generation is based on our own
+\toolfont{FeynRules}~\cite{Alloul:2013bka} model file of the relevant
+dimension-six operators, which does not truncate operator effects at
+$\ord{1/\Lambda^2}$. \toolfont{MadMax} requires fixed renormalization
+and factorization scales, which we set following
+Reference~\cite{deFlorian:2016spz}. To keep the calculation times
+manageable, we restrict the weak boson fusion production process to
+the dominant sub-process with initial-state $u$ and $d$ quarks.  We
+then normalize the Higgs rates to the LHC HXS WG recommendations for
+the total cross section~\cite{deFlorian:2016spz}, calculating the
+effect of the different acceptance regions with
+\toolfont{MadGraph~5}. Background processes are simply rescaled to
+\toolfont{MadGraph} predictions.
+%
+\comment{To here}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Weak-boson-fusion Higgs to taus}

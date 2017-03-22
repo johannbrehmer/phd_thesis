@@ -874,6 +874,8 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/mnsymbol/MnSymbolE-Bol
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/mnsymbol/MnSymbolD-Bold10.tfm
 INPUT /usr/local/texlive/texmf-local/fonts/vf/adobe/MinionPro/MinionPro-BoldIt-tosf-oml.vf
 INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-BoldIt-tosf-oml--base.tfm
+INPUT /usr/local/texlive/texmf-local/fonts/vf/adobe/MinionPro/MinionPro-Bold-tlf-t1.vf
+INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Bold-tlf-t1--base.tfm
 INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Regular-tlf-t1.tfm
 INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-Mixed-oml.tfm
 INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MnSymbolFI-NoOpticals12.tfm
