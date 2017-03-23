@@ -17,8 +17,8 @@ the Standard Model and effective
 operators. Appendix~\ref{sec:appendix_models} contains some additional
 details on the models considered in
 \autoref{chapter:validity}. Finally, in
-Appendix~\ref{sec:appendix_information} we derive some of the key
-results of \autoref{chapter:information}.
+Appendix~\ref{sec:appendix_information} we collect some auxiliary
+results related to \autoref{chapter:information}.
 
 Large parts of this appendix has been published previously, as part of
 the same articles that contained much of the main body of this
@@ -1606,6 +1606,46 @@ corresponding to the Wilson coefficients given in
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Fisher information derivations}
-%\label{sec:appendix_information}
+\section{Information geometry applications}
+\label{sec:appendix_information}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Detector response}
+\label{sec:appendix_information_smearing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In \autoref{sec:information_application_even} we calculate the Fisher
+information in terms of dimension-six operators for a range of LHC
+Higgs channels. We include an idealized treatment of the detector
+response in which the invariant mass distributions from narrow
+resonance peaks are smeared according to the experimental resolution,
+following the procedure developed in References~\cite{Cranmer:2006zs,
+  Plehn:2013paa} and described in
+\autoref{sec:information_algorithm}. Other detector effects are not
+included.
+
+For Higgs production in weak boson fusion with the decay to tau pairs,
+we model the smearing of the signal and background processes according
+to Figure~1a of Reference~\cite{Aad:2015vsa}. For the Higgs processes
+we use a Gaussian with width $17$~GeV. For the $Z$ backgrounds we rely
+on a double Gaussian, in which the dominant component has a width of
+$13$~GeV, and the second, wider component ensures an accurate
+description of the high-mass tail of the $Z$ peak around
+$m_{\tau\tau} \sim m_H$. The ATLAS data, our fitted smearing function,
+and the final $\toolfont{MadMax}$ output are shown in
+\autoref{fig:information_wbf_tautau_smearing}. We check that other
+distributions are not affected by the smearing significantly.
+
+\begin{figure}
+  \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_smearing_mh}%
+  \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_smearing_mz}%
+  \caption{Resolution effects in the invariant mass distribution in
+    WBF Higgs production with $h \to \tau \tau$ for the Higgs
+    contributions (left) and the $Zjj$ backgrounds (right). We show
+    the ATLAS data from Reference~\cite{Aad:2015vsa} (black), the
+    fitted response function (blue), and our final $\toolfont{MadMax}$
+    output including the smearing function.}
+  \label{fig:information_wbf_tautau_smearing}
+\end{figure}

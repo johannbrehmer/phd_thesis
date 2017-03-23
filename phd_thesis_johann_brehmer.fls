@@ -1093,6 +1093,12 @@ INPUT tex/acknowledgements.tex
 INPUT tex/acknowledgements.tex
 INPUT tex/appendix.tex
 INPUT tex/appendix.tex
+INPUT fig/information/wbf_tautau_smearing_mh.pdf
+INPUT ./fig/information/wbf_tautau_smearing_mh.pdf
+INPUT ./fig/information/wbf_tautau_smearing_mh.pdf
+INPUT fig/information/wbf_tautau_smearing_mz.pdf
+INPUT ./fig/information/wbf_tautau_smearing_mz.pdf
+INPUT ./fig/information/wbf_tautau_smearing_mz.pdf
 INPUT phd_thesis_johann_brehmer.bbl
 INPUT phd_thesis_johann_brehmer.bbl
 INPUT babelbst.tex
