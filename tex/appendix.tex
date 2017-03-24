@@ -1649,3 +1649,39 @@ distributions are not affected by the smearing significantly.
     output including the smearing function.}
   \label{fig:information_wbf_tautau_smearing}
 \end{figure}
+
+In the $4\ell$ channel, the backgrounds are negligible around
+$m_{4\ell} \approx m_h$, so we do not have to include a smearing to
+estimate the discrimination power. For Higgs production with a single
+top in the $h \to \gamma \gamma$ mode, we follow
+Reference~\cite{Kling:2016lay} and smear the $m_{\gamma \gamma}$
+distribution of the signal process with a Gaussian of width
+$1.52~\gev$. This resolution is based on Figure~6b of
+Reference~\cite{CMS:2016zjv}.
+%
+% While this smearing function underestimates the signal contribution
+% in the tails $m_{\gamma \gamma} \lesssim 120~\gev$ and
+% $m_{\gamma \gamma} \gtrsim 130~\gev$, these phase-space regions do
+% not carry a lot of information anyway.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Additional results}
+\label{sec:appendix_information_additional_plots}
+%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\autoref{fig:information_wbf_tautau_grid} shows how the Fisher
+information in the WBF $h \to \tau \tau$ channel changes with
+$\boldtheta$.
+
+\begin{figure}
+  \includegraphics[width=0.33 \textwidth,clip,trim=0.3cm 0 0.05cm 0]{fig/information/wbf_tautau_grid_fphi2_fw}%
+  \includegraphics[width=0.33 \textwidth,clip,trim=0.3cm 0 0.05cm 0]{fig/information/wbf_tautau_grid_fphi2_fww}%
+  \includegraphics[width=0.33 \textwidth,clip,trim=0.3cm 0 0.05cm 0]{fig/information/wbf_tautau_grid_fww_fw}%
+  \caption{Full Fisher information in the WBF $h \to \tau \tau$
+    channel at different points in the parameter space. We visualize
+    the Fisher information with contours of local distance
+    $d_\text{local}(\boldtheta ; \boldtheta_0) = 1$, setting the
+    $\theta_i$ not shown to zero. }
+\label{fig:information_wbf_tautau_grid}
+\end{figure}

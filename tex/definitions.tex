@@ -1,6 +1,7 @@
 
 % General typesetting
-\newcommand{\toolfont}[1]{\texttt{#1}}
+%\newcommand{\toolfont}[1]{\texttt{#1}}
+\newcommand{\toolfont}[1]{{#1}}
 \newcommand{\newparagraph}{\par\bigskip\noindent}
 \newcommand{\arxivlink}[1]{\href{http://arxiv.org/abs/#1}{\texttt{arXiv:#1}}}
 \newcommand{\comment}[1]{\marginpar{\sffamily\footnotesize\textcolor{dark-red}{#1}}}
@@ -13,7 +14,7 @@
 \newcommand{\largex}{\ensuremath{\large \boldsymbol{\times}}}
 \newcommand{\brlargex}{\ensuremath{\large (\boldsymbol{\times})}}
 
-% spaces
+% Spaces
 \newcommand{\qqquad}{\qquad \qquad}
 \newcommand{\qqqquad}{\qqquad \qqquad}
 \newcommand{\qqqqquad}{\qqqquad \qqqquad}
@@ -116,7 +117,7 @@
     enddef;}
     \fmf{marrow#1,tension=0}{#5}}
 
-% longer \bar
+% Longer \bar
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 
 % includegraphics with default dummy
