@@ -2,9 +2,9 @@
 
 % \setchapterpreamble[ur]{%
 % \dictum[D.~Adams~\cite{adams2002salmon}]{%
-% Anything that is in the world when you’re born is normal and ordinary and is just a natural part of the way the world works.
+% Anything that is in the world when you're born is normal and ordinary and is just a natural part of the way the world works.
 
-% Anything that's invented between when you’re fifteen and thirty-five is new and exciting and revolutionary and you can probably get a career in it.
+% Anything that's invented between when you're fifteen and thirty-five is new and exciting and revolutionary and you can probably get a career in it.
 
 % Anything invented after you're thirty-five is against the natural order of things.%
 % }%
@@ -1340,8 +1340,7 @@ non-trivial kinematics of weak-boson-fusion production. As a decay we
 include a simple fermionic two-body decay
 $h \to \tau \tau$~\cite{Rainwater:1998kj, Plehn:1999xi}, see
 \autoref{fig:information_wbf_tautau_diag}. For our proof of concept we
-stick to a parton-level analysis at leading order and do not take into
-account systematic uncertainties.  The dominant irreducible
+stick to a parton-level analysis at leading order.  The dominant irreducible
 backgrounds are QCD $Zjj$ production and electroweak $Zjj$ production,
 both with the decay $Z \to \tau \tau$, and Higgs production in gluon
 fusion with $h \to \tau \tau$.
@@ -1523,7 +1522,7 @@ Fisher information. At the SM we find
 \label{eq:information_wbf_tautau_information_sm}
 \end{equation}
 %
-The eigenvectors, eigenvalues of this matrix are
+The eigenvectors and eigenvalues of this matrix are
 %
 \begingroup%
 \allowdisplaybreaks%
@@ -1578,11 +1577,11 @@ new physics reach $\Lambda/\sqrt{f_{\phi,2}} \approx 1.9~\tev$. The
 sensitivity to the strongly correlated $\ope{W}$-$\ope{WW}$ plane is
 also quite large: these directions can be probed at the
 $\Delta \theta \approx 0.05$ or
-$\Lambda/\sqrt{f_{W/WW}} \approx 1~\tev$ level. Finally, $\ope{B}$ and $\ope{BB}$ only
-play a role in subleading $Z$-mediated production diagrams. Their
-Wilson coefficients cannot be measured very well in this process, and
-does not affect the measurement of the other operators through
-correlations.
+$\Lambda/\sqrt{f_{W/WW}} \approx 1~\tev$ level. Finally, $\ope{B}$ and
+$\ope{BB}$ only play a role in subleading $Z$-mediated production
+diagrams. Their Wilson coefficients cannot be measured very well in
+this process, and does not affect the measurement of the other
+operators through correlations.
 
 In \autoref{fig:information_wbf_tautau_geometry_2d} we visualize the
 sensitivity to the three operators $\ope{\phi,2}$, $\ope{W}$, and
@@ -1611,7 +1610,7 @@ $\ope{\phi,2}$, $\ope{W}$, and $\ope{WW}$.
 \wbfpyramid{wbf_tautau_global}{fig:information_wbf_tautau_global_distances}
 {Error ellipses defined by the Fisher information in the WBF
   $h \to \tau \tau$ channel. We show global distances from the SM
-  $d(\boldtheta,\mathbf{0})$, where in each panel the $\theta^i$ not
+  $d(\boldtheta,\mathbf{0})$, where in each panel the $\theta_i$ not
   shown are set to zero. The white contours show distances of
   $d=1,2,\dots,5$.}
 
@@ -2131,7 +2130,7 @@ are still basically blind directions.
 \wbfpyramid{wbf_4l_global}{fig:information_wbf_4l_global_distances}
 {Error ellipses defined by the Fisher information in the WBF
   $h \to 4\ell$ channel. We show global distances from the SM
-  $d(\boldtheta,\mathbf{0})$, where in each panel the $\theta^i$ not
+  $d(\boldtheta,\mathbf{0})$, where in each panel the $\theta_i$ not
   shown are set to zero. The white contours show distances of
   $d=1,2,\dots,5$.}
 
@@ -2213,10 +2212,11 @@ the complex $h \to 4\ell$ kinematics.
 The question of production and decay effects can also be tackled by
 comparing the information in different observables: the properties of
 the tagging jets are linked to the production process, while the decay
-products of the Higgs are mostly sensitive to the decay kinematics. We
+products of the Higgs are mostly sensitive to the decay vertex. We
 define the jet observables in complete analogy to the $\tau \tau$
 channel in \autoref{sec:information_wbf_taus}. These are complemented
-by five observables characterizing the decay kinematics:
+by five observables characterizing the decay
+kinematics~\cite{Bolognesi:2012mm, Englert:2012xt}:
 %
 \begin{itemize}
 \item the transverse momentum of the leading lepton, $p_{T,\ell_1}$;
@@ -2228,7 +2228,7 @@ by five observables characterizing the decay kinematics:
 \item the angle $\cos \theta_1 = \hat{p}_{\ell^-_1} \cdot \hat{p}_{Z_2}
   \Big|_{Z_1}$ with spatial unit vectors $\hat{p}$ defined in the $Z_1$ system;
   % 
-\item analogously $\cos \theta_2^*$; and
+\item analogously $\cos \theta_2$; and
   % 
 \item the angle
   $\cos \Phi = ( \hat{p}_{\ell^-_1} \times \hat{p}_{\ell^+_1} )
@@ -2286,9 +2286,26 @@ momentum-dependent operators than the production-side probes provided
 by the tagging jets. This reflects the $E^2/\Lambda^2$ dependency of
 such dimension-six effects, which can be large in the production
 vertex, while the momentum flow through the decay vertex is limited to
-the Higgs mass. To overcome this disadvantage, decay effects require a
-very large production cross section; it remains to be seen if the
-$gg \to h \to 4\ell$ channel will suffice.
+the Higgs mass.
+
+To overcome this disadvantage, momentum-dependent signatures in Higgs
+decays require a large production cross section. Gluon-fusion
+production with $h \to 4\ell$ channel has a rate that is approximately
+13 times larger than the WBF process studied
+here~\cite{deFlorian:2016spz}. Since the decay kinematics is the same
+as in the process studied here and the Fisher information scales
+linearly with the number of events, we can provide a rough estimate of
+the information in this process by scaling the decay-only Fisher
+information with this factor 13. We find that even with the increased
+rate from production in gluon fusion, the $h \to 4 \ell$ is not as
+sensitive to Higgs-gauge operators as the WBF production process. Of
+course, this simple estimate ignores the differences in the production
+kinematics.
+
+The clean $4\ell$ final state means that the Higgs can be
+reconstructed nearly free from background contributions, and a simple
+analysis of jet transverse momenta and angular correlations can access
+most of the information in the process.
 
 % This is not accidental: the reason behind this role of the momentum
 % dependence is that for all operators shown in
@@ -2297,8 +2314,6 @@ $gg \to h \to 4\ell$ channel will suffice.
 % strength tensor instead of the gauge boson field, automatically
 % introducing a momentum dependence.
 
-\comment{To here}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2306,56 +2321,233 @@ $gg \to h \to 4\ell$ channel will suffice.
 \label{sec:information_th}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Our final example is Higgs production with a single top with
-$H\to \gamma \gamma$ and a hadronic top decay. As shown in
-\autoref{fig:information_th_diag}, diagrams where the Higgs is
-radiated off a $W$ boson interfere destructively with diagrams with a
-top-Higgs coupling, making this channel a direct probe of the sign of
-the top Yukawa coupling~\cite{top_higgs}. We stick to a parton-level
-analysis at leading order in the five-flavor scheme. For our toy
-example we include only one of the dominant backgrounds, single top
-production with two photons, and in particular ignore the multi-jet
-background. The subleading $t\bar{t} \, \gamma\gamma$ background
-populates qualitatively different phase-space regions from the
-single-top signal and can be supressed with an appropriate event
-selection~\cite{Kling:2012up}. We smear the $m_{\gamma \gamma}$
-distribution of the signal process with a Gaussian of width 1.52 GeV
-estimated from Figure~6b of Reference~\cite{CMS:2016zjv}, and do not
-include any other detector effects. Our basic event selection requires
+Our final example process for $CP$-even dimension-six operators is
+Higgs production with a single top in the $t$ channel. We focus on the
+$h \to \gamma \gamma$ mode and a hadronic top decay $t \to b jj$. As
+shown in \autoref{fig:information_th_diag}, diagrams where the Higgs
+is radiated off a $W$ boson interfere destructively with diagrams with
+a top-Higgs coupling, making this channel a direct probe of the sign
+of the top Yukawa coupling~\cite{Maltoni:2001hu}. Our analysis
+focusses on the question which of the phase-space distributions
+provide access to this interesting amplitude structure. We stick to a
+parton-level analysis at leading order in the five-flavor scheme. For
+our toy example we include only one of the dominant backgrounds,
+single top production with two photons, and in particular ignore the
+multi-jet background. The subleading $t\bar{t} \, \gamma\gamma$
+background populates qualitatively different phase-space regions from
+the single-top signal and can be supressed with an appropriate event
+selection~\cite{Kling:2012up}.
+
+\begin{figure}
+  \fmfframe(0,15)(15,15){ %(L,T) (R,B)
+    \begin{fmfgraph*}(150,70)
+      \feynmansetup 
+      \fmfleft{i2,i1}
+      \fmfright{o6,o5,o4,blind3,o3,o2,blind3,blind1,blind2,o1}
+      \fmflabel{\small $q$}{i1}
+      \fmflabel{\small $b$}{i2}
+      \fmflabel{\small $q$}{o1}
+      \fmflabel{\small $\gamma$}{o2}
+      \fmflabel{\small $\gamma$}{o3}
+      \fmflabel{\small $q$}{o4}
+      \fmflabel{\small $q$}{o5}
+      \fmflabel{\small $b$}{o6}
+      %
+      % Upper quark line
+      \fmf{fermion,tension=6}{i1,v1}
+      \fmf{fermion,tension=1.7}{v1,o1}
+      %
+      % Lower quark line
+      \fmf{fermion,tension=6}{i2,v3}
+      \fmf{fermion,label=\small $t$,label.side=right,tension=3}{v3,v5}
+      \fmf{fermion,tension=3.5}{v5,o6}
+      %
+      % W exchange 
+      \fmf{wiggly,label=\small $W$,label.side=right}{v1,v2}
+      \fmf{wiggly,label=\small $W$,label.side=right}{v2,v3}
+      %
+      % Higgs 
+      \fmf{dashes,label=\small $h$,label.side=left,tension=0.2}{v2,v4}
+      \fmf{wiggly,tension=0.35}{o2,v4,o3}
+      %
+      % Top decay 
+      \fmf{wiggly,label=\small $W$,label.side=left,tension=0.7}{v5,v6}
+      \fmf{fermion,tension=0.5}{o4,v6,o5}
+      \fmfv{decoration.shape=circle,foreground=(0.8,, 0.0,, 0.0),decoration.size=5}{v2,v4}
+    \end{fmfgraph*}
+  }
+  \hspace{1cm}
+  \fmfframe(0,15)(15,15){ %(L,T) (R,B)
+    \begin{fmfgraph*}(150,70)
+      \feynmansetup
+      \fmfleft{i2,i1}
+      \fmfright{o6,o5,o4,blind2,o3,o2,blind1,o1}
+      \fmflabel{\small $q$}{i1}
+      \fmflabel{\small $b$}{i2}
+      \fmflabel{\small $q$}{o1}
+      \fmflabel{\small $\gamma$}{o2}
+      \fmflabel{\small $\gamma$}{o3}
+      \fmflabel{\small $q$}{o4}
+      \fmflabel{\small $q$}{o5}
+      \fmflabel{\small $b$}{o6}
+      %
+      % Upper quark line
+      \fmf{fermion,tension=6}{i1,v1}
+      \fmf{fermion,tension=1.7}{v1,o1}
+      %
+      % Lower quark line
+      \fmf{fermion,tension=3}{i2,v3}
+      \fmf{fermion,label=\small $t$,label.side=right,tension=2}{v3,v2}
+      \fmf{fermion,label=\small $t$,label.side=right,tension=1.5}{v2,v5}
+      \fmf{fermion,tension=1.5}{v5,o6}
+      %
+      % W exchange 
+      \fmf{wiggly,label=\small $W$,label.side=right}{v1,v3}
+      %
+      % Higgs 
+      \fmf{dashes,label=\small $h$,label.side=left,tension=0.5}{v2,v4}
+      \fmf{wiggly,tension=0.6}{o2,v4,o3}
+      %
+      % Top decay 
+      \fmf{wiggly,label=\small $W$,label.side=left,tension=0.6}{v5,v6}
+      \fmf{fermion,tension=0.4}{o4,v6,o5}
+      %
+      \fmfv{decoration.shape=circle,foreground=(0.8,, 0.0,, 0.0),decoration.size=5}{v2,v4}
+    \end{fmfgraph*}
+  }
+  \caption{Feynman diagrams for Higgs production with a single top
+    quark with $h \to \gamma \gamma$ and a hadronic top decay. The red
+    dots show the Higgs interactions modified by the dimension-six
+    operators considered in our analysis.}
+  \label{fig:information_th_diag}
+\end{figure}
+
+To simulate the experimental mass resolution, we smear the
+$m_{\gamma \gamma}$ distribution of the signal process with the
+smearing function of Reference~\cite{Kling:2016lay} and described in
+\autoref{sec:appendix_information_smearing}. We do not include any
+other detector effects. Our basic event selection requires
 %
-\begin{alignat}{4}
-  p_{T,j} &> 20 \ \gev \quad & \quad
-  |\eta_{j}| &< 5.0 \quad & \quad
-  \Delta R_{jj} &> 0.4 \quad & \quad
+\begin{align}
+  p_{T,j} &> 20 \ \gev  & 
+  |\eta_{j}| &< 5.0  & 
+  \Delta R_{jj} &> 0.4  & 
   152 \ \gev &<m_{bjj} < 192 \ \gev \notag \\ 
-  p_{T,\gamma} &> 10 \ \gev \quad & \quad
-  |\eta_{\gamma}| &< 2.5 \quad & \quad 
-  \Delta R_{\gamma j} , \Delta R_{\gamma \gamma} &> 0.4 \quad & \quad
+  p_{T,\gamma} &> 10 \ \gev  & 
+  |\eta_{\gamma}| &< 2.5  &  
+  \Delta R_{\gamma j} , \Delta R_{\gamma \gamma} &> 0.4  & 
   120 \ \gev &<m_{\gamma \gamma} < 130 \ \gev \,,
   \label{eq:information_th_acceptance_cuts}
-\end{alignat}
+\end{align}
 %
-leading to a SM $tH$ cross section of 0.10~fb and a background of 0.22~fb.
+after which the SM signal of $0.10~\fb$ faces a background of $0.22~\fb$. We
+calculate the Fisher information for $pp$ collisions at
+$\sqrt{s} = 13~\tev$ with a large amount of collected data
+%
+\begin{equation}
+  L \cdot \varepsilon = 300~\ifb \,,
+\end{equation}
+%
+with the combined particle identification and trigger efficiencies
+$\varepsilon$, equivalent to 30 expected signal events and 66 expected
+background events.
 
-We consider four $CP$-even dimension-6 operators
+Out of the $CP$-even dimension-six operators discussed in
+\autoref{sec:foundations_heft_operators}, $\ope{W}$ and $\ope{WW}$
+modify the Higgs-$W$ coupling structure, while $\ope{t}$ changes the
+value of the Higgs-top coupling. $\ope{\phi,2}$ rescales both
+contributions universally. While all these operators affect the
+$h\to \gamma \gamma$ decay as well, the largest effect is expected
+from $\ope{WW}$, which contributes to this coupling at tree level and
+can easily compete with the loop-suppressed SM term. Since we are
+mainly interested in the production kinematics, we neglect the
+subleading effects from $\ope{W}$ and $\ope{t}$ on the Higgs-photon
+coupling. Our model space is therefore parametrized by the
+dimensionless parameters
 %
-\begin{alignat}{2}
-  \ope{W}  &= i \frac{g}{2} \, (D^\mu\phi)^\dagger \sigma^k ( D^\nu\phi) \, W_{\mu\nu}^k  \qquad & \qquad
-  \ope{t \phi}  &= (\phisq) \, ( \overbar{Q}_3 \tilde{\phi} t_R)  + \text{h.c.} \notag \\
-  \ope{WW}  &= -\frac{g^2}{4} \, (\phisq) \, W^k_{\mu\nu} \, W^{\mu\nu\, k}  \qquad & \qquad
-  \ope{\phi,2}  &= \frac{1}{2} \, \partial^\mu(\phi^\dagger\phi) \, \partial_\mu(\phi^\dagger\phi) \,.
-\label{eq:information_th_ope}
-\end{alignat}
-%
-The operators $\ope{W}$ and $\ope{WW}$ affect the production amplitudes where
-the Higgs couples to a $W$, while $\ope{t \phi}$ re-scales the top
-Yukawa coupling. Both, $\ope{WW}$ and $\ope{\phi,2}$ also affect the
-$H \to \gamma \gamma$ decay.
+\begin{equation}
+  \boldtheta = \frac {v^2} {\Lambda^2}  \fourvec {f_{\phi,2}} {f_W} {f_{WW}} {f_{t \phi}} \,.
+\end{equation}
+
+As in the previous processes, we focus on the FIsher information in
+the vicinity of the SM, $\boldtheta = \boldzero$, and in the
+two-dimensional planes in the parameter space where all but two
+operators are set to zero. Using the setup described in
+\autoref{sec:information_algorithm}, we calculate the Fisher
+information for approximately 2500 parameter points.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Maximum precision on Wilson coefficients}
+\subsubsection{Total Fisher information}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Using our setup described in \autoref{sec:information_algorithm} we
+calculate the total Fisher information at the SM to be
+%
+\begin{equation}
+  I_{ij} (\boldzero) =
+\begin{pmatrix*}[r]
+  80.1 & -18.7 & -957.0 & 13.2 \\
+  -18.7 & 32.6 & 221.7 & 27.0 \\
+  -957.0 & 221.7 & 11446.1 & -146.0 \\
+  13.2 & 27.0 & -146.0 & 150.3
+\end{pmatrix*} \,.
+\end{equation}
+%
+Composing this into eigenvectors and eigenvalues (and the
+corresponding new physics reach, see
+\autoref{eq:information_new_physics_reach}), we find
+%
+\begingroup%
+\allowdisplaybreaks%
+\begin{align}
+  \boldtheta_1 &= \fourvecr {0.08} {-0.02} {-1.00} {0.01} \,:
+  & I_1 &= 11532
+  &&\leftrightarrow
+  & \left( \frac {\Lambda} {\sqrt{f}} \right)_1 &= 2550~\gev \,, \notag \\
+  %
+  \boldtheta_2 &= \fourvecr {0.00} {-0.23} {-0.01} {-0.97} \,:
+  & I_2 &= 155
+  &&\leftrightarrow
+  & \left( \frac {\Lambda} {\sqrt{f}} \right)_2 &= 868~\gev \,, \notag \\
+  %
+  \boldtheta_3 &= \fourvecr {-0.02} {0.97} {-0.02} {-0.23}\,:
+  & I_3 &= 21.3
+  &&\leftrightarrow
+  & \left( \frac {\Lambda} {\sqrt{f}} \right)_3 &= 528~\gev \,, \notag \\
+  %
+  \boldtheta_4 &= \fourvecr {1.00} {0.02} {0.08} {-0.01}\,:
+  & I_4 &= 0.1
+  &&\leftrightarrow
+  & \left( \frac {\Lambda} {\sqrt{f}} \right)_4 &= 138~\gev \,. 
+\end{align}%
+\endgroup
+%
+The large sensitivity to $\ope{WW}$ comes from the large effect of
+this operator on the $h \to \gamma \gamma$ decay in addition to
+production effects, which will already be tightly constrained once a
+$th$ measurement is feasible. The orthogonal direction in the
+$\ope{\phi,2}$-$\ope{WW}$ plane is for all practical purposes
+blind. Even with the large amount of integrated luminosity that this
+calculation is based on, the sensitivity to $\ope{W}$ and $\ope{t}$ is
+limited, with some mixing between the two operators. 
+
+\thpyramid{th_aa_global}{fig:information_th_global_distances} {Error
+  ellipses defined by the Fisher information in Higgs plus single top
+  production. We show global distances from the SM
+  $d(\boldtheta,\boldzero)$, where in each panel the $\theta_i$ not
+  shown are set to zero. The white contours show distances of
+  $d=1, 2, \dots , 5$.}
+
+Going beyond the local information geometry, we calculate global
+information distances in the model space and show them in
+\autoref{fig:information_th_global_distances}. These results confirm the
+small sensitivity of this process to all operators except
+$\ope{WW}$. Local and global distances are compared in
+\autoref{fig:information_th_geometry}.  Large differences are visible
+at the $d = 2$ level, implying that a measurement of this channel will
+always be sensitive to the squared dimension-six terms.
 
 \begin{figure}
   \includegraphics[width=0.33 \textwidth,clip,trim=0.3cm 0 0.05cm 0]{fig/information/th_geometry_fphi2_fw}%
@@ -2363,89 +2555,59 @@ $H \to \gamma \gamma$ decay.
   \includegraphics[width=0.33 \textwidth,clip,trim=0.3cm 0 0.05cm 0]{fig/information/th_geometry_ftphi_fw}%
   \caption{Error ellipses defined by the Fisher information in Higgs
     plus single top production. We show contours of local distance
-    $d_\text{local}(\boldtheta ; \boldzero)$ (dashed) and global distance
-    $d(\boldtheta,\boldzero)$ (solid).  The colored contours indicate
-    distances of $d = 1~...~5$. In grey we show example geodesics. The
-    $\theta_i$ not shown are set to zero. }
+    $d_\text{local}(\boldtheta ; \boldzero)$ (dashed) and global
+    distance $d(\boldtheta,\boldzero)$ (solid).  The colored contours
+    indicate distances of $d = 1,2,\dots,5$. In grey we show example
+    geodesics. The $\theta_i$ not shown are set to zero. }
 \label{fig:information_th_geometry}
 \end{figure}
 
 
-We calculate the Fisher information in terms of the dimensionless parameters
-%
-\begin{align}
-  \boldtheta = \frac {v^2} {\Lambda^2}  \fourvec {f_{\phi,2}} {f_W} {f_{WW}} {f_{t \phi}}
-  \label{eq:information_wilson_space_th}
-\end{align}
-%
-for 13~TeV and an integrated luminosity times efficiencies of
-$L \cdot \varepsilon = 300~\ifb$ and find
-%
-\begin{align}
-  I_{ij} (\mathbf{0}) =
-\begin{pmatrix*}[r]
-  80.1 & -18.7 & -957.0 & 13.2 \\
-  -18.7 & 32.6 & 221.7 & 27.0 \\
-  -957.0 & 221.7 & 11446.1 & -146.0 \\
-  13.2 & 27.0 & -146.0 & 150.3
-\end{pmatrix*} \, .
-\end{align}
-%
-The eigenvectors are
-%
-\begin{align}
-  \boldtheta_1 = \fourvecr {0.08} {-0.02} {-1.00} {0.01}  \qquad 
-  \boldtheta_2 = \fourvecr {0.00} {-0.23} {-0.01} {-0.97} \qquad 
-  \boldtheta_3 = \fourvecr {-0.02} {0.97} {-0.02} {-0.23} \qquad 
-  \boldtheta_4 = \fourvecr {1.00} {0.02} {0.08} {-0.01}
-\end{align}
-%
-with corresponding eigenvalues $\left( 11532, 155, 21.3, 0.1 \right)$.
-The best constrained direction along $\ope{WW}$ corresponds to the
-combination of Wilson coefficients that affects the
-$H \to \gamma \gamma$ decay in addition to production effects, which
-will already be tightly constrained once a $tH$ measurement is
-feasible. The orthogonal direction in the $\ope{\phi,2}$-$\ope{W}$
-plane is for all practical purposes blind. Even with the assumed
-sizeable event rate corresponding to 300~$\ifb$, the sensitivity to
-$\ope{W}$ and $\ope{t \phi}$ is limited, with some mixing between the
-two operators.
-
-We visualize this maximum sensitivity to dimension-6 operators in
-\autoref{fig:information_th_geometry}. With the exception of $\ope{WW}$, an
-optimal measurement can probe all operators at the
-$\Delta g \approx 0.1\dots 0.2$ level, equivalent to
-$\Lambda/\sqrt{f_{\phi,2}} \approx 600 \dots 750$~GeV.  There are
-large differences between local and global distances already at the
-$d = 2$ level, implying that a measurement of this channel will always
-be sensitive to the squared dimension-6 terms.
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Differential information}
+\subsubsection{Differential information}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure}
+  \includegraphics[width=0.49 \textwidth]{fig/information/th_information_over_maa}%
   \includegraphics[width=0.49 \textwidth]{fig/information/th_information_over_ptaa}%
-  \includegraphics[width=0.49 \textwidth]{fig/information/th_information_over_deltaeta}%
-  \caption{Distribution of the Fisher information in the Higgs plus
-    single top channel (shaded red). We also show the normalized SM
-    signal (solid black) and single-top background (dotted grey)
-    rates. The dashed blue line shows the effect of
-    $f_{t \phi} \, v^2 / \Lambda^2 = 0.2$. The last bin is an overflow
-    bin.}
-  \label{fig:information_th_differential_information}
+  \caption{Distribution of the differential SM Fisher information in
+    the Higgs plus single top channel (shaded red) with respect to the
+    mass (left) and transverse momentum (right) of the diphoton
+    system. We also show the normalized SM signal (solid black) and
+    the single-top background (dotted grey) rates. The dashed blue
+    line shows the effect of $f_{t} \, v^2 / \Lambda^2 = 0.2$. In the
+    right panel, the last bin is an overflow bin.}
+  \label{fig:information_th_differential_information_photons}
 \end{figure}
 
-In \autoref{fig:information_th_differential_information} we show the distribution
-of this information over phase space. More distributions are shown in
-Appendix~\ref{sec:information_additional_plots}. As expected, the information is
-concentrated in the $m_{\gamma \gamma} \sim m_H$ peak and in the
-high-energy tails of transverse momenta. Studying angular correlations
-between the Higgs system and the top decay products, we find that the
+In Figures~\ref{fig:information_th_differential_information_photons}
+and \ref{fig:information_th_differential_information_jets} we show the
+distribution of this information over phase space. As expected, the
+discrimination power is concentrated in the
+$m_{\gamma \gamma} \sim m_H$ peak and in the high-energy tails of the
+transverse momenta of jets or photons. Studying angular correlations
+between the diphoton system and the top decay products, we find that the
 region $\Delta \eta_{ \gamma \gamma, bjj} \lesssim 3$ contains a lot
-of discrimination power.
+of information.
+
+\begin{figure}
+  \includegraphics[width=0.49 \textwidth]{fig/information/th_information_over_ptj}%
+  \includegraphics[width=0.49 \textwidth]{fig/information/th_information_over_maabjj}\\%
+  \includegraphics[width=0.49 \textwidth]{fig/information/th_information_over_deltaeta}%
+  \includegraphics[width=0.49 \textwidth]{fig/information/th_information_over_deltaphi}%
+  \caption{Distribution of the differential SM Fisher information in
+    the Higgs plus single top channel (shaded red) with respect to the
+    transverse momentum of the leading jet (top left), the invariant
+    mass of the whole $th$ system (top right), and the differences in
+    pseudorapidity and azimuthal angle between the diphoton system and
+    the top decay products (bottom). We also show the normalized SM
+    signal (solid black) and the single-top background (dotted grey)
+    rates. The dashed blue line shows the effect of
+    $f_{t} \, v^2 / \Lambda^2 = 0.2$. The last bins are overflow bins
+    where applicable.}
+  \label{fig:information_th_differential_information_jets}
+\end{figure}
 
 
 
@@ -2454,44 +2616,63 @@ of discrimination power.
 \subsubsection*{Information in distributions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In a next step, we compare this full information to the reduced
-information in one-dimensional and two-dimensional distributions of
-kinematic observables. We now require harder cuts
+The next question is again how much of this maximal information is contained in various kinematic distributions. A histogram-based analysis requires a reasonable signal-to-background ratio, so we require
 %
-\begin{align}
+\begin{equation}
   p_{T,j_1} > 50~\gev \qquad 
   p_{T,\gamma} > 50,~30~\gev \qquad
-  122~\gev < m_{\gamma \gamma} < 128~\gev \,,
+  122~\gev < m_{\gamma \gamma} < 128~\gev \,.
   \label{eq:information_th_cuts}
-\end{align}
+\end{equation}
 %
-which reduces the background to the level of the signal. We then
-analyze the distributions~\cite{top_higgs,Kling:2012up}
+This reduces the single-top background to the level of the
+signal. Based on this selection, we analyze the information in the
+following distributions:
 %
 \begin{itemize}
-\item $p_{T,\gamma_1}$ with bin size 25~GeV up to 400~GeV and an
+\item the transverse momentum of the leading photon, $p_{T,\gamma_1}$,
+  with bin size 25~GeV up to 400~GeV and an overflow bin;
+%
+\item the invariant mass of the diphoton system, $m_{\gamma\gamma}$,
+  with bin size 1~GeV in the allowed range of $123~...~127~\gev$;
+%
+\item the transverse momentum of the diphoton system,
+  $p_{T,\gamma \gamma}$ with bin size 40~GeV up to 600~GeV and an
   overflow bin;
-\item $m_{\gamma\gamma}$ with bin size 1~GeV in the allowed range of
-  $123~...~127~\gev$;
-\item $p_{T,\gamma \gamma}$ with bin size 40~GeV up to 600~GeV and an
+%
+\item the separation in aximuthal angle between the two photons,
+  $\Delta \phi_{\gamma \gamma}$, with bin size $\pi/10$;
+%
+\item the transverse momentum of the leading light (\ie non-$b$) jet,
+  $p_{T,j_1}$, with bin size 40~GeV up to 400~GeV and an overflow bin;
+%
+\item the transverse momentum of the $b$ jet, $p_{T,b}$, with bin size
+  40~GeV up to 400~GeV and an overflow bin;
+%
+\item the transverse momentum of the reconstructed $t$ momentum,
+  $p_{T,bjj}$, with bin size 40~GeV up to 600~GeV and an overflow bin;
+%
+\item the separation in azimuthal angle between the diphoton system
+  and the $b$ jet, $\Delta \phi_{\gamma \gamma, b}$, with bin size
+  $\pi / 10$;
+%
+\item the separation in pseudorapidity between the diphoton system and
+  the $b$ jet, $\Delta \eta_{\gamma\gamma, b}$, with bin size $0.5$ up
+  to $5.0$ and an overflow bin;
+%
+\item the invariant mass of the full $th$ system, $m_{\gamma \gamma bjj}$, with bin size 100~GeV up to 1500~GeV and an
   overflow bin;
-\item $\Delta \phi_{\gamma \gamma}$ with bin size $\pi/10$;  
-\item $p_{T,j_1}$ with bin size 40~GeV up to 400~GeV and an
+%
+\item the transvserse momentum of the full $th$ system,
+  $p_{T,\gamma \gamma bjj}$ with bin size 40~GeV up to 400~GeV and an
   overflow bin;
-\item $p_{T,b}$ with bin size 40~GeV up to 400~GeV and an
-  overflow bin;
-\item $p_{T,bjj}$ with bin size 40~GeV up to 600~GeV and an
-  overflow bin;
-\item $\Delta \phi_{\gamma \gamma, b}$ with bin size $\pi / 10$;
-\item $\Delta \eta_{\gamma\gamma, b}$ with bin size $0.5$ up to $5.0$ and an
-  overflow bin;
-\item $m_{\gamma \gamma bjj}$ with bin size 100~GeV up to 1500~GeV and an
-  overflow bin;
-\item $p_{T,\gamma \gamma bjj}$ with bin size 40~GeV up to 400~GeV and an
-  overflow bin;
-\item $\Delta \phi_{\gamma \gamma, bjj}$ with bin size $\pi / 10$;
-\item $\Delta \eta_{\gamma\gamma, bjj}$ with bin size $0.5$ up to $5.0$ and an
-  overflow bin.
+%
+\item the separation in azimuthal angle between the diphoton system and
+  the reconstructed $t$ momentum, $\Delta \phi_{\gamma \gamma, bjj}$, with bin size $\pi / 10$; and
+%
+\item the separation in pseudorapidity between the diphoton system and
+  the reconstructed $t$ momentum, $\Delta \eta_{\gamma\gamma, bjj}$,
+  with bin size $0.5$ up to $5.0$ and an overflow bin.
 \end{itemize} 
 
 \begin{figure}
@@ -2506,45 +2687,73 @@ analyze the distributions~\cite{top_higgs,Kling:2012up}
 \end{figure}
 
 As in the WBF case, different observables probe different Wilson
-operators. \autoref{fig:information_wbf_tautau_histograms_contours} shows that
-the di-photon transverse momentum constrains mostly the $\ope{W}$
-direction, while the rapidity separation between the Higgs and top
-systems is more sensitive to $\ope{t\phi}$.
+operators. In \autoref{fig:information_wbf_tautau_histograms_contours}
+we demonstrate that the diphoton transverse momentum constrains mostly
+the $\ope{W}$ direction, while the rapidity separation between the
+Higgs and top systems is more sensitive to $\ope{t}$.
 
 \begin{figure}
   \includegraphics[width= \textwidth]{fig/information/th_histos_comparison}
   \caption{Fisher information for the Higgs plus single top channel
     exploiting the full phase space, after the cuts in
-    \autoref{eq:information_th_cuts}, and for several kinematic distributions.
-    The top panel shows the eigenvalues, the colors denote the
-    composition of the corresponding eigenvectors. The right axis
-    translates the eigenvalues into a new physics reach for the
-    corresponding combination of Wilson coefficients.  In the bottom
-    panel we show the determinants of the Fisher information
-    restricted to $\ope{\phi,2}$, $\ope{W}$, and $\ope{t\phi}$,
-    normalized to the full information. Again, the right axis
-    translates them into a new physics reach.}
+    \autoref{eq:information_th_cuts}, and for several kinematic
+    distributions.  The top panel shows the eigenvalues, the colors
+    denote the composition of the corresponding eigenvectors. The
+    right axis translates the eigenvalues into a new physics reach for
+    the corresponding combination of Wilson coefficients.  In the
+    bottom panel we show the determinants of the Fisher information
+    restricted to $\ope{\phi,2}$, $\ope{W}$, and $\ope{t}$, normalized
+    to the full information. Again, the right axis translates them
+    into a new physics reach.}
 \label{fig:information_th_histograms_comparison}
 \end{figure}
 
-In \autoref{fig:information_th_histograms_comparison} we compare the eigenvalues,
-eigenvectors and determinants of the information matrices in all of
-the above distributions. We confirm that the photon observables mostly
-probe changes in the Higgs-gauge coupling from $\ope{W}$, while a
-rescaled top Yukawa will be visible in the properties of the top decay
-products. Distributions of the properties of the $b$ jet consistently
-contain significantly less information than the corresponding
-distributions for the reconstructed top system. The rapidity
-difference between the $\gamma \gamma$ system and the reconstructed
-top provides a particularly good probe of this
-operator~\cite{top_higgs}. Combining this variable with the transverse
-momentum of the $\gamma \gamma$ system we can probe new physics scales
-in the $\ope{W}$-$\ope{t\phi}$ plane around 550~GeV in the
-$\ope{W}$-$\ope{WW}$-$\ope{\phi,2}$ space, compared to 700~GeV for the
-fully differential cross section. This corresponds to almost three
-times more data under our simplifying assumptions. 
+In \autoref{fig:information_th_histograms_comparison} we compare the
+eigenvalues, eigenvectors, and determinants of the information
+matrices in all of the above distributions, in analogy to
+\autoref{fig:information_wbf_tautau_histograms_comparison}. We confirm
+that the photon observables mostly probe changes in the Higgs-gauge
+coupling from $\ope{W}$, while a rescaled top Yukawa will be visible
+in the properties of the top decay products. Distributions of the
+properties of the $b$ jet consistently contain significantly less
+information than the corresponding distributions for the reconstructed
+top system. The rapidity difference between the $\gamma \gamma$ system
+and the reconstructed top provides a particularly good probe of this
+operator. Combining this variable with the transverse momentum of the
+$\gamma \gamma$ system, we can probe new physics scales in the in the
+$\ope{\phi,2}$-$\ope{W}$-$\ope{t\phi}$ space of around
+$\Lambda / \sqrt{f} \sim 550~\gev$, compared to $700~\gev$ based on
+the full high-dimensional kinematics. This corresponds to almost three
+times more data. Of course, the histogram-based analysis would profit
+from an optimisation of the selection cuts in
+\autoref{eq:information_th_cuts}, which goes beyond the scope of this
+demonstration.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Summary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Higgs production in association with a single top has an interesting
+amplitude structure where diagrams with Higgs-gauge interactions
+interfere destructively with diagrams depending on the top Yukawa
+coupling. Small changes to these interactions can in principle change
+the rate and kinematics drastically. We find that kinematic properties
+of the Higgs decay products and observables related to the top system
+provide orthogonal information on the theory space; in particular the
+diphoton transverse momentum as well as the rapidity separation of the
+$\gamma \gamma$ and the $bjj$ system provide useful information.
+
+Unfortunately, the tiny cross section of this process strongly limits
+the constraining power on dimension-six operators. Even with
+$300~\ifb$ of data, assuming perfect efficiencies, these distributions
+are only sensitive to new physics scales around $550~\gev$, while an
+optical multivariate analysis might be able to probe scales up to
+$700~\gev$ according to the Cram\'er-Rao bound.
 %
-\comment{To here on Saturday}
+\comment{To here}
+
 
 
 
