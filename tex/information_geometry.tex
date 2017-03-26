@@ -324,7 +324,7 @@ innovative at least for this field.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Information geometry}
+\section{Essential statistics}
 \label{sec:information_formalism}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -455,50 +455,94 @@ $\theta \to \Theta (\theta)$,
   \label{eq:information_information_covariant_transformation}
 \end{equation}
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Information geometry}
+\label{sec:information_formalism_geometry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 As a symmetric and positive definite rank-two tensor, the Fisher
 information defines a Riemannian metric\footnote{This is only strictly
   true in the absence of blind directions, otherwise the information
   matrix is only positive semi-definite and defines a pseudo-metric.}
-on the theory space. This is the cornerstone of information
-geometry~\cite{efron1975, amari1982}, which uses methods from
-differential geometry to analyse the structure of the probability
-distributions, or the relation between experiment and
-models. Interpreted as a metric, the Fisher information defines a
-distance measure between parameter points. First, we can define a
-\emph{local distance} in the tangent space at some point
-$\boldtheta_a$,
+on the manifold given by the theory space. This is the cornerstone of
+information geometry~\cite{efron1975, amari1982}, which uses methods
+from differential geometry to analyse the structure of the probability
+distributions, or the relation between experiment and models.
+Interpreted as a metric, the Fisher information defines a
+infinitesimal distances
 %
 \begin{equation}
-  d_{\text{local}}( \boldtheta_b; \boldtheta_a ) = \sqrt{I_{ij} (\boldtheta_a) (\theta_{b\,i} - \theta_{a\,i}) (\theta_{b\,j}  - \theta_{a\,j} )} \,.
-  \label{eq:information_local_distances}
+  \diff s^2 = I(\theta) \, \diff \theta_i \, \diff \theta_j \,.
 \end{equation}
 %
-Contours of local distances translate the Fisher information in one
-point into the minimal error ellipsoids according to the Cram\'er-Rao
-bound. The distance values have an intuitive interpretation: if the
-estimator is distributed according to a Gaussian around the true
-value, $d_{\text{local}}( \boldtheta_b; \boldtheta_a )$ corresponds to
-how unlikely it is to measure $\hat{\boldtheta} = \boldtheta_b$ if the
-true value is $\boldtheta_0 = \boldtheta_a$, expressed in standard
-deviations or ``sigmas''. In other words, in this limit the distance
-measure is equivalent to the maximal expected significance with which
-$\boldtheta_a$ can be excluded if $\boldtheta_b$ is true.
+Different from the conventions in differential geometry, we use lower
+indices for vectors and the metric tensor and sum over repeated lower
+indices.
 
-Goying beyond the tangent space, \emph{global distances} can be
-defined along geodesics,
+This directly defines a \emph{local distance} in the tangent space at
+some point $\boldtheta_a$. We usually consider the distance between
+$\boldtheta_a$ itself and some other point $\boldtheta_a$ in this
+tangent space,
+%
+\begin{equation}
+  \dlocal( \boldtheta_b; \boldtheta_a )
+  \equiv \sqrt{I_{ij} (\boldtheta_a) (\theta_{b\,i} - \theta_{a\,i}) (\theta_{b\,j}  - \theta_{a\,j} )} \,.
+  \label{eq:information_local_distances}
+\end{equation}
+
+Contours of local distances
+$\dlocal ( \boldtheta_b; \boldtheta_a ) = d$ are directly related to
+the optimal error contours of a measurement according to the
+Cram\'er-Rao bound. Since these distances are based on the Fisher
+information at $\boldtheta_a$, they describe how unlikely it is to
+measure $\hat{\boldtheta} = \boldtheta_b$ if
+$\boldtheta_0 = \boldtheta_a$ is the true value. More precisely, if an
+unbiased estimator $\hat{\boldtheta}$ with minimal variance (\ie an
+optimal measurement) is distributed according to a Gaussian,
+$\dlocal( \boldtheta_b; \boldtheta_a )$ expresses how unlikely it is
+to measure $\hat{\boldtheta} = \boldtheta_b$ if the true value is
+$\boldtheta_0 = \boldtheta_a$, expressed in standard deviations or
+``sigmas''. In other words, in this Gaussian approximation the
+distance measure is equivalent to the maximal expected significance
+with which $\boldtheta_a$ can be excluded if $\boldtheta_b$ is true.
+
+Goying beyond the tangent space, \emph{global distances} between two
+points on the model manifold can be defined along geodesics,
 %
 \begin{equation}
   d(\boldtheta_a,\boldtheta_b)
   = \min_{\boldtheta(s)} \;
-  \int_{s_a}^{s_b} \!\! \mathrm{d} s \; \sqrt{I_{ij} \tder {\theta_i (s)} s \tder {\theta_j (s)} s } \,,
+  \int_{s_a}^{s_b} \!\! \mathrm{d} s \; \sqrt{I_{ij} \tder {\theta_i (s)} s \tder {\theta_j (s)} s } \,.
   \label{eq:information_global_distances}
 \end{equation}
 %
-providing a more general and symmetric notion of discrimination power
-between two points without having to pick the true value of the
-parameter. Global distances are particularly useful to track the
-effect of higher powers in the theory parameters, as we show in
-\autoref{sec:information_eft}.
+The shortest path $\boldtheta(s)$ satisfies the geodesic equation
+%
+\begin{equation}
+  \ddot{\theta}^i (s) = - \Gamma^i_{\;jk} (\boldtheta (s) ) \; \dot{\theta}^j (s) \; \dot{\theta}^k (s)
+\end{equation}
+%
+where we, for once, distinguish upper and lower indices; indices are
+raised and lowered with the metric $I_{ij}$. Dots denote derivatives
+$\dot{\boldtheta} \equiv \diff \boldtheta(s) / \diff s$ and the
+Christoffel symbols are defined as \comment{Check!}
+%
+\begin{equation}
+  \Gamma_{ijk} (\boldtheta) \equiv \frac 1 2 \left[ \pder {I_{ik}(\boldtheta) }{\theta^j} + \pder {I_{ij}(\boldtheta)}{\theta^k} - \pder {I_{jk}(\boldtheta)}{\theta^i} \right] \,. 
+\end{equation}
+
+This distance measure is symmetric,
+$d(\boldtheta_a,\boldtheta_b) = d(\boldtheta_b,\boldtheta_a)$, and
+provides a more general notion of discrimination power between two
+points that does not require choosing one of them to evaluate the
+Fisher information. Unlike local distances, global distances are
+sensitive to how the Fisher information changes over model space, \ie
+they take into account the curvature of the information geometry. From
+a practical perspective, this makes global distances a useful tool to
+track the effect of higher powers in the theory parameters, as we show
+in \autoref{sec:information_eft}.
 
 % As an aside, the Fisher information also plays an important role in
 % Bayesian inference. In Jeffrey's prior it is used to define an
@@ -825,6 +869,9 @@ without sum over $k$. Local and global information distances now refer
 to the combined space of theory and nuisance parameters
 $(\boldtheta,\boldnu)$.
 
+
+\comment{More motivation?}
+%
 In practice we are interested in the sensitivity of an experiment on
 the theory parameters without explicit dependence on the nuisance
 parameters.  We define a profiled local distance between two points
@@ -832,7 +879,7 @@ $\boldtheta_a$ and $\boldtheta_b$ as
 %
 \begin{equation}
   d_{\text{profiled}} (\boldtheta_b, \boldtheta_a)
-  = \min_{\boldnu}   \; d_{\text{local}}( (\boldtheta_b,\boldnu) ;
+  = \min_{\boldnu}   \; \dlocal( (\boldtheta_b,\boldnu) ;
   (\boldtheta_a , \boldzero) ) \,.
 \end{equation}
 %
@@ -857,7 +904,8 @@ $(n-1) \times (n-1)$ matrix
 \begin{equation}
   I^{\text{profiled}}_{ab} = I^{\text{theory}}_{ab} - \frac {m_a m_b} {s} \,.
 \end{equation}
-
+%
+\comment{Include calculation here, or in appendix?}
 
 
 
@@ -919,6 +967,28 @@ between linearized distances based on the SM Fisher information metric
 and global distances measured along geodesics, related to the
 curvature of the information geometry, therefore provides an intuitive
 measure of the role of $\ord{1/\Lambda^4}$ contributions.
+
+\newparagraph
+%
+Different bases for effective operators are physically clearly
+equivalent, and the theory-space directions defined by the basis
+operators $\ope{i}$ do not have a special meaning. Any statistical
+tool that singles out individual directions of parameter points in
+model space can introduce a bias towards a specific operator base, and
+in the worst case be blind to effects on diagonal directions, \eg
+along $\ope{i} + \ope{j}$. Our approach, based on a geometric
+description of the model space, does not suffer from these
+problems.
+
+In particular, the Fisher information transforms covariantly under
+basis transformations, see
+\autoref{eq:information_information_covariant_transformation}. Eigenvalues,
+traces, and determinants of the Fisher information are invariant under
+rotations $\ope{i} \to R_{ij} \ope{j}$ with $R \in O(n)$. Rescalings
+$\ope{i} \to \alpha \ope{i}$ change the eigenvalues of individual
+information matrices. But in our analysis we will usually compare the
+information in different approaches relative to each other, and ratios
+such as $\det I_1 / \det I_2$ remain invariant even then.
 
 
 
@@ -1647,12 +1717,16 @@ dimension-six terms will have a larger effect.
 
 In a next step, we calculate the distribution of this information,
 evaluated at the SM point $\boldtheta = \boldzero$, over phase
-space. In
+space. Following \autoref{sec:information_differential}, we calculate
+the Fisher information in bins of kinematic variables. This set of
+information matrices can be condensed into a single real-valued
+function of the phase-space variables by calculating the
+determinants. The resulting distribution of differential information
+over typical kinematic variables is shown in
 Figures~\ref{fig:information_wbf_tautau_differential_information_taus}
-and \ref{fig:information_wbf_tautau_differential_information_jets} we
-show the differential cross sections of the signal and dominant
-background process for typical kinematic distributions and compare it
-to the differential information.
+and \ref{fig:information_wbf_tautau_differential_information_jets} and
+compared to the differential cross sections of the signal and the
+dominant background process.
 
 \begin{figure}
   \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_information_over_mtautau}%
@@ -1767,6 +1841,20 @@ curve is by design blind to.
   \label{fig:information_wbf_tautau_cut_roc}
 \end{figure}
 
+\newparagraph
+%
+The distribution of the differential Fisher information also provides
+us with another perspective on the EFT validity issues analysed in the
+previous chapter\dots
+%
+\comment{Write about EFT validity cuts and explain Figure~\ref{fig:information_wbf_tautau_scales}!}
+
+\begin{figure}
+  \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_scales}%
+  \caption{\dots}
+  \label{fig:information_wbf_tautau_scales}
+\end{figure}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1852,7 +1940,7 @@ of the following standard observables:
   \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_histos_contours}
   \caption{Information from histograms compared to the full
     information  (black) in the WBF $H \to \tau \tau$ channel, shown as contours
-    $d_{\text{local}}(\boldtheta ; \boldzero) = 1$. We include
+    $\dlocal(\boldtheta ; \boldzero) = 1$. We include
     $p_{T,j_1}$, $\Delta \phi_{jj}$, their naive combination assuming
     no mutual information, and their two-dimensional histogram. The
     $\theta_i$ not shown are set to zero.}
@@ -1902,7 +1990,7 @@ operators $\ope{\phi,2}$, $\ope{W}$, and $\ope{WW}$, to avoid results
 that strongly depends on the other two operators, which cannot be
 measured reliably in this process anyway. These determinants provide a
 straightforward measure of the information in distributions that is
-independent of EFT basis rotations.
+independent of EFT basis rotations, see \autoref{sec:information_eft}.
 
 In general, one-dimensional histograms of single observables probe
 individual directions in phase space well, but always suffer from
@@ -2177,7 +2265,7 @@ by the $4 \ell$ system.
     dimension-6 operators only in the production vertex (red), only in
     the decay vertex (blue), and both (black). The information is
     visualized as local contours
-    $d_{\text{local}}(\boldtheta ; \boldzero) = 1$. The $\theta_i$ not shown
+    $\dlocal(\boldtheta ; \boldzero) = 1$. The $\theta_i$ not shown
     are set to zero.}
 \label{fig:information_wbf_4l_production_decay}
 \end{figure}
@@ -2679,7 +2767,7 @@ following distributions:
   \includegraphics[width=0.49 \textwidth]{fig/information/th_histos_contours}
   \caption{Information from histograms compared to the full
     information (black), shown as contours
-    $d_{\text{local}}(\boldtheta ; \boldzero) = 1$. We include
+    $\dlocal(\boldtheta ; \boldzero) = 1$. We include
     $p_{T,\gamma \gamma}$, $\Delta \eta_{\gamma\gamma, bjj}$, their naive combination assuming
     no mutual information, and their two-dimensional histogram. The
     $\theta_i$ not shown are set to zero.}
@@ -2779,7 +2867,7 @@ $700~\gev$ according to the Cram\'er-Rao bound.
   \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_systematics_profiled.pdf}%
   \caption{Effects of Gaussian uncertainties of $5\%$ and $10\%$ on
     the total signal rate. In the left panel we show the expected
-    error ellipse $d_{\text{local}}( (g,\nu) ; \boldzero) = 1$ in
+    error ellipse $\dlocal( (g,\nu) ; \boldzero) = 1$ in
     the plane spanned by a physical parameter and the nuisance
     parameter $\nu$ rescaling the signal rate. In the right panel we
     show the error ellipses in the $\ope{W}$-$\ope{\phi,2}$ plane
@@ -2873,6 +2961,7 @@ convenience.
 \subsubsection*{Ambient geometry}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\comment{To here on Monday}
 
 
 
@@ -2881,6 +2970,9 @@ convenience.
 \label{sec:information_conclusions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\comment{Mention that our results to not include systematics and
+  theory uncertainties; link to Chapter 3.}
+ 
 We have used information geometry to calculate the maximum sensitivity
 of Higgs measurements to dimension-6 operators, to understand the
 structure of the observables, and to discuss how to improve these
@@ -2931,4 +3023,4 @@ to optimize measurement strategies.  We have demonstrated this
 approach in different Higgs channels for dimension-6 operators, but
 it can easily be translated to other processes and models. 
 %
-\comment{To here on Sunday}
+\comment{To here on Tuesday}

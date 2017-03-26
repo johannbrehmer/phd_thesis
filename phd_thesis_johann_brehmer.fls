@@ -1020,6 +1020,9 @@ INPUT ./fig/information/wbf_tautau_tunecuts_purity_vs_information.pdf
 INPUT fig/information/wbf_tautau_tunecuts_roc.pdf
 INPUT ./fig/information/wbf_tautau_tunecuts_roc.pdf
 INPUT ./fig/information/wbf_tautau_tunecuts_roc.pdf
+INPUT fig/information/wbf_tautau_scales.pdf
+INPUT ./fig/information/wbf_tautau_scales.pdf
+INPUT ./fig/information/wbf_tautau_scales.pdf
 INPUT fig/information/wbf_tautau_histos_contours.pdf
 INPUT ./fig/information/wbf_tautau_histos_contours.pdf
 INPUT ./fig/information/wbf_tautau_histos_contours.pdf
@@ -1206,7 +1209,6 @@ INPUT ./fig/information/wbf_tautau_distance_vs_llr.pdf
 INPUT ./fig/information/wbf_tautau_distance_vs_llr.pdf
 INPUT tex/conclusions.tex
 INPUT tex/conclusions.tex
-INPUT /usr/local/texlive/texmf-local/fonts/tfm/adobe/MinionPro/MinionPro-It-osf-ot1.tfm
 INPUT tex/acknowledgements.tex
 INPUT tex/acknowledgements.tex
 INPUT tex/appendix.tex
@@ -1237,7 +1239,6 @@ INPUT ./diagrams.mp
 INPUT phd_thesis_johann_brehmer.aux
 INPUT ./phd_thesis_johann_brehmer.out
 INPUT ./phd_thesis_johann_brehmer.out
-INPUT /usr/local/texlive/texmf-local/fonts/enc/dvips/MinionPro/a_qzqzlj.enc
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc
 INPUT /usr/local/texlive/texmf-local/fonts/enc/dvips/MinionPro/a_jidws5.enc
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc
