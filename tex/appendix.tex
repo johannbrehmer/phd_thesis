@@ -584,6 +584,165 @@ For the Wilson coefficients, we find
 
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Nonlinear field redefinitions}
+\label{sec:appendix_redefinitions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In \autoref{sec:foundations_eft_bottom_up} we argued that non-linear
+field redefinitions of the form given in
+\autoref{eq:foundation_field_redefinitions_ansatz} leave the
+$S$-matrix elements and thus all observable physics invariant, but
+change the form of the Lagrangian. According to
+\autoref{eq:foundations_field_redefinitions}, the leading term of the
+change of the Lagrangian is just given by the classical equations of
+motion. This defines an equivalence relation between some operators
+that can be used to remove redundant operators and define a minimal
+basis, as discussed in \autoref{sec:foundations_heft_operators} for
+the Higgs EFT.
+
+Here we illustrate this procedure by explicitly calculating the effect
+of such a non-linear field redefinition without truncating the
+Lagrangian at the leading order. We start with the $CP$-even
+$B$-$\phi$ sector of the SM effective field theory, and add effective
+operators up to mass dimension six. Ordering the terms by mass
+dimension, it reads
+%
+\begin{align}
+  \lgr{before}
+  &= - \mu^2 \phisq \notag \\
+  %
+  &\phantom{=}
+    - \frac 1 4 \, B_{\mu\nu} B^{\mu \nu} + (D^\mu \phi)^\dagger (D_\mu \phi) - \lambda \, (\phisq)^2 \notag \\
+  %
+  &\phantom{=}
+    + \frac {f_{\phi,1}} {\Lambda^2} \, (D_\mu\phi)^\dagger \phi \; \phi^\dagger D^\mu\phi 
+    + \frac {f_{\phi,2}} {\Lambda^2} \, \frac{1}{2}\partial^\mu(\phisq)\,\partial_\mu(\phisq)
+    + \frac {f_{\phi,3}} {\Lambda^2} \, \frac{1}{3}(\phisq)^3 \notag \\
+  %
+  &\phantom{=}
+    + \frac {f_{\phi,4}} {\Lambda^2} \, (\phisq)  (D_\mu \phi)^\dagger D^\mu \phi
+    + \frac {f_{B}} {\Lambda^2} \, \frac{\im g'}{2 }(D^\mu\phi^\dagger)(D^\nu\phi)\,B_{\mu\nu}
+    - \frac {f_{BB}} {\Lambda^2} \, \frac{g'^2}{4} (\phisq)\,B_{\mu\nu}\,B^{\mu\nu} \notag \\
+  %
+  &\phantom{=}
+  + \ord{1/\Lambda^4} \,.
+\end{align}
+
+The simplest non-linear field transformation is
+%
+\begin{equation}
+  \phi \to \phi + \frac {\varepsilon} {\Lambda^2} (\phisq) \phi \,.
+  \label{eq:appendix_redefinition_ansatz_phi}
+\end{equation}
+%
+It transforms this Lagrangian into
+%
+\begin{equation}
+  \lgr{after} = \lgr{before} + \delta \lgr{$4$} + \delta \lgr{$6$} + \delta \lgr{$8$} + \delta \lgr{$\geq 10$}
+\end{equation}
+%
+where the indices denote the mass dimension of the operators. The SM
+dimension-two term generates
+%
+\begin{equation}
+  \delta \lgr{$4$} = -  2 \mu^2 \, \frac {\varepsilon}{\Lambda^2} \, (\phisq)^2 \,. 
+    \label{eq:appendix_redefinition_dim4}
+\end{equation}
+%
+At the dimension-six level, we have
+%
+\begin{equation}
+  \delta \lgr{$6$}
+  =
+  \frac {\varepsilon}{\Lambda^2} \left[
+    \partial^\mu(\phisq) \, \partial_\mu(\phisq) 
+    - 4 \lambda \, (\phisq)^3 
+    + 2 \, \phisq \,  (D_\mu \phi)^\dagger \, D^\mu \phi
+    \right]
+    - \mu^2 \, \frac {\varepsilon^2}{\Lambda^4} \,  (\phisq)^3 \,. 
+    \label{eq:appendix_redefinition_dim6}
+\end{equation}
+%
+The effects at dimension eight read
+%
+\begin{align}
+  \delta \lgr{$8$} &= \frac {\varepsilon}{\Lambda^4} \Biggl[
+                     \frac  {\im g' f_B} {2} \; \partial_\mu (\phisq) \, (\phi^\dagger \overleftrightarrow{D}_\nu \phi) \, B^{\mu\nu}
+                     + f_{\phi,4} \; \phisq \, \partial^\mu(\phisq) \, \partial_\mu(\phisq) \notag \\
+  %
+  &\phantom{= \frac {\varepsilon}{\Lambda^4} \Biggl[ }
+                     + \im g' f_B \; \phisq \, (D_\mu\phi^\dagger) D_\nu\phi \, B^{\mu\nu} 
+    + 4 f_{\phi,1} \; \phisq \, (D_\mu\phi)^\dagger \phi \, \phi^\dagger D^\mu\phi \notag \\
+  %
+  &\phantom{= \frac {\varepsilon}{\Lambda^4} \Biggl[ }
+    + f_{\phi,1} \; \phisq \, \partial^\mu(\phisq) \, \partial_\mu(\phisq) 
+    + 4 f_{\phi,4} \; (\phisq)^2 \,  (D_\mu\phi)^\dagger \, D^\mu \phi \notag \\
+  %
+  &\phantom{= \frac {\varepsilon}{\Lambda^4} \Biggl[ }
+    - \frac 1 2 g'^2 f_{BB} \; (\phisq)^2 \, B_{\mu\nu} \, B^{\mu\nu}
+    + 2 f_{\phi,3} (\phisq)^4
+    \Biggr] \notag \\
+  %
+  &\phantom{={}}
+    +\frac {\varepsilon^2}{\Lambda^4} \Biggl[
+    + 2 \; \phisq \, \partial^\mu(\phisq) \, \partial_\mu(\phisq) 
+    - 6 \lambda \, (\phisq)^4
+    + (\phisq)^2 \,  (D_\mu \phi)^\dagger \, D^\mu \phi
+    \Biggr] \,,
+    \label{eq:appendix_redefinition_dim8}
+\end{align}
+%
+and so on for higher mass dimensions.
+
+Setting the $\ord{\varepsilon}$ terms in
+Equations~\eqref{eq:appendix_redefinition_dim4} to
+\eqref{eq:appendix_redefinition_dim8} to zero corresponds exactly to
+the classical equations of motion for $\phi$, as discussed in
+\autoref{sec:foundations_eft_bottom_up} and applied to the SM EFT in
+\autoref{eq:foundations_equivalence_from_eom_phi}. The higher orders
+in $\varepsilon$ are missing in the equations of motion, but including
+them does not affect our choice of redundant operators.
+
+Similarly, a transformation 
+%
+\begin{equation}
+  B_\mu \to B_\mu + \frac {\varepsilon} {\Lambda^2} \, \phisq \, B_\mu
+  \label{eq:appendix_redefinition_ansatz_b}
+\end{equation}
+%
+will correspond to the classical equations of motion for $B_\mu$ plus
+$\ord{\varepsilon^2}$ corrections.
+
+If we use transformations like
+\autoref{eq:appendix_redefinition_ansatz_phi} or
+\autoref{eq:appendix_redefinition_ansatz_b} (or, equivalently, the
+equations of motion) to remove redundant dimension-six operators from
+the Lagrangian, we cannot use exactly the same freedom to also
+manipulate dimension-eight operators in a specific way. To do so, we
+have to add additional degrees of freedom to our transformations, for
+instance with
+%
+\begin{equation}
+  \phi \to \phi
+  + \frac {\varepsilon} {\Lambda^2} (\phisq) \phi 
+  + \frac {\varepsilon_1} {\Lambda^4} \, B_{\mu\nu} B^{\mu \nu} \, \phi 
+  + \frac {\varepsilon_2} {\Lambda^4} \, (D^\mu \phi)^\dagger (D_\mu \phi)  \, \phi
+  + \frac {\varepsilon_3} {\Lambda^4}  \, (\phisq)^2 \, \phi  \,.
+\end{equation}
+%
+The new parameters $\varepsilon_i$ will generate dimension-six
+operators from the $\mu^2$ term and dimension-eight operators from the
+SM dimension-four terms. Again, the $\ord{\varepsilon_i}$ terms in the
+transformed Lagrangian correspond to the equations of motion in
+$\phi$, now multiplied with dimension-four operators. Combined
+transformations as in \autoref{eq:appendix_redefinition_ansatz_phi}
+let us remove redundant dimension-six and dimension-eight operators
+simultaneously.
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Model fine print}
 \label{sec:appendix_models}

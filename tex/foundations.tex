@@ -1076,6 +1076,7 @@ independent. This can be seen from a field redefinition of the form
 %
 \begin{equation}
   \phi(x) \to \phi'(x) = \phi(x) + \varepsilon f(x)
+  \label{eq:foundation_field_redefinitions_ansatz}
 \end{equation}
 %
 where $\varepsilon$ is some small parameter and $f(x)$ can contain any
@@ -1089,8 +1090,10 @@ field is then (after integration by parts)
   \label{eq:foundations_field_redefinitions}
 \end{equation}
 %
-Such a transformation does not change the physics, i.\,e.\ the
-$S$-matrix elements~\cite{Politzer:1980me, Georgi:1991ch, Arzt:1993gz,
+We demonstrate this in a concrete example in
+Appendix~\ref{sec:appendix_redefinitions}. Such a transformation does not
+change the physics, i.\,e.\ the $S$-matrix
+elements~\cite{Politzer:1980me, Georgi:1991ch, Arzt:1993gz,
   Simma:1993ky}, so we can equivalently use the new action instead of
 the original one. In this way, each equation of motion provides us
 with a degree of freedom to swap operators for a combination of other
@@ -2108,23 +2111,23 @@ thesis.
   \begin{tabular}{r @{${} = {}$} l @{\hspace*{0.8cm}} r @{${} = {}$} l } 
     \toprule 
     %
-    $\ope{\phi1}$ & $(D_\mu\phi)^\dagger \, (\phi\,\phi^\dagger) \, (D^\mu\phi)$  &
-    $\ope{GG}$ & $(\phisq)\,G^a_{\mu\nu}\,G^{\mu\nu\, a}$ \\
+    $\ope{\phi,1}$ & $(D_\mu\phi)^\dagger \phi \; \phi^\dagger D^\mu\phi$  &
+    $\ope{GG}$ & $\phisq \, G^a_{\mu\nu} \, G^{\mu\nu\, a}$ \\
     %
-    $\ope{\phi2}$ & $\frac{1}{2}\partial^\mu(\phisq)\,\partial_\mu(\phisq)$ &
-    $\ope{BB}$ & $-\frac{g'^2}{4}(\phisq)\,B_{\mu\nu}\,B^{\mu\nu}$ \\
+    $\ope{\phi,2}$ & $\frac{1}{2} \, \partial^\mu(\phisq) \, \partial_\mu(\phisq)$ &
+    $\ope{BB}$ & $-\frac{g'^2}{4} \, \phisq \, B_{\mu\nu} \, B^{\mu\nu}$ \\
     %
-    $\ope{\phi3}$ & $\frac{1}{3}(\phisq)^3$ &
-    $\ope{WW}$ & $-\frac{g^2}{4}(\phisq)\,W^k_{\mu\nu}\,W^{\mu\nu\, k}$ \\
+    $\ope{\phi,3}$ & $\frac{1}{3}(\phisq)^3$ &
+    $\ope{WW}$ & $-\frac{g^2}{4} \, \phisq \, W^k_{\mu\nu} \, W^{\mu\nu\, k}$ \\
     %
-    $\ope{\phi4}$  & $(\phisq) \, (D_\mu \phi)^\dagger (D^\mu \phi)$ &
-    $\ope{BW}$ & $-\frac{g\,g'}{4}(\phi^\dagger\sigma^k\phi)\,B_{\mu\nu}\,W^{\mu\nu\, k}$ \\
-    %
-    \multicolumn{2}{c}{\quad} &
-    $\ope{B} $ & $\frac{\im g}{2}(D^\mu\phi^\dagger)(D^\nu\phi)\,B_{\mu\nu}$ \\
+    $\ope{\phi,4}$  & $\phisq \,  (D_\mu \phi)^\dagger \, D^\mu \phi$ &
+    $\ope{BW}$ & $-\frac{g\,g'}{4} \, \phi^\dagger\sigma^k\phi \, B_{\mu\nu} \, W^{\mu\nu\, k}$ \\
     %
     \multicolumn{2}{c}{\quad} &
-    $\ope{W}$ & $\frac{\im g}{2}(D^\mu\phi^\dagger)\sigma^k( D^\nu\phi)\,W_{\mu\nu}^k$ \\
+    $\ope{B} $ & $\frac{\im g'}{2} \, (D^\mu\phi^\dagger) D^\nu\phi \, B_{\mu\nu}$ \\
+    %
+    \multicolumn{2}{c}{\quad} &
+    $\ope{W}$ & $\frac{\im g}{2} \, (D^\mu\phi^\dagger) \sigma^k D^\nu\phi \, W_{\mu\nu}^k$ \\
     %
     \bottomrule
   \end{tabular}
@@ -2341,26 +2344,31 @@ bosons read~\cite{Grzadkowski:2010es}
 \end{align}%
 \endgroup
 %
-where $Y_f$ are the weak hypercharges of the fermions.  Following
-\autoref{eq:foundations_field_redefinitions}, this provides us with
-three equivalence relations between dimension-six
+where $Y_f$ are the weak hypercharges of the fermions. Following
+\autoref{eq:foundations_field_redefinitions} and
+Appendix~\ref{sec:appendix_redefinitions}, this provides us with three
+equivalence relations between dimension-six
 operators~\cite{Corbett:2012ja, Juan_thesis, Tyler_thesis}:
 %
 \begingroup%
 \allowdisplaybreaks%
 \begin{align}
-  % \ope{\phi,2} + \ope{\phi,4} - \mu^2 (\phisq)^2 - 6 \lambda \ope{6} &= \sum_f y_f \ope{f} + \ord{1/\Lambda^4}\\ % My version
+  \label{eq:foundations_equivalence_from_eom_phi}
+  2 \ope{\phi,2} + 2 \ope{\phi,4} - 2 \mu^2 (\phisq)^2 - 12 \lambda \ope{\phi,3} &\equivalent \sum_f y_f \ope{f} + \ord{1/\Lambda^2}\\ % My version
   %
-  2 \ope{\phi,2} + 2 \ope{\phi,4}  + 2 \mu^2 (\phisq)^2 + 12 \lambda \ope{6} &= \sum_f y_f \ope{f} + \ord{1/\Lambda^4}\\ % Tyler's version, and Juan believes it's true
+  % 2 \ope{\phi,2} + 2 \ope{\phi,4}  + 2 \mu^2 (\phisq)^2 + 12 \lambda \ope{\phi,3} &\equivalent \sum_f y_f \ope{f} + \ord{1/\Lambda^2}\\ % Tyler's version, and Juan believes it's true
   %
-  \ope{BB}  + \ope{BW} - 2 \ope{B} + g'^2 \left( \ope{\phi,1} - \frac 1 2 \ope{\phi,2} \right) &= - \frac {g'^2} 2 \, \sum_f Y_f \ope{\phi f}^{(1)} + \ord{1/\Lambda^4}\\
+  \ope{BB}  + \ope{BW} - 2 \ope{B} + g'^2 \left( \ope{\phi,1} - \frac 1 2 \ope{\phi,2} \right) &\equivalent - \frac {g'^2} 2 \, \sum_f Y_f \ope{\phi f}^{(1)} + \ord{1/\Lambda^2}\\
   %
-  \ope{WW}  + \ope{BW} - 2 \ope{W} + g^2 \left( \ope{\phi,4} - \frac 1 2 \ope{\phi,2} \right) &= - \frac {g^2} 4 \, \sum_{F=L,Q} \ope{\phi F}^{(3)} + \ord{1/\Lambda^4}\,.
+  \ope{WW}  + \ope{BW} - 2 \ope{W} + g^2 \left( \ope{\phi,4} - \frac 1 2 \ope{\phi,2} \right) &\equivalent - \frac {g^2} 4 \, \sum_{F=L,Q} \ope{\phi F}^{(3)} + \ord{1/\Lambda^2}\,.
 \end{align}%
 \endgroup
 %
-This lets us eliminate three of the operators listed in
-Tables~\ref{tbl:foundations_operators_bosonic_even} to
+Here the symbol $\equivalent$ means ``physically equivalent''
+\comment{Idea for better symbol for physical equivalence?}
+in the sense that exchanging operators with these relations does not affect any
+$S$-matrix elements. This lets us eliminate three of the operators
+listed in Tables~\ref{tbl:foundations_operators_bosonic_even} to
 \ref{tbl:foundations_operators_bosonic_odd}.
 
 There are different strategies for picking the operators to keep. In a
@@ -2368,8 +2376,9 @@ top-down approach, one could choose operators based on the underlying
 physics. In a bottom-up approach, calculations can be simplified if
 the operators are chosen based on their contributions to physical
 observables, for instance to avoid non-trivial blind
-directions. Following Reference~\cite{Corbett:2012ja}, we choose
-to discard $\smash{\ope{\phi L}^{(1)}}$, $\smash{\ope{\phi L}^{(3)}}$, and $\ope{\phi,4}$.
+directions. Following Reference~\cite{Corbett:2012ja}, we choose to
+discard $\smash{\ope{\phi L}^{(1)}}$, $\smash{\ope{\phi L}^{(3)}}$,
+and $\ope{\phi,4}$.
 
 
 
@@ -2467,7 +2476,7 @@ in Equations~\eqref{eq:foundations_operators_even} and
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{$\ope{\phi2}$: rescaled Higgs couplings}
+\subsubsection{$\ope{\phi,22}$: rescaled Higgs couplings}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Our first example is the operator $\ope{\phi,2}$. Ignoring the
