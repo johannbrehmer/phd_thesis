@@ -1,14 +1,18 @@
  
 
-% \setchapterpreamble[ur]{%
-% \dictum[D.~Adams~\cite{adams2002salmon}]{%
-% Anything that is in the world when you're born is normal and ordinary and is just a natural part of the way the world works.
+ % \setchapterpreamble[ur]{%
+ % \dictum[D.~Adams~\cite{adams2002salmon}]{%
+ % Anything that is in the world when you're born is normal and
+ % ordinary and is just a natural part of the way the world works.
 
-% Anything that's invented between when you're fifteen and thirty-five is new and exciting and revolutionary and you can probably get a career in it.
+ % Anything that's invented between when you're fifteen and
+ % thirty-five is new and exciting and revolutionary and you can
+ % probably get a career in it.
 
-% Anything invented after you're thirty-five is against the natural order of things.%
-% }%
-% \vspace*{2cm}}
+ % Anything invented after you're thirty-five is against the natural
+ % order of things.%
+ % }%
+ %   \vspace*{2cm}}
 
 
 
@@ -521,16 +525,16 @@ points on the model manifold can be defined along geodesics,
 The shortest path $\boldtheta(s)$ satisfies the geodesic equation
 %
 \begin{equation}
-  \ddot{\theta}^i (s) = - \Gamma^i_{\;jk} (\boldtheta (s) ) \; \dot{\theta}^j (s) \; \dot{\theta}^k (s)
+  \ttder {\theta^i}{s} = - \Gamma^i_{\;jk} \, \tder{\theta^j}{s} \, \tder{\theta^k}{s}
 \end{equation}
 %
 where we, for once, distinguish upper and lower indices; indices are
 raised and lowered with the metric $I_{ij}$. Dots denote derivatives
 $\dot{\boldtheta} \equiv \diff \boldtheta(s) / \diff s$ and the
-Christoffel symbols are defined as \comment{Check!}
+Christoffel symbols are defined as
 %
 \begin{equation}
-  \Gamma_{ijk} (\boldtheta) \equiv \frac 1 2 \left[ \pder {I_{ik}(\boldtheta) }{\theta^j} + \pder {I_{ij}(\boldtheta)}{\theta^k} - \pder {I_{jk}(\boldtheta)}{\theta^i} \right] \,. 
+  \Gamma_{ijk} \equiv \frac 1 2 \left[ \pder {I_{ij}}{\theta^k} + \pder {I_{ik}}{\theta^j} - \pder {I_{jk}}{\theta^i} \right] \,. 
 \end{equation}
 
 This distance measure is symmetric,
@@ -846,6 +850,7 @@ those events in a certain slice of the phase space.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Nuisance parameters and profiling}
+\label{sec:information_nuisance}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 So far our approach was based on the assumption that event numbers are
@@ -1397,6 +1402,15 @@ dimension-six operators in three Higgs channels: weak boson fusion
 with a decay into tau pairs or four leptons, and Higgs production with
 a single top.
 
+For this first demonstration we neglect systematic und theory
+uncertainties; we later show how these can be added in
+Section~\ref{sec:information_systematics}. The maximum precision on
+Wilson coefficients calculated in this section is therefore
+optimistic. Our main focus here is the relative comparison of the
+information in different phase-space regions or in different
+distributions; these are not affected by systematic uncertainties that
+dominantly concern the overall rate.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1844,16 +1858,64 @@ curve is by design blind to.
 \newparagraph
 %
 The distribution of the differential Fisher information also provides
-us with another perspective on the EFT validity issues analysed in the
-previous chapter\dots
+us with another perspective on the EFT validity discussed in the
+previous chapter. There we demonstrated that the effective model can
+break down in the high-energy tail of distributions and concluded that
+an additional analysis with cuts that impose a maximum momentum
+transfer can improve the applicability of the EFT. For weak boson
+fusion, this means requiring
 %
-\comment{Write about EFT validity cuts and explain Figure~\ref{fig:information_wbf_tautau_scales}!}
+\begin{equation}
+  p_{T,j} < p_{T,j}^{\text{max}} \,,
+  \label{eq:information_ptmax_cut}
+\end{equation}
+%
+as shown in \autoref{sec:validity_wbf_observables}.
+
+Our tools let us calculate the Fisher information in the WBF
+$h \to \tau \tau$ channel for different cuts of the form
+\autoref{eq:information_ptmax_cut}. For simplicity, we focus on the
+operators $\ope{W}$ and $\ope{WW}$ and calculate the determinant of
+the Fisher information in this plane. Following
+\autoref{eq:information_new_physics_reach}, we translate it into a
+typical new physics reach
+%
+\begin{equation}
+  \frac \Lambda {\sqrt{f}} = v \; \sqrt{\det I_{ij}(\boldzero)}^{1/4} 
+  \label{eq:information_scales_reach}
+\end{equation}
+%
+of an optimal measurement. For universal Wilson coefficients
+$f_W = f_{WW} \equiv f$, we can calculate the new physics reach
+$\Lambda$ and compare it to the maximum momentum transfer
+$p_{T,j}^{\text{max}}$.
 
 \begin{figure}
   \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_scales}%
-  \caption{\dots}
+  \caption{Maximal new physics reach of the WBF $h\to \tau \tau$
+    channel in the $\ope{W}$-$\ope{WW}$ plane as a function of an
+    upper cut of the transverse jet momenta
+    $p_{T,j}^{\text{max}}$. The green, blue, and red curves show the
+    optimal reach for different values for universal Wilson
+    coefficients $f_W = f_{WW} \equiv f$, as defined in
+    \autoref{eq:information_scales_reach}. The dashed grey line
+    sketches the maximum momentum transfer in the events, assuming
+    that this is accurately captured by the jet $p_T$.}
   \label{fig:information_wbf_tautau_scales}
 \end{figure}
+
+\autoref{fig:information_wbf_tautau_scales} shows that for strongly
+coupled physics we can probe new physics scales significantly above
+the experimental momentum transfer, at least in our simple setup that
+neglects systematic and theory uncertainties. Such a scenario does not
+require any cuts of the form in \autoref{eq:information_ptmax_cut} for
+the EFT to work. However, for moderate to small Wilson coefficients
+$0.25 \lesssim f \lesssim 1$, the scale hierarchy is less clear,
+confirming the discussion in
+Section~\ref{sec:validity_introduction_scales}. Our results show that
+imposing a maximum momentum transfer of a few hundred GeV can increase
+the separation between the experimental energy scale and the probed
+new physics scales, and thus the usefulness of the effective theory.
 
 
 
@@ -2839,8 +2901,6 @@ $300~\ifb$ of data, assuming perfect efficiencies, these distributions
 are only sensitive to new physics scales around $550~\gev$, while an
 optical multivariate analysis might be able to probe scales up to
 $700~\gev$ according to the Cram\'er-Rao bound.
-%
-\comment{To here}
 
 
 
@@ -2850,85 +2910,126 @@ $700~\gev$ according to the Cram\'er-Rao bound.
 \label{sec:information_application_odd}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\comment{Wait for Felix\dots}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Technical questions}
+\section{Extensions}
 \label{sec:information_extensions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+The applications of information geometry in the previous sections were
+based on a number of simplifying assumptions. Most importantly, we
+only considered statistical sources of uncertainty, and neglected
+systematic and theory uncertainties on the signal and background
+predictions. In \autoref{sec:information_systematics} we show how such
+effects can be added to our approach.
+
+\autoref{sec:information_comparison} finally compares the Fisher
+information to two other statistical tools, the well-known
+log-likelihood ratio and the ambient information geometry.
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Systematic uncertainties}
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\label{sec:information_systematics}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The precision of most Higgs measurements at the LHC will ultimately be
+limited by systematic and theory
+uncertainties~\cite{deFlorian:2016spz, Khachatryan:2016vau}. The
+expected differential rates of cross sections of signal and
+backgrounds are then not exactly known, but depend on unknown nuisance
+parameters $\boldnu$. In \autoref{sec:information_nuisance} we showed
+how these can be incorporated in our approach, and defined a profiled
+Fisher information that conservatively includes systematic
+uncertainties. 
 
 \begin{figure}
   \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_systematics_nuisance.pdf}%
   \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_systematics_profiled.pdf}%
   \caption{Effects of Gaussian uncertainties of $5\%$ and $10\%$ on
     the total signal rate. In the left panel we show the expected
-    error ellipse $\dlocal( (g,\nu) ; \boldzero) = 1$ in
-    the plane spanned by a physical parameter and the nuisance
+    error ellipse $\dlocal( (\theta,\nu) ; \boldzero) = 1$ in the
+    plane spanned by a physical parameter $\theta$ and the nuisance
     parameter $\nu$ rescaling the signal rate. In the right panel we
     show the error ellipses in the $\ope{W}$-$\ope{\phi,2}$ plane
     after profiling over this systematic uncertainty.}
   \label{fig:information_wbf_tautau_systematics}
 \end{figure}
 
+We now demonstrate this tool for the information on $CP$-even
+dimension-six operators in WBF Higgs production in the $\tau \tau$
+mode. Our setup is exactly as in \autoref{sec:information_wbf_taus},
+except that we assign a $5\%$ or $10\%$ Gaussian uncertainty on the
+overall signal rate, representing for instance missing higher orders,
+pdf or efficiency uncertainties. After profiling over this nuisance
+parameter, the information in the total rate is significantly reduced,
+which mostly limits the precision in the $\ope{\phi,2}$ direction. In
+\autoref{fig:information_wbf_tautau_systematics_comparison} we show how the
+information in various distributions is affected by such an
+uncertainty, in complete analogy to
+\autoref{fig:information_wbf_tautau_histograms_comparison}. The new
+physics reach in the $\ope{\phi,2}$ direction is reduced by 800~GeV.
+
 \begin{figure}
   \includegraphics[width= \textwidth]{fig/information/wbf_tautau_histos_comparison_systematics.pdf}
-  \caption{Fisher information for the WBF $H \to \tau \tau$ channel
+  \caption{Fisher information for the WBF $h \to \tau \tau$ channel
     profiled over a $10\%$ signal rate uncertainty. We compare the
-    information for the full phase space, after the cuts in
-    \autoref{eq:information_wbf_tautau_wbfcuts}, and for several kinematic
-    distributions.  The top panel shows the eigenvalues, the colors
-    denote the composition of the corresponding eigenvectors. The
-    right axis translates the eigenvalues into a new physics reach for
-    the corresponding combination of Wilson coefficients.  In the
-    bottom panel we show the determinants of the Fisher information
-    restricted to $\ope{\phi,2}$, $\ope{W}$, and $\ope{WW}$,
-    normalized to the full information. Again, the right axis
-    translates them into a new physics reach.}
+    total Fisher information, the information after the cuts in
+    \autoref{eq:information_wbf_tautau_wbfcuts}, and the information
+    in several distributions after this selection.  The top panel
+    shows the eigenvalues, the colors denote the composition of the
+    corresponding eigenvectors. The right axis translates the
+    eigenvalues into a new physics reach for the corresponding
+    combination of Wilson coefficients.  In the bottom panel we show
+    the determinants of the Fisher information restricted to
+    $\ope{\phi,2}$, $\ope{W}$, and $\ope{WW}$, normalized to the full
+    information. Again, the right axis translates them into a new
+    physics reach.}
   \label{fig:information_wbf_tautau_systematics_comparison}
 \end{figure}
 
-We demonstrate this for WBF Higgs production in the $\tau \tau$ mode
-in \autoref{fig:wbf_tautau_systematics}. We assign a $5\%$ or $10\%$
-Gaussian uncertainty on the overall signal rate, representing for
-instance missing higher orders, pdf or efficiency uncertainties. This
-significantly reduces the information in the total rate, and thus
-mostly the expected precision in the $\ope{\phi,2}$ direction.  In
-\autoref{fig:wbf_tautau_systematics_comparison} we show how the
-information in various distributions is affected by such an
-uncertainty. The new physics reach in the $\ope{\phi,2}$ direction is
-reduced by 800~GeV. 
+This treatment of systematic uncertainties on total rates can easily
+be extended to phase-space-dependent effects, for instance
+representing how the accuracy of the parton shower or the size of
+missing higher-order corrections depend on the energy scale. This
+requires parameterized smearing functions and an interpolation of the
+differential cross sections between different benchmark values of the
+nuisance parameters.
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Comparison with other tools}
+\label{sec:information_comparison}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Likelihood ratio}
+\subsubsection{Likelihood ratio}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-There is some subtlety in the relationship between 
-standard likelihood ratio tests and the Fisher distance.
-We anticipate that the confidence intervals in $\boldtheta$ will continue 
-to be based on likelihood ratio tests.
-While both are invariant to reparametrization of $\boldtheta$, 
- non-linear terms in $\boldtheta$ that lead to curvature in the information
-geometry can break the one-to-one relationship between the 
-expected value of the log-likelihood ratio and the Fisher information distance.
+There is a certain ambiguity in what constitutes an optimal
+measurement. The aim of our approach is to minimize the covariance
+matrix of estimators, which the Cram\'er-Rao bound links to the Fisher
+information. Alternatively one can maximize the power of hypothesis
+tests at a given significance level. According to the Neyman-Pearson
+lemma, the relevant object is the (log) likelihood ratio between the
+two hypotheses. These two objects are designed for different
+questions: the likelihood ratio compares two discrete hypotheses,
+while the Fisher information is suited for continuous parameter spaces
+of arbitrary dimensionionality. 
 
-In \autoref{fig:wbf_tautau_llr} we compare the two tools. As an
-example, we study WBF Higgs production in the $\tau \tau$ mode and
-sample parameter points $\boldtheta$ in the $\ope{W}$-$\ope{WW}$
-plane. For each of these points we calculate the local and global
-distance from the SM defined by the Fisher information, as well as the
-expected log-likelihood ratio 
+We compare the two tools for WBF Higgs production in the $\tau \tau$
+mode, following the setup described in
+\autoref{sec:information_wbf_taus}. We sample parameter points
+$\boldtheta$ in the $\ope{W}$-$\ope{WW}$ plane. For each of these
+points we calculate the local and global distance from the SM defined
+by the Fisher information, as well as the expected log-likelihood
+ratio
 %
 \begin{align}
   q(\boldtheta_b , \boldtheta_a )
@@ -2936,17 +3037,10 @@ expected log-likelihood ratio
   \log \frac { f(\mathbf{x}|\boldtheta_b) }   { f(\mathbf{x} |\boldtheta_a) }
   \middle | \boldtheta_a \right] \,.
 \end{align}
-%
-For small significance deviations, the local and especially the global distances are 
-almost exactly equal to the expected likelihood ratio, 
-with differences only becoming visible around the $3 \sigma$ level. 
-This demonstrates that different
-statistical tools probe the same physics and can be chosen based on
-convenience.
 
 \begin{figure}
-  \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_local_distance_vs_llr}
-  \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_distance_vs_llr}
+  \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_local_distance_vs_llr}%
+  \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_distance_vs_llr}%
   \caption{Comparison of the local (left) and global (right) distances
     defined by the Fisher information with the expected local
     likelihood ratio. We use WBF Higgs production in the $\tau \tau$
@@ -2955,13 +3049,66 @@ convenience.
   \label{fig:information_wbf_tautau_llr}
 \end{figure}
 
+As shown in \autoref{fig:information_wbf_tautau_llr} the local and
+especially the global distances are almost exactly equal to the
+expected likelihood ratio, with small differences only becoming
+visible around the $3 \sigma$ level.  This demonstrates that different
+statistical tools probe the same physics and can be chosen based on
+practical considerations. In particular, the conclusions from an
+information-based analysis, utilizing the convenient properties for
+high-dimensional theory spaces, also apply to exclusion limits based
+on the log likelihood ratio.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Ambient geometry}
+\subsubsection{Ambient Fisher information}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\comment{To here on Monday}
+Information geometry, as introduced in
+\autoref{sec:information_formalism}, assigns structure to the
+parameter space of a theory. It is, interestingly, possible to define
+a distance measure in the space of \emph{all} distributions, without
+relying on any model structure. One such approach is the \emph{ambient
+  Fisher information}~\cite{dawid1977, carter2008}. It defines the
+distance between two distributions $f_a(\boldx)$ and
+$f_b(\boldx)$ as
+%
+\begin{equation}
+  d_{\text{ambient}} (f_a, f_b) = \arccos \intfatx  \sqrt {f_a(\boldx) f_b(\boldx)} \,.
+  \label{eq:information_ambient_distance}
+\end{equation}
+%
+This measure does not require an integration along model parameters. As long as the distributions $f_a$ and $f_b$ are similar or the distances small, it approaches the usual global distance of information geometry~\cite{carter2008}:
+%
+\begin{equation}
+  2 \, d_{\text{ambient}} (f(\boldx|\boldtheta_a), f(\boldx|\boldtheta_b)) \sim d(\boldtheta_a, \boldtheta_b) \,.
+  \label{eq:information_ambient_equivalence}
+\end{equation}
+%
+For this reason, distances based on the ambient Fisher information
+have been suggested as a computationally less expensive approximation
+for information distances~\cite{carter2008}. 
+
+\begin{figure}
+  \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_ambient}
+  \caption{Comparison of the distance according to the ambient Fisher
+    geometry, defined in \autoref{eq:information_ambient_distance}, to
+    the distance defined by the usual Fisher information on the theory
+    space. We use WBF Higgs production in the $\tau \tau$ mode and
+    sample parameter points in the $\ope{W}$-$\ope{WW}$ plane.}
+  \label{fig:information_wbf_tautau_ambient}
+\end{figure}
+
+In \autoref{fig:information_wbf_tautau_ambient} we compare this tool
+to our global distance measure. Again, we use the WBF $h\to \tau \tau$
+channel as described in \autoref{sec:information_wbf_taus} and sample
+parameter points in the $\ope{W}$-$\ope{WW}$
+plane. \autoref{eq:information_ambient_equivalence} holds at distances
+up to $d \lesssim 2$, but then the two measures diverge, and the
+ambient distance is ultimately limited from above at $\pi/2$.
+%
+\comment{To here}
 
 
 

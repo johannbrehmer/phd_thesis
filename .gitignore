@@ -10,3 +10,6 @@
 *.bak
 *.fls
 *.fdb_latexmk
+*.lof
+*.lot
+*.fls
