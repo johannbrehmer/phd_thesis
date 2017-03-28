@@ -10,11 +10,15 @@
 \chapter{Appendices}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Here we collect technical details and intermediate results that are
-not too interesting on their own, but should be included for
+Here we collect additional examples, results, and technical details
+that are not too interesting on their own, but should be included for
 completeness and reproducibility. We begin with our conventions for
-the Standard Model and effective
-operators. Appendix~\ref{sec:appendix_models} contains some additional
+the Standard Model. \autoref{sec:appendix_eft_fundamentals} provides
+explicit examples for the manipulation of effective Lagrangians with
+field redefinitions and matching with functional methods. In
+\autoref{sec:appendix_silh} we define an alternative basis for
+dimension-six operators and link it to the HISZ basis used in this
+thesis. Appendix~\ref{sec:appendix_models} contains some additional
 details on the models considered in
 \autoref{chapter:validity}. Finally, in
 Appendix~\ref{sec:appendix_information} we collect some auxiliary
@@ -22,8 +26,8 @@ results related to \autoref{chapter:information}.
 
 Large parts of this appendix has been published previously, as part of
 the same articles that contained much of the main body of this
-thesis. In particular, Appendices~\ref{sec:appendix_bases} and
-\ref{sec:appendix_models} was published in
+thesis. In particular, Appendices~\ref{sec:appendix_silh} and
+\ref{sec:appendix_models} were part of
 References~\cite{Brehmer:2015rna, Biekotter:2016ecg}, while
 Appendix~\ref{sec:appendix_information} contains material published in
 Reference~\cite{Brehmer:2016nyr}.
@@ -31,13 +35,8 @@ Reference~\cite{Brehmer:2016nyr}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Effective field theory conventions}
-\label{sec:appendix_bases}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The Standard Model}
-\label{sec:appendix_bases_sm}
+\section{Standard model conventions}
+\label{sec:appendix_sm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}
@@ -232,9 +231,437 @@ for the vector bosons.
 
 
 
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{HISZ basis}
-\label{sec:appendix_bases_hisz}
+\section{EFT fundamentals}
+\label{sec:appendix_eft_fundamentals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Nonlinear field redefinitions}
+\label{sec:appendix_redefinitions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In \autoref{sec:foundations_eft_bottom_up} we argued that non-linear
+field redefinitions of the form given in
+\autoref{eq:foundation_field_redefinitions_ansatz} leave the
+$S$-matrix elements and thus all observable physics invariant, but
+change the form of the Lagrangian. According to
+\autoref{eq:foundations_field_redefinitions}, the leading term of the
+change of the Lagrangian is just given by the classical equations of
+motion. This defines an equivalence relation between some operators
+that can be used to remove redundant operators and define a minimal
+basis, as discussed in \autoref{sec:foundations_heft_operators} for
+the Higgs EFT.
+
+Here we illustrate this procedure by explicitly calculating the effect
+of such a non-linear field redefinition without truncating the
+Lagrangian at the leading order. We start with the $CP$-even
+$B$-$\phi$ sector of the SM effective field theory, and add effective
+operators up to mass dimension six. Ordering the terms by mass
+dimension, it reads
+%
+\begin{align}
+  \lgr{before}
+  &= - \mu^2 \phisq \notag \\
+  %
+  &\phantom{=}
+    - \frac 1 4 \, B_{\mu\nu} B^{\mu \nu} + (D^\mu \phi)^\dagger (D_\mu \phi) - \lambda \, (\phisq)^2 \notag \\
+  %
+  &\phantom{=}
+    + \frac {f_{\phi,1}} {\Lambda^2} \, (D_\mu\phi)^\dagger \phi \; \phi^\dagger D^\mu\phi 
+    + \frac {f_{\phi,2}} {\Lambda^2} \, \frac{1}{2}\partial^\mu(\phisq)\,\partial_\mu(\phisq)
+    + \frac {f_{\phi,3}} {\Lambda^2} \, \frac{1}{3}(\phisq)^3 \notag \\
+  %
+  &\phantom{=}
+    + \frac {f_{\phi,4}} {\Lambda^2} \, (\phisq)  (D_\mu \phi)^\dagger D^\mu \phi
+    + \frac {f_{B}} {\Lambda^2} \, \frac{\im g'}{2 }(D^\mu\phi^\dagger)(D^\nu\phi)\,B_{\mu\nu}
+    - \frac {f_{BB}} {\Lambda^2} \, \frac{g'^2}{4} (\phisq)\,B_{\mu\nu}\,B^{\mu\nu} \notag \\
+  %
+  &\phantom{=}
+  + \ord{1/\Lambda^4} \,.
+\end{align}
+
+The simplest non-linear field transformation is
+%
+\begin{equation}
+  \phi \to \phi + \frac {\varepsilon} {\Lambda^2} (\phisq) \phi \,.
+  \label{eq:appendix_redefinition_ansatz_phi}
+\end{equation}
+%
+It transforms this Lagrangian into
+%
+\begin{equation}
+  \lgr{after} = \lgr{before} + \delta \lgr{$4$} + \delta \lgr{$6$} + \delta \lgr{$8$} + \delta \lgr{$\geq 10$}
+\end{equation}
+%
+where the indices denote the mass dimension of the operators. The SM
+dimension-two term generates
+%
+\begin{equation}
+  \delta \lgr{$4$} = -  2 \mu^2 \, \frac {\varepsilon}{\Lambda^2} \, (\phisq)^2 \,. 
+    \label{eq:appendix_redefinition_dim4}
+\end{equation}
+%
+At the dimension-six level, we have
+%
+\begin{equation}
+  \delta \lgr{$6$}
+  =
+  \frac {\varepsilon}{\Lambda^2} \left[
+    \partial^\mu(\phisq) \, \partial_\mu(\phisq) 
+    - 4 \lambda \, (\phisq)^3 
+    + 2 \, \phisq \,  (D_\mu \phi)^\dagger \, D^\mu \phi
+    \right]
+    - \mu^2 \, \frac {\varepsilon^2}{\Lambda^4} \,  (\phisq)^3 \,. 
+    \label{eq:appendix_redefinition_dim6}
+\end{equation}
+%
+The effects at dimension eight read
+%
+\begin{align}
+  \delta \lgr{$8$} &= \frac {\varepsilon}{\Lambda^4} \Biggl[
+                     \frac  {\im g' f_B} {2} \; \partial_\mu (\phisq) \, (\phi^\dagger \overleftrightarrow{D}_\nu \phi) \, B^{\mu\nu}
+                     + f_{\phi,4} \; \phisq \, \partial^\mu(\phisq) \, \partial_\mu(\phisq) \notag \\
+  %
+  &\phantom{= \frac {\varepsilon}{\Lambda^4} \Biggl[ }
+                     + \im g' f_B \; \phisq \, (D_\mu\phi^\dagger) D_\nu\phi \, B^{\mu\nu} 
+    + 4 f_{\phi,1} \; \phisq \, (D_\mu\phi)^\dagger \phi \, \phi^\dagger D^\mu\phi \notag \\
+  %
+  &\phantom{= \frac {\varepsilon}{\Lambda^4} \Biggl[ }
+    + f_{\phi,1} \; \phisq \, \partial^\mu(\phisq) \, \partial_\mu(\phisq) 
+    + 4 f_{\phi,4} \; (\phisq)^2 \,  (D_\mu\phi)^\dagger \, D^\mu \phi \notag \\
+  %
+  &\phantom{= \frac {\varepsilon}{\Lambda^4} \Biggl[ }
+    - \frac 1 2 g'^2 f_{BB} \; (\phisq)^2 \, B_{\mu\nu} \, B^{\mu\nu}
+    + 2 f_{\phi,3} (\phisq)^4
+    \Biggr] \notag \\
+  %
+  &\phantom{={}}
+    +\frac {\varepsilon^2}{\Lambda^4} \Biggl[
+    + 2 \; \phisq \, \partial^\mu(\phisq) \, \partial_\mu(\phisq) 
+    - 6 \lambda \, (\phisq)^4
+    + (\phisq)^2 \,  (D_\mu \phi)^\dagger \, D^\mu \phi
+    \Biggr] \,,
+    \label{eq:appendix_redefinition_dim8}
+\end{align}
+%
+and so on for higher mass dimensions.
+
+Setting the $\ord{\varepsilon}$ terms in
+Equations~\eqref{eq:appendix_redefinition_dim4} to
+\eqref{eq:appendix_redefinition_dim8} to zero corresponds exactly to
+the classical equations of motion for $\phi$, as discussed in
+\autoref{sec:foundations_eft_bottom_up} and applied to the SM EFT in
+\autoref{eq:foundations_equivalence_from_eom_phi}. The higher orders
+in $\varepsilon$ are missing in the equations of motion, but including
+them does not affect our choice of redundant operators.
+
+Similarly, a transformation 
+%
+\begin{equation}
+  B_\mu \to B_\mu + \frac {\varepsilon} {\Lambda^2} \, \phisq \, B_\mu
+  \label{eq:appendix_redefinition_ansatz_b}
+\end{equation}
+%
+will correspond to the classical equations of motion for $B_\mu$ plus
+$\ord{\varepsilon^2}$ corrections.
+
+If we use transformations like
+\autoref{eq:appendix_redefinition_ansatz_phi} or
+\autoref{eq:appendix_redefinition_ansatz_b} (or, equivalently, the
+equations of motion) to remove redundant dimension-six operators from
+the Lagrangian, we cannot use exactly the same freedom to also
+manipulate dimension-eight operators in a specific way. To do so, we
+have to add additional degrees of freedom to our transformations, for
+instance with
+%
+\begin{equation}
+  \phi \to \phi
+  + \frac {\varepsilon} {\Lambda^2} (\phisq) \phi 
+  + \frac {\varepsilon_1} {\Lambda^4} \, B_{\mu\nu} B^{\mu \nu} \, \phi 
+  + \frac {\varepsilon_2} {\Lambda^4} \, (D^\mu \phi)^\dagger (D_\mu \phi)  \, \phi
+  + \frac {\varepsilon_3} {\Lambda^4}  \, (\phisq)^2 \, \phi  \,.
+\end{equation}
+%
+The new parameters $\varepsilon_i$ will generate dimension-six
+operators from the $\mu^2$ term and dimension-eight operators from the
+SM dimension-four terms. Again, the $\ord{\varepsilon_i}$ terms in the
+transformed Lagrangian correspond to the equations of motion in
+$\phi$, now multiplied with dimension-four operators. Combined
+transformations as in \autoref{eq:appendix_redefinition_ansatz_phi}
+let us remove redundant dimension-six and dimension-eight operators
+simultaneously. 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Functional matching}
+\label{sec:appendix_functional_matching}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In \ref{sec:foundations_matching} we discussed the effective theory in
+a top-down approach, finally arriving at the expression for the
+effective action at one-loop level given in
+\autoref{eq:effective_action_result}.
+
+We now show how this object can be calculated with functional methods
+in a simple example.  We consider a theory of two real scalar
+fields. The light field $\phi$ has mass $m$, the heavy field $\Phi$
+with mass $M$ is being integrated out. The underlying theory is given
+by
+%
+\begin{multline}
+  S[\phi,\Phi] = \intfourx \Biggl[
+    \frac 1 2 \partial_\mu \phi \partial^\mu \phi
+    - \frac {m^2} 2 \phi^2
+    + \frac 1 2 \partial_\mu \Phi \partial^\mu \Phi
+    - \frac {M^2} 2 \Phi^2 \\
+    - \frac {\lambda_0} {4!} \phi^4
+    - \frac {\lambda_2} {4} \phi^2 \Phi^2
+    - \frac {\lambda_4} {4!} \Phi^4
+    \Biggr] \,.
+\end{multline}
+%
+Odd interactions and a mixing term $\phi\Phi$  are forbidden with suitable $\mathbb{Z}_2$
+symmetries.
+
+The classical equation of motion for $\Phi$ is
+%
+\begin{equation}
+  \left( \partial^2 + M^2 + \frac {\lambda_2} 2 \phi^2 + \frac {\lambda_4} {3!} \Phi_c^2 \right) \Phi_c = 0
+\end{equation}
+%
+with the trivial solution $\Phi_c = 0$.
+
+The first term in the effective action then just gives back $\phi^4$
+theory for the light field, without any new effective interactions:
+%
+\begin{equation}
+  S[\phi,\Phi_c] = \intfourx \left[\frac 1 2 \partial_\mu \phi \partial^\mu \phi - \frac {m^2} 2 \phi^2 - \frac {\lambda_0} {4!} \phi^4 \right] \,.
+  \label{eq:foundations_scalar_example_effective_action_tree_part}
+\end{equation}
+%
+The second term is
+%
+\begin{align}
+  \frac \im 2 \tr \log \left( - \left. \frac {\delta^2 S} {\delta \Phi^2} \right|_{\Phi = \Phi_c} \right) 
+  %
+  &=  \frac \im 2  \tr \log \left( \partial^2 + M^2 + \frac {\lambda_2} 2 \phi^2 \right) \notag \\
+  %
+  &=  \frac \im 2  \tr \log \left( \partial^2 + M^2 \right) + \frac \im 2  \tr \log \left( 1 + \frac {\lambda_2} 2 \frac {1} {\partial^2 + M^2 + \im \varepsilon} \phi^2 \right) \,,
+  %
+  % &=  \frac \im 2  \intfourk \braket {k| \log \left( \partial^2 + M^2 \right) | k} \notag \\
+  % &\phantom{=} \quad + \frac \im 2  \intfourk \braket {k| \log \left( 1 + \frac {\lambda_2} 2 \frac {1} {\partial^2 + M^2 + \im \varepsilon} \phi^2 \right) | k} \,.
+\end{align}
+%
+where derivatives in the denominator are defined as Green's
+functions. Since $\tr \log \left( \partial^2 + M^2 \right) $ is just a
+constant that can be calculated for instance in dimensional
+regularisation, the first part does not give us any higher-dimensional
+operators of the light fields $\phi$. Expanding the logarithm in the
+second term, we find
+%
+\begin{equation}
+  \seff \supset \frac {\im \lambda_2} 4  \tr \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2
+  - \frac {\im \lambda_2^2} 8  \tr \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2 \right)^2
+  + \frac {\im \lambda_2^3} {12}  \tr \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2\right)^3 
+  + \ord{\lambda_2^4} \,.
+  \label{eq:foundations_scalar_example_effective_action_powers}
+\end{equation}
+%
+The first of these terms renormalises the $\phi$ mass term, and
+the second contributes to the $\phi^4$ interaction. This is
+important for RG running, but does not create the kind of new
+effective interactions we are interested in here. We instead focus on
+the last term and evaluate the functional trace:
+%
+\begin{align}
+  \seff &\supset - \frac {\im \lambda_2^3} {12} \intfourk \braket {k| \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2 \right)^3 |k} \notag \\
+  %
+  &\supset - \frac {\im \lambda_2^3} {12} \;
+    \intfourx \!\! \intfoury \!\! \intfourz \!\!
+    \intfourk \!\! \intfourp \!\! \intfourq 
+    \braket {k| \frac {1} {\partial^2 + M^2 - \im \varepsilon} |x} \braket{x| \phi^2 |p}\notag \\
+  &\phantom{\supset} \quad \quad
+    \times \braket {p| \frac {1} {\partial^2 + M^2 - \im \varepsilon} |y} \braket{y| \phi^2 |q} 
+    \braket {q| \frac {1} {\partial^2 + M^2 - \im \varepsilon} |z} \braket{z| \phi^2 |k} \,.
+\end{align}
+%
+Here we have used the definition of the functional trace in
+\autoref{eq:functional_trace} and inserted unity,
+$1 = \intfourx \ket{x} \bra{x} = \intfourp \ket{p} \bra{p}$.
+$\ket{k}$, $\ket{p}$, and $\ket{q}$ are eigenstates of the derivative
+operator $\partial$,
+i.\,e.~$\bra{k} \im \partial_\mu = \bra{k} k_\mu$, while $\ket{x}$,
+$\ket{y}$, and $\ket{z}$ denote the eigenstates of local operators,
+$\bra{x} \phi^2= \bra{x} \phi^2(x)$. Their inner product is
+$\braket {x|k} = e^{-\im k x}$. Using these properties and shifting
+the integration variables, we get
+%
+\begin{align}
+  \seff &\supset - \frac {\im \lambda_2^3} {12} \;
+          \intfourx \!\! \intfoury \!\! \intfourz \!\!
+          \intfourk \!\! \intfourp \!\! \intfourq
+          \frac {1} {-k^2 + M^2 - \im \varepsilon} e^{\im k x}  \phi(x)^2 e^{-\im p x} \notag \\
+  &\phantom{\supset} \qquad
+    \times \frac {1} {-p^2 + M^2 - \im \varepsilon} e^{\im p y}  \phi(y)^2 e^{-\im q y}  \;
+    \frac {1} {-q^2 + M^2 - \im \varepsilon} e^{\im q z}  \phi(z)^2 e^{-\im k z} \notag \\
+  %
+  &\supset \frac {\im \lambda_2^3} {12} \;
+    \intfourx \!\! \intfoury \!\! \intfourz \!\!
+    \intfourk \!\! \intfourp \!\! \intfourq
+    \phi(x)^2 \phi(y)^2 \phi(z)^2 \notag \\
+  &\phantom{\supset} \qqquad 
+    \times \frac {e^{\im p (z-x)} \, e^{\im q (z-y)}}
+    { (k^2 - M^2 + \im \varepsilon) \, ((k+p)^2 - M^2 + \im \varepsilon) \,  ((k+p+q)^2 - M^2 + \im \varepsilon)} \,.
+\end{align}
+
+We can now perform the integral over the loop momentum $k$ with
+Feynman parameters:
+%
+\begin{align}
+  &\intfourk \frac {1}
+              { (k^2 - M^2 + \im \varepsilon) \,
+              ((k+p)^2 - M^2 + \im \varepsilon) \,
+              ((k+p+q)^2 - M^2 + \im \varepsilon)} \notag \\
+  %
+   &\quad = 2 \int_0^1 \!\! \diff x_1 \int_0^{1-x_1} \!\! \diff x_2 \intfourk
+     \Bigl[  x_1  (k^2 - M^2 + \im \varepsilon)
+     + x_2 ((k+p)^2 - M^2 + \im \varepsilon) \notag \\
+  &\quad \phantom{=} \qqqquad \qqquad
+    + (1-x_1 -x_2)  ((k+p+q)^2 - M^2 + \im \varepsilon)  \Bigr]^{-3} \notag \\
+  %
+   &\quad = 2 \int_0^1 \!\! \diff x_1 \int_0^{1-x_1} \!\! \diff x_2 \intfourk
+     \frac 1 { \left[ (k + a)^2 - B  + \im \varepsilon \right]^3 }
+\end{align}
+%
+with $a = (1 - x_1) p  + (1 - x_1 - x_2) q $ and
+$B = M^2 - (1 - x_1 - x_2) (p+q)^2 - x_2 p^2 + a^2$.
+Shifting the loop momentum as $k \to k + a$, we finally arrive at
+%
+\begin{equation}
+  T_3(p,q)  
+   = 2 \int_0^1 \!\! \diff x_1 \int_0^{1-x_1} \!\! \diff x_2 \intfourk
+     \frac 1 { \left[ k^2 - B + \im \varepsilon \right]^3 } \,.
+  \label{eq:foundations_scalar_example_loop_function}
+\end{equation}
+
+To evaluate this, we first Wick-rotate $k^0 = \im k_E^0$. Formally,
+this means shifting the integration path in the complex plane of $k^0$
+from along the real axis to along the imaginary axis. The Cauchy
+theorem assures that this does not change the value of the integral as
+long as we chose the contour such that the poles are not caught
+between the two contours. Defining
+$k_E^2 = (k^0_E)^2 + \boldsymbol{k}^2 = - k^2$, we find
+%
+%\footnote{This
+%  step requires $B>0$. In our case, $p$ and $q$ correspond to momenta
+%  of the light fields, and in the validity regime of the EFT we should
+%  always have $M^2 \gg p^2, q^2$ and therefore $B > 0$.}
+%
+\begin{equation}
+  I_{0,3} 
+   \equiv \intfourk \frac 1 { \left[ k^2 - B + \im \varepsilon \right]^3 } 
+   = \im \intfourke \frac 1 { \left[ - k_E^2 - B \right]^3 } \,,
+\end{equation}
+%
+where the $+ \im \varepsilon$ is no longer necessary. With
+$\overbar{k} = |k_E |$ we can finally calculate the integral:
+%
+\begin{align}
+  I_{0,3} = \frac {2 \pi^2} {(2 \pi)^4} \,
+            \int \!\! \diff \overbar{k} {\overbar{k}}^3 \;
+    \frac 1 { \left[ {\overbar{k}}^2 + B \right]^3 }
+            = \frac {- \im } {32 \pi^2 B} \,.
+\end{align}
+
+Collecting all the pieces, we have
+%
+\begin{multline}
+  \seff \supset \frac {\lambda_2^3} {192 \pi^2} \,
+    \intfourx \!\! \intfoury \!\! \intfourz \phi(x)^2 \phi(y)^2 \phi(z)^2 
+    \intfourp \!\! \intfourq e^{\im p (z-x)} \, e^{\im q (z-y)} \\
+    \times \int_0^1 \!\! \diff x_1 \int_0^{1-x_1} \!\! \diff x_2 \;
+    \left[ M^2 - (1 - x_1 - x_2) (p+q)^2 - x_2 p^2 + ((1-x_1) p  + (1 - x_1 - x_2) q )^2 \right]^{-1} \,.
+\end{multline}
+%
+At first glance, this is disappointing: this effective action looks
+non-local and involves highly non-trivial integrals. It turns out that
+these can in fact be calculated and give a finite
+result~\cite{tHooft:1978jhc, Denner:1991kt}. The full expression is
+quite ugly, but we fortunately do not need it. Instead, we expand the
+integrand in powers of $1/M^2$. We only calculate the leading term at
+$\ord{1/M^2}$. Since it produces a finite result as well, the rest
+term at $\ord{1/M^4}$ also has to be finite. Even more, we can argue
+that the rest term at $\ord{1/M^4}$ has to vanish: the coefficient at
+a given order $1/M^k$ in this expansion is an integral without any
+mass scales, and has to lead to a result of mass dimension $k-2$. Only
+$k = 2$ can give a non-zero and finite result, all higher orders
+therefore have to vanish.\comment{Something is fishy. Check this
+  argument, and check discrepancy with Denner's habil!}
+% Physically, this corresponds to approximating the loop momenta
+% as lighter then the heavy mass scale, which makes sense in the
+% validity region of the EFT.
+In this way, we find the much simpler result
+%
+\begin{align}
+  \seff &\supset \frac {\lambda_2^3} {192 \pi^2 \,M^2 } 
+    \intfourx \!\! \intfoury \!\! \intfourz 
+    \phi(x)^2 \phi(y)^2 \phi(z)^2
+    \intfourp \!\! \intfourq  e^{\im p (z-x)} e^{\im q (z-y)}  \notag\\
+        &\phantom{\supset} \qqqquad \qqqquad \qqqquad + \ord{1/M^4} \notag \\
+  %
+  &\supset \frac {\lambda_2^3} {192 \pi^2 M^2 } 
+    \intfourx \!\! \intfoury \!\! \intfourz
+    \phi(x)^2 \phi(y)^2 \phi(z)^2 \,
+    \delta (z-x) 
+    \delta (z-y) \notag \\
+  %
+  &\supset \frac {\lambda_2^3} {192 \pi^2 M^2 } 
+    \intfourx
+    \phi(x)^6 \,.
+    \label{eq:foundations_scalar_example_effective_action_loop_part}
+\end{align}
+%
+After the expansion in $1/M$, we have finally arrived at a local
+theory!
+
+What about the higher terns in
+\autoref{eq:foundations_scalar_example_effective_action_powers}?
+Their calculation is analogous to the one presented here and leads
+to operators like $\phi^8$ and higher. They are suppressed at
+least with $ 1 / M^4$ and are thus irrelevant for our dimension-six
+effective theory.
+
+Collecting the pieces in
+\autoref{eq:foundations_scalar_example_effective_action_tree_part}
+and
+\autoref{eq:foundations_scalar_example_effective_action_loop_part},
+up to one loop and $\ord{1/M^2}$ the full effective action is given by
+%
+\begin{equation}
+  \seff[\phi] = \intfourx \left[\frac 1 2 \partial_\mu \phi \partial^\mu \phi
+    - \frac {m^2} 2 \phi^2 - \frac {\lambda_0} {4!} \phi^4
+    + \frac {\lambda_2^3} {12 (4 \pi)^2 M^2 } \, \phi^6\right] \,.
+\end{equation}
+%
+As expected, the dimension-six operator is suppressed by two powers of
+the heavy scale $\Lambda \equiv M$, and the Wilson coefficient
+consists of the couplings $\lambda_2^3$ times a loop factor.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{SILH basis}
+\label{sec:appendix_silh}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 For the dimension-six operators of linear Higgs effective field
@@ -248,13 +675,6 @@ Tables~\ref{tbl:foundations_operators_bosonic_even} to
 \ref{tbl:foundations_operators_bosonic_odd}. We discuss the
 phenomenology of these operators in
 \autoref{sec:foundations_heft_pheno}.
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{SILH basis}
-\label{sec:appendix_bases_silh}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Another common basis for dimension-six operators was developed in
 References~\cite{Giudice:2007fh, Contino:2013kra} and is usually names
@@ -584,162 +1004,6 @@ For the Wilson coefficients, we find
 
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Nonlinear field redefinitions}
-\label{sec:appendix_redefinitions}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-In \autoref{sec:foundations_eft_bottom_up} we argued that non-linear
-field redefinitions of the form given in
-\autoref{eq:foundation_field_redefinitions_ansatz} leave the
-$S$-matrix elements and thus all observable physics invariant, but
-change the form of the Lagrangian. According to
-\autoref{eq:foundations_field_redefinitions}, the leading term of the
-change of the Lagrangian is just given by the classical equations of
-motion. This defines an equivalence relation between some operators
-that can be used to remove redundant operators and define a minimal
-basis, as discussed in \autoref{sec:foundations_heft_operators} for
-the Higgs EFT.
-
-Here we illustrate this procedure by explicitly calculating the effect
-of such a non-linear field redefinition without truncating the
-Lagrangian at the leading order. We start with the $CP$-even
-$B$-$\phi$ sector of the SM effective field theory, and add effective
-operators up to mass dimension six. Ordering the terms by mass
-dimension, it reads
-%
-\begin{align}
-  \lgr{before}
-  &= - \mu^2 \phisq \notag \\
-  %
-  &\phantom{=}
-    - \frac 1 4 \, B_{\mu\nu} B^{\mu \nu} + (D^\mu \phi)^\dagger (D_\mu \phi) - \lambda \, (\phisq)^2 \notag \\
-  %
-  &\phantom{=}
-    + \frac {f_{\phi,1}} {\Lambda^2} \, (D_\mu\phi)^\dagger \phi \; \phi^\dagger D^\mu\phi 
-    + \frac {f_{\phi,2}} {\Lambda^2} \, \frac{1}{2}\partial^\mu(\phisq)\,\partial_\mu(\phisq)
-    + \frac {f_{\phi,3}} {\Lambda^2} \, \frac{1}{3}(\phisq)^3 \notag \\
-  %
-  &\phantom{=}
-    + \frac {f_{\phi,4}} {\Lambda^2} \, (\phisq)  (D_\mu \phi)^\dagger D^\mu \phi
-    + \frac {f_{B}} {\Lambda^2} \, \frac{\im g'}{2 }(D^\mu\phi^\dagger)(D^\nu\phi)\,B_{\mu\nu}
-    - \frac {f_{BB}} {\Lambda^2} \, \frac{g'^2}{4} (\phisq)\,B_{\mu\nu}\,B^{\mu\nu} \notag \\
-  %
-  &\phantom{=}
-  + \ord{1/\Lambda^4} \,.
-\end{align}
-
-The simplest non-linear field transformation is
-%
-\begin{equation}
-  \phi \to \phi + \frac {\varepsilon} {\Lambda^2} (\phisq) \phi \,.
-  \label{eq:appendix_redefinition_ansatz_phi}
-\end{equation}
-%
-It transforms this Lagrangian into
-%
-\begin{equation}
-  \lgr{after} = \lgr{before} + \delta \lgr{$4$} + \delta \lgr{$6$} + \delta \lgr{$8$} + \delta \lgr{$\geq 10$}
-\end{equation}
-%
-where the indices denote the mass dimension of the operators. The SM
-dimension-two term generates
-%
-\begin{equation}
-  \delta \lgr{$4$} = -  2 \mu^2 \, \frac {\varepsilon}{\Lambda^2} \, (\phisq)^2 \,. 
-    \label{eq:appendix_redefinition_dim4}
-\end{equation}
-%
-At the dimension-six level, we have
-%
-\begin{equation}
-  \delta \lgr{$6$}
-  =
-  \frac {\varepsilon}{\Lambda^2} \left[
-    \partial^\mu(\phisq) \, \partial_\mu(\phisq) 
-    - 4 \lambda \, (\phisq)^3 
-    + 2 \, \phisq \,  (D_\mu \phi)^\dagger \, D^\mu \phi
-    \right]
-    - \mu^2 \, \frac {\varepsilon^2}{\Lambda^4} \,  (\phisq)^3 \,. 
-    \label{eq:appendix_redefinition_dim6}
-\end{equation}
-%
-The effects at dimension eight read
-%
-\begin{align}
-  \delta \lgr{$8$} &= \frac {\varepsilon}{\Lambda^4} \Biggl[
-                     \frac  {\im g' f_B} {2} \; \partial_\mu (\phisq) \, (\phi^\dagger \overleftrightarrow{D}_\nu \phi) \, B^{\mu\nu}
-                     + f_{\phi,4} \; \phisq \, \partial^\mu(\phisq) \, \partial_\mu(\phisq) \notag \\
-  %
-  &\phantom{= \frac {\varepsilon}{\Lambda^4} \Biggl[ }
-                     + \im g' f_B \; \phisq \, (D_\mu\phi^\dagger) D_\nu\phi \, B^{\mu\nu} 
-    + 4 f_{\phi,1} \; \phisq \, (D_\mu\phi)^\dagger \phi \, \phi^\dagger D^\mu\phi \notag \\
-  %
-  &\phantom{= \frac {\varepsilon}{\Lambda^4} \Biggl[ }
-    + f_{\phi,1} \; \phisq \, \partial^\mu(\phisq) \, \partial_\mu(\phisq) 
-    + 4 f_{\phi,4} \; (\phisq)^2 \,  (D_\mu\phi)^\dagger \, D^\mu \phi \notag \\
-  %
-  &\phantom{= \frac {\varepsilon}{\Lambda^4} \Biggl[ }
-    - \frac 1 2 g'^2 f_{BB} \; (\phisq)^2 \, B_{\mu\nu} \, B^{\mu\nu}
-    + 2 f_{\phi,3} (\phisq)^4
-    \Biggr] \notag \\
-  %
-  &\phantom{={}}
-    +\frac {\varepsilon^2}{\Lambda^4} \Biggl[
-    + 2 \; \phisq \, \partial^\mu(\phisq) \, \partial_\mu(\phisq) 
-    - 6 \lambda \, (\phisq)^4
-    + (\phisq)^2 \,  (D_\mu \phi)^\dagger \, D^\mu \phi
-    \Biggr] \,,
-    \label{eq:appendix_redefinition_dim8}
-\end{align}
-%
-and so on for higher mass dimensions.
-
-Setting the $\ord{\varepsilon}$ terms in
-Equations~\eqref{eq:appendix_redefinition_dim4} to
-\eqref{eq:appendix_redefinition_dim8} to zero corresponds exactly to
-the classical equations of motion for $\phi$, as discussed in
-\autoref{sec:foundations_eft_bottom_up} and applied to the SM EFT in
-\autoref{eq:foundations_equivalence_from_eom_phi}. The higher orders
-in $\varepsilon$ are missing in the equations of motion, but including
-them does not affect our choice of redundant operators.
-
-Similarly, a transformation 
-%
-\begin{equation}
-  B_\mu \to B_\mu + \frac {\varepsilon} {\Lambda^2} \, \phisq \, B_\mu
-  \label{eq:appendix_redefinition_ansatz_b}
-\end{equation}
-%
-will correspond to the classical equations of motion for $B_\mu$ plus
-$\ord{\varepsilon^2}$ corrections.
-
-If we use transformations like
-\autoref{eq:appendix_redefinition_ansatz_phi} or
-\autoref{eq:appendix_redefinition_ansatz_b} (or, equivalently, the
-equations of motion) to remove redundant dimension-six operators from
-the Lagrangian, we cannot use exactly the same freedom to also
-manipulate dimension-eight operators in a specific way. To do so, we
-have to add additional degrees of freedom to our transformations, for
-instance with
-%
-\begin{equation}
-  \phi \to \phi
-  + \frac {\varepsilon} {\Lambda^2} (\phisq) \phi 
-  + \frac {\varepsilon_1} {\Lambda^4} \, B_{\mu\nu} B^{\mu \nu} \, \phi 
-  + \frac {\varepsilon_2} {\Lambda^4} \, (D^\mu \phi)^\dagger (D_\mu \phi)  \, \phi
-  + \frac {\varepsilon_3} {\Lambda^4}  \, (\phisq)^2 \, \phi  \,.
-\end{equation}
-%
-The new parameters $\varepsilon_i$ will generate dimension-six
-operators from the $\mu^2$ term and dimension-eight operators from the
-SM dimension-four terms. Again, the $\ord{\varepsilon_i}$ terms in the
-transformed Lagrangian correspond to the equations of motion in
-$\phi$, now multiplied with dimension-four operators. Combined
-transformations as in \autoref{eq:appendix_redefinition_ansatz_phi}
-let us remove redundant dimension-six and dimension-eight operators
-simultaneously.
 
 
 
@@ -1765,9 +2029,108 @@ corresponding to the Wilson coefficients given in
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Information geometry applications}
+\section{Information geometry}
 \label{sec:appendix_information}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{A simple example}
+\label{sec:appendix_information_example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In \autoref{sec:information_formalism} we introduced the Fisher
+information as the mathematical object that quantifies the maximal
+precision with which continous theory parameters can be measured.  As
+a simple example, we now calculate the Fisher information in a number
+of event counts $n_c$ in different channels $c$. We assume that the
+channels are independent and follow Poisson distributions with mean
+values $\bar{n_c} = \nu_c$:
+%
+\begin{align}%
+  f (\mathbf{n} |\boldnu) 
+  = \prod_c \Pois (n_c | \nu_c) 
+  = \prod_c \, \frac{\nu_c^{n_c} e^{-\nu_c}}{n_c!} \, .
+\end{align}
+%
+Following \autoref{eq:information_fisher_information}, we can calculate the Fisher
+information in terms of the Poisson means $\boldnu$. With
+%
+\begin{equation}
+  \pder { \log f} {\nu_c} 
+  = \pder {} {\nu_c}  \left[- \nu_c + n_c \log \nu_c - \log (n_c!) \right]
+  = \frac {n_c} {\nu_c} - 1
+\end{equation}
+%
+and
+%
+\begin{equation}
+  \frac { \partial^2 \log f} {\partial \nu_c \partial \nu_{c'}} = - \frac {\delta_{c c'} \, n_c} {\nu_c^2} 
+\end{equation}
+%
+we find
+%
+\begin{equation}
+  I_{c c'} (\boldnu) \equiv - E \left[ \frac { \partial^2 \log f} {\partial \nu_c \partial \nu_{c'}} \middle| \boldnu \right] = \frac {\delta_{c c'} } {\nu_c} \,.
+\end{equation}
+
+\autoref{eq:information_information_covariant_transformation} allows us calculate
+the Fisher information in terms of some theory parameters $\theta_i$
+rather than the Poisson means $\nu_c$:
+%
+\begin{align}
+  I_{ij}  (\boldtheta) = \sum_c \pder {\nu_c} {\theta_i} \, \frac 1 {\nu_c} \, \pder {\nu_{c}} {\theta_j} \,.
+  \label{eq:information_simple_example_information}
+\end{align}
+%
+At the LHC, the matrix $\partial \nu_c / \partial \theta_i$ is
+determined by the luminosity, the relevant cross sections and
+branching ratios, as well as acceptance and efficiency factors. For
+instance, in the $\kappa$ framework for Higgs physics discussed in
+\autoref{sec:foundations_heft_alternatives} it is trivial to calculate
+the matrix $\partial \nu_c / \partial g_i$ in closed form. For each
+channel this matrix is singular, which means it measures one direction
+in parameter space and is blind to all orthogonal directions. At least
+as many channels as parameters are required to make the combined
+information in \autoref{eq:information_simple_example_information}
+non-singular and remove all blind directions (assuming the channels do
+not provide degenerate information, \ie linearly dependent
+eigenvectors in the Fisher information).
+
+For illustration, consider the case where we want to measure one
+coupling $\theta = g$ in one channel with the expected number of
+events
+%
+\begin{align}
+  \nu = L \left( \sigma_S(g) + \sigma_B \right) 
+        = L g^2 \sigma_0 + L \sigma_B \,,
+\end{align}
+%
+where the constants $L$, $\sigma_S(g) = g^2 \sigma_0$, and $\sigma_B$
+schematically stand for the luminosity and the signal and background
+cross sections.
+
+The Fisher information in terms of the coupling $g$ is then
+%
+\begin{align}
+  I(g) = 4 L \, \frac {g^2 \sigma_0^2 } {g^2 \sigma_0 + \sigma_B} 
+         = \frac{4 L}{g^2} \, \frac {\sigma_S^2 } {\sigma_S + \sigma_B} \, .
+\end{align}
+%
+The Cram\'er-Rao bound in \autoref{eq:information_cramer_rao_unbiased}
+then states that any unbiased estimator has a standard deviation of at
+least
+%
+\begin{align}
+\frac{\Delta \hat{g}}{g} \geq \frac 1 {g \, \sqrt{I}} = 
+\frac{1}{2} \, \frac 1 {\sqrt{L}} \, \frac {\sqrt{\sigma_S +\sigma_B}} {\sigma_S} \,,
+\end{align}
+%
+independent of how the data is analysed.  The three terms show how the
+sensitivity to $g$ profits from the square in the cross section, the
+square-root dependence on the statistics, and the dependence on the
+signal-to-background ratio.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

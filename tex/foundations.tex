@@ -84,7 +84,7 @@ with $SU(2)_L$ gauge bosons $W_\mu^a$ and $U(1)_Y$ gauge boson
 $B_\mu$. $g$ and $g'$ are the two corresponding coupling constants,
 and $\sigma_i$ the Pauli matrices. We give the full Lagrangian of the
 Standard Model including all definitions and conventions in
-Appendix~\ref{sec:appendix_bases_sm}.
+Appendix~\ref{sec:appendix_sm}.
 
 For $\mu^2 < 0$, the Higgs doublet develops a non-zero vacuum
 expectation value (VEV)
@@ -865,67 +865,32 @@ worry about the far ultraviolet.
 EFTs are especially useful in the framework of quantum field theory
 (QFT). Before showing how to construct the effective operators of such
 a theory in a bottom-up approach, let us recapitulate how QFTs are
-organised.
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Reminder: operators and power counting}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-The basic object describing perturbative QFTs in $d=4$ flat space-time
-dimensions is the action
+organised. The basic object describing perturbative QFTs in $d=4$ flat
+space-time dimensions is the action
 %
 \begin{equation}
-  S = \intfourx \lgr{}(x) \,.
+  S = \intfourx \lgr{}(x) \,,
   \label{eq:foundations_action}
 \end{equation}
 %
-The Lagrangian $\lgr{}(x)$ is a sum of couplings times operators,
-where the operators are combinations of fields and derivatives
-evaluated at one point $x$. These are either kinematic terms, mass
-terms or represent interactions between three or more fields. For
-instance, the Lagrangian
-%
-\begin{equation}
-  \lgr{} =  \im  \bar{\psi}_i \gamma^\mu \partial_\mu \psi_i - \frac 1 4 V_{\mu \nu} V^{\mu \nu} 
-  - m_i \bar{\psi}_i \psi_i + m_V^2 V_\mu V^\mu
-  - g \bar{\psi}_i \gamma_\mu \psi_i V^\mu
-  \label{eq:foundations_action_V_fermions}
-\end{equation}
-%
-with implicit sum over $i$ describes fermions $\psi_i$, a vector boson
-$V_\mu$ of mass $m_V$, and an interaction between them governed by a
-coupling $g$.\footnote{Massive vector bosons have issues with
-  renormalisability and unitarity, which can be solved by generating
-  the mass in a Higgs mechanism at a higher scale, but this is irrelevant
-  for the discussion here.}
+where the Lagrangian $\lgr{}(x)$ consists of a sum of couplings times
+local operators. A key property of each coupling or operator is its
+\emph{canonical dimension} or mass dimension. In simple terms this can
+be formulated as the following question: if you assign a value to a
+quantity, which power of a mass unit such as GeV would this value
+carry? Since we work in units with $\hbar = c = 1$, length and
+distance dimensions are just the inverse of mass dimensions. We denote
+the mass dimension of any object with squared brackets, where
+$[\ope{}] = D$ means that $\ope{}$ is of dimension mass$^D$, or mass
+dimension $D$.
 
-A key property of each coupling or operator is its \emph{canonical
-  dimension} or mass dimension. In simple terms this can be formulated
-as the following question: if you assign a value to a quantity, which
-power of a mass unit such as GeV would this value carry? Since we work
-in units with $\hbar = c = 1$, length and distance dimensions are just
-the inverse of mass dimensions. We denote the mass dimension of
-any object with squared brackets, where $[\ope{}] = D$ means that
-$\ope{}$ is of dimension mass$^D$, or mass dimension $D$.
-
-In QFT, the action can appear in exponentials such as $e^{\im S}$, so
-it must be dimensionless: $[S] = 0$. The space-time integral in
-\autoref{eq:foundations_action} then implies $[\lgr{}] = d = 4$, so every term
-in the Lagrangian has to be of mass dimension 4. Applying this to the
-kinetic terms, we can calculate the mass dimension of all fields. This
-then allows us to calculate the mass dimension or canonical dimension of operators and
-couplings in the theory.
-
-In the example in \autoref{eq:foundations_action_V_fermions}, the kinetic term
-for the fermions contains one space-time derivative, $[\partial] =
-1$.
-To get $[\bar{\psi} \partial \psi] = 4$, the fermion fields must have
-dimension $[\psi_i] = 3/2$. Similarly, the field strength $V_{\mu\nu}$
-contains a derivative, so we end up with $[V_\mu] = 1$. With these
-numbers we can check the other operators. In addition to the expected
-$[m] = [m_V] = 1$, we find $[\bar{\psi} \psi V^\mu] = 4$ or $[g] = 0$.
+Since in the partition function the action appears as $e^{\im S}$, it
+it must be dimensionless, $[S] = 0$. The space-time integral in
+\autoref{eq:foundations_action} then implies $[\lgr{}] = d = 4$, so
+every term in the Lagrangian has to be of mass dimension 4. Applying
+this to the kinetic terms, we can calculate the mass dimension of all
+fields. This then allows us to calculate the mass dimension or
+canonical dimension of operators and couplings in the theory.
 
 The canonical dimension of an operator has two important
 consequences. First, the renormalisation group flow of a theory,
@@ -1421,9 +1386,10 @@ flavour,
 % \footnote{If we would have considered fermions instead, there would
 % be a minus sign in front of the second term.}
 
-This result can be directly evaluated with functional methods. The
-first term in \autoref{eq:effective_action_result} can be easily
-calculated by solving the classical equations of motion in
+This result can be directly evaluated with functional methods, see
+Appendix~\ref{sec:appendix_functional_matching} for an explicit
+example. The first term in \autoref{eq:effective_action_result} can be
+easily calculated by solving the classical equations of motion in
 \autoref{eq:classical_eom}. Computing the functional trace is more
 involved, but can be simplified with a procedure called
 \emph{covariant derivative expansion}~\cite{Gaillard:1985uh,
@@ -1449,276 +1415,26 @@ theories in the previous section. Unlike in the bottom-up approach,
 not all operators have to appear, and we can calculate the Wilson
 coefficients based on the underlying theory. 
 
-
-  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Scalar example}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-As a simple example consider a theory of two real scalar fields. The
-light field $\phi$ has mass $m$, the heavy field $\Phi$ with mass $M$
-is being integrated out. The underlying theory is given by
-%
-\begin{multline}
-  S[\phi,\Phi] = \intfourx \Biggl[
-    \frac 1 2 \partial_\mu \phi \partial^\mu \phi
-    - \frac {m^2} 2 \phi^2
-    + \frac 1 2 \partial_\mu \Phi \partial^\mu \Phi
-    - \frac {M^2} 2 \Phi^2 \\
-    - \frac {\lambda_0} {4!} \phi^4
-    - \frac {\lambda_2} {4} \phi^2 \Phi^2
-    - \frac {\lambda_4} {4!} \Phi^4
-    \Biggr] \,.
-\end{multline}
-%
-Odd interactions and a mixing term $\phi\Phi$  are forbidden with suitable $\mathbb{Z}_2$
-symmetries.
-
-The classical equation of motion for $\Phi$ is
-%
-\begin{equation}
-  \left( \partial^2 + M^2 + \frac {\lambda_2} 2 \phi^2 + \frac {\lambda_4} {3!} \Phi_c^2 \right) \Phi_c = 0
-\end{equation}
-%
-with the trivial solution $\Phi_c = 0$.
-
-The first term in the effective action then just gives back $\phi^4$
-theory for the light field, without any new effective interactions:
-%
-\begin{equation}
-  S[\phi,\Phi_c] = \intfourx \left[\frac 1 2 \partial_\mu \phi \partial^\mu \phi - \frac {m^2} 2 \phi^2 - \frac {\lambda_0} {4!} \phi^4 \right] \,.
-  \label{eq:foundations_scalar_example_effective_action_tree_part}
-\end{equation}
-%
-The second term is
-%
-\begin{align}
-  \frac \im 2 \tr \log \left( - \left. \frac {\delta^2 S} {\delta \Phi^2} \right|_{\Phi = \Phi_c} \right) 
-  %
-  &=  \frac \im 2  \tr \log \left( \partial^2 + M^2 + \frac {\lambda_2} 2 \phi^2 \right) \notag \\
-  %
-  &=  \frac \im 2  \tr \log \left( \partial^2 + M^2 \right) + \frac \im 2  \tr \log \left( 1 + \frac {\lambda_2} 2 \frac {1} {\partial^2 + M^2 + \im \varepsilon} \phi^2 \right) \,,
-  %
-  % &=  \frac \im 2  \intfourk \braket {k| \log \left( \partial^2 + M^2 \right) | k} \notag \\
-  % &\phantom{=} \quad + \frac \im 2  \intfourk \braket {k| \log \left( 1 + \frac {\lambda_2} 2 \frac {1} {\partial^2 + M^2 + \im \varepsilon} \phi^2 \right) | k} \,.
-\end{align}
-%
-where derivatives in the denominator are defined as Green's
-functions. Since $\tr \log \left( \partial^2 + M^2 \right) $ is just a
-constant that can be calculated for instance in dimensional
-regularisation, the first part does not give us any higher-dimensional
-operators of the light fields $\phi$. Expanding the logarithm in the
-second term, we find
-%
-\begin{equation}
-  \seff \supset \frac {\im \lambda_2} 4  \tr \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2
-  - \frac {\im \lambda_2^2} 8  \tr \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2 \right)^2
-  + \frac {\im \lambda_2^3} {12}  \tr \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2\right)^3 
-  + \ord{\lambda_2^4} \,.
-  \label{eq:foundations_scalar_example_effective_action_powers}
-\end{equation}
-%
-The first of these terms renormalises the $\phi$ mass term, and
-the second contributes to the $\phi^4$ interaction. This is
-important for RG running, but does not create the kind of new
-effective interactions we are interested in here. We instead focus on
-the last term and evaluate the functional trace:
-%
-\begin{align}
-  \seff &\supset - \frac {\im \lambda_2^3} {12} \intfourk \braket {k| \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2 \right)^3 |k} \notag \\
-  %
-  &\supset - \frac {\im \lambda_2^3} {12} \;
-    \intfourx \!\! \intfoury \!\! \intfourz \!\!
-    \intfourk \!\! \intfourp \!\! \intfourq 
-    \braket {k| \frac {1} {\partial^2 + M^2 - \im \varepsilon} |x} \braket{x| \phi^2 |p}\notag \\
-  &\phantom{\supset} \quad \quad
-    \times \braket {p| \frac {1} {\partial^2 + M^2 - \im \varepsilon} |y} \braket{y| \phi^2 |q} 
-    \braket {q| \frac {1} {\partial^2 + M^2 - \im \varepsilon} |z} \braket{z| \phi^2 |k} \,.
-\end{align}
-%
-Here we have used the definition of the functional trace in
-\autoref{eq:functional_trace} and inserted unity,
-$1 = \intfourx \ket{x} \bra{x} = \intfourp \ket{p} \bra{p}$.
-$\ket{k}$, $\ket{p}$, and $\ket{q}$ are eigenstates of the derivative
-operator $\partial$,
-i.\,e.~$\bra{k} \im \partial_\mu = \bra{k} k_\mu$, while $\ket{x}$,
-$\ket{y}$, and $\ket{z}$ denote the eigenstates of local operators,
-$\bra{x} \phi^2= \bra{x} \phi^2(x)$. Their inner product is
-$\braket {x|k} = e^{-\im k x}$. Using these properties and shifting
-the integration variables, we get
-%
-\begin{align}
-  \seff &\supset - \frac {\im \lambda_2^3} {12} \;
-          \intfourx \!\! \intfoury \!\! \intfourz \!\!
-          \intfourk \!\! \intfourp \!\! \intfourq
-          \frac {1} {-k^2 + M^2 - \im \varepsilon} e^{\im k x}  \phi(x)^2 e^{-\im p x} \notag \\
-  &\phantom{\supset} \qquad
-    \times \frac {1} {-p^2 + M^2 - \im \varepsilon} e^{\im p y}  \phi(y)^2 e^{-\im q y}  \;
-    \frac {1} {-q^2 + M^2 - \im \varepsilon} e^{\im q z}  \phi(z)^2 e^{-\im k z} \notag \\
-  %
-  &\supset \frac {\im \lambda_2^3} {12} \;
-    \intfourx \!\! \intfoury \!\! \intfourz \!\!
-    \intfourk \!\! \intfourp \!\! \intfourq
-    \phi(x)^2 \phi(y)^2 \phi(z)^2 \notag \\
-  &\phantom{\supset} \qqquad 
-    \times \frac {e^{\im p (z-x)} \, e^{\im q (z-y)}}
-    { (k^2 - M^2 + \im \varepsilon) \, ((k+p)^2 - M^2 + \im \varepsilon) \,  ((k+p+q)^2 - M^2 + \im \varepsilon)} \,.
-\end{align}
-
-We can now perform the integral over the loop momentum $k$ with
-Feynman parameters:
-%
-\begin{align}
-  &\intfourk \frac {1}
-              { (k^2 - M^2 + \im \varepsilon) \,
-              ((k+p)^2 - M^2 + \im \varepsilon) \,
-              ((k+p+q)^2 - M^2 + \im \varepsilon)} \notag \\
-  %
-   &\quad = 2 \int_0^1 \!\! \diff x_1 \int_0^{1-x_1} \!\! \diff x_2 \intfourk
-     \Bigl[  x_1  (k^2 - M^2 + \im \varepsilon)
-     + x_2 ((k+p)^2 - M^2 + \im \varepsilon) \notag \\
-  &\quad \phantom{=} \qqqquad \qqquad
-    + (1-x_1 -x_2)  ((k+p+q)^2 - M^2 + \im \varepsilon)  \Bigr]^{-3} \notag \\
-  %
-   &\quad = 2 \int_0^1 \!\! \diff x_1 \int_0^{1-x_1} \!\! \diff x_2 \intfourk
-     \frac 1 { \left[ (k + a)^2 - B  + \im \varepsilon \right]^3 }
-\end{align}
-%
-with $a = (1 - x_1) p  + (1 - x_1 - x_2) q $ and
-$B = M^2 - (1 - x_1 - x_2) (p+q)^2 - x_2 p^2 + a^2$.
-Shifting the loop momentum as $k \to k + a$, we finally arrive at
-%
-\begin{equation}
-  T_3(p,q)  
-   = 2 \int_0^1 \!\! \diff x_1 \int_0^{1-x_1} \!\! \diff x_2 \intfourk
-     \frac 1 { \left[ k^2 - B + \im \varepsilon \right]^3 } \,.
-  \label{eq:foundations_scalar_example_loop_function}
-\end{equation}
-
-To evaluate this, we first Wick-rotate $k^0 = \im k_E^0$. Formally,
-this means shifting the integration path in the complex plane of $k^0$
-from along the real axis to along the imaginary axis. The Cauchy
-theorem assures that this does not change the value of the integral as
-long as we chose the contour such that the poles are not caught
-between the two contours. Defining
-$k_E^2 = (k^0_E)^2 + \boldsymbol{k}^2 = - k^2$, we find
-%
-%\footnote{This
-%  step requires $B>0$. In our case, $p$ and $q$ correspond to momenta
-%  of the light fields, and in the validity regime of the EFT we should
-%  always have $M^2 \gg p^2, q^2$ and therefore $B > 0$.}
-%
-\begin{equation}
-  I_{0,3} 
-   \equiv \intfourk \frac 1 { \left[ k^2 - B + \im \varepsilon \right]^3 } 
-   = \im \intfourke \frac 1 { \left[ - k_E^2 - B \right]^3 } \,,
-\end{equation}
-%
-where the $+ \im \varepsilon$ is no longer necessary. With
-$\overbar{k} = |k_E |$ we can finally calculate the integral:
-%
-\begin{align}
-  I_{0,3} = \frac {2 \pi^2} {(2 \pi)^4} \,
-            \int \!\! \diff \overbar{k} {\overbar{k}}^3 \;
-    \frac 1 { \left[ {\overbar{k}}^2 + B \right]^3 }
-            = \frac {- \im } {32 \pi^2 B} \,.
-\end{align}
-
-Collecting all the pieces, we have
-%
-\begin{multline}
-  \seff \supset \frac {\lambda_2^3} {192 \pi^2} \,
-    \intfourx \!\! \intfoury \!\! \intfourz \phi(x)^2 \phi(y)^2 \phi(z)^2 
-    \intfourp \!\! \intfourq e^{\im p (z-x)} \, e^{\im q (z-y)} \\
-    \times \int_0^1 \!\! \diff x_1 \int_0^{1-x_1} \!\! \diff x_2 \;
-    \left[ M^2 - (1 - x_1 - x_2) (p+q)^2 - x_2 p^2 + ((1-x_1) p  + (1 - x_1 - x_2) q )^2 \right]^{-1} \,.
-\end{multline}
-%
-At first glance, this is disappointing: this effective action looks
-non-local and involves highly non-trivial integrals. It turns out that
-these can in fact be calculated and give a finite
-result~\cite{tHooft:1978jhc, Denner:1991kt}. The full expression is
-quite ugly, but we fortunately do not need it. Instead, we expand the
-integrand in powers of $1/M^2$. We only calculate the leading term at
-$\ord{1/M^2}$. Since it produces a finite result as well, the rest
-term at $\ord{1/M^4}$ also has to be finite. Even more, we can argue
-that the rest term at $\ord{1/M^4}$ has to vanish: the coefficient at
-a given order $1/M^k$ in this expansion is an integral without any
-mass scales, and has to lead to a result of mass dimension $k-2$. Only
-$k = 2$ can give a non-zero and finite result, all higher orders
-therefore have to vanish.\comment{Something is fishy. Check this
-  argument, and check discrepancy with Denner's habil!}
-% Physically, this corresponds to approximating the loop momenta
-% as lighter then the heavy mass scale, which makes sense in the
-% validity region of the EFT.
-In this way, we find the much simpler result
-%
-\begin{align}
-  \seff &\supset \frac {\lambda_2^3} {192 \pi^2 \,M^2 } 
-    \intfourx \!\! \intfoury \!\! \intfourz 
-    \phi(x)^2 \phi(y)^2 \phi(z)^2
-    \intfourp \!\! \intfourq  e^{\im p (z-x)} e^{\im q (z-y)}  \notag\\
-        &\phantom{\supset} \qqqquad \qqqquad \qqqquad + \ord{1/M^4} \notag \\
-  %
-  &\supset \frac {\lambda_2^3} {192 \pi^2 M^2 } 
-    \intfourx \!\! \intfoury \!\! \intfourz
-    \phi(x)^2 \phi(y)^2 \phi(z)^2 \,
-    \delta (z-x) 
-    \delta (z-y) \notag \\
-  %
-  &\supset \frac {\lambda_2^3} {192 \pi^2 M^2 } 
-    \intfourx
-    \phi(x)^6 \,.
-    \label{eq:foundations_scalar_example_effective_action_loop_part}
-\end{align}
-%
-After the expansion in $1/M$, we have finally arrived at a local
-theory!
-
-What about the higher terns in
-\autoref{eq:foundations_scalar_example_effective_action_powers}?
-Their calculation is analogous to the one presented here and leads
-to operators like $\phi^8$ and higher. They are suppressed at
-least with $ 1 / M^4$ and are thus irrelevant for our dimension-six
-effective theory.
-
-Collecting the pieces in
-\autoref{eq:foundations_scalar_example_effective_action_tree_part}
-and
-\autoref{eq:foundations_scalar_example_effective_action_loop_part},
-up to one loop and $\ord{1/M^2}$ the full effective action is given by
-%
-\begin{equation}
-  \seff[\phi] = \intfourx \left[\frac 1 2 \partial_\mu \phi \partial^\mu \phi
-    - \frac {m^2} 2 \phi^2 - \frac {\lambda_0} {4!} \phi^4
-    + \frac {\lambda_2^3} {12 (4 \pi)^2 M^2 } \, \phi^6\right] \,.
-\end{equation}
-%
-As expected, the dimension-six operator is suppressed by two powers of
-the heavy scale $\Lambda \equiv M$, and the Wilson coefficient
-consists of the couplings $\lambda_2^3$ times a loop factor.
-
   
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Diagrammatic matching}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-As an alternative to this functional approach, the effective action in
-\autoref{eq:effective_action_result} can be calculated in an
-intuitive diagrammatic way.  Since the light fields are kept fixed in
-\autoref{eq:effective_action_definition}, the effective action is
-given by all connected Feynman diagrams with only $\phi$ as external
-legs and only $\Phi$ fields as internal propagators. A more rigorous
-derivation than the one in the precious section in fact reveals that
-also certain connected loop diagrams with only $\phi$ as external legs
-and both $\Phi$ and $\phi$ fields as internal propagators contribute
-if they cannot be disconnected by cutting a single internal $\phi$
-line~\cite{Henning:2016lyp}. The first term in
-\autoref{eq:effective_action_result} corresponds to all such
-tree-level diagrams, the second term describes one-loop
-pieces. Higher-loop corrections play no role in this thesis and
-were left out.
+The effective action in \autoref{eq:effective_action_result} can be
+calculated in an intuitive diagrammatic way.  Since the light fields
+are kept fixed in \autoref{eq:effective_action_definition}, the
+effective action is given by all connected Feynman diagrams with only
+$\phi$ as external legs and only $\Phi$ fields as internal
+propagators. A more rigorous derivation than the one in the precious
+section in fact reveals that also certain connected loop diagrams with
+only $\phi$ as external legs and both $\Phi$ and $\phi$ fields as
+internal propagators contribute if they cannot be disconnected by
+cutting a single internal $\phi$ line~\cite{Henning:2016lyp}. The
+first term in \autoref{eq:effective_action_result} corresponds to all
+such tree-level diagrams, the second term describes one-loop
+pieces. Higher-loop corrections play no role in this thesis and were
+left out.
 
 In practice, the effective operators and their Wilson coefficients can
 be calculated without the need for any functional methods as follows:
@@ -1763,8 +1479,7 @@ be calculated without the need for any functional methods as follows:
 Let us apply this top-down procedure to our standard example of Fermi
 theory. For simplicity, we do not take the full SM, but just the
 interactions between massive $W$ bosons and fermions as the underlying
-theory. The Lagrangian of these interactions is similar to that given
-in \autoref{eq:foundations_action_V_fermions}.
+theory.
 %
 \begin{enumerate}
 \item Our full model consists of the quarks and leptons and the $W$
@@ -2081,7 +1796,7 @@ and the Hagiwara-Ishihara-Szalapski-Zeppenfeld
 basis (HISZ)~\cite{Hagiwara:1993ck}. All three maximise the use of bosonic
 operators to describe Higgs and electroweak observables. For a
 comparison of and conversion between these bases see
-Appendix~\ref{sec:appendix_bases} and
+Appendix~\ref{sec:appendix_silh} and
 References~\cite{Falkowski:2015wza, Brehmer:2015rna}\comment{More
   references?}. Throughout this thesis we use the basis developed
 in References~\cite{Corbett:2012ja, Juan_thesis, Tyler_thesis}, which is strongly
@@ -2097,8 +1812,8 @@ motivates many analyses to restrict their set of operators to the
 $CP$-conserving ones. On the other hand, new sources of $CP$ violation
 are needed to explain the matter-antimatter asymmetry in the universe,
 and their effects at low energies could be visible as $CP$-violating
-effective operators. Both types of operators are analysed in this
-thesis.
+effective operators. For simplicity, we focus on $CP$-conserving
+effects in this thesis.
 
 
 
@@ -2214,7 +1929,7 @@ generators, and
 \end{equation}
 %
 All other symbols appearing in these operators are defined in
-Appendix~\ref{sec:appendix_bases_sm}.
+Appendix~\ref{sec:appendix_sm}.
 
 % These operators can be separated into two groups: first, since
 % $\phi^\dagger \phi$ is a scalar gauge singlet, it can be attached it
