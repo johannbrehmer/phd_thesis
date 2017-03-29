@@ -515,51 +515,51 @@ $\boldtheta_a$ in this tangent space,
     \def\curvaturefactor{0.07} % curvature of the global geometry
 
     % global space
-    \foreach \t in {0,1,...,599}{%
-      \draw[color=dark-red!70!white] (-3,{-3+0.01*\t},{-\curvaturefactor*(9 + (-3+0.01*\t)^2)})
-      -- (-3,{-3+0.01*(\t+1)},{-\curvaturefactor*(9 + (-3+0.01*(\t+1))^2)});
-      \draw[color=dark-red!70!white] (-2,{-3+0.01*\t},{-\curvaturefactor*(4 + (-3+0.01*\t)^2)})
-      -- (-2,{-3+0.01*(\t+1)},{-\curvaturefactor*(4 + (-3+0.01*(\t+1))^2)});
-      \draw[color=dark-red!70!white] (-1,{-3+0.01*\t},{-\curvaturefactor*(1 + (-3+0.01*\t)^2)})
-      -- (-1,{-3+0.01*(\t+1)},{-\curvaturefactor*(1 + (-3+0.01*(\t+1))^2)});
-      \draw[color=dark-red!70!white] (0,{-3+0.01*\t},{-\curvaturefactor*(0 + (-3+0.01*\t)^2)})
-      -- (0,{-3+0.01*(\t+1)},{-\curvaturefactor*(0 + (-3+0.01*(\t+1))^2)});
-      \draw[color=dark-red!70!white] (1,{-3+0.01*\t},{-\curvaturefactor*(1 + (-3+0.01*\t)^2)})
-      -- (1,{-3+0.01*(\t+1)},{-\curvaturefactor*(1 + (-3+0.01*(\t+1))^2)});
-      \draw[color=dark-red!70!white] (2,{-3+0.01*\t},{-\curvaturefactor*(4 + (-3+0.01*\t)^2)})
-      -- (2,{-3+0.01*(\t+1)},{-\curvaturefactor*(4 + (-3+0.01*(\t+1))^2)});
-      \draw[color=dark-red!70!white] (3,{-3+0.01*\t},{-\curvaturefactor*(9 + (-3+0.01*\t)^2)})
-      -- (3,{-3+0.01*(\t+1)},{-\curvaturefactor*(9 + (-3+0.01*(\t+1))^2)});
+    \foreach \t in {0,1,...,99}{%
+      \draw[color=dark-red!70!white] (-3,{-3+0.06*\t},{-\curvaturefactor*(9 + (-3+0.06*\t)^2)})
+      -- (-3,{-3+0.06*(\t+1)},{-\curvaturefactor*(9 + (-3+0.06*(\t+1))^2)});
+      \draw[color=dark-red!70!white] (-2,{-3+0.06*\t},{-\curvaturefactor*(4 + (-3+0.06*\t)^2)})
+      -- (-2,{-3+0.06*(\t+1)},{-\curvaturefactor*(4 + (-3+0.06*(\t+1))^2)});
+      \draw[color=dark-red!70!white] (-1,{-3+0.06*\t},{-\curvaturefactor*(1 + (-3+0.06*\t)^2)})
+      -- (-1,{-3+0.06*(\t+1)},{-\curvaturefactor*(1 + (-3+0.06*(\t+1))^2)});
+      \draw[color=dark-red!70!white] (0,{-3+0.06*\t},{-\curvaturefactor*(0 + (-3+0.06*\t)^2)})
+      -- (0,{-3+0.06*(\t+1)},{-\curvaturefactor*(0 + (-3+0.06*(\t+1))^2)});
+      \draw[color=dark-red!70!white] (1,{-3+0.06*\t},{-\curvaturefactor*(1 + (-3+0.06*\t)^2)})
+      -- (1,{-3+0.06*(\t+1)},{-\curvaturefactor*(1 + (-3+0.06*(\t+1))^2)});
+      \draw[color=dark-red!70!white] (2,{-3+0.06*\t},{-\curvaturefactor*(4 + (-3+0.06*\t)^2)})
+      -- (2,{-3+0.06*(\t+1)},{-\curvaturefactor*(4 + (-3+0.06*(\t+1))^2)});
+      \draw[color=dark-red!70!white] (3,{-3+0.06*\t},{-\curvaturefactor*(9 + (-3+0.06*\t)^2)})
+      -- (3,{-3+0.06*(\t+1)},{-\curvaturefactor*(9 + (-3+0.06*(\t+1))^2)});
 
-      \draw[color=dark-red!70!white] ({-3+0.01*\t},-3,{-\curvaturefactor*(9 + (-3+0.01*\t)^2)})
-      -- ({-3+0.01*(\t+1)},-3,{-\curvaturefactor*(9 + (-3+0.01*(\t+1))^2)});
-      \draw[color=dark-red!70!white] ({-3+0.01*\t},-2,{-\curvaturefactor*(4 + (-3+0.01*\t)^2)})
-      -- ({-3+0.01*(\t+1)},-2,{-\curvaturefactor*(4 + (-3+0.01*(\t+1))^2)});
-      \draw[color=dark-red!70!white] ({-3+0.01*\t},-1,{-\curvaturefactor*(1 + (-3+0.01*\t)^2)})
-      -- ({-3+0.01*(\t+1)},-1,{-\curvaturefactor*(1 + (-3+0.01*(\t+1))^2)});
-      \draw[color=dark-red!70!white] ({-3+0.01*\t},0,{-\curvaturefactor*(0 + (-3+0.01*\t)^2)})
-      -- ({-3+0.01*(\t+1)},0,{-\curvaturefactor*(0 + (-3+0.01*(\t+1))^2)});
-      \draw[color=dark-red!70!white] ({-3+0.01*\t},1,{-\curvaturefactor*(1 + (-3+0.01*\t)^2)})
-      -- ({-3+0.01*(\t+1)},1,{-\curvaturefactor*(1 + (-3+0.01*(\t+1))^2)});
-      \draw[color=dark-red!70!white] ({-3+0.01*\t},2,{-\curvaturefactor*(4 + (-3+0.01*\t)^2)})
-      -- ({-3+0.01*(\t+1)},2,{-\curvaturefactor*(4 + (-3+0.01*(\t+1))^2)});
-      \draw[color=dark-red!70!white] ({-3+0.01*\t},3,{-\curvaturefactor*(9 + (-3+0.01*\t)^2)})
-      -- ({-3+0.01*(\t+1)},3,{-\curvaturefactor*(9 + (-3+0.01*(\t+1))^2)});
+      \draw[color=dark-red!70!white] ({-3+0.06*\t},-3,{-\curvaturefactor*(9 + (-3+0.06*\t)^2)})
+      -- ({-3+0.06*(\t+1)},-3,{-\curvaturefactor*(9 + (-3+0.06*(\t+1))^2)});
+      \draw[color=dark-red!70!white] ({-3+0.06*\t},-2,{-\curvaturefactor*(4 + (-3+0.06*\t)^2)})
+      -- ({-3+0.06*(\t+1)},-2,{-\curvaturefactor*(4 + (-3+0.06*(\t+1))^2)});
+      \draw[color=dark-red!70!white] ({-3+0.06*\t},-1,{-\curvaturefactor*(1 + (-3+0.06*\t)^2)})
+      -- ({-3+0.06*(\t+1)},-1,{-\curvaturefactor*(1 + (-3+0.06*(\t+1))^2)});
+      \draw[color=dark-red!70!white] ({-3+0.06*\t},0,{-\curvaturefactor*(0 + (-3+0.06*\t)^2)})
+      -- ({-3+0.06*(\t+1)},0,{-\curvaturefactor*(0 + (-3+0.06*(\t+1))^2)});
+      \draw[color=dark-red!70!white] ({-3+0.06*\t},1,{-\curvaturefactor*(1 + (-3+0.06*\t)^2)})
+      -- ({-3+0.06*(\t+1)},1,{-\curvaturefactor*(1 + (-3+0.06*(\t+1))^2)});
+      \draw[color=dark-red!70!white] ({-3+0.06*\t},2,{-\curvaturefactor*(4 + (-3+0.06*\t)^2)})
+      -- ({-3+0.06*(\t+1)},2,{-\curvaturefactor*(4 + (-3+0.06*(\t+1))^2)});
+      \draw[color=dark-red!70!white] ({-3+0.06*\t},3,{-\curvaturefactor*(9 + (-3+0.06*\t)^2)})
+      -- ({-3+0.06*(\t+1)},3,{-\curvaturefactor*(9 + (-3+0.06*(\t+1))^2)});
     }
 
     % global space distance
     \fill[color=dark-red] (0,0,0) circle [radius=0.1]; % node [right]{\textcolor{dark-red}{$\boldtheta_a$}};
     \fill[color=dark-red] (-2,-1,{-\curvaturefactor*5}) circle [radius=0.1]; % node [right] {\textcolor{dark-red}{$\boldtheta_b$}};
 
-    \foreach \t in {0,1,...,99}{%
+    \foreach \t in {0,1,...,49}{%
       % \draw[thick,color=dark-red] ({-0.02*\t}, {-0.006*\t - 0.00004 * \t^2}, {-\curvaturefactor*((-0.02*\t)^2+(-0.006*\t - 0.00004 * \t^2)^2)})
       % -- ({-0.02*(\t+1)}, {-0.006*(\t+1) - 0.00004 * (\t+1)^2}, {-\curvaturefactor*((-0.02*(\t+1))^2+(-0.006*(\t+1) - 0.00004 * (\t+1)^2)^2)});
-      \draw[thick,color=dark-red] ({-0.02*\t}, {-0.01*\t - 0.00000 * \t^2}, {-\curvaturefactor*((-0.02*\t)^2+(-0.01*\t - 0.00000 * \t^2)^2)})
-      -- ({-0.02*(\t+1)}, {-0.01*(\t+1) - 0.00000 * (\t+1)^2}, {-\curvaturefactor*((-0.02*(\t+1))^2+(-0.01*(\t+1) - 0.00000 * (\t+1)^2)^2)});
+      \draw[thick,color=dark-red] ({-0.04*\t}, {-0.02*\t - 0 * \t^2}, {-\curvaturefactor*((-0.04*\t)^2+(-0.02*\t - 0 * \t^2)^2)})
+      -- ({-0.04*(\t+1)}, {-0.02*(\t+1) - 0 * (\t+1)^2}, {-\curvaturefactor*((-0.04*(\t+1))^2+(-0.02*(\t+1) - 0 * (\t+1)^2)^2)});
     }
     
     % Tangent space
-    \draw[color=dark-blue!70!white, fill=dark-blue!10!white, fill opacity=0.2] (3,-3,0) -- (3,3,0) -- (-3,3,0) -- (-3,-3,0) -- cycle;
+    \draw[color=dark-blue!70!white, fill=dark-blue!10!white, fill opacity=0.3] (3,-3,0) -- (3,3,0) -- (-3,3,0) -- (-3,-3,0) -- cycle;
 
     \draw[color=dark-blue!70!white] (-3,2,0) -- (3,2,0);
     \draw[color=dark-blue!70!white] (-3,1,0) -- (3,1,0);

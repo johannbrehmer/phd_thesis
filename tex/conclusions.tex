@@ -9,11 +9,118 @@
 \label{chapter:conclusions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% The word ``effective'' in the title of this thesis refers to the two
-% central ideas that permeate this thesis: the use of effective field
-% theory for Higgs measurements at the LHC, and effective measurements
-% of Higgs properties
+\firstword{M}{easuring the properties} of the Higgs boson is one of
+the most important missions for Run~II of the LHC and might help us
+understand some of the open questions of fundamental physics. The
+efficient combination of different experimental channels and their
+interpretation in the plethora of models of physics beyond the
+Standard Model benefit from a universal parametrisation of these
+properties. The dimension-six operators of linear Higgs effective
+field theory provide such a framework that is theoretically
+well-motivated, mostly independent of model assumptions, and
+phenomenologically powerful. This thesis discussed two aspects of this
+approach, both of immediate practical relevance: we analysed whether
+these effective operators accurately capture the relevant signatures
+of specific scenarios of new physics, and developed statistical tools
+that can help to design efficient measurements of the Higgs
+properties.
 
-\comment{To here on Wednesday}
+\newparagraph
+%
+The starting point of the first part was the observation that the
+validity of the dimension-six model for Higgs physics at the LHC is
+not at all obvious. The effective field theory is based on the
+assumption that the typical mass scale of new physics is significantly
+larger than the energy scale of the experiments described. But the
+limited precision of Higgs measurements at the LHC cannot guarantee
+such a scale separation: signatures of weakly coupled new physics can
+only have a relevant size if the new physics scale is close to the
+electroweak scale, and the effective theory might not be valid in
+general.
 
-\comment{Aim for Friday: content complete except Felix' part, no LaTeX warnings, notes only to point out missing cross-checks}
+We analysed whether the dimension-six model is nevertheless useful as
+a universal description of Higgs properties by comparing the Higgs
+phenomenology of different scenarios of new physics to their
+corresponding approximations in the effective theory. We analysed
+extended Higgs sectors with an additional scalar singlet or doublet,
+scalar top partners, and heavy vector bosons for total rates and
+kinematic distributions in the most important Higgs production and
+decay channels.
+
+Our results show that the agreement between the full models and the
+dimension-six model crucially depends on the matching procedure that
+links the coefficients of the effective theory to the full
+models. Standard procedures for the matching, defined in the unbroken
+phase of the electroweak symmetry, lead to large errors of the
+effective field theory description already for total rates, which only
+become worse when analysing kinematic distributions.
+
+But this does not mean that the dimension-six model is not useful for
+Higgs physics. We introduced $v$-improved matching, a procedure that
+improves the performance of the dimension-six model by resumming
+certain terms that arise during electroweak symmetry breaking. While
+formally of subleading order in the EFT expansion, these effects can
+be large under LHC conditions. With such a matching, the effective
+model provides a good description even in many scenarios where the EFT
+validity is not obvious, and in many scenarios only breaks down at new
+resonances or in the far high-energy tails of certain distributions.
+
+\newparagraph
+%
+Having established that Higgs EFT works well as a largely
+model-independent language for Higgs physics at the LHC, we turned to
+the question how its parameters can be measured optimally. The
+high-dimensional theory space defined by the Higgs properties and the
+intricate kinematics of some Higgs channels present challenges for
+traditional analysis methods based on cuts and kinematic
+distributions, while modern multivariate methods can be intransparent.
+
+Information geometry allows us to understand the information contained
+in LHC signatures and can help optimise measurement strategies. It is
+based on the Fisher information matrix, which according to the
+Cram\'er-Rao bound quantifies the maximal precision with which any
+continous model parameters can be measured in an experiment. It can be
+interpreted geometrically and natively supports to high-dimensional
+parameter space such as Higgs effective field theory.
+
+We developed an algorithm to calculate the Fisher information in
+arbitrary high-energy processes. In addition to the total Fisher
+information which quantifies the maximal knowledge that can be derived
+from a measurement, we also calculated the the distribution of the
+differential information over phase space, and the information in
+individual kinematic distributions. These tools define the important
+phase-space regions and observables for an analysis and let us combine
+the discrimination power in traditional histogram-based analyses to
+that in modern multivariate ones.
+
+Applying these techniques to Higgs production in weak boson fusion
+with decays into taus or four leptons, we showed how the kinematics of
+the tagging jets is significantly more sensitive to new physics in the
+form of dimension-six operators than the decay process. The most
+powerful observables are the transverse momenta of these jets and
+their angular correlations, but an analysis with matrix-element-based
+methods or machine-learning tools can extract significantly more
+information than that encoded in these distributions. Finally, we
+analysed the structure of Higgs production with a single top. Higgs
+decay products and angular distributions between the Higgs and top
+daughters are sensitive to different operators, but overall the
+sensitivity of this process to dimension-six physics is limited.
+
+This is the first application of information geometry to high-energy
+physics. While there is no shortage of statistical tools in the field,
+these new methods can help to plan and optimise measurement strategies
+for high-dimensional continuous models in an intuitive but powerful
+way. While we demonstrate this approach in different Higgs channels
+for dimension-six operators, our tools can easily be translated to other
+processes and models.
+
+\newparagraph
+%
+All in all, effective dimension-six operators provide a powerful
+framework for measurements of the Higgs properties. We analysed the
+validity of this approach at the LHC and showed how it can be improved
+with a suitable matching procedure, and developed tools based on
+information geometry to guide the design of measurement
+strategies. Hopefully, these new ideas can contribute to a better
+understanding of the nature of the Higgs boson, which might ultimately
+guide us to what lies beyond the Standard Model.
