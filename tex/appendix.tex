@@ -2036,13 +2036,114 @@ corresponding to the Wilson coefficients given in
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Cram\'er-Rao bound}
+\label{sec:appendix_information_cramer_rao}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In \autoref{eq:information_cramer_rao_general} in
+\autoref{sec:information_formalism} we stated the Cram\'er-Rao
+bound~\cite{Rao:1945, Cramer:1946}: the covariance of any estimator is
+bounded from below by the inverse Fisher information. Here we show the
+proof for the one-dimensional case and unbiased estimators, closely
+following Reference~\cite{Watkins:statistics}.
+
+An unbiased estimator $\hat{\theta}(\boldx)$ based on data $\boldx$
+has an expectation value equal to the unknown true value $\theta$,
+%
+\begin{equation}
+  \theta = E \left [ \hat{\theta} \middle | \theta \right]
+  \equiv \intfatx \hat{\theta} \; f(\boldx|\theta) \,.
+  \label{eq:appendix_information_cramer_rao_proof_unbiased}
+\end{equation}
+%
+Like any probability distribution function, $f(\boldx|\theta)$ is normalised to one,
+%
+\begin{equation}
+  1 = \intfatx f(\boldx|\theta) \,. 
+  \label{eq:appendix_information_cramer_rao_proof_norm}
+\end{equation}
+%
+We assume that these two equations are differentiable with respect to
+$\theta$, and that we can exchange this derivative with the
+integral. Differentiating
+\autoref{eq:appendix_information_cramer_rao_proof_norm} with respect
+to $\theta$ gives
+%
+\begin{align}
+  0 &= \intfatx \partial_\theta f(\boldx|\theta) \notag \\
+  &= \intfatx \frac{\partial_\theta f(\boldx|\theta)} {f(\boldx|\theta)} \; f(\boldx|\theta) \notag \\
+  &= E \left[ \partial_\theta \log f(\boldx|\theta) \middle| \theta  \right] \,. 
+  \label{eq:appendix_information_cramer_rao_proof_score}
+\end{align}
+%
+For \autoref{eq:appendix_information_cramer_rao_proof_unbiased} we find in the same way
+%
+\begin{align}
+  1 &= \intfatx \hat{\theta} \partial_\theta f(\boldx|\theta) \notag \\
+  &= E \left[ \hat{\theta} \; \partial_\theta \log f(\boldx|\theta) \middle| \theta \right] \,. 
+  \label{eq:appendix_information_cramer_rao_proof_intermediate1}
+\end{align}
+%
+We can phrase this in terms of the covariance
+%
+\begin{equation}
+  \cov [X,Y] \equiv E[ (X - E[X]) (Y - E[Y]) = E[XY] - E[X] \, E[Y]
+\end{equation}
+%
+(which is closely related, but not identical, to the covariance matrix
+defined in \autoref{eq:information_covariance_matrix}).  Using
+\autoref{eq:appendix_information_cramer_rao_proof_score},
+\autoref{eq:appendix_information_cramer_rao_proof_intermediate1} can
+then be written as
+%
+\begin{equation}
+  1 = \cov \left[ \hat{\theta} , \partial_\theta \log f(\boldx|\theta) \middle| \theta \right] \,. 
+  \label{eq:appendix_information_cramer_rao_proof_intermediate2}
+\end{equation}
+%
+We can square this equation and apply the Cauchy-Schwartz
+identity\footnote{This inequality is well-known in the form of the
+  bounds on the Pearson correlation coefficient, $-1 \leq r \leq 1$
+  with $r = \cov [X,Y] / \sqrt{\var[X]\,\var[Y]}$.}
+%
+\begin{equation}
+  \cov [X, Y]^2 \geq \var [X] \, \var[Y] \,,
+\end{equation}
+%
+leading to
+%
+\begin{equation}
+  1 \leq \var \left[ \hat{\theta} \middle| \theta \right] \; \var \left[ \partial_\theta \log f(\boldx|\theta) \middle| \theta \right]
+\end{equation}
+%
+or
+%
+\begin{equation}
+  \var \left[ \hat{\theta} \middle| \theta \right] \geq \frac 1 {\var \left[ \partial_\theta \log f(\boldx|\theta) \middle| \theta \right]}
+\end{equation}
+%
+Invoking \autoref{eq:appendix_information_cramer_rao_proof_score} one more time, we finally arrive at the Cram\'er-Rao bound
+%
+\begin{equation}
+  \var \left[ \hat{\theta} \middle| \theta \right] \geq \frac 1 {I(\theta)}
+\end{equation}
+%
+with the Fisher information
+%
+\begin{equation}
+  I(\theta) = E \left[ \left( \partial_\theta \log f(\boldx|\theta) \right)^2 \middle| \theta \right] \,.
+\end{equation}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{A simple example}
 \label{sec:appendix_information_example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In \autoref{sec:information_formalism} we introduced the Fisher
 information as the mathematical object that quantifies the maximal
-precision with which continous theory parameters can be measured.  As
+precision with which continuous theory parameters can be measured.  As
 a simple example, we now calculate the Fisher information in a number
 of event counts $n_c$ in different channels $c$. We assume that the
 channels are independent and follow Poisson distributions with mean
@@ -2140,7 +2241,7 @@ signal-to-background ratio.
 
 In \autoref{sec:information_application_even} we calculate the Fisher
 information in terms of dimension-six operators for a range of LHC
-Higgs channels. We include an idealized treatment of the detector
+Higgs channels. We include an idealised treatment of the detector
 response in which the invariant mass distributions from narrow
 resonance peaks are smeared according to the experimental resolution,
 following the procedure developed in References~\cite{Cranmer:2006zs,
@@ -2201,7 +2302,7 @@ $\boldtheta$.
   \includegraphics[width=0.33 \textwidth,clip,trim=0.3cm 0 0.05cm 0]{fig/information/wbf_tautau_grid_fphi2_fww}%
   \includegraphics[width=0.33 \textwidth,clip,trim=0.3cm 0 0.05cm 0]{fig/information/wbf_tautau_grid_fww_fw}%
   \caption{Full Fisher information in the WBF $h \to \tau \tau$
-    channel at different points in the parameter space. We visualize
+    channel at different points in the parameter space. We visualise
     the Fisher information with contours of local distance
     $d_\text{local}(\boldtheta ; \boldtheta_0) = 1$, setting the
     $\theta_i$ not shown to zero. }
