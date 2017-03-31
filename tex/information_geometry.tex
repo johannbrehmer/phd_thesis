@@ -164,7 +164,7 @@ we can understand and characterise the information contained in
 particle physics processes. The design of event selections and
 analysis strategies requires clearly defined guidelines. We present an
 approach to these problems based on information
-geometry~\cite{efron1975, amari1982}. It offers tools that are
+geometry~\cite{efron1975, amari1982, amari2000joho}. It offers tools that are
 intrinsically designed for continuous parameter spaces of arbitrary
 dimensionality, independent of basis choices and without the need for
 any discretisation of the model hypothesis.
@@ -198,20 +198,20 @@ particle-physics processes based on Monte-Carlo methods. We can
 calculate the quantities outlined above, each designed to answer
 different practical questions:
 %
-\begin{itemize}
-\item \emph{full Fisher information}: what is the maximum precision
+\begin{enumerate}
+\item What is the maximum precision
   with which continuous model parameters can be measured in a process?
     %
-\item \emph{differential Fisher information}: how is the information
+\item How is the information
   on model parameters distributed over phase space?
     %
-\item \emph{information in distributions}: how well can we measure
-  model parameters based on individual kinematic observables, rather
-  than the information in the full high-dimensional phase space?
+\item How well can we measure model parameters based on individual
+  kinematic observables, rather than the information in the full
+  high-dimensional phase space?
     %
-\item \emph{global geometry}: which role do non-linear terms in the
+\item Which role do non-linear terms in the
   theory parameters play?
-\end{itemize}
+\end{enumerate}
 
 \newparagraph
 %
@@ -487,10 +487,10 @@ information defines a Riemannian metric\footnote{This is only strictly
   true in the absence of blind directions, otherwise the information
   matrix is only positive semi-definite and defines a pseudo-metric.}
 on the manifold given by the theory space. This is the cornerstone of
-information geometry~\cite{efron1975, amari1982}, which uses methods
-from differential geometry to analyse the structure of the probability
-distributions, or the relation between experiment and models.
-Interpreted as a metric, the Fisher information defines a
+information geometry~\cite{efron1975, amari1982, amari2000joho}, which
+uses methods from differential geometry to analyse the structure of
+the probability distributions, or the relation between experiment and
+models.  Interpreted as a metric, the Fisher information defines a
 infinitesimal distances
 %
 \begin{equation}
@@ -498,11 +498,10 @@ infinitesimal distances
 \end{equation}
 %
 Different from the conventions in differential geometry, we use lower
-indices for vectors and the metric tensor and sum over repeated lower
-indices.
+indices for vectors and sum over repeated lower indices.
 
-This directly defines a \emph{local distance} in the tangent space at
-some point $\boldtheta_a$, see the left panel of
+First, the metric defines a \emph{local distance} in the tangent space
+at some point $\boldtheta_a$, see the left panel of
 \autoref{fig:information_geometry_illustration}. We usually consider
 the distance between $\boldtheta_a$ itself and some other point
 $\boldtheta_a$ in this tangent space,
@@ -2188,7 +2187,7 @@ multivariate approach, corresponding to $70\%$ more data.
 % In our first application of information geometry to Higgs physics we
 % demonstrated that weak boson fusion with a decay into tau pairs can
 % ideally probe $\ope{\phi,2}$, $\ope{W}$, and $\ope{WW}$ at the
-% $\Lambda / \sqrt{f} \sim 1.2~\tev$ level early during Run~II of the
+% $\Lambda / \sqrt{f} \sim 1.2~\tev$ level early during Run~2 of the
 % LHC. As expected, a large fraction of this constraining power comes
 % from the few events with large momentum transfer. Care has to be taken
 % with standard cuts on $\Delta \eta_{jj}$, which unnecessarily limit
@@ -3250,7 +3249,7 @@ separation of the tagging jets, which throw away a large amount of
 discrimination power.  Under idealised conditions, traditional
 analyses based on a simple event selection and standard kinematic
 distributions can probe new physics scales around $900~\gev$ in the
-early phase of Run~II. Multivariate analyses have the potential to
+early phase of Run~2. Multivariate analyses have the potential to
 significantly enhance the sensitivity and probe new physics scales of
 up to $1.2~\tev$.
 

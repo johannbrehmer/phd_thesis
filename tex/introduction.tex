@@ -74,19 +74,23 @@ significantly larger than the experimental energies, all new physics
 effects are captured by a tower of higher-dimensional operators. The
 leading effects for Higgs physics should come from only a handful of
 operators with mass dimension six~\cite{Burges:1983zg, Leung:1984ni,
-  Buchmuller:1985jz}. These operators are manifestly gauge-invariant
-and can be used beyond tree level. They describe both coupling
-rescalings as well as novel kinematic structures not present in the
-SM, allowing us to access information in distributions in addition to
-total rates~\cite{Corbett:2012ja, Corbett:2015ksa}. Effective
-operators also let us combine Higgs data with results from other
-experiments, including electroweak precision data or gauge boson
-production at the LHC~\cite{Butter:2016cvz}. However, the limited
-precision of the LHC Higgs measurements means that only models that
-are either strongly coupled or relatively light can be probed. In the
-latter case, the characteristic energy scale of new physics is not
-sufficiently separated from the momentum transfers in the experiments,
-casting doubt on the validity of the EFT approach.
+  Buchmuller:1985jz}. These operators
+%
+% are manifestly gauge-invariant and can be used beyond tree
+% level. They
+%
+describe both coupling rescalings as well as novel kinematic
+structures not present in the SM, allowing us to access information in
+distributions in addition to total rates~\cite{Corbett:2012ja,
+  Corbett:2015ksa}. Effective operators also let us combine Higgs data
+with results from other experiments, including electroweak precision
+data or gauge boson production at the
+LHC~\cite{Butter:2016cvz}. However, the limited precision of the LHC
+Higgs measurements means that only models that are either strongly
+coupled or relatively light can be probed. In the latter case, the
+characteristic energy scale of new physics is not sufficiently
+separated from the momentum transfers in the experiments, casting
+doubt on the validity of the EFT approach.
 
 We analyse the usefulness of higher-dimensional operators at the LHC
 by comparing the predictions of UV-complete scenarios of new physics
@@ -99,6 +103,17 @@ various representative decay channels as well as Higgs pair
 production. For this array of models, benchmark points, and
 observables, we ask if and where the effective description of new
 physics breaks down, and how it can be improved.
+
+As it turns out, the performance of the effective model strongly
+depends on the matching procedure that links the coefficients of the
+dimension-six operators to the full theory. We analyse how electroweak
+symmetry breaking affect the validity of the effective theory, and
+discuss how the standard matching procedure can be adapted to
+situations where these effects are large. In addition, we discuss the
+practical problems whether squared amplitudes from dimension-six
+operators should be included in calculations, and which observables
+provide the best probes of the momentum transfer in Higgs production
+in weak boson fusion~\cite{Biekotter:2016ecg}.
 
 \newparagraph
 %
@@ -114,31 +129,35 @@ Traditional analyses based on selection cuts and histograms of
 kinematic observables are in many cases not sensitive to such subtle
 signatures.  At the other end of the spectrum, experiments resort more
 and more to high-level statistical tools, including machine learning
-techniques or the matrix element method~\cite{Kondo:1988yd,
-  Atwood:1991ka, Gao:2010qx, Bolognesi:2012mm, Cranmer:2015nia}. Many
-of these tools are designed for the comparison between two discrete
-hypotheses, and applying them to high-dimensional parameter spaces
-such as Higgs EFT is computationally expensive. Extending machine
-learning techniques to such high-dimensional spaces is a current area
-of research~\cite{Cranmer:2015bka}. Also, while these multivariate
-techniques are powerful, it is often not transparent which physical
-properties exactly they probe. It is therefore increasingly important
-to be able to characterise the information contained in LHC
+techniques~\cite{Cranmer:2015bka, Louppe:2016ylz, Louppe:2016aov,
+  Cranmer:2016lzt, Baldi:2016fzo, Brehmer:ghost_probability,
+  Cogan:2014oua, Baldi:2014pta, deOliveira:2015xxd, Almeida:2015jua,
+  Baldi:2016fql, Guest:2016iqz, Komiske:2016rsd, Kasieczka:2017nvn,
+  Louppe:2017ipp, Baldi:2014kfa, Searcy:2015apa, Santos:2016kno,
+  Alves:2016htj, Buckley:2011kc, Bornhauser:2013aya, Bechtle:2017vyu}
+or matrix-element-based methods~\cite{Kondo:1988yd, Abazov:2004cs,
+  Gao:2010qx, Alwall:2010cq, Avery:2012um, Andersen:2012kn,
+  Campbell:2013hz, Artoisenet:2013vfa, Martini:2015fsa,
+  Gritsan:2016hjl, Soper:2011cr, Soper:2012pb, Soper:2014rya,
+  Atwood:1991ka, Davier:1992nw, Diehl:1993br}. While these
+multivariate techniques are powerful, it is often not transparent
+which physical properties they probe. It is therefore increasingly
+important to be able to characterise the information contained in LHC
 signatures.
 
 We use information geometry to understand and optimise Higgs
 measurements~\cite{Brehmer:2016nyr}.  The central building block is
-the Fisher information, which according to the Cram\'er-Rao bound
-encodes the maximal knowledge on theory parameters we can derive from
-an experiment. Unlike many other statistical tools, the Fisher
+the Fisher information matrix, which according to the Cram\'er-Rao
+bound encodes the maximal knowledge on theory parameters we can derive
+from an experiment. Unlike many other statistical tools, the Fisher
 information is intrinsically designed for continuous, high-dimensional
-parameter spaces, and this approach does not require any
-discretisation of the theory space and leads to results that do not
-depend on arbitrary parameter or basis choices. In addition, the
-Fisher information defines a metric on the model parameter space. This
-not only provides an intuitive geometric picture of the sensitivity of
-measurements, but also allows us to track the impact of higher
-orders in the EFT expansion.
+parameter spaces; this approach does not require any discretisation of
+the theory space and leads to results that do not depend on arbitrary
+parameter or basis choices. In addition, the Fisher information
+defines a metric on the model parameter space. This not only provides
+an intuitive geometric picture of the sensitivity of measurements, but
+also allows us to track the impact of higher orders in the EFT
+expansion.
 
 We calculate the Fisher information for Higgs production in weak boson
 fusion with decays into tau pairs and four leptons, and for Higgs
@@ -152,19 +171,19 @@ distributed over phase space, which defines optimal event
 selections. In a next step, we calculate the information in individual
 kinematic distributions, and compare it to the maximal information in
 the full event kinematics. This provides a ranking of the most
-powerful production and decay observables. It allows us to compare how
-much we can learn from a simple fit to histograms compared to fully
-multivariate methods. Together, these tools can be used to optimise
-measurement strategies.
+powerful production and decay observables. It also allows us to
+compare how much we can learn from a simple fit to histograms compared
+to fully multivariate methods. Together, these tools can be used to
+optimise measurement strategies.
 
 \newparagraph
 %
 This thesis begins by recapitulating some basic ideas of Higgs physics
 and effective field theory in \autoref{chapter:foundations}. In
-\autoref{chapter:validity}, we discuss the validity of effective
-field theory for LHC measurements and the matching between full models
-and effective operators. \autoref{chapter:information} presents
-our work on information geometry and optimal Higgs measurements. Both
-of these chapters will contain separate and more detailed introductions
-and conclusions. We summarise the results in
+\autoref{chapter:validity}, we discuss the validity of effective field
+theory for LHC measurements and the matching between full models and
+effective operators. \autoref{chapter:information} presents our work
+on information geometry and optimal Higgs measurements. Both of these
+chapters will contain separate and more detailed introductions and
+conclusions. We summarise our results in
 \autoref{chapter:conclusions}.

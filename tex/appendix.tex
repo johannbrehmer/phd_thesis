@@ -2087,7 +2087,9 @@ For \autoref{eq:appendix_information_cramer_rao_proof_unbiased} we find in the s
 We can phrase this in terms of the covariance
 %
 \begin{equation}
-  \cov [X,Y] \equiv E[ (X - E[X]) (Y - E[Y]) = E[XY] - E[X] \, E[Y]
+  \cov \left[ X,Y \middle| \theta \right]
+  \equiv E \left[ (X - E[X|\theta]) (Y - E[Y|\theta]) \middle| \theta \right]
+  = E \left[ XY \middle| \theta \right] - E\left[X \middle| \theta \right] \, E\left[Y \middle| \theta \right]
 \end{equation}
 %
 (which is closely related, but not identical, to the covariance matrix
