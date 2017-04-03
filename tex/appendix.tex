@@ -584,13 +584,18 @@ $\overbar{k} = |k_E |$ we can finally calculate the integral:
 
 Collecting all the pieces, we have
 %
-\begin{multline}
-  \seff \supset \frac {\lambda_2^3} {192 \pi^2} \,
-    \intfourx \!\! \intfoury \!\! \intfourz \phi(x)^2 \phi(y)^2 \phi(z)^2 
-    \intfourp \!\! \intfourq e^{\im p (z-x)} \, e^{\im q (z-y)} \\
-    \times \int_0^1 \!\! \diff x_1 \int_0^{1-x_1} \!\! \diff x_2 \;
-    \left[ M^2 - (1 - x_1 - x_2) (p+q)^2 - x_2 p^2 + ((1-x_1) p  + (1 - x_1 - x_2) q )^2 \right]^{-1} \,.
-\end{multline}
+\begin{align}
+  \seff &\supset \frac {\lambda_2^3} {192 \pi^2} \,
+    \intfourx \!\! \intfoury \!\! \intfourz \phi(x)^2 \phi(y)^2 \phi(z)^2 \notag \\
+  %
+  &\phantom{=} \times
+    \intfourp \!\! \intfourq e^{\im p (z-x)} \, e^{\im q (z-y)} 
+    \int_0^1 \!\! \diff x_1 \int_0^{1-x_1} \!\! \diff x_2 \notag \\
+  %
+        &\phantom{=} \times
+    \left[ M^2 - (1 - x_1 - x_2) (p+q)^2 - x_2 p^2 + ((1-x_1) p
+          + (1 - x_1 - x_2) q )^2 \right]^{-1} \,.
+\end{align}
 %
 At first glance, this is disappointing: this effective action looks
 non-local and involves highly non-trivial integrals. It turns out that
@@ -640,11 +645,10 @@ to operators like $\phi^8$ and higher. They are suppressed at
 least with $ 1 / M^4$ and are thus irrelevant for our dimension-six
 effective theory.
 
-Collecting the pieces in
-\autoref{eq:foundations_scalar_example_effective_action_tree_part}
-and
-\autoref{eq:foundations_scalar_example_effective_action_loop_part},
-up to one loop and $\ord{1/M^2}$ the full effective action is given by
+Combining
+\autoref{eq:foundations_scalar_example_effective_action_tree_part} and
+\autoref{eq:foundations_scalar_example_effective_action_loop_part}, up
+to one loop and $\ord{1/M^2}$ the effective action is given by
 %
 \begin{equation}
   \seff[\phi] = \intfourx \left[\frac 1 2 \partial_\mu \phi \partial^\mu \phi
