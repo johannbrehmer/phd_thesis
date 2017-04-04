@@ -77,9 +77,9 @@ given by
     + \frac {\theta_{QCD}} {32 \pi^2} G^a_{\mu\nu} \widetilde{G}^{a\,\mu\nu}
     + \sum_f \overbar f \im \slashed D f \notag \\
   %
-  &\phantom{=} + (D^\mu \phi)^\dagger (D_\mu \phi) - \mu^2 \phisq - \lambda (\phisq)^2 \notag \\
+  &\phantom{{}={}} + (D^\mu \phi)^\dagger (D_\mu \phi) - \mu^2 \phisq - \lambda (\phisq)^2 \notag \\
   %
-  &\phantom{=} - \sum_{\text{generations}} \left(    y_u {\twovec {\overbar u} {\overbar d}}_L \tilde \phi \, u_{R} 
+  &\phantom{{}={}} - \sum_{\text{generations}} \left(    y_u {\twovec {\overbar u} {\overbar d}}_L \tilde \phi \, u_{R} 
                                                            + y_d {\twovec {\overbar u} {\overbar d}}_L \phi \, d_{R}
                                                            + y_\ell {\twovec {\overbar \nu} {\overbar \ell^-}}_L \phi \, \ell_{R}  + \hc  \right ) \,.
   \label{eq:appendix_bases_sm_lagrangian}
@@ -263,19 +263,31 @@ $p_\mu$ is the invariant mass
 \end{equation}
 %
 with energy $E = p_0$ and three-momentum $\mathbf{p}$. We use the
-symbol $m_{XY}$ for invariant masses of systems of two or more
-particles, for instance $m_{XY}^2 \equiv (p_X + p_Y)^2$. For a single
-particle $X$, $m_X$ instead denotes the mass parameter, and
-$p_X^2 = m_X^2$ only for on-shell particles.
+symbol $m$ for invariant masses of systems of two or more
+particles, for instance $m_{ij}^2 \equiv (p_i + p_j)^2$. For a single
+particle $i$, $m_i$ instead denotes the mass parameter, and
+$p_i^2 = m_i^2$ only for on-shell particles.
 
 We use a standard coordinate system where the component $p_3$ (also
-called longitudinal momentum $p_L$) points into the direction of
-the proton beam. The transverse momentum is defined as
+called longitudinal momentum $p_L$) points into the direction of the
+proton beam. The other two spatial components make up the transverse
+momentum $\mathbf{p}_T$. Often we use its magnitude
 %
 \begin{equation}
   p_T \equiv \sqrt {p_x^2 + p_y^2} \,.
 \end{equation}
 %
+The missing transverse momentum or missing transverse energy is given
+by
+%
+\begin{equation}
+  \mpt \equiv - \sum_{\text{visible}} \mathbf{p}_T \,, \qqqquad
+  \met \equiv \left | \mpt \right| \,,
+\end{equation}
+%
+where the sum goes over all particles that can be experimentally
+detected.
+
 The particle direction is usually characterized in a spherical
 coordinate system: $\phi$ is the azimuthal angle in the transverse
 plane and $\theta$ the polar angle between the spatial momentum and
@@ -287,22 +299,30 @@ pseudo-rapidity
 \end{equation}
 %
 such that $\eta \to \pm \infty$ corresponds to the beam directions and
-$\eta = 0$ to orthogonal directions. Small values
+$\eta = 0$ to the orthogonal plane. Small values
 $|\eta| \lesssim 2.5$ correspond to the central regions of typical
 general-purpose particle detectors such as ATLAS and CMS, larger
-values $2.5 \lesssim |\eta| \lesssim 5$ to the ``forward regions''.
+values $2.5 \lesssim |\eta| \lesssim 5$ to the ``forward regions''. We
+often analyse angular correlations between particles, in particular
+the difference in pseudorapidity
+$\Delta \eta_{ij} \equiv | \eta_i - \eta_j |$ and the difference in
+azimuthal angle $\Delta \phi_{ij} \equiv | \phi_i - \phi_j |$.
 
 Energies, momenta, and masses are expressed in \gev\ or \tev, with
 %
 \begin{equation}
-  1~\gev = 1.60 \cdot 10^{-10}~\si{J} = 1.78 \cdot 10^{-27}~\si{kg} = 5.34\cdot 10^{-19}~\si{kg.m/s} \,.
+  1~\gev = 1.60 \cdot 10^{-10}~\si{J}
+  = 1.78 \cdot 10^{-27}~\si{kg}
+  = 5.34\cdot 10^{-19}~\si{kg.m/s} \,.
 \end{equation}
 %
 Cross sections are given in \fb\ or \pb, integrated luminosites in
 \ifb, where
 %
 \begin{equation}
-  1~\fb = 10^{-43}~\si{m^2} = 2.57 \cdot 10^{-12}~\si{GeV^{-2}} \,.
+  1~\fb
+  = 10^{-43}~\si{m^2}
+  = 2.57 \cdot 10^{-12}~\si{GeV^{-2}} \,.
 \end{equation}
 
 
@@ -345,20 +365,20 @@ dimension, it reads
   \lgr{before}
   &= - \mu^2 \phisq \notag \\
   %
-  &\phantom{=}
+  &\phantom{{}={}}
     - \frac 1 4 \, B_{\mu\nu} B^{\mu \nu} + (D^\mu \phi)^\dagger (D_\mu \phi) - \lambda \, (\phisq)^2 \notag \\
   %
-  &\phantom{=}
+  &\phantom{{}={}}
     + \frac {f_{\phi,1}} {\Lambda^2} \, (D_\mu\phi)^\dagger \phi \; \phi^\dagger D^\mu\phi 
     + \frac {f_{\phi,2}} {\Lambda^2} \, \frac{1}{2}\partial^\mu(\phisq)\,\partial_\mu(\phisq)
     + \frac {f_{\phi,3}} {\Lambda^2} \, \frac{1}{3}(\phisq)^3 \notag \\
   %
-  &\phantom{=}
+  &\phantom{{}={}}
     + \frac {f_{\phi,4}} {\Lambda^2} \, (\phisq)  (D_\mu \phi)^\dagger D^\mu \phi
     + \frac {f_{B}} {\Lambda^2} \, \frac{\im g'}{2 }(D^\mu\phi^\dagger)(D^\nu\phi)\,B_{\mu\nu}
     - \frac {f_{BB}} {\Lambda^2} \, \frac{g'^2}{4} (\phisq)\,B_{\mu\nu}\,B^{\mu\nu} \notag \\
   %
-  &\phantom{=}
+  &\phantom{{}={}}
   + \ord{1/\Lambda^4} \,.
 \end{align}
 
@@ -534,7 +554,7 @@ The second term is
   &=  \frac \im 2  \tr \log \left( \partial^2 + M^2 \right) + \frac \im 2  \tr \log \left( 1 + \frac {\lambda_2} 2 \frac {1} {\partial^2 + M^2 + \im \varepsilon} \phi^2 \right) \,,
   %
   % &=  \frac \im 2  \intfourk \braket {k| \log \left( \partial^2 + M^2 \right) | k} \notag \\
-  % &\phantom{=} \quad + \frac \im 2  \intfourk \braket {k| \log \left( 1 + \frac {\lambda_2} 2 \frac {1} {\partial^2 + M^2 + \im \varepsilon} \phi^2 \right) | k} \,.
+  % &\phantom{{}={}} \quad + \frac \im 2  \intfourk \braket {k| \log \left( 1 + \frac {\lambda_2} 2 \frac {1} {\partial^2 + M^2 + \im \varepsilon} \phi^2 \right) | k} \,.
 \end{align}
 %
 where derivatives in the denominator are defined as Green's
@@ -664,11 +684,11 @@ Collecting all the pieces, we have
   \seff &\supset \frac {\lambda_2^3} {192 \pi^2} \,
     \intfourx \!\! \intfoury \!\! \intfourz \phi(x)^2 \phi(y)^2 \phi(z)^2 \notag \\
   %
-  &\phantom{=} \times
+  &\phantom{{}={}} \times
     \intfourp \!\! \intfourq e^{\im p (z-x)} \, e^{\im q (z-y)} 
     \int_0^1 \!\! \diff x_1 \int_0^{1-x_1} \!\! \diff x_2 \notag \\
   %
-        &\phantom{=} \times
+        &\phantom{{}={}} \times
     \left[ M^2 - (1 - x_1 - x_2) (p+q)^2 - x_2 p^2 + ((1-x_1) p
           + (1 - x_1 - x_2) q )^2 \right]^{-1} \,.
 \end{align}
@@ -1523,7 +1543,7 @@ conventional factors of coupling constants, introduced for a
 convenient power counting in certain UV
 embeddings~\cite{Pappadopulo:2014qza}: insertions of $V$ and $\phi$
 are weighted by one factor of $g_V$, while SM gauge bosons come with a
-factor of $g_w$. In addition, the coupling to fermions is weighted
+factor of $g_W$. In addition, the coupling to fermions is weighted
 with an additional factor of $g_W^2/g_V^2$. For simplicity, it is
 assumed that the fermion current in \autoref{eq:validity_vector_triplet_lagrangian}
 is universal.
@@ -1685,7 +1705,7 @@ Equations~\eqref{eq:appendix_vector_triplet_neutral_masses} and
 \subsubsection*{Couplings}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The mismatch between $g$ and $g_w$ as well as between $v$ and $\hat{v}$ leads to a shift of the Higgs couplings to fermions,
+The mismatch between $g$ and $g_W$ as well as between $v$ and $\hat{v}$ leads to a shift of the Higgs couplings to fermions,
 %
 \begin{align}
  \Delta_f
@@ -1708,7 +1728,7 @@ and to (on-shell) $W$ bosons,
     - c_H \frac {\sin \theta_C \, \cos \theta_C \, g \, g_V \, \hat{v}} 
     {\cos \theta_C - c_F \, \frac{g_W}{g_V} \, \sin \theta_C} \notag \\
   %
-  &\phantom{=} \qqqqquad \qquad
+  &\phantom{{}={}} \qqqqquad \qquad
     + 2 \, c_{ VVHH} \, \sin^2 \theta_C \, g_V^2 \, \hat{v} \Biggr) - 1 \notag \\
   % 
   &= c_H^2 \, \frac{3g_V^2 v^2}{8M_V^2}
