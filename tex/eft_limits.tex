@@ -11,8 +11,6 @@
 \label{chapter:validity}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\comment{Work through Astrid's comments}
-
 \firstword{A}{ suitable effective field theory} can universally
 describe all signatures expected from new physics as long as the new
 physics scale $\Lambda$ is much larger than the experimental momentum
@@ -62,20 +60,14 @@ probed energy and the new physics scale, $E \ll \Lambda$. On the other
 hand, one expects the EFT expansion to break down at $E \geq \Lambda$,
 where an infinite number of operators contributes at the same size and
 the effective model is neither predictive nor renormalisable. The
-validity of the EFT in the intermediate region,
-%
-\begin{equation}
-  E \lesssim \Lambda \,,
-  \label{eq:validity_muddy_waters}
-\end{equation}
-%
+validity of the EFT in the intermediate region, $E \lesssim \Lambda$,
 is less obvious and will depend on the specific underlying model as
 well as on the observable studied.
 
 In which of these categories do the LHC Higgs measurements belong?
 There is no immediately obvious answer, since Higgs production does
 not only probe a single experimental energy scale. While the momentum
-transfer is bounded from below by the Higgs mass, selection criteria
+transfer is bounded from below by the Higgs mass $m_h$, selection criteria
 necessary to separate a signal from the QCD backgrounds often require
 a higher momentum transfer $E > m_h$. More importantly, most of the
 information on operators with derivatives comes from high-energy
@@ -106,7 +98,9 @@ experimental reach of the LHC if
   \label{eq:validity_probed_scale_estimation}
 \end{equation}
 %
-where $g$ are the typical couplings of the underlying theory.
+where $g$ are the typical couplings of the underlying theory and
+$\sigma \times \BR$ the Higgs production cross section times branching
+ratio.
 %
 % For loop-induced new physics effects, the corresponding loop
 % suppression factor pulls $\Lambda$ to even lower values,
@@ -120,10 +114,10 @@ where $g$ are the typical couplings of the underlying theory.
 %   \label{eq:validity_probed_scale_estimation_loops}
 % \end{equation}
 
-This simple estimation shows that the scale separation $E/\Lambda$ is
+This simple estimate shows that the scale separation $E/\Lambda$ is
 limited by the experimental precision and crucially depends on the
-size of the couplings of underlying physics. For very weakly coupled
-theories, $g^2 < 1/2$, only new physics models with new particles at
+size of the couplings of the underlying physics. For very weakly coupled
+theories, $g^2 \ll 1$, only new physics models with new particles at
 or below the electroweak scale can leave measurable signatures in
 Higgs observables, and the EFT approach clearly does not make
 sense. For truly strongly coupled theories, $1 < g \lesssim 4 \pi$,
@@ -136,14 +130,15 @@ strongly coupled theories, $1/2 \lesssim g^2 \lesssim 2$, the LHC
 Higgs programme is sensitive to scales
 %
 \begin{equation}
-  280~\gev \lesssim \Lambda \lesssim 560~\gev
+  280~\gev \lesssim \Lambda \lesssim 560~\gev \,.
   \label{eq:validity_probed_scale_weakly_interaction}
 \end{equation}
 %
-This corresponds exactly to the intermediate region defined in
-\autoref{eq:validity_muddy_waters}. In this simple argument we ignored
-that new physics might also change distributions and especially affect
-the high-energy tails or off-shell regions.
+This corresponds exactly to the intermediate region
+$E \lesssim \Lambda$ discussed at the beginning of this chapter. In
+this simple argument we ignored that new physics might also change
+distributions and especially affect the high-energy tails or off-shell
+regions.
 %
 % In particular the increased statistics and Higgs production cross
 % sections at Run~2 will enable us to add a wide range of
@@ -187,18 +182,18 @@ in terms of an effective field theory~\cite{Berthier:2015gja}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this chapter we analyse the usefulness of the dimension-six
-description of the Higgs sector with a comprehensive comparison of
-full models to their dimension-six approximation. We select four
+description of the Higgs sector with a comprehensive comparison between
+full models and their dimension-six approximation. We select four
 specific models of new physics, map them onto dimension-six operators,
 and compare the predictions of the full and the effective model for a
 range of Higgs observables.
 
-Our benchmark cases are moderately weakly extensions of the Higgs
-sector of the Standard Model by a scalar singlet, a scalar doublet,
-coloured scalar top partners, and a massive vector triplet.  For each
-of these models we define a number of parameter points designed to
-highlight phenomenological features of the model and to be within the
-experimental reach of the LHC Higgs programme.
+Our benchmark cases are moderately weakly interacting extensions of
+the Higgs sector of the Standard Model by a scalar singlet, a scalar
+doublet, coloured scalar top partners, and a massive vector triplet.
+For each of these models we define a number of parameter points
+designed to highlight phenomenological features of the model and to be
+within the experimental reach of the LHC Higgs programme.
 
 The corresponding EFT descriptions are constructed by integrating out
 the heavy fields and expanding the effective action to
@@ -249,7 +244,7 @@ in WBF Higgs production. We then discuss whether the square of
 dimension-six operators should be included in calculations while
 neglecting dimension-eight operators interfering with the SM. Both
 contribute to cross sections at $\ord{1/\Lambda^4}$. Finally, we show
-how the EFT validity and its breakdown affect the limit setting
+how the EFT validity and its breakdown affect the limit-setting
 procedure when the EFT is used as an intermediate parametrisation.
 
 % Related to the work presented in this chapter,
@@ -268,7 +263,7 @@ range of different situations~\cite{Biekoetter:2014jwa,
   Dawson:2015gka, Edezhath:2015lga, Gorbahn:2015gxa,
   Edelhaeuser:2015zra, Drozd:2015kva, Englert:2015hrx,
   Contino:2016jqw, Freitas:2016iwx, deFlorian:2016spz}. The
-differences to our work lies in the considered new physics scenarios
+differences to our work lie in the considered new physics scenarios
 and observables. A lot of attention focused on Higgs production in
 weak boson fusion and its sensitivity to UV
 physics~\cite{Alwall:2007ed, Hagiwara:2009wt, Englert:2012xt,
@@ -329,7 +324,7 @@ electroweak phase the only new physics scale is then
   \Lambda_1 = M \,.
 \end{equation}
 %
-But after electroweak symmetry breaking, the electroweak VEV
+But after electroweak symmetry breaking, the electroweak VEV $v$
 contributes through the mixing term to the actual physical masses $m$
 of the new particles. This defines additional scales of the form
 %
@@ -366,9 +361,10 @@ $\ord{1/\Lambda^4}$, the same order in the EFT expansion as the
 leading effects from dimension-eight operators, which we always
 neglect. From a purely theoretical point of view these terms are
 subleading, and indeed in the obvious validity regime of the EFT they
-are irrelevant. But this is not the situation we find at the LHC. In
-practice, these formally suppressed terms may be important even if the
-dimension-eight terms are small.
+are irrelevant. However, as we discussed in the previous section, this
+is not the situation we find at the LHC. Here $v^2/\Lambda^2$ is not
+very small and these formally suppressed terms may be important in
+practice.
 
 These ambiguities in the matching procedure therefore raise the
 question if we can improve the agreement between full model and
@@ -654,8 +650,8 @@ matching prescription to lead to a better agreement with the full
 models in situations where the expansion in $v/\Lambda$ is relevant,
 while it cannot help with the expansion in $E/\Lambda$, corresponding
 to genuine new dimension-eight operators not of the form in
-\autoref{eq:validity_dim8_phisq_dim6}. We will come back to this
-difference later and demonstrate it in the vector triplet scenario.
+\autoref{eq:validity_dim8_phisq_dim6}. We come back to this difference
+in \autoref{sec:validity_triplet}.
 
 Again, the truncation of the EFT Lagrangian is formally justified as
 long as $v \ll \Lambda$ and we only probe energies $E \ll \Lambda$.
@@ -735,7 +731,7 @@ Lagrangian in the HISZ basis with the ten dimension-six operators of
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Our comparison covers the most relevant observables for LHC Higgs
-physics. Acceptance and background rejections cuts are kept to a
+physics. Acceptance and background rejection cuts are kept to a
 minimum to be able to test the effective field theory approach over as
 much of the phase space as possible.
 

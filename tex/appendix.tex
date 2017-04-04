@@ -13,9 +13,11 @@
 Here we collect additional examples, results, and technical details
 that are not too interesting on their own, but should be included for
 completeness and reproducibility. We begin with our conventions for
-the Standard Model. \autoref{sec:appendix_eft_fundamentals} provides
-explicit examples for the manipulation of effective Lagrangians with
-field redefinitions and matching with functional methods. In
+the Standard Model. \autoref{sec:appendix_pheno} defines standard
+kinematic quantities and
+units. \autoref{sec:appendix_eft_fundamentals} provides explicit
+examples for the manipulation of effective Lagrangians with field
+redefinitions and matching with functional methods. In
 \autoref{sec:appendix_silh} we define an alternative basis for
 dimension-six operators and link it to the HISZ basis used in this
 thesis. Appendix~\ref{sec:appendix_models} contains some additional
@@ -82,6 +84,19 @@ given by
                                                            + y_\ell {\twovec {\overbar \nu} {\overbar \ell^-}}_L \phi \, \ell_{R}  + \hc  \right ) \,.
   \label{eq:appendix_bases_sm_lagrangian}
 \end{align}
+%
+As civilised people, we use natural units with
+%
+\begin{equation}
+  \hbar = c = 1 \,,
+\end{equation}
+%
+sum over repeated indices, and use the Minkowski metric
+%
+\begin{equation}
+  g_{\mu \nu} = \diag (1, -1, -1, -1) \,.
+  \label{eq:appendix_minkowski_metric}
+\end{equation}
 
 The fields in this Lagrangian are a scalar $\phi$ transforming as the
 $(\mathbf{1}, \mathbf{2}, 1/2)$ representation of the SM gauge group;
@@ -227,7 +242,68 @@ for the fermions and
   g_{hZZ} = \frac {m_Z^2} v 
 \end{equation}
 %
-for the vector bosons.
+for the vector bosons. 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Phenomenology glossary}
+\label{sec:appendix_pheno}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Most of this thesis discusses processes in proton-proton collisions
+under LHC conditions. With the metric in
+\autoref{eq:appendix_minkowski_metric}, the norm of any four-momentum
+$p_\mu$ is the invariant mass
+%
+\begin{equation}
+  p^2 = E^2 - \mathbf{p}^2
+\end{equation}
+%
+with energy $E = p_0$ and three-momentum $\mathbf{p}$. We use the
+symbol $m_{XY}$ for invariant masses of systems of two or more
+particles, for instance $m_{XY}^2 \equiv (p_X + p_Y)^2$. For a single
+particle $X$, $m_X$ instead denotes the mass parameter, and
+$p_X^2 = m_X^2$ only for on-shell particles.
+
+We use a standard coordinate system where the component $p_3$ (also
+called longitudinal momentum $p_L$) points into the direction of
+the proton beam. The transverse momentum is defined as
+%
+\begin{equation}
+  p_T \equiv \sqrt {p_x^2 + p_y^2} \,.
+\end{equation}
+%
+The particle direction is usually characterized in a spherical
+coordinate system: $\phi$ is the azimuthal angle in the transverse
+plane and $\theta$ the polar angle between the spatial momentum and
+the beam axis. The latter is conventionally expressed in the
+pseudo-rapidity
+%
+\begin{equation}
+  \eta \equiv - \log \left( \tan \frac \theta 2 \right) \,.
+\end{equation}
+%
+such that $\eta \to \pm \infty$ corresponds to the beam directions and
+$\eta = 0$ to orthogonal directions. Small values
+$|\eta| \lesssim 2.5$ correspond to the central regions of typical
+general-purpose particle detectors such as ATLAS and CMS, larger
+values $2.5 \lesssim |\eta| \lesssim 5$ to the ``forward regions''.
+
+Energies, momenta, and masses are expressed in \gev\ or \tev, with
+%
+\begin{equation}
+  1~\gev = 1.60 \cdot 10^{-10}~\si{J} = 1.78 \cdot 10^{-27}~\si{kg} = 5.34\cdot 10^{-19}~\si{kg.m/s} \,.
+\end{equation}
+%
+Cross sections are given in \fb\ or \pb, integrated luminosites in
+\ifb, where
+%
+\begin{equation}
+  1~\fb = 10^{-43}~\si{m^2} = 2.57 \cdot 10^{-12}~\si{GeV^{-2}} \,.
+\end{equation}
 
 
 
@@ -2314,3 +2390,5 @@ $\boldtheta$.
     $\theta_i$ not shown to zero. }
 \label{fig:information_wbf_tautau_grid}
 \end{figure}
+
+
