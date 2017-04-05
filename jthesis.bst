@@ -1376,7 +1376,7 @@ FUNCTION {begin.bib}
   "\input{babelbst.tex}" write$ newline$
   "\newcommand{\Capitalize}[1]{\uppercase{#1}}" write$ newline$
   "\newcommand{\capitalize}[1]{\expandafter\Capitalize#1}" write$ newline$
-  "\providecommand{\eprint}[2][]{\href{http://arxiv.org/abs/#2}{\texttt{arXiv:#2}}}"
+  "\providecommand{\eprint}[2][]{\href{http://arxiv.org/abs/#2}{arXiv:#2}}"
   write$ newline$
 }
 EXECUTE {begin.bib}
