@@ -65,16 +65,16 @@ scenarios of new physics, we now analyse how its parameters, the
 Wilson coefficients $f_i/\Lambda^2$, can be measured most efficiently
 at the LHC. This is a highly non-trivial problem for two reasons:
 first, the Higgs properties form a high-dimensional parameter
-  space. In \autoref{sec:foundations_heft_operators} we showed that
-even after removing redundant operators and generously neglecting
-those with tight limits from electroweak precision measurements or
-flavour constraints, we are left with thirteen dimension-six operators
+space. In \autoref{sec:foundations_heft_operators} we showed that even
+after removing redundant operators and generously neglecting those
+with tight limits from electroweak precision measurements or flavour
+constraints, we are left with thirteen dimension-six operators
 relevant for Higgs physics. The Higgs-gauge interactions, for
 instance, are affected by seven of these operators, equivalent to a
 range of different kinematic structures or forms of momentum
-dependence. The second challenge comes from the complicated
-  kinematics of some of the Higgs production channels and decay
-modes. For example, Higgs production in weak boson fusion with a decay
+dependence. The second challenge comes from the complicated kinematics
+of some of the Higgs production channels and decay modes. For example,
+Higgs production in weak boson fusion with a decay
 $h \to W^+W^- \to (\ell^+ \nu) (\ell^- \overbar{\nu})$ is a $2 \to 6$
 process even at parton level, and only made more complicated by
 additional QCD radiation. Such a high-dimensional phase space defines
@@ -82,8 +82,8 @@ a large number of kinematic observables, and it is often not obvious
 which of them carry information on the theory parameters of
 interest. The relation between the high-dimensional parameter space
 and the potentially high-dimensional phase space is (at parton level)
-encoded in the amplitudes or Feynman diagrams, of which there can
-easily be hundreds for a given process.
+encoded in the scattering amplitudes or Feynman diagrams, of which
+there can easily be hundreds for a given process.
 
 \emph{Traditional analysis methods} typically begin with simple
 selection cuts on standard kinematic observables such as energies,
@@ -112,7 +112,7 @@ specific phase-space point, or the ratio of two such expected rates,
 is directly used as an observable. The detector response is estimated
 by convoluting this expression with suitable transfer
 functions. Shower deconstruction~\cite{Soper:2011cr, Soper:2012pb} and
-even deconstruction~\cite{Soper:2014rya} extend this concept to the
+event deconstruction~\cite{Soper:2014rya} extend this concept to the
 parton shower to take into account the information encoded in jet
 substructure. Optimal observables~\cite{Atwood:1991ka, Davier:1992nw,
   Diehl:1993br} apply the same idea to the measurement of a small
@@ -408,7 +408,10 @@ with the integration over $\boldx$, we can calculate the \emph{Fisher
 %
 The \emph{Cram\'er-Rao bound}~\cite{Rao:1945, Cramer:1946} then states that the
 covariance matrix of any estimator $\hat{\boldtheta}$ is bounded from
-below by the inverse Fisher information:
+below by the inverse Fisher information\footnote{After removing blind
+directions, \ie eigenvectors of the Fisher information with eigenvalue
+zero, the Fisher information is positive definite and therefore
+invertible.}:
 %
 \begin{equation}
   \cov \left[ \hat{\boldtheta} \middle| \boldtheta_0 \right]_{ab}
@@ -443,14 +446,17 @@ An unbiased estimator is called ``efficient'' if it reaches the lower
 bound given by \autoref{eq:information_cramer_rao_unbiased} for any
 value of $\boldtheta_0$; that is, if its covariance matrix is equal to
 the inverse Fisher information. This is what we define as an optimal
-measurement.\footnote{There are problems where no unbiased efficient
-  estimators exist.} In this way, the Fisher information matrix
-$I_{ij}$ encodes the maximal precision with which parameters can be
-measured at an experiment. Large entries in this matrix correspond to
-directions that can be measured particularly precisely. On the other
-hand, an eigenvector of the information matrix with corresponding
-eigenvalue zero is a blind direction that can never be probed by the
-experiment.
+measurement.\footnote{There are problems where no efficient estimators
+  exist. The classical example is the estimation of the variance
+  parameter of the normal distribution. Here the sample variance is
+  a minimum variance unbiased estimator, but does not reach the lower
+  bound given by \autoref{eq:information_cramer_rao_unbiased}} In this
+way, the Fisher information matrix $I_{ij}$ encodes the maximal
+precision with which parameters can be measured at an
+experiment. Large entries in this matrix correspond to directions that
+can be measured particularly precisely. On the other hand, an
+eigenvector of the information matrix with corresponding eigenvalue
+zero is a blind direction that can never be probed by the experiment.
 
 The Fisher information has several useful properties. Unlike many
 other statistical tools, it summarises the sensitivity to \emph{all}
@@ -483,14 +489,14 @@ how the results can be interpreted.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 As a symmetric and positive definite rank-two tensor, the Fisher
-information defines a Riemannian metric\footnote{This is only strictly
-  true in the absence of blind directions, otherwise the information
-  matrix is only positive semi-definite and defines a pseudo-metric.}
-on the manifold given by the theory space. This is the cornerstone of
+information defines a Riemannian metric\footnote{This is only true
+  after removing blind directions. Otherwise, the information matrix
+  is positive semi-definite and defines a pseudometric.}  on the
+manifold given by the theory space. This is the cornerstone of
 information geometry~\cite{efron1975, amari1982, amari2000joho}, which
 uses methods from differential geometry to analyse the structure of
 the probability distributions, or the relation between experiment and
-models.  Interpreted as a metric, the Fisher information defines a
+models.  Interpreted as a metric, the Fisher information defines
 infinitesimal distances
 %
 \begin{equation}
@@ -504,7 +510,7 @@ First, the metric defines a \emph{local distance} in the tangent space
 at some point $\boldtheta_a$, see the left panel of
 \autoref{fig:information_geometry_illustration}. We usually consider
 the distance between $\boldtheta_a$ itself and some other point
-$\boldtheta_a$ in this tangent space,
+$\boldtheta_b$ in this tangent space,
 %
 \begin{equation}
   \dlocal( \boldtheta_b; \boldtheta_a )
@@ -640,7 +646,7 @@ provides a more general notion of discrimination power between two
 points that does not require choosing one of them to evaluate the
 Fisher information. Unlike local distances, global distances are
 sensitive to how the Fisher information changes over model space, \ie
-they take into account the curvature of the information geometry. From
+they take into account the curvature of the geometry. From
 a practical perspective, this makes global distances a useful tool to
 track the effect of higher powers in the theory parameters, as we show
 in \autoref{sec:information_eft}.
@@ -877,7 +883,7 @@ additional term in the Fisher information reads
 %
 without sum over $k$. Local and global information distances now refer
 to the combined space of theory and nuisance parameters
-$(\boldtheta,\boldnu)$.
+$(\boldtheta,\boldnu)$. 
 
 In practice we are interested in the sensitivity of an experiment on
 the theory parameters without explicit dependence on the nuisance
@@ -1144,12 +1150,13 @@ each other), while $i$, $j$ denote the different contributing
 amplitudes to a sub-process. In the last step we collect the different
 terms into components $c$.
 
-If the theory parameters $\boldtheta$ correspond to couplings, as
-usually in the case of effective field theories, the functions $w_c$
-are polynomials in the different $\theta_i$. As a simple example,
-consider a process with just one vertex, with known coupling $g$ in
-the SM and new physics contribution $\theta$. The differential cross
-section is then proportional to
+If the model parameters $\boldtheta$ contribute additively and
+multiplicatively to vertices, as often the case of effective field
+theories as discussed in \autoref{sec:foundations_heft_pheno}, the
+functions $w_c$ are polynomials in the different $\theta_i$. As a
+simple example, consider a process with just one vertex, with known
+coupling $g$ in the SM and new physics contribution $\theta$. The
+differential cross section is then proportional to
 %
 \begin{align}
   \Delta\sigma (\boldx | \theta)
@@ -2175,8 +2182,8 @@ distributions can extract information on the operators more reliably
 than after the kinematic event selection in
 \autoref{eq:information_wbf_tautau_wbfcuts}. A combined measurement of
 the jet transverse momenta and $\Delta \phi_{jj}$ is now able to probe
-new physics scales of up to 1.1~GeV compared to 1.2~GeV for the fully
-multivariate approach, corresponding to $70\%$ more data.
+new physics scales of up to $1.1~\tev$ compared to $1.2~\tev$ for the
+fully multivariate approach, corresponding to $70\%$ more data.
 
 
 
@@ -3175,7 +3182,10 @@ $f_b(\boldx)$ as
   \label{eq:information_ambient_distance}
 \end{equation}
 %
-This measure does not require an integration along model parameters. As long as the distributions $f_a$ and $f_b$ are similar or the distances small, it approaches the usual global distance of information geometry~\cite{carter2008}:
+This measure does not require an integration along model
+parameters. As long as the distributions $f_a$ and $f_b$ are similar
+or the distances small, it approaches the usual global distance of
+information geometry~\cite{carter2008}:
 %
 \begin{equation}
   2 \, d_{\text{ambient}} (f(\boldx|\boldtheta_a), f(\boldx|\boldtheta_b)) \sim d(\boldtheta_a, \boldtheta_b) \,.
@@ -3221,7 +3231,7 @@ and can encode the maximum sensitivity to all directions in model
 space in a single compact matrix. Interpreted as a metric on the
 theory space, it provides a geometric interpretation of discrimination
 power. This is particularly relevant for effective field theories,
-where the curvature of the theory manifold defined in this way
+where the curvature of the Riemannian manifold defined in this way
 provides a handle on the square of dimension-six contributions.
 
 We developed an algorithm that can calculate the Fisher information in
