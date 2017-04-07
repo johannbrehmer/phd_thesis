@@ -133,8 +133,9 @@ be taken to avoid dependencies on EFT basis choices.
 A second class of complex statistical tools falls under the category of
 \emph{likelihood-free inference}~\cite{cranmer:nips2016}. They are
 mostly based on (supervised) machine learning techniques:
-sophisticated interpolation techniques, such as boosted decision trees
-and neural networks, are used to describe patterns in a set of
+%sophisticated interpolation techniques
+flexible nonlinear functions, such as boosted decision trees and
+neural networks, are ``trained'' to describe patterns in a set of
 training samples. This approach is agnostic about the amplitudes
 describing a process. The methods with which the input samples are
 generated is irrelevant. Unlike simple likelihood-based methods, these
@@ -446,18 +447,52 @@ An unbiased estimator is called ``efficient'' if it reaches the lower
 bound given by \autoref{eq:information_cramer_rao_unbiased} for any
 value of $\boldtheta_0$; that is, if its covariance matrix is equal to
 the inverse Fisher information. This is what we define as an optimal
-measurement.\footnote{There are problems where no efficient estimators
-  exist. The classical example is the estimation of the variance
-  parameter of the normal distribution. Here the sample variance is
-  a minimum variance unbiased estimator, but does not reach the lower
-  bound given by \autoref{eq:information_cramer_rao_unbiased}} In this
-way, the Fisher information matrix $I_{ij}$ encodes the maximal
-precision with which parameters can be measured at an
-experiment. Large entries in this matrix correspond to directions that
-can be measured particularly precisely. On the other hand, an
+measurement. In this way, the Fisher information matrix $I_{ij}$
+encodes the maximal precision with which parameters can be measured at
+an experiment. Large entries in this matrix correspond to directions
+that can be measured particularly precisely. On the other hand, an
 eigenvector of the information matrix with corresponding eigenvalue
 zero is a blind direction that can never be probed by the experiment.
 
+There is a subtlety to this statement. For some problems no efficient
+estimators exist. The textbook example is the estimation of the
+variance parameter of the normal distribution: here the sample
+variance is a unbiased estimator with minimum variance, but it does
+not reach the lower bound given by
+\autoref{eq:information_cramer_rao_unbiased}. And if an efficient
+estimator exists, just from the Fisher information we do not know how
+to construct its form $\hat{\boldtheta}(\boldx)$. However, it can be
+shown that under certain regularity assumptions\footnote{One condition
+  for this statement is the identifiability of the model: two
+  different model parameters $\smash{\boldtheta_a \neq \boldtheta_b}$
+  must always correspond to two distinct probability distribution
+  $\smash{f(\boldx | \boldtheta_a) \neq f(\boldx | \boldtheta_b)}$.
+  This means that blind directions and physically identical parameter
+  choices have to be removed before the maximum-likelihood estimator
+  is guaranteed to saturate the Cram\'er-Rao bound. This can for
+  instance become important when new physics effects can flip the sign
+  of couplings, and lead to the same cross sections as the SM. But
+  these considerations are irrelevant for the analysis of small
+  deformations from the SM with effective operators in this thesis.},
+the \emph{maximum-likelihood estimator} defined by
+%
+\begin{equation}
+  \hat{\boldtheta}_{\text{MLE}} (\boldx) = \argmax_\boldtheta f(\boldx | \boldtheta)
+\end{equation}
+%
+is asymptotically unbiased and saturates the Cram\'er-Rao bound, \ie
+in the limit of large sample size it leads to the minimum covariance
+matrix defined by the inverse Fisher information
+~\cite{Newey19942111}. Such an estimator always exists for the
+problems discussed in the following, hence the upper bound on the
+precision defined by the Fisher information is achievable at least in
+the asymptotic limit. We therefore expect that the best achievable
+precision in a measurement can only be significantly worse than
+expected from the Fisher information for problems with small event
+numbers.
+
+\newparagraph
+%
 The Fisher information has several useful properties. Unlike many
 other statistical tools, it summarises the sensitivity to \emph{all}
 directions in theory space in one matrix, making it particularly
@@ -480,6 +515,7 @@ $\theta \to \Theta (\theta)$,
 In Appendix~\ref{sec:appendix_information_example} we explicitly show
 how the Fisher information can be calculated in a simple example, and
 how the results can be interpreted.
+
 
 
 
@@ -2118,7 +2154,7 @@ blind directions arise.
 
 The lower panel shows the determinants of the Fisher information
 matrices. We restrict this analysis to the space spanned by the three
-operators $\ope{\phi,2}$, $\ope{W}$, and $\ope{WW}$, to avoid results
+operators $\ope{\phi,2}$, $\ope{W}$, and $\ope{WW}$ to avoid results
 that strongly depends on the other two operators, which cannot be
 measured reliably in this process anyway. These determinants provide a
 straightforward measure of the information in distributions that is
@@ -3250,16 +3286,24 @@ techniques.
 With these tools we analysed how well effective dimension-six
 operators can be measured in three different Higgs channels. First, we
 studied the kinematics of Higgs production in weak boson fusion with a
-decay into a tau pair.  As expected, a large fraction of this
-constraining power comes from the few events with large momentum
-transfer. Care has to be taken with tight cuts on the rapidity
-separation of the tagging jets, which throw away a large amount of
-discrimination power.  Under idealised conditions, traditional
-analyses based on a simple event selection and standard kinematic
-distributions can probe new physics scales around $900~\gev$ in the
-early phase of Run~2. Multivariate analyses have the potential to
-significantly enhance the sensitivity and probe new physics scales of
-up to $1.2~\tev$.
+decay into a tau pair.  As expected, a large fraction of the
+constraining power in this process comes from few events with large
+momentum transfer. Care has to be taken with tight cuts on the
+rapidity separation of the tagging jets, which throw away a large
+amount of discrimination power. Different kinematic observables probe
+different directions in theory space: transverse momenta of the
+final-state particles, for instance the tagging jets, generally probe
+$\ope{W}$, while the only standard observable with a large sensitivity
+to $\ope{WW}$ is the azimuthal angle between the tagging jets. To
+facilitate the most powerful and flexible interpretation of their
+results, the experimental collaborations should ideally measure and
+publish the fully correlated two-dimensional histogram between these
+two quantities. Under idealised conditions, the analysis of such a
+two-dimensional histogram can probe new physics scales around
+$1.1~\tev$ in the $\ope{W}$-$\ope{WW}$-$\ope{\phi,2}$ space in the
+early phase of Run~2. Fully multivariate analyses have the potential
+to further enhance the sensitivity and probe new physics scales of up
+to $1.2~\tev$.
 
 Our next example process is Higgs production with a $h \to 4 \ell$
 decay, a very clean signature with rich kinematics. We used it to
@@ -3293,6 +3337,14 @@ uncertainties, and detector effects are taken into account only with
 rudimentary smearing functions, so our results for the maximum
 precision are optimistic. We showed how our approach can be extended
 to include systematic effects and introduced a profiling procedure for
-the Fisher information. Finally, while we demonstrated our approach in
-different Higgs channels for dimension-six operators, our tools can
-easily be applied to other processes and models.
+the Fisher information. These tools define many directions for future
+research. First, the Higgs signatures discussed here can be
+re-examined with a proper treatment of shower and detector effects as
+well as systematic and theory uncertainties. Second, we can analyse
+the detection of $CP$ violation in the Higgs sector. Using the
+profiling procedure for the Fisher information, we can focus on the
+question which signatures of $CP$ violation are genuine, \ie cannot be
+caused by any $CP$-conserving new physics. Finally, while we
+demonstrated our approach in different Higgs channels for
+dimension-six operators, our tools can easily be applied to other
+processes and models.

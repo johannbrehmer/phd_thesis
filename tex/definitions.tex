@@ -100,7 +100,7 @@
 \newcommand{\threematr}[9]{\begin{pmatrix*}[r] #1 & #2 & #3\\ #4 & #5 & #6 \\ #7 & #8 & #9\end{pmatrix*}}
 
 % Bold symbols
-\newcommand{\boldtheta}{\ensuremath \boldsymbol{\theta}}
+\newcommand{\boldtheta}{{\ensuremath \boldsymbol{\theta}}}
 \newcommand{\boldnu}{\ensuremath \boldsymbol{\nu}}
 \newcommand{\boldepsilon}{\ensuremath \boldsymbol{\varepsilon}}
 \newcommand{\boldx}{\ensuremath \mathbf{x}}
@@ -142,6 +142,7 @@
 \DeclareMathOperator{\var}{var}
 \DeclareMathOperator{\BR}{BR}
 \DeclareMathOperator{\hc}{h.\,c.}
+\DeclareMathOperator*{\argmax}{arg\,max}
 
 % Title page
 \newcommand{\tptitle}[1]{{\sffamily \Huge \bfseries  #1}}
