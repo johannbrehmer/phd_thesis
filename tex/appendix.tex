@@ -11,13 +11,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 For completeness and reproducibility, we here collect our conventions,
-technical details, and some additional results. We begin with
-our conventions for the Standard Model. \autoref{sec:appendix_pheno}
-defines standard kinematic quantities and
-units. \autoref{sec:appendix_eft_fundamentals} provides explicit
-examples for the manipulation of effective Lagrangians with field
-redefinitions and for matching with functional methods. In
-\autoref{sec:appendix_silh} we define an alternative basis for
+technical details, and some additional results. We begin in
+Appendix~\ref{sec:appendix_sm} with our conventions for the Standard
+Model. Appendix~\ref{sec:appendix_pheno} defines standard kinematic
+quantities and units. \autoref{sec:appendix_eft_fundamentals} provides
+explicit examples for the manipulation of effective Lagrangians with
+field redefinitions and for matching with functional methods. In
+Appendix~\ref{sec:appendix_silh} we define an alternative basis for
 dimension-six operators and link it to the HISZ basis used in this
 thesis. Appendix~\ref{sec:appendix_models} contains some additional
 details on the models considered in
@@ -76,7 +76,7 @@ given by
     + \frac {\theta_{QCD}} {32 \pi^2} G^a_{\mu\nu} \widetilde{G}^{a\,\mu\nu}
     + \sum_f \overbar f \im \slashed D f \notag \\
   %
-  &\phantom{{}={}} + (D^\mu \phi)^\dagger (D_\mu \phi) - \mu^2 \phisq - \lambda (\phisq)^2 \notag \\
+  &\phantom{{}={}} + (D_\mu \phi)^\dagger (D^\mu \phi) - \mu^2 \phisq - \lambda (\phisq)^2 \notag \\
   %
   &\phantom{{}={}} - \sum_{\text{generations}} \left(    y_u {\twovec {\overbar u} {\overbar d}}_L \tilde \phi \, u_{R} 
                                                            + y_d {\twovec {\overbar u} {\overbar d}}_L \phi \, d_{R}
@@ -103,7 +103,8 @@ the gauge bosons $G_\mu^a$, $W_\mu^a$, and $B_\mu$; and the fermions
 given in \autoref{tbl:appendix_bases_fermions}.  We usually leave out
 generation (flavour) indices and simply denote up-type quarks,
 down-type quarks, charged leptons, and neutrinos with $u$, $d$,
-$\ell$, $\nu$; and the left-handed doublets with $Q$ and $L$.
+$\ell$, $\nu$, respectively; and the doublets of left-handed quarks
+and leptons with $Q$ and $L$.
 \autoref{eq:appendix_bases_sm_lagrangian} includes the field strength
 tensors
 %
@@ -157,16 +158,16 @@ non-zero vacuum expectation value (VEV)
 %
 Using some of the gauge freedom, we can choose that the vacuum
 expectation value of $\phi$ points into the lower component of the
-doublet. Expanding the four physical degrees of freedom $w_a$ and $h$
+doublet. Expanding the four physical degrees of freedom $w^a$ and $h$
 around this minimum, we have
 %
 \begin{equation}
-  \phi = \frac 1 {\sqrt{2}} \twovec  {-w_2 - \im w_1} {v + h + \im w_3} \,.
+  \phi = \frac 1 {\sqrt{2}} \twovec  {-w^2 - \im w^1} {v + h + \im w^3} \,.
 \end{equation}
 %
 Plugging this into \autoref{eq:appendix_bases_sm_lagrangian}, and
 diagonalising the mass matrices, one sees that the gauge bosons $W^a$
-and $B$ combine with the Goldstone bosons $w_a$ to the mass
+and $B$ combine with the Goldstone bosons $w^a$ to the mass
 eigenstates
 %
 \begin{align}
@@ -294,14 +295,14 @@ the beam axis. The latter is conventionally expressed in the
 pseudo-rapidity
 %
 \begin{equation}
-  \eta \equiv - \log \left( \tan \frac \theta 2 \right) \,.
+  \eta \equiv - \log \left( \tan \frac \theta 2 \right) \,,
 \end{equation}
 %
 such that $\eta \to \pm \infty$ corresponds to the beam directions and
 $\eta = 0$ to the orthogonal plane. Small values
 $|\eta| \lesssim 2.5$ correspond to the central regions of typical
 general-purpose particle detectors such as ATLAS and CMS, larger
-values $2.5 \lesssim |\eta| \lesssim 5$ to the ``forward regions''. We
+values $2.5 \lesssim |\eta| \lesssim 5$ to the `forward regions'. We
 often analyse angular correlations between particles, in particular
 the difference in pseudorapidity
 $\Delta \eta_{ij} \equiv | \eta_i - \eta_j |$ and the difference in
@@ -365,17 +366,17 @@ dimension, it reads
   &= - \mu^2 \phisq \notag \\
   %
   &\phantom{{}={}}
-    - \frac 1 4 \, B_{\mu\nu} B^{\mu \nu} + (D^\mu \phi)^\dagger (D_\mu \phi) - \lambda \, (\phisq)^2 \notag \\
+    - \frac 1 4 \, B_{\mu\nu} B^{\mu \nu} + (D_\mu \phi)^\dagger (D^\mu \phi) - \lambda \, (\phisq)^2 \notag \\
   %
   &\phantom{{}={}}
     + \frac {f_{\phi,1}} {\Lambda^2} \, (D_\mu\phi)^\dagger \phi \; \phi^\dagger D^\mu\phi 
-    + \frac {f_{\phi,2}} {\Lambda^2} \, \frac{1}{2}\partial^\mu(\phisq)\,\partial_\mu(\phisq)
-    + \frac {f_{\phi,3}} {\Lambda^2} \, \frac{1}{3}(\phisq)^3 \notag \\
+    + \frac {f_{\phi,2}} {\Lambda^2} \, \frac{1}{2} \, \partial_\mu(\phisq) \, \partial^\mu(\phisq)
+    + \frac {f_{\phi,3}} {\Lambda^2} \, \frac{1}{3} \, (\phisq)^3 \notag \\
   %
   &\phantom{{}={}}
-    + \frac {f_{\phi,4}} {\Lambda^2} \, (\phisq)  (D_\mu \phi)^\dagger D^\mu \phi
-    + \frac {f_{B}} {\Lambda^2} \, \frac{\im g'}{2 }(D^\mu\phi^\dagger)(D^\nu\phi)\,B_{\mu\nu}
-    - \frac {f_{BB}} {\Lambda^2} \, \frac{g'^2}{4} (\phisq)\,B_{\mu\nu}\,B^{\mu\nu} \notag \\
+    + \frac {f_{\phi,4}} {\Lambda^2} \, (\phisq) \;  (D_\mu \phi)^\dagger \, D^\mu \phi
+    + \frac {f_{B}} {\Lambda^2} \, \frac{\im g'}{2 } \, (D^\mu\phi)^\dagger \, D^\nu\phi \; B_{\mu\nu}
+    - \frac {f_{BB}} {\Lambda^2} \, \frac{g'^2}{4} \, (\phisq) \; B_{\mu\nu} \, B^{\mu\nu}\notag \\
   %
   &\phantom{{}={}}
   + \ord{1/\Lambda^4} \,.
@@ -408,9 +409,9 @@ At the dimension-six level, we have
   \delta \lgr{$6$}
   =
   \frac {\varepsilon}{\Lambda^2} \left[
-    \partial^\mu(\phisq) \, \partial_\mu(\phisq) 
+    \partial_\mu (\phisq) \, \partial^\mu(\phisq) 
     - 4 \lambda \, (\phisq)^3 
-    + 2 \, \phisq \,  (D_\mu \phi)^\dagger \, D^\mu \phi
+    + 2 \, (\phisq) \,  (D_\mu \phi)^\dagger \, D^\mu \phi
     \right]
     - \mu^2 \, \frac {\varepsilon^2}{\Lambda^4} \,  (\phisq)^3 \,. 
     \label{eq:appendix_redefinition_dim6}
@@ -421,14 +422,14 @@ The effects at dimension eight read
 \begin{align}
   \delta \lgr{$8$} &= \frac {\varepsilon}{\Lambda^4} \Biggl[
                      \frac  {\im g' f_B} {2} \; \partial_\mu (\phisq) \, (\phi^\dagger \overleftrightarrow{D}_\nu \phi) \, B^{\mu\nu}
-                     + f_{\phi,4} \; \phisq \, \partial^\mu(\phisq) \, \partial_\mu(\phisq) \notag \\
+                     + f_{\phi,4} \; (\phisq) \, \partial_\mu(\phisq) \, \partial^\mu(\phisq) \notag \\
   %
   &\phantom{= \frac {\varepsilon}{\Lambda^4} \Biggl[ }
-                     + \im g' f_B \; \phisq \, (D_\mu\phi^\dagger) D_\nu\phi \, B^{\mu\nu} 
+                     + \im g' f_B \; (\phisq) \, (D_\mu\phi)^\dagger D_\nu\phi \; B^{\mu\nu} 
     + 4 f_{\phi,1} \; \phisq \, (D_\mu\phi)^\dagger \phi \, \phi^\dagger D^\mu\phi \notag \\
   %
   &\phantom{= \frac {\varepsilon}{\Lambda^4} \Biggl[ }
-    + f_{\phi,1} \; \phisq \, \partial^\mu(\phisq) \, \partial_\mu(\phisq) 
+    + f_{\phi,1} \; \phisq \, \partial_\mu(\phisq) \, \partial^\mu(\phisq) 
     + 4 f_{\phi,4} \; (\phisq)^2 \,  (D_\mu\phi)^\dagger \, D^\mu \phi \notag \\
   %
   &\phantom{= \frac {\varepsilon}{\Lambda^4} \Biggl[ }
@@ -438,7 +439,7 @@ The effects at dimension eight read
   %
   &\phantom{={}}
     +\frac {\varepsilon^2}{\Lambda^4} \Biggl[
-    + 2 \; \phisq \, \partial^\mu(\phisq) \, \partial_\mu(\phisq) 
+    + 2 \; \phisq \, \partial_\mu(\phisq) \, \partial^\mu(\phisq) 
     - 6 \lambda \, (\phisq)^4
     + (\phisq)^2 \,  (D_\mu \phi)^\dagger \, D^\mu \phi
     \Biggr] \,,
@@ -453,8 +454,8 @@ Equations~\eqref{eq:appendix_redefinition_dim4} to
 the classical equations of motion for $\phi$, as discussed in
 \autoref{sec:foundations_eft_bottom_up} and applied to the SM EFT in
 \autoref{eq:foundations_equivalence_from_eom_phi}. The higher orders
-in $\varepsilon$ are missing in the equations of motion, but including
-them does not affect our choice of redundant operators.
+in $\varepsilon$ are missing in the equations of motion, but their
+inclusion does not affect our choice of redundant operators.
 
 Similarly, a transformation 
 %
@@ -463,7 +464,7 @@ Similarly, a transformation
   \label{eq:appendix_redefinition_ansatz_b}
 \end{equation}
 %
-will correspond to the classical equations of motion for $B_\mu$ plus
+corresponds to the classical equations of motion for $B_\mu$ plus
 $\ord{\varepsilon^2}$ corrections.
 
 If we use transformations like
@@ -507,10 +508,12 @@ effective action at one-loop level given in
 \autoref{eq:effective_action_result}.
 
 We now show a simple example of how this object can be calculated with
-functional methods.  We consider a theory of two real scalar
-fields. The light field $\phi$ has mass $m$, the heavy field $\Phi$
-with mass $M$ is being integrated out. The underlying theory is given
-by
+functional methods. We closely follow
+Reference~\cite{Henning:2016lyp}, which contains a more detailed
+explanation of all symbols and methods. Our toy theory consists of two
+real scalar fields. The light field $\phi$ has mass $m$, the heavy
+field $\Phi$ with mass $M$ is being integrated out. The underlying
+theory is given by
 %
 \begin{multline}
   S[\phi,\Phi] = \intfourx \Biggl[
@@ -575,12 +578,14 @@ The first of these terms renormalises the $\phi$ mass term, and the
 second contributes to the $\phi^4$ interaction. This is important for
 RG running, but does not create the kind of new effective interactions
 we are interested in here. Instead, we focus on the last term and
-evaluate the functional trace:
+evaluate the functional trace with \autoref{eq:functional_trace} (for
+a detailed description of the formalism see for instance
+Reference~\cite{Henning:2016lyp}):
 %
 \begin{align}
-  \seff &\supset - \frac {\im \lambda_2^3} {12} \intfourk \braket {k| \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2 \right)^3 |k} \notag \\
+  \seff &\supset \frac {\im \lambda_2^3} {12} \intfourk \braket {k| \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2 \right)^3 |k} \notag \\
   %
-  &\supset - \frac {\im \lambda_2^3} {12} \;
+  &\supset \frac {\im \lambda_2^3} {12} \;
     \intfourx \!\! \intfoury \!\! \intfourz \!\!
     \intfourk \!\! \intfourp \!\! \intfourq 
     \braket {k| \frac {1} {\partial^2 + M^2 - \im \varepsilon} |x} \braket{x| \phi^2 |p}\notag \\
@@ -591,9 +596,9 @@ evaluate the functional trace:
 %
 Here we have used the definition of the functional trace in
 \autoref{eq:functional_trace} and inserted unity,
-$1 = \intfourx \ket{x} \bra{x} = \intfourp \ket{p} \bra{p}$.
-$\ket{k}$, $\ket{p}$, and $\ket{q}$ are eigenstates of the derivative
-operator $\partial$,
+$1 = \intfourx \ket{x} \bra{x} = \intfourp \ket{p} \bra{p}$.  The
+states $\ket{k}$, $\ket{p}$, and $\ket{q}$ are eigenstates of the
+derivative operator $\partial$,
 i.\,e.~$\bra{k} \im \partial_\mu = \bra{k} k_\mu$, while $\ket{x}$,
 $\ket{y}$, and $\ket{z}$ denote the eigenstates of local operators,
 $\bra{x} \phi^2= \bra{x} \phi^2(x)$. Their inner product is
@@ -601,7 +606,7 @@ $\braket {x|k} = e^{-\im k x}$. Using these properties and shifting
 the integration variables, we get
 %
 \begin{align}
-  \seff &\supset - \frac {\im \lambda_2^3} {12} \;
+  \seff &\supset \frac {\im \lambda_2^3} {12} \;
           \intfourx \!\! \intfoury \!\! \intfourz \!\!
           \intfourk \!\! \intfourp \!\! \intfourq
           \frac {1} {-k^2 + M^2 - \im \varepsilon} e^{\im k x}  \phi(x)^2 e^{-\im p x} \notag \\
@@ -609,7 +614,7 @@ the integration variables, we get
     \times \frac {1} {-p^2 + M^2 - \im \varepsilon} e^{\im p y}  \phi(y)^2 e^{-\im q y}  \;
     \frac {1} {-q^2 + M^2 - \im \varepsilon} e^{\im q z}  \phi(z)^2 e^{-\im k z} \notag \\
   %
-  &\supset \frac {\im \lambda_2^3} {12} \;
+  &\supset - \frac {\im \lambda_2^3} {12} \;
     \intfourx \!\! \intfoury \!\! \intfourz \!\!
     \intfourk \!\! \intfourp \!\! \intfourq
     \phi(x)^2 \phi(y)^2 \phi(z)^2 \notag \\
@@ -680,7 +685,7 @@ $\overbar{k} = |k_E |$ we can finally calculate the integral:
 Collecting all the pieces, we have
 %
 \begin{align}
-  \seff &\supset \frac {\lambda_2^3} {192 \pi^2} \,
+  \seff &\supset - \frac {\lambda_2^3} {192 \pi^2} \,
     \intfourx \!\! \intfoury \!\! \intfourz \phi(x)^2 \phi(y)^2 \phi(z)^2 \notag \\
   %
   &\phantom{{}={}} \times
@@ -708,26 +713,26 @@ term at $\ord{1/M^4}$ also has to be finite.
 In this way, we find the much simpler result
 %
 \begin{align}
-  \seff &\supset \frac {\lambda_2^3} {192 \pi^2 \,M^2 } 
+  \seff &\supset - \frac {\lambda_2^3} {192 \pi^2 \,M^2 } 
     \intfourx \!\! \intfoury \!\! \intfourz 
     \phi(x)^2 \phi(y)^2 \phi(z)^2
     \intfourp \!\! \intfourq  e^{\im p (z-x)} e^{\im q (z-y)}  \notag\\
         &\phantom{\supset} \qqqquad \qqqquad \qqqquad + \ord{1/M^4} \notag \\
   %
-  &\supset \frac {\lambda_2^3} {192 \pi^2 M^2 } 
+  &\supset - \frac {\lambda_2^3} {192 \pi^2 M^2 } 
     \intfourx \!\! \intfoury \!\! \intfourz
     \phi(x)^2 \phi(y)^2 \phi(z)^2 \,
     \delta (z-x) 
     \delta (z-y) \notag \\
   %
-  &\supset \frac {\lambda_2^3} {192 \pi^2 M^2 } 
+  &\supset - \frac {\lambda_2^3} {192 \pi^2 M^2 } 
     \intfourx
     \phi(x)^6 \,.
     \label{eq:foundations_scalar_example_effective_action_loop_part}
 \end{align}
 %
 After the expansion in $1/M$, we have finally arrived at a local
-theory!
+theory.
 
 What about the higher terms in
 \autoref{eq:foundations_scalar_example_effective_action_powers}?
@@ -744,7 +749,7 @@ to one loop and $\ord{1/M^2}$ the effective action is given by
 \begin{equation}
   \seff[\phi] = \intfourx \left[\frac 1 2 \partial_\mu \phi \partial^\mu \phi
     - \frac {m^2} 2 \phi^2 - \frac {\lambda_0} {4!} \phi^4
-    + \frac {\lambda_2^3} {12 (4 \pi)^2 M^2 } \, \phi^6\right] \,.
+    - \frac {\lambda_2^3} {12 (4 \pi)^2 M^2 } \, \phi^6\right] \,.
 \end{equation}
 %
 As expected, the dimension-six operator is suppressed by two powers of
@@ -773,7 +778,7 @@ phenomenology of these operators in
 
 Another common basis for dimension-six operators was developed in
 References~\cite{Giudice:2007fh, Contino:2013kra} and is usually named
-``Strongly Interacting Light Higgs'' or ``SILH'' after the first of
+`Strongly Interacting Light Higgs' or `SILH' after the first of
 these publications.  It is based on the Lagrangian
 %
 \begin{align}
@@ -795,12 +800,12 @@ these publications.  It is based on the Lagrangian
     - \sum_f \frac{c_f}{v^2} \, y_f \, \opesilh{f}
 \end{align}
 %
-with the Wilson coefficients $c_i$ and the operators $\opesilh{i}$
+with the Wilson coefficients $c_i$, and the operators $\opesilh{i}$
 defined in \autoref{tbl:appendix_bases_silh}. Note that this
 Lagrangian is not of the form given in
 \autoref{eq:foundations_EFT_lagrangian}: the dimension-six operators
-are suppressed by powers of $m_W$ or $v$ instead of the cutoff scale
-$\Lambda$.
+are suppressed by conventional powers of $m_W$ or $v$ instead of the
+cutoff scale $\Lambda$.
 
 \begin{table}
     \renewcommand{\arraystretch}{1.8}
@@ -808,10 +813,10 @@ $\Lambda$.
       \toprule
       %
       $\opesilh{H}$ & $\partial^\mu(\phisq)\,\partial_\mu(\phisq)$ & 
-      $\opesilh{HB}$ & $(D^\mu\phi^\dagger)\,(D^\nu\phi)\,B_{\mu\nu}$ \\
+      $\opesilh{HB}$ & $(D^\mu\phi)^\dagger \, D^\nu\phi \; B_{\mu\nu}$ \\
       %
       $\opesilh{T}$ & $(\phi^\dagger\,\overleftrightarrow{D}^\mu\,\phi)\,(\phi^\dagger\,\overleftrightarrow{D}_\mu\,\phi)$ &
-      $\opesilh{HW}$ & $(D^\mu\phi^\dagger)\,\sigma^k\,(D^\nu\,\phi)\,W^k_{\mu\nu}$ \\ 
+      $\opesilh{HW}$ & $(D^\mu\phi)^\dagger \, \sigma^k \, D^\nu \, \phi \; W^k_{\mu\nu}$ \\ 
       %
       $\opesilh{6}$ & $(\phisq)^3$  &
       $\opesilh{B}$ & $(\phi^\dagger\,\overleftrightarrow{D}^\mu\,\phi)\,(\partial^\nu\,B_{\mu\nu})$ \\ 
@@ -1116,8 +1121,8 @@ For the Wilson coefficients, we find
 The singlet model is defined in
 Equations~\eqref{eq:validity_singlet_lagrangian} and
 \eqref{eq:validity_singlet_potential} in
-\autoref{sec:validity_singlet}. Ignoring the Goldstones, the
-scalar doublet and singlets fields can be expanded into components as
+\autoref{sec:validity_singlet}. Ignoring the Goldstones, the scalar
+doublet and singlet fields can be expanded into components as
 %
 \begin{align}
   \phi &= \frac{1}{\sqrt{2}} \twovec {1} {v + \phi^0} \,, \notag \\
@@ -1127,9 +1132,9 @@ scalar doublet and singlets fields can be expanded into components as
 where $v \equiv \sqrt{2}\langle \phi \rangle = 246$~GeV and
 $v_s \equiv \sqrt{2}\langle S \rangle$ denote their respective
 VEVs. The minimisation condition for this potential can be used to
-eliminate the parameters $\mu_{1,2}$ in favour of $v$ and
-$v_s$. $\phi^0$ and $s^0$ mix to form a light ($h$) and a heavy ($H$)
-mass eigenstate,
+eliminate the parameters $\mu_{1,2}$ in favour of $v$ and $v_s$. The
+components $\phi^0$ and $s^0$ mix to form a light ($h$) and a heavy
+($H$) mass eigenstate,
 %
 \begin{align}
   h &=\phi^0  \cos\alpha - s^0 \sin\alpha\,, \notag \\
@@ -1267,14 +1272,14 @@ $v^2 \ll v_s^2$.
 We analyse the most general gauge invariant, $CP$-even theory for two
 scalar fields with an additional $\mathbb{Z}_2$ symmetry, as defined
 in Equation~\eqref{eq:validity_2hdm_potential} in
-\autoref{sec:validity_2hdm}.  The Higgs mass-eigenstates follow
-from the set of rotations
+\autoref{sec:validity_2hdm}.  The scalar mass eigenstates follow from
+the set of rotations
 %
 \begin{equation}
   \twovec {H^0} {h^0} = R(\alpha) \, \twovec {h^0_1} {h^0_2} \, ,
-  \qqquad
+  \qquad
   \twovec {w^0 }{ A^0 } = R(\beta)\,\twovec {a^0_1 }{ a^0_2 } \,,
-  \qqquad
+  \qquad
   \twovec {w^\pm }{ H^\pm } = R(\beta)\,\twovec {h^\pm_1 }{ h^\pm_2 } \,,
 \end{equation}
 %
@@ -1321,7 +1326,7 @@ in the 2HDM and in the SM.
 
 The tree-level coupling shifts of the light Higgs follow from these
 rotations and are given in
-Eqs.~\eqref{eq:validity_2hdm_higgs_vector_coupling} to
+Equations~\eqref{eq:validity_2hdm_higgs_vector_coupling} to
 \eqref{eq:validity_2hdm_last_coupling}. The light Higgs
 coupling to a charged Higgs pair reads
 %
@@ -1359,11 +1364,11 @@ The loop-induced couplings are more involved, giving
 where $A_{xx}^\text{SM}$ are the corresponding contributions in the
 SM. The conventional loop form factors read
 %
-\begin{align}
+\begin{alignat}{2}
  A_s(\tau) &= -\frac{\tau}{2}\,\left[1-\tau f(\tau) \right] &&= 1/6 + \mathcal{O}(\tau^{-1}) \,, \notag \\
  A_f(\tau) &= \tau\left[1+(1-\tau)\,f(\tau) \right] &&= 2/3 + \mathcal{O}(\tau^{-1}) \,, \notag \\
  A_V(\tau) &= -\frac{1}{2}\,\left[2+3\tau+3(2\tau-\tau^2)\,f(\tau) \right] &&= -7/2 + \mathcal{O}(\tau^{-1}) \,,
-\end{align}
+\end{alignat}{2}
 %
 where
 %
@@ -1432,11 +1437,11 @@ three parts,
 We use the customary notation for the $SU(2)_L$ invariant product
 $\phi \cdot \tilde{Q} \equiv \epsilon_{ab}\,\phi^a\,\tilde{Q}^b$, with
 the help of the antisymmetric pseudo-tensor
-$\epsilon^{ab} \equiv (i\sigma^2)^{ab}$ such that
-$\epsilon^{12} = -\epsilon^{21} = 1$.
+$\smash{\epsilon_{ij} \equiv \im \sigma^2_{ij}}$ such that
+$\epsilon_{12} = -\epsilon_{21} = 1$.
 
 The term $\lgr{Higgs}$ gives rise to scalar partner masses
-proportional to the Higgs vev, mirroring the supersymmetric $F$-term
+proportional to the Higgs VEV, mirroring the supersymmetric $F$-term
 contribution to the squark masses. By a similar token, the explicit
 mass terms $\lgr{mass}$ are analogous to the squark soft-SUSY breaking
 mass terms. $\lgr{mixing}$ is responsible for the mixing between the
@@ -1546,7 +1551,7 @@ is universal.
 We can add an explicit kinetic $V$-$W$ mixing term
 %
 \begin{equation}
-  \lgr{} \supset c_{WV}\,\frac{g_W}{2g_V} \, D_{[\mu}\,V_{\nu]}^a\,W^{\mu\nu\, a}
+  \lgr{} \supset c_{WV}\,\frac{g_W}{2g_V} \, D^{\vphantom{a}}_{[\mu}\,V_{\nu]}^a\,W^{\mu\nu\, a}
 \end{equation}
 %
 to the Lagrangian in
@@ -1559,10 +1564,15 @@ details, see Appendix A.5 of Reference~\cite{Brehmer:2015rna}.
 In this model, seven gauge eigenstates $W^a$, $B$, $V^a$ mix into mass
 eigenstates $A$, $W^\pm$, $Z$, $\xi^\pm$, and $\xi^0$. The photon is
 as usual defined as the component that remains massless during EWSB,
-$A_\mu = c_w\,B_\mu + s_w\,W_\mu^3$, where the Weinberg angle is
-linked to the gauge couplings $e = g_W\,s_w = g'\,c_w$.  For the
-remaining fields we have to diagonalise the neutral and charged mass
-matrices, giving the mass eigenstates
+%
+\begin{equation}
+  A_\mu = c_w\,B_\mu + s_w\,W_\mu^3 \,,
+\end{equation}
+%
+where the Weinberg angle is linked to the gauge couplings through
+$e = g_W\,s_w = g'\,c_w$.  For the remaining fields we have to
+diagonalise the neutral and charged mass matrices, giving the mass
+eigenstates
 %
 \begingroup%
 \allowdisplaybreaks%
@@ -1655,8 +1665,8 @@ Here we use the definitions
   \hat{m}_V^2  = M_V^2 + g_V^2 \, c_{VVHH} \, \hat{v}^2 \,,
 \end{equation}
 %
-where $\hat{v}$ is the actual vev of $\phi$, which does not
-necessarily have the SM value of $v = 2m_W/g \approx 246 \ \gev$.
+where $\hat{v}$ is the actual VEV of $\phi$, which does not
+necessarily have the SM value of $v = 2m_W/g = 246~\gev$.
 
 This mixing affects the weak current interactions: instead of being
 simply governed by the $SU(2)_L$ coupling constant $g_W$, the physical
@@ -1683,7 +1693,7 @@ measurements, the neutral and charged states $\xi^0$ and $\xi^\pm$
 have to be nearly mass-degenerate,
 %
 \begin{equation}
-  m_{\xi^0} \approx m_{\xi^{\pm}} \equiv m_{\xi} \,.
+  m_{\xi^\pm} \approx m_{\xi^0} \equiv m_{\xi} \,.
 \end{equation}
 
 In practice, we set up our model in the $m_W$-$g$ scheme, \ie based on
@@ -1700,7 +1710,8 @@ Equations~\eqref{eq:appendix_vector_triplet_neutral_masses} and
 \subsubsection*{Couplings}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The mismatch between $g$ and $g_W$ as well as between $v$ and $\hat{v}$ leads to a shift of the Higgs couplings to fermions,
+The mismatch between $g$ and $g_W$ as well as between $v$ and
+$\hat{v}$ leads to a shift of the Higgs couplings to fermions,
 %
 \begin{align}
  \Delta_f
@@ -1807,13 +1818,13 @@ basis.
 
 Combining the pieces, we finally arrive at
 %
-\begin{equation}
+\begin{multline}
  \lgr{EFT}
  \supset
  \left( \frac {g_V^2\,c_H^2} {4\,M_V^2} - \frac {g_W^2\,c_F\,c_H} {2\,M_V^2}  \right)
- \left[ 3\ope{\phi,2} - 12\lambda\ope{\phi,3} - \sum_f y_f\ope{f} \right]
+ \left[ 3\ope{\phi,2} - 12\lambda\ope{\phi,3} - \sum_f y_f\ope{f} \right] \\
  + \frac {c_F\,c_H} {M_V^2} \, \left[ \ope{WW} + \ope{BW} - 2 \ope{W} \right] \,,
-\end{equation}
+\end{multline}
 %
 corresponding to the Wilson coefficients given in
 \autoref{eq:validity_vector_triplet_coefficients}.
@@ -2139,8 +2150,8 @@ In \autoref{eq:information_cramer_rao_general} in
 \autoref{sec:information_formalism} we stated the Cram\'er-Rao
 bound~\cite{Rao:1945, Cramer:1946}: the covariance of any estimator is
 bounded from below by the inverse Fisher information. Here we show the
-proof for the one-dimensional case and unbiased estimators, closely
-following Reference~\cite{Watkins:statistics}.
+proof for one-dimensional unbiased estimators, closely following
+Reference~\cite{Watkins:statistics}.
 
 An unbiased estimator $\hat{\theta}(\boldx)$ based on data $\boldx$
 has an expectation value equal to the unknown true value $\theta$,
@@ -2181,17 +2192,19 @@ For \autoref{eq:appendix_information_cramer_rao_proof_unbiased} we find in the s
 %
 We can phrase this in terms of the covariance
 %
-\begin{equation}
+\begin{align}
   \cov \left[ X,Y \middle| \theta \right]
-  \equiv E \left[ (X - E[X|\theta]) (Y - E[Y|\theta]) \middle| \theta \right]
-  = E \left[ XY \middle| \theta \right] - E\left[X \middle| \theta \right] \, E\left[Y \middle| \theta \right]
-\end{equation}
+  &\equiv E \left[ (X - E[X|\theta]) (Y - E[Y|\theta]) \middle| \theta \right] \notag \\
+  &= E \left[ XY \middle| \theta \right] - E\left[X \middle| \theta \right] \, E\left[Y \middle| \theta \right]
+  \label{eq:appendix_information_covariance}
+\end{align}
 %
 (which is closely related, but not identical, to the covariance matrix
 defined in \autoref{eq:information_covariance_matrix}).  Using
-\autoref{eq:appendix_information_cramer_rao_proof_score},
+Equations~\eqref{eq:appendix_information_covariance} and
+\eqref{eq:appendix_information_cramer_rao_proof_score},
 \autoref{eq:appendix_information_cramer_rao_proof_intermediate1} can
-then be written as
+be written as
 %
 \begin{equation}
   1 = \cov \left[ \hat{\theta} , \partial_\theta \log f(\boldx|\theta) \middle| \theta \right] \,. 
@@ -2200,8 +2213,8 @@ then be written as
 %
 We can square this equation and apply the Cauchy-Schwartz
 identity\footnote{This inequality is well-known in the form of the
-  bounds on the Pearson correlation coefficient, $-1 \leq r \leq 1$
-  with $r = \cov [X,Y] / \sqrt{\var[X]\,\var[Y]}$.}
+  bounds on the Pearson correlation coefficient,
+  $-1 \leq r \equiv \smash{\cov [X,Y] / \sqrt{\var[X]\,\var[Y]}} \leq 1$.}
 %
 \begin{equation}
   \cov [X, Y]^2 \geq \var [X] \, \var[Y] \,,
@@ -2254,7 +2267,7 @@ values $\bar{n_c} = \nu_c$:
 \end{align}
 %
 Following \autoref{eq:information_fisher_information}, we can calculate the Fisher
-information in terms of the Poisson means $\boldnu$. With
+information in terms of the vector of Poisson means $\boldnu$. With
 %
 \begin{equation}
   \pder { \log f} {\nu_c} 
@@ -2274,7 +2287,7 @@ we find
   I_{c c'} (\boldnu) \equiv - E \left[ \frac { \partial^2 \log f} {\partial \nu_c \partial \nu_{c'}} \middle| \boldnu \right] = \frac {\delta_{c c'} } {\nu_c} \,.
 \end{equation}
 
-\autoref{eq:information_information_covariant_transformation} allows us calculate
+\autoref{eq:information_information_covariant_transformation} allows us to calculate
 the Fisher information in terms of some theory parameters $\theta_i$
 rather than the Poisson means $\nu_c$:
 %
@@ -2327,7 +2340,7 @@ least
 \frac{1}{2} \, \frac 1 {\sqrt{L}} \, \frac {\sqrt{\sigma_S +\sigma_B}} {\sigma_S} \,,
 \end{align}
 %
-independent of how the data is analysed.  The three terms show how the
+independent of how the data are analysed. The three terms show how the
 sensitivity to $g$ profits from the square in the cross section, the
 square-root dependence on the statistics, and the dependence on the
 signal-to-background ratio.
@@ -2367,7 +2380,7 @@ distributions are not affected significantly by the smearing.
     WBF Higgs production with $h \to \tau \tau$ for the Higgs
     contributions (left) and the $Zjj$ backgrounds (right). We show
     the ATLAS data from Reference~\cite{Aad:2015vsa} (black), the
-    fitted response function (blue), and our final $\toolfont{MadMax}$
+    fitted response function (blue), and our final \toolfont{MadMax}
     output including the smearing function.}
   \label{fig:information_wbf_tautau_smearing}
 \end{figure}

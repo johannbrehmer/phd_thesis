@@ -628,6 +628,13 @@ FUNCTION {format.date}
       *
     }
   if$
+  duplicate$ empty$
+    'skip$
+    {
+      before.all 'output.state :=
+    after.sentence 'output.state :=
+    }
+  if$
 }
 FUNCTION {format.btitle}
 { title "title" bibinfo.check
