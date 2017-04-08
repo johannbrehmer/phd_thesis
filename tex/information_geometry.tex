@@ -87,14 +87,13 @@ easily be hundreds for a given process.
 
 \emph{Traditional analysis methods} typically begin with simple
 selection cuts on standard kinematic observables such as energies,
-momenta, angles, or invariant masses. This is often followed by the
-estimation of background contributions with a mixture of simulational
-and data-driven methods. The final statistical analysis typically
-relies on total event counts or on histograms of kinematic
-observables.  These techniques are intuitive and all their steps are
-transparent. They work well for simple signatures, such as a
-resonance peak on top of a smooth background, as in the discovery of
-the $gg \to h \to \gamma \gamma$
+momenta, angles, or invariant masses. Background contributions are
+estimated with simulational or data-driven methods. The final
+statistical analysis typically relies on total event counts or on
+histograms of kinematic observables.  These techniques are intuitive
+and all their steps are transparent. They work well for simple
+signatures, such as a resonance peak on top of a smooth background, as
+in the discovery of the $gg \to h \to \gamma \gamma$
 signal~\cite{Aad:2012tfa,Chatrchyan:2012xdj}. This approach requires a
 careful tailoring of the strategy to each question, and does not scale
 well with the complexity of the theory questions or the kinematics of
@@ -354,7 +353,7 @@ estimator also follows a probability distribution
 %
 Two key properties of this distribution characterise the
 measurement. First, the bias of an estimator is given by the
-difference of the expectation value
+difference between the expectation value
 %
 \begin{equation}
   \overbar{\boldtheta} \equiv E \left[ \hat{\boldtheta} \middle | \boldtheta_0 \right]
@@ -544,7 +543,7 @@ Different from the conventions in differential geometry, we use lower
 indices for vectors and sum over repeated lower indices.
 
 First, the metric defines a \emph{local distance} in the tangent space
-at some point $\boldtheta_a$, see the left panel of
+at some point $\boldtheta_a$, see
 \autoref{fig:information_geometry_illustration}. We usually consider
 the distance between $\boldtheta_a$ itself and some other point
 $\boldtheta_b$ in this tangent space,
@@ -660,9 +659,7 @@ points on the model manifold can be defined along geodesics,
   \label{eq:information_global_distances}
 \end{equation}
 %
-We illustrate this in the right panel of
-\autoref{fig:information_geometry_illustration}. The shortest path
-$\boldtheta(s)$ satisfies the geodesic equation
+The shortest path $\boldtheta(s)$ satisfies the geodesic equation
 %
 \begin{equation}
   \ttder {\theta^i}{s} = - \Gamma^i_{\;jk} \, \tder{\theta^j}{s} \, \tder{\theta^k}{s}
@@ -827,7 +824,7 @@ approach, approximating the phase-space integral with a sum over
 events:
 %
 \begin{equation}
-  \int \! \mathrm{d}x \, f^{(1)} (x) \to \sum_{\text{events } k} \frac {\Delta \sigma_k} {\sigma}
+  \int \! \mathrm{d}x \, f^{(1)} (x) \to \sum_{\text{events } k} \frac {\Delta \sigma_k} {\sigma} \,.
   \label{eq:information_monte_carlo_integration}
 \end{equation}
 %
@@ -989,7 +986,7 @@ genuine theory parameters and $t$ parametrises the tangent
 along the nuisance direction. The tangents on the ellipsoid have to
 satisfy \autoref{eq:information_profiling_original_ellipsoid} with
 exactly one solution for $t$ (if there are two solutions, they
-intersect the ellipsoid; if there is zero, they never touch it). This
+intersect the ellipsoid; if there is none, they never touch it). This
 is the case if the discriminant describing this quadratic equation is
 zero. After a brief calculation, this can be brought to the form
 %
@@ -1182,9 +1179,9 @@ representing the different squared amplitudes and interference terms:
 \end{align}
 %
 Here $p$ labels different sub-processes (which do not interfere with
-each other), while $i$, $j$ denote the different contributing
-amplitudes to a sub-process. In the last step we collect the different
-terms into components $c$.
+each other), while $i$, $j$ denote the different amplitudes
+contributing to a sub-process. In the last step we collect the
+various terms into components $c$.
 
 If the model parameters $\boldtheta$ contribute additively and
 multiplicatively to vertices, as often the case of effective field
@@ -1698,7 +1695,7 @@ With the combination of \toolfont{MadGraph~5}~\cite{Alwall:2014hca},
 \toolfont{MadMax}~\cite{Plehn:2013paa, Kling:2016lay}, and our own
 \toolfont{MadFisher} algorithm described in
 \autoref{sec:information_algorithm}, we first calculate the total
-Fisher information. At the SM we find
+Fisher information. At the SM point we find
 %
 \begin{equation}
   I_{ij} (\mathbf{0}) =
@@ -1737,7 +1734,7 @@ The eigenvectors and eigenvalues of this matrix are
   &&\leftrightarrow
   & \left( \frac {\Lambda} {\sqrt{f}} \right)_4 &= 321~\gev \,, \notag \\
   %
-  \boldtheta_5 &= \fivevecr {0.00} {-0.00} {-0.01} {0.07} {1.00}\,:
+  \boldtheta_5 &= \fivevecr {0.00} {0.00} {-0.01} {0.07} {1.00}\,:
   & I_5 &= 0.1
   &&\leftrightarrow
   & \left( \frac {\Lambda} {\sqrt{f}} \right)_5 &= 138~\gev \,. 
@@ -1802,7 +1799,7 @@ $\ope{\phi,2}$, $\ope{W}$, and $\ope{WW}$.
   $h \to \tau \tau$ channel. We show global distances from the SM
   $d(\boldtheta,\mathbf{0})$, where in each panel the $\theta_i$ not
   shown are set to zero. The white contours show distances of
-  $d=1,2,\dots,5$.}
+  $d=1,2,3,4,5$.}
 
 In \autoref{fig:information_wbf_tautau_local_vs_global} we compare the
 global distances to the local distances defined in
@@ -1824,7 +1821,7 @@ dimension-six terms will have a larger effect.
     $h \to \tau \tau$ channel. We show contours of local distance
     $d_\text{local}(\boldtheta ; \boldzero)$ (dashed) and global distance
     $d(\boldtheta,\boldzero)$ (solid).  The coloured contours indicate
-    distances of $d = 1,2,\dots,5$. In grey we show example geodesics. The
+    distances of $d = 1,2,3,4,5$. In grey we show example geodesics. The
     $\theta_i$ not shown are set to zero. }
 \label{fig:information_wbf_tautau_local_vs_global}
 \end{figure}
@@ -2138,7 +2135,7 @@ blind directions arise.
 \begin{figure}
   \includegraphics[width=\textwidth]{fig/information/wbf_tautau_histos_comparison}
   \caption{Total Fisher information for the WBF $h \to \tau \tau$
-    channel, Fisher information after the cuts in
+    channel (`full'), Fisher information after the cuts in
     \autoref{eq:information_wbf_tautau_wbfcuts}, and the information
     in several distributions after this selection.  The top panel
     shows the eigenvalues, the colours denote the composition of the
@@ -2199,11 +2196,11 @@ We then calculate the information in the same distributions as before.
 \begin{figure}
   \includegraphics[width=\textwidth]{fig/information/wbf_tautau_histos_comparison_likelihoodcut}
   \caption{Total Fisher information for the WBF $h \to \tau \tau$
-    channel, information after the matrix-element-based event
-    selection in \autoref{eq:information_wbf_tautau_likelihoodcuts},
-    and the information in several distributions after this
-    selection. Except for the event selection, the plot is analogous to
-    \autoref{fig:information_wbf_tautau_histograms_comparison}.}
+    channel (`full'), information after the matrix-element-based WBF
+    cuts in \autoref{eq:information_wbf_tautau_likelihoodcuts}, and
+    the information in several distributions after this
+    selection. Except for the event selection, the plot is analogous
+    to \autoref{fig:information_wbf_tautau_histograms_comparison}.}
 \label{fig:information_wbf_tautau_histograms_comparison_likelihoodcut}
 \end{figure}
 
@@ -2366,7 +2363,7 @@ with the eigenvectors, eigenvalues, and corresponding new physics reach
   &&\leftrightarrow
   & \left( \frac {\Lambda} {\sqrt{f}} \right)_4 &= 246~\gev \,, \notag \\
   %
-  \boldtheta_5 &= \fivevecr {0.00} {-0.00} {-0.03} {0.04} {1.00} \,:
+  \boldtheta_5 &= \fivevecr {0.00} {0.00} {-0.03} {0.04} {1.00} \,:
   & I_5 &= 0.0
   &&\leftrightarrow
   & \left( \frac {\Lambda} {\sqrt{f}} \right)_5 &= 114~\gev \,. 
@@ -2388,7 +2385,7 @@ are still basically blind directions.
   $h \to 4\ell$ channel. We show global distances from the SM
   $d(\boldtheta,\mathbf{0})$, where in each panel the $\theta_i$ not
   shown are set to zero. The white contours show distances of
-  $d=1,2,\dots,5$.}
+  $d=1,2,3,4,5$.}
 
 Again we calculate global distances between theory points along
 geodesics and show them in
@@ -2408,7 +2405,7 @@ more relevant.
     WBF $h \to 4\ell$ channel. We show contours of local distance
     $d_\text{local}(\boldtheta ; \boldzero)$ (dashed) and global
     distance $d(\boldtheta,\boldzero)$ (solid). The coloured contours
-    indicate distances of $d = 1,2,\dots,5$. In grey we show example
+    indicate distances of $d = 1,2,3,4,5$. In grey we show example
     geodesics.  The $\theta_i$ not shown are set to zero.}
 \label{fig:information_wbf_4l_geometry}
 \end{figure}
@@ -2498,7 +2495,7 @@ overflow bins where applicable.
 \begin{figure}
   \includegraphics[width= \textwidth]{fig/information/wbf_4l_histos_comparison}
   \caption{Total Fisher information for the WBF $h \to 4 \ell$ channel
-    compared to the information in several kinematic
+    (`full') compared to the information in several kinematic
     distributions. The top panel shows the eigenvalues, the colours
     denote the composition of the corresponding eigenvectors. The
     right axis translates the eigenvalues into a new physics reach for
@@ -2815,7 +2812,7 @@ always be sensitive to the squared dimension-six terms.
     plus single top production. We show contours of local distance
     $d_\text{local}(\boldtheta ; \boldzero)$ (dashed) and global
     distance $d(\boldtheta,\boldzero)$ (solid).  The coloured contours
-    indicate distances of $d = 1,2,\dots,5$. In grey we show example
+    indicate distances of $d = 1,2,3,4,5$. In grey we show example
     geodesics. The $\theta_i$ not shown are set to zero. }
 \label{fig:information_th_geometry}
 \end{figure}
@@ -2952,17 +2949,18 @@ Higgs and top systems is more sensitive to $\ope{t}$.
 
 \begin{figure}
   \includegraphics[width= \textwidth]{fig/information/th_histos_comparison}
-  \caption{Fisher information for the Higgs plus single top channel
-    exploiting the full phase space, after the cuts in
-    \autoref{eq:information_th_cuts}, and for several kinematic
-    distributions.  The top panel shows the eigenvalues, the colours
-    denote the composition of the corresponding eigenvectors. The
-    right axis translates the eigenvalues into a new physics reach for
-    the corresponding combination of Wilson coefficients.  In the
-    bottom panel we show the determinants of the Fisher information
-    restricted to $\ope{\phi,2}$, $\ope{W}$, and $\ope{t}$, normalised
-    to the full information. Again, the right axis translates them
-    into a new physics reach.}
+  \caption{Total Fisher information for the Higgs plus single top
+    channel (`full'), Fisher information after the $th$ cuts in
+    \autoref{eq:information_th_cuts}, and the information in several
+    distributions after this selection.  The top panel shows the
+    eigenvalues, the colours denote the composition of the
+    corresponding eigenvectors. The right axis translates the
+    eigenvalues into a new physics reach for the corresponding
+    combination of Wilson coefficients.  In the bottom panel we show
+    the determinants of the Fisher information restricted to
+    $\ope{\phi,2}$, $\ope{W}$, and $\ope{t}$, normalised to the full
+    information. Again, the right axis translates them into a new
+    physics reach.}
 \label{fig:information_th_histograms_comparison}
 \end{figure}
 
@@ -3255,35 +3253,49 @@ ambient distance is ultimately limited from above at $\pi/2$.
 \label{sec:information_conclusions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Information geometry can be used to optimise measurements of any set
-of continuous theory parameters at the LHC. Following the Cram\'er-Rao
-bound, the Fisher information matrix defines the maximum precision
-with which model parameters can be estimated. It is well-suited to
-high-dimensional parameter spaces since it requires no discretisation
-of the tested hypotheses, transforms covariantly under basis changes,
-and can encode the maximum sensitivity to all directions in model
-space in a single compact matrix. Understood as a metric on the
-theory space, it provides a geometric interpretation of discrimination
-power. This is particularly relevant for effective field theories,
-where the curvature of the Riemannian manifold defined in this way
-provides a handle on the square of dimension-six contributions.
+We introduced new statistical tools based on information geometry to
+optimise measurements of continuous theory parameters at the LHC.
+%
+% Information geometry can be used to optimise measurements of any set
+% of continuous theory parameters at the LHC.
+%
+Our approach is based on the Fisher information matrix. Following the
+Cram\'er-Rao bound, it defines the maximum precision with which model
+parameters can be estimated. It is well-suited to high-dimensional
+parameter spaces since it requires no discretisation of the tested
+hypotheses, does not depend on arbitrary basis choices, and can
+simultaneously encode the maximum sensitivity to all directions in
+model space in a single matrix. These properties make information
+geometry particularly useful for the analysis of effective field
+theories. Moreover, the Fisher information is additive between
+different measurements and between different phase-space region within
+the same process, making it trivial to discuss the combination of
+different channels. Understood as a metric on the theory space, it
+provides an intuitive geometric interpretation of discrimination
+power.
 
 We developed an algorithm that can calculate the Fisher information in
 arbitrary high-energy physics processes based on Monte-Carlo
-simulations. We can calculate the total information, which
-defines the maximal precision with which the parameters can be probed;
-applied to effective field theories this gives us the maximal new
-physics reach of any signature. The Fisher information can also be
-calculated differentially to understand how the discriminating power
-is distributed over phase space, defining optimal event
+simulations. We can calculate the total information, which defines the
+maximal precision with which the parameters can be probed; applied to
+effective field theories this gives us the maximal new physics reach
+of any signature. The Fisher information can also be calculated
+differentially to understand how the discriminating power is
+distributed over phase space, helping to define optimal event
 selection. Alternatively, we can calculate the information in
 individual distributions of kinematic observables rather than the full
 high-dimensional kinematics. This defines the most powerful
 observables, and lets us compare the power of simple histogram-based
 analyses to methods based on the matrix elements or machine-learning
-techniques.
+techniques. All these instruments can be useful to improve measurement
+strategies. An interesting feature of the geometric interpretation is
+that the curvature of the Riemannian manifold defined by the Fisher
+information provides a handle on the square of dimension-six
+contributions. As discussed in \autoref{sec:validity_squares}, under
+certain assumptions this lets us analyse the convergence of the EFT
+expansion in $1/\Lambda$.
 
-With these tools we analysed how well effective dimension-six
+With these novel tools we analysed how well effective dimension-six
 operators can be measured in three different Higgs channels. First, we
 studied the kinematics of Higgs production in weak boson fusion with a
 decay into a tau pair.  As expected, a large fraction of the
@@ -3305,7 +3317,7 @@ early phase of Run~2. Fully multivariate analyses have the potential
 to further enhance the sensitivity and probe new physics scales of up
 to $1.2~\tev$.
 
-Our next example process is Higgs production with a $h \to 4 \ell$
+Our next example process was Higgs production with a $h \to 4 \ell$
 decay, a very clean signature with rich kinematics. We used it to
 compare the sensitivity to dimension-six physics in the decay and
 production vertices within the same process. Our results are
@@ -3320,8 +3332,8 @@ Higgs production in association with a single top has an interesting
 amplitude structure where diagrams with Higgs-gauge interactions
 interfere destructively with diagrams depending on the top Yukawa
 coupling. Small changes to these interactions can in principle change
-the total production rate and the kinematics drastically. We find that
-kinematic properties of the Higgs decay products and observables
+the total production rate and the kinematics drastically. We showed
+that kinematic properties of the Higgs decay products and observables
 related to the top system provide orthogonal information on the theory
 space; in particular the diphoton transverse momentum as well as the
 rapidity separation of the $\gamma \gamma$ and the $bjj$ system
