@@ -11,12 +11,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 For completeness and reproducibility, we here collect our conventions,
-a few technical details, and some additional results. We begin with
+technical details, and some additional results. We begin with
 our conventions for the Standard Model. \autoref{sec:appendix_pheno}
 defines standard kinematic quantities and
 units. \autoref{sec:appendix_eft_fundamentals} provides explicit
 examples for the manipulation of effective Lagrangians with field
-redefinitions and matching with functional methods. In
+redefinitions and for matching with functional methods. In
 \autoref{sec:appendix_silh} we define an alternative basis for
 dimension-six operators and link it to the HISZ basis used in this
 thesis. Appendix~\ref{sec:appendix_models} contains some additional
@@ -25,8 +25,8 @@ details on the models considered in
 Appendix~\ref{sec:appendix_information} we collect some auxiliary
 results related to \autoref{chapter:information}.
 
-Large parts of this appendix has been published previously as part of
-the same articles that contained much of the main body of this
+Large parts of this appendix have been published previously, as part
+of the same articles that contained much of the main body of this
 thesis. In particular, Appendices~\ref{sec:appendix_silh} and
 \ref{sec:appendix_models} were part of
 References~\cite{Brehmer:2015rna, Biekotter:2016ecg}, while
@@ -206,8 +206,8 @@ couplings also yields fermion masses
   m_f = \frac {y_f v} {\sqrt{2}} \,.
 \end{equation}
 %
-Since the Yukawa couplings are not flavour-diagonal, one has to
-diagonalise these mass matrices in flavour space, ultimately leading
+Since the Yukawa couplings are not flavour-diagonal, these mass
+matrices have to be diagonalised in flavour space, ultimately leading
 to the CKM matrix. But this does not affect the Higgs couplings, and
 in this thesis we can safely assume flavour-diagonal Yukawa couplings.
 
@@ -347,7 +347,7 @@ field redefinitions of the form given in
 $S$-matrix elements and thus all observable physics invariant, but
 change the form of the Lagrangian. According to
 \autoref{eq:foundations_field_redefinitions}, the leading term of the
-change of the Lagrangian is just given by the classical equations of
+change of the Lagrangian is given by the classical equations of
 motion. This defines an equivalence relation between some operators
 that can be used to remove redundant operators and define a minimal
 basis, as discussed in \autoref{sec:foundations_heft_operators} for
@@ -506,8 +506,8 @@ a top-down approach, finally arriving at the expression for the
 effective action at one-loop level given in
 \autoref{eq:effective_action_result}.
 
-We now show how this object can be calculated with functional methods
-in a simple example.  We consider a theory of two real scalar
+We now show a simple example of how this object can be calculated with
+functional methods.  We consider a theory of two real scalar
 fields. The light field $\phi$ has mass $m$, the heavy field $\Phi$
 with mass $M$ is being integrated out. The underlying theory is given
 by
@@ -571,11 +571,11 @@ second term, we find
   \label{eq:foundations_scalar_example_effective_action_powers}
 \end{equation}
 %
-The first of these terms renormalises the $\phi$ mass term, and
-the second contributes to the $\phi^4$ interaction. This is
-important for RG running, but does not create the kind of new
-effective interactions we are interested in here. We instead focus on
-the last term and evaluate the functional trace:
+The first of these terms renormalises the $\phi$ mass term, and the
+second contributes to the $\phi^4$ interaction. This is important for
+RG running, but does not create the kind of new effective interactions
+we are interested in here. Instead, we focus on the last term and
+evaluate the functional trace:
 %
 \begin{align}
   \seff &\supset - \frac {\im \lambda_2^3} {12} \intfourk \braket {k| \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2 \right)^3 |k} \notag \\
@@ -652,7 +652,7 @@ To evaluate this, we first Wick-rotate $k^0 = \im k_E^0$. Formally,
 this means shifting the integration path in the complex plane of $k^0$
 from along the real axis to along the imaginary axis. The Cauchy
 theorem assures that this does not change the value of the integral as
-long as we chose the contour such that the poles are not caught
+long as we choose the contour such that the poles are not caught
 between the two contours. Defining
 $k_E^2 = (k^0_E)^2 + \boldsymbol{k}^2 = - k^2$, we find
 %
@@ -696,7 +696,7 @@ At first glance, this is disappointing: this effective action looks
 non-local and involves highly non-trivial integrals. It turns out that
 these can in fact be calculated and give a finite
 result~\cite{tHooft:1978jhc, Denner:1991kt}. The full expression is
-quite ugly, but we fortunately do not need it. Instead, we expand the
+quite ugly, but fortunately, we do not need it. Instead, we expand the
 integrand in powers of $1/M^2$. We only calculate the leading term at
 $\ord{1/M^2}$. Since it produces a finite result as well, the rest
 term at $\ord{1/M^4}$ also has to be finite.
@@ -729,10 +729,10 @@ In this way, we find the much simpler result
 After the expansion in $1/M$, we have finally arrived at a local
 theory!
 
-What about the higher terns in
+What about the higher terms in
 \autoref{eq:foundations_scalar_example_effective_action_powers}?
-Their calculation is analogous to the one presented here and leads
-to operators like $\phi^8$ and higher. They are suppressed at
+Their calculation is analogous to that presented here and leads
+to operators of the form $\phi^8$ and higher. They are suppressed at
 least with $ 1 / M^4$ and are thus irrelevant for our dimension-six
 effective theory.
 
@@ -760,8 +760,8 @@ consists of the couplings $\lambda_2^3$ times a loop factor.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 For the dimension-six operators of linear Higgs effective field
-theory, we nearly entirely follow the conventions of
-References~\cite{Corbett:2012ja, Juan_thesis, Tyler_thesis}, which is
+theory, we closely follow the conventions of
+References~\cite{Corbett:2012ja, Juan_thesis, Tyler_thesis}, which are
 based on the Hagiwara-Ishihara-Szalapski-Zeppenfeld basis
 (HISZ)~\cite{Hagiwara:1993ck}. Our framework is defined in
 \autoref{sec:foundations_heft_operators}. The Lagrangian is given in
@@ -772,7 +772,7 @@ phenomenology of these operators in
 \autoref{sec:foundations_heft_pheno}.
 
 Another common basis for dimension-six operators was developed in
-References~\cite{Giudice:2007fh, Contino:2013kra} and is usually names
+References~\cite{Giudice:2007fh, Contino:2013kra} and is usually named
 ``Strongly Interacting Light Higgs'' or ``SILH'' after the first of
 these publications.  It is based on the Lagrangian
 %
@@ -1298,7 +1298,7 @@ mass spectrum of the model~\cite{Veltman:1976rt, Toussaint:1978zm,
   Froggatt:1991qw, He:2001tp, Grimus:2008nb}.  Analytic relations
 linking the different Higgs masses and mixing angles with the
 Lagrangian parameters in \autoref{eq:validity_2hdm_potential} can be found
-\eg in Appendix A of~\cite{Lopez-Val:2013yba}.  The conventions
+\eg in Appendix A of Reference~\cite{Lopez-Val:2013yba}.  The conventions
 %
 \begin{equation}
   0 <\beta < \pi/2
@@ -1307,10 +1307,11 @@ Lagrangian parameters in \autoref{eq:validity_2hdm_potential} can be found
 \end{equation}
 %
 guarantee that the Higgs coupling to vector bosons has the same sign
-in the 2HDM and in the SM.  As we will next show, the decoupling limit
-implies that the light Higgs interactions approach the alignment
-limit, where $\cos\beta \sim |\sin\alpha|$ and the couplings become
-SM-like~\cite{Gunion:2002zf}.
+in the 2HDM and in the SM.
+% As we will next show, the decoupling limit
+% implies that the light Higgs interactions approach the alignment
+% limit, where $\cos\beta \sim |\sin\alpha|$ and the couplings become
+% SM-like~\cite{Gunion:2002zf}.
 
 
 
@@ -1384,19 +1385,18 @@ and $\tau_x = 4 m_x^2 / m_{h^0}^2$.
 
 The effect of the second doublet on the phenomenology of the light
 Higgs consists purely of shifted couplings $\Delta_x$. This allows us
-to match the dimension-six model by setting equal the coupling shifts
-from the full model, given by
-Eqs.~\eqref{eq:validity_2hdm_higgs_vector_coupling} to
+to match the dimension-six model by equating the coupling shifts from
+the full model, given in
+Equations~\eqref{eq:validity_2hdm_higgs_vector_coupling} to
 \eqref{eq:validity_2hdm_last_coupling} and
 \eqref{eq:appendix_models_2hdm_haa}, to the corresponding couplings in
-the dimension-six Lagrangian,
+the dimension-six Lagrangian, see
 \autoref{eq:foundations_higgs_couplings}.
 
 In a second step we then expand in $1/\Lambda$ and keep terms up to
-$\ord{1/\Lambda^2}$, where $\Lambda$ is defined in the unbroken phase
-for the default matching or as the physical mass $m_{A^0}$ in the
-$v$-improved matching, as described in
-\autoref{sec:validity_2hdm}.
+$\ord{1/\Lambda^2}$. $\Lambda$ is either defined in the unbroken phase
+for the default matching, or as the physical mass $m_{A^0}$ in the
+$v$-improved matching, as described in \autoref{sec:validity_2hdm}.
 
 This defines the effective model in a straightforward way. For more
 details see Appendix~A.3 of Reference~\cite{Brehmer:2015rna}.
@@ -1800,7 +1800,7 @@ expressed in terms of dimension-six operators as
     + 3\ope{\phi,2} - 12\lambda\ope{\phi,3} - \sum_f y_f\ope{f} \,.
 \end{align}
 %
-Here we have used the equations of motions in
+Here we used the equations of motion in
 Equations~\eqref{eq:foundations_sm_eom1} to
 \eqref{eq:foundations_sm_eom2} to bring the operators to our HISZ
 basis.
@@ -2216,10 +2216,11 @@ leading to
 or
 %
 \begin{equation}
-  \var \left[ \hat{\theta} \middle| \theta \right] \geq \frac 1 {\var \left[ \partial_\theta \log f(\boldx|\theta) \middle| \theta \right]}
+  \var \left[ \hat{\theta} \middle| \theta \right] \geq \frac 1 {\var \left[ \partial_\theta \log f(\boldx|\theta) \middle| \theta \right]} \,.
 \end{equation}
 %
-Invoking \autoref{eq:appendix_information_cramer_rao_proof_score} one more time, we finally arrive at the Cram\'er-Rao bound
+Invoking \autoref{eq:appendix_information_cramer_rao_proof_score} one
+more time, we finally arrive at the Cram\'er-Rao bound
 %
 \begin{equation}
   \var \left[ \hat{\theta} \middle| \theta \right] \geq \frac 1 {I(\theta)}
@@ -2288,13 +2289,14 @@ branching ratios, as well as acceptance and efficiency factors. For
 instance, in the $\kappa$ framework for Higgs physics discussed in
 \autoref{sec:foundations_heft_alternatives} it is trivial to calculate
 the matrix $\partial \nu_c / \partial g_i$ in closed form. For each
-channel this matrix is singular, which means it measures one direction
-in parameter space and is blind to all orthogonal directions. At least
-as many channels as parameters are required to make the combined
-information in \autoref{eq:information_simple_example_information}
-non-singular and remove all blind directions (assuming the channels do
-not provide degenerate information, \ie linearly dependent
-eigenvectors in the Fisher information).
+channel this matrix is singular, which means that it measures one
+direction in parameter space and is blind to all orthogonal
+directions. At least as many channels as parameters are required to
+make the combined information in
+\autoref{eq:information_simple_example_information} non-singular and
+to remove all blind directions (assuming the channels do not provide
+degenerate information, \ie linearly dependent eigenvectors in the
+Fisher information).
 
 For illustration, consider the case where we want to measure one
 coupling $\theta = g$ in one channel with the expected number of
@@ -2356,7 +2358,7 @@ description of the high-mass tail of the $Z$ peak around
 $m_{\tau\tau} \sim m_H$. The ATLAS data, our fitted smearing function,
 and the final \toolfont{MadMax} output are shown in
 \autoref{fig:information_wbf_tautau_smearing}. We check that other
-distributions are not affected by the smearing significantly.
+distributions are not affected significantly by the smearing.
 
 \begin{figure}
   \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_smearing_mh}%
@@ -2371,9 +2373,9 @@ distributions are not affected by the smearing significantly.
 \end{figure}
 
 In the $4\ell$ channel, the backgrounds are negligible around
-$m_{4\ell} \approx m_h$, so we do not have to include a smearing to
-estimate the discrimination power. For Higgs production with a single
-top in the $h \to \gamma \gamma$ mode, we follow
+$m_{4\ell} \approx m_h$, so that we do not have to include a smearing
+to estimate the discrimination power. For Higgs production with a
+single top in the $h \to \gamma \gamma$ mode, we follow
 Reference~\cite{Kling:2016lay} and smear the $m_{\gamma \gamma}$
 distribution of the signal process with a Gaussian of width
 $1.52~\gev$. This resolution is based on Figure~6b of
