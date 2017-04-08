@@ -42,15 +42,15 @@ measured in a range of Higgs channels.
 % Section~\autoref{sec:information_application_odd} focusses on the
 % measurement of $CP$ violation.
 We demonstrate how our approach can be extended to describe systematic
-uncertainties, and link it to other statistical tools, in
+uncertainties and link it to other statistical tools in
 \autoref{sec:information_extensions}. Finally, we give our conclusions
 in \autoref{sec:information_conclusions}.
 
-Most of the research presented in this chapter was previously
+The majority of the research presented in this chapter was previously
 published in Reference~\cite{Brehmer:2016nyr}. Most of the results and
-their presentation, many plots and tables as well as part of the text,
-are identical to those in that article. These are supplemented with a
-few original and yet unpublished results.
+their presentation, including many plots and tables as well as part of
+the text, are identical to the content of that article. They are
+supplemented with a few unpublished results.
 
 
 
@@ -61,10 +61,10 @@ few original and yet unpublished results.
 
 Having established that the dimension-six operators of the linear
 Higgs effective theory capture the indirect signatures of many
-scenarios of new physics, we now analyse how its parameters, the
-Wilson coefficients $f_i/\Lambda^2$, can be measured most efficiently
-at the LHC. This is a highly non-trivial problem for two reasons:
-first, the Higgs properties form a high-dimensional parameter
+scenarios of new physics, we now analyse how the Higgs properties (in
+the EFT the Wilson coefficients $f_i/\Lambda^2$) can be measured most
+efficiently at the LHC. This is a highly non-trivial problem for two
+reasons: first, the Higgs properties form a high-dimensional parameter
 space. In \autoref{sec:foundations_heft_operators} we showed that,
 even after removing redundant operators and generously neglecting
 those with tight limits from electroweak precision measurements or
@@ -72,7 +72,7 @@ flavour constraints, we are left with 13 dimension-six operators
 relevant for Higgs physics. The Higgs-gauge interactions, for
 instance, are affected by seven of these operators, equivalent to a
 range of different kinematic structures or forms of momentum
-dependence. The second challenge comes from the complicated kinematics
+dependence. The second challenge is due to the complicated kinematics
 of some of the Higgs production channels and decay modes. For example,
 Higgs production in weak boson fusion with a decay
 $h \to W^+W^- \to (\ell^+ \nu) (\ell^- \overbar{\nu})$ is a $2 \to 6$
@@ -91,7 +91,7 @@ momenta, angles, or invariant masses. This is often followed by the
 estimation of background contributions with a mixture of simulational
 and data-driven methods. The final statistical analysis typically
 relies on total event counts or on histograms of kinematic
-observables.  These techniques are very intuitive and all steps are
+observables.  These techniques are intuitive and all their steps are
 transparent. They work well for simple signatures, such as a
 resonance peak on top of a smooth background, as in the discovery of
 the $gg \to h \to \gamma \gamma$
@@ -114,21 +114,22 @@ by convoluting this expression with suitable transfer
 functions. Shower deconstruction~\cite{Soper:2011cr, Soper:2012pb} and
 event deconstruction~\cite{Soper:2014rya} extend this concept to the
 parton shower to take into account the information encoded in jet
-substructure. Optimal observables~\cite{Atwood:1991ka, Davier:1992nw,
-  Diehl:1993br} apply the same idea to the measurement of a small
-theory parameter. All these tools intrinsically make full use of the
-information encoded in the underlying field theories, but rely on an
-approximate description of the detector systems. They are particularly
-useful in channels with not too many particles in the final state that
-can be reconstructed precisely. Large final-state multiplicities
-require integrating over a high-dimensional phase space and are
-computationally expensive. Finally, matrix-element-based tools
-generally either rely on the comparison of two discrete hypotheses or
-are designed for the measurement of one direction in theory
-space. Applying these methods to high-dimensional theory spaces, such
-as Higgs effective field theory, often requires a discretisation of
-the theory space, which can be computationally expensive. In addition,
-care has to be taken to avoid dependencies on EFT basis choices.
+substructure. The method of optimal observables~\cite{Atwood:1991ka,
+  Davier:1992nw, Diehl:1993br} applies the same idea to the
+measurement of a small theory parameter. All these tools intrinsically
+make full use of the information encoded in the underlying field
+theories, but rely on an approximate description of the detector
+systems. They are particularly useful in channels with not too many
+particles in the final state that can be reconstructed
+precisely. Large final-state multiplicities require integrating over a
+high-dimensional phase space and are computationally
+expensive. Finally, matrix-element-based tools generally either rely
+on the comparison of two discrete hypotheses or are designed for the
+measurement of one direction in theory space. Applying these methods
+to high-dimensional theory spaces, such as Higgs effective field
+theory, often requires a discretisation of the theory space, which can
+be computationally expensive. In addition, care has to be taken to
+avoid dependencies on EFT basis choices.
 
 A second class of complex statistical tools falls under the category of
 \emph{likelihood-free inference}~\cite{cranmer:nips2016}. They are
@@ -163,12 +164,12 @@ sensitive to.
 With these wide range capabilities, it is increasingly important that
 we can understand and characterise the information contained in
 particle physics processes. The design of event selections and
-analysis strategies requires clearly defined guidelines. We present an
-approach to these problems based on information
-geometry~\cite{efron1975, amari1982, amari2000joho}. It offers tools that are
-intrinsically designed for continuous parameter spaces of arbitrary
-dimensionality, independent of basis choices and without the need for
-any discretisation of the model hypothesis.
+analysis strategies requires clearly defined guidelines. We present a
+novel approach to tackle these problems based on information
+geometry~\cite{efron1975, amari1982, amari2000joho}. This offers tools
+that are intrinsically designed for continuous parameter spaces of
+arbitrary dimensionality, independent of basis choices, and without
+the need for any discretisation of the model hypothesis.
 
 The central object in our approach is the \emph{Fisher information}
 matrix. According to the Cram\'er-Rao bound~\cite{Rao:1945,
@@ -194,7 +195,7 @@ power of traditional histogram-based analyses to that of modern
 multivariate tools.
 
 We develop an algorithm, \toolfont{MadFisher}, that can calculate the
-Fisher information for arbitrary perturbative particle-physics
+Fisher information for arbitrary perturbative particle physics
 processes based on Monte-Carlo methods. We can calculate the
 quantities outlined above, each designed to answer different practical
 questions:
@@ -220,7 +221,7 @@ As a first application, we calculate the information on $CP$-even
 dimension-six operators in WBF Higgs production with a decay into tau
 pairs, focusing on the kinematic structures defined by the tagging
 jets and their sensitivity to the Higgs-gauge coupling structure. We
-then analyse WBF Higgs production in the four-lepton mode to see how
+then examine WBF Higgs production in the four-lepton mode to see how
 much additional information is contained in the decay kinematics. The
 last channel we analyse is Higgs production in association with a
 single top.
@@ -3254,14 +3255,14 @@ ambient distance is ultimately limited from above at $\pi/2$.
 \label{sec:information_conclusions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Information geometry can be used to optimise measurements of any
-continuous theory parameters at the LHC. Following the Cram\'er-Rao
+Information geometry can be used to optimise measurements of any set
+of continuous theory parameters at the LHC. Following the Cram\'er-Rao
 bound, the Fisher information matrix defines the maximum precision
 with which model parameters can be estimated. It is well-suited to
 high-dimensional parameter spaces since it requires no discretisation
 of the tested hypotheses, transforms covariantly under basis changes,
 and can encode the maximum sensitivity to all directions in model
-space in a single compact matrix. Interpreted as a metric on the
+space in a single compact matrix. Understood as a metric on the
 theory space, it provides a geometric interpretation of discrimination
 power. This is particularly relevant for effective field theories,
 where the curvature of the Riemannian manifold defined in this way
@@ -3319,17 +3320,17 @@ Higgs production in association with a single top has an interesting
 amplitude structure where diagrams with Higgs-gauge interactions
 interfere destructively with diagrams depending on the top Yukawa
 coupling. Small changes to these interactions can in principle change
-the rate and kinematics drastically. We find that kinematic properties
-of the Higgs decay products and observables related to the top system
-provide orthogonal information on the theory space; in particular the
-diphoton transverse momentum as well as the rapidity separation of the
-$\gamma \gamma$ and the $bjj$ system provide useful information.
-Unfortunately, the tiny cross section of this process strongly limits
-the constraining power on dimension-six operators. Even with HL-LHC
-data and under idealised conditions, these distributions are only
-sensitive to new physics scales around $550~\gev$, while an optical
-multivariate analysis may be able to probe scales up to $700~\gev$
-according to the Cram\'er-Rao bound.
+the total production rate and the kinematics drastically. We find that
+kinematic properties of the Higgs decay products and observables
+related to the top system provide orthogonal information on the theory
+space; in particular the diphoton transverse momentum as well as the
+rapidity separation of the $\gamma \gamma$ and the $bjj$ system
+provide useful information.  Unfortunately, the tiny cross section of
+this process strongly limits the constraining power on dimension-six
+operators. Even with HL-LHC data and under idealised conditions, these
+distributions are only sensitive to new physics scales around
+$550~\gev$, while an optical multivariate analysis may be able to
+probe scales up to $700~\gev$ according to the Cram\'er-Rao bound.
 
 These initial studies do not include systematic and theory
 uncertainties, and detector effects are taken into account only with
