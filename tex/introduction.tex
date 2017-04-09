@@ -11,13 +11,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \firstword{T}{he Higgs boson}~\cite{Higgs:1964ia, Higgs:1964pj,
-  Englert:1964et} is a key pillar of the Standard Model of particle
-physics (SM)~\cite{Glashow:1961tr, Weinberg:1967tq, Salam:1968rm}. Its
-discovery in 2012~\cite{Aad:2012tfa, Chatrchyan:2012xdj} completed the
-particle zoo of the SM. It is a triumph for a 50-year-old model, but it
-also offers a way forward: the Higgs provides us with an
-unprecedented chance to understand some of the biggest unsolved
-mysteries of physics.
+  Englert:1964et, Guralnik:1964eu, Higgs:1966ev} is the cornerstone
+% centrepiece
+of the Standard Model of particle physics (SM)~\cite{Glashow:1961tr,
+  Weinberg:1967tq, Salam:1968rm}. Its discovery in
+2012~\cite{Aad:2012tfa, Chatrchyan:2012xdj} completed the particle zoo
+of the SM. It
+% This feat of experimental particle physics
+is a triumph for a decades-old model, but it also defines a way
+forward: the Higgs provides us with an unprecedented chance to
+understand some of the biggest unsolved mysteries of physics.
 
 As the only known fundamental scalar, it suffers from the famous
 electroweak hierarchy problem: why is its mass scale (and therefore
@@ -26,16 +29,14 @@ there is no sign of a symmetry protecting it against quantum
 corrections? In addition, the Higgs sector is intimately tied to the
 stability of the electroweak vacuum and to the unexplained large
 hierarchy between the fermion masses. It might also be related to the
-the matter dominance in the universe, to dark matter, and to inflation.
-%
-% Or might it even be the source of inflation, explaining the
-% surprising level of isotropy in the Cosmic Microwave Background?
-%
+the open questions of the baryon asymmetry, of the nature of dark
+matter, and of inflation.
+
 Many models of physics beyond the Standard Model have been proposed to
 explain at least some of these aspects. Often they predict Higgs
-coupling patterns that differ from the SM. A precise measurement of
+coupling patterns different from the SM. A precise measurement of
 the Higgs properties thus provides a crucial probe of such models, and
-might be one of the most important missions for present and future
+might be one of the most important goals for present and future
 runs of the Large Hadron Collider (LHC).
 
 This prospect poses two immediate questions:
@@ -47,25 +48,29 @@ This prospect poses two immediate questions:
   experiments?
 \end{enumerate}
 %
-These two questions drive the research presented in this thesis, and
-we will address them one by one.
+These two topics drive the research presented in this thesis, and we
+will address them one by one.
 
 \newparagraph
 %
 Ideally, all Higgs measurements should use the same universal language
-to parametrise their results, allowing for an efficient comparison
-and combination. Such a framework should be general enough to describe
-the effects of any interesting new physics scenario without strong model
-assumptions. On the other hand, too large a number of parameters makes
-combinations of different experiments and global fits impractical.
+to parametrise their results, allowing for an efficient comparison and
+combination. Such a framework should be general enough to describe the
+effects of any interesting new physics scenario without strong model
+assumptions.  On the other hand, practical considerations such as
+computational resources limit the number of parameters.
+%
+% On the other hand, too large a number of parameters makes
+% statistical analyses and the combinations of different experiments in
+% global fits impractical.
 
 A simple example for such a universal parametrisation that was widely
 used during Run~1 of the LHC is the $\kappa$ framework. It is based on
 the SM Lagrangian, but promotes all Higgs couplings to free
 parameters. The main limitation of this approach is that it can only
-describe structures that are already present in the SM. So while a
+describe structures that are already present in the SM. While a
 measurement based on the $\kappa$ framework can be useful for total
-rates, it will not be able to utilise information in kinematic
+rates, it is not able to utilise information in kinematic
 distributions.
 
 Instead, we follow an approach based on effective field theory
@@ -84,19 +89,21 @@ describe both coupling rescalings as well as novel kinematic
 structures not present in the SM, allowing us to access information in
 distributions in addition to total rates~\cite{Corbett:2012ja,
   Corbett:2015ksa}. Effective operators also let us combine Higgs
-measurements with constraints from other processes, including electroweak precision
-data or gauge boson production at the
-LHC~\cite{Butter:2016cvz}. However, the limited precision of the LHC
-Higgs measurements means that only models that are either strongly
-coupled or relatively light can be probed. In the latter case, the
-characteristic energy scale of new physics is not sufficiently
-separated from the momentum transfers in the experiments, casting
-doubt on the validity of the EFT approach.
+measurements with constraints from other processes, including
+electroweak precision data or gauge boson production at the
+LHC~\cite{Butter:2016cvz}.
+
+However, the limited precision of the LHC Higgs measurements is only
+sensitive to signatures from models that are either strongly coupled
+or relatively light. In the latter case, the characteristic energy
+scale of new physics is not sufficiently separated from the momentum
+transfers in the experiments, casting doubt on the validity of the EFT
+approach.
 
 We analyse the usefulness of higher-dimensional operators at the LHC
-by comparing the predictions of UV-complete scenarios of new physics
-to their dimension-six approximations~\cite{Brehmer:2015rna}. Our
-analysis covers additional scalar singlets, two-Higgs-doublet models,
+by comparing the predictions of specific scenarios of new physics to
+their dimension-six approximations~\cite{Brehmer:2015rna}. Our
+analysis covers additional scalar singlets, a two-Higgs-doublet model,
 scalar top partners, and heavy vector bosons, focusing on parameter
 ranges that the LHC will be sensitive to. We take into account rates
 and distributions in the most important Higgs production modes and
@@ -119,14 +126,14 @@ fusion~\cite{Biekotter:2016ecg}.
 \newparagraph
 %
 Having chosen a parametrisation of Higgs properties, the next question
-is how its parameters can be measured most efficiently. Higgs
-measurements are affected by many different effective operators. Each of
-them affects different couplings, typically introducing non-trivial
+is how its parameters can be measured optimally. Higgs
+signatures are sensitive to many different effective operators. Each
+of them affects different couplings, typically introducing non-trivial
 kinematic structures. This leads to a complicated relation between the
 high-dimensional model parameter space and often also high-dimensional
 phase spaces.
 
-Traditional analyses based on selection cuts and histograms of
+Conventional analyses based on selection cuts and histograms of
 kinematic observables are in many cases not sensitive to such subtle
 signatures.  At the other end of the spectrum, experiments resort more
 and more to high-level statistical tools, including machine learning
@@ -146,36 +153,33 @@ which physical properties they probe. It is therefore increasingly
 important to be able to characterise the information contained in LHC
 signatures.
 
-We use information geometry to understand and optimise Higgs
-measurements~\cite{Brehmer:2016nyr}.  The central building block is
-the Fisher information matrix, which according to the Cram\'er-Rao
-bound encodes the maximal knowledge on theory parameters we can derive
-from an experiment. Unlike many other statistical tools, the Fisher
-information is intrinsically designed for continuous, high-dimensional
-parameter spaces. This approach does not require any discretisation of
-the theory space and leads to results that do not depend on arbitrary
-choices of benchmark parameters or operator bases. In addition, the
-Fisher information defines a metric on the model parameter space. This
-not only provides an intuitive geometric picture of the sensitivity of
-measurements, but also allows us to track the impact of higher orders
-in the EFT expansion.
+We introduce new statistical tools based on information geometry that
+can guide the measurement of continuous theory parameters such as Higgs
+properties~\cite{Brehmer:2016nyr}. The central building block of our
+approach is the Fisher information matrix, which according to the
+Cram\'er-Rao bound encodes the maximal knowledge on theory parameters
+we can derive from an experiment. We show that the properties of the
+Fisher information make it particularly well-suited for continuous,
+high-dimensional parameter spaces, and in particular for effective
+field theories.
 
-We calculate the Fisher information for Higgs production in weak boson
-fusion with decays into tau pairs and four leptons, and for Higgs
-production in association with a single top quark. To this end, we
-develop an algorithm to calculate the Fisher information in
-particle-physics observables based on Monte-Carlo methods. Our results
-give the maximum precision with which dimension-six operators can be
-measured, or the maximal new physics reach of these
-signatures. We then analyse how the differential information is
-distributed over phase space, which defines optimal event
-selections. In a next step, we calculate the information in individual
-kinematic distributions, and compare it to the maximal information in
-the full event kinematics. This provides a ranking of the most
-powerful production and decay observables. It also allows us to
-compare how much we can learn from a simple fit to histograms compared
-to fully multivariate methods. Together, these tools can be used to
-optimise measurement strategies.
+We develop an algorithm to calculate the Fisher information in
+particle physics processes based on Monte-Carlo methods. It allows us
+to calculate the maximum precision with which continuous parameters can
+be measured in a process. We also analyse how the differential
+information is distributed over phase space, and how much information
+is carried by individual kinematic distributions. This defines the
+most powerful phase-space regions and observables for an analysis. It
+also allows us to compare how much we can learn from a simple fit to
+histograms compared to fully multivariate methods.
+
+These new instruments are then used to understand and optimise Higgs
+measurements in three different channels. We calculate the information
+on dimension-six operators in Higgs production in weak boson fusion
+with decays into tau pairs and four leptons, and in Higgs production
+in association with a single top quark. Finally, we show how our
+approach can be extended to include systematic and theory
+uncertainties, and compare it to the likelihood ratio.
 
 \newparagraph
 %
@@ -185,8 +189,9 @@ physics and effective field theories in
 discuss the validity of effective field theory for LHC measurements
 and the matching between full models and effective
 operators. \autoref{chapter:information} presents our work on
-information geometry and optimal Higgs measurements. Both these
-chapters contain separate, detailed introductions and conclusions. We
-summarise our results in \autoref{chapter:conclusions}. In a set of
-appendices we list our conventions, explain technical details, and
-provide additional examples.
+information geometry and efficient measurements of Higgs
+properties. Both these chapters contain separate, detailed
+introductions and conclusions. We summarise our results in
+\autoref{chapter:conclusions}. In a set of appendices we list our
+conventions, explain technical details, and provide additional
+examples.

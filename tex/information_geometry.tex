@@ -3253,21 +3253,33 @@ ambient distance is ultimately limited from above at $\pi/2$.
 \label{sec:information_conclusions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We introduced new statistical tools based on information geometry to
-optimise measurements of continuous theory parameters at the LHC.
-%
-% Information geometry can be used to optimise measurements of any set
-% of continuous theory parameters at the LHC.
-%
-Our approach is based on the Fisher information matrix. Following the
-Cram\'er-Rao bound, it defines the maximum precision with which model
-parameters can be estimated. It is well-suited to high-dimensional
-parameter spaces since it requires no discretisation of the tested
-hypotheses, does not depend on arbitrary basis choices, and can
-simultaneously encode the maximum sensitivity to all directions in
-model space in a single matrix. These properties make information
-geometry particularly useful for the analysis of effective field
-theories. Moreover, the Fisher information is additive between
+% We introduced new statistical tools based on information geometry to
+% optimise measurements of continuous theory parameters at the LHC.
+% Our approach is based on the Fisher information matrix. Following
+% the Cram\'er-Rao bound, it defines the maximum precision with which
+% model parameters can be estimated. It is well-suited to
+% high-dimensional parameter spaces since it requires no
+% discretisation of the tested hypotheses, does not depend on
+% arbitrary basis choices, and can simultaneously encode the maximum
+% sensitivity to all directions in model space in a single
+% matrix. These properties make information geometry particularly
+% useful for the analysis of effective field theories. Moreover, the
+% Fisher information is additive between different measurements and
+% between different phase-space region within the same process, making
+% it trivial to discuss the combination of different
+% channels. Understood as a metric on the theory space, it provides an
+% intuitive geometric interpretation of discrimination power.
+
+Information geometry can be used to optimise measurements of any set
+of continuous theory parameters at the LHC. Following the Cram\'er-Rao
+bound, the Fisher information matrix defines the maximum precision
+with which model parameters can be estimated. It is well-suited to
+high-dimensional parameter spaces since it requires no discretisation
+of the tested hypotheses, does not depend on arbitrary basis choices,
+and can simultaneously encode the maximum sensitivity to all
+directions in model space in a single matrix. These properties make
+information geometry particularly useful for the analysis of effective
+field theories. Moreover, the Fisher information is additive between
 different measurements and between different phase-space region within
 the same process, making it trivial to discuss the combination of
 different channels. Understood as a metric on the theory space, it
@@ -3276,7 +3288,8 @@ power.
 
 We developed an algorithm that can calculate the Fisher information in
 arbitrary high-energy physics processes based on Monte-Carlo
-simulations. We can calculate the total information, which defines the
+simulations. We can calculate the total information based on the full
+high-dimensional phase space with all correlations. This defines the
 maximal precision with which the parameters can be probed; applied to
 effective field theories this gives us the maximal new physics reach
 of any signature. The Fisher information can also be calculated
@@ -3348,15 +3361,15 @@ These initial studies do not include systematic and theory
 uncertainties, and detector effects are taken into account only with
 rudimentary smearing functions. Our results for the maximum precision
 are therefore optimistic. We showed how our approach can be extended
-to include systematic effects, and introduced a profiling procedure for
-the Fisher information. These tools define many directions for future
-research. First, the Higgs signatures discussed here can be
+to include systematic effects, and introduced a profiling procedure
+for the Fisher information. These tools define many directions for
+future research. First, the Higgs signatures discussed here can be
 re-examined with a proper treatment of shower and detector effects as
 well as systematic and theory uncertainties. Second, we can analyse
 the detection of $CP$ violation in the Higgs sector. Using the
 profiling procedure for the Fisher information, we can focus on the
 question which signatures of $CP$ violation are genuine, \ie cannot be
-caused by any $CP$-conserving new physics. Finally, while we
-demonstrated our approach in different Higgs channels for
-dimension-six operators, our tools can easily be applied to other
-processes and models.
+caused by any $CP$-conserving new physics. Finally, while we focussed
+on Higgs physics in terms of effective field theories in this thesis,
+these tools can be applied to the measurement of any continous
+parameters in any perturbative LHC signature.

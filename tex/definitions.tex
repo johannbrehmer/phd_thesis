@@ -5,7 +5,7 @@
 \newcommand{\newparagraph}{\par\bigskip\noindent}
 %\newcommand{\arxivlink}[1]{\href{http://arxiv.org/abs/#1}{\texttt{arXiv:#1}}}
 \newcommand{\arxivlink}[1]{\href{http://arxiv.org/abs/#1}{arXiv:#1}}
-\newcommand{\comment}[1]{\marginpar{\sffamily\footnotesize\textcolor{dark-red}{#1}}}
+% \newcommand{\comment}[1]{\marginpar{\sffamily\footnotesize\textcolor{dark-red}{#1}}}
 % \newcommand{\comment}[1]{} % for proof readers
 
 % General symbols 
@@ -145,12 +145,12 @@
 \DeclareMathOperator*{\argmax}{arg\,max}
 
 % Title page
-\newcommand{\tptitle}[1]{{\sffamily \Huge \bfseries  #1}}
-\newcommand{\tpauthor}[1]{{\LARGE #1}}
-\newcommand{\tplarge}[1]{{\large #1}}
-\newcommand{\tpsmall}[1]{{#1}}
-\newcommand{\tpskip}{\vspace{0.18cm}}
-\newcommand{\tpbigskip}{\vspace{0.3cm}}
+\newcommand{\tptitle}[1]{{\Huge \sffamily \bfseries #1 }}
+\newcommand{\tpauthor}[1]{{\LARGE \rmfamily #1 }}
+\newcommand{\tplarge}[1]{{\large \rmfamily #1 }}
+\newcommand{\tpsmall}[1]{{\rmfamily #1 }}
+\newcommand{\tpskip}{\vspace*{0.18cm}}
+\newcommand{\tpbigskip}{\vspace*{0.3cm}}
 
 % Capitals at beginning of chapter
 \newcommand{\firstword}[2]{\lettrine[lines=3]{\color{highlight-color}#1}{#2}}

@@ -6,10 +6,9 @@
 \documentclass[a4paper,
 	oneside,
 	%BCOR=5mm, %binding correction - only for printing
-        openright,
 	cleardoublepage=plain,
-	12pt,
-        DIV=16]{scrreprt}
+	11pt,
+        DIV=10]{scrreprt}
 
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman,british]{babel}
@@ -19,55 +18,195 @@
 % \definecolor{cover-background}{rgb}{0.,0.,0.}
 % \definecolor{cover-foreground}{rgb}{1.,1.,1.}
 
-% Color option 2: white on dark red
-\definecolor{cover-background}{rgb}{0.4,0.,0.}
-\definecolor{cover-foreground}{rgb}{1.,1.,1.}
+% % Color option 2: white on dark red
+% \definecolor{cover-background}{rgb}{0.4,0.,0.}
+% \definecolor{cover-foreground}{rgb}{1.,1.,1.}
+
+% Color option 3: black on white
+\definecolor{cover-foreground}{rgb}{0.,0.,0.}
+\definecolor{cover-background}{rgb}{1.,1.,1.}
+\definecolor{dark-red}{rgb}{0.8,0.0,0.0}
 
 % Font
-\usepackage[lf,mathtabular,minionint, medfamily]{MinionPro} % 2B: lining figures everywhere
-\usepackage[mathlf,mathtabular,sansmath,medfamily]{MyriadPro}
-\linespread{1.05}
+\usepackage[textosf,mathlf,mathtabular,minionint,roundv]{MinionPro} 
+\usepackage[mathlf,mathtabular,onlytext,medfamily]{MyriadPro}
+\linespread{1.06}
 
 \usepackage{microtype}
+%\usepackage{tabto}
 
 % Title page definitions
-\newcommand{\tptitle}[1]{{\sffamily \Huge \bfseries \color{cover-foreground} #1}}
-\newcommand{\tpauthor}[1]{{\huge \color{cover-foreground} #1}}
-\newcommand{\tpsmall}[1]{{\color{cover-foreground} #1}}
+\newcommand{\tptitle}[1]{{\Huge \sffamily \bfseries \color{cover-foreground} #1 \par}}
+\newcommand{\tpfillword}[1]{{\LARGE \rmfamily \itshape \color{cover-foreground} #1 \par}}
+\newcommand{\tpauthor}[1]{{\LARGE \rmfamily \color{cover-foreground} #1 \par}}
+
+% Left and right blocks
+\newcommand{\leftoflineA}[1]{{\raggedright\begin{minipage}{0.3\textwidth}\raggedleft#1\end{minipage}\par}}
+\newcommand{\rightoflineA}[1]{{\raggedleft\begin{minipage}{0.7\textwidth}\raggedright#1\end{minipage}\par}}
+\newcommand{\leftoflineB}[1]{{\raggedright\begin{minipage}{0.7\textwidth}\raggedleft#1\end{minipage}\par}}
+\newcommand{\rightoflineB}[1]{{\raggedleft\begin{minipage}{0.3\textwidth}\raggedright#1\end{minipage}\par}}
 
 \begin{document}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Cover page
+% Cover page 1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{titlepage}
   \pagestyle{empty}
   \pagecolor{cover-background}
+
   \begin{center}
 
-    \vspace*{5cm}
+    \vspace*{4cm}
 
-    \tptitle{New Ideas\\[0.7cm]
-     %{\mdseries \textit{for}}
-     for
-     Effective Higgs Measurements}
-
-    % \vspace*{3.5cm}
-    %\includegraphics[width=0.6\textwidth]{cover_image.png}
-    %\vspace*{2cm}
+    \tptitle{New Ideas for\\[0.2cm]
+      Effective Higgs Measurements}
 
     \vfill
 
-    \tpauthor{Dissertation\\[0.7cm]
-    Johann Brehmer}
+    \tpauthor{Dissertation}
 
-    \vspace*{2cm}
+    \vspace*{0.5cm}
+
+    \tpauthor{Johann Brehmer}
+
+    \vspace*{0.5cm}
 
   \end{center}
+
 \end{titlepage}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover page 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{titlepage}
+%   \pagestyle{empty}
+%   \pagecolor{cover-background}
+
+%     \vspace*{4cm}
+
+%     \tptitle{New Ideas for Effective}
+%     \vspace*{0.2cm}
+%     \tptitle{Higgs Measurements}
+
+%     \vfill
+
+%     \tpauthor{Dissertation}
+
+%     \vspace*{0.5cm}
+
+%     \tpauthor{Johann Brehmer}
+
+%     \vspace*{0.5cm}
+
+% \end{titlepage}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover page 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{titlepage}
+%   \pagestyle{empty}
+%   \pagecolor{cover-background}
+
+%     \vspace*{1cm}
+
+%     \leftoflineA{\tpauthor{Johann Brehmer}}
+    
+%     \vspace*{2.4cm}
+
+    
+%     \rightoflineA{\tptitle{New Ideas for Effective}}
+%     \vspace*{0.5cm}
+%     \rightoflineA{\tptitle{Higgs Measurements}}
+
+%     \vspace*{1.2cm}
+
+%     \rightoflineA{\tpauthor{Dissertation}}
+
+% \end{titlepage}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover page 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{titlepage}
+%   \pagestyle{empty}
+%   \pagecolor{cover-background}
+
+%     \vspace*{1cm}
+
+%     \rightoflineB{\tpauthor{Johann Brehmer}}
+    
+%     \vspace*{2.4cm}
+
+    
+%     \leftoflineB{\tptitle{New Ideas for Effective}}
+%     \vspace*{0.5cm}
+%     \leftoflineB{\tptitle{Higgs Measurements}}
+
+%     \vspace*{1.2cm}
+
+%     \vfill
+
+%     \rightoflineB{\tpauthor{Dissertation}}
+
+%     \vspace*{1cm}
+
+% \end{titlepage}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover page 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{titlepage}
+%   \pagestyle{empty}
+%   \pagecolor{cover-background}
+%   %
+%   \begin{minipage}[t]{0.65\textwidth}
+%     \raggedleft
+
+%     \vspace*{4cm}
+    
+%     \tptitle{New Ideas for Effective \\[0.2cm]
+%       Higgs Measurements}
+%   \end{minipage}
+%   %
+%   \hspace*{0.01\textwidth}
+%   %
+%   \begin{minipage}[t]{1pt}
+%     \color{dark-red}%
+%     \rule{\linewidth}{\textheight}
+%   \end{minipage}
+%   %
+%   \hspace*{0.01\textwidth}
+%   %
+%   \begin{minipage}[t]{0.3\textwidth}
+%     \raggedright
+
+%     \vspace*{1cm}
+
+%     \tpauthor{Johann Brehmer}
+
+%     \vspace*{17.5cm}
+
+%     \tpauthor{Dissertation}
+
+%   \end{minipage}
+%   %
+% \end{titlepage}
 
 
 
