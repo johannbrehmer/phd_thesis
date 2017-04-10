@@ -11,14 +11,24 @@
 \label{chapter:validity}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\firstword{A}{ suitable effective field theory} can universally
-describe all signatures expected from new physics as long as the new
-physics scale $\Lambda$ is much larger than the experimental momentum
-transfer. However, the limited precision of the LHC means that Higgs
+% \firstword{A}{ suitable effective field theory} can universally
+% describe all signatures expected from new physics as long as the new
+% physics scale $\Lambda$ is much larger than the experimental momentum
+% transfer.
+
+% \firstword{T}{he effective field theory} paradigm introduced in the
+% previous chapter relies on the assumption that the new physics scale
+% $\Lambda$ is much larger than the experimental momentum transfer. 
+
+\firstword{A}{ hierarchy of scales} between the experimental momentum
+transfer and the new physics scale is the key premise behind the
+effective field theory paradigm described in the previous chapter.
+%
+However, the limited precision of the LHC means that Higgs
 measurements are often only sensitive to models characterised by mass
 scales just above the electroweak scale. In this chapter we discuss if
-and when the EFT approach is nevertheless useful, and how its validity
-can be improved.
+and when the EFT approach is nevertheless useful for Higgs physics,
+and how its validity can be improved.
 
 In \autoref{sec:validity_introduction} we estimate the new physics
 scales probed by LHC Higgs measurements and formulate our strategy to
@@ -155,15 +165,15 @@ Related to this is our work in \autoref{chapter:information}, where we
 develop methods that let us calculate the maximum new physics scale
 that can be probed in a given process.
 
-We conclude that for moderately weakly coupled scenarios of new
-physics, the limited precision of LHC Higgs measurements cannot
-guarantee a clear scale hierarchy, and the effective field theory
-approach cannot be trusted blindly. But this does not mean that an
-analysis of LHC data in terms of a truncated dimension-six Lagrangian
-cannot be useful. Instead, the applicability of the dimension-six
-model now depends on the nature of the underlying physics as well as
-on the process and observable, and has to be carefully checked for
-each situation.
+For moderately weakly coupled scenarios of new physics, the limited
+precision of LHC Higgs measurements therefore cannot guarantee a clear
+scale hierarchy, and the effective field theory approach cannot be
+trusted blindly. But this does not mean that an analysis of LHC data
+in terms of a truncated dimension-six Lagrangian cannot be
+useful. Instead, the applicability of the dimension-six model now
+depends on the nature of the underlying physics as well as on the
+process and observable, and has to be carefully checked for each
+situation.
 
 From a practical perspective, the dimension-six operators work
 flawlessly as a framework to fit Higgs data including kinematic
@@ -201,9 +211,12 @@ The corresponding EFT descriptions are constructed by integrating out
 the heavy fields and expanding the effective action to
 $\ord{1/\Lambda^2}$. In other words, we match the theories to the
 dimension-six operators of the linear Higgs EFT introduced in
-\autoref{sec:foundations_heft_operators}. The details of this matching
-procedure are a key element of our analysis and will be discussed in
-detail in the next section.
+\autoref{sec:foundations_heft_operators}. In the situation where the
+new physics scale is relatively close to the electroweak VEV,
+electroweak symmetry breaking can define additional scales and lead
+to ambiguities in the matching procedure. These subtleties can be
+crucial for Higgs signatures and will be discussed in detail in the
+next section.
 
 For all of these scenarios, we calculate the Higgs couplings, and in a
 next step rates and distributions for selected Higgs production modes
@@ -215,9 +228,13 @@ and decay channels. The key questions we aim to address are:
   separated from the experimental momentum transfer?
 %
 \item Which observables are correctly described by the dimension-six
-  model?  Where does the EFT description break down?
+  model?  Where does the EFT description break down, and does this
+  pose a problem for LHC analyses?
 %
-\item Does this breakdown pose a problem for LHC analyses?
+% \item Does this breakdown pose a problem for LHC analyses?
+%
+\item Can we improve the EFT performance with a refined matching
+  procedure?
 \end{itemize}
 %
 In this way, we analyse what problems the lack of a clear hierarchy of
@@ -377,7 +394,7 @@ two different matching prescriptions.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Default vs.\ $v$-improved matching}
+\subsection[Default vs.\ $v$-improved matching]{Default vs.\ $\boldsymbol{v}$-improved matching}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Our \emph{default matching} follows a purely theoretical motivation
@@ -398,9 +415,9 @@ new particles are mass-degenerate in the unbroken electroweak
 phase. Otherwise the new particles would have to be integrated out
 consecutively at different scales $M_i$. We then expand the effective
 action, expressed in parameters of the Lagrangian, and drop all terms
-of $\ord{\Lambda^{-4}}$.
+of $\ord{1/\Lambda^{4}}$.
 
-Alternatively, we define a \emph{$v$-improved matching} procedure that
+Alternatively, we define a \emph{$\boldsymbol{v}$-improved matching} procedure that
 accounts for additional terms suppressed by $v^2 / \Lambda^2$ in the
 Wilson coefficients of the dimension-six Lagrangian. This corresponds
 to matching the linear EFT in the broken electroweak phase. In the
@@ -423,7 +440,7 @@ defined, but rather a general guideline.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Making sense of $v$-improvement}
+\subsection[Making sense of $v$-improvement]{Making sense of $\boldsymbol{v}$-improvement}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Let us try to understand the $v$-improved matching from a different
@@ -774,7 +791,7 @@ cuts. We also consider WBF production with a decay
   \to (\ell^+ \nu) \, (\ell^- \bar{\nu}) \, u d \,,
 \end{equation}
 %
-where we require the standard WBF cuts\footnote{For a definition of
+where we require typical WBF cuts\footnote{For a definition of
   all kinematic quantities, see Appendix~\ref{sec:appendix_pheno}.}
 %
 \begin{align}
@@ -811,7 +828,7 @@ with
 \end{equation} 
 
 As the last production mode of single Higgs bosons, we evaluate
-Higgs-strahlung
+Higgs-strahlung,
 %
 \begin{equation}
   q q \to V h
@@ -1011,7 +1028,7 @@ $| \alpha |  \approx | \lambda_3/\lambda_1| \,  v_s/(2v)$ even for
 $v_s \lesssim v$.  This situation mirrors the `alignment without
 decoupling' scenario in the Two-Higgs-doublet model
 (2HDM)~\cite{Gunion:2002zf, Craig:2013hca} or the
-MSSM~\cite{Carena:2013ooa, Delgado:2013zfa}. It relies on a weak
+Minimal Supersymmetric Standard Model (MSSM)~\cite{Carena:2013ooa, Delgado:2013zfa}. It relies on a weak
 portal coupling and a small scale separation, which cannot be properly
 described by an effective field theory.
 
@@ -1163,7 +1180,7 @@ matching, we find reasonable agreement with the full model for the
 scenarios with a heavy additional Higgs, while large discrepancies
 appear when the new physics is lighter. In particular, note the
 difference between S3 and S4. Both describe the same coupling shift
-$\Delta_x = - 0.08$. But while S3 realises this with a weakly coupled
+$\Delta_x = - 0.083$. But while S3 realises this with a weakly coupled
 light scalar, which the default EFT cannot describe, S4 features a
 heavier and more strongly coupled new particle, and the EFT
 description works better.  In all cases, the $v$-improved EFT by
@@ -1297,7 +1314,7 @@ $H$ resonance, the interference of the SM-like terms with the $H$
 diagrams makes up a significant part of the amplitude.  In the EFT the
 derivative terms are similarly relevant already at low energies. Close
 to threshold, the ($v$-improved) dimension-six model approximates the
-full theory well. But this agreement detoriates already at moderately
+full theory well. But this agreement deteriorates already at moderately
 larger energies, and clearly breaks down towards the $H$ pole.
 
 
@@ -1316,10 +1333,11 @@ scales. A standard matching procedure that expands the coefficients to
 leading order in $v^2/\Lambda^2$ may lead to sizeable deviations from
 the full model. However, a $v$-improved EFT construction that takes
 into account higher orders in $v^2/\Lambda^2$ yields perfect agreement
-with the full theory. In other words, many of the dimension-eight and
-higher operators generated from the singlet model are of the form
-$( \phisq)^n \ope{i}^{(6)}$. After EWSB they can be resummed into the
-Wilson coefficients of the dimension-six operators as given by
+with the full theory. In other words, all dimension-eight and higher
+operators relevant for single Higgs production that are generated from
+the singlet model are of the form $( \phisq)^n \ope{i}^{(6)}$. After
+EWSB they can be resummed into the Wilson coefficients of the
+dimension-six operators as given by
 \autoref{eq:validity_v-improvement_resummation}.
 
 Higgs pair production is different. There is a large contribution from
@@ -1743,16 +1761,15 @@ matching. For simplicity, we will from now on leave out the results
 based on the default matching, which only confirm these initial
 results.
 
-The $v$-improved matching, on the other hand, essentially captures
-most of the coupling shifts. It still fails to describe shifts in the
-couplings to weak bosons, which correspond to a dimension-eight
-operator as discussed above.\footnote{Note that the operator
-  $\ope{BB}$ does contribute to the $h^0 VV$ coupling, representing
-  the effect of a charged Higgs loop. But as our results show, this
-  effect is negligible.} Unlike in the singlet model, the $v$-improved
-EFT also struggles with scenarios of very light new physics such as
-D1. Still, all in all it performs well in situations with a modest
-scale hierarchy such as benchmark D2.
+The $v$-improved matching essentially captures most of the coupling
+shifts. It still fails to describe shifts in the couplings to weak
+bosons, which correspond to a dimension-eight operator as discussed
+above.\footnote{Note that the operator $\ope{BB}$ does contribute to
+  the $h^0 VV$ coupling, representing the effect of a charged Higgs
+  loop. But as our results show, this effect is negligible.} Unlike in
+the singlet model, the $v$-improved EFT also struggles with scenarios
+of very light new physics such as D1. Still, all in all it performs
+well in situations with a modest scale hierarchy such as benchmark D2.
 
 A particularly interesting scenario is described by benchmark D3. In
 the full model, the bottom Yukawa is exactly sign-flipped, a signature
@@ -2005,10 +2022,10 @@ modifications of the Higgs interactions, most notably to $\Delta_g$,
 $\Delta_\gamma$, $\Delta_W$, and $\Delta_Z$, possibly including new
 Lorentz structures. The Yukawa couplings do not change at one loop
 because we do not include gauge boson partners. As a side remark, the
-2HDM described in \autoref{sec:validity_2hdm} combined with the
-scalar top partners given here corresponds to an effective
-description of the Minimal Supersymmetric Standard Model in the limit
-of infinitely heavy gauginos, sleptons, and light-flavour squarks.
+2HDM described in \autoref{sec:validity_2hdm} combined with the scalar
+top partners given here corresponds to an effective description of the
+MSSM in the limit of infinitely heavy gauginos, sleptons, and
+light-flavour squarks.
 
 In the limit of small $\theta_{\tilde{t}}$, the leading correction to
 the $hVV$ coupling scales as
@@ -3273,15 +3290,15 @@ is also more sensitive to the square of dimension-six terms.
 The dimension-six operators of linear Higgs effective field theory
 provide a theoretically well-defined, largely model-independent, and
 phenomenologically powerful framework to parametrise deviations from
-the Standard Model. But the validity of the EFT approach relies on a
-gap between the experimental momentum transfer and the mass scales of
-the probed models of new physics. The limited precision of the LHC can
-guarantee such a clear scale hierarchy only under the additional
-assumption that the underlying physics is strongly coupled. For
-moderately weakly to moderately strongly coupled models, LHC Higgs
-measurements are sensitive to new physics scales ranging from the
-electroweak scale to approximately one TeV, casting doubt on the
-validity of the EFT approximation.
+the Standard Model. However, the validity of the EFT approach relies
+on a gap between the experimental momentum transfer and the mass
+scales of the probed models of new physics. The limited precision of
+the LHC Higgs measurements can guarantee such a clear scale hierarchy
+only under the additional assumption that the underlying physics is
+strongly coupled. For moderately weakly to moderately strongly coupled
+models, these analyses are sensitive to new physics scales ranging
+from the electroweak scale to approximately one TeV, casting doubt on
+the validity of the EFT approximation.
 
 In this chapter we have studied the usefulness of the effective theory
 for LHC Higgs measurements by comparing different complete models of
