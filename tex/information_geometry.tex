@@ -1603,7 +1603,7 @@ fusion with $h \to \tau \tau$.
     Higgs-gauge interactions affected by the dimension-six operators of
     our analysis; in addition $\ope{\phi,2}$ also rescales the decay
     vertex. Middle and right: example diagrams for the electroweak and
-    strong $Zjj$ backgrounds.}
+    QCD $Zjj$ backgrounds.}
   \label{fig:information_wbf_tautau_diag}
 \end{figure}
 
@@ -1850,8 +1850,8 @@ dominant background process.
     WBF $h \to \tau \tau$ channel (shaded red) with respect to the
     invariant mass of the $\tau \tau$ system (left) and its transverse
     momentum (right). We also show the normalised SM signal (solid
-    black) and QCD $Z$+jets (dotted grey) rates. The dashed blue line
-    shows the effect of an exaggerated
+    black) and QCD $Zjj$ (dotted grey) rates. The dashed blue lines
+    show the effect of an exaggerated new physics benchmark
     $f_{W} \, v^2 / \Lambda^2 = 0.5$. The last bin is an overflow
     bin.}
   \label{fig:information_wbf_tautau_differential_information_taus}
@@ -1868,11 +1868,10 @@ dominant background process.
     (top right), the separation in pseudorapidity between the two jets
     (bottom left), and their difference in the azimuthal angle (bottom
     right). We also show the normalised SM signal (solid black) and
-    QCD $Z$+jets (dotted grey) rates. The dashed blue line shows the
-    effect of an exaggerated $f_{W} \, v^2 / \Lambda^2 = 0.5$, except
-    in the bottom right panel, where we show
-    $f_{WW} \, v^2 / \Lambda^2 = 0.5$. The last bin is an overflow
-    bin.}
+    QCD $Zjj$ (dotted grey) rates. The dashed blue lines show the effect of
+    $f_{W} \, v^2 / \Lambda^2 = 0.5$, except in the bottom right
+    panel, where we show $f_{WW} \, v^2 / \Lambda^2 = 0.5$. The last
+    bin is an overflow bin.}
   \label{fig:information_wbf_tautau_differential_information_jets}
 \end{figure}
 
@@ -1997,11 +1996,11 @@ $p_{T,j}^{\text{max}}$.
     channel in the $\ope{W}$-$\ope{WW}$ plane as a function of an
     upper cut of the transverse jet momenta
     $p_{T,j}^{\text{max}}$. The green, blue, and red curves show the
-    optimal reach for different values for universal Wilson
-    coefficients $f_W = f_{WW} \equiv f$, as defined in
-    \autoref{eq:information_scales_reach}. The dashed grey line
-    sketches the maximum momentum transfer in the events, assuming
-    that this is accurately captured by the jet $p_T$.}
+    new physics reach for different values of the Wilson coefficients
+    $f_W = f_{WW} \equiv f$, as defined in
+    \autoref{eq:information_scales_reach}. To roughly assess the EFT
+    validity, these should to be compared to the maximum jet $p_T$ in
+    these events (dashed grey).}
   \label{fig:information_wbf_tautau_scales}
 \end{figure}
 
@@ -2101,12 +2100,13 @@ of the following standard observables:
 
 \begin{figure}
   \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_histos_contours}
-  \caption{Information from histograms compared to the full
-    information  (black) in the WBF $H \to \tau \tau$ channel, shown as contours
-    $\dlocal(\boldtheta ; \boldzero) = 1$. We include
-    $p_{T,j_1}$, $\Delta \phi_{jj}$, their naive combination assuming
-    no mutual information, and their two-dimensional histogram. The
-    $\theta_i$ not shown are set to zero.}
+  \caption{Information in distributions in the WBF $h \to \tau \tau$
+    channel, shown as contours $\dlocal(\boldtheta ; \boldzero) = 1$.
+    We show the total information in the full kinematics (black), the
+    information in the distributions of $p_{T,j_1}$ (red) and
+    $\Delta \phi_{jj}$ (blue), their naive combination assuming no
+    mutual information (green), and their two-dimensional histogram
+    (yellow). The $\theta_i$ not shown are set to zero.}
   \label{fig:information_wbf_tautau_histograms_contours}
 \end{figure}
 
@@ -2132,18 +2132,22 @@ blind directions arise.
 
 \begin{figure}
   \includegraphics[width=\textwidth]{fig/information/wbf_tautau_histos_comparison}
-  \caption{Total Fisher information for the WBF $h \to \tau \tau$
-    channel (`full'), Fisher information after the cuts in
-    \autoref{eq:information_wbf_tautau_wbfcuts}, and the information
-    in several distributions after this selection.  The top panel
-    shows the eigenvalues, the colours denote the composition of the
-    corresponding eigenvectors. The right axis translates the
-    eigenvalues into a new physics reach for the corresponding
-    combination of Wilson coefficients.  In the bottom panel we show
-    the determinants of the Fisher information restricted to
-    $\ope{\phi,2}$, $\ope{W}$, and $\ope{WW}$, normalised to the full
-    information. Again, the right axis translates them into a new
-    physics reach.}
+  \caption{Fisher information in different distributions in the WBF
+    $h \to \tau \tau$ channel, based on a tight kinematic selection.
+    We compare the total Fisher information based on the full
+    kinematics (`full'), the Fisher information after the cuts in
+    \autoref{eq:information_wbf_tautau_wbfcuts} (`WBF cuts'), the
+    rate-only information after these cuts (`xsec'), and the
+    information in several one-dimensional and two-dimensional
+    distributions after this selection. The top panel shows the
+    eigenvalues of these information matrices, the colours denote the
+    composition of the corresponding eigenvectors. The right axis
+    translates the eigenvalues into a new physics reach for the
+    corresponding combination of Wilson coefficients. In the bottom
+    panel we show the determinants of the three-dimensional Fisher
+    information restricted to $\ope{\phi,2}$, $\ope{W}$, and
+    $\ope{WW}$, normalised to the full information. Again, the right
+    axis translates them into a new physics reach.}
 \label{fig:information_wbf_tautau_histograms_comparison}
 \end{figure}
 
@@ -2193,12 +2197,17 @@ We then calculate the information in the same distributions as before.
 
 \begin{figure}
   \includegraphics[width=\textwidth]{fig/information/wbf_tautau_histos_comparison_likelihoodcut}
-  \caption{Total Fisher information for the WBF $h \to \tau \tau$
-    channel (`full'), information after the matrix-element-based WBF
-    cuts in \autoref{eq:information_wbf_tautau_likelihoodcuts}, and
-    the information in several distributions after this
-    selection. Except for the event selection, the plot is analogous
-    to \autoref{fig:information_wbf_tautau_histograms_comparison}.}
+  \caption{Fisher information in different distributions in the WBF
+    $h \to \tau \tau$ channel, based on a matrix-element-based
+    selection.  We compare the total Fisher information based on the
+    full kinematics (`full'), the Fisher information after the
+    multivariate event selection in
+    \autoref{eq:information_wbf_tautau_likelihoodcuts} (`WBF cuts'),
+    the rate-only information after this selection (`xsec'), and the
+    information in several one-dimensional and two-dimensional
+    distributions after this selection.  Except for the event
+    selection, the plot is analogous to
+    \autoref{fig:information_wbf_tautau_histograms_comparison}.}
 \label{fig:information_wbf_tautau_histograms_comparison_likelihoodcut}
 \end{figure}
 
@@ -2424,12 +2433,12 @@ by the $4 \ell$ system.
 
 \begin{figure}
   \includegraphics[width=0.49 \textwidth]{fig/information/wbf_4l_production_decay_fphi2_fww}
-  \caption{Information in the WBF $h \to 4\ell$ channel from including
-    dimension-six operators only in the production vertex (red), only in
-    the decay vertex (blue), and in both vertices (black). The information is
-    visualised as local contours
-    $\dlocal(\boldtheta ; \boldzero) = 1$. The $\theta_i$ not shown
-    are set to zero.}
+  \caption{Information in the WBF $h \to 4\ell$ channel separated into
+    production effects and decay effects. We show the contours
+    $\dlocal(\boldtheta ; \boldzero) = 1$ based on calculations where
+    dimension-six operators are taken into account only in the
+    production vertex (red), only in the decay vertex (blue), and in
+    both vertices (black).  The $\theta_i$ not shown are set to zero.}
 \label{fig:information_wbf_4l_production_decay}
 \end{figure}
 
@@ -2492,16 +2501,19 @@ overflow bins where applicable.
 
 \begin{figure}
   \includegraphics[width= \textwidth]{fig/information/wbf_4l_histos_comparison}
-  \caption{Total Fisher information for the WBF $h \to 4 \ell$ channel
-    (`full') compared to the information in several kinematic
-    distributions. The top panel shows the eigenvalues, the colours
+  \caption{Fisher information in different distributions in the WBF
+    $h \to 4\ell$ channel.  We compare the total Fisher information
+    based on the full kinematics (`full'), the information in the
+    total rate (`xsec'), and the information in several
+    one-dimensional and two-dimensional distributions. The top panel
+    shows the eigenvalues of these information matrices, the colours
     denote the composition of the corresponding eigenvectors. The
     right axis translates the eigenvalues into a new physics reach for
-    the corresponding combination of Wilson coefficients.  In the
-    bottom panel we show the determinants of the Fisher information
-    restricted to $\ope{\phi,2}$, $\ope{W}$, and $\ope{WW}$,
-    normalised to the full information. Again, the right axis
-    translates them into a new physics reach.}
+    the corresponding combination of Wilson coefficients. In the
+    bottom panel we show the determinants of the three-dimensional
+    Fisher information restricted to $\ope{\phi,2}$, $\ope{W}$, and
+    $\ope{WW}$, normalised to the full information. Again, the right
+    axis translates them into a new physics reach.}
 \label{fig:information_wbf_4l_histograms_comparison}
 \end{figure}
 
@@ -2668,10 +2680,10 @@ suppressed with an appropriate event selection~\cite{Kling:2012up}.
       \fmfv{decoration.shape=circle,foreground=(0.8,, 0.0,, 0.0),decoration.size=5}{v2,v4}
     \end{fmfgraph*}
   }
-  \caption{Feynman diagrams for Higgs production with a single top
-    quark with $h \to \gamma \gamma$ and a hadronic top decay. The red
-    dots show the Higgs interactions modified by the dimension-six
-    operators considered in our analysis.}
+  \caption{Feynman diagrams for $t$-channel Higgs plus single top
+    production with $h \to \gamma \gamma$ and a hadronic top
+    decay. The red dots show the Higgs interactions modified by the
+    dimension-six operators considered in our analysis.}
   \label{fig:information_th_diag}
 \end{figure}
 
@@ -2791,7 +2803,7 @@ limited, with some mixing between the two operators.
   production. We show global distances from the SM
   $d(\boldtheta,\boldzero)$, where in each panel the $\theta_i$ not
   shown are set to zero. The white contours show distances of
-  $d=1, 2, \dots , 5$.}
+  $d=1, 2, 3, 4, 5$.}
 
 Going beyond the local information geometry, we calculate global
 information distances in the model space and show them in
@@ -2829,8 +2841,9 @@ always be sensitive to the squared dimension-six terms.
     mass (left) and transverse momentum (right) of the diphoton
     system. We also show the normalised SM signal (solid black) and
     the single-top background (dotted grey) rates. The dashed blue
-    line shows the effect of $f_{t} \, v^2 / \Lambda^2 = 0.2$. In the
-    right panel, the last bin is an overflow bin.}
+    lines show the effect of
+    $f_{t} \, v^2 / \Lambda^2 = 0.2$. In the right panel, the last bin
+    is an overflow bin.}
   \label{fig:information_th_differential_information_photons}
 \end{figure}
 
@@ -2852,11 +2865,11 @@ of information.
   \caption{Distribution of the differential SM Fisher information in
     the Higgs plus single top channel (shaded red) with respect to the
     transverse momentum of the leading jet (top left), the invariant
-    mass of the whole $th$ system (top right), and the differences in
+    mass of the $th$ system (top right), and the differences in
     pseudorapidity and azimuthal angle between the diphoton system and
     the top decay products (bottom). We also show the normalised SM
     signal (solid black) and the single-top background (dotted grey)
-    rates. The dashed blue line shows the effect of
+    rates. The dashed blue lines show the effect of
     $f_{t} \, v^2 / \Lambda^2 = 0.2$. The last bins are overflow bins
     where applicable.}
   \label{fig:information_th_differential_information_jets}
@@ -2930,12 +2943,14 @@ following distributions:
 
 \begin{figure}
   \includegraphics[width=0.49 \textwidth]{fig/information/th_histos_contours}
-  \caption{Information from histograms compared to the full
-    information (black), shown as contours
-    $\dlocal(\boldtheta ; \boldzero) = 1$. We include
-    $p_{T,\gamma \gamma}$, $\Delta \eta_{\gamma\gamma, bjj}$, their naive combination assuming
-    no mutual information, and their two-dimensional histogram. The
-    $\theta_i$ not shown are set to zero.}
+  \caption{Information in distributions in the Higgs plus single top
+    channel, shown as contours $\dlocal(\boldtheta ; \boldzero) = 1$.
+    We show the total information in the full kinematics (black), the
+    information in the distributions of $p_{T,\gamma \gamma}$ (red)
+    and $\Delta \eta_{\gamma\gamma, bjj}$ (blue), their naive
+    combination assuming no mutual information (green), and their
+    two-dimensional histogram (yellow). The $\theta_i$ not shown are
+    set to zero.}
   \label{fig:information_th_histograms_contours}
 \end{figure}
 
@@ -2947,18 +2962,22 @@ Higgs and top systems is more sensitive to $\ope{t}$.
 
 \begin{figure}
   \includegraphics[width= \textwidth]{fig/information/th_histos_comparison}
-  \caption{Total Fisher information for the Higgs plus single top
-    channel (`full'), Fisher information after the $th$ cuts in
-    \autoref{eq:information_th_cuts}, and the information in several
-    distributions after this selection.  The top panel shows the
-    eigenvalues, the colours denote the composition of the
-    corresponding eigenvectors. The right axis translates the
-    eigenvalues into a new physics reach for the corresponding
-    combination of Wilson coefficients.  In the bottom panel we show
-    the determinants of the Fisher information restricted to
-    $\ope{\phi,2}$, $\ope{W}$, and $\ope{t}$, normalised to the full
-    information. Again, the right axis translates them into a new
-    physics reach.}
+  \caption{Fisher information in different distributions for the Higgs
+    plus single top channel.
+    We compare the total Fisher information based on the full
+    kinematics (`full'), the Fisher information after the cuts in
+    \autoref{eq:information_th_cuts} (`$th$ cuts'), the
+    rate-only information after these cuts (`xsec'), and the
+    information in several one-dimensional and two-dimensional
+    distributions after this selection. The top panel shows the
+    eigenvalues of these information matrices, the colours denote the
+    composition of the corresponding eigenvectors. The right axis
+    translates the eigenvalues into a new physics reach for the
+    corresponding combination of Wilson coefficients. In the bottom
+    panel we show the determinants of the three-dimensional Fisher
+    information restricted to $\ope{\phi,2}$, $\ope{W}$, and $\ope{t}$,
+    normalised to the full information. Again, the right
+    axis translates them into a new physics reach.}
 \label{fig:information_th_histograms_comparison}
 \end{figure}
 
@@ -3054,13 +3073,15 @@ uncertainties.
 \begin{figure}
   \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_systematics_nuisance.pdf}%
   \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_systematics_profiled.pdf}%
-  \caption{Effects of Gaussian uncertainties of $5\%$ and $10\%$ on
-    the total signal rate. In the left panel we show the expected
-    error ellipse $\dlocal( (\theta,\nu) ; \boldzero) = 1$ in the
-    plane spanned by a physical parameter $\theta$ and the nuisance
-    parameter $\nu$ rescaling the signal rate. In the right panel we
-    show the error ellipses in the $\ope{W}$-$\ope{\phi,2}$ plane
-    after profiling over this systematic uncertainty.}
+  \caption{Error ellipses in the presence of nuisance parameters. We
+    consider Gaussian uncertainties of $5\%$ and $10\%$ on the total
+    signal rate in the WBF $h \to \tau \tau$ channel. Left: contour
+    $\dlocal( (\theta,\nu) ; (0, 1)) = 1$ in the plane spanned by a
+    physical parameter $\theta$ and the nuisance parameter $\nu$
+    rescaling the signal rate. Right: contour
+    $d_{\text{profiled}} ( \boldtheta ; \boldzero) = 1$ after
+    profiling over this systematic uncertainty. The $\theta_i$ not
+    shown are set to zero.}
   \label{fig:information_wbf_tautau_systematics}
 \end{figure}
 
@@ -3080,19 +3101,22 @@ physics reach in the $\ope{\phi,2}$ direction is reduced by 800~GeV.
 
 \begin{figure}
   \includegraphics[width= \textwidth]{fig/information/wbf_tautau_histos_comparison_systematics.pdf}
-  \caption{Fisher information for the WBF $h \to \tau \tau$ channel
-    profiled over a $10\%$ signal rate uncertainty. We compare the
-    total Fisher information, the information after the cuts in
-    \autoref{eq:information_wbf_tautau_wbfcuts}, and the information
-    in several distributions after this selection.  The top panel
-    shows the eigenvalues, the colours denote the composition of the
-    corresponding eigenvectors. The right axis translates the
-    eigenvalues into a new physics reach for the corresponding
-    combination of Wilson coefficients.  In the bottom panel we show
-    the determinants of the Fisher information restricted to
-    $\ope{\phi,2}$, $\ope{W}$, and $\ope{WW}$, normalised to the full
-    information. Again, the right axis translates them into a new
-    physics reach.}
+  \caption{Fisher information in different distributions in the WBF
+    $h \to \tau \tau$ channel profiled over a $10\%$ signal rate uncertainty.
+    We compare the total Fisher information based on the full
+    kinematics (`full'), the Fisher information after the cuts in
+    \autoref{eq:information_wbf_tautau_wbfcuts} (`WBF cuts'), the
+    rate-only information after these cuts (`xsec'), and the
+    information in several one-dimensional and two-dimensional
+    distributions after this selection. The top panel shows the
+    eigenvalues of these information matrices, the colours denote the
+    composition of the corresponding eigenvectors. The right axis
+    translates the eigenvalues into a new physics reach for the
+    corresponding combination of Wilson coefficients. In the bottom
+    panel we show the determinants of the three-dimensional Fisher
+    information restricted to $\ope{\phi,2}$, $\ope{W}$, and
+    $\ope{WW}$, normalised to the full information. Again, the right
+    axis translates them into a new physics reach.}
   \label{fig:information_wbf_tautau_systematics_comparison}
 \end{figure}
 
@@ -3162,23 +3186,25 @@ the $\tau \tau$ mode as described in
 $\boldtheta$ in the $\ope{W}$-$\ope{WW}$ plane. For each of these
 points we calculate the local and global distance from the SM point
 defined by the Fisher information, as well as the expected
-log-likelihood ratio
+log likelihood ratio
 %
-\begin{align}
+\begin{equation}
   q(\boldtheta_b , \boldtheta_a )
   \equiv -2 \, E \left[
   \log \frac { f(\mathbf{x}|\boldtheta_b) }   { f(\mathbf{x} |\boldtheta_a) }
   \middle | \boldtheta_a \right] \,.
-\end{align}
+  \label{eq:information_expected_log_likelihood_ratio}
+\end{equation}
 
 \begin{figure}
   \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_local_distance_vs_llr}%
   \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_distance_vs_llr}%
   \caption{Comparison of the local (left) and global (right) distances
-    defined by the Fisher information with the expected local
-    likelihood ratio. We use WBF Higgs production in the $\tau \tau$
-    mode and sample parameter points in the $\ope{W}$-$\ope{WW}$
-    plane.}
+    defined by the Fisher information with the expected log likelihood
+    ratio defined in
+    \autoref{eq:information_expected_log_likelihood_ratio}. We use WBF
+    Higgs production in the $h \to \tau \tau$ channel and sample parameter
+    points in the $\ope{W}$-$\ope{WW}$ plane.}
   \label{fig:information_wbf_tautau_llr}
 \end{figure}
 
@@ -3228,11 +3254,11 @@ for information distances~\cite{carter2008}.
 
 \begin{figure}
   \includegraphics[width=0.49 \textwidth]{fig/information/wbf_tautau_ambient}
-  \caption{Comparison of the distance according to the ambient Fisher
-    geometry, defined in \autoref{eq:information_ambient_distance}, to
-    the distance defined by the usual Fisher information on the theory
-    space. We use WBF Higgs production in the $\tau \tau$ mode and
-    sample parameter points in the $\ope{W}$-$\ope{WW}$ plane.}
+  \caption{Comparison of the usual global distance defined by the
+    Fisher information with the distance defined by the ambient Fisher
+    information, see \autoref{eq:information_ambient_distance}. We use
+    WBF Higgs production in the $h \to \tau \tau$ channel and sample parameter
+    points in the $\ope{W}$-$\ope{WW}$ plane.}
   \label{fig:information_wbf_tautau_ambient}
 \end{figure}
 

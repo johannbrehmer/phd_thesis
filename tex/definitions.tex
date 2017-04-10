@@ -130,7 +130,7 @@
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 
 % includegraphics with default dummy
-\newcommand{\includegraphicsdummy}[2][{}]{\IfFileExists{#2}{\includegraphics[#1]{#2}}{\includegraphics[#1]{fig/general/dummy.pdf}}}
+%\newcommand{\includegraphicsdummy}[2][{}]{\IfFileExists{#2}{\includegraphics[#1]{#2}}{\includegraphics[#1]{fig/general/dummy.pdf}}}
 
 % Math operators
 \DeclareMathOperator{\tr}{tr}
@@ -165,25 +165,25 @@
 \newcommand{\wbfpyramid}[3]{%
 \begin{figure}
 %trimming options: L B R T
-  \includegraphicsdummy[height=0.225 \textwidth,clip=true,trim=0 1.9cm 2.48cm 0]{fig/information/#1_fw_fb.pdf}\,%
-  \phantom{\includegraphicsdummy[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_fww_fw.pdf}}\,%
-  \phantom{\includegraphicsdummy[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_fww_fw.pdf}}\,%
-  \phantom{\includegraphicsdummy[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 0 0]{fig/information/#1_fww_fw.pdf}}\\%
+  \includegraphics[height=0.225 \textwidth,clip=true,trim=0 1.9cm 2.48cm 0]{fig/information/#1_fw_fb.pdf}\,%
+  \phantom{\includegraphics[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_fww_fw.pdf}}\,%
+  \phantom{\includegraphics[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_fww_fw.pdf}}\,%
+  \phantom{\includegraphics[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 0 0]{fig/information/#1_fww_fw.pdf}}\\%
 %
-  \includegraphicsdummy[height=0.225 \textwidth,clip=true,trim=0 1.9cm 2.48cm 0]{fig/information/#1_fbb_fb.pdf}\,%
-  \includegraphicsdummy[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_fbb_fw.pdf}\,%
-  \phantom{\includegraphicsdummy[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_fww_fw.pdf}}\,%
-  \phantom{\includegraphicsdummy[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 0 0]{fig/information/#1_fww_fw.pdf}}\\%
+  \includegraphics[height=0.225 \textwidth,clip=true,trim=0 1.9cm 2.48cm 0]{fig/information/#1_fbb_fb.pdf}\,%
+  \includegraphics[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_fbb_fw.pdf}\,%
+  \phantom{\includegraphics[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_fww_fw.pdf}}\,%
+  \phantom{\includegraphics[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 0 0]{fig/information/#1_fww_fw.pdf}}\\%
 %
-  \includegraphicsdummy[height=0.225 \textwidth,clip=true,trim=0 1.9cm 2.48cm 0]{fig/information/#1_fww_fb.pdf}\,%
-  \includegraphicsdummy[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_fww_fw.pdf}\,%
-  \includegraphicsdummy[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_fww_fbb.pdf}\,%
-  \phantom{\includegraphicsdummy[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 0 0]{fig/information/#1_fww_fw.pdf}}\\%
+  \includegraphics[height=0.225 \textwidth,clip=true,trim=0 1.9cm 2.48cm 0]{fig/information/#1_fww_fb.pdf}\,%
+  \includegraphics[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_fww_fw.pdf}\,%
+  \includegraphics[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_fww_fbb.pdf}\,%
+  \phantom{\includegraphics[height=0.225 \textwidth,clip=true,trim=1.9cm 1.9cm 0 0]{fig/information/#1_fww_fw.pdf}}\\%
 %
-  \includegraphicsdummy[height=0.27 \textwidth,clip=true,trim=0 0 2.48cm 0]{fig/information/#1_fphi2_fb.pdf}\,%
-  \includegraphicsdummy[height=0.27 \textwidth,clip=true,trim=1.9cm 0 2.48cm 0]{fig/information/#1_fphi2_fw.pdf}\,%
-  \includegraphicsdummy[height=0.27 \textwidth,clip=true,trim=1.9cm 0  2.48cm 0]{fig/information/#1_fphi2_fbb.pdf}\,%
-  \includegraphicsdummy[height=0.27 \textwidth,clip=true,trim=1.9cm 0  0 0]{fig/information/#1_fphi2_fww.pdf}%
+  \includegraphics[height=0.27 \textwidth,clip=true,trim=0 0 2.48cm 0]{fig/information/#1_fphi2_fb.pdf}\,%
+  \includegraphics[height=0.27 \textwidth,clip=true,trim=1.9cm 0 2.48cm 0]{fig/information/#1_fphi2_fw.pdf}\,%
+  \includegraphics[height=0.27 \textwidth,clip=true,trim=1.9cm 0  2.48cm 0]{fig/information/#1_fphi2_fbb.pdf}\,%
+  \includegraphics[height=0.27 \textwidth,clip=true,trim=1.9cm 0  0 0]{fig/information/#1_fphi2_fww.pdf}%
   \caption{#3}
   \label{#2}
 \end{figure}
@@ -192,17 +192,17 @@
 \newcommand{\thpyramid}[3]{%
 \begin{figure}
 %trimming options: L B R T
-  \includegraphicsdummy[height=0.3 \textwidth,clip=true,trim=0 1.9cm 2.48cm 0]{fig/information/#1_fww_fw.pdf}\,%
-  \phantom{\includegraphicsdummy[height=0.3  \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_fww_fw.pdf}}\,%
-  \phantom{\includegraphicsdummy[height=0.3  \textwidth,clip=true,trim=1.9cm 1.9cm 0 0]{fig/information/#1_fww_fw.pdf}}\\%
+  \includegraphics[height=0.3 \textwidth,clip=true,trim=0 1.9cm 2.48cm 0]{fig/information/#1_fww_fw.pdf}\,%
+  \phantom{\includegraphics[height=0.3  \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_fww_fw.pdf}}\,%
+  \phantom{\includegraphics[height=0.3  \textwidth,clip=true,trim=1.9cm 1.9cm 0 0]{fig/information/#1_fww_fw.pdf}}\\%
 %
-  \includegraphicsdummy[height=0.3 \textwidth,clip=true,trim=0 1.9cm 2.48cm 0]{fig/information/#1_ft_fw.pdf}\,%
-  \includegraphicsdummy[height=0.3 \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_ft_fww.pdf}\,%
-  \phantom{\includegraphicsdummy[height=0.3 \textwidth,clip=true,trim=1.9cm 1.9cm 0 0]{fig/information/#1_fww_fw.pdf}}\\%
+  \includegraphics[height=0.3 \textwidth,clip=true,trim=0 1.9cm 2.48cm 0]{fig/information/#1_ft_fw.pdf}\,%
+  \includegraphics[height=0.3 \textwidth,clip=true,trim=1.9cm 1.9cm 2.48cm 0]{fig/information/#1_ft_fww.pdf}\,%
+  \phantom{\includegraphics[height=0.3 \textwidth,clip=true,trim=1.9cm 1.9cm 0 0]{fig/information/#1_fww_fw.pdf}}\\%
 %
-  \includegraphicsdummy[height=0.36 \textwidth,clip=true,trim=0 0 2.48cm 0]{fig/information/#1_fphi2_fw.pdf}\,%
-  \includegraphicsdummy[height=0.36 \textwidth,clip=true,trim=1.9cm 0 2.48cm 0]{fig/information/#1_fphi2_fww.pdf}\,%
-  \includegraphicsdummy[height=0.36 \textwidth,clip=true,trim=1.9cm 0 0 0]{fig/information/#1_fphi2_ft.pdf}%
+  \includegraphics[height=0.36 \textwidth,clip=true,trim=0 0 2.48cm 0]{fig/information/#1_fphi2_fw.pdf}\,%
+  \includegraphics[height=0.36 \textwidth,clip=true,trim=1.9cm 0 2.48cm 0]{fig/information/#1_fphi2_fww.pdf}\,%
+  \includegraphics[height=0.36 \textwidth,clip=true,trim=1.9cm 0 0 0]{fig/information/#1_fphi2_ft.pdf}%
   \caption{#3}
   \label{#2}
 \end{figure}
