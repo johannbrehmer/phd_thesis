@@ -190,7 +190,7 @@ with weak mixing angle (or Weinberg angle)
 and masses
 %
 \begin{equation}
-  m_W = \frac {gv} 2  \, ,  \quad  m_Z = \frac {gv} {2 c_W} \, .
+  m_W = \frac {gv} 2  \qquad \text{and} \qquad m_Z = \frac {gv} {2 c_W} \, .
 \end{equation}
 %
 The remaining degree of freedom from $\phi$ is the physical Higgs
@@ -566,13 +566,13 @@ regularisation, the first part does not give us any higher-dimensional
 operators of the light fields $\phi$. Expanding the logarithm in the
 second term, we find
 %
-\begin{equation}
+\begin{multline}
   \seff \supset \frac {\im \lambda_2} 4  \tr \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2
-  - \frac {\im \lambda_2^2} 8  \tr \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2 \right)^2
+  - \frac {\im \lambda_2^2} 8  \tr \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2 \right)^2 \\
   + \frac {\im \lambda_2^3} {12}  \tr \left( \frac {1} {\partial^2 + M^2 - \im \varepsilon} \phi^2\right)^3 
   + \ord{\lambda_2^4} \,.
   \label{eq:foundations_scalar_example_effective_action_powers}
-\end{equation}
+\end{multline}
 %
 The first of these terms renormalises the $\phi$ mass term, and the
 second contributes to the $\phi^4$ interaction. This is important for
@@ -610,7 +610,7 @@ the integration variables, we get
           \intfourx \!\! \intfoury \!\! \intfourz \!\!
           \intfourk \!\! \intfourp \!\! \intfourq
           \frac {1} {-k^2 + M^2 - \im \varepsilon} e^{\im k x}  \phi(x)^2 e^{-\im p x} \notag \\
-  &\phantom{\supset} \qquad
+  &\phantom{\supset} \qqquad
     \times \frac {1} {-p^2 + M^2 - \im \varepsilon} e^{\im p y}  \phi(y)^2 e^{-\im q y}  \;
     \frac {1} {-q^2 + M^2 - \im \varepsilon} e^{\im q z}  \phi(z)^2 e^{-\im k z} \notag \\
   %
@@ -790,12 +790,12 @@ these publications.  It is based on the Lagrangian
     + \frac {c_T}{2v^2} \, \opesilh{T}
     - \frac {c_6\lambda}{v^2} \opesilh{6} \notag \\
   %
-  &+ \frac{\im gc_W}{2m^2_W} \, \opesilh{W}
+  &\phantom{{}={}} + \frac{\im gc_W}{2m^2_W} \, \opesilh{W}
     + \frac{\im g'c_B}{2m_W^2} \, \opesilh{B} 
     + \frac{\im g \, c_{HW}}{m_W^2} \, \opesilh{HW}
     + \frac{\im g'c_{HB}}{m_W^2} \, \opesilh{HB} \notag \\
   %
-  &+ \frac{g'^2 c_\gamma}{m_W^2} \, \opesilh{\gamma}
+  &\phantom{{}={}} + \frac{g'^2 c_\gamma}{m_W^2} \, \opesilh{\gamma}
     + \frac{g_s^2 c_g}{m_W^2} \, \opesilh{g} 
     - \sum_f \frac{c_f}{v^2} \, y_f \, \opesilh{f}
 \end{align}
@@ -1330,15 +1330,15 @@ Equations~\eqref{eq:validity_2hdm_higgs_vector_coupling} to
 \eqref{eq:validity_2hdm_last_coupling}. The light Higgs
 coupling to a charged Higgs pair reads
 %
-\begin{align}
+\begin{multline}
    \frac {g_{h^0{H^+}{H^{-}}}}{g^\text{SM}_{hhh}}
   = \frac{1}{3 m_{h^0}^2}
-  \left[ 
-  \sin (\beta - \alpha) \left( 2 m_{H^\pm}^2 - m_{h^0}^2 \right)
+  \Biggl[ 
+  \sin (\beta - \alpha) \left( 2 m_{H^\pm}^2 - m_{h^0}^2 \right) \\
   + \frac {\cos (\alpha + \beta)} {\sin (2\beta)}
   \left(2m_{h^0}^2 - \frac {2 m_{12}^2}{\sin \beta \cos \beta} \right)
-  \right] \, ,
-\end{align}
+  \Biggr] \, ,
+\end{multline}
 %
 with $g^\text{SM}_{hhh} = -3 m_h^2/v$.
 

@@ -483,7 +483,7 @@ sum\footnote{The argument is slightly more complicated if additional
 \begin{equation}
   \lgr{$v$-improved dim-6} = \lgr{SM}
   + \sum_i
-  \underbrace{  \frac 1 {\Lambda^2} \left[  \sum_{n=0}^\infty f_i^{(6+2n)}  \left( \frac {v^2} {2\Lambda^{2}} \right)^n \right] }_{(f_i^{(6)} / \Lambda^2)_{\text{$v$-improved}}}
+  \underbrace{  \frac 1 {\Lambda^2} \left[  \sum_{n=0}^\infty f_i^{(6+2n)}  \left( \frac {v^2} {2\Lambda^{2}} \right)^n \right] }_{\displaystyle (f_i^{(6)} / \Lambda^2)_{\text{$v$-improved}}}
   \ope{i}^{(6)} \,.
   \label{eq:validity_v-improvement_resummation}
 \end{equation}
@@ -787,7 +787,7 @@ cuts. We also consider WBF production with a decay
 \begin{equation}
   u d
   \to W^+ W^- \, u d
-  \to (\ell^+ \nu) \, (\ell^- \bar{\nu}) \, u d \,,
+  \to (\ell^+ \nu) \, (\ell^- \overbar{\nu}) \, u d \,,
 \end{equation}
 %
 where we require typical WBF cuts\footnote{For a definition of
@@ -822,7 +822,8 @@ tail of the distribution of the transverse mass
 with
 %
 \begin{equation}
-  E_{T,\ell \ell } = \sqrt{\mathbf{p}_{T,\ell \ell }^2 + m_{\ell \ell}^2} \,, \quad
+  E_{T,\ell \ell } = \sqrt{\mathbf{p}_{T,\ell \ell }^2 + m_{\ell \ell}^2}
+  \qquad \text{and} \qquad
   E_{T,\nu \nu } = \sqrt{\met^2 + m_{\ell \ell }^2} \,.
 \end{equation} 
 
@@ -835,7 +836,7 @@ Higgs-strahlung,
 %
 with $V = W^\pm, Z$. We do not simulate the Higgs and gauge boson
 decays, assuming that we can always reconstruct for example the full
-$Zh \to \ell^+ \ell^- \, b \bar{b}$ final state. No cuts are applied.
+$Zh \to \ell^+ \ell^- \, b \overbar{b}$ final state. No cuts are applied.
 
 Finally, Higgs pair production,
 %
@@ -1294,7 +1295,7 @@ in the lower left panel of
 \autoref{fig:validity_singlet_distributions}, where we show the
 distribution of the transverse mass defined in
 Equation\,\eqref{eq:validity_mT} in the process
-$ u d \to W^+ W^- \, ud \to (\ell^+ \nu) \, (\ell^- \bar{\nu}) \, ud$,
+$ u d \to W^+ W^- \, ud \to (\ell^+ \nu) \, (\ell^- \overbar{\nu}) \, ud$,
 to which WBF production of both $h$ and $H$ contributes.  We observe
 that the dimension-six model predicts a slightly higher rate at large
 $m_T$ than both the full singlet model and the SM. Given the very mild
@@ -1430,7 +1431,7 @@ mixing angles $\alpha$ and $\beta$ as
 %
 \begin{equation}
   \Delta_V = \sin (\beta - \alpha) - 1
-  = - \frac{\cos^2 \! (\beta - \alpha)}{2} + \ord{\cos^4 \! (\beta - \alpha)} \,.
+  = - \frac{\cos^2 (\beta - \alpha)}{2} + \ord{\cos^4 (\beta - \alpha)} \,.
   \label{eq:validity_2hdm_higgs_vector_coupling}
 \end{equation}
 %
@@ -1438,7 +1439,7 @@ We can insert the leading contribution of a mass-degenerate heavy
 Higgs sector and find~\cite{Lopez-Val:2013yba}
 %
 \begin{equation}
-  \Delta_V \approx \frac{\sin^2 \! (2\beta)}{8} \, \left(\frac{v}{m_{A^0}} \right)^4 \,.
+  \Delta_V \approx \frac{\sin^2  (2\beta)}{8} \, \left(\frac{v}{m_{A^0}} \right)^4 \,.
   \label{eq:validity_2hdm_decoup}
 \end{equation}
 %
@@ -2369,10 +2370,10 @@ Reference~\cite{Pappadopulo:2014qza}, the Lagrangian then reads
   + \im \frac {g_V} 2 \, c_H \, V_{\mu}^a
   \left[\phi^\dagger \sigma^a \overleftrightarrow{D}^\mu \phi \right]
   +\frac {g_W^2} {2{g_V}} \, V_{\mu}^a \,
-  \sum_f c_F \, \bar{f}_L \gamma^\mu \sigma^a f_L \notag \\
+  \sum_f c_F \, \overbar{f}_L \gamma^\mu \sigma^a f_L \notag \\
   % 
   &\phantom{{}\supset{}}
-    + g_V^2 \, c_{VVHH} \, V_{\mu}^a V^{\mu a} \phisq \notag \\
+    + g_V^2 \, c_{VVHH} \, V_{\mu}^a V^{\mu \, a} \phisq \notag \\
   %
   &\phantom{{}\supset{}}
   + \frac {g_V} 2 \, c_{VVV} \,\varepsilon_{abc} \, V_\mu^a \, V_\nu^b \, D^{[\mu}V^{\nu]c}
@@ -3110,10 +3111,10 @@ element. In our EFT approach, we have
   =
   \underbrace{ |\mat{$4$}^{\vphantom{*}} |^2 }_{\ord{1}}
   + \underbrace{
-    2 \, \Real \mat{$4$}^* \mat{$6$}^{\vphantom{*}}
+    2 \, \Real \, \mat{$4$}^* \mat{$6$}^{\vphantom{*}}
   }_{\ord{1/\Lambda^2}}
   + \underbrace{
-    |\mat{$6$}^{\vphantom{*}}|^2 + 2 \, \Real \mat{$4$}^* \mat{$8$}^{\vphantom{*}}
+    |\mat{$6$}^{\vphantom{*}}|^2 + 2 \, \Real \, \mat{$4$}^* \mat{$8$}^{\vphantom{*}}
 }_{\ord{1/\Lambda^4}}
 + \ord{1/\Lambda^6} \,,
 \end{equation}
@@ -3141,7 +3142,7 @@ have to compare the terms
   %
   \quad \text{vs.} \quad
   %
-  2 \, \text{Re} \mat{$4$}^* \mat{$8$}^{\vphantom{*}} \sim \frac {g_{\text{SM}}^2 g_{\text{UV}}^2} {\Lambda^4} \,,
+  2 \, \Real \, \mat{$4$}^* \mat{$8$}^{\vphantom{*}} \sim \frac {g_{\text{SM}}^2 \, g_{\text{UV}}^2} {\Lambda^4} \,,
   \label{eq:validity_square_uv}
 \end{equation}
 %

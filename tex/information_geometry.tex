@@ -1348,7 +1348,7 @@ space, after selection cuts, or differentially in kinematic variables.
 % value is equal to its true value,
 % %
 % \begin{align}
-%   \bar{g}_i 
+%   \overbar{g}_i 
 %   \equiv E \left[ \hat{\theta}_i \middle | \boldtheta \right] = g_i \,.
 % \end{align}
 % %
@@ -1357,7 +1357,7 @@ space, after selection cuts, or differentially in kinematic variables.
 % %
 % \begin{align}
 %   C_{ij}(\boldtheta)
-%   \equiv E \left[ (\hat{\theta}_i-\bar{g}_i) (\hat{\theta}_j-\bar{g}_j)  \middle | \boldtheta \right] \,,
+%   \equiv E \left[ (\hat{\theta}_i-\overbar{g}_i) (\hat{\theta}_j-\overbar{g}_j)  \middle | \boldtheta \right] \,,
 %   \label{eq:information_def_cov}
 % \end{align}
 % %
@@ -1582,7 +1582,7 @@ fusion with $h \to \tau \tau$.
       \fmfleft{i2,i1}
       \fmfright{o4,o3,o2,o1}
       \fmflabel{\small $q$}{i1}
-      \fmflabel{\small $\bar{q}$}{i2}
+      \fmflabel{\small $\overbar{q}$}{i2}
       \fmflabel{\small $g$}{o1}
       \fmflabel{\small $\tau^+$}{o2}
       \fmflabel{\small $\tau^-$}{o3}
@@ -1620,9 +1620,9 @@ Reference~\cite{Aad:2015vsa} and are described in
 effects are included. We require only loose acceptance cuts
 %
 \begin{align}
-  p_{T,j} &> 20 \ \gev   &  |\eta_{j}| &< 5.0   &  
-  \Delta \eta_{jj} &> 2.0  \notag \\ 
-  p_{T,\tau} &> 10 \ \gev   &  |\eta_{\tau}| &< 2.5 \, ,
+  p_{T,j} &> 20 \ \gev \,,  &  |\eta_{j}| &< 5.0 \,, &  
+  \Delta \eta_{jj} &> 2.0 \,, \notag \\ 
+  p_{T,\tau} &> 10 \ \gev \,, &  |\eta_{\tau}| &< 2.5 \,,
   \label{eq:information_wbf_tautau_acceptance_cuts}
 \end{align}
 %
@@ -1912,7 +1912,7 @@ consider traditional WBF cuts
 \begin{equation}
   105~\gev < m_{\tau \tau} < 165~\gev  \,, \quad
   p_{T,j_1} > 50~\gev \,, \quad
-  \Delta \eta_{jj} > \Delta \eta_{jj}^{\text{min}}
+  \Delta \eta_{jj} > \Delta \eta_{jj}^{\text{min}} \,,
   \quad \text{and} \quad
   m_{jj} > m_{jj}^{\text{min}} \,.
 \end{equation}
@@ -2303,11 +2303,11 @@ we restrict our initial study to the parton level and leading order.
 
 Requiring only minimal acceptance cuts
 %
-\begin{align}
-  p_{T,j} &> 20 \ \gev \,,  &  |\eta_{j}| &< 5.0 \,, \notag \\ 
-  p_{T,\ell} &> 10 \ \gev \,, &  |\eta_{\ell}| &< 2.5 \, ,
+\begin{equation}
+  p_{T,j} > 20 \ \gev \,, \quad  |\eta_{j}| < 5.0 \,, \quad
+  p_{T,\ell} > 10 \ \gev \,, \quad \text{and} \quad  |\eta_{\ell}| < 2.5 \,,
   \label{eq:information_wbf_4l_acceptance_cuts}
-\end{align}
+\end{equation}
 %
 we calculate the Fisher information for $pp$ collision at
 $\sqrt{s} = 13~\tev$. We now assume an increased integrated luminosity
@@ -2599,7 +2599,7 @@ structure. We stick to a parton-level analysis at leading order in the
 five-flavor scheme. For our toy example we include only one of the
 dominant backgrounds, single top production with two photons, and in
 particular ignore the multi-jet background. The subleading
-$t\bar{t} \, \gamma\gamma$ background populates qualitatively
+$t\overbar{t} \, \gamma\gamma$ background populates qualitatively
 different phase-space regions from the single-top signal and can be
 suppressed with an appropriate event selection~\cite{Kling:2012up}.
 
@@ -2694,13 +2694,13 @@ smearing function of Reference~\cite{Kling:2016lay} described in
 other detector effects. Our basic event selection requires
 %
 \begin{align}
-  p_{T,j} &> 20 \ \gev  & 
-  |\eta_{j}| &< 5.0  & 
-  \Delta R_{jj} &> 0.4  & 
-  152 \ \gev &<m_{bjj} < 192 \ \gev \notag \\ 
-  p_{T,\gamma} &> 10 \ \gev  & 
-  |\eta_{\gamma}| &< 2.5  &  
-  \Delta R_{\gamma j} , \Delta R_{\gamma \gamma} &> 0.4  & 
+  p_{T,j} &> 20 \ \gev \,, & 
+  |\eta_{j}| &< 5.0  \,, & 
+  \Delta R_{jj} &> 0.4  \,, & 
+  152 \ \gev &<m_{bjj} < 192 \ \gev \,, \notag \\ 
+  p_{T,\gamma} &> 10 \ \gev  \,, & 
+  |\eta_{\gamma}| &< 2.5  \,, &  
+  \Delta R_{\gamma j} , \Delta R_{\gamma \gamma} &> 0.4  \,, & 
   120 \ \gev &<m_{\gamma \gamma} < 130 \ \gev \,,
   \label{eq:information_th_acceptance_cuts}
 \end{align}
@@ -2882,11 +2882,14 @@ of information.
 \subsubsection*{Information in distributions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The next question is again how much of this maximal information is contained in various kinematic distributions. A histogram-based analysis requires a reasonable signal-to-background ratio, so we require
+The next question is again how much of this maximal information is
+contained in various kinematic distributions. A histogram-based
+analysis requires a reasonable signal-to-background ratio, so we
+require
 %
 \begin{equation}
-  p_{T,j_1} > 50~\gev \qquad 
-  p_{T,\gamma} > 50,~30~\gev \qquad
+  p_{T,j_1} > 50~\gev \,, \quad 
+  p_{T,\gamma} > 50,~30~\gev \,, \quad \text{and} \quad
   122~\gev < m_{\gamma \gamma} < 128~\gev \,.
   \label{eq:information_th_cuts}
 \end{equation}
@@ -3160,15 +3163,18 @@ We consider the expected log likelihood ratio
   \middle | \boldtheta_a \right] \,.
 \end{equation}
 %
-For the extended likelihood ansatz of \autoref{eq:information_extended_likelihood}, a brief calculation gives the likelihood ratio as
+For the extended likelihood ansatz of
+\autoref{eq:information_extended_likelihood}, a brief calculation
+gives the likelihood ratio as
 %
-\begin{equation}
-  q(\boldtheta_b , \boldtheta_a ) = -2 \, \sigma(\boldtheta_a) L \left( 1 - \frac {\sigma(\boldtheta_b)} {\sigma(\boldtheta_a)} + \log  \frac {\sigma(\boldtheta_b)} {\sigma(\boldtheta_a)} \right)
+\begin{multline}
+  q(\boldtheta_b , \boldtheta_a ) = -2 \, \sigma(\boldtheta_a) L
+  \left( 1 - \frac {\sigma(\boldtheta_b)} {\sigma(\boldtheta_a)} + \log  \frac {\sigma(\boldtheta_b)} {\sigma(\boldtheta_a)} \right) \\
    -2 \,  \sigma(\boldtheta_a) L \;
     E \left[
     \log \frac { f^{(1)} (x|\boldtheta_b) }     { f^{(1)} (x|\boldtheta_a) }
     \middle | \boldtheta_a \right] \,.
-\end{equation} 
+\end{multline} 
 %
 This can be calculated with Monte-Carlo integration as given in
 \autoref{eq:information_monte_carlo_integration}, finally leading to
@@ -3176,7 +3182,8 @@ This can be calculated with Monte-Carlo integration as given in
 \begin{equation}
   q(\boldtheta_b , \boldtheta_a ) = -2 \,  L \; \sum_{\text{events}} \;
   \Delta \sigma (\boldtheta_a)  \;
-  \log \frac {\Delta \sigma (\boldtheta_b) } { \Delta \sigma (\boldtheta_a) } \,.
+  \log \frac {\Delta \sigma (\boldtheta_b) } { \Delta \sigma (\boldtheta_a) } \,. 
+  \label{eq:information_expected_log_likelihood_ratio}
 \end{equation}
 
 With this result we can compare the log likelihood ratio to the
@@ -3185,16 +3192,8 @@ the $\tau \tau$ mode as described in
 \autoref{sec:information_wbf_tautau}, we sample parameter points
 $\boldtheta$ in the $\ope{W}$-$\ope{WW}$ plane. For each of these
 points we calculate the local and global distance from the SM point
-defined by the Fisher information, as well as the expected
-log likelihood ratio
-%
-\begin{equation}
-  q(\boldtheta_b , \boldtheta_a )
-  \equiv -2 \, E \left[
-  \log \frac { f(\mathbf{x}|\boldtheta_b) }   { f(\mathbf{x} |\boldtheta_a) }
-  \middle | \boldtheta_a \right] \,.
-  \label{eq:information_expected_log_likelihood_ratio}
-\end{equation}
+defined by the Fisher information, as well as the expected log
+likelihood ratio.
 
 \begin{figure}
   \includegraphics[width=0.49 \textwidth,clip=true,trim=0.0cm 0.6cm 0 0.0cm]{fig/information/wbf_tautau_local_distance_vs_llr}%

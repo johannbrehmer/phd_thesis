@@ -50,10 +50,10 @@ In the Standard Model, the Higgs boson is part of a scalar $SU(2)_L$
 doublet $\phi$. The relevant terms in the Lagrangian are
 %
 \begin{multline}
-  \lgr{SM} \supset (D^\mu \phi)^\dagger (D_\mu \phi) - \mu^2 \phisq - \lambda (\phisq)^2 \\
-            - \sum_{\text{generations}} \left(    y_u {\twovec {\overbar u} {\overbar d}}_L \tilde \phi \, u_{R} 
-                                                           + y_d {\twovec {\overbar u} {\overbar d}}_L \phi \, d_{R}
-                                                           + y_\ell {\twovec {\overbar \nu} {\overbar \ell^-}}_L \phi \, \ell_{R}  + \hc \right ) \,.
+  \lgr{SM} \supset (D^\mu \phi)^\dagger (D_\mu \phi) - \mu^2 \, \phisq - \lambda \, (\phisq)^2 \\
+            - \sum_{\text{generations}} \left(    y_u \, {\twovec {\overbar u} {\overbar d}}_L \tilde \phi \, u_{R} 
+                                                           + y_d \, {\twovec {\overbar u} {\overbar d}}_L \phi \, d_{R}
+                                                           + y_\ell \, {\twovec {\overbar \nu} {\overbar \ell^-}}_L \phi \, \ell_{R}  + \hc \right ) \,.
   \label{eq:foundations_sm_lagrangian}
 \end{multline}
 %
@@ -65,8 +65,8 @@ complex-valued matrices in flavour space. The covariant derivatives
 are defined as
 %
 \begin{equation}
-  D_\mu \phi = \left( \partial_\mu - \im g \frac {\sigma^a} 2 W^a_\mu
-    - \im \frac {g'} 2 B_\mu \right) \phi
+  D_\mu \phi = \left( \partial_\mu - \im g \frac {\sigma^a} 2 \, W^a_\mu
+    - \im \frac {g'} 2 \, B_\mu \right) \phi
   \label{eq:foundations_covariant_derivative}
 \end{equation}
 %
@@ -307,7 +307,7 @@ virtual intermediate vector boson.
   \label{fig:foundations_th_diag}
 \end{figure}
 
-Higgs production in association with a $t \bar t$ pair is another
+Higgs production in association with a $t \overbar t$ pair is another
 production mode relevant for the LHC, but we do not discuss it in this
 thesis. Instead, we briefly analyse \emph{Higgs production with a
   single top quark}. This process exists as an $s$-channel and a
@@ -323,7 +323,7 @@ which the Higgs couples to a $W$. The SM rate is small at
 $74~\fb$~\cite{deFlorian:2016spz}, but this interference pattern makes
 it very sensitive to modified Higgs couplings. In fact, this process
 is the only direct probe of the sign or complex phase of the top
-Yukawa coupling ($t \bar{t} h$ production is only sensitive to the
+Yukawa coupling ($t \overbar{t} h$ production is only sensitive to the
 absolute value of the top Yukawa, while the total rate in gluon fusion
 can be influenced by many effects such as new particles in the loop).
 
@@ -390,9 +390,9 @@ leading to a wide variety of decay modes. Since it couples to all
 particles proportional to their mass, it prefers to decay into the
 heaviest particles allowed by phase space. The dominant decay mode
 with a branching ratio of $58 \%$~\cite{deFlorian:2016spz} is
-therefore $h \to b\bar{b}$. This signature is clearly useless for
+therefore $h \to b\overbar{b}$. This signature is clearly useless for
 Higgs bosons produced in gluon fusion because of the overwhelming QCD
-$gg \to b \bar{b}$ background. WBF and $Vh$ production provide handles
+$gg \to b \overbar{b}$ background. WBF and $Vh$ production provide handles
 to tame these backgrounds, but the channel is still difficult. Easier
 to detect are $\tau^+ \tau^-$ pairs with a branching ratio of
 $6.3 \%$. Their semi-leptonic and purely leptonic decays involve
@@ -457,7 +457,7 @@ The top Yukawa coupling, for instance, can be tightly constrained from
 the total Higgs production rate under the assumption that no new
 physics plays a role in the gluon-fusion loop. Allowing for such new
 physics effects in a fit significantly relaxes the bounds on $y_t$,
-and information from $t \bar{t} h$ production and the
+and information from $t \overbar{t} h$ production and the
 $h \to \gamma \gamma$ decay is needed to break this
 degenercay~\cite{Corbett:2015ksa}.
 %
@@ -1148,7 +1148,7 @@ and lead to some freedom to choose which operators to work with.
 % The kinetic and mass terms for the fermions read
 % %
 % \begin{equation}
-%   \lgr{} \supset \im  \bar{\psi}_i \gamma^\mu \partial_\mu \psi_i - m_i \bar{\psi}_i \psi_i \,.
+%   \lgr{} \supset \im  \overbar{\psi}_i \gamma^\mu \partial_\mu \psi_i - m_i \overbar{\psi}_i \psi_i \,.
 %   \label{eq:foundations_Fermi_theory_kin}
 % \end{equation}
 
@@ -1165,13 +1165,13 @@ and lead to some freedom to choose which operators to work with.
 % include four fermion fields and no derivatives:
 % %
 % \begin{align}
-%   \lgr{} &\supset \frac {f_{1 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i \psi_j \right) \left( \bar{\psi}_k \psi_l \right)
-%                      + \frac {f_{2 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_5 \psi_j \right) \left( \bar{\psi}_k \psi_l \right) \notag \\
-%            &\quad + \frac {f_{3 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_5 \psi_j \right) \left( \bar{\psi}_k \gamma_5 \psi_l \right)
-%                      + \frac {f_{4 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_\mu \psi_j \right) \left( \bar{\psi}_k \gamma^\mu \psi_l \right) \notag \\
-%           &\quad  + \frac {f_{5 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_5 \gamma_\mu \psi_j \right) \left( \bar{\psi}_k \gamma^\mu \psi_l \right)
-%                      + \frac {f_{6 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_5 \gamma_\mu \psi_j \right) \left( \bar{\psi}_k \gamma_5 \gamma^\mu \psi_l \right) \notag \\
-%          &\quad  + \frac {f_{7 \, ijkl} } {\Lambda^2}  \left( \bar{\psi}_i  \gamma_\mu \gamma_\nu \psi_j \right) \left( \bar{\psi}_k \gamma^\mu \gamma^\nu \psi_l \right) \,,
+%   \lgr{} &\supset \frac {f_{1 \, ijkl} } {\Lambda^2}  \left( \overbar{\psi}_i \psi_j \right) \left( \overbar{\psi}_k \psi_l \right)
+%                      + \frac {f_{2 \, ijkl} } {\Lambda^2}  \left( \overbar{\psi}_i  \gamma_5 \psi_j \right) \left( \overbar{\psi}_k \psi_l \right) \notag \\
+%            &\quad + \frac {f_{3 \, ijkl} } {\Lambda^2}  \left( \overbar{\psi}_i  \gamma_5 \psi_j \right) \left( \overbar{\psi}_k \gamma_5 \psi_l \right)
+%                      + \frac {f_{4 \, ijkl} } {\Lambda^2}  \left( \overbar{\psi}_i  \gamma_\mu \psi_j \right) \left( \overbar{\psi}_k \gamma^\mu \psi_l \right) \notag \\
+%           &\quad  + \frac {f_{5 \, ijkl} } {\Lambda^2}  \left( \overbar{\psi}_i  \gamma_5 \gamma_\mu \psi_j \right) \left( \overbar{\psi}_k \gamma^\mu \psi_l \right)
+%                      + \frac {f_{6 \, ijkl} } {\Lambda^2}  \left( \overbar{\psi}_i  \gamma_5 \gamma_\mu \psi_j \right) \left( \overbar{\psi}_k \gamma_5 \gamma^\mu \psi_l \right) \notag \\
+%          &\quad  + \frac {f_{7 \, ijkl} } {\Lambda^2}  \left( \overbar{\psi}_i  \gamma_\mu \gamma_\nu \psi_j \right) \left( \overbar{\psi}_k \gamma^\mu \gamma^\nu \psi_l \right) \,,
 % \end{align}
 % %
 % Here some entries of the Wilson coefficient matrices $f_1$ to $f_7$
@@ -1189,8 +1189,8 @@ and lead to some freedom to choose which operators to work with.
 % interactions):
 % %
 % \begin{align}
-%   \lgr{} &=  \im  \bar{\psi}_i \gamma^\mu \partial_\mu \psi_i - m_i \bar{\psi}_i \psi_i 
-%            + \frac {c } {\Lambda^2}  \left( \bar{\psi}_i  (1 - \gamma_5) \gamma_\mu \psi_j \right) \left( \bar{\psi}_k (1 - \gamma_5) \gamma^\mu \psi_l \right) \,.
+%   \lgr{} &=  \im  \overbar{\psi}_i \gamma^\mu \partial_\mu \psi_i - m_i \overbar{\psi}_i \psi_i 
+%            + \frac {c } {\Lambda^2}  \left( \overbar{\psi}_i  (1 - \gamma_5) \gamma_\mu \psi_j \right) \left( \overbar{\psi}_k (1 - \gamma_5) \gamma^\mu \psi_l \right) \,.
 % \end{align}
 % %
 % This is exactly Fermi theory, with $G_F = \sqrt{2} c / \Lambda^2 = 1.16 \cdot 10^{-5}$~GeV$^{-2}$.
@@ -1262,7 +1262,7 @@ discussed above:
 The kinetic part of such an EFT reads
 %
 \begin{equation}
-  \lgr{kin} = \phi_v^\dagger \im v^\alpha  \partial_\alpha \phi_v - \frac 1 4 F_{\mu \nu} F^{\mu \nu} \,,
+  \lgr{kin} = \phi_v^\dagger \, \im v^\alpha  \, \partial_\alpha \phi_v - \frac 1 4 \, F_{\mu \nu} F^{\mu \nu} \,,
 \end{equation}
 %
 where $\phi_v$ is the field operator representing an infinitely heavy
@@ -1287,8 +1287,8 @@ possible at these energies. The first such operators appear at mass
 dimension 7:
 %
 \begin{equation}
-  \lgr{int} = \frac {f_1} {\Lambda^3} \phi_v^\dagger \phi_v F_{\mu \nu} F^{\mu \nu} 
-  + \frac {f_2} {\Lambda^3} \phi_v^\dagger \phi_v v^\alpha F_{\alpha \mu} v_{\beta} F^{\beta \mu} 
+  \lgr{int} = \frac {f_1} {\Lambda^3} \, \phi_v^\dagger \phi_v \, F_{\mu \nu} F^{\mu \nu} 
+  + \frac {f_2} {\Lambda^3} \, \phi_v^\dagger \phi_v \, v^\alpha F_{\alpha \mu} \, v_{\beta} F^{\beta \mu} 
   % + \frac {f_3} {\Lambda^3} \phi_v^\dagger \phi_v v^\alpha \partial_\alpha (F_{\mu \nu} F^{\mu \nu})
   + \ord{1/\Lambda^4} \,,
 \end{equation}
@@ -1545,10 +1545,10 @@ theory.
           \begin{fmfgraph*}(70,50)
             \fmfleft{i2,i1}
             \fmfright{o2,o1}
-            \fmflabel{\small $\psi_j$}{i1}
-            \fmflabel{\small $\bar{\psi}_i$}{i2}
-            \fmflabel{\small $\psi_l$}{o1}
-            \fmflabel{\small $\bar{\psi}_k$}{o2}
+            \fmflabel{\small $f_j$}{i1}
+            \fmflabel{\small $\overbar{f}_i$}{i2}
+            \fmflabel{\small $f_l$}{o1}
+            \fmflabel{\small $\overbar{f}_k$}{o2}
             \fmf{fermion}{i1,v1,i2}
             \fmf{fermion}{o1,v2,o2}
             \fmf{dbl_wiggly,tension=1,label=$W$}{v1,v2}
@@ -1567,8 +1567,8 @@ theory.
     Applying the SM Feynman rules, this diagram evaluates to
     % 
     \begin{align}
-       &\quad  \left( \bar{\psi}_i \frac{\im g} {\sqrt{2}}  \frac {1 - \gamma_5} 2 \gamma^\mu \psi_j \right)  \frac {- g_{\mu \nu}} {p^2 - m_W^2}  \left( \bar{\psi}_k \frac{\im g} {\sqrt{2}} \frac {1 - \gamma_5} 2  \gamma^\nu \psi_l \right) \notag \\
-      {} &= \frac { g^2 \left( \bar{\psi}_i (1 - \gamma_5) \gamma^\mu \psi_j \right)  \left( \bar{\psi}_k (1 - \gamma_5)  \gamma_\mu \psi_l \right) }  {8 (p^2 - m_W^2)} \,.
+       &\quad  \left( \overbar{f}_i \frac{\im g} {\sqrt{2}}  \frac {1 - \gamma_5} 2 \gamma^\mu f_j \right)  \, \frac {- g_{\mu \nu}} {p^2 - m_W^2}  \, \left( \overbar{f}_k \frac{\im g} {\sqrt{2}} \frac {1 - \gamma_5} 2  \gamma^\nu f_l \right) \notag \\
+      {} &= \frac { g^2 \, \left( \overbar{f}_i (1 - \gamma_5) \gamma^\mu f_j \right)  \, \left( \overbar{f}_k (1 - \gamma_5)  \gamma_\mu f_l \right) }  {8 (p^2 - m_W^2)} \,.
     \end{align}
     %
   \item The only dimensionful parameter is $m_W = \Lambda$, and for
@@ -1576,15 +1576,15 @@ theory.
     expand this expression as
     %
     \begin{equation}
-       \frac { g^2 } {8 m_W^2}  \left( \bar{\psi}_i (1 - \gamma_5) \gamma^\mu \psi_j \right)  \left( \bar{\psi}_k (1 - \gamma_5)  \gamma_\mu \psi_l \right) + \ord{1 / \Lambda^4} \,.
+       \frac { g^2 } {8 m_W^2}  \, \left( \overbar{f}_i (1 - \gamma_5) \gamma^\mu f_j \right)  \, \left( \overbar{f}_k (1 - \gamma_5)  \gamma_\mu f_l \right) + \ord{1 / \Lambda^4} \,.
     \end{equation}
     %
     With this, we again rediscover the dimension-six EFT matched to the
     weak interactions of the SM:
     %
    \begin{equation}
-     \lgr{} =  \im  \bar{\psi}_i \gamma^\mu \partial_\mu \psi_i - m_i \bar{\psi}_i \psi_i 
-     + \frac {c } {\Lambda^2}  \left( \bar{\psi}_i  (1 - \gamma_5) \gamma_\mu \psi_j \right) \left( \bar{\psi}_k (1 - \gamma_5) \gamma^\mu \psi_l \right) \,,
+     \lgr{} =  \im  \overbar{f}_i \gamma^\mu \partial_\mu f_i - m_i \overbar{f}_i f_i 
+     + \frac {c } {\Lambda^2} \, \left( \overbar{f}_i  (1 - \gamma_5) \gamma_\mu f_j \right) \left( \overbar{f}_k (1 - \gamma_5) \gamma^\mu f_l \right) \,,
      \label{eq:foundations_fermi_theory}
    \end{equation}
    %
@@ -1612,7 +1612,7 @@ usually chosen only slightly below the EFT cutoff), at the scale of
 interest $E$ they take on values of the form
 %
 \begin{equation}
-  f_i (E) \sim f_i(\Lambda) \pm \sum_j \frac {g^2} {16 \pi^2} \, \log \frac {\Lambda^2} {E^2} \,f_j(\Lambda) \,,
+  f_i (E) \sim f_i(\Lambda) \pm \sum_j \frac {g^2} {16 \pi^2} \, \log \left( \frac {\Lambda^2} {E^2} \right) \, f_j(\Lambda) \,,
   \label{eq:foundations_EFT_running}
 \end{equation}
 %
@@ -1812,7 +1812,7 @@ tells us the mass dimensions of all building blocks:
 %
 \begin{equation}
   [f] = \frac 3 2\,, \quad [V_\mu] = 1 \,, \quad [V_{\mu \nu}] = 2 \,, \quad
-  [\phi] = 1 \,, \quad [\partial_\mu] = 1 \quad \text{and} \quad [D_\mu] = 1 \,.
+  [\phi] = 1 \,, \quad [\partial_\mu] = 1 \quad \text{and} \quad [D_\mu] = 1 \,,
 \end{equation}
 
 The only dimension-five operator that can be built from the SM fields
@@ -1823,7 +1823,7 @@ number, and is entirely irrelevant for Higgs physics. There the
 leading effects are expected to come from dimension-six operators:
 %
 \begin{equation}
-  \lgr{EFT} = \lgr{SM} + \sum_i \frac {f_i} {\Lambda^2} \ope{i} + \ord{1/\Lambda^4}
+  \lgr{EFT} = \lgr{SM} + \sum_i \frac {f_i} {\Lambda^2} \, \ope{i} + \ord{1/\Lambda^4}
   \label{eq:sm_eft}
 \end{equation}
 %
@@ -2269,16 +2269,16 @@ tilde on $h$ because this field is not yet a mass eigenstate. Its
 contribution to the Lagrangian reads
 %
 \begin{align}
-  \lgr{EFT} &\supset \frac {f_{\phi, 2}} {2\Lambda^2} \, \partial^\mu(\phi^\dagger\phi) \, \partial_\mu(\phi^\dagger\phi) \notag \\
+  \lgr{EFT} &\supset \frac {f_{\phi, 2}} {2\Lambda^2} \, \partial_\mu(\phi^\dagger\phi) \, \partial^\mu(\phi^\dagger\phi) \notag \\
   %{} &= \frac {f_{\phi, 2}} {2\Lambda^2} \, \frac {( 2 v \partial_\mu \tilde{h} + 2 \tilde{h} \partial_\mu \tilde{h} )^2} 4  \notag \\
-  {} &= \frac {f_{\phi, 2} v^2} {2\Lambda^2} \, \partial_\mu \tilde{h} \partial^\mu \tilde{h} + \frac {f_{\phi, 2} \, v} {\Lambda^2} \, \tilde{h} \partial_\mu \tilde{h} \partial^\mu \tilde{h} + \frac {f_{\phi, 2} \, v} {2 \Lambda^2} \, \tilde{h}^2 \partial_\mu \tilde{h} \partial^\mu \tilde{h} \,.
+  {} &= \frac {f_{\phi, 2} v^2} {2\Lambda^2} \, \partial_\mu \tilde{h} \, \partial^\mu \tilde{h} + \frac {f_{\phi, 2} \, v} {\Lambda^2} \, \tilde{h} \, \partial_\mu \tilde{h} \, \partial^\mu \tilde{h} + \frac {f_{\phi, 2} \, v} {2 \Lambda^2} \, \tilde{h}^2 \, \partial_\mu \tilde{h} \, \partial^\mu \tilde{h} \,.
   \label{eq:foundations_ophi2_terms}
 \end{align}
 %
 The first term rescales the kinetic term of the Higgs boson:
 %
 \begin{equation}
-  \lgr{EFT} \supset \left( 1 + \frac {f_{\phi 2} v^2} {\Lambda^2} \right) \, \frac 1 2 \, \partial_\mu \tilde{h} \partial^\mu \tilde{h} \,.
+  \lgr{EFT} \supset \left( 1 + \frac {f_{\phi 2} v^2} {\Lambda^2} \right) \, \frac 1 2 \, \partial_\mu \tilde{h} \, \partial^\mu \tilde{h} \,.
 \end{equation}
 %
 To restore the canonical form of the kinetic term, we have to rescale
@@ -2461,7 +2461,7 @@ These interactions read
               + g^{(3)}_{hWW}  \; h W^+_{\mu} W^{- \, \mu} \notag \\
             &\phantom{{}={}}
               + g^{(4)}_{hWW}  \; h \varepsilon_{\mu \nu \rho \sigma} W^{+ \, \mu \nu} W^{- \, \rho \sigma}
-              + \sum_{f=\tau,t,b} \left( g_{hff} h \overbar{f}_L f_R + \hc \right) 
+              + \sum_{f=\tau,t,b} \left( g_{hff} \; h \overbar{f}_L f_R + \hc \right) 
   \label{eq:foundations_higgs_interactions}
 \end{align}
 %
@@ -2491,7 +2491,7 @@ with couplings
   g^{(2)}_{hWW} &= - \frac {g^2 v f_{WW}} {2 \Lambda^2} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2} \,, \notag \\
   g^{(3)}_{hWW} &= \frac {g^2 v} {2} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2}  \,, \notag \\
   %
-  g^{(4)}_{hWW} &= - \frac {g^2 v f_{W\widetilde{W}}} {4 \Lambda^2}  \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2} \,, \notag \\
+  g^{(4)}_{hWW} &= - \frac {g^2 v f_{W\widetilde{W}}} {4 \Lambda^2}  \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2} \,, \quad \text{and} \notag \\
   %
   g_{hff} &= - \frac {m_f} {v} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2}
   + \frac {v^2 f_f} {\sqrt{2} \Lambda^2} \,.
@@ -2620,19 +2620,22 @@ assignments~\cite{Buchalla:2013eza}
 % 
 \begin{align}
   [f]_c &= 1 \,, \quad &
-  [V_{\mu}]_c &= 0 \,, \quad & 
-  [V_{\mu\nu}]_c &= 1 \,, \quad &
+  [A_{\mu}]_c &= 0 \,, \quad & 
+  [F_{\mu\nu}]_c &= 1 \,, \quad &
   [U]_c &= 0 \,, \quad &
   [h]_c &= 0 \,, \quad \notag \\
   [\partial_\mu]_c &= 1 \,, \quad  &
   [D_\mu]_c &= 1 \,, \quad &
   [g]_c &= 1 \,, \quad &
-  [y_f]_c &= 1 \,.
+  [y_f]_c &= 1 \,,
 \end{align}
 %
-The loop order $L$ of an operator is equivalent to the chiral dimension
-$\chi = 2L + 2$. This chiral counting can also be linked to an
-expansion in $\hbar$~\cite{Gavela:2016bzc}.
+where we use $A_\mu$ and $F_{\mu\nu}$ to denote any vector boson,
+since the symbol $V_\mu$ is conventionally used for a different
+purpose in this context. The loop order $L$ of an operator is
+equivalent to the chiral dimension $\chi = 2L + 2$. This chiral
+counting can also be linked to an expansion in
+$\hbar$~\cite{Gavela:2016bzc}.
 
 The correct expansion scheme depends on the value of $\xi$. For
 $\xi \gg 1 / 16 \pi^2$ or $f \ll 3~\tev$, the chiral expansion is more
@@ -2660,11 +2663,11 @@ the Lagrangian is given by~\cite{Alonso:2012px}\footnote{Two comments
 %
 \begin{align}
   \lgr{non-linear EFT}
-  &\supset \frac 1 2 \partial_\mu h \partial^\mu h \left( 1 + c_H \xi \mathcal{F}_H(h) \right)
+  &\supset \frac 1 2 \, \partial_\mu h \, \partial^\mu h \, \left( 1 + c_H \xi \, \mathcal{F}_H(h) \right)
     - V(h) \notag \\
-  &\phantom{=} \qquad - \frac {v^2} 4 \tr [ V_\mu V^\mu]  \mathcal{F}_C(h) 
-    + c_T \xi \frac {v^2} 4 \tr [T V^\mu] \tr [T V_\mu] \mathcal{F}_T(h) \notag \\
-  &\phantom{=} \qquad - \frac v {\sqrt{2}} \left[ \sum_f \bar{f}_L U y_f \mathcal{F}_Y^{f}(h) P_f f_R + \hc \right]
+  &\phantom{{}={}} - \frac {v^2} 4 \, \tr [ V_\mu V^\mu] \, \mathcal{F}_C(h) 
+    + c_T \xi \frac {v^2} 4 \, \tr [T V^\mu] \tr [T V_\mu] \, \mathcal{F}_T(h) \notag \\
+  &\phantom{{}={}} - \frac v {\sqrt{2}} \, \left[ \sum_f \overbar{f}_L \, U \, y_f \, \mathcal{F}_Y^{f}(h) \, P_f \, f_R + \hc \right]
   \label{eq:foundations_nonlinear_EFT_LO}
 \end{align}
 %
@@ -2679,7 +2682,7 @@ arbitrary functions. They can be expanded as a power series in $h/f$,
 or to simplify the expressions in $h/v$, for instance
 %
 \begin{equation}
-  \mathcal{F}_C(h) = 1 + 2a_C \frac h v + b_C \left(\frac h v \right)^2 + \dots \,.
+  \mathcal{F}_C(h) = 1 + 2a_C \, \frac h v + b_C \, \left(\frac h v \right)^2 + \dots \,.
 \end{equation}
 
 At next-to-leading order in the chiral expansion many more terms
@@ -2737,7 +2740,7 @@ construction is remarkably simple: starting from the SM Higgs sector,
 all Higgs couplings are dressed with form factors,
 %
 \begin{equation}
-  g_{hxx} = \kappa_x g_{hxx}^{\text{SM}} = (1 + \Delta_x) g_{hxx}^{\text{SM}} \,.
+  g_{hxx} = \kappa_x \, g_{hxx}^{\text{SM}} \equiv (1 + \Delta_x) \, g_{hxx}^{\text{SM}} \,.
   \label{eq:foundations_kappa_delta}
 \end{equation}
 %
