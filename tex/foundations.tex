@@ -214,13 +214,13 @@ pseudorapidity\footnote{See Appendix~\ref{sec:appendix_pheno} for a
   definition of all relevant kinematic quantities.}
 $\Delta \eta_{jj}$. A second important property is provided by the
 colour structure of the process: at leading order, there is no colour
-exchange between the two quark lines, which means there is very little
-QCD radiation in this process. Both of these features set the WBF
-process apart from QCD backgrounds, which typically have many central
-jets. Such backgrounds can therefore be reduced significantly by
-requiring two so-called `tagging jets' with large $\Delta \eta_{jj}$
-and large $m_{jj}$, and vetoing any additional central
-jets~\cite{Kleiss:1987cj, Baur:1990xe, Barger:1991ib,
+exchange between the two quark lines, which leads to little QCD
+radiation in this process~\cite{Plehn:2009nd}. Both of these features
+set the WBF process apart from QCD backgrounds, which typically have
+many central jets. Such backgrounds can therefore be reduced
+significantly by requiring two so-called `tagging jets' with large
+$\Delta \eta_{jj}$ and large $m_{jj}$, and vetoing any additional
+central jets~\cite{Kleiss:1987cj, Baur:1990xe, Barger:1991ib,
   Rainwater:1996ud, Rainwater:1998kj, Cox:2010ug, Gerwick:2011tm}.
 
 But the tagging jets are not only useful to discriminate Higgs
@@ -492,8 +492,17 @@ $m_W \sim v$, and the gravitational force by the Planck scale, the
 hierarchy problem is often phrased in terms of the surprising weakness
 of gravity compared to the weak force. This naturalness problem is of
 a purely aesthetic nature, but similar aesthetic problems have in the
-past led to new insights. Many models have been proposed to solve the
-hierarchy by introducing a new symmetry that protects the Higgs mass
+past led to new insights. For instance, the surprising smallness of
+the electron mass compared to its large self-energy in classical
+electrodynamics pointed to `new physics' close to $511~\kev$, and was
+finally resolved with the introduction of positrons in quantum
+electrodynamics~\cite{Murayama:2000dw}.
+%
+% but similar aesthetic problems have in the
+% past led to new insights.
+%
+Many models have been proposed to solve the electroweak
+hierarchy problem by introducing a new symmetry that protects the Higgs mass
 against quantum corrections.\footnote{An entirely different and
   somewhat metaphysical argument is based on the (weak) anthropic
   principle that observations of the universe are conditional upon its
@@ -578,7 +587,7 @@ electroweak-scale masses and weak couplings. This `WIMP miracle' is
 one main reason behind the popularity of weakly interacting massive
 particles (WIMPs) as dark matter candidates. In this scenario, good
 candidates for the mediator between dark matter and the SM are the
-Higgs boson or other scalars in an extended Higgs sector. Such `Higgs
+Higgs boson or other (pseudo-)scalars in an extended Higgs sector. Such `Higgs
 portal' scenarios often predict signatures in Higgs physics such as
 modified couplings or invisible Higgs decays.
 
@@ -700,8 +709,8 @@ the physics as long as the observables probe energy scales
 within some finite precision. This \emph{scale hierarchy} between the
 energy of interest and the scale of high-energy physics not included
 in the EFT is the basic requirement for the EFT idea. A validity
-range~\eqref{eq:foundations_scale_separation} is a fundamental
-property of each EFT. In this simple scenario we ignore that the full
+range~\eqref{eq:foundations_scale_separation} is an intrinsic
+properties of effective theories. In this simple scenario we ignore that the full
 theory will also typically break down at even higher energies, and
 that at some very small energy the effective model should be replaced
 with another effective theory designed for those energy scales.
@@ -837,17 +846,17 @@ theory becomes a bare necessity.
 
 Starting from a high energy scale where the parameters of the
 fundamental theory are defined, these parameters are run to lower
-energies until the physics changes substantially. At this
-\emph{matching scale} an effective theory is constructed from the full
-model, and its coefficients are determined from, or matched to, the
-underlying model. Then the coefficients of this EFT are run down to
-the next matching scale, where a new EFT is defined and its parameters
-are calculated, and so on. This is the \emph{top-down} view of
-EFTs. For instance, we can start from the SM and construct Fermi
-theory as a simpler model valid at low energies. While we can
-certainly use the SM to calculate the muon lifetime, it is not
-necessary, and a calculation in Fermi theory is quite accurate and
-shorter.
+energies until the physics changes substantially or some degrees of
+freedom become irrelevant. At this \emph{matching scale} an effective
+theory is constructed from the full model, and its coefficients are
+determined from, or matched to, the underlying model. Then the
+coefficients of this EFT are run down to the next matching scale,
+where a new EFT is defined and its parameters are calculated, and so
+on. This is the \emph{top-down} view of EFTs. For instance, we can
+start from the SM and construct Fermi theory as a simpler model valid
+at low energies. While we can certainly use the SM to calculate the
+muon lifetime, it is not necessary, and a calculation in Fermi theory
+is quite accurate and shorter.
 
 Yet often we do not know the underlying theory. As mentioned above,
 there has to be physics beyond the SM, and there is still hope it will
@@ -882,7 +891,7 @@ worry about the far ultraviolet.
 % theories. They simply provide an organized way of doing what we always
 % do in physics: neglecting effects that do not matter for a given
 % question. EFTs in the form of quantum field theories consist of a set
-% of (typically non-renormalizable) operators. You have seen how this
+% of (typically non-renormalisable) operators. You have seen how this
 % framework allows us to start with a full theory and constructive an
 % effective approximation from the top down, and how it even allows us
 % to construct an approximate description of physics even if we do not
@@ -939,7 +948,7 @@ called `marginal'.
 
 The second consequence of the mass dimension affects the
 renormalisability of a theory. Theories with operators with $D > d$
-are \emph{non-renormalisable}:\footnote{The opposite is not true: some
+are non-renormalisable:\footnote{The opposite is not true: some
   theories contain only operators with $D \le d$, but are still not
   renormalisable.} particles in loops with energies $E \to \infty$
 lead to infinities in observables, too many to be hidden in a
@@ -1060,9 +1069,11 @@ One property that is often required of theories is missing in this
 list: an EFT (with its intrinsic UV cutoff $\Lambda$) does not have to
 be renormalisable in the traditional sense. In fact, most EFTs include
 operators with mass dimension $D > d$ and are thus non-renormalisable.
-However, EFTs are still renormalisable order by order in the counting
-scheme, and loop effects can be calculated without any fundamental
-issues. 
+However, EFTs are still \emph{renormalisable order by order} in the
+counting scheme: at a given order in the EFT expansion, for instance
+in $1/\Lambda$, only a finite number of divergencies appears and can
+be absorbed in a renormalisation of the parameters. In this way, loop
+effects can be calculated without any fundamental issues.
 
 
 
@@ -1832,7 +1843,7 @@ assumption of flavour-diagonal or even flavour-universal Wilson
 coefficients. Second, only a small number of these operators directly
 affects Higgs physics. At higher orders in the EFT expansion, the
 number of operators increases rapidly, explaining why we stick to the
-leading effects at dimension 6: not counting flavour structures, there
+leading effects at dimension six: not counting flavour structures, there
 are $\ord{10^3}$ operators at dimension eight and $\ord{10^4}$
 dimension-ten operators~\cite{Henning:2015alf}.
 
@@ -1850,24 +1861,27 @@ thesis we use the basis developed in References~\cite{Corbett:2012ja,
 basis and now widely used in global fits~\cite{Corbett:2015ksa,
   Corbett:2015mqf, Butter:2016cvz, Bauer:2016hcu}.
 
-We classify the operators based on their field content and on their
-behaviour under $CP$ transformations. This combined charge conjugation
-and parity inversion is an approximate symmetry of the SM that is only
-violated by the complex phase of the CKM matrix. In addition, there
-are rather tight bounds on $CP$ violation in many processes. This
-motivates many analyses to restrict their set of operators to the
-$CP$-conserving ones. On the other hand, new sources of $CP$ violation
-are needed to explain the matter-antimatter asymmetry in the universe,
-and their effects at low energies might be visible as $CP$-violating
-effective operators.
-% For simplicity, we focus on $CP$-conserving
-% effects for most of this thesis.
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Operator basis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Finally, we list the dimension-six operators of the SM effective field
+theory relevant for this thesis. We include some redundancies in this
+list before using the equations of motion to define a non-redundant
+basis. We classify the operators based on their field content and on
+their behaviour under $CP$ transformations. This combined charge
+conjugation and parity inversion is an approximate symmetry of the SM
+that is only violated by the complex phase of the CKM matrix. In
+addition, there are rather tight bounds on $CP$ violation in many
+processes. This motivates many analyses to restrict their set of
+operators to the $CP$-conserving ones. On the other hand, new sources
+of $CP$ violation are needed to explain the matter-antimatter
+asymmetry in the universe, and their effects at low energies might be
+visible as $CP$-violating effective operators.
+% For simplicity, we focus on $CP$-conserving
+% effects for most of this thesis.
 
 \begin{table}
   \renewcommand{\arraystretch}{1.8}
@@ -1898,6 +1912,27 @@ effective operators.
     dimension-six operators relevant for Higgs physics.}
   \label{tbl:foundations_operators_bosonic_even}
 \end{table}
+
+We begin with the $CP$-conserving dimension-six operators relevant for
+Higgs physics, following References~\cite{Corbett:2012ja, Juan_thesis,
+  Tyler_thesis}.  In \autoref{tbl:foundations_operators_bosonic_even}
+we list the bosonic ones,
+\autoref{tbl:foundations_operators_fermionic_even} gives the
+Higgs-fermion operators, and the `dipole operators' made of Higgs
+fields, gauge bosons, and fermions are listed in
+\autoref{tbl:foundations_operators_dipole}. We use the convention for
+the sign in the covariant derivative given in
+\autoref{eq:foundations_covariant_derivative}. $T^a$ are the $SU(3)$
+generators, and
+%
+\begin{equation}
+  \phi^\dagger \overleftrightarrow{D}_\mu \phi \equiv \phi^\dagger D_\mu \phi - (D_\mu \phi)^\dagger \phi
+ \quad \text{and} \quad 
+  \phi^\dagger \overleftrightarrow{D}_\mu^a \phi \equiv \phi^\dagger \sigma^a D_\mu \phi - (D_\mu \phi)^\dagger \sigma^a \phi \,.
+\end{equation}
+%
+All other symbols appearing in these operators are defined in
+Appendix~\ref{sec:appendix_sm}.
 
 \begin{table}
   \renewcommand{\arraystretch}{1.8}
@@ -1958,32 +1993,25 @@ effective operators.
   \label{tbl:foundations_operators_dipole}
 \end{table}
 
-We begin with the $CP$-conserving dimension-six operators relevant for
-Higgs physics, following References~\cite{Corbett:2012ja,
-  Juan_thesis, Tyler_thesis}.  In
-\autoref{tbl:foundations_operators_bosonic_even} we list the bosonic
-ones, \autoref{tbl:foundations_operators_fermionic_even} gives the
-Higgs-fermion operators, and the `dipole operators' made of Higgs
-fields, gauge bosons, and fermions are listed in
-\autoref{tbl:foundations_operators_dipole}. We use the convention for
-the sign in the covariant derivative given in
-\autoref{eq:foundations_covariant_derivative}. $T^a$ are the $SU(3)$
-generators, and
-%
-\begin{equation}
-  \phi^\dagger \overleftrightarrow{D}_\mu \phi \equiv \phi^\dagger D_\mu \phi - (D_\mu \phi)^\dagger \phi
- \quad \text{and} \quad 
-  \phi^\dagger \overleftrightarrow{D}_\mu^a \phi \equiv \phi^\dagger \sigma^a D_\mu \phi - (D_\mu \phi)^\dagger \sigma^a \phi \,.
-\end{equation}
-%
-All other symbols appearing in these operators are defined in
-Appendix~\ref{sec:appendix_sm}.
-
 % These operators can be separated into two groups: first, since
 % $\phi^\dagger \phi$ is a scalar gauge singlet, it can be attached it
 % to any dimension-4 operator of the SM to form a dimension-six
 % operator. Second, additional (covariant) derivatives allow for new
 % structures very different from the SM vertices.
+
+In addition to these $CP$-conserving structures, there are a number of
+$CP$-violating operators. We only list the bosonic ones relevant for
+Higgs physics~\cite{Gavela:2014vra, Hankele:2006ma} in
+\autoref{tbl:foundations_operators_bosonic_odd}. They involve the
+dual field strength tensors
+%
+\begin{equation}
+  \widetilde{V}_{\mu \nu} = \frac 1 2 \varepsilon_{\mu \nu \rho \sigma} V^{\mu\nu} \,, \quad
+  V = B,W,G \,.
+  \label{eq:foundations_dual_field_strengths}
+\end{equation}
+
+
 
 \begin{table}
   \renewcommand{\arraystretch}{1.8}
@@ -2010,18 +2038,6 @@ Appendix~\ref{sec:appendix_sm}.
     \autoref{eq:foundations_dual_field_strengths}.}
   \label{tbl:foundations_operators_bosonic_odd}
 \end{table}
-
-In addition to these $CP$-conserving structures, there are a number of
-$CP$-violating operators. We only list the bosonic ones relevant for
-Higgs physics~\cite{Gavela:2014vra, Hankele:2006ma} in
-\autoref{tbl:foundations_operators_bosonic_odd}. They involve the
-dual field strength tensors
-%
-\begin{equation}
-  \widetilde{V}_{\mu \nu} = \frac 1 2 \varepsilon_{\mu \nu \rho \sigma} V^{\mu\nu} \,, \quad
-  V = B,W,G \,.
-  \label{eq:foundations_dual_field_strengths}
-\end{equation}
 
 Finally, there are a few $CP$-even and $CP$-odd pure gauge operators
 made from field strength tensors and (covariant) derivatives, and a
@@ -2290,9 +2306,9 @@ to
 \end{equation}
 %
 Moreover, the second term in \autoref{eq:foundations_ophi2_terms}
-introduces a new Lorentz structure into the Higgs self-interaction
+introduces a new Lorentz structure into the cubic Higgs self-interaction
 that depends on the Higgs momenta. A non-zero Wilson coefficient
-$f_{\phi 2}$ therefore has a strong impact on Higgs pair production,
+$f_{\phi, 2}$ therefore has a strong impact on Higgs pair production,
 changing not only the total rate, but also kinematic shapes.
 
 
