@@ -128,7 +128,7 @@ parameters in the SM left and all couplings are fixed.
 \label{sec:foundations_channels}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}
+\begin{figure}[t]
   \fmfframe(0,15)(15,15){ %(L,T) (R,B)
     \begin{fmfgraph*}(80,60) 
       \feynmansetup
@@ -242,8 +242,7 @@ final-state gauge boson both helps to discriminate the Higgs from
 backgrounds and provides a handle on the momentum flow through the
 virtual intermediate vector boson.
 
-\begin{figure}
-  \centering
+\begin{figure}[b]
   \fmfframe(0,15)(15,15){ %(L,T) (R,B)
     \begin{fmfgraph*}(120,60)
       \feynmansetup
@@ -325,10 +324,38 @@ it very sensitive to modified Higgs couplings. In fact, this process
 is the only direct probe of the sign or complex phase of the top
 Yukawa coupling ($t \overbar{t} h$ production is only sensitive to the
 absolute value of the top Yukawa, while the total rate in gluon fusion
-can be influenced by many effects such as new particles in the loop).
+can be influenced by many effects such as new particles in the loop). 
 
-\begin{figure}[b]
-  \centering
+Our final channel is \emph{Higgs pair production}, shown in
+\autoref{fig:foundations_hh_diag}, which allows to measure the Higgs
+self-coupling~\cite{Plehn:1996wb, Baur:2002rb}. It is another example
+of destructive interference between different amplitudes: diagrams in
+which the two Higgses couple to a top box loop interfere with those in
+which a single Higgs is produced in gluon fusion and then splits into
+two Higgses through the self-coupling. Close to threshold, these two
+contributions approximately cancel in the SM~\cite{Plehn:1996wb,
+  Li:2013rra}, and the total rate is very small at $33~\fb$. But
+modified Higgs sectors can spoil this cancellation and drastically
+increase the rate, as we demonstrate in the next chapter. 
+
+\newparagraph
+%
+The Higgs boson interacts with all massive particles of the SM,
+leading to a wide variety of decay modes. Since it couples to all
+particles proportional to their mass, it prefers to decay into the
+heaviest particles allowed by phase space. The dominant decay mode
+with a branching ratio of $58 \%$~\cite{deFlorian:2016spz} is
+therefore $h \to b\overbar{b}$. This signature is clearly useless for
+Higgs bosons produced in gluon fusion because of the overwhelming QCD
+$gg \to b \overbar{b}$ background. WBF and $Vh$ production provide handles
+to tame these backgrounds, but the channel is still difficult. Easier
+to detect are $\tau^+ \tau^-$ pairs with a branching ratio of
+$6.3 \%$. Their semi-leptonic and purely leptonic decays involve
+neutrinos. But when the taus are boosted and not exactly back-to-back,
+the neutrino momentum can be reconstructed for instance using a
+collinear approximation~\cite{Plehn:2009nd}. 
+
+\begin{figure}
   \fmfframe(0,15)(15,15){ %(L,T) (R,B)
     \begin{fmfgraph*}(120,60) 
       \feynmansetup
@@ -370,35 +397,6 @@ can be influenced by many effects such as new particles in the loop).
     diagrams for Higgs pair production.}
   \label{fig:foundations_hh_diag}
 \end{figure}
-
-Our final channel is \emph{Higgs pair production}, shown in
-\autoref{fig:foundations_hh_diag}, which allows to measure the Higgs
-self-coupling~\cite{Plehn:1996wb, Baur:2002rb}. It is another example
-of destructive interference between different amplitudes: diagrams in
-which the two Higgses couple to a top box loop interfere with those in
-which a single Higgs is produced in gluon fusion and then splits into
-two Higgses through the self-coupling. Close to threshold, these two
-contributions approximately cancel in the SM~\cite{Plehn:1996wb,
-  Li:2013rra}, and the total rate is very small at $33~\fb$. But
-modified Higgs sectors can spoil this cancellation and drastically
-increase the rate, as we demonstrate in the next chapter.
-
-\newparagraph
-%
-The Higgs boson interacts with all massive particles of the SM,
-leading to a wide variety of decay modes. Since it couples to all
-particles proportional to their mass, it prefers to decay into the
-heaviest particles allowed by phase space. The dominant decay mode
-with a branching ratio of $58 \%$~\cite{deFlorian:2016spz} is
-therefore $h \to b\overbar{b}$. This signature is clearly useless for
-Higgs bosons produced in gluon fusion because of the overwhelming QCD
-$gg \to b \overbar{b}$ background. WBF and $Vh$ production provide handles
-to tame these backgrounds, but the channel is still difficult. Easier
-to detect are $\tau^+ \tau^-$ pairs with a branching ratio of
-$6.3 \%$. Their semi-leptonic and purely leptonic decays involve
-neutrinos. But when the taus are boosted and not exactly back-to-back,
-the neutrino momentum can be reconstructed for instance using a
-collinear approximation~\cite{Plehn:2009nd}.
 
 The decays through $W^+W^-$ or $ZZ$ pairs into four-lepton final
 states are particularly important due to their clean signatures and
@@ -1868,23 +1866,7 @@ basis and now widely used in global fits~\cite{Corbett:2015ksa,
 \subsubsection{Operator basis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Finally, we list the dimension-six operators of the SM effective field
-theory relevant for this thesis. We include some redundancies in this
-list before using the equations of motion to define a non-redundant
-basis. We classify the operators based on their field content and on
-their behaviour under $CP$ transformations. This combined charge
-conjugation and parity inversion is an approximate symmetry of the SM
-that is only violated by the complex phase of the CKM matrix. In
-addition, there are rather tight bounds on $CP$ violation in many
-processes. This motivates many analyses to restrict their set of
-operators to the $CP$-conserving ones. On the other hand, new sources
-of $CP$ violation are needed to explain the matter-antimatter
-asymmetry in the universe, and their effects at low energies might be
-visible as $CP$-violating effective operators.
-% For simplicity, we focus on $CP$-conserving
-% effects for most of this thesis.
-
-\begin{table}
+\begin{table}[t]
   \renewcommand{\arraystretch}{1.8}
   \begin{tabular}{r @{${} = {}$} l @{\hspace*{0.8cm}} r @{${} = {}$} l } 
     \toprule 
@@ -1914,6 +1896,22 @@ visible as $CP$-violating effective operators.
   \label{tbl:foundations_operators_bosonic_even}
 \end{table}
 
+Finally, we list the dimension-six operators of the SM effective field
+theory relevant for this thesis. We include some redundancies in this
+list before using the equations of motion to define a non-redundant
+basis. We classify the operators based on their field content and on
+their behaviour under $CP$ transformations. This combined charge
+conjugation and parity inversion is an approximate symmetry of the SM
+that is only violated by the complex phase of the CKM matrix. In
+addition, there are rather tight bounds on $CP$ violation in many
+processes. This motivates many analyses to restrict their set of
+operators to the $CP$-conserving ones. On the other hand, new sources
+of $CP$ violation are needed to explain the matter-antimatter
+asymmetry in the universe, and their effects at low energies might be
+visible as $CP$-violating effective operators.
+% For simplicity, we focus on $CP$-conserving
+% effects for most of this thesis. 
+
 We begin with the $CP$-conserving dimension-six operators relevant for
 Higgs physics, following References~\cite{Corbett:2012ja, Juan_thesis,
   Tyler_thesis}.  In \autoref{tbl:foundations_operators_bosonic_even}
@@ -1935,7 +1933,7 @@ generators, and
 All other symbols appearing in these operators are defined in
 Appendix~\ref{sec:appendix_sm}.
 
-\begin{table}
+\begin{table}[t]
   \renewcommand{\arraystretch}{1.8}
   \begin{tabular*}{\textwidth}{r @{${} = {}$} l @{\hspace{0.8cm}} r @{${} = {}$} l @{\hspace{0.8cm}} r @{${} = {}$} l} 
     \toprule 
@@ -1969,7 +1967,26 @@ Appendix~\ref{sec:appendix_sm}.
   \label{tbl:foundations_operators_fermionic_even}
 \end{table}
 
-\begin{table}
+% These operators can be separated into two groups: first, since
+% $\phi^\dagger \phi$ is a scalar gauge singlet, it can be attached it
+% to any dimension-4 operator of the SM to form a dimension-six
+% operator. Second, additional (covariant) derivatives allow for new
+% structures very different from the SM vertices.
+
+In addition to these $CP$-conserving structures, there are a number of
+$CP$-violating operators. We only list the bosonic ones relevant for
+Higgs physics~\cite{Gavela:2014vra, Hankele:2006ma} in
+\autoref{tbl:foundations_operators_bosonic_odd}. They involve the
+dual field strength tensors
+%
+\begin{equation}
+  \widetilde{V}_{\mu \nu} = \frac 1 2 \varepsilon_{\mu \nu \rho \sigma} V^{\mu\nu} \,, \quad
+  V = B,W,G \,.
+  \label{eq:foundations_dual_field_strengths}
+\end{equation}
+
+
+\begin{table}[b]
   \renewcommand{\arraystretch}{1.8}
   \begin{tabular*}{\textwidth}{r @{${} = {}$} l @{\hspace{0.8cm}} r @{${} = {}$} l @{\hspace{0.8cm}} r @{${} = {}$} l} 
     \toprule 
@@ -1994,27 +2011,14 @@ Appendix~\ref{sec:appendix_sm}.
   \label{tbl:foundations_operators_dipole}
 \end{table}
 
-% These operators can be separated into two groups: first, since
-% $\phi^\dagger \phi$ is a scalar gauge singlet, it can be attached it
-% to any dimension-4 operator of the SM to form a dimension-six
-% operator. Second, additional (covariant) derivatives allow for new
-% structures very different from the SM vertices.
+Finally, there are a few $CP$-even and $CP$-odd pure gauge operators
+made from field strength tensors and (covariant) derivatives, and a
+large number of four-fermion operators similar to the one in
+\autoref{eq:foundations_fermi_theory}, which are not important in this
+thesis. See Reference~\cite{Grzadkowski:2010es} for a complete basis
+of dimension-six operators. 
 
-In addition to these $CP$-conserving structures, there are a number of
-$CP$-violating operators. We only list the bosonic ones relevant for
-Higgs physics~\cite{Gavela:2014vra, Hankele:2006ma} in
-\autoref{tbl:foundations_operators_bosonic_odd}. They involve the
-dual field strength tensors
-%
-\begin{equation}
-  \widetilde{V}_{\mu \nu} = \frac 1 2 \varepsilon_{\mu \nu \rho \sigma} V^{\mu\nu} \,, \quad
-  V = B,W,G \,.
-  \label{eq:foundations_dual_field_strengths}
-\end{equation}
-
-
-
-\begin{table}
+\begin{table}[t]
   \renewcommand{\arraystretch}{1.8}
   \begin{tabular}{r @{${} = {}$} l @{\hspace*{0.8cm}} r @{${} = {}$} l} 
     \toprule 
@@ -2039,13 +2043,6 @@ dual field strength tensors
     \autoref{eq:foundations_dual_field_strengths}.}
   \label{tbl:foundations_operators_bosonic_odd}
 \end{table}
-
-Finally, there are a few $CP$-even and $CP$-odd pure gauge operators
-made from field strength tensors and (covariant) derivatives, and a
-large number of four-fermion operators similar to the one in
-\autoref{eq:foundations_fermi_theory}, which are not important in this
-thesis. See Reference~\cite{Grzadkowski:2010es} for a complete basis
-of dimension-six operators.
 
 % \begin{table}
 %   \renewcommand{\arraystretch}{1.8}

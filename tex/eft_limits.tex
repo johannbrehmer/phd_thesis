@@ -1126,7 +1126,7 @@ model and the $v$-improved dimension-six description.
 \subsubsection{Benchmark points}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{table}
+\begin{table}[t]
   \begin{tabular}{c c rrrr c rrr c rrr}
     \toprule
     %
@@ -1189,9 +1189,9 @@ $\Delta_x = - 0.083$. But while S3 realises this with a weakly coupled
 light scalar, which the default EFT cannot describe, S4 features a
 heavier and more strongly coupled new particle, and the EFT
 description works better.  In all cases, the $v$-improved EFT by
-construction predicts the Higgs couplings correctly.
+construction predicts the Higgs couplings correctly. 
 
-\begin{table}
+\begin{table}[t]
   \begin{tabular}{c c rrr c rrr}
     \toprule
     %
@@ -1629,7 +1629,7 @@ parameter space.
 \subsubsection{Benchmark points}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{table} 
+\begin{table}[t]
   \begin{tabular}{c c rrrrrrr }
     \toprule
     %
@@ -1700,7 +1700,7 @@ particularly pathological in benchmark D1, where
 $\Lambda_{\text{default}}^2$ is negative and the signs of the Wilson
 coefficients are switched compared to the $v$-improved matching.
 
-\begin{table}
+\begin{table}[t]
   \begin{tabular}{c c rrrrr }
     \toprule
     %
@@ -1726,7 +1726,7 @@ coefficients are switched compared to the $v$-improved matching.
  \label{tbl:validity_2hdm_eft_default}
 \end{table}
 
-\begin{table}
+\begin{table}[t]
   \begin{tabular}{c c rrrrr}
     \toprule
     %
@@ -1788,7 +1788,17 @@ coupling. The EFT fails to capture this coupling shift fully, leading
 to a significantly different prediction for the Higgs decay into
 bottom quarks.
 
-\begin{table}
+In \autoref{tbl:validity_2hdm_couplings_loop} we repeat this analysis
+for the loop-induced couplings of an on-shell Higgs to gluons and
+photons. A large part of these coupling shifts stems from the modified
+Higgs-top and Higgs-$W$ couplings. This means that in scenarios where
+the effective theory describes these tree-level couplings accurately,
+we also find good agreement between full and effective model for the
+loop-induced couplings. Separating the $H^\pm$ contribution to the
+Higgs-photon coupling from these indirect effects, we find that
+$\ope{BB}$ captures its effect very well. 
+
+\begin{table}[t]
   \begin{tabular}{c c rr c rrr c rrr}
     \toprule
     %
@@ -1819,17 +1829,12 @@ bottom quarks.
   \label{tbl:validity_2hdm_couplings_tree}
 \end{table}
 
-In \autoref{tbl:validity_2hdm_couplings_loop} we repeat this analysis
-for the loop-induced couplings of an on-shell Higgs to gluons and
-photons. A large part of these coupling shifts stems from the modified
-Higgs-top and Higgs-$W$ couplings. This means that in scenarios where
-the effective theory describes these tree-level couplings accurately,
-we also find good agreement between full and effective model for the
-loop-induced couplings. Separating the $H^\pm$ contribution to the
-Higgs-photon coupling from these indirect effects, we find that
-$\ope{BB}$ captures its effect very well.
+\autoref{tbl:validity_2HDM_rates} compares total production rates at
+the LHC. Depending on the benchmark, the dimension-six truncation
+leads to up to $10 \%$ departures, in agreement with the coupling
+deviations. 
 
-\begin{table}
+\begin{table}[t]
   \begin{tabular}{c c rr c rr c rr}
     \toprule
     %
@@ -1868,12 +1873,7 @@ $\ope{BB}$ captures its effect very well.
   \label{tbl:validity_2hdm_couplings_loop}
 \end{table}
 
-\autoref{tbl:validity_2HDM_rates} compares total production rates at
-the LHC. Depending on the benchmark, the dimension-six truncation
-leads to up to $10 \%$ departures, in agreement with the coupling
-deviations.
-
-\begin{table}
+\begin{table}[t]
     \begin{tabular}{c c rrr}
       \toprule
       \multirow{2}{*}{}
@@ -2153,7 +2153,7 @@ The Wilson coefficients $f_i$ are the same as in
 \subsubsection{Benchmark points}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{table}
+\begin{table}[b]
 \begin{tabular}{c c rrrr c rrr}
   \toprule
   %
@@ -2179,16 +2179,7 @@ The Wilson coefficients $f_i$ are the same as in
   \label{tbl:validity_stops_benchmarks}
 \end{table}
 
-As \autoref{eq:validity_stops_couplings} suggests, sizeable loop
-corrections to the $hVV$ coupling require light top partners with
-unrealistically strong couplings to the Higgs
-sector~\cite{Hollik:2008xn}. In
-\autoref{tbl:validity_stops_benchmarks} we define a set of benchmark
-points with this aim in mind. The corresponding Wilson coefficients in
-our two matching schemes are given in
-\autoref{tbl:validity_stops_eft}.
-
-\begin{table}
+\begin{table}[b]
   \begin{tabular}{c c rrrr c rrrr}
     \toprule
     %
@@ -2216,6 +2207,15 @@ our two matching schemes are given in
   \label{tbl:validity_stops_eft}
 \end{table}
 
+As \autoref{eq:validity_stops_couplings} suggests, sizeable loop
+corrections to the $hVV$ coupling require light top partners with
+unrealistically strong couplings to the Higgs
+sector~\cite{Hollik:2008xn}. In
+\autoref{tbl:validity_stops_benchmarks} we define a set of benchmark
+points with this aim in mind. The corresponding Wilson coefficients in
+our two matching schemes are given in
+\autoref{tbl:validity_stops_eft}.
+
 % For fixed masses and mixing, the Higgs couplings to the top partners
 % depend on the interplay between $M^2$ and the coupling constants
 % $\kappa$. For small mixing and large $M^2$, light top partner masses
@@ -2230,32 +2230,7 @@ our two matching schemes are given in
 \subsubsection{Higgs production rates and distributions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The contributions from scalar top partners to Higgs production in
-gluon fusion are well known~\cite{Berger:2012ec, Dawson:2012di,
-  Fajfer:2013wca, Ellis:2014dza, Chen:2014xwa} and the validity of the
-EFT approach for this process has been thoroughly
-scrutinised~\cite{Dawson:2015gka, Drozd:2015kva}. We therefore focus
-on corrections to the $hVV$ coupling in WBF and Higgs-strahlung.
-
-The total Higgs production rates in these channels are given in
-\autoref{tbl:validity_partners_rates}.  In benchmark P1 the WBF cross
-section is reduced by about $0.6 \%$ compared to the Standard Model,
-with good agreement between effective and full description. Clearly,
-such a scenario is not relevant for LHC measurements in the
-foreseeable future. In more extreme corners of the parameter space the
-loop effects in the full model grow, higher-dimensional terms in the
-EFT become larger, the validity of the latter worsens, and
-discrepancies between both increase.  In benchmarks P2 and P3 the WBF
-rate is reduced by $9.1\%$ and $43.5\%$ with respect to the Standard
-Model. By construction, the EFT based on the default matching captures
-only the formally leading term at $\ord{v^2/\Lambda^2}$, leading to a
-reduction of only $0.5\%$ and $2.0\%$. The corresponding difference
-is, again, independent of kinematic variables, for example of the
-tagging jet's transverse momentum.  With the $v$-improved matching,
-the cross section is reduced by $2.4 \%$ and $17.7 \%$, still far from
-the result of the full model.
-
-\begin{table}
+\begin{table}[t]
     \begin{tabular}{c c rr c rr}
       \toprule
       %
@@ -2286,6 +2261,42 @@ the result of the full model.
   \label{tbl:validity_partners_rates}
 \end{table}
 
+The contributions from scalar top partners to Higgs production in
+gluon fusion are well known~\cite{Berger:2012ec, Dawson:2012di,
+  Fajfer:2013wca, Ellis:2014dza, Chen:2014xwa} and the validity of the
+EFT approach for this process has been thoroughly
+scrutinised~\cite{Dawson:2015gka, Drozd:2015kva}. We therefore focus
+on corrections to the $hVV$ coupling in WBF and Higgs-strahlung.
+
+The total Higgs production rates in these channels are given in
+\autoref{tbl:validity_partners_rates}.  In benchmark P1 the WBF cross
+section is reduced by about $0.6 \%$ compared to the Standard Model,
+with good agreement between effective and full description. Clearly,
+such a scenario is not relevant for LHC measurements in the
+foreseeable future. In more extreme corners of the parameter space the
+loop effects in the full model grow, higher-dimensional terms in the
+EFT become larger, the validity of the latter worsens, and
+discrepancies between both increase.  In benchmarks P2 and P3 the WBF
+rate is reduced by $9.1\%$ and $43.5\%$ with respect to the Standard
+Model. By construction, the EFT based on the default matching captures
+only the formally leading term at $\ord{v^2/\Lambda^2}$, leading to a
+reduction of only $0.5\%$ and $2.0\%$. The corresponding difference
+is, again, independent of kinematic variables, for example of the
+tagging jet's transverse momentum.  With the $v$-improved matching,
+the cross section is reduced by $2.4 \%$ and $17.7 \%$, still far from
+the result of the full model.
+
+\begin{figure}[bt]
+  \includegraphics[width=0.49\textwidth,clip=true,trim=0 0.2cm 0 0.2cm]{fig/validity/TopPartners_WBF.pdf}%
+  \includegraphics[width=0.49\textwidth,clip=true,trim=0 0.2cm 0 0.2cm]{fig/validity/TopPartners_VH.pdf}%
+  \caption[Kinematic distributions in the top partner model]{Kinematic
+    distributions for the top partner model in benchmark P2.  Left:
+    tagging jet properties in WBF Higgs production.  Right: $m_{Vh}$
+    distribution in Higgs-strahlung. The shaded error bands give the
+    statistical uncertainties.}
+  \label{fig:validity_partners_distributions}
+\end{figure}
+
 The results for Higgs-strahlung look similar: in the moderate
 benchmark P1 the predictions of the full model and the dimension-six
 Lagrangian agree within $0.1 \%$, but in this scenario the overall
@@ -2301,19 +2312,7 @@ these changes in the total rates do not have a dramatic effect on the
 kinematic distributions. This is not surprising, since the largest
 Wilson coefficient generated in our benchmark points is consistently
 that of $\ope{\phi,2}$, see \autoref{tbl:validity_stops_eft}, which
-corresponds to a universal rescaling of the SM Higgs couplings.
-
-\begin{figure}
-  \includegraphics[width=0.49\textwidth,clip=true,trim=0 0.2cm 0 0.2cm]{fig/validity/TopPartners_WBF.pdf}%
-  \includegraphics[width=0.49\textwidth,clip=true,trim=0 0.2cm 0 0.2cm]{fig/validity/TopPartners_VH.pdf}%
-  \caption[Kinematic distributions in the top partner model]{Kinematic
-    distributions for the top partner model in benchmark P2.  Left:
-    tagging jet properties in WBF Higgs production.  Right: $m_{Vh}$
-    distribution in Higgs-strahlung. The shaded error bands give the
-    statistical uncertainties.}
-  \label{fig:validity_partners_distributions}
-\end{figure}
-
+corresponds to a universal rescaling of the SM Higgs couplings. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2523,10 +2522,10 @@ structures in the $hWW$ and $hZZ$ couplings.
       %
       \midrule
       %
-      T1 && $591$ & $3.0$ & $-0.47$ & $-5.0$ & $2.0$ & $1200$ \\
-      T2 && $946$ & $3.0$ & $-0.47$ & $-5.0$ & $1.0$ & $1200$ \\
-      T3 && $941$ & $3.0$ & $-0.28$ & $3.0$ & $1.0$ & $1200$ \\
-      T4 && $1246$ & $3.0$ & $-0.50$ & $3.0$ & $-0.2$ & $1200$ \\
+      T1 && $591$ & $3.0$ & $-0.47$ & $-5.0$ & $2.00$ & $1200$ \\
+      T2 && $946$ & $3.0$ & $-0.47$ & $-5.0$ & $1.00$ & $1200$ \\
+      T3 && $941$ & $3.0$ & $-0.28$ & $3.0$ & $1.00$ & $1200$ \\
+      T4 && $1246$ & $3.0$ & $-0.50$ & $3.0$ & $-0.20$ & $1200$ \\
       T5 && $846$ & $1.0$ & $-0.56$ & $-1.32$ & $0.08$ & $849$ \\
       %
       \bottomrule
@@ -2591,6 +2590,11 @@ specific UV completions:
 %
 \end{itemize}
 
+The benchmarks T1 to T3 are meant to emphasise the phenomenological
+possibilities of the vector triplet model and ignore experimental
+constraints or parameter correlations from an underlying UV
+completion. 
+
 \begin{table}
   \begin{tabular}{c c rrrrr c rrrrr}
     \toprule
@@ -2626,20 +2630,13 @@ specific UV completions:
   \label{tbl:validity_vector_triplet_eft}
 \end{table}
 
-The benchmarks T1 to T3 are meant to emphasise the phenomenological
-possibilities of the vector triplet model and ignore experimental
-constraints or parameter correlations from an underlying UV
-completion.
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Higgs production rates and distributions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\begin{figure}
-  \centering
+\begin{figure}[bt]
   \fmfframe(0,15)(15,15){ %(L,T) (R,B)
     \begin{fmfgraph*}(100,60)
       \feynmansetup
@@ -2712,7 +2709,7 @@ $\ope{W}$ and $\ope{WW}$, adding a momentum dependence to the $hVV$
 couplings. Therefore our analysis focuses on these electroweak Higgs
 production modes.
 
-\begin{table}
+\begin{table}[bt]
   \begin{tabular}{c c rr c rr}
     \toprule
     %
@@ -2992,7 +2989,7 @@ $p_{T,j1} > p_{T,j2}$. As an alternative to the two jets, we can
 consider the transverse momentum of the Higgs, $p_{T,h}$, which can be
 reconstructed even if the Higgs decay involves neutrinos.
 
-\begin{figure}
+\begin{figure}[bt]
   \includegraphics[width=0.49\textwidth,clip=true,trim=0 0.2cm 0 0.2cm]{fig/validity/WBF_correl_q_j1pt.pdf}%
   \includegraphics[width=0.49\textwidth,clip=true,trim=0 0.2cm 0 0.2cm]{fig/validity/WBF_correl_q_Hpt.pdf}%
   \caption{Correlations between the WBF momentum transfer $q$, defined
