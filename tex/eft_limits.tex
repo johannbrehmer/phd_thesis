@@ -252,8 +252,6 @@ effective theory.
 % vacuum expectation value (VEV) does not have a destabilising effect on
 % the hierarchy of scales.
 
-\newparagraph
-%
 After this broad survey of the applicability of dimension-six
 operators, we focus on the vector triplet scenario and Higgs
 production in weak boson fusion to discuss some practical
@@ -443,7 +441,7 @@ defined, but rather a general guideline.
 \subsection[Making sense of $v$-improvement]{Making sense of $\boldsymbol{v}$-improvement}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Let us try to understand the $v$-improved matching from a different
+Let us try to understand $v$-improved matching from a different
 perspective. Integrating out heavy particles generates an infinite
 number of operators with different mass dimensions. Some of the
 operators of dimension eight or higher are of the form
@@ -1342,18 +1340,19 @@ the full model. However, a $v$-improved EFT construction that takes
 into account higher orders in $v^2/\Lambda^2$ yields perfect agreement
 with the full theory. In other words, all dimension-eight and higher
 operators relevant for single Higgs production that are generated from
-the singlet model are of the form $( \phisq)^n \ope{i}^{(6)}$. After
-EWSB they can be resummed into the Wilson coefficients of the
-dimension-six operators as given by
-\autoref{eq:validity_v-improvement_resummation}.
+the singlet model are of the form
+$\smash{(\phisq)^n_{\vphantom{i}} \ope{i}^{(6)}}$. After EWSB they can
+be resummed into the Wilson coefficients of the dimension-six
+operators as given by \autoref{eq:validity_v-improvement_resummation}.
 
 Higgs pair production is different. There is a large contribution from
 off-shell $H$, while in the EFT the $h$ self-coupling involves a
 derivative. These different structures lead to discrepancies between
 full and effective description that increase with momentum
-transfer. Of course, the effective theory by definition does not
-include the second resonance, hence it fails whenever a heavy Higgs
-appears on-shell in the full theory.
+transfer.
+% Of course, the effective theory by definition does not
+% include the second resonance, hence it fails whenever a heavy Higgs
+% appears on-shell in the full theory.
 
 
 
@@ -1372,14 +1371,14 @@ sector. The combined potential reads
 %
 \begin{multline}
   V(\phi_1,\phi_2) =
-  m^2_{11}\,\phi_1^\dagger\phi_1
-  + m^2_{22}\,\phi_2^\dagger\phi_2
-  + \frac{\lambda_1}{2} \, (\phi_1^\dagger\phi_1)^2
-  + \frac{\lambda_2}{2} \, (\phi_2^\dagger\phi_2)^2
-  + \lambda_3 \, (\phi_1^\dagger\phi_1)\,(\phi_2^\dagger\phi_2)  \\
-  + \lambda_4 \, |\phi_1^\dagger\,\phi_2|^2
-  + \left[ - m^2_{12}\,\phi_1^\dagger\phi_2
-    + \frac{\lambda_5}{2} \, (\phi_1^\dagger\phi_2)^2 + \hc \right] \,.
+  m^2_{11}\,\phi_1^\dagger\phi_1^{\vphantom{\dagger}}
+  + m^2_{22}\,\phi_2^\dagger\phi_2^{\vphantom{\dagger}}
+  + \frac{\lambda_1}{2} \, (\phi_1^\dagger\phi_1^{\vphantom{\dagger}})^2
+  + \frac{\lambda_2}{2} \, (\phi_2^\dagger\phi_2^{\vphantom{\dagger}})^2
+  + \lambda_3 \, (\phi_1^\dagger\phi_1^{\vphantom{\dagger}})\,(\phi_2^\dagger\phi_2^{\vphantom{\dagger}})  \\
+  + \lambda_4 \, |\phi_1^\dagger\,\phi_2^{\vphantom{\dagger}}|^2
+  + \left[ - m^2_{12}\,\phi_1^\dagger\phi_2^{\vphantom{\dagger}}
+    + \frac{\lambda_5}{2} \, (\phi_1^\dagger\phi_2^{\vphantom{\dagger}})^2 + \hc \right] \,.
   \label{eq:validity_2hdm_potential}
 \end{multline}
 %
@@ -1616,11 +1615,17 @@ is
 %
 In this setup, the Wilson coefficients in
 Equations~\eqref{eq:validity_2hdm_matching1} and
-\eqref{eq:validity_2hdm_matching2} remain unchanged. The two matching
-schemes can exhibit significant differences in the 2HDM since the
-pseudoscalar mass
-$m^2_{A^0} = m_{12}^2/(\sin\beta\cos\beta) -\lambda_5\,v^2$ does not
-coincide with $\Lambda_{\text{default}}$ over wide ranges of the
+\eqref{eq:validity_2hdm_matching2} remain unchanged.\footnote{An
+  alternative definition of the $v$-improved Wilson coefficients could
+  be based on the physical mixing angles $\alpha$ and $\beta$. Similar
+  to the singlet model, in this way we could ensure that the
+  tree-level Higgs-fermion couplings agree exactly between the full
+  and the effective model. Here we refrain from such a fine-tuned
+  matching prescription to demonstrate how much a simple redefinition
+  of $\Lambda$ can change the results.} The two matching schemes can
+exhibit significant differences in the 2HDM since the pseudoscalar
+mass $m^2_{A^0} = m_{12}^2/(\sin\beta\cos\beta) -\lambda_5\,v^2$ does
+not coincide with $\Lambda_{\text{default}}$ over wide ranges of the
 parameter space.
 
 
@@ -2153,7 +2158,7 @@ The Wilson coefficients $f_i$ are the same as in
 \subsubsection{Benchmark points}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{table}[b]
+\begin{table}
 \begin{tabular}{c c rrrr c rrr}
   \toprule
   %
@@ -2179,7 +2184,7 @@ The Wilson coefficients $f_i$ are the same as in
   \label{tbl:validity_stops_benchmarks}
 \end{table}
 
-\begin{table}[b]
+\begin{table}
   \begin{tabular}{c c rrrr c rrrr}
     \toprule
     %
@@ -2230,7 +2235,7 @@ our two matching schemes are given in
 \subsubsection{Higgs production rates and distributions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{table}[t]
+\begin{table}[!b]
     \begin{tabular}{c c rr c rr}
       \toprule
       %
@@ -2709,7 +2714,7 @@ $\ope{W}$ and $\ope{WW}$, adding a momentum dependence to the $hVV$
 couplings. Therefore our analysis focuses on these electroweak Higgs
 production modes.
 
-\begin{table}[bt]
+\begin{table}[!b]
   \begin{tabular}{c c rr c rr}
     \toprule
     %
@@ -3107,13 +3112,13 @@ element. In our EFT approach, we have
   |\mat{EFT}|^2
   =
   \underbrace{ |\mat{$4$}^{\vphantom{*}} |^2 }_{\ord{1}}
-  + \underbrace{
+  {} + {} \underbrace{
     2 \, \Real \, \mat{$4$}^* \mat{$6$}^{\vphantom{*}}
   }_{\ord{1/\Lambda^2}}
-  + \underbrace{
+  {} + {} \underbrace{
     |\mat{$6$}^{\vphantom{*}}|^2 + 2 \, \Real \, \mat{$4$}^* \mat{$8$}^{\vphantom{*}}
 }_{\ord{1/\Lambda^4}}
-+ \ord{1/\Lambda^6} \,,
+{} + \ord{1/\Lambda^6} \,,
 \end{equation}
 %
 where the subscripts in $\mat{$d$}$ denote the dimension of the
@@ -3137,7 +3142,7 @@ have to compare the terms
 \begin{equation}
   |\mat{$6$}|^2 \sim \frac {g_{\text{UV}}^4} {\Lambda^4}
   %
-  \quad \text{vs.} \quad
+  \qquad \text{vs.} \qquad
   %
   2 \, \Real \, \mat{$4$}^* \mat{$8$}^{\vphantom{*}} \sim \frac {g_{\text{SM}}^2 \, g_{\text{UV}}^2} {\Lambda^4} \,,
   \label{eq:validity_square_uv}
@@ -3260,11 +3265,7 @@ such that the Wilson coefficients $f_{\phi,2}$, $f_{\phi,3}$, and $f_{t}$ vanish
 %
 \begin{equation}
   f_{WW} = f_{BW} = \frac {c^2} {2g^2} \,,
-\end{equation}
-%
-and
-%
-\begin{equation}
+  \qquad \text{and} \qquad
   f_W = - \frac {c^2} {g^2} \,.
 \end{equation}
 %
@@ -3438,7 +3439,9 @@ the EFT expansion as the leading effects from the neglected
 dimension-eight operators. Nevertheless, these squared terms can
 improve the performance of the dimension-six model in many cases and
 should in general be included in calculations from a bottom-up
-perspective. We concluded our discussion of the vector triplet model
+perspective.
+
+We concluded our discussion of the vector triplet model
 with a brief demonstration of how the validity of the dimension-six
 model affects the setting of exclusion limits in practice. The
 effective theory is less reliable when very high-energy events are
@@ -3448,6 +3451,8 @@ with additional upper bounds on the momentum transfer; alternatively,
 momentum-dependent theory uncertainties can be assigned to the
 events~\cite{Berthier:2016bke}.
 
+\newparagraph
+%
 With the limited precision of the LHC, the EFT approach is not
 guaranteed to describe all potential signatures of new physics in
 Higgs measurements accurately. Nevertheless, we have demonstrated that
