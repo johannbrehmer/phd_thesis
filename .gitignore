@@ -13,3 +13,4 @@
 *.lof
 *.lot
 *.fls
+/diff_go.sh
