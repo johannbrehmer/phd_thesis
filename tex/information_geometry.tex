@@ -370,7 +370,7 @@ Second, the variance
   \equiv E \left[ (\hat{\theta} - \overbar{\theta} )^2\middle | \theta_0 \right] \,,
 \end{equation}
 %
-or for more than one parameter its covariance matrix
+or for more than one parameter the covariance matrix
 %
 \begin{equation}
   \cov  \left [ \hat{\boldtheta} \middle | \boldtheta_0 \right]_{ij}
@@ -443,7 +443,7 @@ An unbiased estimator is called `efficient' if it reaches the lower
 bound given by \autoref{eq:information_cramer_rao_unbiased} for any
 value of $\boldtheta_0$; that is, if its covariance matrix is equal to
 the inverse Fisher information. This is what we define as an optimal
-measurement. In this way, the Fisher information matrix $I_{ij}$
+measurement. The Fisher information matrix $I_{ij}$ hence
 encodes the maximal precision with which parameters can be measured at
 an experiment. Large entries in this matrix correspond to directions
 that can be measured particularly precisely. On the other hand, an
@@ -453,7 +453,7 @@ zero is a blind direction that can never be probed by the experiment.
 There is a subtlety to this statement. For some problems no efficient
 estimators exist. The textbook example is the estimation of the
 variance parameter of the normal distribution: here the sample
-variance is a unbiased estimator with minimum variance, but it does
+variance is an unbiased estimator with minimum variance, but it does
 not reach the lower bound given by
 \autoref{eq:information_cramer_rao_unbiased}. And if an efficient
 estimator exists, just from the Fisher information we do not know how
@@ -485,7 +485,7 @@ problems discussed in the following, hence the upper bound on the
 precision defined by the Fisher information is achievable at least in
 the asymptotic limit. We therefore expect that the best achievable
 precision in a measurement can only be significantly worse than
-expected from the Fisher information for problems with small event
+given by the Fisher information for problems with small event
 numbers.
 
 \newparagraph
@@ -778,9 +778,9 @@ observables have some degree of correlation, and this naive
 combination procedure is of limited use.
 
 Comparing the information in different distributions to each other
-defines which kinematic observables provide powerful probes of which
+defines which kinematic observables provide probes of which
 directions in theory space. In practice, this can be used as a
-guideline which distributions to measure and publish.
+guideline for which distributions to measure and publish.
 
 
 
