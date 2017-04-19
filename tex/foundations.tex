@@ -347,13 +347,14 @@ heaviest particles allowed by phase space. The dominant decay mode
 with a branching ratio of $58 \%$~\cite{deFlorian:2016spz} is
 therefore $h \to b\overbar{b}$. This signature is clearly useless for
 Higgs bosons produced in gluon fusion because of the overwhelming QCD
-$gg \to b \overbar{b}$ background. WBF and $Vh$ production provide handles
-to tame these backgrounds, but the channel is still difficult. Easier
-to detect are $\tau^+ \tau^-$ pairs with a branching ratio of
-$6.3 \%$. Their semi-leptonic and purely leptonic decays involve
+$gg \to b \overbar{b}$ background. WBF and $Vh$ production provide
+handles to tame these backgrounds, but the channel is still
+challenging. A decay mode that is easier to detect is
+$h \to \tau^+ \tau^-$ with a branching ratio of $6.3 \%$. The
+semi-leptonic and purely leptonic decays of tau pairs involve
 neutrinos. But when the taus are boosted and not exactly back-to-back,
 the neutrino momentum can be reconstructed for instance using a
-collinear approximation~\cite{Plehn:2009nd}. 
+collinear approximation~\cite{Plehn:2009nd}.
 
 \begin{figure}
   \fmfframe(0,15)(15,15){ %(L,T) (R,B)
@@ -469,7 +470,7 @@ for physics beyond the Standard Model.
 \newparagraph
 %
 From a theory perspective, there are several reasons to expect
-manifestations of new physics in the Higgs sector. On rather general
+manifestations of new physics (NP) in the Higgs sector. On rather general
 grounds, the Higgs doublet is the key component of electroweak
 symmetry breaking (EWSB), the centrepiece of the SM. A test of the
 Higgs properties therefore provides a test of the fundamental
@@ -519,8 +520,8 @@ against quantum corrections.\footnote{An entirely different and
     Adams:2015hvd}. Given the speculative nature of the two questions,
   anthropic reasoning is being criticised as unverifiable or as based
   on arguments from lack of
-  imagination.}\textsuperscript{,\,}\footnote{Finally, the smallness
-  of the Higgs VEV can be explained with a modified cosmological
+  imagination.}\textsuperscript{,\,}\footnote{The smallness
+  of the Higgs VEV can also be explained with a modified cosmological
   evolution. Relaxion models~\cite{Graham:2015cka} introduce a new
   scalar field with a vacuum expectation value that changes during the
   cosmological evolution. Since it couples to the Higgs, this
@@ -645,12 +646,11 @@ Model, but the first sign of what lies beyond.
 \label{sec:foundations_eft}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-This plethora of possible BSM models means that a model-independent
-universal theory framework is invaluable for TeV signatures of new
-physics. We consider such a model based on the effective field theory
-(EFT) paradigm. Before discussing the specific realisation for Higgs
-physics in the next section, we here introduce the EFT idea in
-general.
+This plethora of possible BSM scenarios means that a model-independent
+description is invaluable for TeV signatures of new physics. We
+consider such an approach based on the effective field theory (EFT)
+paradigm. Before discussing the specific realisation for Higgs physics
+in the next section, we here introduce the EFT idea in general.
 
 % Effective field theories are powerful tools that play a role in many,
 % if not all, areas of physics. Whenever phenomena are spread out over
@@ -713,7 +713,7 @@ within some finite precision. This \emph{scale hierarchy} between the
 energy of interest and the scale of high-energy physics not included
 in the EFT is the basic requirement for the EFT idea. A validity
 range~\eqref{eq:foundations_scale_separation} is an intrinsic
-properties of effective theories. In this simple scenario we ignore that the full
+property of effective theories. In this simple scenario we ignore that the full
 theory will also typically break down at even higher energies, and
 that at some very small energy the effective model should be replaced
 with another effective theory designed for those energy scales.
@@ -865,13 +865,14 @@ is quite accurate and shorter.
 Yet often we do not know the underlying theory. As mentioned above,
 there has to be physics beyond the SM, and there is still hope it will
 appear around a few TeV. If we want to parametrise the effects of such
-new physics on electroweak-scale observables, we do not know what the
-full model looks like. But even without knowing the underlying model,
-we can still construct an effective field theory based on a few
-general assumptions. We go through these ingredients in the next
-section. For this \emph{bottom-up} approach, an effective theory is
-not only useful, but actually the only way we can discuss new physics
-without choosing a particular model of BSM physics.
+new physics on electroweak-scale observables, as we do in this thesis,
+we do not know what the full model looks like. But even without
+knowing the underlying model, we can still construct an effective
+field theory based on a few general assumptions. We go through these
+ingredients in the next section. For this \emph{bottom-up} approach,
+an effective theory is not only useful, but actually the only way we
+can discuss new physics without choosing a particular model of BSM
+physics.
 
 High-energy physics can be seen as the field of working ourselves up a
 chain of EFTs to ever higher energies. But where does this chain end?
@@ -1040,7 +1041,7 @@ relevant at the scale of interest. We go through them one by one.
 
 \begin{enumerate}
 \item \emph{Particle content}: one has to define the fields that are
-  the dynamical degrees of freedoms in the EFT, i.\,e.\ that can form
+  the dynamical degrees of freedom in the EFT, i.\,e.\ that can form
   either external legs or internal propagators in Feynman diagrams. At
   least all particles with masses $m \ll \Lambda$ should be
   included. The operators are then combinations of these fields and
@@ -1584,8 +1585,8 @@ theory.
        \frac { g^2 } {8 m_W^2}  \, \left( \overbar{f}_i (1 - \gamma_5) \gamma^\mu f_j \right)  \, \left( \overbar{f}_k (1 - \gamma_5)  \gamma_\mu f_l \right) + \ord{1 / \Lambda^4} \,.
     \end{equation}
     %
-    With this, we again rediscover the dimension-six EFT matched to the
-    weak interactions of the SM:
+    With this, we rediscover the dimension-six EFT matched to the weak
+    interactions of the SM:
     %
    \begin{equation}
      \lgr{} =  \im  \overbar{f}_i \gamma^\mu \partial_\mu f_i - m_i \overbar{f}_i f_i 
@@ -1647,13 +1648,15 @@ Higgs physics at the TeV scale and construct the Standard Model
 effective field theory (interchangeably called linear Higgs effective
 field theory) up to dimension six~\cite{Burges:1983zg, Leung:1984ni,
   Buchmuller:1985jz, Arzt:1994gp}. This is the framework we use
-throughout this thesis. We first argue why such an effective
-theory is very useful, and then construct its effective operators
-following the recipe laid out in
+throughout this thesis. We first argue in
+\autoref{sec:foundations_heft_motivation} why such an effective theory
+is very useful, and then construct its effective operators in
+\autoref{sec:foundations_heft_operators} following the recipe laid out
+in
 \autoref{sec:foundations_eft_bottom_up}. \autoref{sec:foundations_heft_pheno}
-takes a closer look at the phenomenology of these
-operators. Finally, in \autoref{sec:foundations_heft_alternatives}
-we briefly discuss a few alternative frameworks.
+takes a closer look at the phenomenology of these operators. Finally,
+in \autoref{sec:foundations_heft_alternatives} we briefly discuss a
+few alternative parametrisations of Higgs properties.
 
 
   
@@ -1794,7 +1797,7 @@ important according to some counting scheme. Let us go through these
 one by one:
 %
 \begin{enumerate}
-\item As degrees of freedoms we use the SM fields. In particular, we
+\item As degrees of freedom we use the SM fields. In particular, we
   assume the Higgs boson $h$ and the Goldstone bosons $w^a$ are
   combined in an $SU(2)_L$ doublet $\phi$ as in the SM, see
   \autoref{eq:foundations_sm_phi}. This is consistent with data and
@@ -1833,7 +1836,9 @@ leading effects are expected to come from dimension-six operators:
 \end{equation}
 %
 with the unknown cutoff scale $\Lambda$ and Wilson coefficients
-$f_i$. For convenience, from now on we drop the higher-order terms.
+$f_i$. The convergence of this series in $1/\Lambda$ is a central
+topic of \autoref{chapter:validity}. For convenience, from now on we
+drop the higher-order terms.
 
 As discussed in \autoref{sec:foundations_eft_bottom_up}, field
 redefinitions (or, relatedly, equations of motion), Fierz identities
