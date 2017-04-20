@@ -143,30 +143,37 @@ simulation. New technologies are developed at an impressive
 pace~\cite{Cranmer:2015bka, Louppe:2016ylz, Louppe:2016aov,
   Cranmer:2016lzt, Baldi:2016fzo}. These tools are applied to problems
 at all steps of the analysis process, ranging from
-tracking~\cite{Brehmer:ghost_probability, Aad:2014yva} to the analysis of jet
-substructure~\cite{Cogan:2014oua, Baldi:2014pta, deOliveira:2015xxd,
-  Almeida:2015jua, Baldi:2016fql, Guest:2016iqz, Komiske:2016rsd,
-  Kasieczka:2017nvn, Louppe:2017ipp}, to the discrimination between
-signal and background hypotheses~\cite{Baldi:2014kfa, Searcy:2015apa,
-  Santos:2016kno, Alves:2016htj}, and finally to the statistical
-testing of model hypotheses~\cite{Buckley:2011kc, Bornhauser:2013aya,
+tracking~\cite{Brehmer:ghost_probability, Aad:2014yva} to the analysis
+of jet substructure~\cite{Cogan:2014oua, Baldi:2014pta,
+  deOliveira:2015xxd, Almeida:2015jua, Baldi:2016fql, Guest:2016iqz,
+  Komiske:2016rsd, Kasieczka:2017nvn, Louppe:2017ipp}, to the
+discrimination between signal and background
+hypotheses~\cite{Baldi:2014kfa, Searcy:2015apa, Santos:2016kno,
+  Alves:2016htj}, and finally to the statistical testing of model
+hypotheses~\cite{Buckley:2011kc, Bornhauser:2013aya,
   Bechtle:2017vyu}. For complicated problems, multivariate tools often
 outperform traditional approaches. However, their inner structure is
-often convoluted and not necessarily intuitive, and it is not
-always clear which physical structures these `black boxes' are
-sensitive to.
+often convoluted and not necessarily intuitive, and it is not always
+clear which physical structures these `black boxes' are sensitive to.
 
 \newparagraph
 %
 With these wide range capabilities, it is increasingly important that
 we can understand and characterise the information contained in
-particle physics processes. The design of event selections and
-analysis strategies requires clearly defined guidelines. We present a
-novel approach to tackle these problems based on information
-geometry~\cite{efron1975, amari1982, amari2000joho}. This offers tools
-that are intrinsically designed for continuous parameter spaces of
-arbitrary dimensionality, independent of basis choices, and without
-the need for any discretisation of the model hypothesis.
+particle physics processes.
+%
+An efficient estimation of the sensitivity of measurements to new
+physics signatures that does not require a full simulation of the
+analysis chain can help plan experiments.
+%
+Moreover, the design of event selections and analysis strategies
+requires clearly defined guidelines.
+
+We present a novel approach to tackle these problems based on
+information geometry~\cite{efron1975, amari1982, amari2000joho}. This
+defines tools that are intrinsically designed for continuous parameter
+spaces of arbitrary dimensionality, independent of basis choices, and
+without the need for any discretisation of the model hypothesis.
 
 The central object in our approach is the \emph{Fisher information}
 matrix. According to the Cram\'er-Rao bound~\cite{Rao:1945,
@@ -234,11 +241,14 @@ statistical tools, including the log-likelihood ratio.
 \newparagraph
 %
 The Fisher information has been commonly used in the field of
-gravitational wave detection~\cite{Jaranowski:1994xd}, but has
-received much less attention in particle physics~\cite{CMS:2016kgk,
-  Ferreira:2017ymn}. To the best of our knowledge, most of the tools
-presented in Reference~\cite{Brehmer:2016nyr} and in this chapter are
-innovative at least for this field.
+gravitational wave detection~\cite{Jaranowski:1994xd}, but only rarely
+in particle physics~\cite{CMS:2016kgk}. To the best of our knowledge,
+most of the tools presented in Reference~\cite{Brehmer:2016nyr} and in
+this chapter are innovative at least for this field. After the
+publication of Reference~\cite{Brehmer:2016nyr}, these and similar
+ideas have received more attention~\cite{Ferreira:2017ymn,
+  Edwards:2017mnf}.
+
 
 
 % After its experimental discovery~\cite{higgs,discovery} the Higgs
@@ -1002,6 +1012,27 @@ $(n-1) \times (n-1)$ matrix
 \begin{equation}
   I^{\text{profiled}}_{ab} = I^{\text{theory}}_{ab} - \frac {m_a m_b} {s} \,.
 \end{equation}
+
+This can be easily generalised to multiple nuisance parameters. The
+Fisher information matrix has the block form
+%
+\begin{equation}
+  I_{ij} = \twomat {I^{\text{theory}}} {(I^{\text{mix}})^T} {I^{\text{mix}}} {I^{\text{nuisance}}}
+  \label{eq:information_profiling_full_information_general}
+\end{equation}
+%
+and the profiled Fisher information matrix reads~\cite{Edwards:2017mnf}
+%
+\begin{equation}
+  I^{\text{profiled}} = I^{\text{theory}} _{ab} - (I^{\text{mix}})^T \, (I^{\text{nuisance}})^{-1} \, I^{\text{mix}} \,. 
+  \label{eq:information_profiling_profiled_information_general}
+\end{equation}
+%
+In addition to the geometric explanation given above, this result can
+be understood from the Cram\'er-Rao bound: the upper left block of the
+inverse of \autoref{eq:information_profiling_full_information_general}
+is equal to the inverse of
+\autoref{eq:information_profiling_profiled_information_general}.
 
 The most obvious applications for this tool are systematic and theory
 uncertainties; we demonstrate this in
