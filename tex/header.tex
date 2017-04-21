@@ -7,7 +7,7 @@
 	twoside,
 	captions=nooneline, % captions of floats are not centered if only one line
 	fleqn, % equations to the left, not centered
-	BCOR=2mm, %binding correction
+	BCOR=4mm, %binding correction: compromise between digital and print version
 	headsepline, %line below heading
 	bibliography=totoc,
         openright,
@@ -102,7 +102,7 @@
 \PassOptionsToPackage{hyphens}{url}\usepackage[pdftex,hidelinks,linkcolor={dark-blue}, citecolor={dark-green}, urlcolor={dark-red},bookmarksopen,linktoc=all]{hyperref}
 \usepackage{enumitem} % for user-defined bullets 
 \usepackage{pdfpages} % allows to load cover page
-\usepackage{microtype}
+\usepackage[stretch=15,shrink=15]{microtype} % Default settings: protrusion=true,factor=1000,expansion=true,auto=true,stretch=20,shrink=20
 \usepackage{calc} % arithmetic expressions for lengths
 % \usepackage{mparhack} % avoids marginpars appearing on the wrong side, remove for final version
 \usepackage{lettrine} % Initials 

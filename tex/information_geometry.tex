@@ -883,7 +883,7 @@ over the bins, restores the total Fisher information defined in
 \autoref{eq:information_information_from_events}.
 
 The distribution of the differential information defines the important
-phase-space region for a measurement and should drive the design of
+phase-space region for measurements and should drive the design of
 event selections: it allows us to calculate the information loss from
 kinematic cuts, and to quantify the trade-off between signal purity
 and maximal information.
@@ -911,7 +911,7 @@ theory parameters is known exactly. We now extend it to include
 systematic and theory uncertainties. The parameter space then consists
 of nuisance parameters $\nu_i$ in addition to the theory parameters
 $\theta_i$. For concreteness, we assume that $\boldnu = \boldzero$
-corresponds to the best estimate of the nuisance parameters. This
+corresponds to the best estimate of the nuisance parameters. The
 knowledge on the nuisance parameters is encoded in constraint terms
 added to the likelihood, which subsequently appear in the Fisher
 information. If, for instance, the $k$th parameter is a nuisance
@@ -927,17 +927,17 @@ to the combined space of theory and nuisance parameters
 $(\boldtheta,\boldnu)$. 
 
 In practice we are interested in the sensitivity of an experiment on
-the theory parameters without explicit dependence on the nuisance
-parameters. In a Bayesian approach, one can assign a prior probability
-distribution to the nuisance parameters and integrate
-(`marginalise') over them. Instead, we follow a conservative method
-that is consistent with a frequentist definition of statistics and
-does not require the choice of a prior. Loosely speaking, we calculate
-the minimum sensitivity to theory parameters for any value of the
-nuisance parameters within their constraints (\ie for nuisance
-parameters that are `allowed to float'). This concept of
-`profiling' over nuisance parameters is well established for
-instance for hypothesis tests based on the likelihood
+some parameters of interest, for instance the theory parameters,
+without explicit dependence on the nuisance parameters. In a Bayesian
+approach, one can assign a prior probability distribution to the
+nuisance parameters and integrate (`marginalise') over them. Instead,
+we follow a conservative method that is consistent with a frequentist
+definition of statistics and does not require the choice of a
+prior. Loosely speaking, we calculate the minimum sensitivity to
+theory parameters for any value of the nuisance parameters within
+their constraints (\ie for nuisance parameters that are `allowed to
+float'). This concept of `profiling' over nuisance parameters is well
+established for instance for hypothesis tests based on the likelihood
 ratio~\cite{Cranmer:2015nia}.
 
 Applying this idea to the geometric picture, we define a profiled
@@ -949,9 +949,9 @@ local distance between two points $\boldtheta_a$ and $\boldtheta_b$ as
   (\boldtheta_a , \boldzero) ) \,.
 \end{equation}
 %
-The contours of local distance from $(\boldtheta_a , \boldzero)$
-define an ellipsoid around this point. The contours of profiled
-distance are just the parallel projection of this ellipsoid onto the subspace
+The contours of the local distance $(\boldtheta_a , \boldzero)$ define
+an ellipsoid around this point. The contours of the profiled distance
+are just the parallel projection of this ellipsoid onto the subspace
 spanned by the theory parameters (but not the nuisance parameters).
 
 Since the parallel projection of an ellipsoid is again a
@@ -974,7 +974,7 @@ of the nuisance parameters on the sensitivity to the theory
 parameters, and $s$ reflects the constraints on the nuisance
 parameter.
 
-To calculate the projected Fisher information, we start from the
+To calculate the profiled Fisher information, we start from the
 ellipsoid
 %
 \begin{equation}
@@ -989,7 +989,7 @@ The projection is described by a set of tangents
 \end{equation}
 %
 where $\boldtheta^{\text{theory}}$ defines the coordinates in the
-genuine theory parameters and $t$ parametrises the tangent
+parameters of interest and $t$ parametrises the tangent
 along the nuisance direction. The tangents on the ellipsoid have to
 satisfy \autoref{eq:information_profiling_original_ellipsoid} with
 exactly one solution for $t$ (if there are two solutions, they
@@ -1108,12 +1108,12 @@ measure of the role of $\ord{1/\Lambda^4}$ contributions.
 
 \newparagraph
 %
-Different bases for effective operators are physically clearly
-equivalent, and the theory-space directions defined by the basis
-operators $\ope{i}$ do not have a special meaning. Any statistical
-tool that singles out individual directions of parameter points in
-model space can introduce a bias towards a specific operator base. In
-the worst case, it can be blind to effects on diagonal directions, \eg
+Different bases for effective operators are physically equivalent, and
+the directions in theory space defined by the basis operators
+$\ope{i}$ do not have a special meaning. Any statistical tool that
+singles out individual directions or parameter points in the model
+space can introduce a bias towards a specific operator base. In the
+worst case, it can be blind to effects on diagonal directions, \eg
 along $\ope{i} + \ope{j}$. Our approach, based on a geometric
 description of the model space, does not suffer from these problems.
 
@@ -1170,9 +1170,9 @@ requires fixed renormalisation and factorisation scales, which we set
 following Reference~\cite{deFlorian:2016spz}. To keep the calculation
 times manageable, we restrict some processes to the dominant
 sub-processes, for instance to initial-state $u$ and $d$ quarks in the
-WBF case.  We then normalise the Higgs rates to the LHC Higgs
-cross-section working group recommendations for the total cross
-section~\cite{deFlorian:2016spz}, calculating the effect of the
+WBF case.  We then normalise the Higgs rates to the recommendations of
+the LHC Higgs cross-section working group for the total cross
+sections~\cite{deFlorian:2016spz}, calculating the effect of the
 different acceptance regions with \toolfont{MadGraph~5}. Background
 processes are simply rescaled to \toolfont{MadGraph} predictions.
 
@@ -1182,10 +1182,10 @@ detector response is the smearing of narrow resonance peaks in
 invariant mass distributions. This is taken into account with the
 procedure outlined in References~\cite{Cranmer:2006zs, Plehn:2013paa}:
 we replace the propagator of the corresponding $s$-channel particles
-from a Breit-Wigner to the square root of the smearing function, for
-instance a Gaussian or double Gaussian with parameters fitted to ATLAS
-and CMS results. Other detector effects are not included in our first
-studies presented here. However, a more realistic description of the
+with the square root of the smearing function, for instance a Gaussian
+or double Gaussian with parameters fitted to ATLAS and CMS
+results. Other detector effects are not included in our first studies
+presented here. However, a more realistic description of the
 experimental resolution can easily be achieved by including a complete
 set of transfer functions, similar to the matrix element method.
 
@@ -1212,7 +1212,7 @@ contributing to a sub-process. In the last step we collect the
 various terms into components $c$.
 
 If the model parameters $\boldtheta$ contribute additively and
-multiplicatively to vertices, as often the case of effective field
+multiplicatively to vertices, as is often the case of effective field
 theories as discussed in \autoref{sec:foundations_heft_pheno}, the
 functions $w_c$ are polynomials in the different $\theta_i$. As a
 simple example, consider a process with just one vertex, with known
@@ -1244,7 +1244,7 @@ exception to the polynomial form of $w_c$ is the dimension-six
 operator $\ope{\phi,2}$. As discussed in
 \autoref{sec:foundations_heft_pheno}, it rescales all Higgs
 interactions non-linearly with
-$1/ \sqrt{1 + f_{\phi 2} v^2 / \Lambda^2}$ and does not respect the
+$1/ \sqrt{1 + f_{\phi, 2} v^2 / \Lambda^2}$ and does not respect the
 counting in terms of $1/\Lambda$ given in
 \autoref{tbl:information_morphing_components}. In any case, the
 weights $w_c(\boldtheta)$ are known analytical functions of the model
@@ -2075,13 +2075,18 @@ theorists~\cite{Corbett:2015ksa, Butter:2016cvz}.
 
 \begin{figure}
   \includegraphics[width=0.49 \textwidth,clip=true,trim=0 0.6cm 0 0.0cm]{fig/information/wbf_tautau_histos_contours}
+  \includegraphics[width=0.49 \textwidth,clip=true,trim=0 0.6cm 0 0.0cm]{fig/information/wbf_tautau_histos_contours_likelihoodcut}
   \caption{Information in distributions in the WBF $h \to \tau \tau$
     channel, shown as contours $\dlocal(\boldtheta ; \boldzero) = 1$.
     We show the total information in the full kinematics (black), the
     information in the distributions of $p_{T,j_1}$ (red) and
     $\Delta \phi_{jj}$ (blue), their naive combination assuming no
     mutual information (green), and their two-dimensional histogram
-    (yellow). The $\theta_i$ not shown are set to zero.}
+    (yellow). The $\theta_i$ not shown are set to zero. Left: based on
+    the kinematic WBF cuts in
+    \autoref{eq:information_wbf_tautau_wbfcuts}. Right: based on the
+    matrix-element-based selection in
+    \autoref{eq:information_wbf_tautau_likelihoodcuts}.}
   \label{fig:information_wbf_tautau_histograms_contours}
 \end{figure}
 
@@ -2140,7 +2145,8 @@ of the following standard observables:
   $\pi / 10$.
 \end{itemize}
 
-In \autoref{fig:information_wbf_tautau_histograms_contours}, we compare
+In the left panel of
+\autoref{fig:information_wbf_tautau_histograms_contours}, we compare
 the error ellipses expected from the analysis of a few of these
 distributions. Measures of the momentum transfer such as the
 transverse momentum of the leading tagging jet mostly constrain
@@ -2241,7 +2247,8 @@ background rates,
 %
 We then calculate the information in the same distributions as before. 
 
-As shown in
+As shown in the right panel of
+\autoref{fig:information_wbf_tautau_histograms_contours} and in
 \autoref{fig:information_wbf_tautau_histograms_comparison_likelihoodcut},
 the cut in \autoref{eq:information_wbf_tautau_likelihoodcuts} defines
 a sample with little background contamination without sacrificing much
@@ -2251,7 +2258,7 @@ than after the kinematic event selection in
 \autoref{eq:information_wbf_tautau_wbfcuts}. A combined measurement of
 the jet transverse momenta and $\Delta \phi_{jj}$ is now able to probe
 new physics scales of up to $1.1~\tev$ compared to $1.2~\tev$ for the
-fully multivariate approach, corresponding to $70\%$ more data. 
+fully multivariate approach, corresponding to $70\%$ more data.
 
 
 
