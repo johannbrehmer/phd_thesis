@@ -14,7 +14,7 @@
   Englert:1964et, Guralnik:1964eu, Higgs:1966ev} is the cornerstone
 % centrepiece
 of the Standard Model of particle physics (SM)~\cite{Glashow:1961tr,
-  Weinberg:1967tq, Salam:1968rm}. Its discovery in
+  Weinberg:1967tq, Salam:1968rm}. Its experimental discovery in
 2012~\cite{Aad:2012tfa, Chatrchyan:2012xdj}
 %
 %completed the particle zoo
@@ -32,7 +32,7 @@ the electroweak scale) so much smaller than the Planck scale, while
 there is no sign of a symmetry protecting it against quantum
 corrections? In addition, the Higgs sector is intimately tied to the
 stability of the electroweak vacuum and to the unexplained large
-hierarchy between the fermion masses. It might also be related to the
+hierarchy between the fermion masses. It might also be related to
 the open questions of the baryon asymmetry, of the nature of dark
 matter, and of inflation.
 
@@ -56,6 +56,9 @@ This prospect poses two immediate phenomenological questions:
 %
 The research presented in this thesis consists of two major parts,
 each driven by one of these two questions.
+%
+% These two topics drive the research presented in this thesis, and
+% each is addressed in a dedicated chapter.
 
 \newparagraph
 %
@@ -80,14 +83,15 @@ measurement based on the $\kappa$ framework can be useful for total
 rates, it is not able to utilise information in kinematic
 distributions.
 
-Instead, we follow an approach based on effective field theory
-(EFT)~\cite{Coleman:1969sm, Callan:1969sn, Weinberg:1980wa}. Based
-only on the assumption that new physics has a typical energy scale
-significantly larger than the experimental energies, all new physics
-effects are captured by a tower of higher-dimensional operators. The
-leading effects for Higgs physics should come from only a handful of
-operators with mass dimension six~\cite{Burges:1983zg, Leung:1984ni,
-  Buchmuller:1985jz}. These operators
+Instead, we parametrise new physics signatures with an effective field
+theory (EFT)~\cite{Coleman:1969sm, Callan:1969sn,
+  Weinberg:1980wa}. Based only on the assumption that new physics has
+a typical energy scale significantly larger than the experimental
+energies, all new physics effects are captured by a tower of
+higher-dimensional operators. The leading effects for Higgs physics
+should come from a handful of operators with mass dimension
+six~\cite{Burges:1983zg, Leung:1984ni, Buchmuller:1985jz}. These
+operators
 %
 % are manifestly gauge-invariant and can be used beyond tree
 % level. They
@@ -100,11 +104,11 @@ measurements with constraints from other processes, including
 electroweak precision data or gauge boson production at the
 LHC~\cite{Butter:2016cvz}.
 
-However, the limited precision of the LHC Higgs measurements is only
+However, the limited precision of LHC Higgs measurements is only
 sensitive to signatures from models that are either strongly coupled
 or relatively light. In the latter case, the characteristic energy
-scale of new physics is not sufficiently separated from the momentum
-transfers in the experiments, casting doubt on the validity of the EFT
+scale of new physics is not clearly separated from the momentum
+transfer in the experiments, casting doubt on the validity of the EFT
 approach.
 
 We analyse the usefulness of higher-dimensional operators at the LHC
@@ -134,7 +138,7 @@ fusion~\cite{Biekotter:2016ecg}.
 %
 Having chosen a parametrisation of Higgs properties, the second part
 of this thesis focuses on the question of how its parameters can be
-measured optimally. Higgs signatures are sensitive to many effective
+measured optimally. Higgs processes are sensitive to many effective
 operators. Each of them affects different couplings, typically
 introducing non-trivial kinematic structures. This leads to a
 complicated relation between the high-dimensional model parameter
@@ -160,41 +164,47 @@ which physical properties they probe. It is therefore increasingly
 important to be able to characterise the information contained in LHC
 signatures.
 
-We introduce new statistical tools based on information geometry that
-can guide the measurement of continuous theory parameters such as Higgs
-properties~\cite{Brehmer:2016nyr}. The central building block of our
-approach is the Fisher information matrix, which according to the
-Cram\'er-Rao bound encodes the maximal knowledge on theory parameters
-we can derive from an experiment. We show that the properties of the
+%We introduce new statistical tools based on information geometry that
+%can guide the measurement of continuous theory parameters such as Higgs
+%properties~\cite{Brehmer:2016nyr}.
+%
+We use information geometry~\cite{efron1975, amari1982, amari2000joho}
+to understand and optimise the measurement of Higgs properties at the
+LHC~\cite{Brehmer:2016nyr}.
+%
+The central building block of our approach is the Fisher information
+matrix, which according to the Cram\'er-Rao bound~\cite{Rao:1945,
+  Cramer:1946} encodes the maximal knowledge on theory parameters we
+can derive from an experiment. We show that the properties of the
 Fisher information make it particularly well-suited to continuous,
-high-dimensional parameter spaces, and in particular for effective
+high-dimensional parameter spaces, and in particular to effective
 field theories.
 
 We develop an algorithm to calculate the Fisher information in
 particle physics processes based on Monte-Carlo methods. It allows us
-to calculate the maximum precision with which continuous parameters can
-be measured in a process. We also analyse how the differential
+to calculate the maximum precision with which continuous parameters
+can be measured in a process. We also analyse how the differential
 information is distributed over phase space and how much information
 is carried by individual kinematic distributions. This defines the
 most powerful phase-space regions and observables for an analysis. It
 also allows us to compare how much we can learn from a simple fit to
 histograms compared to fully multivariate methods.
 
-These new instruments are then used to understand and optimise Higgs
-measurements in three different channels. We calculate the information
-on dimension-six operators in Higgs production in weak boson fusion
-with decays into tau pairs and four leptons, and in Higgs production
-in association with a single top quark. Finally, we show how our
-approach can be extended to include systematic and theory
-uncertainties, and compare it to the likelihood ratio.
+These new instruments are then applied to Higgs measurements in three
+different channels. We calculate the information on dimension-six
+operators in Higgs production in weak boson fusion with decays into
+tau pairs and four leptons, and in Higgs production in association
+with a single top quark. Finally, we show how our approach can be
+extended to include systematic and theory uncertainties, and compare
+it to the likelihood ratio.
 
 \newparagraph
 %
 This thesis begins with a synopsis of essential aspects of Higgs
 physics and effective field theories in
 \autoref{chapter:foundations}. In \autoref{chapter:validity}, we
-discuss the validity of effective field theory for LHC measurements
-and the matching between full models and effective
+discuss the validity of effective field theory for LHC Higgs
+measurements and the matching between full models and effective
 operators. \autoref{chapter:information} presents our work on
 information geometry and efficient measurements of Higgs
 properties. Both these chapters contain separate, detailed

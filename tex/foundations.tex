@@ -50,7 +50,7 @@ In the Standard Model, the Higgs boson is part of a scalar $SU(2)_L$
 doublet $\phi$. The relevant terms in the Lagrangian are
 %
 \begin{multline}
-  \lgr{SM} \supset (D^\mu \phi)^\dagger (D_\mu \phi) - \mu^2 \, \phisq - \lambda \, (\phisq)^2 \\
+  \lgr{SM} \supset (D_\mu \phi)^\dagger (D^\mu \phi) - \mu^2 \, \phisq - \lambda \, (\phisq)^2 \\
             - \sum_{\text{generations}} \left(    y_u \, {\twovec {\overbar u} {\overbar d}}_L \tilde \phi \, u_{R} 
                                                            + y_d \, {\twovec {\overbar u} {\overbar d}}_L \phi \, d_{R}
                                                            + y_\ell \, {\twovec {\overbar \nu} {\overbar \ell^-}}_L \phi \, \ell_{R}  + \hc \right ) \,.
@@ -59,10 +59,10 @@ doublet $\phi$. The relevant terms in the Lagrangian are
 %
 Here $u$, $d$, and $\ell$ are the up-type quarks, down-type quarks,
 and leptons of the three generations, all appearing in a left-handed
-and right-handed version marked by the subscripts $L$ and $R$. $\mu^2$
-and $\lambda$ are real parameters, and the Yukawa couplings $y_i$ are
-complex-valued matrices in flavour space. The covariant derivatives
-are defined as
+and right-handed version marked by the subscripts $L$ and $R$. The
+Higgs potential is defined by the real parameters $\mu^2$ and
+$\lambda$, while the Yukawa couplings $y_i$ are complex-valued
+matrices in flavour space. The covariant derivatives are defined as
 %
 \begin{equation}
   D_\mu \phi = \left( \partial_\mu - \im g \frac {\sigma^a} 2 \, W^a_\mu
@@ -70,26 +70,28 @@ are defined as
   \label{eq:foundations_covariant_derivative}
 \end{equation}
 %
-and 
-%
-\begin{equation}
-  \tilde \phi \equiv \im \sigma_2 \phi^*
-\end{equation}
-%
 with $SU(2)_L$ gauge bosons $W_\mu^a$ and $U(1)_Y$ gauge boson
 $B_\mu$. The corresponding coupling constants are $g$ and $g'$, and
-$\sigma_i$ denote the Pauli matrices. We give the full Lagrangian of
-the Standard Model including all definitions and conventions in
+$\sigma_i$ denote the Pauli matrices. Finally, 
+%
+\begin{equation}
+  \tilde \phi \equiv \im \sigma_2 \phi^* \,.
+\end{equation}
+%
+The Lagrangian in \autoref{eq:foundations_sm_lagrangian} shows the SM
+in the unbroken phase of the electroweak symmetry. For a detailed
+account including all definitions and conventions, see
 Appendix~\ref{sec:appendix_sm}.
 
 For $\mu^2 < 0$, the Higgs doublet develops a non-zero vacuum
 expectation value (VEV)
 %
 \begin{equation}
-  v^2 \equiv 2 \left| \langle {\phi} \rangle \right|^2  = - \frac {\mu^2} \lambda \,.
+  v^2 \equiv 2 \left| \langle {\phi} \rangle \right|^2  = - \frac {\mu^2} \lambda \,,
 \end{equation}
 %
-Using some of the gauge freedom, we can rotate the scalar doublet such that
+spontaneously breaking the electroweak symmetry. Using some of the
+gauge freedom, we can rotate the scalar doublet such that
 %
 \begin{equation}
   \phi = \frac 1 {\sqrt{2}} \twovec  {-w^2 - \im w^1} {v + h + \im w^3} \,.
@@ -100,9 +102,8 @@ Here $w^a$ are the would-be Goldstone bosons resulting from the
 spontaneous breaking of the electroweak symmetry. They combine with
 the gauge bosons $W^a$ and $B$ to the mass eigenstates $\gamma$,
 $W^\pm$, and $Z$. The remaining degree of freedom, the scalar field
-$h$, is the Higgs boson.
-
-Plugging \autoref{eq:foundations_sm_phi} into
+$h$, is the physical Higgs boson.  Plugging
+\autoref{eq:foundations_sm_phi} into
 \autoref{eq:foundations_sm_lagrangian}, we find its mass
 %
 \begin{equation}
@@ -110,16 +111,19 @@ Plugging \autoref{eq:foundations_sm_phi} into
   \label{eq:foundations_higgs_mass_sm}
 \end{equation}
 %
-In addition, the fermions and the vector bosons $W^\pm$ and $Z$ get
-mass terms proportional to $v$, as well as couplings to the Higgs
-boson $h$. Since both terms stem from the same coupling to
-$\phi \sim v + h$, the Higgs couplings to other particles $x$ are
-always proportional to $g_{hxx} \sim m_x / v$. Finally, there are
-$h^3$ and $h^4$ self-couplings. The SM Higgs sector is very
-predictive. Weak interactions fix the VEV to $v = 246~\gev$. With the
-measurement of the Higgs mass $m_h = 125~\gev$~\cite{Aad:2012tfa,
-  Chatrchyan:2012xdj, Khachatryan:2016vau}, there are no free
-parameters in the SM left and all couplings are fixed.
+In this broken phase of the electroweak symmetry, the fermions and the
+vector bosons $W^\pm$ and $Z$ also acquire mass terms proportional to
+$v$, as well as couplings to the Higgs boson $h$. Since both terms
+stem from the same coupling to $\phi \sim v + h$, the Higgs couplings
+to other particles $x$ are always proportional to
+$g_{hxx} \sim m_x / v$. Finally, there are $h^3$ and $h^4$
+self-couplings.
+
+The SM Higgs sector is very predictive. Weak interactions fix the VEV
+to $v = 246~\gev$. With the measurement of the Higgs mass
+$m_h = 125~\gev$~\cite{Aad:2012tfa, Chatrchyan:2012xdj,
+  Khachatryan:2016vau}, there are no free parameters in the SM left
+and all couplings are fixed.
 
 
 
@@ -188,11 +192,11 @@ parameters in the SM left and all couplings are fixed.
   \label{fig:foundations_production_diag}
 \end{figure}
 
-At the LHC, most Higgs bosons are produced in \emph{gluon-gluon
+At the LHC, most Higgs bosons are produced in \emph{gluon
   fusion} (ggF) as shown in the left panel of
 \autoref{fig:foundations_production_diag}. Due to its large Yukawa
 coupling, the top plays the dominant role in the loop, with small
-contributions from the bottom. The total cross section for
+contributions from the bottom. The total cross section for this process in
 proton-proton collisions at $\sqrt{s} = 13~\tev$ is approximately
 $49~\pb$~\cite{deFlorian:2016spz}, a large part of which comes from
 loop corrections at next-to-leading order (NLO) or
@@ -211,7 +215,8 @@ two highly energetic jets that point nearly back-to-back into the two
 forward regions of the detector. This translates to a large invariant
 mass $m_{jj}$ between them as well as a large separation in
 pseudorapidity\footnote{See Appendix~\ref{sec:appendix_pheno} for a
-  definition of all relevant kinematic quantities.}
+  glossary of phenomenology lingo, in particular for definitions of
+  common kinematic quantities and of typical units.}
 $\Delta \eta_{jj}$. A second important property is provided by the
 colour structure of the process: at leading order, there is no colour
 exchange between the two quark lines, which leads to little QCD
@@ -238,7 +243,7 @@ The right panel of \autoref{fig:foundations_production_diag} shows
 Higgs production in association with a vector boson, or
 \emph{Higgs-strahlung}. The rate is $1.4~\pb$ for a $Wh$ final state
 plus $0.9~\pb$ for $Zh$. Similarly to the tagging jets in WBF, the
-final-state gauge boson both helps to discriminate the Higgs from
+final-state gauge boson both helps to discriminate the Higgs signal from
 backgrounds and provides a handle on the momentum flow through the
 virtual intermediate vector boson.
 
@@ -322,21 +327,23 @@ which the Higgs couples to a $W$. The SM rate is small at
 $74~\fb$~\cite{deFlorian:2016spz}, but this interference pattern makes
 it very sensitive to modified Higgs couplings. In fact, this process
 is the only direct probe of the sign or complex phase of the top
-Yukawa coupling ($t \overbar{t} h$ production is only sensitive to the
-absolute value of the top Yukawa, while the total rate in gluon fusion
-can be influenced by many effects such as new particles in the loop). 
+Yukawa coupling~\cite{Maltoni:2001hu} ($t \overbar{t} h$ production is
+only sensitive to the absolute value of the top Yukawa, while the
+total rate in gluon fusion can be influenced by many effects such as
+new particles in the loop).
 
 Our final channel is \emph{Higgs pair production}, shown in
-\autoref{fig:foundations_hh_diag}, which allows to measure the Higgs
-self-coupling~\cite{Plehn:1996wb, Baur:2002rb}. It is another example
-of destructive interference between different amplitudes: diagrams in
-which the two Higgses couple to a top box loop interfere with those in
-which a single Higgs is produced in gluon fusion and then splits into
-two Higgses through the self-coupling. Close to threshold, these two
-contributions approximately cancel in the SM~\cite{Plehn:1996wb,
-  Li:2013rra}, and the total rate is very small at $33~\fb$. But
-modified Higgs sectors can spoil this cancellation and drastically
-increase the rate, as we demonstrate in the next chapter. 
+\autoref{fig:foundations_hh_diag}, which allows us to directly measure
+the cubic Higgs self-coupling~\cite{Plehn:1996wb, Baur:2002rb}. It provides
+another example of destructive interference between different
+amplitudes: diagrams in which the two Higgs bosons couple to a top box loop
+interfere with those in which a single Higgs is produced in gluon
+fusion and then splits into two Higgs bosons through the
+self-coupling. Close to threshold, these two contributions
+approximately cancel in the SM~\cite{Plehn:1996wb, Li:2013rra}, and
+the total rate is very small at $33~\fb$. But modified Higgs sectors
+can spoil this cancellation and drastically increase the rate, as we
+demonstrate in the next chapter.
 
 \newparagraph
 %
@@ -348,12 +355,12 @@ with a branching ratio of $58 \%$~\cite{deFlorian:2016spz} is
 therefore $h \to b\overbar{b}$. This signature is clearly useless for
 Higgs bosons produced in gluon fusion because of the overwhelming QCD
 $gg \to b \overbar{b}$ background. WBF and $Vh$ production provide
-handles to tame these backgrounds, but the channel is still
+handles to tame these backgrounds, but the final state is still
 challenging. A decay mode that is easier to detect is
 $h \to \tau^+ \tau^-$ with a branching ratio of $6.3 \%$. The
 semi-leptonic and purely leptonic decays of tau pairs involve
 neutrinos. But when the taus are boosted and not exactly back-to-back,
-the neutrino momentum can be reconstructed for instance using a
+their momenta can be reconstructed for instance using a
 collinear approximation~\cite{Plehn:2009nd}.
 
 \begin{figure}
@@ -401,20 +408,20 @@ collinear approximation~\cite{Plehn:2009nd}.
 
 The decays through $W^+W^-$ or $ZZ$ pairs into four-lepton final
 states are particularly important due to their clean signatures and
-because they provide access to Higgs-gauge couplings. Since the Higgs
-mass is below the $W^+W^-$ and $ZZ$ thresholds, one of the vectors has
-to be off-shell.\footnote{This also means that the branching ratios
-  for $h\to ZZ$ and $h \to WW$ are not well-defined. What is
-  often quoted is in fact a term like
+because they provide access to the Higgs-gauge couplings. Since the
+Higgs mass is below the $W^+W^-$ and $ZZ$ thresholds, one of the
+vectors has to be off-shell.\footnote{This also means that the
+  branching ratios for $h\to ZZ$ and $h \to WW$ are not
+  well-defined. What is often quoted is in fact a term like
   $\br(h \to 4 \ell) / (\br(Z \to \ell^+ \ell^-))^2$.}  The channel
 $h \to W^+W^- \to (\ell^+ \nu) (\ell^- \overbar{\nu})$ with
 $\ell = e, \mu$ has a respectable branching fraction of
 $1.1 \%$~\cite{deFlorian:2016spz}, but comes with two neutrinos in the
-final state. Still, it is one of the most important channels to
-measure WBF Higgs production. The decay $h \to ZZ \to 4 \ell$ with
-$\ell = e, \mu$ provides an extremely clean signal. Despite its small
-branching ratio of $1.3 \cdot 10^{-4}$, it was one of the most
-important channels for the discovery of the Higgs
+final state. Still, it is one of the most important modes for WBF
+Higgs production. The decay $h \to ZZ \to 4 \ell$ with $\ell = e, \mu$
+provides an extremely clean signal. Despite its small branching ratio
+of $1.3 \cdot 10^{-4}$, it was one of the most important channels for
+the discovery of the Higgs
 boson~\cite{Aad:2012tfa,Khachatryan:2016vau}. From a post-discovery
 perspective, its four leptons provide a rich spectrum of angular
 correlations and other observables that allow us to measure the Higgs
@@ -426,10 +433,15 @@ the loop-induced decay into photon pairs can compete with the
 tree-level decay channels. The dominant contribution to the
 $h \to \gamma \gamma$ amplitude comes from a $W$ loop, which
 interferes destructively with a top loop, resulting in a branching
-ratio of $0.23 \%$~\cite{deFlorian:2016spz}. The ATLAS and CMS
-detectors are designed to reconstruct photons well, in fact with
-exactly this Higgs decay channel in mind. Together with $h \to 4 \ell$
-it constituted the most important channel for the discovery.
+ratio of $0.23 \%$~\cite{deFlorian:2016spz}. This large signal on top
+of a smooth background made the di-photon mode the second crucial
+channel for the experimental
+discovery~\cite{Aad:2012tfa,Khachatryan:2016vau}.
+%
+% The ATLAS and CMS
+% detectors are designed to reconstruct photons well, in fact with
+% exactly this Higgs decay channel in mind. Together with $h \to 4 \ell$
+% it constituted the most important channel for the discovery.
 
 
 
@@ -438,14 +450,15 @@ it constituted the most important channel for the discovery.
 \label{sec:foundations_relevance}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-There are several facets of the Higgs boson that make it special. From
-an experimental point of view, the properties of this shiny new thing
-in particle physics are still relatively unknown. Its couplings to
-vector bosons and heavy fermions are constrained at the $\ord{10\%}$
-level, while for the couplings to light fermions, invisible decays,
-and the total decay width of the Higgs there are only weak upper
-bounds~\cite{Khachatryan:2016vau, Corbett:2015ksa}. Many of these
-limits also rely on specific model assumptions.
+There are several facets that set the Higgs boson apart from the other
+SM particles. From an experimental point of view, the properties of
+this shiny new thing in particle physics are still relatively
+unknown. Its couplings to vector bosons and heavy fermions are
+constrained at the $\ord{10\%}$ level, while for the couplings to
+light fermions, invisible decays, and the total decay width of the
+Higgs there are only weak upper bounds~\cite{Khachatryan:2016vau,
+  Corbett:2015ksa}. Many of these limits also rely on specific model
+assumptions.
 %
 %The top Yukawa
 % coupling, for instance, is most strongly constrained from the total
@@ -481,7 +494,7 @@ is interesting in its own right, but also leads to the famous
 electroweak \emph{hierarchy problem}: in the absence of any protective
 symmetry, the mass of a scalar field should receive quantum
 corrections of the order of the largest scale in the theory. If the SM
-is valid all the way to the Planck scale, severe fine-tuning between
+is valid all the way up to the Planck scale, severe fine-tuning between
 the bare parameter and these quantum corrections is necessary to keep
 the electroweak mass scale at the observed value. Note that this
 argument interchangeably applies to the mass parameter of the Higgs
@@ -524,8 +537,8 @@ against quantum corrections.\footnote{An entirely different and
   of the Higgs VEV can also be explained with a modified cosmological
   evolution. Relaxion models~\cite{Graham:2015cka} introduce a new
   scalar field with a vacuum expectation value that changes during the
-  cosmological evolution. Since it couples to the Higgs, this
-  effectively corresponds to a scan over values of the Higgs mass
+  cosmological history. Since it couples to the Higgs, this
+  effectively corresponds to a scan over values of the mass parameter
   $\mu^2$. Once this term turns negative and the electroweak symmetry
   is broken, a feedback mechanism freezes the evolution of the scalar,
   and the electroweak scale remains at a seemingly unnatural
@@ -542,7 +555,7 @@ symmetry~\cite{Kaplan:1983fs, Kaplan:1983sm, Banks:1984gj,
 symmetries~\cite{Bardeen:1995kv}, or extra
 dimensions~\cite{ArkaniHamed:1998rs, ArkaniHamed:1998nn,
   Randall:1999ee, Appelquist:2000nn}. To reduce tuning to an
-acceptable level, this new physics should reside at energy scales not
+acceptable level, such new physics should reside at energy scales not
 too far from the electroweak scale. These models usually modify the
 Higgs sector in a way that translates into Higgs couplings different
 from their SM values.
@@ -552,7 +565,7 @@ between the \emph{fermion masses}. There are more than five orders of
 magnitude between the top and the electron mass, and neutrinos are
 even lighter. Since the fermion masses are generated by the Yukawa
 couplings of the Higgs doublet, models that explain the fermion masses
-usually also shift the Higgs-fermion coupling
+often also shift the Higgs-fermion coupling
 patterns~\cite{Froggatt:1978nt}.
 
 The question of \emph{vacuum stability} is still being discussed. If,
@@ -566,7 +579,7 @@ higher energies. Current results~\cite{Degrassi:2012ry} indicate that
 in the SM indeed such a lower vacuum exists. Fortunately for us, the
 tunnelling probability is very small, and `our' vacuum seems to be
 metastable with a lifetime longer than the age of the universe. While
-this indicates that there is no pressing need for physics below the
+this means that there is no pressing need for physics below the
 Planck scale to save the electroweak vacuum from a horrible fate, this
 result crucially depends on the measured top and Higgs masses,
 higher-order corrections to the beta functions, and higher-dimensional
@@ -577,8 +590,8 @@ In addition to these theoretical and to some degree aesthetic
 arguments, there is solid experimental evidence for physics beyond the
 SM that might be linked to the Higgs sector. First, the nature of
 \emph{dark matter}~\cite{Plehn:DM} is still unclear. It is
-experimentally established that this form of matter is electrically
-neutral, stable over cosmological timescales, that it clumps (i.\,e.\
+experimentally established that this form of matter is electromagnetically
+neutral, is stable over cosmological timescales, clumps (i.\,e.\
 is now non-relativistic), and makes up roughly a fourth of the energy
 density of the universe. In many models dark matter is in thermal
 equilibrium with ordinary matter in the early universe. Interestingly,
@@ -677,7 +690,7 @@ weak interactions by Fermi theory, strong physics by QCD. Below a GeV,
 quarks and gluons are replaced by pions and nucleons as the relevant
 degrees of freedom. Then by nuclei, atoms, molecules. At this point
 most physicists give up and let chemists (and ultimately biologists
-and sociologists) analyse the systems.
+and sociologists) analyse the emergent systems.
 
 The important point here is that the observables at one scale are not
 directly sensitive to the physics at significantly different
@@ -755,7 +768,7 @@ $g$:
       }
     %}
   }
-  {} \sim - \frac {g^2} {p^2 - m_W^2} \,.
+  {} \sim \frac {g^2} {p^2 - m_W^2} \,.
   \label{eq:foundations_4fermion_full}
 \end{equation}
 %
@@ -804,7 +817,7 @@ One process described by this interaction is muon decay. Its typical
 energy scale $E \approx m_\mu$ is well separated from $\Lambda = m_W$,
 and Fermi theory describes the process quite accurately. The relative
 \emph{EFT error}, i.\,e.\ the inaccuracy of an calculation with the
-EFT rather than the full model, should be of order
+EFT rather than with the full model, should be of order
 $\Delta_\text{EFT} = \Gamma_\text{EFT} / \Gamma_\text{full} \sim E^2 /
 \Lambda^2 \sim m_\mu^2 / m_W^2 \approx 10^{-6}$.
 
@@ -875,13 +888,16 @@ can discuss new physics without choosing a particular model of BSM
 physics.
 
 High-energy physics can be seen as the field of working ourselves up a
-chain of EFTs to ever higher energies. But where does this chain end?
-Does it end at all? Even if one day we find a consistent theory that
-can explain all observations to date, how would we check if it indeed
-describes Nature up to arbitrarily high energies? Understanding all
-theories as effective, these questions are less pressing. The EFT
-framework provides us with the tools to do physics without having to
-worry about the far ultraviolet.
+chain of theories to ever higher energies. The EFT framework provides
+us with the tools to do this in an organised way.
+
+% But where does this chain end?
+% Does it end at all? Even if one day we find a consistent theory that
+% can explain all observations to date, how would we check if it indeed
+% describes Nature up to arbitrarily high energies? Understanding all
+% theories as effective, these questions are less pressing. The EFT
+% framework provides us with the tools to do physics without having to
+% worry about the far ultraviolet.
 
 % To summarize this introduction, the basic EFT idea is to take into
 % account only the phenomena relevant at the scale of interest. With
@@ -936,22 +952,20 @@ must be dimensionless, $[S] = 0$. The space-time integral in
 \autoref{eq:foundations_action} then implies $[\lgr{}] = d = 4$, so
 every term in the Lagrangian has to be of mass dimension 4. Applying
 this to the kinetic terms, we can calculate the mass dimension of all
-fields. This then allows us to calculate the mass dimension or
-canonical dimension of operators and couplings in the theory.
+fields. This then allows us to calculate the dimension of all
+operators and couplings in the theory.
 
 The canonical dimension of an operator has two important
 consequences. First, the renormalisation group flow of a theory,
 i.\,e.\ the running of the couplings between different energy scales,
 largely depends on the mass dimensions of the operators. Operators
-with mass dimension $D < d$ (`relevant' operators) receive
-substantial quantum corrections when going from high to low energies.
-This is a key argument for many fine-tuning problems such as the
-hierarchy problem or the cosmological constant problem. On the other
-hand, operators with $D > d$ (`irrelevant' ones) are typically
-suppressed when going to lower energies. Operators with $D = d$ are
-called `marginal'.
-
-The second consequence of the mass dimension affects the
+with mass dimension $D < d$ (`relevant' operators) receive substantial
+quantum corrections when going from high to low energies.  This is a
+key argument for many fine-tuning problems such as the hierarchy
+problem or the cosmological constant problem. On the other hand,
+operators with $D > d$ (`irrelevant' ones) are typically suppressed
+when going to lower energies. Operators with $D = d$ are called
+`marginal'. The second consequence of the mass dimension affects the
 renormalisability of a theory. Theories with operators with $D > d$
 are non-renormalisable:\footnote{The opposite is not true: some
   theories contain only operators with $D \le d$, but are still not
@@ -984,12 +998,13 @@ $\Lambda$, our best guess (which can be motivated with arguments based
 on the renormalisation group flow) is that it consists of
 dimensionless couplings $g$, roughly of up to $\ord{1}$ for weakly
 interacting underlying physics, and mass scales
-$M \sim \ord{\Lambda}$. Indirect effects mediated by this high-energy
+$M \sim \ord{\Lambda}$. Indirect effects mediated by the high-energy
 physics should therefore be proportional to a combination of these
 factors, as given in \autoref{eq:foundations_EFT_lagrangian} with
 Wilson coefficients $f_i$ of a size dictated by the underlying
 couplings $g$. This is certainly true in Fermi theory, where the
-effective coupling $G_F$ is suppressed by $\Lambda^2 = m_W^2$.
+effective four-fermion interaction is suppressed by
+$G_F \propto 1/m_W^2 = 1/\Lambda^2 $.
 
 
   
@@ -1222,17 +1237,16 @@ and lead to some freedom to choose which operators to work with.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Following Reference~\cite{Kaplan:2005es}, we demonstrate this
-bottom-up approach with a simple question: why is the sky blue?
-In other words, why is blue light coming from the sun scattered more
-strongly by particles in the atmosphere than red light?  A full
+bottom-up approach by deriving the colour of the sky. In other words,
+we answer the question why blue light coming from the sun is scattered
+more strongly by particles in the atmosphere than red light.  A full
 derivation of this takes some time and requires knowledge of the
 underlying electrodynamic interactions. Instead, we write down an
 effective field theory for this process of Rayleigh scattering. The
 only thing we have to know are the basic scales of the process:
 photons with energy $E_\gamma$ scatter off basically static nuclei
 characterised by an excitation energy $\Delta E$, mass $M$ and radius
-$a_0$. Looking at these numbers, we see that the scales are clearly
-separated:
+$a_0$. These scales are clearly separated:
 %
 \begin{equation}
   E_\gamma \ll \Delta E,  a_0^{-1} \ll M \,.
@@ -1271,8 +1285,8 @@ The kinetic part of such an EFT reads
 \end{equation}
 %
 where $\phi_v$ is the field operator representing an infinitely heavy
-atom at constant velocity $v$, and $F_{\mu \nu}$ is the photon field
-strength tensor. Boosting into the atom's rest frame, $v = (1,0,0,0)$
+atom at constant velocity $v^\mu$, and $F_{\mu \nu}$ is the photon field
+strength tensor. Boosting into the atom's rest frame, $v^\mu = (1,0,0,0)$
 and the first term becomes the Lagrangian of the Schr\"odinger
 equation.
 
@@ -1280,7 +1294,7 @@ The usual power counting based on $[\lgr{}]= 4$ gives the mass
 dimensions
 %
 \begin{equation}
-  [\partial] = 1 \,, \quad [v] = 0 \,, \quad [\phi] = \frac 3 2 \quad \text{and} \quad [F_{\mu \nu} ] = 2 \,.
+  [\partial_\mu] = 1 \,, \quad [v^\mu] = 0 \,, \quad [\phi] = \frac 3 2 \,, \quad \text{and} \quad [F_{\mu \nu} ] = 2 \,.
 \end{equation} 
 
 The interaction operators must be Lorentz-invariant combinations of
@@ -1292,8 +1306,8 @@ possible at these energies. The first such operators appear at mass
 dimension 7:
 %
 \begin{equation}
-  \lgr{int} = \frac {f_1} {\Lambda^3} \, \phi_v^\dagger \phi_v \, F_{\mu \nu} F^{\mu \nu} 
-  + \frac {f_2} {\Lambda^3} \, \phi_v^\dagger \phi_v \, v^\alpha F_{\alpha \mu} \, v_{\beta} F^{\beta \mu} 
+  \lgr{int} = \frac {f_1} {\Lambda^3} \, \phi_v^\dagger \phi_v^{\vphantom{\dagger}} \, F_{\mu \nu} F^{\mu \nu} 
+  + \frac {f_2} {\Lambda^3} \, \phi_v^\dagger \phi_v^{\vphantom{\dagger}}  \, v^\alpha F_{\alpha \mu} \, v_{\beta} F^{\beta \mu} 
   % + \frac {f_3} {\Lambda^3} \phi_v^\dagger \phi_v v^\alpha \partial_\alpha (F_{\mu \nu} F^{\mu \nu})
   + \ord{1/\Lambda^4} \,,
 \end{equation}
@@ -1305,7 +1319,7 @@ $E_\gamma \ll \Lambda$.
 The scattering amplitude of light off the atmospheric atoms should
 therefore scale as $\mathcal{M} \sim 1 / \Lambda^3$, which means that
 the cross section scales with $\sigma \sim 1 / \Lambda^6$. Since the
-cross section has the dimension of an area, $[\sigma] = -2$, and the
+cross section has the dimension of an area, $[\sigma] = -2$, and since the
 only other mass scale in this low-energy process is the photon energy
 $E_\gamma$, we know that the effective cross section must be
 proportional to
@@ -1465,7 +1479,7 @@ theory consists of a finite set of local operators up to some order in
 a counting scheme, compatible with our definition of effective
 theories in the previous section. Unlike in the bottom-up approach,
 not all operators have to appear, and we can calculate the Wilson
-coefficients based on the underlying theory. 
+coefficients based on the parameters of the underlying theory. 
 
   
 
@@ -1610,12 +1624,12 @@ theory.
 
 So far we neglected that\,---\,like all parameters in a QFT\,---\,the
 value of the Wilson coefficients depends on the energy scale. Running
-the model from one energy to a different one leads to \emph{operator
-  mixing}: loop effects from one operator affect the coefficients of
-other operators. If the Wilson coefficients are given at the matching
-scale $\Lambda$ (we use this symbol since the matching scale is
-usually chosen only slightly below the EFT cutoff), at the scale of
-interest $E$ they take on values of the form
+the model from one energy to a different one leads to operator mixing:
+loop effects from one operator affect the coefficients of other
+operators. If the Wilson coefficients are given at the matching scale
+$\Lambda$ (we use this symbol since the matching scale is usually
+chosen only slightly below the EFT cutoff), at the scale of interest
+$E$ they take on values of the form
 %
 \begin{equation}
   f_i (E) \sim f_i(\Lambda) \pm \sum_j \frac {g^2} {16 \pi^2} \, \log \left( \frac {\Lambda^2} {E^2} \right) \, f_j(\Lambda) \,,
@@ -1793,22 +1807,22 @@ Since we do not know what physics lays beyond the SM, we have to
 construct our EFT from a bottom-up perspective. As discussed above,
 this means we have to write down all operators based on a set of
 particles that are compatible with certain symmetries and are
-important according to some counting scheme. Let us go through these
-one by one:
+important according to some counting scheme:
 %
 \begin{enumerate}
 \item As degrees of freedom we use the SM fields. In particular, we
-  assume the Higgs boson $h$ and the Goldstone bosons $w^a$ are
+  assume that the Higgs boson $h$ and the Goldstone bosons $w^a$ are
   combined in an $SU(2)_L$ doublet $\phi$ as in the SM, see
-  \autoref{eq:foundations_sm_phi}. This is consistent with data and
-  true in many well-studied models of new physics. We discuss an
-  alternative construction in which the physical scalar $h$ and the
-  Goldstones $w^a$ are independent in
+  \autoref{eq:foundations_sm_phi}. This is the case in many
+  well-studied models of new physics and consistent with data. We
+  discuss an alternative construction in which the physical scalar $h$
+  and the Goldstones $w^a$ are independent in
   \autoref{sec:foundations_heft_alternatives}.
   %
-\item All operators have to be invariant under Lorentz transformations
-  and under the SM gauge group $SU(3)_C \times SU(2)_L \times U(1)_Y$,
-  and have to conserve lepton and baryon number.
+\item All operators have to be invariant under proper orthochronous
+  Poincar\'e transformations and under the SM gauge group
+  $SU(3)_C \times SU(2)_L \times U(1)_Y$, and have to conserve lepton
+  and baryon number.
   %
 \item We arrange the operators by their mass dimension and thus their
   suppression in powers of $1/\Lambda$. We keep those up to mass
@@ -1852,7 +1866,7 @@ practice only a small subset of these are relevant: first, the strong
 constraints on flavour-changing neutral currents motivate the
 assumption of flavour-diagonal or even flavour-universal Wilson
 coefficients. Second, only a small number of these operators directly
-affects Higgs physics. At higher orders in the EFT expansion, the
+affect Higgs physics. At higher orders in the EFT expansion, the
 number of operators increases rapidly, explaining why we stick to the
 leading effects at dimension six: not counting flavour structures, there
 are $\ord{10^3}$ operators at dimension eight and $\ord{10^4}$
@@ -1868,7 +1882,7 @@ comparison of and conversion between different bases see
 Appendix~\ref{sec:appendix_silh} and
 References~\cite{Falkowski:2015wza, Brehmer:2015rna}. Throughout this
 thesis we use the basis developed in References~\cite{Corbett:2012ja,
-  Juan_thesis, Tyler_thesis}, which is strongly based on the HISZ
+  Juan_thesis, Tyler_thesis}, which is virtually identical to the HISZ
 basis and now widely used in global fits~\cite{Corbett:2015ksa,
   Corbett:2015mqf, Butter:2016cvz, Bauer:2016hcu}.
 
@@ -1879,27 +1893,27 @@ basis and now widely used in global fits~\cite{Corbett:2015ksa,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}[t]
-  \renewcommand{\arraystretch}{1.8}
+  \renewcommand{\arraystretch}{1.9}
   \begin{tabular}{r @{${} = {}$} l @{\hspace*{0.8cm}} r @{${} = {}$} l } 
     \toprule 
     %
     $\ope{\phi,1}$ & $(D_\mu\phi)^\dagger \phi \; \phi^\dagger D^\mu\phi$  &
     $\ope{GG}$ & $(\phisq) \; G^a_{\mu\nu} \, G^{\mu\nu\, a}$ \\
     %
-    $\ope{\phi,2}$ & $\frac{1}{2} \, \partial_\mu(\phisq) \; \partial^\mu(\phisq)$ &
-    $\ope{BB}$ & $-\frac{g'^2}{4} \, $ \\
+    $\ope{\phi,2}$ & $\dfrac{1}{2} \, \partial_\mu(\phisq) \; \partial^\mu(\phisq)$ &
+    $\ope{BB}$ & $-\dfrac{g'^2}{4} \, (\phisq) \; B_{\mu\nu} \, B^{\mu\nu} $ \\
     %
-    $\ope{\phi,3}$ & $\frac{1}{3}(\phisq)^3$ &
-    $\ope{WW}$ & $-\frac{g^2}{4} \, (\phisq) \; W^a_{\mu\nu} \, W^{\mu\nu\, a}$ \\
+    $\ope{\phi,3}$ & $\dfrac{1}{3}(\phisq)^3$ &
+    $\ope{WW}$ & $-\dfrac{g^2}{4} \, (\phisq) \; W^a_{\mu\nu} \, W^{\mu\nu\, a}$ \\
     %
     $\ope{\phi,4}$  & $(\phisq) \;  (D_\mu \phi)^\dagger \, D^\mu \phi$ &
-    $\ope{BW}$ & $-\frac{g\,g'}{4} \, (\phi^\dagger\sigma^a\phi) \; B_{\mu\nu} \, W^{\mu\nu\, a}$ \\
+    $\ope{BW}$ & $-\dfrac{g\,g'}{4} \, (\phi^\dagger\sigma^a\phi) \; B_{\mu\nu} \, W^{\mu\nu\, a}$ \\
     %
     \multicolumn{2}{c}{\quad} &
-    $\ope{B} $ & $\frac{\im g'}{2} \, (D^\mu\phi)^\dagger \, D^\nu\phi \; B_{\mu\nu}$ \\
+    $\ope{B} $ & $\dfrac{\im g'}{2} \, (D^\mu\phi)^\dagger \, D^\nu\phi \; B_{\mu\nu}$ \\
     %
     \multicolumn{2}{c}{\quad} &
-    $\ope{W}$ & $\frac{\im g}{2} \, (D^\mu\phi)^\dagger \, \sigma^a \, D^\nu\phi \; W_{\mu\nu}^a$ \\
+    $\ope{W}$ & $\dfrac{\im g}{2} \, (D^\mu\phi)^\dagger \, \sigma^a \, D^\nu\phi \; W_{\mu\nu}^a$ \\
     %
     \bottomrule
   \end{tabular}
@@ -1910,8 +1924,8 @@ basis and now widely used in global fits~\cite{Corbett:2015ksa,
 
 Finally, we list the dimension-six operators of the SM effective field
 theory relevant for this thesis. We include some redundancies in this
-list before using the equations of motion to define a non-redundant
-basis. We classify the operators based on their field content and on
+list before using the equations of motion to define a 
+basis. The operators are classified based on their field content and on
 their behaviour under $CP$ transformations. This combined charge
 conjugation and parity inversion is an approximate symmetry of the SM
 that is only violated by the complex phase of the CKM matrix. In
@@ -1934,7 +1948,7 @@ fields, gauge bosons, and fermions are listed in
 \autoref{tbl:foundations_operators_dipole}. We use the convention for
 the sign in the covariant derivative given in
 \autoref{eq:foundations_covariant_derivative}. $T^a$ are the $SU(3)$
-generators, and
+generators, and we define
 %
 \begin{equation}
   \phi^\dagger \overleftrightarrow{D}_\mu \phi \equiv \phi^\dagger D_\mu \phi - (D_\mu \phi)^\dagger \phi
@@ -1946,7 +1960,7 @@ All other symbols appearing in these operators are defined in
 Appendix~\ref{sec:appendix_sm}.
 
 \begin{table}[t]
-  \renewcommand{\arraystretch}{1.8}
+  \renewcommand{\arraystretch}{1.9}
   \begin{tabular*}{\textwidth}{r @{${} = {}$} l @{\hspace{0.8cm}} r @{${} = {}$} l @{\hspace{0.8cm}} r @{${} = {}$} l} 
     \toprule 
     %
@@ -1992,14 +2006,14 @@ Higgs physics~\cite{Gavela:2014vra, Hankele:2006ma} in
 dual field strength tensors
 %
 \begin{equation}
-  \widetilde{V}_{\mu \nu} = \frac 1 2 \varepsilon_{\mu \nu \rho \sigma} V^{\mu\nu} \,, \quad
+  \widetilde{V}_{\mu \nu} = \frac 1 2 \varepsilon_{\mu \nu \rho \sigma} V^{\mu\nu} \,, \qqqquad
   V = B,W,G \,.
   \label{eq:foundations_dual_field_strengths}
 \end{equation}
 
 
 \begin{table}[b]
-  \renewcommand{\arraystretch}{1.8}
+  \renewcommand{\arraystretch}{1.9}
   \begin{tabular*}{\textwidth}{r @{${} = {}$} l @{\hspace{0.8cm}} r @{${} = {}$} l @{\hspace{0.8cm}} r @{${} = {}$} l} 
     \toprule 
     %
@@ -2031,17 +2045,17 @@ thesis. See Reference~\cite{Grzadkowski:2010es} for a complete basis
 of dimension-six operators. 
 
 \begin{table}[t]
-  \renewcommand{\arraystretch}{1.8}
+  \renewcommand{\arraystretch}{1.9}
   \begin{tabular}{r @{${} = {}$} l @{\hspace*{0.8cm}} r @{${} = {}$} l} 
     \toprule 
     %
     $\ope{G\widetilde{G}}$ & $(\phisq)\,G^a_{\mu\nu}\,\widetilde{G}^{\mu\nu\, a}$ &
-    $\ope{\widetilde{B}} $ & $\frac{\im g}{2}(D^\mu\phi^\dagger)(D^\nu\phi)\,\widetilde{B}_{\mu\nu}$ \\
+    $\ope{\widetilde{B}} $ & $\dfrac{\im g}{2}(D^\mu\phi^\dagger)(D^\nu\phi)\,\widetilde{B}_{\mu\nu}$ \\
     %
-    $\ope{B\widetilde{B}}$ & $-\frac{g'^2}{4}(\phisq)\,B_{\mu\nu}\,\widetilde{B}^{\mu\nu}$ &
-    $\ope{B\widetilde{W}}$ & $-\frac{g\,g'}{4}(\phi^\dagger\sigma^a\phi)\,B_{\mu\nu}\,\widetilde{W}^{\mu\nu\, a}$ \\
+    $\ope{B\widetilde{B}}$ & $-\dfrac{g'^2}{4}(\phisq)\,B_{\mu\nu}\,\widetilde{B}^{\mu\nu}$ &
+    $\ope{B\widetilde{W}}$ & $-\dfrac{g\,g'}{4}(\phi^\dagger\sigma^a\phi)\,B_{\mu\nu}\,\widetilde{W}^{\mu\nu\, a}$ \\
     %
-    $\ope{W\widetilde{W}}$ & $-\frac{g^2}{4}(\phisq)\,W^a_{\mu\nu}\,\widetilde{W}^{\mu\nu\, a}$ \\
+    $\ope{W\widetilde{W}}$ & $-\dfrac{g^2}{4}(\phisq)\,W^a_{\mu\nu}\,\widetilde{W}^{\mu\nu\, a}$ \\
     %
     % $\ope{\text{need a name}} $ & $(\phi^\dagger \overleftrightarrow{D^2} \phi ) (\phisq)$ \\
     % $\ope{\text{another name}} $ & $g' \widetilde{B}_{\mu\nu} \left[ (\phi^\dagger \overleftrightarrow{D^2} \phi ) + 2 (D_\rho \phi )^\dagger D_\sigma \phi \right] $ \\
@@ -2168,7 +2182,7 @@ the operators are chosen based on their contributions to physical
 observables, for instance to avoid non-trivial blind
 directions. Following Reference~\cite{Corbett:2012ja}, we choose to
 discard $\smash{\ope{\phi L}^{(1)}}$, $\smash{\ope{\phi L}^{(3)}}$,
-and $\ope{\phi,4}$.
+and $\ope{\phi,4}^{\vphantom{(3)}}$.
 
 
 
@@ -2178,15 +2192,15 @@ and $\ope{\phi,4}$.
 
 Some of the remaining operators are tightly constrained from
 experimental data. Electroweak precision measurements limit the Wilson
-coefficients of $\ope{\phi,1}$, $\ope{BW}$, $\ope{B\widetilde{W}}$,
-$\ope{\widetilde{B}}$, $\smash{\ope{\phi L}^{(3)}}$, and the remaining
+coefficients of $\smash{\ope{\phi,1}^{\vphantom{(3)}}}$, $\smash{\ope{BW}^{\vphantom{(3)}}}$, $\smash{\ope{B\widetilde{W}}}$,
+$\smash{\ope{\widetilde{B}}}$, $\smash{\ope{\phi L}^{(3)}}$, and the remaining
 $\smash{\ope{\phi f}^{(1)}}$ to a level where their effects in Higgs
 physics are small. Measurements of electric dipole moments put tight
 constraints on the dipole operators. We therefore mostly ignore these
 operators in this thesis.\footnote{This simple argument is suitable
   for our rather conceptual work. In a thorough global fit, however,
   it should be checked carefully whether these constraints are
-  actually strong enough to make all these operators irrelevant for
+  actually strong enough to make these operators irrelevant for
   Higgs physics in all cases. Such a check should include RG effects
   when comparing constraints from different scales. The increasing
   precision in Higgs observables means that many of these operators
@@ -2194,7 +2208,7 @@ operators in this thesis.\footnote{This simple argument is suitable
 
 Limits on flavour-changing neutral currents constrain off-diagonal
 fermion-Higgs couplings. Moreover, flavour-diagonal $\ope{f}$ involving
-fermions of the first and second generation are irrelevant for many
+fermions of the first and second generations are irrelevant for many
 signatures considered in this thesis. We therefore only keep the
 Higgs-fermion operators $\ope{f}$ of the third generation.
 
@@ -2240,7 +2254,7 @@ have been calculated at one-loop level~\cite{Jenkins:2013zja,
 to run the EFT parameters from the matching scale $\Lambda$ to the
 experimental scale $E$. Following
 \autoref{eq:foundations_EFT_running}, this shifts the Wilson
-coefficients by a term proportional to a loop factor and
+coefficients by a term proportional to a loop factor times
 $\log \Lambda^2 / E^2$.
 
 As we discuss at some length in \autoref{chapter:validity}, the LHC
@@ -2287,21 +2301,21 @@ contribution to the Lagrangian reads
 The first term rescales the kinetic term of the Higgs boson:
 %
 \begin{equation}
-  \lgr{EFT} \supset \left( 1 + \frac {f_{\phi 2} v^2} {\Lambda^2} \right) \, \frac 1 2 \, \partial_\mu \tilde{h} \, \partial^\mu \tilde{h} \,.
+  \lgr{EFT} \supset \left( 1 + \frac {f_{\phi, 2} v^2} {\Lambda^2} \right) \, \frac 1 2 \, \partial_\mu \tilde{h} \, \partial^\mu \tilde{h} \,.
 \end{equation}
 %
 To restore the canonical form of the kinetic term, we have to rescale
 the Higgs boson $\tilde{h}$ to
 %
 \begin{equation}
-  h = \sqrt{1 + \frac {f_{\phi 2} v^2} {\Lambda^2} } \, \tilde{h} \,.
+  h = \sqrt{1 + \frac {f_{\phi, 2} v^2} {\Lambda^2} } \, \tilde{h} \,.
   \label{eq:foundations_ophi2_rescaling}
 \end{equation}
 
 This universally shifts all Higgs couplings to other particles as
 %
 \begin{equation}
-  g_{hxx} = \frac 1 {\sqrt{1 + \frac {f_{\phi 2} v^2} {\Lambda^2} } }  \, g_{hxx}^{\text{SM}}\,. 
+  g_{hxx} = \frac 1 {\sqrt{1 + \frac {f_{\phi, 2} v^2} {\Lambda^2} } }  \, g_{hxx}^{\text{SM}}\,. 
 \end{equation}
 %
 There is an additional, more involved effect on the Higgs
@@ -2312,7 +2326,7 @@ and $m_h$, this amounts to shifting the Higgs self-coupling $\lambda$
 to
 %
 \begin{equation}
-  \lambda = \frac {m_h^2} {2 v^2} \, \left( 1 + \frac {f_{\phi 2} v^2} {\Lambda^2} \right) \,.
+  \lambda = \frac {m_h^2} {2 v^2} \, \left( 1 + \frac {f_{\phi, 2} v^2} {\Lambda^2} \right) \,.
 \end{equation}
 %
 Moreover, the second term in \autoref{eq:foundations_ophi2_terms}
@@ -2331,8 +2345,8 @@ Our second example is $\ope{W}$, which contracts covariant derivatives
 acting on Higgs doublets, defined in
 \autoref{eq:foundations_covariant_derivative}, with a field strength
 tensor
-$W_{\mu\nu}^k = \partial_\mu W^k_\nu - \partial_\nu W^k_\mu + g
-\varepsilon^{kmn} W^m_\mu W^n_\nu$.
+$\smash{W_{\mu\nu}^k = \partial_\mu^{\vphantom{k}} W^k_\nu - \partial_\nu^{\vphantom{k}} W^k_\mu + g
+\varepsilon^{kmn} W^m_\mu W^n_\nu}$.
 Expanding $\ope{W}$ and only keeping the pieces that affect the $hWW$
 coupling, we find
 %
@@ -2455,7 +2469,7 @@ These interactions read
   \lgr{EFT} &\supset
               g^{(1)}_{hgg} \; h G^a_{\mu\nu} G^{a \, \mu\nu}
               + g^{(2)}_{hgg} \; \varepsilon_{\mu \nu \rho \sigma} h G^{a\, \mu\nu} G^{a \, \rho\sigma}
-              + g_{h\gamma\gamma} \; h A_{\mu \nu} A^{\mu \nu} \notag \\
+              + g^{\vphantom{(1)}}_{h\gamma\gamma} \; h A_{\mu \nu} A^{\mu \nu} \notag \\
             &\phantom{{}={}}
               + g^{(1)}_{hZ\gamma} \; A_{\mu \nu} Z^{\mu} \partial^{\nu} h
               + g^{(2)}_{hZ\gamma} \; h A_{\mu \nu} Z^{\mu \nu} \notag \\
@@ -2470,7 +2484,7 @@ These interactions read
               + g^{(3)}_{hWW}  \; h W^+_{\mu} W^{- \, \mu} \notag \\
             &\phantom{{}={}}
               + g^{(4)}_{hWW}  \; h \varepsilon_{\mu \nu \rho \sigma} W^{+ \, \mu \nu} W^{- \, \rho \sigma}
-              + \sum_{f=\tau,t,b} \left( g_{hff} \; h \overbar{f}_L f_R + \hc \right) 
+              + \sum_{f=\tau,t,b} \left( g^{\vphantom{(1)}}_{hff} \; h \overbar{f}_L f_R + \hc \right) 
   \label{eq:foundations_higgs_interactions}
 \end{align}
 %
@@ -2483,7 +2497,7 @@ with couplings
   %
   g^{(2)}_{hgg} &= \frac {f_{G\widetilde{G}} v} {2 \Lambda^2} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2} \,, \notag \\
   %
-  g_{h\gamma\gamma} &= - \frac {g^2 v s_W^2 (f_{WW} + f_{BB}) } {4 \Lambda^2} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2} \,, \notag \\
+  g^{\vphantom{(1)}}_{h\gamma\gamma} &= - \frac {g^2 v s_W^2 (f_{WW} + f_{BB}) } {4 \Lambda^2} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2} \,, \notag \\
   %
   g^{(1)}_{hZ\gamma}  &= - \frac {g^2 v s_W (f_{W} - f_{B}) } {4 c_W \Lambda^2} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2}\,, \notag \\
   %
@@ -2500,9 +2514,9 @@ with couplings
   g^{(2)}_{hWW} &= - \frac {g^2 v f_{WW}} {2 \Lambda^2} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2} \,, \notag \\
   g^{(3)}_{hWW} &= \frac {g^2 v} {2} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2}  \,, \notag \\
   %
-  g^{(4)}_{hWW} &= - \frac {g^2 v f_{W\widetilde{W}}} {4 \Lambda^2}  \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2} \,, \quad \text{and} \notag \\
+  g^{(4)}_{hWW} &= - \frac {g^2 v f_{W\widetilde{W}}} {4 \Lambda^2}  \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2} \,, \qquad \text{and} \notag \\
   %
-  g_{hff} &= - \frac {m_f} {v} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2}
+  g^{\vphantom{(1)}}_{hff} &= - \frac {m_f} {v} \left(1 +  \frac{v^2  f_{\phi,2} } {\Lambda^2} \right)^{-1/2}
   + \frac {v^2 f_f} {\sqrt{2} \Lambda^2} \,.
   \label{eq:foundations_higgs_couplings}
 \end{align}%
@@ -2529,7 +2543,7 @@ measurement at the LHC both exciting and challenging.
 The linear Higgs EFT discussed above is not the only useful
 parametrisation of Higgs properties. We briefly go through some
 of the alternative frameworks and explain their main properties,
-before finishing this chapter with a comparison between the different
+before concluding this chapter with a comparison between the different
 approaches.
 
 
@@ -2539,23 +2553,25 @@ approaches.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In the SM EFT (or linear Higgs EFT), constructed in
-\autoref{sec:foundations_heft_operators}, the Higgs boson $h$ and
-the Goldstone bosons $w^a$ form an $SU(2)$ doublet $\phi$ as given in
-\autoref{eq:foundations_sm_phi}. But in some models of new physics
-the Higgs is not part of an elementary $SU(2)$ doublet. Typical
-examples are composite Higgs models in which the Higgs boson is a
-pseudo-Goldstone from some strongly interacting
-dynamics~\cite{Kaplan:1983fs, Kaplan:1983sm, Banks:1984gj,
+\autoref{sec:foundations_heft_operators}, the Higgs boson $h$ and the
+Goldstone bosons $w^a$ form an $SU(2)_L$ doublet $\phi$ as given in
+\autoref{eq:foundations_sm_phi}. But in some models of new physics the
+Higgs\footnote{In many scenarios of new physics the observed scalar at
+  $125~\gev$ is, of course, not the Higgs boson of the Standard
+  Model. We nevertheless refer to it as `Higgs boson'.} is not part of
+an elementary doublet. Typical examples are composite Higgs models in
+which the Higgs boson is a pseudo-Goldstone from some strongly
+interacting dynamics~\cite{Kaplan:1983fs, Kaplan:1983sm, Banks:1984gj,
   Agashe:2004rs, Gripaios:2009pe}. Non-linear Higgs EFT, sometimes
 simply called `Higgs EFT', is an effective theory designed for these
 scenarios~\cite{Appelquist:1980vg, Longhitano:1980iz,
   Appelquist:1984rr, Grinstein:2007iv, Alonso:2012px,
   Buchalla:2013rka, Buchalla:2013eza, Brivio:2013pma, Gavela:2014vra,
   Buchalla:2015wfa, Brivio:2016fzo}. This model is also often referred
-to as `chiral Lagrangian', and indeed its structure is similar to
-that of chiral perturbation theory, for an introduction see for
-instance References~\cite{Scherer:2002tk, HillerBlin:2016jpb}.  Again, we
-begin by going through the ingredients to the effective theory before
+to as `chiral Lagrangian', and indeed its structure is similar to that
+of chiral perturbation theory, for an introduction see for instance
+References~\cite{Scherer:2002tk, HillerBlin:2016jpb}.  Again, we begin
+by going through the ingredients to the effective theory before
 constructing the Lagrangian.
 
 The \emph{particle content} of the non-linear Higgs EFT constitutes
@@ -2563,11 +2579,11 @@ the main difference to the linear Lagrangian: the physical scalar $h$
 is separated from the Goldstones $w^a$, both are included as
 independent degrees of freedom rather than as part of the doublet
 $\phi$. The Higgs boson $h$ is now a singlet under the SM gauge
-symmetry.  The Goldstone bosons $w^a$, no longer a part of a Higgs
-doublet, are organised in the exponential form
+symmetry.  The Goldstone bosons $w^a$ are organised in the exponential
+form
 % 
 \begin{equation}
-  U = e^{\im \sigma^a w^a} \,,
+  U = e^{\im \sigma^a w^a/v} \,,
 \end{equation}
 % 
 where $\sigma^a$ are the Pauli matrices.
@@ -2622,11 +2638,11 @@ The second dimensionless parameter is
   \frac {f^2} {\Lambda^2} \approx \frac 1 {16 \pi^2}
 \end{equation}
 % 
-for strongly coupled scenarios. Expanding in $f^2/\Lambda^2$
-corresponds to a loop expansion similar to that in chiral perturbation
-theory. Equivalently, one can define a \emph{chiral dimension}
-$\chi = [\ope{}]_c$ for each operator $\ope{}$ with the
-assignments~\cite{Buchalla:2013eza}
+for strongly coupled scenarios. Since this is of the same size as a
+loop factor, expanding in $f^2/\Lambda^2$ corresponds to a loop
+expansion, similar to that in chiral perturbation theory. Equivalently,
+one can define a \emph{chiral dimension} $\chi = [\ope{}]_c$ for each
+operator $\ope{}$ with the assignments~\cite{Buchalla:2013eza}
 % 
 \begin{align}
   [f]_c &= 1 \,, \quad &
@@ -2668,7 +2684,7 @@ the Lagrangian is given by~\cite{Alonso:2012px}\footnote{Two comments
   therefore usually classified as NLO operators~\cite{Alonso:2012px,
     Buchalla:2013rka}. Second, the function $\mathcal{F}_C(h)$ (and a
   corresponding one for the fermion kinetic terms) can be removed with
-  field redefinitions, shifting its physics into the other
+  field redefinitions, shifting its effects into the other
   couplings~\cite{Buchalla:2013rka, Brivio:2016fzo}.}
 %
 \begin{align}
@@ -2695,7 +2711,7 @@ or to simplify the expressions in $h/v$, for instance
   \mathcal{F}_C(h) = 1 + 2a_C \, \frac h v + b_C \, \left(\frac h v \right)^2 + \dots \,.
 \end{equation}
 
-At next-to-leading order in the chiral expansion many more terms
+At next-to-leading order in the chiral expansion, many more terms
 relevant for Higgs physics appear. We do not list them here and refer
 the interested reader for example to Reference~\cite{Brivio:2013pma}.
 
@@ -2719,9 +2735,9 @@ Lagrangian: the dimension-six operators predict certain correlations,
 while the non-linear description has more operators that can break
 these correlations~\cite{Brivio:2013pma}. A straightforward example is
 the relation between $hxx$ and $hhxx$ couplings. For dimension-six
-operators, it is fixed due to the appearance of
-$\phisq \sim (v^2 + 2vh + h^2) / 2$, while these couplings are always
-independent in the chiral approach, as can be seen in
+operators of the form $\phisq x x$, this ratio is fixed to $2v$, since
+$\phisq \sim (v^2 + 2vh + h^2) / 2$. In the chiral approach, these
+couplings are always independent, as can be seen in
 \autoref{eq:foundations_nonlinear_EFT_LO}.
 
 The current experimental limits leave room for both strongly or weakly
@@ -2742,7 +2758,7 @@ operators point towards non-linear physics~\cite{Brivio:2013pma}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Effective field theories are of course not the only way to describe
-the Higgs sector. During run~1 of the LHC, the most widely used
+the Higgs sector. During Run~1 of the LHC, the most widely used
 parametrisation was the $\kappa$
 framework~\cite{LHCHiggsCrossSectionWorkingGroup:2012nn} or the
 closely related $\Delta$ framework~\cite{Lafaye:2009vr}. Its
@@ -2750,13 +2766,14 @@ construction is remarkably simple: starting from the SM Higgs sector,
 all Higgs couplings are dressed with form factors,
 %
 \begin{equation}
-  g_{hxx} = \kappa_x \, g_{hxx}^{\text{SM}} \equiv (1 + \Delta_x) \, g_{hxx}^{\text{SM}} \,.
+  g_{hxx} = \kappa_{\vphantom{h}x}^{\vphantom{\text{SM}}} \, g_{hxx}^{\text{SM}} \equiv \left(1 + \Delta_{\vphantom{h}x}^{\vphantom{\text{SM}}} \right) \, g_{hxx}^{\text{SM}} \,,
   \label{eq:foundations_kappa_delta}
 \end{equation}
 %
-Some care has to be taken to treat the Higgs-gluon and Higgs-photon
-couplings consistently, where indirect effects of shifted Higgs-top or
-Higgs-$W$ couplings compete with direct effects from new
+such that $\kappa_x = 1$ or $\Delta_x = 0$ corresponds to the SM
+couplings.  Some care has to be taken to treat the Higgs-gluon and
+Higgs-photon couplings consistently, where indirect effects of shifted
+Higgs-top or Higgs-$W$ couplings compete with direct effects from new
 physics~\cite{Lafaye:2009vr}.
 
 From a theoretical point of view, the $\kappa$ framework is not
@@ -2783,8 +2800,8 @@ foundation. Its allure comes from its simplicity and the fact that it
 is designed around the simple question of measuring the couplings of
 the (SM-like) Higgs boson. This parametrisation made sense as a
 common denominator for the first Higgs measurements with limited
-statistics of run~1 of the LHC. But the increased amount of data and
-crucial kinematic information collected during run~2 require a
+statistics of Run~1 of the LHC. But the increased amount of data and
+crucial kinematic information collected during Run~2 require a
 different, more sophisticated language.
 
 
@@ -2809,16 +2826,16 @@ pseudo-observables. This procedure also requires an expansion in the
 inverse of the new physics scale $\Lambda$. Just as the EFT approach,
 pseudo-observables thus rely on new physics being heavy,
 $E \ll \Lambda$. So far, this framework has been developed for Higgs
-production in WBF or Higgs-strahlung, as well as for all
+production in WBF and Higgs-strahlung, as well as for all
 phenomenologically relevant Higgs decays.
 
 Phenomenologically, pseudo-observables can describe shifts in SM
 couplings as well as kinematic shapes. Like the EFT approach, their
 construction requires certain minimal assumptions on the symmetries of
 new physics as well as an expansion in $1/\Lambda$. In fact, at tree
-level pseudo-observables can be mapped linearly to an EFT constructed
-with the same ingredients (which is the non-linear Higgs EFT discussed
-above).
+level pseudo-observables can be mapped directly to the Wilson
+coefficients of an EFT constructed with the same ingredients (which is
+the non-linear Higgs EFT discussed above).
 
 The main difference between pseudo-observables and the EFT approach is
 a conceptual one. Pseudo-observables are designed from the perspective
@@ -2854,9 +2871,9 @@ experiment and theory.
 The parametrisations discussed so far have in common that they assume
 the absence of new light particles. Simplified models are designed to
 close this gap and to describe kinematic effects from new light
-resonances. In addition to resonance peaks these include threshold
+resonances. In addition to resonance peaks, these include threshold
 effects in loops and Higgs decays into (invisible) new light degrees
-of freedom. Simplified models also allow to combine information from
+of freedom. Simplified models thus allow to combine information from
 direct searches with indirect measurements. Except for the key element
 of adding new light propagating degrees of freedom to the SM, the term
 is not particularly well-defined, and there is a lot of freedom to
@@ -2912,13 +2929,13 @@ scalar singlets supplemented with higher-dimensional operators.
     %
     Parameters & 
     coefficients of SM amplitude &
-    coefficients of amplitudes &
+    coefficients of SM \& NP amplitudes &
     Lagrangian parameters of consistent QFT & 
     Lagrangian parameters of consistent QFT &
     depends \\
     %
     Validity conditions & 
-    SM-like &
+    SM-like NP &
     NP heavy, symmetries &
     NP heavy, symmetries & 
     NP heavy, symmetries &
@@ -2983,11 +3000,10 @@ compare their different properties.
 
 The different frameworks can be classified into consistent quantum
 field theories, which include the EFTs, and process-based
-parametrisations of amplitudes through form factors. The $\kappa$
-framework and pseudo-observables belong to the latter
-category. Simplified models can fall into either category. The QFT
-formalism allows to link different processes and to incorporate any
-loop effects.
+parametrisations of amplitudes through form factors, such as the
+$\kappa$ framework and pseudo-observables. Simplified models can fall
+into either category. Only the QFT formalism allows to link different
+processes and to incorporate any loop effects.
 
 More important for practical purposes is the range of phenomena that
 can be described. The $\kappa$ framework is limited to rescalings of
@@ -3005,9 +3021,9 @@ whereas by definition the pseudo-observables are only valid for a given
 process.
 
 To summarise, in the absence of new light particles, Higgs properties
-can be adequately parametrised by pseudo-observables, non-linear
-Higgs EFT, and linear Higgs EFT. The linear EFT approach is
-theoretically well-motivated and phenomenologically powerful, and we
+can be adequately parametrised by pseudo-observables, non-linear Higgs
+EFT, and linear Higgs EFT. The linear EFT approach is theoretically
+consistent, well-motivated, and phenomenologically powerful, and we
 focus on this framework during this thesis.
 
 
@@ -3038,4 +3054,4 @@ focus on this framework during this thesis.
 %   {} &\sim  \lambda_s^2  (\phisq)^2 + \frac {\lambda_s^2} {\Lambda^2} \, \partial_\mu (\phisq) \partial^\mu (\phisq) \,.
 % \end{align}
 
-% The first term is an unobservable renormalisation of an SM operator, but the second one is just $\ope{\phi2}$ with Wilson coefficient $f_{\phi 2} = 2\lambda_s^2$. At tree level, this is the only operator generated by this model.
+% The first term is an unobservable renormalisation of an SM operator, but the second one is just $\ope{\phi2}$ with Wilson coefficient $f_{\phi,2} = 2\lambda_s^2$. At tree level, this is the only operator generated by this model.
