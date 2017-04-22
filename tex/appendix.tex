@@ -11,7 +11,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 For completeness and reproducibility, we here collect our conventions,
-technical details, and some additional results. We begin in
+some technical details, and additional examples. We begin in
 Appendix~\ref{sec:appendix_sm} with our conventions for the Standard
 Model. Appendix~\ref{sec:appendix_pheno} defines standard kinematic
 quantities and units. \autoref{sec:appendix_eft_fundamentals} provides
@@ -84,7 +84,7 @@ given by
   \label{eq:appendix_bases_sm_lagrangian}
 \end{align}
 %
-As civilised people, we use natural units with
+As civilised high-energy physicists, we use natural units with
 %
 \begin{equation}
   \hbar = c = 1 \,,
@@ -103,7 +103,7 @@ the gauge bosons $G_\mu^a$, $W_\mu^a$, and $B_\mu$; and the fermions
 given in \autoref{tbl:appendix_bases_fermions}.  We usually leave out
 generation (flavour) indices and simply denote up-type quarks,
 down-type quarks, charged leptons, and neutrinos with $u$, $d$,
-$\ell$, $\nu$, respectively; and the doublets of left-handed quarks
+$\ell$, $\nu$, respectively, and the doublets of left-handed quarks
 and leptons with $Q$ and $L$.
 \autoref{eq:appendix_bases_sm_lagrangian} includes the field strength
 tensors
@@ -171,10 +171,10 @@ and $B$ combine with the Goldstone bosons $w^a$ to the mass
 eigenstates
 %
 \begin{align}
-  W^\pm_\mu &= \frac 1 {\sqrt 2} \left ( (W_\mu^1 - \frac 1 {gv} \partial_\mu w^1)
-              \pm \im (W_\mu^2 - \frac 1 {gv} \partial_\mu w^2) \right) \,, \\
+  W^\pm_\mu &= \frac 1 {\sqrt 2} \left ( \left (W_\mu^1 - \frac 1 {gv} \partial_\mu w^1 \right)
+              \pm \im \left( W_\mu^2 - \frac 1 {gv} \partial_\mu w^2 \right) \right) \,, \\
   %
-  Z_\mu &= c_W  (W_\mu^3 - \frac 1 {gv} \partial_\mu w^3)  - s_W B_\mu \,, \\
+  Z_\mu &= c_W  \left(W_\mu^3 - \frac 1 {gv} \partial_\mu w^3\right)  - s_W B_\mu \,, \\
   %
   A_\mu &= s_W  W_\mu^3  +    c_W B_\mu
 \end{align}
@@ -190,7 +190,7 @@ with weak mixing angle (or Weinberg angle)
 and masses
 %
 \begin{equation}
-  m_W = \frac {gv} 2  \qquad \text{and} \qquad m_Z = \frac {gv} {2 c_W} \, .
+  m_W = \frac {gv} 2  \qqquad \text{and} \qqquad m_Z = \frac {gv} {2 c_W} \, .
 \end{equation}
 %
 The remaining degree of freedom from $\phi$ is the physical Higgs
@@ -253,8 +253,11 @@ for the vector bosons.
 \label{sec:appendix_pheno}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Most of this thesis discusses processes in proton-proton collisions
-under LHC conditions. With the metric in
+Most of this thesis discusses interactions in proton-proton collisions
+at the LHC. Here we define kinematical quantities and units commonly
+used to describe such processes.
+
+With the metric in
 \autoref{eq:appendix_minkowski_metric}, the norm of any four-momentum
 $p_\mu$ is the invariant mass
 %
@@ -467,31 +470,31 @@ Similarly, a transformation
 corresponds to the classical equations of motion for $B_\mu$ plus
 $\ord{\varepsilon^2}$ corrections.
 
-If we use transformations like
-\autoref{eq:appendix_redefinition_ansatz_phi} or
-\autoref{eq:appendix_redefinition_ansatz_b} (or, equivalently, the
-equations of motion) to remove redundant dimension-six operators from
-the Lagrangian, we cannot use exactly the same freedom to also
-manipulate dimension-eight operators in a specific way. To do so, we
-have to add additional degrees of freedom to our transformations, for
-instance with
-%
-\begin{equation}
-  \phi \to \phi
-  + \frac {\varepsilon} {\Lambda^2} (\phisq) \phi 
-  + \frac {\varepsilon_1} {\Lambda^4} \, B_{\mu\nu} B^{\mu \nu} \, \phi 
-  + \frac {\varepsilon_2} {\Lambda^4} \, (D^\mu \phi)^\dagger (D_\mu \phi)  \, \phi
-  + \frac {\varepsilon_3} {\Lambda^4}  \, (\phisq)^2 \, \phi  \,.
-\end{equation}
-%
-The new parameters $\varepsilon_i$ will generate dimension-six
-operators from the $\mu^2$ term and dimension-eight operators from the
-SM dimension-four terms. Again, the $\ord{\varepsilon_i}$ terms in the
-transformed Lagrangian correspond to the equations of motion in
-$\phi$, now multiplied with dimension-four operators. Combined
-transformations as in \autoref{eq:appendix_redefinition_ansatz_phi}
-let us remove redundant dimension-six and dimension-eight operators
-simultaneously. 
+% If we use transformations like
+% \autoref{eq:appendix_redefinition_ansatz_phi} or
+% \autoref{eq:appendix_redefinition_ansatz_b} (or, equivalently, the
+% equations of motion) to remove redundant dimension-six operators from
+% the Lagrangian, we cannot use exactly the same freedom to also
+% manipulate dimension-eight operators in a specific way. To do so, we
+% have to add additional degrees of freedom to our transformations, for
+% instance with
+% %
+% \begin{equation}
+%   \phi \to \phi
+%   + \frac {\varepsilon} {\Lambda^2} (\phisq) \phi 
+%   + \frac {\varepsilon_1} {\Lambda^4} \, B_{\mu\nu} B^{\mu \nu} \, \phi 
+%   + \frac {\varepsilon_2} {\Lambda^4} \, (D^\mu \phi)^\dagger (D_\mu \phi)  \, \phi
+%   + \frac {\varepsilon_3} {\Lambda^4}  \, (\phisq)^2 \, \phi  \,.
+% \end{equation}
+% %
+% The new parameters $\varepsilon_i$ will generate dimension-six
+% operators from the $\mu^2$ term and dimension-eight operators from the
+% SM dimension-four terms. Again, the $\ord{\varepsilon_i}$ terms in the
+% transformed Lagrangian correspond to the equations of motion in
+% $\phi$, now multiplied with dimension-four operators. Combined
+% transformations as in \autoref{eq:appendix_redefinition_ansatz_phi}
+% let us remove redundant dimension-six and dimension-eight operators
+% simultaneously. 
 
 
 
@@ -538,7 +541,8 @@ The classical equation of motion for $\Phi$ is
 %
 with the trivial solution $\Phi_c = 0$.
 
-The first term in the effective action then just gives back $\phi^4$
+The first term of the effective action in
+\autoref{eq:effective_action_result} then just gives back $\phi^4$
 theory for the light field, without any new effective interactions:
 %
 \begin{equation}
@@ -596,7 +600,7 @@ Reference~\cite{Henning:2016lyp}):
 %
 Here we have used the definition of the functional trace in
 \autoref{eq:functional_trace} and inserted unity,
-$1 = \intfourx \ket{x} \bra{x} = \intfourp \ket{p} \bra{p}$.  The
+$\smash{1 = \intfourxsmall \ket{x} \bra{x} = \intfourpsmall \ket{p} \bra{p}}$.  The
 states $\ket{k}$, $\ket{p}$, and $\ket{q}$ are eigenstates of the
 derivative operator $\partial$,
 i.\,e.~$\bra{k} \im \partial_\mu = \bra{k} k_\mu$, while $\ket{x}$,
@@ -778,8 +782,8 @@ phenomenology of these operators in
 
 Another common basis for dimension-six operators was developed in
 References~\cite{Giudice:2007fh, Contino:2013kra} and is usually named
-`Strongly Interacting Light Higgs' or `SILH' after the first of
-these publications.  It is based on the Lagrangian
+`Strongly Interacting Light Higgs' or `SILH' after the title of
+Reference~\cite{Giudice:2007fh}. It is based on the Lagrangian
 %
 \begin{align}
   \lgr{SILH}
@@ -1281,6 +1285,7 @@ the set of rotations
   \twovec {w^0 }{ A^0 } = R(\beta)\,\twovec {a^0_1 }{ a^0_2 } \,,
   \qquad
   \twovec {w^\pm }{ H^\pm } = R(\beta)\,\twovec {h^\pm_1 }{ h^\pm_2 } \,,
+  \label{eq:appendix_models_2hdm_rotations}
 \end{equation}
 %
 with
@@ -1302,8 +1307,9 @@ mass spectrum of the model~\cite{Veltman:1976rt, Toussaint:1978zm,
   Frere:1982ma, Grimus:2007if, Hollik:1986gg, Beenakker:1988pv,
   Froggatt:1991qw, He:2001tp, Grimus:2008nb}.  Analytic relations
 linking the different Higgs masses and mixing angles with the
-Lagrangian parameters in \autoref{eq:validity_2hdm_potential} can be found
-\eg in Appendix A of Reference~\cite{Lopez-Val:2013yba}.  The conventions
+Lagrangian parameters in \autoref{eq:validity_2hdm_potential} can be
+found for example in Appendix A of Reference~\cite{Lopez-Val:2013yba}.
+The conventions
 %
 \begin{equation}
   0 <\beta < \pi/2
@@ -1324,11 +1330,11 @@ in the 2HDM and in the SM.
 \subsubsection{Couplings}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The tree-level coupling shifts of the light Higgs follow from these
-rotations and are given in
-Equations~\eqref{eq:validity_2hdm_higgs_vector_coupling} to
-\eqref{eq:validity_2hdm_last_coupling}. The light Higgs
-coupling to a charged Higgs pair reads
+The tree-level coupling shifts of the light Higgs directly follow from
+the rotations in \autoref{eq:appendix_models_2hdm_rotations} and are
+given in Equations~\eqref{eq:validity_2hdm_higgs_vector_coupling} to
+\eqref{eq:validity_2hdm_last_coupling}. The light Higgs coupling to a
+charged Higgs pair reads
 %
 \begin{multline}
    \frac {g_{h^0{H^+}{H^{-}}}}{g^\text{SM}_{hhh}}
@@ -1368,7 +1374,7 @@ SM. The conventional loop form factors read
  A_s(\tau) &= -\frac{\tau}{2}\,\left[1-\tau f(\tau) \right] &&= 1/6 + \mathcal{O}(\tau^{-1}) \,, \notag \\
  A_f(\tau) &= \tau\left[1+(1-\tau)\,f(\tau) \right] &&= 2/3 + \mathcal{O}(\tau^{-1}) \,, \notag \\
  A_V(\tau) &= -\frac{1}{2}\,\left[2+3\tau+3(2\tau-\tau^2)\,f(\tau) \right] &&= -7/2 + \mathcal{O}(\tau^{-1}) \,,
-\end{alignat}{2}
+\end{alignat}
 %
 where
 %
@@ -1461,8 +1467,8 @@ Collecting all bilinear terms from
 %
 with the mass matrix $\mathcal{M}_{\tilde{t}}$ given in
 \autoref{eq:validity_stops_mass}.  Assuming all parameters in
-\autoref{eq:appendix_models_stops_lagrangian} to be real, $m_{ij}$ can
-be diagonalised through the usual orthogonal transformation
+\autoref{eq:appendix_models_stops_lagrangian} to be real, it can be
+diagonalised through the usual orthogonal transformation
 $R(\theta_{\tilde{t}})$ given in
 \autoref{eq:appendix_models_2hdm_rotation}.  This rotates the gauge
 eigenstates $(\tilde{t}_L, \tilde{t}_R)$ into the mass basis
@@ -1496,7 +1502,7 @@ by
 %
 As we assume the right-handed bottom partner $\tilde{b}_R$ to be heavy
 and thus decoupled, the sbottom-like scalar eigenstate $\tilde{b}_L$
-undergoes no mixing and can be readily identified with the physical
+undergoes no mixing and can be directly identified with the physical
 eigenstate. 
 
 
@@ -1535,6 +1541,10 @@ and given in \autoref{eq:validity_stops_wilson_coefficients}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Vector triplet}
 \label{sec:appendix_models_triplet}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Model setup}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Our final example is the heavy vector triplet defined in
@@ -2148,7 +2158,7 @@ corresponding to the Wilson coefficients given in
 
 In \autoref{eq:information_cramer_rao_general} in
 \autoref{sec:information_formalism} we stated the Cram\'er-Rao
-bound~\cite{Rao:1945, Cramer:1946}: the covariance of any estimator is
+bound~\cite{Rao:1945, Cramer:1946}: the covariance matrix of any estimator is
 bounded from below by the inverse Fisher information. Here we show the
 proof for one-dimensional unbiased estimators, closely following
 Reference~\cite{Watkins:statistics}.
@@ -2217,7 +2227,7 @@ identity\footnote{This inequality is well-known in the form of the
   $-1 \leq r \equiv \smash{\cov [X,Y] / \sqrt{\var[X]\,\var[Y]}} \leq 1$.}
 %
 \begin{equation}
-  \cov [X, Y]^2 \geq \var [X] \, \var[Y] \,,
+  \cov [X, Y]^2 \leq \var [X] \, \var[Y] \,,
 \end{equation}
 %
 leading to
@@ -2258,7 +2268,7 @@ precision with which continuous theory parameters can be measured.  As
 a simple example, we now calculate the Fisher information in a number
 of event counts $n_c$ in different channels $c$. We assume that the
 channels are independent and follow Poisson distributions with mean
-values $\bar{n_c} = \nu_c$:
+values $\overbar{n}_c = \nu_c$:
 %
 \begin{align}%
   f (\mathbf{n} |\boldnu) 
@@ -2287,9 +2297,9 @@ we find
   I_{c c'} (\boldnu) \equiv - E \left[ \frac { \partial^2 \log f} {\partial \nu_c \partial \nu_{c'}} \middle| \boldnu \right] = \frac {\delta_{c c'} } {\nu_c} \,.
 \end{equation}
 
-\autoref{eq:information_information_covariant_transformation} allows us to calculate
-the Fisher information in terms of some theory parameters $\theta_i$
-rather than the Poisson means $\nu_c$:
+\autoref{eq:information_information_covariant_transformation} then
+allows us to calculate the Fisher information in terms of some theory
+parameters $\theta_i$ rather than the Poisson means $\nu_c$:
 %
 \begin{align}
   I_{ij}  (\boldtheta) = \sum_c \pder {\nu_c} {\theta_i} \, \frac 1 {\nu_c} \, \pder {\nu_{c}} {\theta_j} \,.
@@ -2320,8 +2330,8 @@ events
         = L g^2 \sigma_0 + L \sigma_B \,,
 \end{align}
 %
-where the constants $L$, $\sigma_S(g) = g^2 \sigma_0$, and $\sigma_B$
-schematically stand for the luminosity and the signal and background
+where $L$, $\sigma_S(g) = g^2 \sigma_0$, and $\sigma_B$
+stand for the integrated luminosity as well as the signal and background
 cross sections.
 
 The Fisher information in terms of the coupling $g$ is then
@@ -2373,7 +2383,7 @@ References~\cite{Cranmer:2006zs, Plehn:2013paa} and described in
 \autoref{sec:information_algorithm}. Other detector effects are not
 included. 
 
-For Higgs production in weak boson fusion with the decay to tau pairs,
+For Higgs production in weak boson fusion with a decay into tau pairs,
 we model the smearing of the signal and background processes according
 to Figure~1a of Reference~\cite{Aad:2015vsa}. For the Higgs processes
 we use a Gaussian with width $17$~GeV. For the $Z$ backgrounds we rely
@@ -2383,10 +2393,10 @@ description of the high-mass tail of the $Z$ peak around
 $m_{\tau\tau} \sim m_H$. The ATLAS data, our fitted smearing function,
 and the final \toolfont{MadMax} output are shown in
 \autoref{fig:information_wbf_tautau_smearing}. We check that other
-distributions are not affected significantly by the smearing.
+distributions are not affected by the smearing.
 
 In the $4\ell$ channel, the backgrounds are negligible around
-$m_{4\ell} \approx m_h$, so that we do not have to include a smearing
+$m_{4\ell} \approx m_h$, hence we do not have to include a smearing
 to estimate the discrimination power. For Higgs production with a
 single top in the $h \to \gamma \gamma$ mode, we follow
 Reference~\cite{Kling:2016lay} and smear the $m_{\gamma \gamma}$

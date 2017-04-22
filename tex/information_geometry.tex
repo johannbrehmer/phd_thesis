@@ -85,19 +85,20 @@ potentially high-dimensional phase space is (at parton level) encoded
 in the scattering amplitudes or Feynman diagrams, of which there can
 easily be hundreds for a given process.
 
-\emph{Traditional analysis methods} typically begin with simple
-selection cuts on standard kinematic observables such as energies,
-momenta, angles, or invariant masses. Background contributions are
-estimated with simulational or data-driven methods. The final
-statistical analysis typically relies on total event counts or on
-histograms of kinematic observables.  These techniques are intuitive
-and all their steps are transparent. They work well for simple
-signatures, such as a resonance peak on top of a smooth background, as
-in the discovery of the $gg \to h \to \gamma \gamma$
+Analyses of collider signatures with \emph{traditional methods}
+typically begin with simple selection cuts on standard kinematic
+observables such as energies, momenta, angles, or invariant
+masses. Background contributions are estimated with simulational or
+data-driven methods. The final statistical analysis often relies on
+total event counts or on histograms of kinematic observables.  These
+techniques are motivated by physical arguments, all their steps are
+transparent, and they are relatively easy to reproduce, even for
+theorists. They work well for simple signatures, such as a resonance
+peak on top of a smooth background, as in the discovery of the
+$gg \to h \to \gamma \gamma$
 signal~\cite{Aad:2012tfa,Chatrchyan:2012xdj}. This approach requires a
-careful tailoring of the strategy to each question, and does not scale
-well with the complexity of the theory questions or the kinematics of
-the processes.
+careful tailoring to each problem, and does not scale well with the
+complexity of the theory questions or of the kinematics of the processes.
 
 At the other end of the spectrum, the LHC collaborations increasingly
 rely on measurement strategies based on high-level statistical
@@ -112,7 +113,7 @@ is directly used as an observable. The detector response is estimated
 by convoluting this expression with suitable transfer
 functions. Shower deconstruction~\cite{Soper:2011cr, Soper:2012pb} and
 event deconstruction~\cite{Soper:2014rya} extend this concept to the
-parton shower to take into account the information encoded in jet
+parton shower to take into account the information encoded in the jet
 substructure. The method of optimal observables~\cite{Atwood:1991ka,
   Davier:1992nw, Diehl:1993br} applies the same idea to the
 measurement of a small theory parameter. All of these tools intrinsically
@@ -128,18 +129,18 @@ theory, often requires a discretisation of the theory space, which can
 be computationally expensive. In addition, care has to be taken to
 avoid dependencies on EFT basis choices.
 
-A second class of complex statistical tools falls under the category of
-\emph{likelihood-free inference}~\cite{cranmer:nips2016}. They are
-mostly based on (supervised) machine learning techniques:
+A second class of complex statistical tools belongs to the category of
+\emph{likelihood-free inference}~\cite{cranmer:nips2016}. These
+techniques are mostly based on (supervised) machine learning:
 %sophisticated interpolation techniques
-flexible nonlinear functions, such as boosted decision trees and
-neural networks, are `trained' to describe patterns in a set of
+flexible nonlinear functions, for example boosted decision trees or
+deep neural networks, are `trained' to describe patterns in a set of
 training samples. This approach is agnostic about the amplitudes
 describing a process. The methods with which the input samples are
 generated are irrelevant. Unlike simple likelihood-based methods,
-these samples can be based on data as well as on complicated
-Monte-Carlo simulations with a parton shower and full detector
-simulation. New technologies are developed at an impressive
+these samples can be based on data or on full-fledged
+Monte-Carlo simulations with a parton shower and a detailed detector
+simulation. New ideas are developed at an impressive
 pace~\cite{Cranmer:2015bka, Louppe:2016ylz, Louppe:2016aov,
   Cranmer:2016lzt, Baldi:2016fzo}. These tools are applied to problems
 at all steps of the analysis process, ranging from
@@ -170,10 +171,12 @@ Moreover, the design of event selections and analysis strategies
 requires clearly defined guidelines.
 
 We present a novel approach to tackle these problems based on
-information geometry~\cite{efron1975, amari1982, amari2000joho}. This
-defines tools that are intrinsically designed for continuous parameter
-spaces of arbitrary dimensionality, independent of basis choices, and
-without the need for any discretisation of the model hypothesis.
+information geometry~\cite{efron1975, amari1982, amari2000joho}. It is
+intrinsically designed for continuous parameter spaces of arbitrary
+dimensionality, independent of basis choices, and without the need for
+any discretisation of the model hypothesis. These properties are
+particularly convenient for measurements of Higgs properties in terms of
+a large number of effective operators.
 
 The central object in our approach is the \emph{Fisher information}
 matrix. According to the Cram\'er-Rao bound~\cite{Rao:1945,
@@ -201,8 +204,7 @@ multivariate tools.
 We develop an algorithm, \toolfont{MadFisher}, that can calculate the
 Fisher information for arbitrary perturbative particle physics
 processes based on Monte-Carlo methods. We can calculate the
-quantities outlined above, each designed to answer different practical
-questions:
+quantities outlined above, and use them to answer practical questions:
 %
 \begin{itemize}
 \item What is the maximum precision
@@ -215,7 +217,7 @@ questions:
   kinematic observables, rather than on the information in the full
   high-dimensional phase space?
     %
-\item Which role do non-linear terms in the
+\item Which role do non-linear effects in the
   theory parameters play?
 \end{itemize}
 
@@ -428,9 +430,9 @@ invertible.}:
   \label{eq:information_cramer_rao_general}
 \end{equation}
 %
-where we implicitly sum over repeated indices $i$, $j$.  In
-particular, for an unbiased estimator
-$\overbar {\boldtheta} = \boldtheta_0$ and
+where we implicitly sum over repeated indices $i$, $j$. For an
+unbiased estimator, \ie for $\overbar {\boldtheta} = \boldtheta_0$,
+the Cram\'er-Rao bound takes on the simple form
 %
 \begin{equation}
   \cov \left[ \hat{\boldtheta} \middle| \boldtheta_0 \right]_{ij}
@@ -465,7 +467,7 @@ estimators exist. The textbook example is the estimation of the
 variance parameter of the normal distribution: here the sample
 variance is an unbiased estimator with minimum variance, but it does
 not reach the lower bound given by
-\autoref{eq:information_cramer_rao_unbiased}. And if an efficient
+\autoref{eq:information_cramer_rao_unbiased}. Even if an efficient
 estimator exists, just from the Fisher information we do not know how
 to construct its form $\hat{\boldtheta}(\boldx)$. However, it can be
 shown that under certain regularity assumptions\footnote{One condition
@@ -477,10 +479,10 @@ shown that under certain regularity assumptions\footnote{One condition
   choices have to be removed before the maximum-likelihood estimator
   is guaranteed to saturate the Cram\'er-Rao bound. This can for
   instance become important when new physics effects can flip the sign
-  of couplings, and lead to the same cross sections as the SM. But
-  these considerations are irrelevant for the analysis of small
-  deformations from the SM with effective operators in this thesis.},
-the \emph{maximum-likelihood estimator} defined by
+  of couplings, leading to the same predictions for cross sections as
+  the SM. But these considerations are irrelevant for the analysis of
+  small deformations from the SM with effective operators in this
+  thesis.}, the \emph{maximum-likelihood estimator} defined by
 %
 \begin{equation}
   \hat{\boldtheta}_{\text{MLE}} (\boldx) = \argmax_\boldtheta f(\boldx | \boldtheta)
@@ -509,8 +511,8 @@ same experiment.
 % This allows us to calculate the
 % distribution of information over phase space.
 Furthermore, a description of experiments in terms of the Fisher
-information is independent of arbitrary basis choices: it is invariant
-under the parametrisation of the observables $\boldx$, and transforms
+information does not depend on arbitrary basis choices: it is independent of
+the parametrisation of the observables $\boldx$, and transforms
 covariantly under a reparametrisation of the theory parameters
 $\theta \to \Theta (\theta)$,
 %
@@ -662,11 +664,13 @@ points on the model manifold can be defined along geodesics,
 \begin{equation}
   d(\boldtheta_a,\boldtheta_b)
   = \min_{\boldtheta(s)} \;
-  \int_{s_a}^{s_b} \!\! \mathrm{d} s \; \sqrt{I_{ij} (\boldtheta(s)) \;  \tder {\theta_i (s)} s \; \tder {\theta_j (s)} s } \,.
+  \int_{s_a}^{s_b} \!\! \mathrm{d} s \; \sqrt{I_{ij} (\boldtheta(s)) \;  \tder {\theta_i (s)} s \; \tder {\theta_j (s)} s }
   \label{eq:information_global_distances}
 \end{equation}
 %
-The shortest path $\boldtheta(s)$ satisfies the geodesic equation
+with $\boldtheta(s_a) = \boldtheta_a$ and
+$\boldtheta(s_b) = \boldtheta_b$.  The shortest path $\boldtheta(s)$
+satisfies the geodesic equation
 %
 \begin{equation}
   \ttder {\theta^i}{s} = - \Gamma^i_{\;jk} \, \tder{\theta^j}{s} \, \tder{\theta^k}{s}
@@ -684,7 +688,7 @@ Christoffel symbols are defined as
 This distance measure is symmetric,
 $d(\boldtheta_a,\boldtheta_b) = d(\boldtheta_b,\boldtheta_a)$, and
 provides a more general notion of discrimination power between two
-points that does not require choosing one of them to evaluate the
+parameter points that does not require choosing one of them to evaluate the
 Fisher information. Unlike local distances, global distances are
 sensitive to how the Fisher information changes over model space, \ie
 they take into account the curvature of the geometry. From
@@ -725,8 +729,8 @@ effective field theories.
 The simplest LHC measurement is an event count in some fiducial region
 described by Poisson statistics. As explicitly calculated in
 Appendix~\ref{sec:appendix_information_example}, the Fisher
-information for such an experiment in terms of theory parameters
-$\boldtheta$ reads
+information for the measurement of theory parameters $\boldtheta$ in
+such an experiment reads
 %
 \begin{equation}
   I^{\text{xsec}}_{ij} (\boldtheta) = L \, \pder {\sigma (\boldtheta)} {\theta_i}  \, \frac 1 {\sigma (\boldtheta)}\, \pder {\sigma (\boldtheta)} {\theta_j} \,. 
@@ -743,9 +747,9 @@ total cross section as a function of the theory parameters.
 \label{sec:information_in_distributions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The simplest way to add kinematic features is to measure a
+The most straightforward way to add kinematic features is to measure a
 differential cross section or histogram of a kinematic observable $v$,
-which could be a transverse momentum, energy, invariant mass, or
+for instance a transverse momentum, energy, invariant mass, or
 angle. Leaving aside systematic uncertainties, such a histogram is
 just a set of statistically independent counting experiments, each
 with a different Poisson mean that depends on the theory parameters in
@@ -800,11 +804,12 @@ guideline for which distributions to measure and publish.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 To describe the full high-dimensional kinematics of LHC processes
-without relying on a choice of observables or binning, we use an
-\emph{extended likelihood} ansatz, also known as marked Poisson
-process.  The observables in LHC physics consist of a total number of
-events $n$, each of which has some high-dimensional kinematic
-properties $\boldx_i$. The probability distribution is given by
+including all correlations and without relying on a choice of
+observables or binning, we use an \emph{extended likelihood} ansatz,
+also known as marked Poisson process.  The observables in LHC physics
+consist of a total number of events $n$, each of which has some
+high-dimensional kinematic properties $\boldx_i$. The probability
+distribution is given by
 %
 \begin{equation}
   f(\boldx | \boldtheta) = \Pois ( n | L \sigma(\boldtheta) ) \; \prod_{i=1}^n f^{(1)} (\boldx_i|\boldtheta) \,,
@@ -818,17 +823,23 @@ Calculating the Fisher information for this ansatz, we find
 %
 \begin{equation}
   I^{\text{full}}_{ij} (\boldtheta)
-  = L \, \pder {\sigma (\boldtheta)} {\theta_i}  \, \pder {\sigma (\boldtheta)} {\theta_j} \, \frac 1 {\sigma (\boldtheta)}\;
+  = L \, \pder {\sigma (\boldtheta)} {\theta_i}  \, \frac 1 {\sigma (\boldtheta)} \, \pder {\sigma (\boldtheta)} {\theta_j}  \;
     + L \, \sigma(\boldtheta) \, 
     E \left[ \pder {\log f^{(1)} (x|\boldtheta)} {\theta_i} \, \pder {\log f^{(1)} (x|\boldtheta)} {\theta_j} \middle | \boldtheta \right] \,,
 \end{equation}
 %
 adding a distribution term to the Poisson part. Typically, the
-single-event likelihood functions $f^{(1)} (x |\boldtheta)$ are complex
-expressions given by a sum of complex amplitudes. Instead of
+single-event likelihood functions $f^{(1)} (x |\boldtheta)$ are
+complex expressions given by a sum of intricate amplitudes. Instead of
 calculating their derivatives analytically, we rely on a Monte-Carlo
 approach, approximating the phase-space integral with a sum over
-events:
+events:\footnote{In its simplest form, this step implicitly assumes
+  that we can experimentally distinguish between all phase-space
+  points. Resolution effects and undetected particles can be taken
+  into account with suitable transfer
+  functions~\cite{Artoisenet:2008zz, Mattelaer:2011ywa,
+    Mertens:2014iya} or with a simple smearing as discussed in
+  \autoref{sec:information_algorithm}.}
 %
 \begin{equation}
   \int \! \mathrm{d}x \, f^{(1)} (x) \to \sum_{\text{events } k} \frac {\Delta \sigma_k} {\sigma} \,.
@@ -859,7 +870,7 @@ constrained\,---\,independent of the analysis strategy. By comparing
 this matrix to the Fisher information in kinematic distributions as
 defined in \ref{sec:information_in_distributions}, we can calculate how
 much discrimination power is lost in a traditional histogram-based
-analysis compared to an hypothetical ideal multivariate analysis.
+analysis compared to a hypothetical ideal multivariate analysis.
 
 
 
@@ -896,7 +907,7 @@ constrain theory parameters by measuring the distribution of one
 kinematic variable instead of the full kinematics. The latter
 describes how well we can constrain theory parameters using the full,
 high-dimensional kinematics of the event, but only taking into account
-those events in a certain slice of the phase space.
+the events in a certain slice of the phase space.
 
 
 
@@ -1068,7 +1079,7 @@ can be measured. For an EFT this can directly be translated into a
 \emph{new physics reach}
 %
 \begin{equation}
-  \frac {\Lambda} {\sqrt{f}} = \frac v {\sqrt{\Delta \theta_{\text{min}}}} =  v \; I(\boldzero)^{1/4} \,.
+  \frac {\Lambda} {\sqrt{f}} = \frac v {\sqrt{\Delta \theta_{\text{min}}}} =  v \; I^{1/4} \,.
   \label{eq:information_new_physics_reach}
 \end{equation}
 %
@@ -1103,7 +1114,7 @@ information away from the SM and therefore in global distances as
 given in \autoref{eq:information_global_distances}. The difference
 between linearised distances based on the SM Fisher information metric
 and global distances measured along geodesics, related to the
-curvature of the information geometry, therefore provides an intuitive
+curvature of the theory manifold, therefore provides an intuitive
 measure of the role of $\ord{1/\Lambda^4}$ contributions.
 
 \newparagraph
@@ -1120,7 +1131,7 @@ description of the model space, does not suffer from these problems.
 In particular, the Fisher information transforms covariantly under
 basis transformations, see
 \autoref{eq:information_information_covariant_transformation}. Eigenvalues,
-traces, and determinants of the Fisher information are invariant under
+traces, and determinants of the Fisher information are invariant under basis
 rotations $\ope{i} \to R_{ij} \ope{j}$ with $R \in O(n)$. Rescalings
 $\ope{i} \to \alpha \ope{i}$ change the eigenvalues of individual
 information matrices. However, in our analysis we will usually compare
@@ -1158,8 +1169,8 @@ First, for the event generation we use
 simultaneously calculate the differential rates
 $\Delta\sigma (\boldx | \boldtheta_n)$ for different parameter points
 $\boldtheta_n$ using the same phase-space grid.\footnote{An
-  alternative option that supports a variety of transfer functions to
-  describe the detector response is
+  alternative tool for this step, which supports a variety of transfer
+  functions to describe the detector response, is
   \toolfont{MadWeight}~\cite{Artoisenet:2008zz, Mattelaer:2011ywa,
     Mertens:2014iya}.}
 
@@ -1181,18 +1192,20 @@ parton level. The phenomenologically most drastic effect of the
 detector response is the smearing of narrow resonance peaks in
 invariant mass distributions. This is taken into account with the
 procedure outlined in References~\cite{Cranmer:2006zs, Plehn:2013paa}:
-we replace the propagator of the corresponding $s$-channel particles
-with the square root of the smearing function, for instance a Gaussian
+we replace the propagator of the corresponding $s$-channel particle
+with the square root of a smearing function, for instance a Gaussian
 or double Gaussian with parameters fitted to ATLAS and CMS
-results. Other detector effects are not included in our first studies
+results. Other detector effects are not included in the first studies
 presented here. However, a more realistic description of the
 experimental resolution can easily be achieved by including a complete
-set of transfer functions, similar to the matrix element method.
+set of transfer functions, similar to the usual approach for the
+matrix element method~\cite{Artoisenet:2008zz, Mattelaer:2011ywa,
+  Mertens:2014iya}.
 
 \newparagraph
 %
 The second step is based on the fact that the differential cross
-section can be decomposed into a finite set of basis components,
+section can be decomposed into a finite set of components,
 representing the different squared amplitudes and interference terms:
 %
 \begin{align}
@@ -1212,11 +1225,11 @@ contributing to a sub-process. In the last step we collect the
 various terms into components $c$.
 
 If the model parameters $\boldtheta$ contribute additively and
-multiplicatively to vertices, as is often the case of effective field
+multiplicatively to vertices, as is often the case for effective field
 theories as discussed in \autoref{sec:foundations_heft_pheno}, the
 functions $w_c$ are polynomials in the different $\theta_i$. As a
 simple example, consider a process with just one vertex, with known
-coupling $g$ in the SM and new physics contribution $\theta$. The
+coupling $g$ in the SM and new physics amplitude proportional to the parameter $\theta$. The
 differential cross section is then proportional to
 %
 \begin{align}
@@ -1323,9 +1336,9 @@ parameter points, the analytically known weight functions
 $w_c(\boldtheta)$, and the event samples for the basis parameters
 $\Delta \sigma_n (\boldx)$, we can exactly calculate the differential
 rates $\Delta\sigma (\boldx | \boldtheta)$ for arbitrary values of
-$\boldtheta$. 
+$\boldtheta$, without having to rerun the Monte-Carlo simulation.
 
-The derivatives with respect to the theory parameters can easily be
+Derivatives with respect to the theory parameters can easily be
 calculated numerically,
 %
 \begin{equation}
@@ -1343,7 +1356,7 @@ calculate the Fisher information matrices. For the total Fisher
 information, we calculate the information in each event with
 \autoref{eq:information_information_from_events} and then sum
 the results. For the information in total rates and in individual
-distributions we first sum the weights to get the total cross sections
+distributions, we first sum the weights to get the total cross sections,
 and calculate the Fisher information with
 Equations~\eqref{eq:information_information_rate} and
 \eqref{eq:information_information_histo}.
@@ -1529,9 +1542,9 @@ space, after selection cuts, or differentially in kinematic variables.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We now apply these tools to calculate the information on dimension-six
-operators in Higgs measurements. Three processes are considered: weak
-boson fusion with a decay into tau pairs or four leptons, and Higgs
-production with a single top.
+operators in Higgs measurements. Three processes are considered: Higgs
+production in weak boson fusion with a decay into tau pairs or four
+leptons, and Higgs production with a single top.
 
 For this first demonstration we neglect both systematic and theory
 uncertainties; we later show how these can be added in
@@ -1539,7 +1552,7 @@ Section~\ref{sec:information_systematics}. The maximum precision on
 Wilson coefficients calculated in this section is therefore
 optimistic. Our main focus here is the relative comparison of the
 information in different phase-space regions or in different
-distributions; these are not affected by systematic uncertainties that
+distributions. These are not affected by systematic uncertainties that
 dominantly concern the overall rate.
 
 
@@ -1639,12 +1652,13 @@ fusion with $h \to \tau \tau$.
 
 We do not simulate tau decays, but multiply the rates with the
 branching ratios for the semi-leptonic di-tau mode
-$\tau \tau \to (\ell \nu \nu) (j j\nu)$, and assume that the di-tau system
-can be reconstructed with the collinear approximation with a realistic
-resolution for $m_{\tau\tau}$~\cite{Rainwater:1998kj, Plehn:1999xi,
-  Plehn:2009nd}. We take into account the experimental mass resolution
-by smearing the $m_{\tau \tau}$ distributions. The smearing functions
-and their parameters are estimated from Figure~1a of
+$\tau \tau \to (\ell \nu \nu) (j j\nu)$, and assume that the di-tau
+system can be reconstructed with a reasonable resolution for
+$m_{\tau\tau}$, for instance with the collinear
+approximation~\cite{Rainwater:1998kj, Plehn:1999xi, Plehn:2009nd}. We
+take the experimental mass resolution into account by smearing the
+$m_{\tau \tau}$ distributions. The smearing functions and their
+parameters are estimated from Figure~1a of
 Reference~\cite{Aad:2015vsa} and are described in
 \autoref{sec:appendix_information_smearing}.  Otherwise, no detector
 effects are included. We require only loose acceptance cuts
@@ -1656,7 +1670,7 @@ effects are included. We require only loose acceptance cuts
   \label{eq:information_wbf_tautau_acceptance_cuts}
 \end{align}
 %
-to include as much of phase space as possible.
+to include as much of the phase space as possible.
 
 The different QCD radiation patterns of the Higgs signal and the
 electroweak and QCD background processes are a key feature to separate
@@ -1670,14 +1684,15 @@ Reference~\cite{Rainwater:1998kj},
   \varepsilon^\text{CJV}_{\text{WBF $H$}} = 0.71 \,, \qquad
   \varepsilon^\text{CJV}_{\text{EW $Z$}} = 0.48 \,, \qquad
   \varepsilon^\text{CJV}_{\text{QCD $Z$}} = 0.14 \,, \qquad
-  \varepsilon^\text{CJV}_{\text{GF $H$}} = 0.14 \,,
+  \varepsilon^\text{CJV}_{\text{ggF $H$}} = 0.14 \,,
 \end{equation}
 %
 neglecting the dependence of the veto efficiency on the phase
 space. All other particle identification and trigger efficiencies are
-absorbed into a single universal $\varepsilon$. We calculate the
-Fisher information for $pp$ collisions at $\sqrt{s} = 13~\tev$ for an
-integrated luminosity times universal efficiencies of
+absorbed into a single universal efficiency factor $\varepsilon$. We
+calculate the Fisher information for $pp$ collisions at
+$\sqrt{s} = 13~\tev$ for an integrated luminosity times universal
+efficiencies of
 %
 \begin{equation}
   L \cdot \varepsilon = 30~\ifb \,.
@@ -1709,9 +1724,10 @@ the subleading electroweak $Zjj$ background, but take into account how
 $\ope{\phi,2}$ rescales the gluon-fusion Higgs contribution.
 
 Our analysis focuses on the Fisher information around the SM point
-$\boldtheta = 0$ as well as on the two-dimensional planes in parameter
-space where all but two operators are zero. All in all, we calculate
-the Fisher information for approximately 6000 parameter points.
+$\boldtheta = \boldzero$ as well as on the two-dimensional planes in
+parameter space where all but two operators are zero. All in all, we
+calculate Fisher information matrices at approximately 6000 parameter
+points.
 
 
 
@@ -1804,7 +1820,7 @@ $\Delta \theta \approx 0.05$ or
 $\Lambda/\sqrt{f_{W/WW}} \approx 1~\tev$ level. Finally, $\ope{B}$ and
 $\ope{BB}$ only play a role in subleading $Z$-mediated production
 diagrams. Their Wilson coefficients cannot be measured very well in
-this process, and does not affect the measurement of the other
+this process, and do not affect the measurement of the other
 operators through correlations.
 
 In \autoref{fig:information_wbf_tautau_geometry_2d} we visualise the
@@ -1812,7 +1828,7 @@ sensitivity to the three operators $\ope{\phi,2}$, $\ope{W}$, and
 $\ope{WW}$ as contours of the local information distances from the SM
 as defined in \autoref{eq:information_local_distances}. Such an error
 ellipsoid shows the maximum precision that can be attained in a
-measurement in this process. 
+measurement in this process in the absence of new physics.
 
 Moving away from the SM, the Fisher information and with it the
 sensitivity to the different operators changes. The largest effects
@@ -1866,11 +1882,11 @@ dimension-six terms will have a larger effect.
   \caption{Distribution of the differential Fisher information in the
     WBF $h \to \tau \tau$ channel (shaded red) with respect to the
     invariant mass of the $\tau \tau$ system (left) and its transverse
-    momentum (right). We also show the normalised SM signal (solid
-    black) and QCD $Zjj$ (dotted grey) rates. The dashed blue lines
-    show the effect of an exaggerated new physics benchmark
-    $f_{W} \, v^2 / \Lambda^2 = 0.5$. The last bin is an overflow
-    bin.}
+    momentum (right). We also show the normalised rates for the SM
+    signal (solid black) and the QCD $Zjj$ background (dotted
+    grey). The dashed blue lines show the effect of an exaggerated new
+    physics benchmark $f_{W} \, v^2 / \Lambda^2 = 0.5$ on the WBF
+    signal. The last bin is an overflow bin.}
   \label{fig:information_wbf_tautau_differential_information_taus}
 \end{figure}
 
@@ -1880,8 +1896,8 @@ space. Following \autoref{sec:information_differential}, we calculate
 the Fisher information in bins of kinematic variables. This set of
 information matrices can be condensed into a single real-valued
 function of the phase-space variables by calculating the
-determinants. The resulting distribution of differential information
-over typical kinematic variables is shown in
+determinants. The resulting distributions of differential information
+over typical kinematic variables are shown in
 Figures~\ref{fig:information_wbf_tautau_differential_information_taus}
 and \ref{fig:information_wbf_tautau_differential_information_jets} and
 compared to the differential cross sections of the signal and the
@@ -1897,11 +1913,12 @@ dominant background process.
     transverse momentum of the leading jet (top left), the dijet mass
     (top right), the separation in pseudorapidity between the two jets
     (bottom left), and their difference in the azimuthal angle (bottom
-    right). We also show the normalised SM signal (solid black) and
-    QCD $Zjj$ (dotted grey) rates. The dashed blue lines show the effect of
-    $f_{W} \, v^2 / \Lambda^2 = 0.5$, except in the bottom right
-    panel, where we show $f_{WW} \, v^2 / \Lambda^2 = 0.5$. The last
-    bin is an overflow bin.}
+    right). We also show the normalised rates for the SM signal (solid
+    black) and the QCD $Zjj$ background (dotted grey). The dashed blue
+    lines show the effect of $f_{W} \, v^2 / \Lambda^2 = 0.5$ on the
+    WBF signal, except in the bottom right panel, where we show
+    $f_{WW} \, v^2 / \Lambda^2 = 0.5$. The last bin is an overflow
+    bin.}
   \label{fig:information_wbf_tautau_differential_information_jets}
 \end{figure}
 
@@ -1909,17 +1926,18 @@ Clearly, the signal-to-background ratio improves for large invariant
 masses of the tagging jets and towards $m_{\tau \tau}$ values around
 the Higgs mass. The information on all directions in model space is
 larger in these phase-space regions. On the other hand, most of our
-dimension-six operators include derivatives, leading to an increasing
-amplitude with momentum transfer through the gauge-Higgs vertex. This
+dimension-six operators include derivatives, leading to an amplitude
+increasing with the momentum transfer through the gauge-Higgs vertex. This
 momentum flow is not observable, but the transverse momenta of the
 tagging jets and the Higgs boson are strongly correlated with it, as
 shown in \autoref{sec:validity_wbf_observables}. Indeed most of the
 information on higher-dimensional operators comes from the high-energy
 tail of the transverse momenta of the tagging jets or the $\tau \tau$
 system, confirming what we demonstrated for specific model setups in
-the previous chapter. Note that these distributions also quantify how
-much the power of a Higgs measurement is limited by imposing an upper
-limit on the momentum transfer to improve the validity of the EFT. 
+the previous chapter.
+% Note that these distributions also quantify how
+% much the power of a Higgs measurement is limited by imposing an upper
+% limit on the momentum transfer to improve the validity of the EFT.
 
 In the rapidity difference between the tagging jets we can see a
 trade-off between these two effects: on the one hand, at larger
@@ -1946,6 +1964,8 @@ dimension-six operators.
   \label{fig:information_wbf_tautau_cut_scan}
 \end{figure}
 
+\newparagraph
+%
 In practice, the distribution of the differential information can be a
 useful tool to guide the design of event selections. As an example, we
 consider a class of typical WBF cuts
@@ -1983,7 +2003,7 @@ transfer can improve the applicability of the EFT. For weak boson
 fusion, this means requiring
 %
 \begin{equation}
-  p_{T,j} < p_{T,j}^{\text{max}} \,,
+  p_{T,j}^{\vphantom{\text{max}}} < p_{T,j}^{\text{max}} \,,
   \label{eq:information_ptmax_cut}
 \end{equation}
 %
@@ -2006,7 +2026,7 @@ Our tools let us calculate the Fisher information in the WBF
 $h \to \tau \tau$ channel for different cuts of the form
 \autoref{eq:information_ptmax_cut}. For simplicity, we focus on the
 operators $\ope{W}$ and $\ope{WW}$ and calculate the determinant of
-the Fisher information in this plane. Following
+the Fisher information in this plane in model space. Following
 \autoref{eq:information_new_physics_reach}, we translate it into a
 typical new physics reach
 %
@@ -2038,10 +2058,9 @@ $p_{T,j}^{\text{max}}$.
 coupled physics we can probe new physics scales significantly above
 the experimental momentum transfer, at least in our simple setup that
 neglects systematic and theory uncertainties. Such a scenario does not
-require any cuts of the form in \autoref{eq:information_ptmax_cut} for
-the EFT to work. However, for moderate to small Wilson coefficients
-$0.25 \lesssim f \lesssim 1$, the scale hierarchy is less clear,
-confirming the discussion in
+require any validity cuts for the EFT to work. However, for smaller
+Wilson coefficients $0.25 \lesssim f \lesssim 1$, the scale hierarchy
+is less clear, confirming the discussion in
 Section~\ref{sec:validity_introduction}. Our results show that
 imposing a maximum momentum transfer of a few hundred GeV can increase
 the separation between the experimental energy scale and the probed
@@ -2090,6 +2109,8 @@ theorists~\cite{Corbett:2015ksa, Butter:2016cvz}.
   \label{fig:information_wbf_tautau_histograms_contours}
 \end{figure}
 
+\newparagraph
+%
 In the presence of backgrounds, a histogram-based analysis requires a
 stringent event selection, either based on traditional kinematic cuts
 or on a multivariate classifier. First, we choose the WBF cuts
@@ -2097,7 +2118,7 @@ or on a multivariate classifier. First, we choose the WBF cuts
 \begin{align}
   105~\gev < m_{\tau \tau} < 165~\gev \,, \quad
   p_{T,j_1} > 50~\gev \,, \quad
-  m_{jj} > 1~\tev \quad \text{and} \quad
+  m_{jj} > 1~\tev \,, \quad
   \Delta \eta_{jj} > 3.6 \,.
   \label{eq:information_wbf_tautau_wbfcuts}
 \end{align}
@@ -2133,7 +2154,7 @@ of the following standard observables:
 %
 \item the separation in azimuthal angle between the two jets, now
   defined in a signed version~\cite{Klamke:2007cu}
-  $\Delta \phi_{jj} = \phi_{j_{\eta < 0}} - \phi_{j_{\eta >0}}$, with
+  $\smash{\Delta \phi_{jj} = \phi_{j_{\eta < 0}} - \phi_{j_{\eta >0}}}$, with
   bin size $2 \pi / 20$;
 %
 \item the separation in pseudorapidity between the $\tau \tau$ system
@@ -2465,7 +2486,7 @@ by the $4 \ell$ system.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Production vs decay kinematics}
+\subsubsection*{Production vs.\ decay kinematics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure}
@@ -2483,10 +2504,10 @@ The key question for the WBF $h\to 4\ell$ mode is how the rich decay
 kinematics can improve the sensitivity to the dimension-six
 operators. In \autoref{fig:information_wbf_4l_production_decay}, we
 separately study the effects of the effective operators on the
-production vertices only (fixing the decay vertex to the SM value) and
+production vertex (fixing the decay vertex to the SM value) and
 on the decay vertex (where the production is fixed to the SM
-vertex). We find that only the sensitivity to $\ope{\phi,2}$ profits
-from the decay vertex. Since this operator rescales all Higgs
+structure). We find that only the sensitivity to $\ope{\phi,2}$ profits
+from effects in the decay vertex. Since this operator rescales all Higgs
 couplings in the same way, this also applies to any other Higgs decay
 mode. The sensitivity on the momentum-dependent operators $\ope{W}$,
 $\ope{WW}$, $\ope{B}$, and $\ope{BB}$, on the other hand, comes almost
@@ -2497,8 +2518,25 @@ or $Z$ bosons can be very large at the LHC, enhancing production-side
 effects by sizeable factors of $E^2 / \Lambda^2$. The momentum flow
 through the decay vertices, on the other hand, is bounded by the Higgs
 mass (neglecting off-shell Higgs decays), and $E^2 / \Lambda^2$ is
-small. Our results show that this disadvantage is not compensated by
-the complex $h \to 4\ell$ kinematics.
+small. Our results show that this is not compensated by the complex
+$h \to 4\ell$ kinematics.
+
+\newparagraph
+%
+To overcome this disadvantage, momentum-dependent signatures in Higgs
+decays require a large production cross section. Gluon-fusion
+production with $h \to 4\ell$ has a rate that is approximately 13
+times larger than the WBF process~\cite{deFlorian:2016spz}. Since the
+decay kinematics is the same as in the process studied here and the
+Fisher information scales linearly with the number of events, we can
+provide a rough estimate of the information in this process by scaling
+the decay-only Fisher information with this factor 13. We find that
+even with the increased rate from production in gluon fusion, the
+$h \to 4 \ell$ channel is not as sensitive to Higgs-gauge operators as
+the WBF production process. Of course, this simple estimate ignores
+any differences in the backgrounds, efficiencies, systematic or theory
+uncertainties, and Higgs kinematics between the two production
+processes.
 
 
 
@@ -2512,7 +2550,7 @@ the tagging jets are linked to the production process, while the decay
 products of the Higgs are mostly sensitive to the decay vertex. We
 define the jet observables in complete analogy to the $\tau \tau$
 channel in \autoref{sec:information_wbf_tautau}. These are complemented
-by five observables characterising the decay
+by observables characterising the decay
 kinematics~\cite{Bolognesi:2012mm, Englert:2012xt}:
 %
 \begin{itemize}
@@ -2522,14 +2560,14 @@ kinematics~\cite{Bolognesi:2012mm, Englert:2012xt}:
   % 
 \item the smaller invariant mass of the reconstructed $\ell^+ \ell^-$, $m_{Z_2}$;
   % 
-\item the angle $\cos \theta_1 = \hat{p}_{\ell^-_1} \cdot \hat{p}_{Z_2}
-  \Big|_{Z_1}$ with spatial unit vectors $\hat{p}$ defined in the $Z_1$ system;
+\item the angle $\smash{\cos \theta_1 = \hat{p}_{\ell^-_1} \cdot \hat{p}_{Z_2}
+  \big|_{Z_1}}$ with spatial unit vectors $\hat{p}$ defined in the $Z_1$ system;
   % 
 \item analogously $\cos \theta_2$; and
   % 
 \item the angle
-  $\cos \Phi = ( \hat{p}_{\ell^-_1} \times \hat{p}_{\ell^+_1} )
-  \cdot ( \hat{p}_{\ell^-_2} \times \hat{p}_{\ell^+_2} ) \Big|_{4\ell}$,
+  $\smash{\cos \Phi = ( \hat{p}_{\ell^-_1} \times \hat{p}_{\ell^+_1} )
+  \cdot ( \hat{p}_{\ell^-_2} \times \hat{p}_{\ell^+_2} ) \big|_{4\ell}}$,
   defined in the $4\ell$ rest frame.
 \end{itemize}
 %
@@ -2571,20 +2609,6 @@ decay vertices to dimension-six operators is limited by the
 restriction of the momentum flow through the decay vertex to the Higgs
 mass. 
 
-To overcome this disadvantage, momentum-dependent signatures in Higgs
-decays require a large production cross section. Gluon-fusion
-production with $h \to 4\ell$ channel has a rate that is approximately
-13 times larger than the WBF process studied
-here~\cite{deFlorian:2016spz}. Since the decay kinematics is the same
-as in the process studied here and the Fisher information scales
-linearly with the number of events, we can provide a rough estimate of
-the information in this process by scaling the decay-only Fisher
-information with this factor 13. We find that even with the increased
-rate from production in gluon fusion, the $h \to 4 \ell$ is not as
-sensitive to Higgs-gauge operators as the WBF production process. Of
-course, this simple estimate ignores the differences in the production
-kinematics.
-
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2623,7 +2647,7 @@ kinematics.
 
 Our final example process
 % for $CP$-even dimension-six operators
-is Higgs production with a single top in the $t$ channel. We focus on
+is Higgs production with a single top in the $t$-channel. We focus on
 the $h \to \gamma \gamma$ mode and a hadronic top decay $t \to b
 jj$.
 As shown in \autoref{fig:information_th_diag}, diagrams where the
@@ -2633,7 +2657,7 @@ of the sign of the top Yukawa coupling~\cite{Maltoni:2001hu}. Our
 analysis focuses on the question which of the phase-space
 distributions provide access to this interesting amplitude
 structure. We stick to a parton-level analysis at leading order in the
-five-flavor scheme. For our toy example we include only one of the
+five-flavour scheme. For our toy example we include only one of the
 dominant backgrounds, single top production with two photons, and in
 particular ignore the multi-jet background. The subleading
 $t\overbar{t} \, \gamma\gamma$ background populates qualitatively
@@ -2791,8 +2815,7 @@ information for approximately 2500 parameter points.
   shown are set to zero. The white contours show distances of
   $d=1, 2, 3, 4, 5$.}
 
-Using our setup described in \autoref{sec:information_algorithm}, we
-calculate the total Fisher information at the SM to be
+For the total Fisher information at the SM, we find
 %
 \begin{equation}
   I_{ij} (\boldzero) =
@@ -2876,11 +2899,11 @@ always be sensitive to the squared dimension-six terms.
   \caption{Distribution of the differential SM Fisher information in
     the Higgs plus single top channel (shaded red) with respect to the
     mass (left) and transverse momentum (right) of the diphoton
-    system. We also show the normalised SM signal (solid black) and
-    the single-top background (dotted grey) rates. The dashed blue
-    lines show the effect of
-    $f_{t} \, v^2 / \Lambda^2 = 0.2$. In the right panel, the last bin
-    is an overflow bin.}
+    system. We also show the normalised rates for the SM signal (solid
+    black) and the single-top background (dotted grey). The dashed
+    blue lines show the effect of $f_{t} \, v^2 / \Lambda^2 = 0.2$ on
+    the $th$ signal. In the right panel, the last bin is an overflow
+    bin.}
   \label{fig:information_th_differential_information_photons}
 \end{figure}
 
@@ -2904,11 +2927,11 @@ of information.
     transverse momentum of the leading jet (top left), the invariant
     mass of the $th$ system (top right), and the differences in
     pseudorapidity and azimuthal angle between the diphoton system and
-    the top decay products (bottom). We also show the normalised SM
-    signal (solid black) and the single-top background (dotted grey)
-    rates. The dashed blue lines show the effect of
-    $f_{t} \, v^2 / \Lambda^2 = 0.2$. The last bins are overflow bins
-    where applicable.}
+    the top decay products (bottom). We also show the normalised rates
+    for the SM signal (solid black) and the single-top background
+    (dotted grey). The dashed blue lines show the effect of
+    $f_{t} \, v^2 / \Lambda^2 = 0.2$ on the $th$ signal. The last bins
+    are overflow bins where applicable.}
   \label{fig:information_th_differential_information_jets}
 \end{figure}
 
@@ -2921,8 +2944,8 @@ of information.
 
 The next question is again how much of this maximal information is
 contained in various kinematic distributions. A histogram-based
-analysis requires a reasonable signal-to-background ratio, so we
-require
+analysis is only feasible with a reasonable signal-to-background
+ratio, so we require
 %
 \begin{equation}
   p_{T,j_1} > 50~\gev \,, \quad 
@@ -2943,7 +2966,7 @@ following distributions:
   with bin size 1~GeV in the allowed range of $123~...~127~\gev$;
 %
 \item the transverse momentum of the diphoton system,
-  $p_{T,\gamma \gamma}$ with bin size 40~GeV up to 600~GeV and an
+  $p_{T,\gamma \gamma}$, with bin size 40~GeV up to 600~GeV and an
   overflow bin;
 %
 \item the separation in azimuthal angle between the two photons,
@@ -3084,14 +3107,13 @@ demonstration.
 
 The applications of information geometry in the previous sections were
 based on a number of simplifying assumptions. Most importantly, we
-only considered statistical sources of uncertainty, and neglected
+only considered statistical sources of uncertainty and neglected
 systematic and theory uncertainties on the signal and background
 predictions. In \autoref{sec:information_systematics} we show how such
-effects can be added to our approach.
-
-\autoref{sec:information_comparison} finally compares the Fisher
-information to two other statistical tools, the well-known
-log-likelihood ratio and the ambient information geometry.
+effects change our results. \autoref{sec:information_comparison}
+finally compares the Fisher information to two other statistical
+tools, the well-known log-likelihood ratio and the ambient information
+geometry.
 
 
 
@@ -3100,15 +3122,14 @@ log-likelihood ratio and the ambient information geometry.
 \label{sec:information_systematics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The precision of most Higgs measurements at the LHC will ultimately be
+The precision of most Higgs measurements at the LHC are ultimately
 limited by systematic and theory
 uncertainties~\cite{deFlorian:2016spz, Khachatryan:2016vau}. The
-expected differential rates of cross sections of signal and
-backgrounds are then not exactly known, but depend on unknown nuisance
-parameters $\boldnu$. In \autoref{sec:information_nuisance} we showed
-how these can be incorporated in our approach, and defined a profiled
-Fisher information that conservatively includes systematic
-uncertainties. 
+expected differential signal and background cross sections are then
+not exactly known, but depend on nuisance parameters $\boldnu$. In
+\autoref{sec:information_nuisance} we showed how these can be
+incorporated in our approach, and defined a profiled Fisher
+information.
 
 \begin{figure}[!b]
   \includegraphics[width=0.49 \textwidth,clip=true,trim=0 0.6cm 0 0.0cm]{fig/information/wbf_tautau_systematics_nuisance.pdf}%
@@ -3126,16 +3147,22 @@ uncertainties.
 \end{figure}
 
 We now demonstrate this tool for the information on $CP$-even
-dimension-six operators in WBF Higgs production in the $\tau \tau$
-mode. Our setup is the same as in \autoref{sec:information_wbf_tautau},
-except that we assign a $5\%$ or $10\%$ Gaussian uncertainty on the
-overall signal rate, representing for instance missing higher orders,
-pdf or efficiency uncertainties. After profiling over this nuisance
-parameter, the information in the total rate is significantly reduced,
-which mostly limits the precision in the $\ope{\phi,2}$ direction. In
-\autoref{fig:information_wbf_tautau_systematics_comparison} we show how the
-information in various distributions is affected by such an
-uncertainty, in complete analogy to
+dimension-six operators in WBF Higgs production with
+$h \to \tau \tau$. Our setup is the same as in
+\autoref{sec:information_wbf_tautau}, except that we assign a $5\%$ or
+$10\%$ Gaussian uncertainty on the overall signal rate, representing
+for instance missing higher orders, parton density function
+uncertainties, or errors on the
+efficiencies. \autoref{fig:information_wbf_tautau_systematics}
+demonstrates how profiling over these nuisance parameters
+significantly reduces the information on $\ope{\phi,2}$, which only
+rescales the total signal rate. The other operators are mostly
+constrained from kinematic shapes and much less sensitive to such a
+systematic uncertainty on the overall normalisation.
+
+In \autoref{fig:information_wbf_tautau_systematics_comparison} we show
+how the information in various distributions is affected by such a
+systematic error, in complete analogy to
 \autoref{fig:information_wbf_tautau_histograms_comparison}. The new
 physics reach in the $\ope{\phi,2}$ direction is reduced by 800~GeV.
 
@@ -3185,16 +3212,17 @@ measurement. The aim of our approach is to minimise the covariance
 matrix of estimators, which the Cram\'er-Rao bound links to the Fisher
 information. Alternatively one can maximise the power of hypothesis
 tests at a given significance level. According to the Neyman-Pearson
-lemma, the relevant object is the (log) likelihood ratio between the
-two hypotheses. These two objects are designed for different
-questions: the likelihood ratio compares two discrete hypotheses,
-while the Fisher information is suited for continuous parameter spaces
-of arbitrary dimensionality.
+lemma, the best test statistic is the likelihood ratio between the two
+hypotheses. These two objects are designed for different questions:
+the likelihood ratio compares two discrete hypotheses, while the
+Fisher information describes continuous parameter spaces of arbitrary
+dimensionality. Nevertheless, it is instructive to compare these
+tools.
 
 We consider the expected log likelihood ratio
 %
 \begin{equation}
-  q(\boldtheta_b , \boldtheta_a )
+  q(\boldtheta_b ; \boldtheta_a )
   \equiv -2 \, E \left[
   \log \frac { f(\mathbf{x}|\boldtheta_b) }   { f(\mathbf{x} |\boldtheta_a) }
   \middle | \boldtheta_a \right] \,.
@@ -3205,7 +3233,7 @@ For the extended likelihood ansatz of
 gives the likelihood ratio as
 %
 \begin{multline}
-  q(\boldtheta_b , \boldtheta_a ) = -2 \, \sigma(\boldtheta_a) L
+  q(\boldtheta_b ; \boldtheta_a ) = -2 \, \sigma(\boldtheta_a) L
   \left( 1 - \frac {\sigma(\boldtheta_b)} {\sigma(\boldtheta_a)} + \log  \frac {\sigma(\boldtheta_b)} {\sigma(\boldtheta_a)} \right) \\
    -2 \,  \sigma(\boldtheta_a) L \;
     E \left[
@@ -3217,7 +3245,7 @@ This can be calculated with Monte-Carlo integration as given in
 \autoref{eq:information_monte_carlo_integration}, finally leading to
 %
 \begin{equation}
-  q(\boldtheta_b , \boldtheta_a ) = -2 \,  L \; \sum_{\text{events}} \;
+  q(\boldtheta_b ; \boldtheta_a ) = -2 \,  L \; \sum_{\text{events}} \;
   \Delta \sigma (\boldtheta_a)  \;
   \log \frac {\Delta \sigma (\boldtheta_b) } { \Delta \sigma (\boldtheta_a) } \,. 
   \label{eq:information_expected_log_likelihood_ratio}
@@ -3252,17 +3280,17 @@ the $\tau \tau$ mode as described in
 $\boldtheta$ in the $\ope{W}$-$\ope{WW}$ plane. For each of these
 points we calculate the local and global distance from the SM point
 defined by the Fisher information, as well as the expected log
-likelihood ratio.
+likelihood ratio to the SM.
 
 As shown in \autoref{fig:information_wbf_tautau_llr}, the local and
-especially the global distances are almost exactly equal to the
-expected likelihood ratio, with small differences only becoming
-visible around the $3 \sigma$ level.  This demonstrates that different
-statistical tools probe the same physics and can be chosen based on
-practical considerations. In particular, the conclusions from an
-information-based analysis, utilising the convenient properties for
-high-dimensional theory spaces, also apply to exclusion limits based
-on the log likelihood ratio. 
+especially the global distances are almost exactly equal to the square
+root of the expected likelihood ratio, with small differences only
+becoming visible around the $3 \sigma$ level.  This demonstrates that
+different statistical tools probe the same physics and can be chosen
+based on practical considerations. In particular, the conclusions from
+an information-based analysis, utilising the convenient properties of
+the Fisher information for high-dimensional theory spaces, also apply
+to exclusion limits based on the log likelihood ratio.
 
 
 
@@ -3271,8 +3299,8 @@ on the log likelihood ratio.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Information geometry, as introduced in
-\autoref{sec:information_formalism}, assigns structure to the
-parameter space of a theory. It is, interestingly, possible to define
+\autoref{sec:information_formalism}, assigns a structure to the
+parameter space of a theory. It is, interestingly, also possible to define
 a distance measure in the space of \emph{all} distributions, without
 relying on any model structure. One such approach is the \emph{ambient
   Fisher information}~\cite{dawid1977, carter2008}. It defines the
@@ -3333,18 +3361,18 @@ ambient distance is ultimately limited from above at $\pi/2$.
 Information geometry can be used to optimise measurements of any set
 of continuous theory parameters at the LHC. Following the Cram\'er-Rao
 bound, the Fisher information matrix defines the maximum precision
-with which model parameters can be estimated. It is well-suited to
-high-dimensional parameter spaces since it requires no discretisation
-of the tested hypotheses, does not depend on arbitrary basis choices,
-and can simultaneously encode the maximum sensitivity to all
-directions in model space in a single matrix. These properties make
-information geometry particularly useful for the analysis of effective
-field theories. Moreover, the Fisher information is additive between
-different measurements and between different phase-space regions within
-the same process, making it trivial to discuss the combination of
-different channels. Understood as a metric on the theory space, it
-provides an intuitive geometric interpretation of discrimination
-power.
+with which model parameters can be estimated. This object is
+well-suited to high-dimensional parameter spaces since it requires no
+discretisation of the tested hypotheses, does not depend on arbitrary
+basis choices, and can simultaneously encode the maximum sensitivity
+to all directions in model space in a single matrix. These properties
+make information geometry particularly useful for the analysis of
+effective field theories. Moreover, the Fisher information is additive
+between different measurements and between different phase-space
+regions within the same process, making it trivial to discuss the
+combination of different channels. Understood as a metric on the
+theory space, it provides an intuitive geometric interpretation of
+discrimination power.
 
 We developed an algorithm that can calculate the Fisher information in
 arbitrary high-energy physics processes based on Monte-Carlo
@@ -3352,26 +3380,31 @@ simulations. We can calculate the total information based on the full
 high-dimensional phase space with all correlations. This defines the
 maximal precision with which the parameters can be probed; applied to
 effective field theories this gives us the maximal new physics reach
-of any signature. The Fisher information can also be calculated
-differentially to understand how the discriminating power is
-distributed over phase space, helping to define optimal event
-selection. Alternatively, we can calculate the information in
-individual distributions of kinematic observables rather than the full
-high-dimensional kinematics. This defines the most powerful
-observables, and lets us compare the power of simple histogram-based
-analyses to methods based on the matrix elements or machine-learning
-techniques. All of these instruments can be useful to improve
-measurement strategies. An interesting feature of the geometric
-interpretation is that the curvature of the Riemannian manifold
-defined by the Fisher information provides a handle on the square of
-dimension-six contributions. As discussed in
-\autoref{sec:validity_squares}, under certain assumptions this lets us
-analyse the convergence of the EFT expansion in $1/\Lambda$.
+of any process.
 
+The Fisher information can also be calculated differentially to
+understand how the discriminating power is distributed over phase
+space, helping define optimal event selection. Alternatively, we
+can calculate the information in individual distributions of kinematic
+observables rather than the full high-dimensional kinematics. This
+defines the most powerful observables, and lets us compare the power
+of simple histogram-based analyses to methods based on the matrix
+elements or machine-learning techniques. All of these instruments can
+be useful to improve measurement strategies.
+
+An interesting feature of the geometric interpretation is that the
+curvature of the Riemannian manifold defined by the Fisher information
+provides a handle on the square of dimension-six contributions. As
+discussed in \autoref{sec:validity_squares}, under certain assumptions
+this lets us analyse the convergence of the EFT expansion in
+$1/\Lambda$.
+
+\newparagraph
+%
 With these novel tools we analysed how well effective dimension-six
 operators can be measured in three different Higgs channels. First, we
 studied the kinematics of Higgs production in weak boson fusion with a
-decay into a tau pair.  As expected, a large fraction of the
+decay into tau pairs.  As expected, a large fraction of the
 constraining power in this process comes from few events with large
 momentum transfer. Care has to be taken with tight cuts on the
 rapidity separation of the tagging jets, which throw away a large
@@ -3414,7 +3447,7 @@ provide useful information.  Unfortunately, the tiny cross section of
 this process strongly limits the constraining power on dimension-six
 operators. Even with HL-LHC data and under idealised conditions, these
 distributions are only sensitive to new physics scales around
-$550~\gev$, while an optical multivariate analysis may be able to
+$550~\gev$, while an optimal multivariate analysis may be able to
 probe scales up to $700~\gev$ according to the Cram\'er-Rao bound.
 
 These initial studies do not include systematic and theory
