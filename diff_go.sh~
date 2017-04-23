@@ -1,0 +1,1 @@
+git latexdiff afab761efdfb30071a01a405d32b9515a35d5071 bed4d357968c4989cb74e70f05f037940e19a1c8 -v --cleanup none --main phd_thesis_johann_brehmer.tex --allow-spaces --graphics-markup=0 --config="PICTUREENV=(?:picture|DIFnomarkup|tabular|align|fmfgraph|alignat)[\w\d*@]*" --math-markup=0

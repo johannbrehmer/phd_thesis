@@ -552,10 +552,10 @@ Different from the conventions in differential geometry, we use lower
 indices for vectors and sum over repeated lower indices.
 
 First, the metric defines a \emph{local distance} in the tangent space
-at some point $\boldtheta_a$, see
-\autoref{fig:information_geometry_illustration}. We usually consider
-the distance between $\boldtheta_a$ itself and some other point
-$\boldtheta_b$ in this tangent space,
+at some point $\boldtheta_a$.
+%, see \autoref{fig:information_geometry_illustration}.
+We usually consider the distance between $\boldtheta_a$ itself and
+some other point $\boldtheta_b$ in this tangent space,
 %
 \begin{equation}
   \dlocal( \boldtheta_b; \boldtheta_a )
@@ -563,84 +563,84 @@ $\boldtheta_b$ in this tangent space,
   \label{eq:information_local_distances}
 \end{equation}
 
-\begin{figure}[!b]
-  % First picture: tangent space
-  \begin{tikzpicture}[
-    x={(175:0.7cm)},
-    y={(40:.5cm)},
-    z={(90:1cm)}] % defines viewpoint
+% \begin{figure}[!b]
+%   % First picture: tangent space
+%   \begin{tikzpicture}[
+%     x={(175:0.7cm)},
+%     y={(40:.5cm)},
+%     z={(90:1cm)}] % defines viewpoint
 
-    \def\curvaturefactor{0.07} % curvature of the global geometry
+%     \def\curvaturefactor{0.07} % curvature of the global geometry
 
-    % global space
-    \foreach \t in {0,1,...,99}{%
-      \draw[color=dark-red!70!white] (-3,{-3+0.06*\t},{-\curvaturefactor*(9 + (-3+0.06*\t)^2)})
-      -- (-3,{-3+0.06*(\t+1)},{-\curvaturefactor*(9 + (-3+0.06*(\t+1))^2)});
-      \draw[color=dark-red!70!white] (-2,{-3+0.06*\t},{-\curvaturefactor*(4 + (-3+0.06*\t)^2)})
-      -- (-2,{-3+0.06*(\t+1)},{-\curvaturefactor*(4 + (-3+0.06*(\t+1))^2)});
-      \draw[color=dark-red!70!white] (-1,{-3+0.06*\t},{-\curvaturefactor*(1 + (-3+0.06*\t)^2)})
-      -- (-1,{-3+0.06*(\t+1)},{-\curvaturefactor*(1 + (-3+0.06*(\t+1))^2)});
-      \draw[color=dark-red!70!white] (0,{-3+0.06*\t},{-\curvaturefactor*(0 + (-3+0.06*\t)^2)})
-      -- (0,{-3+0.06*(\t+1)},{-\curvaturefactor*(0 + (-3+0.06*(\t+1))^2)});
-      \draw[color=dark-red!70!white] (1,{-3+0.06*\t},{-\curvaturefactor*(1 + (-3+0.06*\t)^2)})
-      -- (1,{-3+0.06*(\t+1)},{-\curvaturefactor*(1 + (-3+0.06*(\t+1))^2)});
-      \draw[color=dark-red!70!white] (2,{-3+0.06*\t},{-\curvaturefactor*(4 + (-3+0.06*\t)^2)})
-      -- (2,{-3+0.06*(\t+1)},{-\curvaturefactor*(4 + (-3+0.06*(\t+1))^2)});
-      \draw[color=dark-red!70!white] (3,{-3+0.06*\t},{-\curvaturefactor*(9 + (-3+0.06*\t)^2)})
-      -- (3,{-3+0.06*(\t+1)},{-\curvaturefactor*(9 + (-3+0.06*(\t+1))^2)});
+%     % global space
+%     \foreach \t in {0,1,...,99}{%
+%       \draw[color=dark-red!70!white] (-3,{-3+0.06*\t},{-\curvaturefactor*(9 + (-3+0.06*\t)^2)})
+%       -- (-3,{-3+0.06*(\t+1)},{-\curvaturefactor*(9 + (-3+0.06*(\t+1))^2)});
+%       \draw[color=dark-red!70!white] (-2,{-3+0.06*\t},{-\curvaturefactor*(4 + (-3+0.06*\t)^2)})
+%       -- (-2,{-3+0.06*(\t+1)},{-\curvaturefactor*(4 + (-3+0.06*(\t+1))^2)});
+%       \draw[color=dark-red!70!white] (-1,{-3+0.06*\t},{-\curvaturefactor*(1 + (-3+0.06*\t)^2)})
+%       -- (-1,{-3+0.06*(\t+1)},{-\curvaturefactor*(1 + (-3+0.06*(\t+1))^2)});
+%       \draw[color=dark-red!70!white] (0,{-3+0.06*\t},{-\curvaturefactor*(0 + (-3+0.06*\t)^2)})
+%       -- (0,{-3+0.06*(\t+1)},{-\curvaturefactor*(0 + (-3+0.06*(\t+1))^2)});
+%       \draw[color=dark-red!70!white] (1,{-3+0.06*\t},{-\curvaturefactor*(1 + (-3+0.06*\t)^2)})
+%       -- (1,{-3+0.06*(\t+1)},{-\curvaturefactor*(1 + (-3+0.06*(\t+1))^2)});
+%       \draw[color=dark-red!70!white] (2,{-3+0.06*\t},{-\curvaturefactor*(4 + (-3+0.06*\t)^2)})
+%       -- (2,{-3+0.06*(\t+1)},{-\curvaturefactor*(4 + (-3+0.06*(\t+1))^2)});
+%       \draw[color=dark-red!70!white] (3,{-3+0.06*\t},{-\curvaturefactor*(9 + (-3+0.06*\t)^2)})
+%       -- (3,{-3+0.06*(\t+1)},{-\curvaturefactor*(9 + (-3+0.06*(\t+1))^2)});
 
-      \draw[color=dark-red!70!white] ({-3+0.06*\t},-3,{-\curvaturefactor*(9 + (-3+0.06*\t)^2)})
-      -- ({-3+0.06*(\t+1)},-3,{-\curvaturefactor*(9 + (-3+0.06*(\t+1))^2)});
-      \draw[color=dark-red!70!white] ({-3+0.06*\t},-2,{-\curvaturefactor*(4 + (-3+0.06*\t)^2)})
-      -- ({-3+0.06*(\t+1)},-2,{-\curvaturefactor*(4 + (-3+0.06*(\t+1))^2)});
-      \draw[color=dark-red!70!white] ({-3+0.06*\t},-1,{-\curvaturefactor*(1 + (-3+0.06*\t)^2)})
-      -- ({-3+0.06*(\t+1)},-1,{-\curvaturefactor*(1 + (-3+0.06*(\t+1))^2)});
-      \draw[color=dark-red!70!white] ({-3+0.06*\t},0,{-\curvaturefactor*(0 + (-3+0.06*\t)^2)})
-      -- ({-3+0.06*(\t+1)},0,{-\curvaturefactor*(0 + (-3+0.06*(\t+1))^2)});
-      \draw[color=dark-red!70!white] ({-3+0.06*\t},1,{-\curvaturefactor*(1 + (-3+0.06*\t)^2)})
-      -- ({-3+0.06*(\t+1)},1,{-\curvaturefactor*(1 + (-3+0.06*(\t+1))^2)});
-      \draw[color=dark-red!70!white] ({-3+0.06*\t},2,{-\curvaturefactor*(4 + (-3+0.06*\t)^2)})
-      -- ({-3+0.06*(\t+1)},2,{-\curvaturefactor*(4 + (-3+0.06*(\t+1))^2)});
-      \draw[color=dark-red!70!white] ({-3+0.06*\t},3,{-\curvaturefactor*(9 + (-3+0.06*\t)^2)})
-      -- ({-3+0.06*(\t+1)},3,{-\curvaturefactor*(9 + (-3+0.06*(\t+1))^2)});
-    }
+%       \draw[color=dark-red!70!white] ({-3+0.06*\t},-3,{-\curvaturefactor*(9 + (-3+0.06*\t)^2)})
+%       -- ({-3+0.06*(\t+1)},-3,{-\curvaturefactor*(9 + (-3+0.06*(\t+1))^2)});
+%       \draw[color=dark-red!70!white] ({-3+0.06*\t},-2,{-\curvaturefactor*(4 + (-3+0.06*\t)^2)})
+%       -- ({-3+0.06*(\t+1)},-2,{-\curvaturefactor*(4 + (-3+0.06*(\t+1))^2)});
+%       \draw[color=dark-red!70!white] ({-3+0.06*\t},-1,{-\curvaturefactor*(1 + (-3+0.06*\t)^2)})
+%       -- ({-3+0.06*(\t+1)},-1,{-\curvaturefactor*(1 + (-3+0.06*(\t+1))^2)});
+%       \draw[color=dark-red!70!white] ({-3+0.06*\t},0,{-\curvaturefactor*(0 + (-3+0.06*\t)^2)})
+%       -- ({-3+0.06*(\t+1)},0,{-\curvaturefactor*(0 + (-3+0.06*(\t+1))^2)});
+%       \draw[color=dark-red!70!white] ({-3+0.06*\t},1,{-\curvaturefactor*(1 + (-3+0.06*\t)^2)})
+%       -- ({-3+0.06*(\t+1)},1,{-\curvaturefactor*(1 + (-3+0.06*(\t+1))^2)});
+%       \draw[color=dark-red!70!white] ({-3+0.06*\t},2,{-\curvaturefactor*(4 + (-3+0.06*\t)^2)})
+%       -- ({-3+0.06*(\t+1)},2,{-\curvaturefactor*(4 + (-3+0.06*(\t+1))^2)});
+%       \draw[color=dark-red!70!white] ({-3+0.06*\t},3,{-\curvaturefactor*(9 + (-3+0.06*\t)^2)})
+%       -- ({-3+0.06*(\t+1)},3,{-\curvaturefactor*(9 + (-3+0.06*(\t+1))^2)});
+%     }
 
-    % global space distance
-    \fill[color=dark-red] (0,0,0) circle [radius=0.1]; % node [right]{\textcolor{dark-red}{$\boldtheta_a$}};
-    \fill[color=dark-red] (-2,-1,{-\curvaturefactor*5}) circle [radius=0.1]; % node [right] {\textcolor{dark-red}{$\boldtheta_b$}};
+%     % global space distance
+%     \fill[color=dark-red] (0,0,0) circle [radius=0.1]; % node [right]{\textcolor{dark-red}{$\boldtheta_a$}};
+%     \fill[color=dark-red] (-2,-1,{-\curvaturefactor*5}) circle [radius=0.1]; % node [right] {\textcolor{dark-red}{$\boldtheta_b$}};
 
-    \foreach \t in {0,1,...,49}{%
-      % \draw[thick,color=dark-red] ({-0.02*\t}, {-0.006*\t - 0.00004 * \t^2}, {-\curvaturefactor*((-0.02*\t)^2+(-0.006*\t - 0.00004 * \t^2)^2)})
-      % -- ({-0.02*(\t+1)}, {-0.006*(\t+1) - 0.00004 * (\t+1)^2}, {-\curvaturefactor*((-0.02*(\t+1))^2+(-0.006*(\t+1) - 0.00004 * (\t+1)^2)^2)});
-      \draw[thick,color=dark-red] ({-0.04*\t}, {-0.02*\t - 0 * \t^2}, {-\curvaturefactor*((-0.04*\t)^2+(-0.02*\t - 0 * \t^2)^2)})
-      -- ({-0.04*(\t+1)}, {-0.02*(\t+1) - 0 * (\t+1)^2}, {-\curvaturefactor*((-0.04*(\t+1))^2+(-0.02*(\t+1) - 0 * (\t+1)^2)^2)});
-    }
+%     \foreach \t in {0,1,...,49}{%
+%       % \draw[thick,color=dark-red] ({-0.02*\t}, {-0.006*\t - 0.00004 * \t^2}, {-\curvaturefactor*((-0.02*\t)^2+(-0.006*\t - 0.00004 * \t^2)^2)})
+%       % -- ({-0.02*(\t+1)}, {-0.006*(\t+1) - 0.00004 * (\t+1)^2}, {-\curvaturefactor*((-0.02*(\t+1))^2+(-0.006*(\t+1) - 0.00004 * (\t+1)^2)^2)});
+%       \draw[thick,color=dark-red] ({-0.04*\t}, {-0.02*\t - 0 * \t^2}, {-\curvaturefactor*((-0.04*\t)^2+(-0.02*\t - 0 * \t^2)^2)})
+%       -- ({-0.04*(\t+1)}, {-0.02*(\t+1) - 0 * (\t+1)^2}, {-\curvaturefactor*((-0.04*(\t+1))^2+(-0.02*(\t+1) - 0 * (\t+1)^2)^2)});
+%     }
     
-    % Tangent space
-    \draw[color=dark-blue!70!white, fill=dark-blue!10!white, fill opacity=0.3] (3,-3,0) -- (3,3,0) -- (-3,3,0) -- (-3,-3,0) -- cycle;
+%     % Tangent space
+%     \draw[color=dark-blue!70!white, fill=dark-blue!10!white, fill opacity=0.3] (3,-3,0) -- (3,3,0) -- (-3,3,0) -- (-3,-3,0) -- cycle;
 
-    \draw[color=dark-blue!70!white] (-3,2,0) -- (3,2,0);
-    \draw[color=dark-blue!70!white] (-3,1,0) -- (3,1,0);
-    \draw[color=dark-blue!70!white] (-3,0,0) -- (3,0,0);
-    \draw[color=dark-blue!70!white] (-3,-1,0) -- (3,-1,0);
-    \draw[color=dark-blue!70!white] (-3,-2,0) -- (3,-2,0);
+%     \draw[color=dark-blue!70!white] (-3,2,0) -- (3,2,0);
+%     \draw[color=dark-blue!70!white] (-3,1,0) -- (3,1,0);
+%     \draw[color=dark-blue!70!white] (-3,0,0) -- (3,0,0);
+%     \draw[color=dark-blue!70!white] (-3,-1,0) -- (3,-1,0);
+%     \draw[color=dark-blue!70!white] (-3,-2,0) -- (3,-2,0);
 
-    \draw[color=dark-blue!70!white] (-2,-3,0) -- (-2,3,0);
-    \draw[color=dark-blue!70!white] (-1,-3,0) -- (-1,3,0);
-    \draw[color=dark-blue!70!white] (0,-3,0) -- (0,3,0);
-    \draw[color=dark-blue!70!white] (1,-3,0) -- (1,3,0);
-    \draw[color=dark-blue!70!white] (2,-3,0) -- (2,3,0);
+%     \draw[color=dark-blue!70!white] (-2,-3,0) -- (-2,3,0);
+%     \draw[color=dark-blue!70!white] (-1,-3,0) -- (-1,3,0);
+%     \draw[color=dark-blue!70!white] (0,-3,0) -- (0,3,0);
+%     \draw[color=dark-blue!70!white] (1,-3,0) -- (1,3,0);
+%     \draw[color=dark-blue!70!white] (2,-3,0) -- (2,3,0);
 
-    % Tangent space points and distance
-    \fill[color=dark-blue] (0,0,0) circle [radius=0.1]; % node [right]{\textcolor{dark-blue}{$\boldtheta_a$}};
-    \fill[color=dark-blue] (-2,-1,0) circle [radius=0.1]; % node [right] {\textcolor{dark-blue}{$\boldtheta_b$}};
-    \draw[color=dark-blue,thick] (0,0,0) -- (-2,-1,0);
-  \end{tikzpicture}
-  \caption{Illustration of the local tangent space (blue) compared to
-    global geometry of the manifold (red), and of the local and
-    global distance measures defined in the two pictures.}
-  \label{fig:information_geometry_illustration}
-\end{figure}
+%     % Tangent space points and distance
+%     \fill[color=dark-blue] (0,0,0) circle [radius=0.1]; % node [right]{\textcolor{dark-blue}{$\boldtheta_a$}};
+%     \fill[color=dark-blue] (-2,-1,0) circle [radius=0.1]; % node [right] {\textcolor{dark-blue}{$\boldtheta_b$}};
+%     \draw[color=dark-blue,thick] (0,0,0) -- (-2,-1,0);
+%   \end{tikzpicture}
+%   \caption{Illustration of the local tangent space (blue) compared to
+%     global geometry of the manifold (red), and of the local and
+%     global distance measures defined in the two pictures.}
+%   \label{fig:information_geometry_illustration}
+% \end{figure}
 
 Contours of local distances
 $\dlocal ( \boldtheta_b; \boldtheta_a ) = d$ are directly related to
@@ -1264,6 +1264,7 @@ weights $w_c(\boldtheta)$ are known analytical functions of the model
 parameters.
 
 \begin{table}[!b]
+  \setlength{\tabcolsep}{5pt} % otherwise the table is too wide for the page, default is 6pt
     \begin{tabular}{ c c c c ccccc }
       \toprule
       %
@@ -2092,23 +2093,6 @@ observables that experimentalists should measure and publish, for
 instance to be used in recasted analyses or in global fits by
 theorists~\cite{Corbett:2015ksa, Butter:2016cvz}. 
 
-\begin{figure}
-  \includegraphics[width=0.49 \textwidth,clip=true,trim=0 0.6cm 0 0.0cm]{fig/information/wbf_tautau_histos_contours}
-  \includegraphics[width=0.49 \textwidth,clip=true,trim=0 0.6cm 0 0.0cm]{fig/information/wbf_tautau_histos_contours_likelihoodcut}
-  \caption{Information in distributions in the WBF $h \to \tau \tau$
-    channel, shown as contours $\dlocal(\boldtheta ; \boldzero) = 1$.
-    We show the total information in the full kinematics (black), the
-    information in the distributions of $p_{T,j_1}$ (red) and
-    $\Delta \phi_{jj}$ (blue), their naive combination assuming no
-    mutual information (green), and their two-dimensional histogram
-    (yellow). The $\theta_i$ not shown are set to zero. Left: based on
-    the kinematic WBF cuts in
-    \autoref{eq:information_wbf_tautau_wbfcuts}. Right: based on the
-    matrix-element-based selection in
-    \autoref{eq:information_wbf_tautau_likelihoodcuts}.}
-  \label{fig:information_wbf_tautau_histograms_contours}
-\end{figure}
-
 \newparagraph
 %
 In the presence of backgrounds, a histogram-based analysis requires a
@@ -2166,6 +2150,23 @@ of the following standard observables:
   $\pi / 10$.
 \end{itemize}
 
+\begin{figure}
+  \includegraphics[width=0.49 \textwidth,clip=true,trim=0 0.6cm 0 0.0cm]{fig/information/wbf_tautau_histos_contours}
+  \includegraphics[width=0.49 \textwidth,clip=true,trim=0 0.6cm 0 0.0cm]{fig/information/wbf_tautau_histos_contours_likelihoodcut}
+  \caption{Information in distributions in the WBF $h \to \tau \tau$
+    channel, shown as contours $\dlocal(\boldtheta ; \boldzero) = 1$.
+    We show the total information in the full kinematics (black), the
+    information in the distributions of $p_{T,j_1}$ (red) and
+    $\Delta \phi_{jj}$ (blue), their naive combination assuming no
+    mutual information (green), and their two-dimensional histogram
+    (yellow). The $\theta_i$ not shown are set to zero. Left: based on
+    the kinematic WBF cuts in
+    \autoref{eq:information_wbf_tautau_wbfcuts}. Right: based on the
+    matrix-element-based selection in
+    \autoref{eq:information_wbf_tautau_likelihoodcuts}.}
+  \label{fig:information_wbf_tautau_histograms_contours}
+\end{figure}
+
 In the left panel of
 \autoref{fig:information_wbf_tautau_histograms_contours}, we compare
 the error ellipses expected from the analysis of a few of these
@@ -2178,14 +2179,6 @@ distributions. A fully correlated two-dimensional histogram carries
 slightly more information than a combination of the one-dimensional
 histograms following
 \autoref{eq:information_combined_information_distributions}.
-
-Finally, we compare the information in all of the above distributions
-in \autoref{fig:information_wbf_tautau_histograms_comparison}. The top
-panel shows the eigenvalues of the individual information matrices,
-and the colours indicate which operators the corresponding
-eigenvectors are composed of. This allows us to see which
-distributions measure which directions in theory space well, and where
-blind directions arise. 
 
 \begin{figure}
   \includegraphics[width=\textwidth,clip=true,trim=0 0.0cm 0 0.0cm]{fig/information/wbf_tautau_histos_comparison}
@@ -2208,13 +2201,37 @@ blind directions arise.
 \label{fig:information_wbf_tautau_histograms_comparison}
 \end{figure}
 
+Finally, we compare the information in all of the above distributions
+in \autoref{fig:information_wbf_tautau_histograms_comparison}. The top
+panel shows the eigenvalues of the individual information matrices,
+and the colours indicate which operators the corresponding
+eigenvectors are composed of. This allows us to see which
+distributions measure which directions in theory space well, and where
+blind directions arise. 
+
 The lower panel shows the determinants of the Fisher information
 matrices. We restrict this analysis to the space spanned by the three
 operators $\ope{\phi,2}$, $\ope{W}$, and $\ope{WW}$ to avoid results
 that strongly depend on the other two operators, which cannot be
 measured reliably in this process anyway. These determinants provide a
 straightforward measure of the information in the distributions that is
-independent of EFT basis rotations, see \autoref{sec:information_eft}.
+independent of EFT basis rotations, see \autoref{sec:information_eft}. 
+
+\begin{figure}[!t]
+  \includegraphics[width=\textwidth,clip=true,trim=0 0.0cm 0 0.0cm]{fig/information/wbf_tautau_histos_comparison_likelihoodcut}
+  \caption{Fisher information in different distributions in the WBF
+    $h \to \tau \tau$ channel, based on a matrix-element-based
+    selection.  We compare the total Fisher information based on the
+    full kinematics (`full'), the Fisher information after the
+    multivariate event selection in
+    \autoref{eq:information_wbf_tautau_likelihoodcuts} (`WBF cuts'),
+    the rate-only information after this selection (`xsec'), and the
+    information in several one-dimensional and two-dimensional
+    distributions after this selection.  Except for the event
+    selection, the plot is analogous to
+    \autoref{fig:information_wbf_tautau_histograms_comparison}.}
+\label{fig:information_wbf_tautau_histograms_comparison_likelihoodcut}
+\end{figure}
 
 In general, one-dimensional histograms of single observables probe
 individual directions in phase space well, but always suffer from
@@ -2232,22 +2249,6 @@ data.  Half of this loss in constraining power is due to information
 in background-rich regions discarded by the WBF cuts, the other half is due
 to non-trivial kinematics not captured by the double differential
 distributions. 
-
-\begin{figure}[!t]
-  \includegraphics[width=\textwidth,clip=true,trim=0 0.0cm 0 0.0cm]{fig/information/wbf_tautau_histos_comparison_likelihoodcut}
-  \caption{Fisher information in different distributions in the WBF
-    $h \to \tau \tau$ channel, based on a matrix-element-based
-    selection.  We compare the total Fisher information based on the
-    full kinematics (`full'), the Fisher information after the
-    multivariate event selection in
-    \autoref{eq:information_wbf_tautau_likelihoodcuts} (`WBF cuts'),
-    the rate-only information after this selection (`xsec'), and the
-    information in several one-dimensional and two-dimensional
-    distributions after this selection.  Except for the event
-    selection, the plot is analogous to
-    \autoref{fig:information_wbf_tautau_histograms_comparison}.}
-\label{fig:information_wbf_tautau_histograms_comparison_likelihoodcut}
-\end{figure}
 
 \newparagraph
 %
@@ -2343,41 +2344,6 @@ where $\varepsilon$ again refers to the combined particle
 identification and trigger efficiencies. The SM cross section after
 our selection cuts is 0.36~fb, corresponding to 36 expected events. 
 
-\begin{figure}[!b]
-  \fmfframe(0,15)(15,15){ %(L,T) (R,B)
-    \begin{fmfgraph*}(150,70)
-      \feynmansetup
-      \fmfleft{i2,i1}
-      \fmfright{o6,o5,o4,o3,o2,o1}
-      \fmflabel{\small $q$}{i1}
-      \fmflabel{\small $q$}{i2}
-      \fmflabel{\small $q$}{o1}
-      \fmflabel{\small $\ell^+$}{o2}
-      \fmflabel{\small $\ell^-$}{o3}
-      \fmflabel{\small $\ell^+$}{o4}
-      \fmflabel{\small $\ell^-$}{o5}
-      \fmflabel{\small $q$}{o6}
-      \fmf{fermion,tension=4}{i1,v3}
-      \fmf{fermion,tension=4}{i2,v4}
-      \fmf{fermion,tension=2.5}{v3,o1}
-      \fmf{fermion,tension=2.5}{v4,o6}
-      \fmf{wiggly,label=\small $W$,, $Z$,label.side=right}{v3,v5}
-      \fmf{wiggly,label=\small $W$,, $Z$,label.side=left}{v4,v5}
-      \fmf{dashes,label=\small $h$,tension=0.5}{v5,v6}
-      \fmf{wiggly,tension=0.3,label=\small $Z$,tension=0.3,label.side=right}{v7,v6}
-      \fmf{wiggly,tension=0.3,label=\small $Z$,tension=0.3,label.side=right}{v6,v8}
-      \fmf{fermion,tension=0.2}{o2,v7,o3}
-      \fmf{fermion,tension=0.2}{o4,v8,o5}
-      \fmfv{decoration.shape=circle,foreground=(0.8,,0.,,0.),decoration.size=5}{v5,v6}
-    \end{fmfgraph*}
-  }
-  \caption[Feynman diagram for WBF Higgs production in the $4 \ell $
-  mode]{Feynman diagram for WBF Higgs production in the $4 \ell $
-    mode. The red dots show the Higgs-gauge interactions affected by
-    the dimension-six operators of our analysis.}
-  \label{fig:information_wbf_4l_diag}
-\end{figure}
-
 The relevant dimension-six operators are the same as in the $\tau \tau$
 channel, and we again parametrise the model space with
 \autoref{eq:information_model_parameters_wbf}. All other details
@@ -2433,6 +2399,41 @@ with the eigenvectors, eigenvalues, and corresponding new physics reach
   & \left( \frac {\Lambda} {\sqrt{f}} \right)_5 &= 114~\gev \,. 
 \end{align}%
 \endgroup 
+
+\begin{figure}[!b]
+  \fmfframe(0,15)(15,15){ %(L,T) (R,B)
+    \begin{fmfgraph*}(150,70)
+      \feynmansetup
+      \fmfleft{i2,i1}
+      \fmfright{o6,o5,o4,o3,o2,o1}
+      \fmflabel{\small $q$}{i1}
+      \fmflabel{\small $q$}{i2}
+      \fmflabel{\small $q$}{o1}
+      \fmflabel{\small $\ell^+$}{o2}
+      \fmflabel{\small $\ell^-$}{o3}
+      \fmflabel{\small $\ell^+$}{o4}
+      \fmflabel{\small $\ell^-$}{o5}
+      \fmflabel{\small $q$}{o6}
+      \fmf{fermion,tension=4}{i1,v3}
+      \fmf{fermion,tension=4}{i2,v4}
+      \fmf{fermion,tension=2.5}{v3,o1}
+      \fmf{fermion,tension=2.5}{v4,o6}
+      \fmf{wiggly,label=\small $W$,, $Z$,label.side=right}{v3,v5}
+      \fmf{wiggly,label=\small $W$,, $Z$,label.side=left}{v4,v5}
+      \fmf{dashes,label=\small $h$,tension=0.5}{v5,v6}
+      \fmf{wiggly,tension=0.3,label=\small $Z$,tension=0.3,label.side=right}{v7,v6}
+      \fmf{wiggly,tension=0.3,label=\small $Z$,tension=0.3,label.side=right}{v6,v8}
+      \fmf{fermion,tension=0.2}{o2,v7,o3}
+      \fmf{fermion,tension=0.2}{o4,v8,o5}
+      \fmfv{decoration.shape=circle,foreground=(0.8,,0.,,0.),decoration.size=5}{v5,v6}
+    \end{fmfgraph*}
+  }
+  \caption[Feynman diagram for WBF Higgs production in the $4 \ell $
+  mode]{Feynman diagram for WBF Higgs production in the $4 \ell $
+    mode. The red dots show the Higgs-gauge interactions affected by
+    the dimension-six operators of our analysis.}
+  \label{fig:information_wbf_4l_diag}
+\end{figure}
 
 \wbfpyramid{wbf_4l_global}{fig:information_wbf_4l_global_distances}
 {Error ellipses defined by the Fisher information in the WBF
@@ -2853,16 +2854,7 @@ corresponding new physics reach, see
   &&\leftrightarrow
   & \left( \frac {\Lambda} {\sqrt{f}} \right)_4 &= 138~\gev \,. 
 \end{align}%
-\endgroup
-
-The large sensitivity to $\ope{WW}$ comes from the large effect of
-this operator on the $h \to \gamma \gamma$ decay in addition to
-production effects, which will already be tightly constrained once a
-$th$ measurement is feasible. The orthogonal direction in the
-$\ope{\phi,2}$-$\ope{WW}$ plane is for all practical purposes
-blind. Even with the large amount of integrated luminosity that this
-calculation is based on, the sensitivity to $\ope{W}$ and $\ope{t}$ is
-limited, with some mixing between the two operators. 
+\endgroup 
 
 \begin{figure}[!b]
   \includegraphics[width=0.33 \textwidth,clip,trim=0.3cm 0.6cm 0.05cm 0]{fig/information/th_geometry_fphi2_fw}%
@@ -2876,6 +2868,15 @@ limited, with some mixing between the two operators.
     geodesics. The $\theta_i$ not shown are set to zero. }
 \label{fig:information_th_geometry}
 \end{figure}
+
+The large sensitivity to $\ope{WW}$ comes from the large effect of
+this operator on the $h \to \gamma \gamma$ decay in addition to
+production effects, which will already be tightly constrained once a
+$th$ measurement is feasible. The orthogonal direction in the
+$\ope{\phi,2}$-$\ope{WW}$ plane is for all practical purposes
+blind. Even with the large amount of integrated luminosity that this
+calculation is based on, the sensitivity to $\ope{W}$ and $\ope{t}$ is
+limited, with some mixing between the two operators. 
 
 Going beyond the local information geometry, we calculate global
 information distances in the model space and show them in
@@ -3003,7 +3004,7 @@ following distributions:
   with bin size $0.5$ up to $5.0$ and an overflow bin.
 \end{itemize} 
 
-\begin{figure}[!b]
+\begin{figure}
   \includegraphics[width=0.49 \textwidth,clip=true,trim=0 0.6cm 0 0.0cm]{fig/information/th_histos_contours}
   \caption{Information in distributions in the Higgs plus single top
     channel, shown as contours $\dlocal(\boldtheta ; \boldzero) = 1$.

@@ -1200,7 +1200,7 @@ heavier and more strongly coupled new particle, and the EFT
 description works better.  In all cases, the $v$-improved EFT by
 construction predicts the Higgs couplings correctly. 
 
-\begin{table}[t]
+\begin{table}[b!]
   \begin{tabular}{c c rrr c rrr}
     \toprule
     %
@@ -1580,7 +1580,7 @@ we find
 \endgroup
 %
 Here $y_t$, $y_b$, $y_\tau$ refer to the SM values of the respective
-Yukawa couplings, $y_f = \sqrt{2} m_f / v$.
+Yukawa couplings, $y_f = \sqrt{2} m_f / v$. 
 
 The contribution of the $H^\pm$ loop to the Higgs-photon coupling is
 mapped onto $\ope{BB}$ with a Wilson coefficient
@@ -1613,7 +1613,7 @@ $m_{A^0}$, the charged Higgs does not decouple.
 % Higgs states can remain moderately light\,---\,and hence potentially
 % within LHC reach.
 %
-We derive these results in Appendix~\ref{sec:appendix_models_2hdm}.
+We derive these results in Appendix~\ref{sec:appendix_models_2hdm}. 
 
 Upon electroweak symmetry breaking, the physical heavy Higgs masses
 $m_{H^0}$, $m_{A^0}$, and $m_{H^{\pm}}$ acquire contributions
@@ -1648,7 +1648,19 @@ parameter space.
 \subsubsection{Benchmark points}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{table}[t]
+In \autoref{tbl:validity_2hdm_benchmarks} we define four benchmark
+points for the 2HDM. They are in agreement with all constraints at the
+time of publication of Reference~\cite{Brehmer:2015rna}, implemented
+with the help of \toolfont{2HDMC}~\cite{Eriksson:2009ws},
+\toolfont{HiggsBounds}~\cite{Bechtle:2008jh, Bechtle:2011sb},
+\toolfont{SuperIso}~\cite{Mahmoudi:2008tp}, and
+\toolfont{HiggsSignals}~\cite{Bechtle:2013xfa}. To better illustrate
+certain model features, in some scenarios we tolerate deviations
+between $1\sigma$ and $2\sigma$ in the Higgs couplings measurements. 
+
+
+
+\begin{table}[p]
   \begin{tabular}{c c rrrrrrr }
     \toprule
     %
@@ -1673,15 +1685,58 @@ parameter space.
  \label{tbl:validity_2hdm_benchmarks}
 \end{table}
 
-In \autoref{tbl:validity_2hdm_benchmarks} we define four benchmark
-points for the 2HDM. They are in agreement with all constraints at the
-time of publication of Reference~\cite{Brehmer:2015rna}, implemented
-with the help of \toolfont{2HDMC}~\cite{Eriksson:2009ws},
-\toolfont{HiggsBounds}~\cite{Bechtle:2008jh, Bechtle:2011sb},
-\toolfont{SuperIso}~\cite{Mahmoudi:2008tp}, and
-\toolfont{HiggsSignals}~\cite{Bechtle:2013xfa}. To better illustrate
-certain model features, in some scenarios we tolerate deviations
-between $1\sigma$ and $2\sigma$ in the Higgs couplings measurements.
+\begin{table}[p]
+  \begin{tabular}{c c rrrrr }
+    \toprule
+    %
+    \multirow{2}{*}{}
+    && \multicolumn{5}{c}{Default EFT} \\
+    %
+    \cmidrule{3-7} 
+    %
+    && $|\Lambda|$~[GeV] & $f_t$ & $f_{b}$  & $f_{\tau}$ & $f_{BB}$ \\
+    %
+    \midrule
+    %
+    D1 && $100$ & $0.12$ & $0.003$ & $0.001$ & $0.009$ \\
+    D2 && $448$ & $0.00$ & $-0.006$ & $-0.002$  & $-0.001$ \\
+    D3 && $99$ & $-0.07$ & $0.206$ & $0.077$ &  $-0.016$\\
+    D4 && $142$ & $0.00$ & $0.000$ & $0.000$ &  $-0.023$\\
+    %
+    \bottomrule
+  \end{tabular}
+  \caption[Default EFT description for the 2HDM benchmarks]{Matching scales and Wilson coefficients for the effective
+    theory matched to the 2HDM, based on the default matching in the
+    unbroken electroweak phase.}
+ \label{tbl:validity_2hdm_eft_default}
+\end{table}
+
+\begin{table}[p]
+  \begin{tabular}{c c rrrrr}
+    \toprule
+    %
+    \multirow{2}{*}{}
+    && \multicolumn{5}{c}{$v$-improved EFT} \\
+    %
+    \cmidrule{3-7} 
+    %
+    && $\Lambda$~[GeV] & $f_t$ & $f_{b}$  & $f_{\tau}$ & $f_{BB}$ \\
+    %
+    \midrule
+    %
+    D1 && $300$ & $-0.12$ & $-0.003$ & $-0.001$ & $-0.009$ \\
+    D2 && $450$ & $0.00$ & $-0.006$ & $-0.002$ & $-0.001$ \\
+    D3 && $500$ & $-0.07$ & $0.206$ & $0.077$ & $-0.016$ \\
+    D4 && $500$ & $0.00$ & $0.000$ & $0.000$ & $-0.023$ \\
+    %
+    \bottomrule
+  \end{tabular}
+  \caption[$v$-improved EFT description for the 2HDM benchmarks]{Matching
+    scales and Wilson coefficients for the effective
+    theory matched to the 2HDM, based on the $v$-improved
+    matching with $\Lambda = m_{A^0}$.}
+ \label{tbl:validity_2hdm_eft_v-improved}
+\end{table}
 
 The key physics properties of the different 2HDM scenarios can be
 summarised as follows:
@@ -1717,102 +1772,11 @@ particularly pathological in benchmark D1, where
 $\Lambda_{\text{default}}^2$ is negative and the signs of the Wilson
 coefficients are switched compared to the $v$-improved matching.
 
-\begin{table}[t]
-  \begin{tabular}{c c rrrrr }
-    \toprule
-    %
-    \multirow{2}{*}{}
-    && \multicolumn{5}{c}{Default EFT} \\
-    %
-    \cmidrule{3-7} 
-    %
-    && $|\Lambda|$~[GeV] & $f_t$ & $f_{b}$  & $f_{\tau}$ & $f_{BB}$ \\
-    %
-    \midrule
-    %
-    D1 && $100$ & $0.12$ & $0.003$ & $0.001$ & $0.009$ \\
-    D2 && $448$ & $0.00$ & $-0.006$ & $-0.002$  & $-0.001$ \\
-    D3 && $99$ & $-0.07$ & $0.206$ & $0.077$ &  $-0.016$\\
-    D4 && $142$ & $0.00$ & $0.000$ & $0.000$ &  $-0.023$\\
-    %
-    \bottomrule
-  \end{tabular}
-  \caption[Default EFT description for the 2HDM benchmarks]{Matching scales and Wilson coefficients for the effective
-    theory matched to the 2HDM, based on the default matching in the
-    unbroken electroweak phase.}
- \label{tbl:validity_2hdm_eft_default}
-\end{table}
-
-\begin{table}[t]
-  \begin{tabular}{c c rrrrr}
-    \toprule
-    %
-    \multirow{2}{*}{}
-    && \multicolumn{5}{c}{$v$-improved EFT} \\
-    %
-    \cmidrule{3-7} 
-    %
-    && $\Lambda$~[GeV] & $f_t$ & $f_{b}$  & $f_{\tau}$ & $f_{BB}$ \\
-    %
-    \midrule
-    %
-    D1 && $300$ & $-0.12$ & $-0.003$ & $-0.001$ & $-0.009$ \\
-    D2 && $450$ & $0.00$ & $-0.006$ & $-0.002$ & $-0.001$ \\
-    D3 && $500$ & $-0.07$ & $0.206$ & $0.077$ & $-0.016$ \\
-    D4 && $500$ & $0.00$ & $0.000$ & $0.000$ & $-0.023$ \\
-    %
-    \bottomrule
-  \end{tabular}
-  \caption[$v$-improved EFT description for the 2HDM benchmarks]{Matching
-    scales and Wilson coefficients for the effective
-    theory matched to the 2HDM, based on the $v$-improved
-    matching with $\Lambda = m_{A^0}$.}
- \label{tbl:validity_2hdm_eft_v-improved}
-\end{table}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Higgs couplings and total production rates}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\autoref{tbl:validity_2hdm_couplings_tree} shows the tree-level
-coupling shifts of the light Higgs in the three models. The results
-confirm that the default matching defined in the unbroken phase does
-not reproduce the coupling patterns of the full model. We conclude
-that an EFT matched to the 2HDM in the unbroken electroweak phase is
-essentially useless, and we have to rely on $v$-improved matching. For
-simplicity, we will from now on leave out the results based on the
-default matching, which only confirm these initial results.
-
-The $v$-improved matching captures most of the coupling
-shifts. It still fails to describe shifts in the couplings to weak
-bosons, which correspond to a dimension-eight operator as discussed
-above.\footnote{Note that the operator $\ope{BB}$ does contribute to
-  the $h^0 VV$ coupling, representing the effect of a charged Higgs
-  loop. But as our results show, this effect is negligible.} Unlike in
-the singlet model, the $v$-improved EFT also struggles with scenarios
-of very light new physics such as D1. Still, all in all it performs
-well in situations with a modest scale hierarchy such as benchmark D2.
-
-A particularly interesting scenario is described by benchmark D3. In
-the full model, the bottom Yukawa is exactly sign-flipped, a signature
-hardly visible at the LHC.  Generating such a signature from
-higher-dimensional operators requires their contributions at
-$\ord{v^2/\Lambda^2}$ to be twice as large as the SM Yukawa
-coupling. The EFT fails to capture this coupling shift fully, leading
-to a significantly different prediction for the Higgs decay into
-bottom quarks.
-
-In \autoref{tbl:validity_2hdm_couplings_loop} we repeat this analysis
-for the loop-induced couplings of an on-shell Higgs to gluons and
-photons. A large part of these coupling shifts stems from the modified
-Higgs-top and Higgs-$W$ couplings. This means that in scenarios where
-the effective theory describes these tree-level couplings accurately,
-we also find good agreement between full and effective model for the
-loop-induced couplings. Separating the $H^\pm$ contribution to the
-Higgs-photon coupling from these indirect effects, we find that
-$\ope{BB}$ captures its effect very well. 
 
 \begin{table}[t]
   \begin{tabular}{c c rr c rrr c rrr}
@@ -1844,11 +1808,6 @@ $\ope{BB}$ captures its effect very well.
     $v$-improved matching (`$v$EFT').}
   \label{tbl:validity_2hdm_couplings_tree}
 \end{table}
-
-\autoref{tbl:validity_2HDM_rates} compares total production rates at
-the LHC. Depending on the benchmark, the dimension-six truncation
-leads to up to $10 \%$ deviations, in agreement with the results for
-the coupling shifts.
 
 \begin{table}[t]
   \begin{tabular}{c c rr c rr c rr}
@@ -1889,7 +1848,50 @@ the coupling shifts.
   \label{tbl:validity_2hdm_couplings_loop}
 \end{table}
 
-\begin{table}[t]
+\autoref{tbl:validity_2hdm_couplings_tree} shows the tree-level
+coupling shifts of the light Higgs in the three models. The results
+confirm that the default matching defined in the unbroken phase does
+not reproduce the coupling patterns of the full model. We conclude
+that an EFT matched to the 2HDM in the unbroken electroweak phase is
+essentially useless, and we have to rely on $v$-improved matching. For
+simplicity, we will from now on leave out the results based on the
+default matching, which only confirm these initial results.
+
+The $v$-improved matching captures most of the coupling
+shifts. It still fails to describe shifts in the couplings to weak
+bosons, which correspond to a dimension-eight operator as discussed
+above.\footnote{Note that the operator $\ope{BB}$ does contribute to
+  the $h^0 VV$ coupling, representing the effect of a charged Higgs
+  loop. But as our results show, this effect is negligible.} Unlike in
+the singlet model, the $v$-improved EFT also struggles with scenarios
+of very light new physics such as D1. Still, all in all it performs
+well in situations with a modest scale hierarchy such as benchmark D2.
+
+A particularly interesting scenario is described by benchmark D3. In
+the full model, the bottom Yukawa is exactly sign-flipped, a signature
+hardly visible at the LHC.  Generating such a signature from
+higher-dimensional operators requires their contributions at
+$\ord{v^2/\Lambda^2}$ to be twice as large as the SM Yukawa
+coupling. The EFT fails to capture this coupling shift fully, leading
+to a significantly different prediction for the Higgs decay into
+bottom quarks. 
+
+In \autoref{tbl:validity_2hdm_couplings_loop} we repeat this analysis
+for the loop-induced couplings of an on-shell Higgs to gluons and
+photons. A large part of these coupling shifts stems from the modified
+Higgs-top and Higgs-$W$ couplings. This means that in scenarios where
+the effective theory describes these tree-level couplings accurately,
+we also find good agreement between full and effective model for the
+loop-induced couplings. Separating the $H^\pm$ contribution to the
+Higgs-photon coupling from these indirect effects, we find that
+$\ope{BB}$ captures its effect very well. 
+
+\autoref{tbl:validity_2HDM_rates} compares total production rates at
+the LHC. Depending on the benchmark, the dimension-six truncation
+leads to up to $10 \%$ deviations, in agreement with the results for
+the coupling shifts.
+
+\begin{table}[!b]
     \begin{tabular}{c c rrr}
       \toprule
       \multirow{2}{*}{}
@@ -1942,7 +1944,7 @@ be irrelevant for LHC phenomenology. Similar threshold effects have
 been computed for the top-induced Higgs-gluon coupling and appear to
 be similarly irrelevant in practice~\cite{Buschmann:2014twa}.
 
-\begin{figure}
+\begin{figure}[t]
   \includegraphics[width=0.49\textwidth,clip=true,trim=0 0.2cm 0 0.2cm]{fig/validity/2HDM_tautau.pdf}%
   \includegraphics[width=0.49\textwidth,clip=true,trim=0 0.2cm 0 0.2cm]{fig/validity/2HDM_AA.pdf}%
   \caption[Kinematic distributions in the 2HDM]{Selected kinematic
@@ -2101,7 +2103,61 @@ mass scale of the heavy fields,
 and is completely oblivious to contributions to the masses from the
 electroweak VEV. The suppression scale of loop effects in the complete
 model and this matching scale in the EFT only agree in the limit
-$M - m_{\tilde{t}_{1}} \sim v \ll M$.
+$M - m_{\tilde{t}_{1}} \sim v \ll M$. 
+
+\begin{table}[t]
+\begin{tabular}{c c rrrr c rrr}
+  \toprule
+  %
+  \multirow{2}{*}{}
+  && \multicolumn{8}{c}{Scalar top partner model} \\
+  %
+  \cmidrule{3-10}
+  %
+  && $M$ & $\kappa_{LL}$ & $\kappa_{RR}$ & $\kappa_{LR}$
+  && $m_{\tilde{t}_{1}}$ & $m_{{\tilde{t}_{2}}}$ & $\theta_{\tilde{t}}$ \\
+  %
+  \midrule
+  %
+  P1 && $500$ & $-1.16$ & $2.85$ & $0.147$ && $500$ & $580$ & $-0.15$ \\
+  P2 && $350$ & $-3.16$ & $-2.82$ & $0.017$ && $173$ & $200$ & $-0.10$ \\
+  P3 && $500$ & $-7.51$ & $-7.17$ & $0.012$ && $173$ & $200$ & $-0.10$ \\
+  %
+  \bottomrule
+ \end{tabular}
+ \caption[Benchmarks for the top partners]{Benchmarks for the
+   scalar top partner scenario. We show Lagrangian parameters (left)
+   and physical parameters (right). All masses are given in GeV.}
+  \label{tbl:validity_stops_benchmarks}
+\end{table}
+
+\begin{table}[t]
+  \begin{tabular}{c c rrrr c rrrr}
+    \toprule
+    %
+    \multirow{2}{*}{}
+    %
+    && \multicolumn{4}{c}{Default EFT} && \multicolumn{4}{c}{$v$-improved EFT} \\
+    %
+    \cmidrule{3-6} \cmidrule{8-11}
+    %
+    && $\Lambda$ & $f_{\phi,2}$ & $f_{WW}$ & $f_W$
+    && $\Lambda$ & $f_{\phi,2}$ & $f_{WW}$ & $f_W$ \\
+    %
+    \midrule
+    %
+    P1 && $500$ & $0.026$ & $0.000$ & $0.000$ && $500$ & $0.026$ & $0.000$ & $0.000$\\
+    P2 && $350$ & $0.023$ & $0.005$ & $0.000$ && $173$ & $0.023$ & $0.005$ & $0.000$ \\
+    P3 && $500$ & $0.152$ & $0.115$ & $-0.207$ && $173$ & $0.152$ & $0.115$ & $-0.207$ \\
+    %
+    \bottomrule
+  \end{tabular}
+  \caption[EFT description for the top partner benchmarks]{Matching
+    scales (in GeV) and selected Wilson coefficients
+    for the top partner benchmarks, both for default and $v$-improved
+    matching.}
+  \label{tbl:validity_stops_eft}
+\end{table}
 
 The stop loops generate a number of operators~\cite{Henning:2014wua,
   Drozd:2015kva, Drozd:2015rsp},
@@ -2169,60 +2225,6 @@ The Wilson coefficients $f_i$ are the same as in
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Benchmark points}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{table}
-\begin{tabular}{c c rrrr c rrr}
-  \toprule
-  %
-  \multirow{2}{*}{}
-  && \multicolumn{8}{c}{Scalar top partner model} \\
-  %
-  \cmidrule{3-10}
-  %
-  && $M$ & $\kappa_{LL}$ & $\kappa_{RR}$ & $\kappa_{LR}$
-  && $m_{\tilde{t}_{1}}$ & $m_{{\tilde{t}_{2}}}$ & $\theta_{\tilde{t}}$ \\
-  %
-  \midrule
-  %
-  P1 && $500$ & $-1.16$ & $2.85$ & $0.147$ && $500$ & $580$ & $-0.15$ \\
-  P2 && $350$ & $-3.16$ & $-2.82$ & $0.017$ && $173$ & $200$ & $-0.10$ \\
-  P3 && $500$ & $-7.51$ & $-7.17$ & $0.012$ && $173$ & $200$ & $-0.10$ \\
-  %
-  \bottomrule
- \end{tabular}
- \caption[Benchmarks for the top partners]{Benchmarks for the
-   scalar top partner scenario. We show Lagrangian parameters (left)
-   and physical parameters (right). All masses are given in GeV.}
-  \label{tbl:validity_stops_benchmarks}
-\end{table}
-
-\begin{table}
-  \begin{tabular}{c c rrrr c rrrr}
-    \toprule
-    %
-    \multirow{2}{*}{}
-    %
-    && \multicolumn{4}{c}{Default EFT} && \multicolumn{4}{c}{$v$-improved EFT} \\
-    %
-    \cmidrule{3-6} \cmidrule{8-11}
-    %
-    && $\Lambda$ & $f_{\phi,2}$ & $f_{WW}$ & $f_W$
-    && $\Lambda$ & $f_{\phi,2}$ & $f_{WW}$ & $f_W$ \\
-    %
-    \midrule
-    %
-    P1 && $500$ & $0.026$ & $0.000$ & $0.000$ && $500$ & $0.026$ & $0.000$ & $0.000$\\
-    P2 && $350$ & $0.023$ & $0.005$ & $0.000$ && $173$ & $0.023$ & $0.005$ & $0.000$ \\
-    P3 && $500$ & $0.152$ & $0.115$ & $-0.207$ && $173$ & $0.152$ & $0.115$ & $-0.207$ \\
-    %
-    \bottomrule
-  \end{tabular}
-  \caption[EFT description for the top partner benchmarks]{Matching
-    scales (in GeV) and selected Wilson coefficients
-    for the top partner benchmarks, both for default and $v$-improved
-    matching.}
-  \label{tbl:validity_stops_eft}
-\end{table}
 
 As \autoref{eq:validity_stops_couplings} suggests, sizeable loop
 corrections to the $hVV$ coupling require light top partners with
@@ -2301,9 +2303,9 @@ reduction of only $0.5\%$ and $2.0\%$. The corresponding difference
 is, again, independent of kinematic variables, for example of the
 tagging jet's transverse momentum.  With the $v$-improved matching,
 the cross section is reduced by $2.4 \%$ and $17.7 \%$, still far from
-the result of the full model.
+the result of the full model. 
 
-\begin{figure}[bt]
+\begin{figure}
   \includegraphics[width=0.49\textwidth,clip=true,trim=0 0.2cm 0 0.2cm]{fig/validity/TopPartners_WBF.pdf}%
   \includegraphics[width=0.49\textwidth,clip=true,trim=0 0.2cm 0 0.2cm]{fig/validity/TopPartners_VH.pdf}%
   \caption[Kinematic distributions in the top partner model]{Kinematic
@@ -2322,7 +2324,7 @@ larger loop effects, the dimension-six prediction fails to capture
 most of the full top partner loops, with numerical results similar to
 those given for WBF Higgs production. Again switching to the
 $v$-improved matching does not improve the EFT approximation
-significantly.
+significantly. 
 
 In \autoref{fig:validity_partners_distributions} we finally show that
 these changes in the total rates do not have a dramatic effect on the
@@ -2610,13 +2612,14 @@ specific UV completions:
 The benchmarks T1 to T3 are meant to emphasise the phenomenological
 possibilities of the vector triplet model and ignore experimental
 constraints or parameter correlations from an underlying UV
-completion. 
+completion.
 
 \begin{table}
+  \setlength{\tabcolsep}{5.5pt} % otherwise the table is too wide for the page, default is 6pt
   \begin{tabular}{c c rrrrr c rrrrr}
     \toprule
     %
-    \multirow{2}{*}{} && \multicolumn{5}{c}{Default EFT}
+    && \multicolumn{5}{c}{Default EFT}
     && \multicolumn{5}{c}{$v$-improved EFT} \\
     %
     \cmidrule{3-7} \cmidrule{9-13}
@@ -2627,7 +2630,7 @@ completion.
     \midrule
     %
     T1 && $591$ & $0.00$ & $2.45$ & $-4.90$ & $0.00$ 
-        && $1200$ & $0.00$ & $2.45$ & $-4.90$ & $0.00$ \\
+         && $1200$ & $0.00$ & $2.45$ & $-4.90$ & $0.00$ \\
     T2 && $946$ & $0.00$ & $2.35$ & $-4.71$ & $0.00$
          && $1200$ & $0.00$ & $2.35$ & $-4.71$ & $0.00$ \\
     T3 && $941$ & $1.09$ & $-0.82$ & $1.64$ & $-0.36$ 
@@ -2653,7 +2656,7 @@ completion.
 \subsubsection{Higgs production rates and distributions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[bt]
+\begin{figure}[!b]
   \fmfframe(0,15)(15,15){ %(L,T) (R,B)
     \begin{fmfgraph*}(100,60)
       \feynmansetup
@@ -2726,6 +2729,27 @@ $\ope{W}$ and $\ope{WW}$, adding a momentum dependence to the $hVV$
 couplings. Therefore our analysis focuses on these electroweak Higgs
 production modes. 
 
+\autoref{tbl:validity_vector_triplet_rates} shows the agreement
+between EFT and full model for the total Higgs production rates in WBF
+Higgs production and Higgs-strahlung. The default dimension-six model
+matched in the unbroken phase, oblivious to the difference between the
+Lagrangian mass term $M_V$ and the actual physical mass $m_\xi$,
+struggles with the first three benchmark points, in which this
+splitting is large. The discrepancies to the full model are
+particularly evident in $Vh$ production. 
+
+The $v$-improved EFT, on the other hand, performs better and describes
+the rate accurately in most of the scenarios. Only in Higgs-strahlung
+in the extreme scenarios T1 and T2 we find significant deviations. 
+
+To better understand these differences, we have to look at kinematic
+distributions. \autoref{fig:validity_vector_triplet_wbf} shows
+different properties of the tagging jets in WBF Higgs production. In
+addition to the predictions of the full vector triplet model and the
+default and $v$-improved EFT, we show distributions of the vector
+triplet model where we have artificially removed all contributions
+from virtual $\xi$ propagators. 
+
 \begin{table}[!b]
   \begin{tabular}{c c rr c rr}
     \toprule
@@ -2756,18 +2780,36 @@ production modes.
   \label{tbl:validity_vector_triplet_rates}
 \end{table}
 
-\autoref{tbl:validity_vector_triplet_rates} shows the agreement
-between EFT and full model for the total Higgs production rates in WBF
-Higgs production and Higgs-strahlung. The default dimension-six model
-matched in the unbroken phase, oblivious to the difference between the
-Lagrangian mass term $M_V$ and the actual physical mass $m_\xi$,
-struggles with the first three benchmark points, in which this
-splitting is large. The discrepancies to the full model are
-particularly evident in $Vh$ production.
+We find that the vector triplet significantly modifies the WBF rate
+with respect to the Standard Model. Its effect increases with momentum
+transfer, measured as transverse jet momentum. This modification can
+be traced to contributions from $\xi$ fusion and mixed $W$-$\xi$
+fusion diagrams as given in
+\autoref{fig:validity_vector_triplet_xi_diagrams}. These contributions
+from $\xi$ propagators can become relevant already at energy scales
+well below $m_\xi$, and increase further with the energy flow. In
+addition to the high-energy tails of the transverse momenta, large
+effects are visible in the azimuthal angle between the tagging jets,
+as shown in the bottom left panel of
+\autoref{fig:validity_vector_triplet_wbf}. This angular correlation is
+well known to be sensitive to the modified Lorentz structure of the
+$hWW$ vertex~\cite{Eboli:2000ze, Plehn:2001nj, Hankele:2006ma,
+  Hagiwara:2009wt, Englert:2012xt, Buckley:2014fqa, Brehmer:2014pka}. 
 
-The $v$-improved EFT, on the other hand, performs better and describes
-the rate accurately in most of the scenarios. Only in Higgs-strahlung
-in the extreme scenarios T1 and T2 we find significant deviations.
+The EFT approach qualitatively captures these features of the full
+model, now parametrised by momentum-dependent operators such as
+$\ope{W}$ and $\ope{WW}$. The signs of the Wilson coefficients in
+benchmarks T1 and T2 yield a non-linear increase of the cross section
+with energy. Conversely, the switched signs in T3 reduce the rate
+with energy, eventually driving the combined amplitude through zero.
+
+Comparing full and effective model for the more realistic benchmark
+points T4 and T5, we find good agreement in the bulk of the
+distribution. The deviations from the Standard Model are entirely
+captured by the dimension-six operators, including the momentum
+dependence coming from the $\xi$ diagrams. Only at very large momentum
+transfer, most likely beyond the sensitivity of the LHC, the validity
+of the EFT breaks down. 
 
 \begin{figure}
   \includegraphics[width=0.49\textwidth,clip=true,trim=0 0.2cm 0 0.2cm]{fig/validity/Triplet_WBF.pdf}%
@@ -2783,45 +2825,6 @@ in the extreme scenarios T1 and T2 we find significant deviations.
     give the statistical uncertainties.}
   \label{fig:validity_vector_triplet_wbf}
 \end{figure}
-
-To better understand these differences, we have to look at kinematic
-distributions. \autoref{fig:validity_vector_triplet_wbf} shows
-different properties of the tagging jets in WBF Higgs production. In
-addition to the predictions of the full vector triplet model and the
-default and $v$-improved EFT, we show distributions of the vector
-triplet model where we have artificially removed all contributions
-from virtual $\xi$ propagators.
-
-We find that the vector triplet significantly modifies the WBF rate
-with respect to the Standard Model. Its effect increases with momentum
-transfer, measured as transverse jet momentum. This modification can
-be traced to contributions from $\xi$ fusion and mixed $W$-$\xi$
-fusion diagrams as given in
-\autoref{fig:validity_vector_triplet_xi_diagrams}. These contributions
-from $\xi$ propagators can become relevant already at energy scales
-well below $m_\xi$, and increase further with the energy flow. In
-addition to the high-energy tails of the transverse momenta, large
-effects are visible in the azimuthal angle between the tagging jets,
-as shown in the bottom left panel of
-\autoref{fig:validity_vector_triplet_wbf}. This angular correlation is
-well known to be sensitive to the modified Lorentz structure of the
-$hWW$ vertex~\cite{Eboli:2000ze, Plehn:2001nj, Hankele:2006ma,
-  Hagiwara:2009wt, Englert:2012xt, Buckley:2014fqa, Brehmer:2014pka}.
-
-The EFT approach qualitatively captures these features of the full
-model, now parametrised by momentum-dependent operators such as
-$\ope{W}$ and $\ope{WW}$. The signs of the Wilson coefficients in
-benchmarks T1 and T2 yield a non-linear increase of the cross section
-with energy. Conversely, the switched signs in T3 reduce the rate
-with energy, eventually driving the combined amplitude through zero.
-
-Comparing full and effective model for the more realistic benchmark
-points T4 and T5, we find good agreement in the bulk of the
-distribution. The deviations from the Standard Model are entirely
-captured by the dimension-six operators, including the momentum
-dependence coming from the $\xi$ diagrams. Only at very large momentum
-transfer, most likely beyond the sensitivity of the LHC, the validity
-of the EFT breaks down.
 
 In the more strongly coupled benchmark points T1 to T3, the full model
 predicts shifts in the jet distributions that are large enough to be
