@@ -1377,7 +1377,7 @@ the Fisher information matrices $I_{ij} (\boldtheta)$ for arbitrary
 values of the theory parameters $\boldtheta$. One can choose to
 determine the information in the total rate, in individual kinematic
 distributions, or in the full process kinematics of arbitrary
-dimensionality. Finally, it can be calculated based on the full phase
+dimensionality. It can be calculated based on the full phase
 space, after selection cuts, or differentially in kinematic variables.
 
 
@@ -1950,7 +1950,7 @@ transfer~\cite{Biekotter:2016ecg}. In the bottom left panel of
 \autoref{fig:information_wbf_tautau_differential_information_jets} we
 see that most of the information on these operators comes from
 $\Delta \eta_{jj} = 3\dots7$. Tight cuts with the aim to remove
-backgrounds thus lose a sizeable fraction of the information on
+backgrounds thus discard a sizeable fraction of the information on
 dimension-six operators. 
 
 \begin{figure}
@@ -1990,7 +1990,7 @@ rejection rate, as shown in the right panel of
 \autoref{fig:information_wbf_tautau_cut_roc}. The information-based
 analysis, however, takes into account the sensitivity of signal events
 in different phase-space regions to new physics effects, which the ROC
-curve is by design blind to.
+curve is blind to by design.
 
 \newparagraph
 %
@@ -2023,7 +2023,7 @@ as shown in \autoref{sec:validity_wbf_observables}.
 \end{figure}
 
 Our tools let us calculate the Fisher information in the WBF
-$h \to \tau \tau$ channel for different cuts of the form
+$h \to \tau \tau$ channel for different cuts of the form of
 \autoref{eq:information_ptmax_cut}. For simplicity, we focus on the
 operators $\ope{W}$ and $\ope{WW}$ and calculate the determinant of
 the Fisher information in this plane in model space. Following
@@ -2213,7 +2213,7 @@ matrices. We restrict this analysis to the space spanned by the three
 operators $\ope{\phi,2}$, $\ope{W}$, and $\ope{WW}$ to avoid results
 that strongly depend on the other two operators, which cannot be
 measured reliably in this process anyway. These determinants provide a
-straightforward measure of the information in distributions that is
+straightforward measure of the information in the distributions that is
 independent of EFT basis rotations, see \autoref{sec:information_eft}.
 
 In general, one-dimensional histograms of single observables probe
@@ -2251,13 +2251,12 @@ distributions.
 
 \newparagraph
 %
-In the light of the large amount of information discarded by the WBF
-cuts in \autoref{eq:information_wbf_tautau_wbfcuts}, we repeat this
-comparison with an alternative matrix-element-based event
-selection. Instead of cutting on standard kinematic observables, we
-select all events in `signal-like' phase-space regions, defined as
-those with a larger expected SM WBF rate than the combined expected
-background rates,
+In the light of the large loss of information due to the WBF cuts in
+\autoref{eq:information_wbf_tautau_wbfcuts}, we repeat this comparison
+with an alternative matrix-element-based event selection. Instead of
+cutting on standard kinematic observables, we select all events in
+`signal-like' phase-space regions, defined as those with a larger
+expected SM WBF rate than the combined expected background rates,
 %
 \begin{equation}
   \frac{\sigma_{\text{SM WBF}}\;f^{(1)}(\boldx|\text{SM WBF})}{\sigma_{\text{backgrounds}}\;f^{(1)} (\boldx|\text{backgrounds})}
@@ -2511,7 +2510,7 @@ from effects in the decay vertex. Since this operator rescales all Higgs
 couplings in the same way, this also applies to any other Higgs decay
 mode. The sensitivity on the momentum-dependent operators $\ope{W}$,
 $\ope{WW}$, $\ope{B}$, and $\ope{BB}$, on the other hand, comes almost
-entirely from production-side effects.
+entirely from effects on the Higgs production.
 
 This is not surprising: the momentum flow through the intermediate $W$
 or $Z$ bosons can be very large at the LHC, enhancing production-side
@@ -2596,7 +2595,7 @@ The comparison in
 \autoref{fig:information_wbf_4l_histograms_comparison} reveals similar
 patterns as the $\tau \tau$ mode. The key observables are again
 transverse momenta and jet angular correlations. Without the
-complication of removing backgrounds efficiently, the combined
+necessity of removing backgrounds efficiently, the combined
 analysis of these variables comes close to the maximum information: a
 two-dimensional histogram of jet transverse momenta and
 $\Delta \phi_{jj}$ probes new physics scales up to 650~GeV, while for
@@ -2604,7 +2603,7 @@ a fully differential analysis the maximum probed new physics scale is
 close to 700~GeV. This difference roughly corresponds to 25\% more
 data. The observables characterising the decay kinematics, in particular the
 angular correlations, carry very little information, in agreement with
-our previous results. This shows again how much the sensitivity of the
+our previous results. This shows again how the sensitivity of the
 decay vertices to dimension-six operators is limited by the
 restriction of the momentum flow through the decay vertex to the Higgs
 mass. 
@@ -2750,7 +2749,7 @@ suppressed with an appropriate event selection~\cite{Kling:2012up}.
 
 To simulate the experimental mass resolution, we smear the
 $m_{\gamma \gamma}$ distribution of the signal process with the
-smearing function of Reference~\cite{Kling:2016lay} described in
+smearing function of Reference~\cite{Kling:2016lay}, described in
 \autoref{sec:appendix_information_smearing}. We do not include any
 other detector effects. Our basic event selection requires
 %
@@ -3018,7 +3017,7 @@ following distributions:
 \end{figure}
 
 As in the WBF case, different observables probe different Wilson
-operators. In \autoref{fig:information_wbf_tautau_histograms_contours}
+operators. In \autoref{fig:information_th_histograms_contours}
 we demonstrate that the diphoton transverse momentum constrains mostly
 the $\ope{W}$ direction, while the rapidity separation between the
 Higgs and top systems is more sensitive to $\ope{t}$.
@@ -3109,11 +3108,11 @@ The applications of information geometry in the previous sections were
 based on a number of simplifying assumptions. Most importantly, we
 only considered statistical sources of uncertainty and neglected
 systematic and theory uncertainties on the signal and background
-predictions. In \autoref{sec:information_systematics} we show how such
-effects change our results. \autoref{sec:information_comparison}
-finally compares the Fisher information to two other statistical
-tools, the well-known log-likelihood ratio and the ambient information
-geometry.
+predictions. In \autoref{sec:information_systematics} we demonstrate
+how such effects change our
+results. \autoref{sec:information_comparison} finally compares the
+Fisher information to two other statistical tools, the well-known
+log-likelihood ratio and the ambient information geometry.
 
 
 
@@ -3125,7 +3124,7 @@ geometry.
 The precision of most Higgs measurements at the LHC are ultimately
 limited by systematic and theory
 uncertainties~\cite{deFlorian:2016spz, Khachatryan:2016vau}. The
-expected differential signal and background cross sections are then
+expected differential signal and background cross sections are
 not exactly known, but depend on nuisance parameters $\boldnu$. In
 \autoref{sec:information_nuisance} we showed how these can be
 incorporated in our approach, and defined a profiled Fisher
