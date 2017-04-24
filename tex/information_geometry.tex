@@ -1024,18 +1024,18 @@ $(n-1) \times (n-1)$ matrix
   I^{\text{profiled}}_{ab} = I^{\text{theory}}_{ab} - \frac {m_a m_b} {s} \,.
 \end{equation}
 
-This can be easily generalised to multiple nuisance parameters. The
-Fisher information matrix has the block form
+This can be easily generalised to multiple nuisance parameters. For a
+Fisher information matrix of the block form
 %
 \begin{equation}
-  I_{ij} = \twomat {I^{\text{theory}}} {(I^{\text{mix}})^T} {I^{\text{mix}}} {I^{\text{nuisance}}}
+  I_{ij} = \twomat {I^{\text{theory}}} {(I^{\text{mix}})^T} {I^{\text{mix}}} {I^{\text{nuisance}}} \,,
   \label{eq:information_profiling_full_information_general}
 \end{equation}
 %
-and the profiled Fisher information matrix reads~\cite{Edwards:2017mnf}
+the profiled Fisher information matrix reads~\cite{Edwards:2017mnf}
 %
 \begin{equation}
-  I^{\text{profiled}} = I^{\text{theory}} _{ab} - (I^{\text{mix}})^T \, (I^{\text{nuisance}})^{-1} \, I^{\text{mix}} \,. 
+  I^{\text{profiled}} = I^{\text{theory}} - (I^{\text{mix}})^T \, (I^{\text{nuisance}})^{-1} \, I^{\text{mix}} \,. 
   \label{eq:information_profiling_profiled_information_general}
 \end{equation}
 %
